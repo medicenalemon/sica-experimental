@@ -1,14 +1,22 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppLayout from '@/components/layout/AppLayout'
+import AuthLayout from '@/components/layout/AuthLayout'
+import ProtectedRoute from '@/components/auth/ProtectedRoute'
 import DashboardPage from '@/pages/DashboardPage'
+import LoginPage from '@/pages/auth/LoginPage'
 import PlaceholderPage from '@/components/shared/PlaceholderPage'
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<AppLayout />}>
-          {/* ── Inicio ── */}
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<LoginPage />} />
+        </Route>
+
+        <Route element={<ProtectedRoute />}>
+          <Route element={<AppLayout />}>
+            {/* ── Inicio ── */}
           <Route path="/" element={<DashboardPage />} />
 
           {/* ── Clientes ── */}
@@ -83,6 +91,7 @@ export default function App() {
 
           {/* ── 404 ── */}
           <Route path="*" element={<PlaceholderPage title="Página no encontrada" description="La ruta solicitada no existe en el sistema." />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
