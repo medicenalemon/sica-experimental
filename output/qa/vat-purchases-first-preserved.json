@@ -1,0 +1,397 @@
+{
+  "id": "66f7088a-2546-45fb-834a-23dbddc5d031",
+  "number": "INT-IC-00000001",
+  "responsible": "Administrador",
+  "createdAt": "2026-10-17T03:47:42.007Z",
+  "review": "{\"input\":{\"period\":\"2026-10\",\"previousId\":\"\",\"reference\":\"IVA-COMPRAS-UI-01\",\"reason\":\"Asignación directa sintética revisada. Se incluyen todas las sucursales y se conserva el crédito no computable sin modificar compras.\",\"mode\":\"Asignación directa\",\"scopeConfirmed\":true,\"credits\":[{\"documentId\":\"e79b1853-671d-4af0-a630-1e7e0e2b767e\",\"amount\":3000},{\"documentId\":\"73be782f-d14c-40ef-9b50-7703886149ac\",\"amount\":100},{\"documentId\":\"9f74afd2-350b-4fb7-bedf-e18a2555a86e\",\"amount\":200},{\"documentId\":\"d644bfaa-f915-4615-adc8-f50b472cbd9e\",\"amount\":0},{\"documentId\":\"de96f546-a0f7-4505-ac49-968a121575d5\",\"amount\":0}]},\"source\":{\"company\":{\"name\":\"SICA Textil · IVA compras\",\"cuit\":\"30712345671\",\"iva\":\"Responsable Inscripto\"},\"documentPrefixIds\":[\"e79b1853-671d-4af0-a630-1e7e0e2b767e\",\"73be782f-d14c-40ef-9b50-7703886149ac\",\"9f74afd2-350b-4fb7-bedf-e18a2555a86e\",\"d644bfaa-f915-4615-adc8-f50b472cbd9e\",\"de96f546-a0f7-4505-ac49-968a121575d5\",\"dea54d54-98f2-4ad3-8460-396024ca253e\"],\"originalPrefixIds\":[\"4c6b096c-56e1-46f3-89dc-8177959f188b\",\"43c81cac-f7b0-4f06-b454-6a601b0fc806\",\"c7733117-846c-4e56-b529-7a1c9faf14c2\",\"c120edb8-9566-4b97-a9d1-a6888f1303d5\",\"3cf9767b-d3d7-4f05-a762-94358e5d67aa\"],\"names\":[{\"partyId\":\"a56c935b-8082-4d8b-bcac-b1008c79da3c\",\"name\":\"Textiles Ñandú SA\"},{\"partyId\":\"supplier-c\",\"name\":\"Proveedor C de ensayo\"}]},\"rows\":[{\"document\":{\"id\":\"e79b1853-671d-4af0-a630-1e7e0e2b767e\",\"number\":\"INT-FC-A-00001-00000001\",\"kind\":\"factura\",\"letter\":\"A\",\"date\":\"2026-10-15\",\"branchId\":\"central\",\"partyId\":\"a56c935b-8082-4d8b-bcac-b1008c79da3c\",\"lines\":[{\"productId\":\"553d14f6-eaa5-4348-8ff1-9393f7a85f6a\",\"description\":\"Remera de algodón · M · Negro\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":10000,\"tax\":\"21\",\"discount\":0},{\"productId\":\"iva-product-0\",\"description\":\"Artículo de ensayo IVA 10.5\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":20000,\"tax\":\"10.5\",\"discount\":0},{\"productId\":\"iva-product-1\",\"description\":\"Artículo de ensayo IVA Exento\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":5000,\"tax\":\"Exento\",\"discount\":0},{\"productId\":\"iva-product-2\",\"description\":\"Artículo de ensayo IVA No gravado\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":2000,\"tax\":\"No gravado\",\"discount\":0}],\"net\":37000,\"vat\":4200,\"perceptions\":300,\"total\":41500},\"originalId\":\"4c6b096c-56e1-46f3-89dc-8177959f188b\",\"original\":\"001 · 00004-00000001\",\"type\":1,\"point\":4,\"number\":1,\"issuer\":\"20123456786\",\"receiver\":\"30712345671\",\"name\":\"Textiles Ñandú SA\",\"fileName\":\"Textiles Ñandú SA\",\"operation\":\"0\",\"net\":30000,\"exempt\":5000,\"untaxed\":2000,\"vat\":4200,\"credit\":3000,\"perceptions\":300,\"total\":41500,\"aliquots\":[{\"code\":4,\"net\":20000,\"vat\":2100},{\"code\":5,\"net\":10000,\"vat\":2100}],\"header\":\"20261015001000040000000000000000000100000000000000008000000000020123456786Textiles Ñandú SA             000000000041500000000000002000000000000005000000000000000000000000000000000000000000000300000000000000000000000000000000PES00010000002000000000000300000000000000000000000000000                              000000000000000\",\"details\":[\"001000040000000000000000000180000000000201234567860000000000200000004000000000002100\",\"001000040000000000000000000180000000000201234567860000000000100000005000000000002100\"]},{\"document\":{\"id\":\"73be782f-d14c-40ef-9b50-7703886149ac\",\"number\":\"INT-NC-A-00001-00000001\",\"kind\":\"credito\",\"letter\":\"A\",\"date\":\"2026-10-16\",\"branchId\":\"central\",\"partyId\":\"a56c935b-8082-4d8b-bcac-b1008c79da3c\",\"lines\":[{\"productId\":\"553d14f6-eaa5-4348-8ff1-9393f7a85f6a\",\"description\":\"Remera de algodón · M · Negro\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":1000,\"tax\":\"21\",\"discount\":0}],\"net\":1000,\"vat\":210,\"perceptions\":0,\"total\":1210},\"originalId\":\"43c81cac-f7b0-4f06-b454-6a601b0fc806\",\"original\":\"003 · 00004-00000002\",\"type\":3,\"point\":4,\"number\":2,\"issuer\":\"20123456786\",\"receiver\":\"30712345671\",\"name\":\"Textiles Ñandú SA\",\"fileName\":\"Textiles Ñandú SA\",\"operation\":\"0\",\"net\":1000,\"exempt\":0,\"untaxed\":0,\"vat\":210,\"credit\":100,\"perceptions\":0,\"total\":1210,\"aliquots\":[{\"code\":5,\"net\":1000,\"vat\":210}],\"header\":\"20261016003000040000000000000000000200000000000000008000000000020123456786Textiles Ñandú SA             000000000001210000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000001000000000000010000000000000000000000000000                              000000000000000\",\"details\":[\"003000040000000000000000000280000000000201234567860000000000010000005000000000000210\"]},{\"document\":{\"id\":\"9f74afd2-350b-4fb7-bedf-e18a2555a86e\",\"number\":\"INT-ND-A-00001-00000001\",\"kind\":\"debito\",\"letter\":\"A\",\"date\":\"2026-10-16\",\"branchId\":\"central\",\"partyId\":\"a56c935b-8082-4d8b-bcac-b1008c79da3c\",\"lines\":[{\"productId\":\"iva-product-3\",\"description\":\"Artículo de ensayo IVA 27\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":1000,\"tax\":\"27\",\"discount\":0}],\"net\":1000,\"vat\":270,\"perceptions\":0,\"total\":1270},\"originalId\":\"c7733117-846c-4e56-b529-7a1c9faf14c2\",\"original\":\"002 · 00004-00000003\",\"type\":2,\"point\":4,\"number\":3,\"issuer\":\"20123456786\",\"receiver\":\"30712345671\",\"name\":\"Textiles Ñandú SA\",\"fileName\":\"Textiles Ñandú SA\",\"operation\":\"0\",\"net\":1000,\"exempt\":0,\"untaxed\":0,\"vat\":270,\"credit\":200,\"perceptions\":0,\"total\":1270,\"aliquots\":[{\"code\":6,\"net\":1000,\"vat\":270}],\"header\":\"20261016002000040000000000000000000300000000000000008000000000020123456786Textiles Ñandú SA             000000000001270000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000001000000000000020000000000000000000000000000                              000000000000000\",\"details\":[\"002000040000000000000000000380000000000201234567860000000000010000006000000000000270\"]},{\"document\":{\"id\":\"d644bfaa-f915-4615-adc8-f50b472cbd9e\",\"number\":\"INT-FC-B-00002-00000001\",\"kind\":\"factura\",\"letter\":\"B\",\"date\":\"2026-10-17\",\"branchId\":\"iva-other-branch\",\"partyId\":\"a56c935b-8082-4d8b-bcac-b1008c79da3c\",\"lines\":[{\"productId\":\"553d14f6-eaa5-4348-8ff1-9393f7a85f6a\",\"description\":\"Remera de algodón · M · Negro\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":2420,\"tax\":\"21\",\"discount\":0},{\"productId\":\"iva-product-1\",\"description\":\"Artículo de ensayo IVA Exento\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":600,\"tax\":\"Exento\",\"discount\":0}],\"net\":2600,\"vat\":420,\"perceptions\":40,\"total\":3060},\"originalId\":\"c120edb8-9566-4b97-a9d1-a6888f1303d5\",\"original\":\"006 · 00004-00000004\",\"type\":6,\"point\":4,\"number\":4,\"issuer\":\"20123456786\",\"receiver\":\"30712345671\",\"name\":\"Textiles Ñandú SA\",\"fileName\":\"Textiles Ñandú SA\",\"operation\":\"0\",\"net\":2000,\"exempt\":600,\"untaxed\":0,\"vat\":0,\"credit\":0,\"perceptions\":40,\"total\":3060,\"aliquots\":[],\"header\":\"20261017006000040000000000000000000400000000000000008000000000020123456786Textiles Ñandú SA             000000000003060000000000000000000000000000600000000000000000000000000000000000000000000040000000000000000000000000000000PES00010000000000000000000000000000000000000000000000000                              000000000000000\",\"details\":[]},{\"document\":{\"id\":\"de96f546-a0f7-4505-ac49-968a121575d5\",\"number\":\"INT-FC-C-00001-00000001\",\"kind\":\"factura\",\"letter\":\"C\",\"date\":\"2026-10-17\",\"branchId\":\"central\",\"partyId\":\"supplier-c\",\"lines\":[{\"productId\":\"553d14f6-eaa5-4348-8ff1-9393f7a85f6a\",\"description\":\"Remera de algodón · M · Negro\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":3000,\"tax\":\"21\",\"discount\":0}],\"net\":3000,\"vat\":0,\"perceptions\":0,\"total\":3000},\"originalId\":\"3cf9767b-d3d7-4f05-a762-94358e5d67aa\",\"original\":\"011 · 00004-00000005\",\"type\":11,\"point\":4,\"number\":5,\"issuer\":\"30712345671\",\"receiver\":\"30712345671\",\"name\":\"Proveedor C de ensayo\",\"fileName\":\"Proveedor C de ensayo\",\"operation\":\"0\",\"net\":3000,\"exempt\":0,\"untaxed\":0,\"vat\":0,\"credit\":0,\"perceptions\":0,\"total\":3000,\"aliquots\":[],\"header\":\"20261017011000040000000000000000000500000000000000008000000000030712345671Proveedor C de ensayo         000000000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000000000000000000000000000000000000000000000000                              000000000000000\",\"details\":[]}],\"excluded\":[{\"id\":\"dea54d54-98f2-4ad3-8460-396024ca253e\",\"number\":\"INT-FC-X-00001-00000001\",\"date\":\"2026-10-17\",\"total\":700}],\"totals\":{\"total\":47620,\"vat\":4260,\"credit\":3100,\"nonComputable\":1160,\"perceptions\":340},\"warnings\":[\"Preparación de compras ordinarias A/B/C en ARS; no incluye ventas, importaciones, regímenes especiales ni ajustes de la declaración.\",\"Los originales están declarados sin constatación ARCA. Revisá su validez y evitá duplicar comprobantes ya precargados en el portal.\",\"No se envía ni finaliza la registración ni se determina el saldo de la declaración jurada.\",\"El mes se selecciona por fecha de emisión. Revisá por separado compras que deban imputarse a otro período fiscal.\",\"1 comprobante(s) X interno(s) excluido(s) del archivo; revisá que no oculten originales pendientes.\",\"El IVA contenido en compras B permanece en el registro interno, pero no se informa como IVA discriminado ni crédito computable en estos archivos.\"],\"bytes\":{\"headers\":1635,\"aliquots\":344},\"status\":\"Preparación de compras · sin presentación ARCA\"}",
+  "preview": {
+    "input": {
+      "period": "2026-10",
+      "previousId": "",
+      "reference": "IVA-COMPRAS-UI-01",
+      "reason": "Asignación directa sintética revisada. Se incluyen todas las sucursales y se conserva el crédito no computable sin modificar compras.",
+      "mode": "Asignación directa",
+      "scopeConfirmed": true,
+      "credits": [
+        {
+          "documentId": "e79b1853-671d-4af0-a630-1e7e0e2b767e",
+          "amount": 3000
+        },
+        {
+          "documentId": "73be782f-d14c-40ef-9b50-7703886149ac",
+          "amount": 100
+        },
+        {
+          "documentId": "9f74afd2-350b-4fb7-bedf-e18a2555a86e",
+          "amount": 200
+        },
+        {
+          "documentId": "d644bfaa-f915-4615-adc8-f50b472cbd9e",
+          "amount": 0
+        },
+        {
+          "documentId": "de96f546-a0f7-4505-ac49-968a121575d5",
+          "amount": 0
+        }
+      ]
+    },
+    "source": {
+      "company": {
+        "name": "SICA Textil · IVA compras",
+        "cuit": "30712345671",
+        "iva": "Responsable Inscripto"
+      },
+      "documentPrefixIds": [
+        "e79b1853-671d-4af0-a630-1e7e0e2b767e",
+        "73be782f-d14c-40ef-9b50-7703886149ac",
+        "9f74afd2-350b-4fb7-bedf-e18a2555a86e",
+        "d644bfaa-f915-4615-adc8-f50b472cbd9e",
+        "de96f546-a0f7-4505-ac49-968a121575d5",
+        "dea54d54-98f2-4ad3-8460-396024ca253e"
+      ],
+      "originalPrefixIds": [
+        "4c6b096c-56e1-46f3-89dc-8177959f188b",
+        "43c81cac-f7b0-4f06-b454-6a601b0fc806",
+        "c7733117-846c-4e56-b529-7a1c9faf14c2",
+        "c120edb8-9566-4b97-a9d1-a6888f1303d5",
+        "3cf9767b-d3d7-4f05-a762-94358e5d67aa"
+      ],
+      "names": [
+        {
+          "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+          "name": "Textiles Ñandú SA"
+        },
+        {
+          "partyId": "supplier-c",
+          "name": "Proveedor C de ensayo"
+        }
+      ]
+    },
+    "rows": [
+      {
+        "document": {
+          "id": "e79b1853-671d-4af0-a630-1e7e0e2b767e",
+          "number": "INT-FC-A-00001-00000001",
+          "kind": "factura",
+          "letter": "A",
+          "date": "2026-10-15",
+          "branchId": "central",
+          "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+          "lines": [
+            {
+              "productId": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a",
+              "description": "Remera de algodón · M · Negro",
+              "quantity": 1,
+              "unit": "Unidad",
+              "price": 10000,
+              "tax": "21",
+              "discount": 0
+            },
+            {
+              "productId": "iva-product-0",
+              "description": "Artículo de ensayo IVA 10.5",
+              "quantity": 1,
+              "unit": "Unidad",
+              "price": 20000,
+              "tax": "10.5",
+              "discount": 0
+            },
+            {
+              "productId": "iva-product-1",
+              "description": "Artículo de ensayo IVA Exento",
+              "quantity": 1,
+              "unit": "Unidad",
+              "price": 5000,
+              "tax": "Exento",
+              "discount": 0
+            },
+            {
+              "productId": "iva-product-2",
+              "description": "Artículo de ensayo IVA No gravado",
+              "quantity": 1,
+              "unit": "Unidad",
+              "price": 2000,
+              "tax": "No gravado",
+              "discount": 0
+            }
+          ],
+          "net": 37000,
+          "vat": 4200,
+          "perceptions": 300,
+          "total": 41500
+        },
+        "originalId": "4c6b096c-56e1-46f3-89dc-8177959f188b",
+        "original": "001 · 00004-00000001",
+        "type": 1,
+        "point": 4,
+        "number": 1,
+        "issuer": "20123456786",
+        "receiver": "30712345671",
+        "name": "Textiles Ñandú SA",
+        "fileName": "Textiles Ñandú SA",
+        "operation": "0",
+        "net": 30000,
+        "exempt": 5000,
+        "untaxed": 2000,
+        "vat": 4200,
+        "credit": 3000,
+        "perceptions": 300,
+        "total": 41500,
+        "aliquots": [
+          {
+            "code": 4,
+            "net": 20000,
+            "vat": 2100
+          },
+          {
+            "code": 5,
+            "net": 10000,
+            "vat": 2100
+          }
+        ],
+        "header": "20261015001000040000000000000000000100000000000000008000000000020123456786Textiles Ñandú SA             000000000041500000000000002000000000000005000000000000000000000000000000000000000000000300000000000000000000000000000000PES00010000002000000000000300000000000000000000000000000                              000000000000000",
+        "details": [
+          "001000040000000000000000000180000000000201234567860000000000200000004000000000002100",
+          "001000040000000000000000000180000000000201234567860000000000100000005000000000002100"
+        ]
+      },
+      {
+        "document": {
+          "id": "73be782f-d14c-40ef-9b50-7703886149ac",
+          "number": "INT-NC-A-00001-00000001",
+          "kind": "credito",
+          "letter": "A",
+          "date": "2026-10-16",
+          "branchId": "central",
+          "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+          "lines": [
+            {
+              "productId": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a",
+              "description": "Remera de algodón · M · Negro",
+              "quantity": 1,
+              "unit": "Unidad",
+              "price": 1000,
+              "tax": "21",
+              "discount": 0
+            }
+          ],
+          "net": 1000,
+          "vat": 210,
+          "perceptions": 0,
+          "total": 1210
+        },
+        "originalId": "43c81cac-f7b0-4f06-b454-6a601b0fc806",
+        "original": "003 · 00004-00000002",
+        "type": 3,
+        "point": 4,
+        "number": 2,
+        "issuer": "20123456786",
+        "receiver": "30712345671",
+        "name": "Textiles Ñandú SA",
+        "fileName": "Textiles Ñandú SA",
+        "operation": "0",
+        "net": 1000,
+        "exempt": 0,
+        "untaxed": 0,
+        "vat": 210,
+        "credit": 100,
+        "perceptions": 0,
+        "total": 1210,
+        "aliquots": [
+          {
+            "code": 5,
+            "net": 1000,
+            "vat": 210
+          }
+        ],
+        "header": "20261016003000040000000000000000000200000000000000008000000000020123456786Textiles Ñandú SA             000000000001210000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000001000000000000010000000000000000000000000000                              000000000000000",
+        "details": [
+          "003000040000000000000000000280000000000201234567860000000000010000005000000000000210"
+        ]
+      },
+      {
+        "document": {
+          "id": "9f74afd2-350b-4fb7-bedf-e18a2555a86e",
+          "number": "INT-ND-A-00001-00000001",
+          "kind": "debito",
+          "letter": "A",
+          "date": "2026-10-16",
+          "branchId": "central",
+          "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+          "lines": [
+            {
+              "productId": "iva-product-3",
+              "description": "Artículo de ensayo IVA 27",
+              "quantity": 1,
+              "unit": "Unidad",
+              "price": 1000,
+              "tax": "27",
+              "discount": 0
+            }
+          ],
+          "net": 1000,
+          "vat": 270,
+          "perceptions": 0,
+          "total": 1270
+        },
+        "originalId": "c7733117-846c-4e56-b529-7a1c9faf14c2",
+        "original": "002 · 00004-00000003",
+        "type": 2,
+        "point": 4,
+        "number": 3,
+        "issuer": "20123456786",
+        "receiver": "30712345671",
+        "name": "Textiles Ñandú SA",
+        "fileName": "Textiles Ñandú SA",
+        "operation": "0",
+        "net": 1000,
+        "exempt": 0,
+        "untaxed": 0,
+        "vat": 270,
+        "credit": 200,
+        "perceptions": 0,
+        "total": 1270,
+        "aliquots": [
+          {
+            "code": 6,
+            "net": 1000,
+            "vat": 270
+          }
+        ],
+        "header": "20261016002000040000000000000000000300000000000000008000000000020123456786Textiles Ñandú SA             000000000001270000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000001000000000000020000000000000000000000000000                              000000000000000",
+        "details": [
+          "002000040000000000000000000380000000000201234567860000000000010000006000000000000270"
+        ]
+      },
+      {
+        "document": {
+          "id": "d644bfaa-f915-4615-adc8-f50b472cbd9e",
+          "number": "INT-FC-B-00002-00000001",
+          "kind": "factura",
+          "letter": "B",
+          "date": "2026-10-17",
+          "branchId": "iva-other-branch",
+          "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+          "lines": [
+            {
+              "productId": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a",
+              "description": "Remera de algodón · M · Negro",
+              "quantity": 1,
+              "unit": "Unidad",
+              "price": 2420,
+              "tax": "21",
+              "discount": 0
+            },
+            {
+              "productId": "iva-product-1",
+              "description": "Artículo de ensayo IVA Exento",
+              "quantity": 1,
+              "unit": "Unidad",
+              "price": 600,
+              "tax": "Exento",
+              "discount": 0
+            }
+          ],
+          "net": 2600,
+          "vat": 420,
+          "perceptions": 40,
+          "total": 3060
+        },
+        "originalId": "c120edb8-9566-4b97-a9d1-a6888f1303d5",
+        "original": "006 · 00004-00000004",
+        "type": 6,
+        "point": 4,
+        "number": 4,
+        "issuer": "20123456786",
+        "receiver": "30712345671",
+        "name": "Textiles Ñandú SA",
+        "fileName": "Textiles Ñandú SA",
+        "operation": "0",
+        "net": 2000,
+        "exempt": 600,
+        "untaxed": 0,
+        "vat": 0,
+        "credit": 0,
+        "perceptions": 40,
+        "total": 3060,
+        "aliquots": [],
+        "header": "20261017006000040000000000000000000400000000000000008000000000020123456786Textiles Ñandú SA             000000000003060000000000000000000000000000600000000000000000000000000000000000000000000040000000000000000000000000000000PES00010000000000000000000000000000000000000000000000000                              000000000000000",
+        "details": []
+      },
+      {
+        "document": {
+          "id": "de96f546-a0f7-4505-ac49-968a121575d5",
+          "number": "INT-FC-C-00001-00000001",
+          "kind": "factura",
+          "letter": "C",
+          "date": "2026-10-17",
+          "branchId": "central",
+          "partyId": "supplier-c",
+          "lines": [
+            {
+              "productId": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a",
+              "description": "Remera de algodón · M · Negro",
+              "quantity": 1,
+              "unit": "Unidad",
+              "price": 3000,
+              "tax": "21",
+              "discount": 0
+            }
+          ],
+          "net": 3000,
+          "vat": 0,
+          "perceptions": 0,
+          "total": 3000
+        },
+        "originalId": "3cf9767b-d3d7-4f05-a762-94358e5d67aa",
+        "original": "011 · 00004-00000005",
+        "type": 11,
+        "point": 4,
+        "number": 5,
+        "issuer": "30712345671",
+        "receiver": "30712345671",
+        "name": "Proveedor C de ensayo",
+        "fileName": "Proveedor C de ensayo",
+        "operation": "0",
+        "net": 3000,
+        "exempt": 0,
+        "untaxed": 0,
+        "vat": 0,
+        "credit": 0,
+        "perceptions": 0,
+        "total": 3000,
+        "aliquots": [],
+        "header": "20261017011000040000000000000000000500000000000000008000000000030712345671Proveedor C de ensayo         000000000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000000000000000000000000000000000000000000000000                              000000000000000",
+        "details": []
+      }
+    ],
+    "excluded": [
+      {
+        "id": "dea54d54-98f2-4ad3-8460-396024ca253e",
+        "number": "INT-FC-X-00001-00000001",
+        "date": "2026-10-17",
+        "total": 700
+      }
+    ],
+    "totals": {
+      "total": 47620,
+      "vat": 4260,
+      "credit": 3100,
+      "nonComputable": 1160,
+      "perceptions": 340
+    },
+    "warnings": [
+      "Preparación de compras ordinarias A/B/C en ARS; no incluye ventas, importaciones, regímenes especiales ni ajustes de la declaración.",
+      "Los originales están declarados sin constatación ARCA. Revisá su validez y evitá duplicar comprobantes ya precargados en el portal.",
+      "No se envía ni finaliza la registración ni se determina el saldo de la declaración jurada.",
+      "El mes se selecciona por fecha de emisión. Revisá por separado compras que deban imputarse a otro período fiscal.",
+      "1 comprobante(s) X interno(s) excluido(s) del archivo; revisá que no oculten originales pendientes.",
+      "El IVA contenido en compras B permanece en el registro interno, pero no se informa como IVA discriminado ni crédito computable en estos archivos."
+    ],
+    "bytes": {
+      "headers": 1635,
+      "aliquots": 344
+    },
+    "status": "Preparación de compras · sin presentación ARCA"
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "date": "2026-10-13",
+  "synthetic": true,
+  "tests": {
+    "domain": 428,
+    "files": 33,
+    "http": 59,
+    "fiscal": 22,
+    "total": 542
+  },
+  "browser": {
+    "record": "INT-VP-00000001",
+    "loss": 1000,
+    "netWip": 8000,
+    "assets": 23000,
+    "profit": -2700,
+    "equity": 12300,
+    "cashDifference": 0,
+    "screenshot": "output/production-current-closing-statements-2026-10-13.jpg",
+    "transcript": "output/production-current-closing-browser-2026-10-13.txt"
+  },
+  "finished": {
+    "database": "var/qa-production-current-closing-finished.sqlite",
+    "revision": 10,
+    "costVersion": 11,
+    "grossLot": 10500,
+    "conversion": 6000,
+    "transferredLoss": 1000,
+    "remainingWip": 3000,
+    "preservedAnnualResult": -1700,
+    "actualClosedResult": -2700
+  },
+  "coverage": [
+    "Comparación actual después de INT-AI/INT-CP, con revisión financiera separada y cierre obligatorio en nuevas constancias.",
+    "Estados finales derivados de inventario y proceso; composición en ambos órdenes, reversión y fuentes anteriores inmutables.",
+    "Cierre, apertura, CPP11 posterior y continuidad a otro cierre con patrimonio real anterior.",
+    "Privacidad, permisos, repetición HTTP, PDF/XLSX y recuperación íntegra con auditoría."
+  ],
+  "limitations": [
+    "Agrupaciones conjuntas, producción parcial/anormal y correcciones con pérdida activa requieren ampliar sus circuitos.",
+    "Las demás mediciones, fiscalidad real y adopción profesional local siguen pendientes; no acredita cumplimiento integral del PPTX."
+  ],
+  "checks": [
+    {
+      "database": "var/qa-production-current-closing.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-current-closing-finished.sqlite",
+      "revision": 10,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-recoverability.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-recoverability-finished.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-inflation.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-inflation-finished.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-vnr-bridge.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-finished-correction.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-correction.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-conversion.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-current-vnr.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-reserve-currency.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-recoverability.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-inflation.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-inflation.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inflation-posting.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-reexpression.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-statements.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-impairment.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-disposal.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-reestimate.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-fixed-assets.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-service-cancellation.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-journal-reversal.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-revenue-accrual.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-exercise-opening.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-year-end.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-service-reestimates.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-service-accruals.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "kind": "Papel de trabajo SICA · no importar como TXT ARCA",
+  "record": "INT-IC-00000003",
+  "period": "2026-10",
+  "mode": "Asignación directa y global",
+  "company": {
+    "name": "SICA Textil · IVA compras",
+    "cuit": "30712345671",
+    "iva": "Responsable Inscripto"
+  },
+  "proration": {
+    "input": {
+      "from": "2026-01-01",
+      "to": "2026-10-31",
+      "taxable": 750000,
+      "exempt": 200000,
+      "untaxed": 50000,
+      "reference": "BASES-UI-75-POR-CIENTO",
+      "reason": "Bases netas sintéticas acumuladas del ejercicio: 7500 gravadas, 2000 exentas y 500 no gravadas. Se revisa el uso común por 21 ARS y el crédito previamente computado de la nota por 1 ARS.",
+      "confirmed": true,
+      "common": [
+        {
+          "documentId": "97f7dd6f-5a08-4f60-a19d-d3f5a5eb132c",
+          "amount": 2000
+        },
+        {
+          "documentId": "0f76659a-78bf-4eaa-8c6e-940fbb5f51b2",
+          "amount": 100
+        },
+        {
+          "documentId": "649ae90e-dd2b-4302-9ba4-223daa7c678f",
+          "amount": 0
+        },
+        {
+          "documentId": "1493562a-da66-400e-996f-48389e259536",
+          "amount": 0
+        },
+        {
+          "documentId": "42fc4a08-1f72-4899-9de4-155ffbf5d78c",
+          "amount": 0
+        }
+      ]
+    },
+    "basisTotal": 1000000,
+    "ordinaryVat": 4470,
+    "creditNoteVat": 210,
+    "direct": 1070,
+    "common": 2100,
+    "excluded": 1300,
+    "prorated": 1575,
+    "computable": 2645,
+    "nonComputable": 1825,
+    "restitution": 100,
+    "creditNet": 2545,
+    "nonComputableNet": 1715,
+    "items": [
+      {
+        "documentId": "97f7dd6f-5a08-4f60-a19d-d3f5a5eb132c",
+        "direct": 1000,
+        "common": 2000,
+        "excluded": 1200,
+        "restitution": 0
+      },
+      {
+        "documentId": "0f76659a-78bf-4eaa-8c6e-940fbb5f51b2",
+        "direct": 70,
+        "common": 100,
+        "excluded": 100,
+        "restitution": 0
+      },
+      {
+        "documentId": "649ae90e-dd2b-4302-9ba4-223daa7c678f",
+        "direct": 0,
+        "common": 0,
+        "excluded": 110,
+        "restitution": 100
+      },
+      {
+        "documentId": "1493562a-da66-400e-996f-48389e259536",
+        "direct": 0,
+        "common": 0,
+        "excluded": 0,
+        "restitution": 0
+      },
+      {
+        "documentId": "42fc4a08-1f72-4899-9de4-155ffbf5d78c",
+        "direct": 0,
+        "common": 0,
+        "excluded": 0,
+        "restitution": 0
+      }
+    ]
+  },
+  "status": "Preparación de compras · sin presentación ARCA"
+}

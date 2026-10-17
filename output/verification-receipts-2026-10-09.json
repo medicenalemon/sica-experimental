@@ -1,0 +1,403 @@
+{
+  "date": "2026-10-09",
+  "synthetic": true,
+  "tests": {
+    "domain": 146,
+    "files": 13,
+    "http": 31,
+    "fiscal": 22,
+    "total": 212
+  },
+  "browser": {
+    "receipt": "Estimación manual y conciliación de factura confirmadas en interfaz",
+    "opening": "Reparto manual 12/8 y contabilización confirmados en interfaz",
+    "screenshot": "La captura del navegador integrado no estuvo disponible; no se adjunta una imagen simulada"
+  },
+  "checks": [
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados",
+      "lastCut": {
+        "number": "INT-VC-00000003",
+        "date": "2026-10-09",
+        "version": 5,
+        "inventoryValueCents": 95800,
+        "unbilledLiabilityCents": 20000,
+        "receipts": [
+          {
+            "receiptId": "865acc27-18fb-4779-bf22-7146bfb55d1a",
+            "number": "INT-RM-A-00001-00000001",
+            "date": "2026-10-02",
+            "branchId": "central",
+            "partyId": "7de05ed1-9b2c-4432-8685-c1566994a180",
+            "partyName": "Proveedor textil de prueba",
+            "estimatedDate": "2026-10-03",
+            "reference": "Orden de compra sintética: diez unidades a ARS 20 netos",
+            "accountId": "inventory-unbilled",
+            "lines": [
+              {
+                "productId": "eae5b9cd-313b-43ba-99ed-e2f12edc994f",
+                "sku": "REM-M-NEG",
+                "quantity": 10,
+                "estimatedValue": 20000
+              }
+            ],
+            "estimatedValue": 20000,
+            "invoiceId": "4e2d539f-0ebe-4021-9c08-09768a328d53",
+            "invoiceNumber": "INT-FC-A-00001-00000001",
+            "invoiceDate": "2026-10-02",
+            "recognitionDate": "2026-10-04",
+            "invoiceValue": 22000,
+            "difference": 2000
+          },
+          {
+            "receiptId": "7bca0b67-6bed-4062-9b5a-8f0a77a74388",
+            "number": "INT-RM-A-00001-00000003",
+            "date": "2026-10-08",
+            "branchId": "central",
+            "partyId": "7de05ed1-9b2c-4432-8685-c1566994a180",
+            "partyName": "Proveedor textil de prueba",
+            "estimatedDate": "2026-10-09",
+            "reference": "Orden de compra sintética: diez remeras a ARS 20 netos",
+            "accountId": "inventory-unbilled",
+            "lines": [
+              {
+                "productId": "eae5b9cd-313b-43ba-99ed-e2f12edc994f",
+                "sku": "REM-M-NEG",
+                "quantity": 10,
+                "estimatedValue": 20000
+              }
+            ],
+            "estimatedValue": 20000
+          }
+        ],
+        "settlements": [
+          {
+            "receiptId": "865acc27-18fb-4779-bf22-7146bfb55d1a",
+            "invoiceId": "4e2d539f-0ebe-4021-9c08-09768a328d53",
+            "date": "2026-10-02",
+            "recognitionDate": "2026-10-04",
+            "estimatedValue": 20000,
+            "invoiceValue": 22000,
+            "difference": 2000,
+            "lines": [
+              {
+                "branchId": "central",
+                "accountId": "inventory-inventory",
+                "amount": 1800
+              },
+              {
+                "branchId": "central",
+                "accountId": "5.1",
+                "amount": -22000
+              },
+              {
+                "branchId": "central",
+                "accountId": "inventory-cogs",
+                "amount": 200
+              },
+              {
+                "branchId": "central",
+                "accountId": "inventory-unbilled",
+                "amount": 20000
+              }
+            ]
+          }
+        ],
+        "entries": [
+          {
+            "id": "a0450e71-12b2-4feb-b088-469d12b5846e",
+            "date": "2026-10-09",
+            "concept": "INT-VC-00000003 · Recepción estimada y factura posterior · QA 09/10 · CPP",
+            "branchId": "central",
+            "documentId": "296b746b-9ecd-4d19-bb6f-ec64e0e775b0",
+            "inventoryBatchId": "296b746b-9ecd-4d19-bb6f-ec64e0e775b0",
+            "lines": [
+              {
+                "accountId": "inventory-inventory",
+                "debit": 21800,
+                "credit": 0
+              },
+              {
+                "accountId": "5.1",
+                "debit": 0,
+                "credit": 22000
+              },
+              {
+                "accountId": "inventory-cogs",
+                "debit": 200,
+                "credit": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados",
+      "lastCut": {
+        "number": "INT-VC-00000003",
+        "date": "2026-10-09",
+        "version": 5,
+        "inventoryValueCents": 51000,
+        "unbilledLiabilityCents": 0,
+        "receipts": [
+          {
+            "receiptId": "0023d28a-7980-48e2-b4f6-39abb5244cdc",
+            "number": "INT-RM-A-00001-00000001",
+            "date": "2026-10-01",
+            "branchId": "central",
+            "partyId": "7779ac36-95f9-4931-844b-f860f1279a38",
+            "partyName": "Proveedor textil de prueba",
+            "estimatedDate": "2026-10-01",
+            "reference": "Orden de compra sintética: diez unidades a ARS 20 netos",
+            "accountId": "inventory-unbilled",
+            "lines": [
+              {
+                "productId": "599d69f7-eeaf-4133-9589-cb5badeef514",
+                "sku": "REM-M-NEG",
+                "quantity": 10,
+                "estimatedValue": 20000
+              }
+            ],
+            "estimatedValue": 20000,
+            "invoiceId": "03f4d6f8-655e-495f-b2ad-48f59c5c2ea9",
+            "invoiceNumber": "INT-FC-A-00001-00000001",
+            "invoiceDate": "2026-10-01",
+            "recognitionDate": "2026-10-04",
+            "invoiceValue": 22000,
+            "difference": 2000
+          }
+        ],
+        "settlements": [
+          {
+            "receiptId": "0023d28a-7980-48e2-b4f6-39abb5244cdc",
+            "invoiceId": "03f4d6f8-655e-495f-b2ad-48f59c5c2ea9",
+            "date": "2026-10-01",
+            "recognitionDate": "2026-10-04",
+            "estimatedValue": 20000,
+            "invoiceValue": 22000,
+            "difference": 2000,
+            "openingAssignment": {
+              "invoiceId": "03f4d6f8-655e-495f-b2ad-48f59c5c2ea9",
+              "reference": "60 % del costo permanecía en apertura; 40 % en ventas anteriores",
+              "lines": [
+                {
+                  "sourceProductId": "599d69f7-eeaf-4133-9589-cb5badeef514",
+                  "target": "Existencias",
+                  "productId": "599d69f7-eeaf-4133-9589-cb5badeef514",
+                  "depositId": "principal",
+                  "value": 1200
+                },
+                {
+                  "sourceProductId": "599d69f7-eeaf-4133-9589-cb5badeef514",
+                  "target": "Resultados",
+                  "branchId": "central",
+                  "accountId": "inventory-cogs",
+                  "value": 800
+                }
+              ]
+            },
+            "lines": [
+              {
+                "branchId": "central",
+                "accountId": "inventory-inventory",
+                "amount": 1000
+              },
+              {
+                "branchId": "central",
+                "accountId": "inventory-unbilled",
+                "amount": 20000
+              },
+              {
+                "branchId": "central",
+                "accountId": "5.1",
+                "amount": -22000
+              },
+              {
+                "branchId": "central",
+                "accountId": "inventory-cogs",
+                "amount": 1000
+              }
+            ]
+          }
+        ],
+        "entries": [
+          {
+            "id": "4c4b1efa-7dbc-4899-8edd-0c778c227a9c",
+            "date": "2026-10-09",
+            "concept": "INT-VC-00000003 · Factura de recepción en apertura · QA 09/10 · CPP",
+            "branchId": "central",
+            "documentId": "bf856688-86d0-4d09-b5a5-eada8774f0f3",
+            "inventoryBatchId": "bf856688-86d0-4d09-b5a5-eada8774f0f3",
+            "lines": [
+              {
+                "accountId": "inventory-inventory",
+                "debit": 1000,
+                "credit": 0
+              },
+              {
+                "accountId": "inventory-unbilled",
+                "debit": 20000,
+                "credit": 0
+              },
+              {
+                "accountId": "5.1",
+                "debit": 0,
+                "credit": 22000
+              },
+              {
+                "accountId": "inventory-cogs",
+                "debit": 1000,
+                "credit": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados",
+      "lastCut": {
+        "number": "INT-VC-00000003",
+        "date": "2026-10-04",
+        "version": 2,
+        "inventoryValueCents": 72200,
+        "unbilledLiabilityCents": 0,
+        "receipts": [],
+        "settlements": [],
+        "entries": [
+          {
+            "id": "7424e1c0-570e-4340-84b9-d36009d1d9f2",
+            "date": "2026-10-04",
+            "concept": "INT-VC-00000003 · Corrección sintética de compra al 04/10 · CPP",
+            "branchId": "central",
+            "documentId": "8b79900b-1d9a-4199-a35f-3a19db31188f",
+            "inventoryBatchId": "8b79900b-1d9a-4199-a35f-3a19db31188f",
+            "lines": [
+              {
+                "accountId": "inventory-inventory",
+                "debit": 0,
+                "credit": 1800
+              },
+              {
+                "accountId": "5.1",
+                "debit": 2000,
+                "credit": 0
+              },
+              {
+                "accountId": "inventory-cogs",
+                "debit": 0,
+                "credit": 200
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados",
+      "lastCut": {
+        "number": "INT-VC-00000003",
+        "date": "2026-10-03",
+        "version": 3,
+        "inventoryValueCents": 49000,
+        "unbilledLiabilityCents": 0,
+        "receipts": [],
+        "settlements": [],
+        "entries": [
+          {
+            "id": "d0d4dc59-7db8-45b3-b3eb-89379046445e",
+            "date": "2026-10-03",
+            "concept": "INT-VC-00000003 · Nota de apertura con reparto revisado · CPP",
+            "branchId": "central",
+            "documentId": "c52c6f1f-52c2-4e22-baa2-8483eacd3b0a",
+            "inventoryBatchId": "c52c6f1f-52c2-4e22-baa2-8483eacd3b0a",
+            "lines": [
+              {
+                "accountId": "inventory-inventory",
+                "debit": 0,
+                "credit": 1000
+              },
+              {
+                "accountId": "5.1",
+                "debit": 2000,
+                "credit": 0
+              },
+              {
+                "accountId": "inventory-cogs",
+                "debit": 0,
+                "credit": 1000
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados",
+      "lastCut": {
+        "number": "INT-VC-00000003",
+        "date": "2026-10-08",
+        "version": 4,
+        "inventoryValueCents": 74000,
+        "unbilledLiabilityCents": 0,
+        "receipts": [],
+        "settlements": [],
+        "entries": [
+          {
+            "id": "b1af5079-0acd-407e-afed-6cacf4eb043a",
+            "date": "2026-10-08",
+            "concept": "INT-VC-00000003 · Devoluciones físicas revisadas - ejemplo sintético · CPP",
+            "branchId": "central",
+            "documentId": "1e64328b-2c4d-431e-9710-18f6bfd4dfab",
+            "inventoryBatchId": "1e64328b-2c4d-431e-9710-18f6bfd4dfab",
+            "lines": [
+              {
+                "accountId": "5.1",
+                "debit": 4000,
+                "credit": 0
+              },
+              {
+                "accountId": "inventory-cogs",
+                "debit": 0,
+                "credit": 2400
+              },
+              {
+                "accountId": "inventory-adjustments",
+                "debit": 0,
+                "credit": 1600
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    }
+  ]
+}

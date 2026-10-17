@@ -1,0 +1,1215 @@
+{
+  "date": "2026-10-12",
+  "synthetic": true,
+  "tests": {
+    "domain": 350,
+    "files": 28,
+    "http": 51,
+    "fiscal": 22,
+    "total": 451
+  },
+  "browser": {
+    "result": "Costo $1000 y pérdida $400 pasan a $1500/$600, neto $900. Venta de tres unidades consume bruto $450, pérdida $180 y CMV neto $270; saldo siete unidades y neto $630.",
+    "screenshots": [
+      "output/inventory-reserve-currency-2026-10-12.jpg",
+      "output/inventory-reserve-currency-costing-2026-10-12.jpg"
+    ],
+    "transcript": "output/inventory-reserve-currency-browser-2026-10-12.txt",
+    "exports": "Ambos botones se activaron; los bytes verificados proceden de los mismos constructores sobre la constancia persistida, sin acreditar una descarga del navegador."
+  },
+  "files": {
+    "pdf": "output/pdf/conciliacion-inventario-neto-2026-10-12.pdf",
+    "xlsx": "output/conciliacion-inventario-neto-2026-10-12.xlsx"
+  },
+  "limitations": [
+    "La conciliación reexpresa una pérdida registrada; no reemplaza una comparación con VNR actual al cierre.",
+    "Costos de conversión completos, pasivos estimados reexpresados, errores de períodos cerrados, fiscalidad real y emisión profesional siguen pendientes."
+  ],
+  "checks": [
+    {
+      "database": "var/qa-inventory-reserve-currency.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON",
+      "inventory": {
+        "record": {
+          "reserveLines": [
+            {
+              "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+              "depositId": "principal",
+              "pieces": [
+                {
+                  "sourceId": "1",
+                  "amount": 40000
+                }
+              ],
+              "reason": "Pérdida reconocida sobre las remeras en moneda de septiembre."
+            }
+          ],
+          "postingId": "670241b8-0721-4587-9bf6-73516817d201",
+          "reference": "Conciliación de inventario neto QA 2026",
+          "reason": "Costo y pérdida del mismo artículo se concilian con el ajuste anual, sin duplicar asientos.",
+          "confirmed": true,
+          "lines": [
+            {
+              "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+              "depositId": "principal",
+              "pieces": [
+                {
+                  "sourceId": "0",
+                  "amount": 100000
+                }
+              ],
+              "reason": "Origen de septiembre del costo bruto de las remeras."
+            }
+          ],
+          "review": "{\"reserve\":{\"accountId\":\"inventory-stockAllowance\",\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":40000,\"before\":40000,\"after\":60000,\"difference\":20000,\"reason\":\"Pérdida reconocida sobre las remeras en moneda de septiembre.\",\"pieces\":[{\"sourceId\":\"1\",\"month\":\"2026-09\",\"before\":40000,\"after\":60000}]}],\"accounts\":[{\"branchId\":\"central\",\"before\":40000,\"difference\":20000,\"after\":60000}],\"totalBefore\":40000,\"totalAfter\":60000},\"reserveBalances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":150000,\"allowance\":60000}],\"netBefore\":60000,\"netAfter\":90000,\"postingId\":\"670241b8-0721-4587-9bf6-73516817d201\",\"postingNumber\":\"INT-AI-00000001\",\"date\":\"2026-10-11\",\"reference\":\"Conciliación de inventario neto QA 2026\",\"reason\":\"Costo y pérdida del mismo artículo se concilian con el ajuste anual, sin duplicar asientos.\",\"source\":{\"reserve\":{\"accountId\":\"inventory-stockAllowance\",\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":40000}],\"accounts\":[{\"branchId\":\"central\",\"before\":40000,\"difference\":20000,\"after\":60000}],\"parts\":[{\"id\":\"1\",\"month\":\"2026-09\",\"amount\":40000,\"adjusted\":60000,\"coefficient\":\"1.500000000000\"}],\"recoveries\":[{\"id\":\"7b5a1335-2932-447f-a47e-33f0ee6a7455\",\"number\":\"INT-VI-00000001\",\"date\":\"2026-09-30\",\"review\":\"{\\\"date\\\":\\\"2026-09-30\\\",\\\"reference\\\":\\\"Pérdida previa al ajuste anual QA\\\",\\\"reason\\\":\\\"Costo y valor de realización comparados en la misma moneda de septiembre.\\\",\\\"scope\\\":\\\"Inventario completo\\\",\\\"scopeReason\\\":\\\"Única partida y depósito en el ensayo.\\\",\\\"changesReason\\\":\\\"\\\",\\\"source\\\":{\\\"batchId\\\":\\\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\\\",\\\"batchNumber\\\":\\\"INT-VC-00000001\\\",\\\"batchReview\\\":\\\"{\\\\\\\"moves\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"reserve-currency-opening\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-09-30\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"documentId\\\\\\\":\\\\\\\"\\\\\\\"}],\\\\\\\"rows\\\\\\\":[],\\\\\\\"balances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"value\\\\\\\":100000}],\\\\\\\"journals\\\\\\\":[{\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"lines\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-inventory\\\\\\\",\\\\\\\"debit\\\\\\\":100000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"3.1\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":100000}]}]}\\\",\\\"entryIds\\\":[\\\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\\\"],\\\"inflation\\\":[],\\\"recoveries\\\":[]},\\\"beforeBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":0}],\\\"rows\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":10,\\\"value\\\":100000,\\\"gross\\\":100000,\\\"allowance\\\":0,\\\"groupId\\\":\\\"only\\\",\\\"beforeAllowance\\\":0,\\\"afterAllowance\\\":40000,\\\"difference\\\":40000,\\\"beforeValue\\\":100000,\\\"afterValue\\\":60000}],\\\"afterBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":40000}],\\\"groups\\\":[{\\\"id\\\":\\\"only\\\",\\\"name\\\":\\\"REM-M-NEG\\\",\\\"mode\\\":\\\"Partida individual\\\",\\\"saleValue\\\":60000,\\\"saleCosts\\\":0,\\\"impracticability\\\":\\\"\\\",\\\"geography\\\":\\\"\\\",\\\"gross\\\":100000,\\\"carrying\\\":100000,\\\"recoverable\\\":60000,\\\"completionCosts\\\":0,\\\"afterValue\\\":60000,\\\"loss\\\":40000,\\\"recovery\\\":0,\\\"unrecognizedRecovery\\\":0,\\\"reason\\\":\\\"Venta individual de las remeras en Tucumán.\\\",\\\"evidence\\\":\\\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\\\",\\\"evidenceDate\\\":\\\"2026-09-30\\\"}],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"lossAccountId\\\":\\\"inventory-stockLoss\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\",\\\"loss\\\":40000,\\\"recovery\\\":0,\\\"net\\\":60000,\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-stockLoss\\\",\\\"debit\\\":40000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"inventory-stockAllowance\\\",\\\"debit\\\":0,\\\"credit\\\":40000}]}],\\\"warnings\\\":[\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\",\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\",\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\",\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\"]}\"}]},\"id\":\"670241b8-0721-4587-9bf6-73516817d201\",\"number\":\"INT-AI-00000001\",\"date\":\"2026-10-11\",\"provider\":\"Ensayo\",\"closingMonth\":\"2026-10\",\"indices\":[{\"month\":\"2025-12\",\"value\":\"100\"},{\"month\":\"2026-01\",\"value\":\"100\"},{\"month\":\"2026-02\",\"value\":\"100\"},{\"month\":\"2026-03\",\"value\":\"100\"},{\"month\":\"2026-04\",\"value\":\"100\"},{\"month\":\"2026-05\",\"value\":\"100\"},{\"month\":\"2026-06\",\"value\":\"100\"},{\"month\":\"2026-07\",\"value\":\"100\"},{\"month\":\"2026-08\",\"value\":\"100\"},{\"month\":\"2026-09\",\"value\":\"100\"},{\"month\":\"2026-10\",\"value\":\"150\"}],\"entryIds\":[\"b05c7d10-b6f5-404f-aaf4-0430c11376ae\"],\"issues\":[],\"batch\":{\"date\":\"2026-10-11\",\"reference\":\"Corte exacto con desvalorización QA\",\"accounts\":{\"inventory\":\"inventory-inventory\",\"opening\":\"3.1\",\"cogs\":\"inventory-cogs\",\"adjustments\":\"inventory-adjustments\",\"transit\":\"inventory-transit\",\"wip\":\"inventory-wip\",\"unbilled\":\"inventory-unbilled\",\"stockAllowance\":\"inventory-stockAllowance\",\"stockRecovery\":\"inventory-stockRecovery\"},\"review\":\"{\\\"moves\\\":[],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"value\\\":100000}],\\\"journals\\\":[],\\\"reserve\\\":{\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":40000}],\\\"rows\\\":[],\\\"releases\\\":[],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\"},\\\"recoveries\\\":[{\\\"id\\\":\\\"7b5a1335-2932-447f-a47e-33f0ee6a7455\\\",\\\"number\\\":\\\"INT-VI-00000001\\\",\\\"date\\\":\\\"2026-09-30\\\",\\\"review\\\":\\\"{\\\\\\\"date\\\\\\\":\\\\\\\"2026-09-30\\\\\\\",\\\\\\\"reference\\\\\\\":\\\\\\\"Pérdida previa al ajuste anual QA\\\\\\\",\\\\\\\"reason\\\\\\\":\\\\\\\"Costo y valor de realización comparados en la misma moneda de septiembre.\\\\\\\",\\\\\\\"scope\\\\\\\":\\\\\\\"Inventario completo\\\\\\\",\\\\\\\"scopeReason\\\\\\\":\\\\\\\"Única partida y depósito en el ensayo.\\\\\\\",\\\\\\\"changesReason\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"source\\\\\\\":{\\\\\\\"batchId\\\\\\\":\\\\\\\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\\\\\\\",\\\\\\\"batchNumber\\\\\\\":\\\\\\\"INT-VC-00000001\\\\\\\",\\\\\\\"batchReview\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"moves\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"reserve-currency-opening\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-09-30\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"documentId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\"}],\\\\\\\\\\\\\\\"rows\\\\\\\\\\\\\\\":[],\\\\\\\\\\\\\\\"balances\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\"value\\\\\\\\\\\\\\\":100000}],\\\\\\\\\\\\\\\"journals\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"lines\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"accountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-inventory\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"debit\\\\\\\\\\\\\\\":100000,\\\\\\\\\\\\\\\"credit\\\\\\\\\\\\\\\":0},{\\\\\\\\\\\\\\\"accountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"3.1\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"debit\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"credit\\\\\\\\\\\\\\\":100000}]}]}\\\\\\\",\\\\\\\"entryIds\\\\\\\":[\\\\\\\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\\\\\\\"],\\\\\\\"inflation\\\\\\\":[],\\\\\\\"recoveries\\\\\\\":[]},\\\\\\\"beforeBalances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":0}],\\\\\\\"rows\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"sku\\\\\\\":\\\\\\\"REM-M-NEG\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"Remera de algodón · M · Negro\\\\\\\",\\\\\\\"unit\\\\\\\":\\\\\\\"Unidad\\\\\\\",\\\\\\\"depositName\\\\\\\":\\\\\\\"Depósito principal\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"value\\\\\\\":100000,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":0,\\\\\\\"groupId\\\\\\\":\\\\\\\"only\\\\\\\",\\\\\\\"beforeAllowance\\\\\\\":0,\\\\\\\"afterAllowance\\\\\\\":40000,\\\\\\\"difference\\\\\\\":40000,\\\\\\\"beforeValue\\\\\\\":100000,\\\\\\\"afterValue\\\\\\\":60000}],\\\\\\\"afterBalances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":40000}],\\\\\\\"groups\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"only\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"REM-M-NEG\\\\\\\",\\\\\\\"mode\\\\\\\":\\\\\\\"Partida individual\\\\\\\",\\\\\\\"saleValue\\\\\\\":60000,\\\\\\\"saleCosts\\\\\\\":0,\\\\\\\"impracticability\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"geography\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"gross\\\\\\\":100000,\\\\\\\"carrying\\\\\\\":100000,\\\\\\\"recoverable\\\\\\\":60000,\\\\\\\"completionCosts\\\\\\\":0,\\\\\\\"afterValue\\\\\\\":60000,\\\\\\\"loss\\\\\\\":40000,\\\\\\\"recovery\\\\\\\":0,\\\\\\\"unrecognizedRecovery\\\\\\\":0,\\\\\\\"reason\\\\\\\":\\\\\\\"Venta individual de las remeras en Tucumán.\\\\\\\",\\\\\\\"evidence\\\\\\\":\\\\\\\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\\\\\\\",\\\\\\\"evidenceDate\\\\\\\":\\\\\\\"2026-09-30\\\\\\\"}],\\\\\\\"allowanceAccountId\\\\\\\":\\\\\\\"inventory-stockAllowance\\\\\\\",\\\\\\\"lossAccountId\\\\\\\":\\\\\\\"inventory-stockLoss\\\\\\\",\\\\\\\"recoveryAccountId\\\\\\\":\\\\\\\"inventory-stockRecovery\\\\\\\",\\\\\\\"loss\\\\\\\":40000,\\\\\\\"recovery\\\\\\\":0,\\\\\\\"net\\\\\\\":60000,\\\\\\\"journals\\\\\\\":[{\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"lines\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-stockLoss\\\\\\\",\\\\\\\"debit\\\\\\\":40000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-stockAllowance\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":40000}]}],\\\\\\\"warnings\\\\\\\":[\\\\\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\\\\\",\\\\\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\\\\\",\\\\\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\\\\\",\\\\\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\\\\\"]}\\\"}],\\\"corrections\\\":[]}\",\"costVersion\":7,\"id\":\"fd7e88dc-62da-4cdd-aa54-bb78c67a7c06\",\"number\":\"INT-VC-00000002\",\"method\":\"CPP\",\"reserve\":{\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":40000}],\"rows\":[],\"releases\":[],\"allowanceAccountId\":\"inventory-stockAllowance\",\"recoveryAccountId\":\"inventory-stockRecovery\"},\"recoveries\":[{\"id\":\"7b5a1335-2932-447f-a47e-33f0ee6a7455\",\"number\":\"INT-VI-00000001\",\"date\":\"2026-09-30\",\"review\":\"{\\\"date\\\":\\\"2026-09-30\\\",\\\"reference\\\":\\\"Pérdida previa al ajuste anual QA\\\",\\\"reason\\\":\\\"Costo y valor de realización comparados en la misma moneda de septiembre.\\\",\\\"scope\\\":\\\"Inventario completo\\\",\\\"scopeReason\\\":\\\"Única partida y depósito en el ensayo.\\\",\\\"changesReason\\\":\\\"\\\",\\\"source\\\":{\\\"batchId\\\":\\\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\\\",\\\"batchNumber\\\":\\\"INT-VC-00000001\\\",\\\"batchReview\\\":\\\"{\\\\\\\"moves\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"reserve-currency-opening\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-09-30\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"documentId\\\\\\\":\\\\\\\"\\\\\\\"}],\\\\\\\"rows\\\\\\\":[],\\\\\\\"balances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"value\\\\\\\":100000}],\\\\\\\"journals\\\\\\\":[{\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"lines\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-inventory\\\\\\\",\\\\\\\"debit\\\\\\\":100000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"3.1\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":100000}]}]}\\\",\\\"entryIds\\\":[\\\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\\\"],\\\"inflation\\\":[],\\\"recoveries\\\":[]},\\\"beforeBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":0}],\\\"rows\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":10,\\\"value\\\":100000,\\\"gross\\\":100000,\\\"allowance\\\":0,\\\"groupId\\\":\\\"only\\\",\\\"beforeAllowance\\\":0,\\\"afterAllowance\\\":40000,\\\"difference\\\":40000,\\\"beforeValue\\\":100000,\\\"afterValue\\\":60000}],\\\"afterBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":40000}],\\\"groups\\\":[{\\\"id\\\":\\\"only\\\",\\\"name\\\":\\\"REM-M-NEG\\\",\\\"mode\\\":\\\"Partida individual\\\",\\\"saleValue\\\":60000,\\\"saleCosts\\\":0,\\\"impracticability\\\":\\\"\\\",\\\"geography\\\":\\\"\\\",\\\"gross\\\":100000,\\\"carrying\\\":100000,\\\"recoverable\\\":60000,\\\"completionCosts\\\":0,\\\"afterValue\\\":60000,\\\"loss\\\":40000,\\\"recovery\\\":0,\\\"unrecognizedRecovery\\\":0,\\\"reason\\\":\\\"Venta individual de las remeras en Tucumán.\\\",\\\"evidence\\\":\\\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\\\",\\\"evidenceDate\\\":\\\"2026-09-30\\\"}],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"lossAccountId\\\":\\\"inventory-stockLoss\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\",\\\"loss\\\":40000,\\\"recovery\\\":0,\\\"net\\\":60000,\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-stockLoss\\\",\\\"debit\\\":40000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"inventory-stockAllowance\\\",\\\"debit\\\":0,\\\"credit\\\":40000}]}],\\\"warnings\\\":[\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\",\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\",\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\",\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\"]}\"}],\"responsible\":\"Administrador\",\"createdAt\":\"2026-10-12T08:18:12.040Z\",\"sourceMoves\":[],\"rows\":[],\"corrections\":[],\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":100000}],\"entryIds\":[]},\"accounts\":[{\"branchId\":\"central\",\"before\":100000,\"difference\":50000,\"after\":150000}],\"parts\":[{\"id\":\"0\",\"month\":\"2026-09\",\"amount\":100000,\"adjusted\":150000,\"coefficient\":\"1.500000000000\"}]},\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":100000,\"before\":100000,\"after\":150000,\"difference\":50000,\"reason\":\"Origen de septiembre del costo bruto de las remeras.\",\"pieces\":[{\"sourceId\":\"0\",\"month\":\"2026-09\",\"before\":100000,\"after\":150000}]}],\"accounts\":[{\"branchId\":\"central\",\"before\":100000,\"difference\":50000,\"after\":150000}],\"references\":[],\"totalBefore\":100000,\"totalAfter\":150000,\"warnings\":[\"Índices sintéticos: conciliación exclusivamente de prueba.\",\"La conciliación no agrega otro asiento del ajuste ni cambia cantidades o documentos.\",\"El CPP posterior parte de los valores conciliados. Las notas y facturas sobre recepciones anteriores requieren repartir sus diferencias entre esa base y resultados.\",\"Las devoluciones de ventas anteriores requieren costo recuperado y respaldo en la misma moneda de la base.\",\"Revisá medición, orígenes, valor recuperable y moneda homogénea antes de emitir estados contables.\"]}",
+          "id": "66b0e346-745f-47b9-8af6-6ac683cfb03d",
+          "number": "INT-CI-00000001",
+          "date": "2026-10-11",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-12T15:52:44.860Z",
+          "preview": {
+            "reserve": {
+              "accountId": "inventory-stockAllowance",
+              "balances": [
+                {
+                  "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+                  "depositId": "principal",
+                  "branchId": "central",
+                  "sku": "REM-M-NEG",
+                  "name": "Remera de algodón · M · Negro",
+                  "unit": "Unidad",
+                  "depositName": "Depósito principal",
+                  "quantity": 10,
+                  "value": 40000,
+                  "before": 40000,
+                  "after": 60000,
+                  "difference": 20000,
+                  "reason": "Pérdida reconocida sobre las remeras en moneda de septiembre.",
+                  "pieces": [
+                    {
+                      "sourceId": "1",
+                      "month": "2026-09",
+                      "before": 40000,
+                      "after": 60000
+                    }
+                  ]
+                }
+              ],
+              "accounts": [
+                {
+                  "branchId": "central",
+                  "before": 40000,
+                  "difference": 20000,
+                  "after": 60000
+                }
+              ],
+              "totalBefore": 40000,
+              "totalAfter": 60000
+            },
+            "reserveBalances": [
+              {
+                "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+                "depositId": "principal",
+                "branchId": "central",
+                "quantity": 10,
+                "gross": 150000,
+                "allowance": 60000
+              }
+            ],
+            "netBefore": 60000,
+            "netAfter": 90000,
+            "postingId": "670241b8-0721-4587-9bf6-73516817d201",
+            "postingNumber": "INT-AI-00000001",
+            "date": "2026-10-11",
+            "reference": "Conciliación de inventario neto QA 2026",
+            "reason": "Costo y pérdida del mismo artículo se concilian con el ajuste anual, sin duplicar asientos.",
+            "source": {
+              "reserve": {
+                "accountId": "inventory-stockAllowance",
+                "balances": [
+                  {
+                    "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+                    "depositId": "principal",
+                    "branchId": "central",
+                    "quantity": 10,
+                    "gross": 100000,
+                    "allowance": 40000
+                  }
+                ],
+                "accounts": [
+                  {
+                    "branchId": "central",
+                    "before": 40000,
+                    "difference": 20000,
+                    "after": 60000
+                  }
+                ],
+                "parts": [
+                  {
+                    "id": "1",
+                    "month": "2026-09",
+                    "amount": 40000,
+                    "adjusted": 60000,
+                    "coefficient": "1.500000000000"
+                  }
+                ],
+                "recoveries": [
+                  {
+                    "id": "7b5a1335-2932-447f-a47e-33f0ee6a7455",
+                    "number": "INT-VI-00000001",
+                    "date": "2026-09-30",
+                    "review": "{\"date\":\"2026-09-30\",\"reference\":\"Pérdida previa al ajuste anual QA\",\"reason\":\"Costo y valor de realización comparados en la misma moneda de septiembre.\",\"scope\":\"Inventario completo\",\"scopeReason\":\"Única partida y depósito en el ensayo.\",\"changesReason\":\"\",\"source\":{\"batchId\":\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\",\"batchNumber\":\"INT-VC-00000001\",\"batchReview\":\"{\\\"moves\\\":[{\\\"id\\\":\\\"reserve-currency-opening\\\",\\\"date\\\":\\\"2026-09-30\\\",\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"quantity\\\":10,\\\"branchId\\\":\\\"central\\\",\\\"documentId\\\":\\\"\\\"}],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"value\\\":100000}],\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-inventory\\\",\\\"debit\\\":100000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"3.1\\\",\\\"debit\\\":0,\\\"credit\\\":100000}]}]}\",\"entryIds\":[\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\"],\"inflation\":[],\"recoveries\":[]},\"beforeBalances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":0}],\"rows\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":100000,\"gross\":100000,\"allowance\":0,\"groupId\":\"only\",\"beforeAllowance\":0,\"afterAllowance\":40000,\"difference\":40000,\"beforeValue\":100000,\"afterValue\":60000}],\"afterBalances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":40000}],\"groups\":[{\"id\":\"only\",\"name\":\"REM-M-NEG\",\"mode\":\"Partida individual\",\"saleValue\":60000,\"saleCosts\":0,\"impracticability\":\"\",\"geography\":\"\",\"gross\":100000,\"carrying\":100000,\"recoverable\":60000,\"completionCosts\":0,\"afterValue\":60000,\"loss\":40000,\"recovery\":0,\"unrecognizedRecovery\":0,\"reason\":\"Venta individual de las remeras en Tucumán.\",\"evidence\":\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\",\"evidenceDate\":\"2026-09-30\"}],\"allowanceAccountId\":\"inventory-stockAllowance\",\"lossAccountId\":\"inventory-stockLoss\",\"recoveryAccountId\":\"inventory-stockRecovery\",\"loss\":40000,\"recovery\":0,\"net\":60000,\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-stockLoss\",\"debit\":40000,\"credit\":0},{\"accountId\":\"inventory-stockAllowance\",\"debit\":0,\"credit\":40000}]}],\"warnings\":[\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\",\"La reversión no supera el costo que habría quedado sin desvalorización.\",\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\",\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\"]}"
+                  }
+                ]
+              },
+              "id": "670241b8-0721-4587-9bf6-73516817d201",
+              "number": "INT-AI-00000001",
+              "date": "2026-10-11",
+              "provider": "Ensayo",
+              "closingMonth": "2026-10",
+              "indices": [
+                {
+                  "month": "2025-12",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-01",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-02",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-03",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-04",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-05",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-06",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-07",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-08",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-09",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-10",
+                  "value": "150"
+                }
+              ],
+              "entryIds": [
+                "b05c7d10-b6f5-404f-aaf4-0430c11376ae"
+              ],
+              "issues": [],
+              "batch": {
+                "date": "2026-10-11",
+                "reference": "Corte exacto con desvalorización QA",
+                "accounts": {
+                  "inventory": "inventory-inventory",
+                  "opening": "3.1",
+                  "cogs": "inventory-cogs",
+                  "adjustments": "inventory-adjustments",
+                  "transit": "inventory-transit",
+                  "wip": "inventory-wip",
+                  "unbilled": "inventory-unbilled",
+                  "stockAllowance": "inventory-stockAllowance",
+                  "stockRecovery": "inventory-stockRecovery"
+                },
+                "review": "{\"moves\":[],\"rows\":[],\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"value\":100000}],\"journals\":[],\"reserve\":{\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":40000}],\"rows\":[],\"releases\":[],\"allowanceAccountId\":\"inventory-stockAllowance\",\"recoveryAccountId\":\"inventory-stockRecovery\"},\"recoveries\":[{\"id\":\"7b5a1335-2932-447f-a47e-33f0ee6a7455\",\"number\":\"INT-VI-00000001\",\"date\":\"2026-09-30\",\"review\":\"{\\\"date\\\":\\\"2026-09-30\\\",\\\"reference\\\":\\\"Pérdida previa al ajuste anual QA\\\",\\\"reason\\\":\\\"Costo y valor de realización comparados en la misma moneda de septiembre.\\\",\\\"scope\\\":\\\"Inventario completo\\\",\\\"scopeReason\\\":\\\"Única partida y depósito en el ensayo.\\\",\\\"changesReason\\\":\\\"\\\",\\\"source\\\":{\\\"batchId\\\":\\\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\\\",\\\"batchNumber\\\":\\\"INT-VC-00000001\\\",\\\"batchReview\\\":\\\"{\\\\\\\"moves\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"reserve-currency-opening\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-09-30\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"documentId\\\\\\\":\\\\\\\"\\\\\\\"}],\\\\\\\"rows\\\\\\\":[],\\\\\\\"balances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"value\\\\\\\":100000}],\\\\\\\"journals\\\\\\\":[{\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"lines\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-inventory\\\\\\\",\\\\\\\"debit\\\\\\\":100000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"3.1\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":100000}]}]}\\\",\\\"entryIds\\\":[\\\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\\\"],\\\"inflation\\\":[],\\\"recoveries\\\":[]},\\\"beforeBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":0}],\\\"rows\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":10,\\\"value\\\":100000,\\\"gross\\\":100000,\\\"allowance\\\":0,\\\"groupId\\\":\\\"only\\\",\\\"beforeAllowance\\\":0,\\\"afterAllowance\\\":40000,\\\"difference\\\":40000,\\\"beforeValue\\\":100000,\\\"afterValue\\\":60000}],\\\"afterBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":40000}],\\\"groups\\\":[{\\\"id\\\":\\\"only\\\",\\\"name\\\":\\\"REM-M-NEG\\\",\\\"mode\\\":\\\"Partida individual\\\",\\\"saleValue\\\":60000,\\\"saleCosts\\\":0,\\\"impracticability\\\":\\\"\\\",\\\"geography\\\":\\\"\\\",\\\"gross\\\":100000,\\\"carrying\\\":100000,\\\"recoverable\\\":60000,\\\"completionCosts\\\":0,\\\"afterValue\\\":60000,\\\"loss\\\":40000,\\\"recovery\\\":0,\\\"unrecognizedRecovery\\\":0,\\\"reason\\\":\\\"Venta individual de las remeras en Tucumán.\\\",\\\"evidence\\\":\\\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\\\",\\\"evidenceDate\\\":\\\"2026-09-30\\\"}],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"lossAccountId\\\":\\\"inventory-stockLoss\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\",\\\"loss\\\":40000,\\\"recovery\\\":0,\\\"net\\\":60000,\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-stockLoss\\\",\\\"debit\\\":40000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"inventory-stockAllowance\\\",\\\"debit\\\":0,\\\"credit\\\":40000}]}],\\\"warnings\\\":[\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\",\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\",\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\",\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\"]}\"}],\"corrections\":[]}",
+                "costVersion": 7,
+                "id": "fd7e88dc-62da-4cdd-aa54-bb78c67a7c06",
+                "number": "INT-VC-00000002",
+                "method": "CPP",
+                "reserve": {
+                  "balances": [
+                    {
+                      "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+                      "depositId": "principal",
+                      "branchId": "central",
+                      "quantity": 10,
+                      "gross": 100000,
+                      "allowance": 40000
+                    }
+                  ],
+                  "rows": [],
+                  "releases": [],
+                  "allowanceAccountId": "inventory-stockAllowance",
+                  "recoveryAccountId": "inventory-stockRecovery"
+                },
+                "recoveries": [
+                  {
+                    "id": "7b5a1335-2932-447f-a47e-33f0ee6a7455",
+                    "number": "INT-VI-00000001",
+                    "date": "2026-09-30",
+                    "review": "{\"date\":\"2026-09-30\",\"reference\":\"Pérdida previa al ajuste anual QA\",\"reason\":\"Costo y valor de realización comparados en la misma moneda de septiembre.\",\"scope\":\"Inventario completo\",\"scopeReason\":\"Única partida y depósito en el ensayo.\",\"changesReason\":\"\",\"source\":{\"batchId\":\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\",\"batchNumber\":\"INT-VC-00000001\",\"batchReview\":\"{\\\"moves\\\":[{\\\"id\\\":\\\"reserve-currency-opening\\\",\\\"date\\\":\\\"2026-09-30\\\",\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"quantity\\\":10,\\\"branchId\\\":\\\"central\\\",\\\"documentId\\\":\\\"\\\"}],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"value\\\":100000}],\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-inventory\\\",\\\"debit\\\":100000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"3.1\\\",\\\"debit\\\":0,\\\"credit\\\":100000}]}]}\",\"entryIds\":[\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\"],\"inflation\":[],\"recoveries\":[]},\"beforeBalances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":0}],\"rows\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":100000,\"gross\":100000,\"allowance\":0,\"groupId\":\"only\",\"beforeAllowance\":0,\"afterAllowance\":40000,\"difference\":40000,\"beforeValue\":100000,\"afterValue\":60000}],\"afterBalances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":40000}],\"groups\":[{\"id\":\"only\",\"name\":\"REM-M-NEG\",\"mode\":\"Partida individual\",\"saleValue\":60000,\"saleCosts\":0,\"impracticability\":\"\",\"geography\":\"\",\"gross\":100000,\"carrying\":100000,\"recoverable\":60000,\"completionCosts\":0,\"afterValue\":60000,\"loss\":40000,\"recovery\":0,\"unrecognizedRecovery\":0,\"reason\":\"Venta individual de las remeras en Tucumán.\",\"evidence\":\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\",\"evidenceDate\":\"2026-09-30\"}],\"allowanceAccountId\":\"inventory-stockAllowance\",\"lossAccountId\":\"inventory-stockLoss\",\"recoveryAccountId\":\"inventory-stockRecovery\",\"loss\":40000,\"recovery\":0,\"net\":60000,\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-stockLoss\",\"debit\":40000,\"credit\":0},{\"accountId\":\"inventory-stockAllowance\",\"debit\":0,\"credit\":40000}]}],\"warnings\":[\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\",\"La reversión no supera el costo que habría quedado sin desvalorización.\",\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\",\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\"]}"
+                  }
+                ],
+                "responsible": "Administrador",
+                "createdAt": "2026-10-12T08:18:12.040Z",
+                "sourceMoves": [],
+                "rows": [],
+                "corrections": [],
+                "balances": [
+                  {
+                    "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+                    "depositId": "principal",
+                    "branchId": "central",
+                    "sku": "REM-M-NEG",
+                    "name": "Remera de algodón · M · Negro",
+                    "unit": "Unidad",
+                    "depositName": "Depósito principal",
+                    "quantity": 10,
+                    "value": 100000
+                  }
+                ],
+                "entryIds": []
+              },
+              "accounts": [
+                {
+                  "branchId": "central",
+                  "before": 100000,
+                  "difference": 50000,
+                  "after": 150000
+                }
+              ],
+              "parts": [
+                {
+                  "id": "0",
+                  "month": "2026-09",
+                  "amount": 100000,
+                  "adjusted": 150000,
+                  "coefficient": "1.500000000000"
+                }
+              ]
+            },
+            "balances": [
+              {
+                "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+                "depositId": "principal",
+                "branchId": "central",
+                "sku": "REM-M-NEG",
+                "name": "Remera de algodón · M · Negro",
+                "unit": "Unidad",
+                "depositName": "Depósito principal",
+                "quantity": 10,
+                "value": 100000,
+                "before": 100000,
+                "after": 150000,
+                "difference": 50000,
+                "reason": "Origen de septiembre del costo bruto de las remeras.",
+                "pieces": [
+                  {
+                    "sourceId": "0",
+                    "month": "2026-09",
+                    "before": 100000,
+                    "after": 150000
+                  }
+                ]
+              }
+            ],
+            "accounts": [
+              {
+                "branchId": "central",
+                "before": 100000,
+                "difference": 50000,
+                "after": 150000
+              }
+            ],
+            "references": [],
+            "totalBefore": 100000,
+            "totalAfter": 150000,
+            "warnings": [
+              "Índices sintéticos: conciliación exclusivamente de prueba.",
+              "La conciliación no agrega otro asiento del ajuste ni cambia cantidades o documentos.",
+              "El CPP posterior parte de los valores conciliados. Las notas y facturas sobre recepciones anteriores requieren repartir sus diferencias entre esa base y resultados.",
+              "Las devoluciones de ventas anteriores requieren costo recuperado y respaldo en la misma moneda de la base.",
+              "Revisá medición, orígenes, valor recuperable y moneda homogénea antes de emitir estados contables."
+            ]
+          }
+        },
+        "loss": {
+          "date": "2026-09-30",
+          "reference": "Pérdida previa al ajuste anual QA",
+          "reason": "Costo y valor de realización comparados en la misma moneda de septiembre.",
+          "scope": "Inventario completo",
+          "scopeReason": "Única partida y depósito en el ensayo.",
+          "currencyConfirmed": true,
+          "scopeConfirmed": true,
+          "changesReason": "",
+          "allowanceAccountId": "inventory-stockAllowance",
+          "lossAccountId": "inventory-stockLoss",
+          "recoveryAccountId": "inventory-stockRecovery",
+          "groups": [
+            {
+              "id": "only",
+              "name": "REM-M-NEG",
+              "mode": "Partida individual",
+              "reason": "Venta individual de las remeras en Tucumán.",
+              "impracticability": "",
+              "geography": "",
+              "members": [
+                {
+                  "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+                  "depositId": "principal"
+                }
+              ],
+              "saleValue": 60000,
+              "saleCosts": 0,
+              "completionCosts": 0,
+              "evidence": "Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.",
+              "evidenceDate": "2026-09-30"
+            }
+          ],
+          "review": "{\"date\":\"2026-09-30\",\"reference\":\"Pérdida previa al ajuste anual QA\",\"reason\":\"Costo y valor de realización comparados en la misma moneda de septiembre.\",\"scope\":\"Inventario completo\",\"scopeReason\":\"Única partida y depósito en el ensayo.\",\"changesReason\":\"\",\"source\":{\"batchId\":\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\",\"batchNumber\":\"INT-VC-00000001\",\"batchReview\":\"{\\\"moves\\\":[{\\\"id\\\":\\\"reserve-currency-opening\\\",\\\"date\\\":\\\"2026-09-30\\\",\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"quantity\\\":10,\\\"branchId\\\":\\\"central\\\",\\\"documentId\\\":\\\"\\\"}],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"value\\\":100000}],\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-inventory\\\",\\\"debit\\\":100000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"3.1\\\",\\\"debit\\\":0,\\\"credit\\\":100000}]}]}\",\"entryIds\":[\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\"],\"inflation\":[],\"recoveries\":[]},\"beforeBalances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":0}],\"rows\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":100000,\"gross\":100000,\"allowance\":0,\"groupId\":\"only\",\"beforeAllowance\":0,\"afterAllowance\":40000,\"difference\":40000,\"beforeValue\":100000,\"afterValue\":60000}],\"afterBalances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":40000}],\"groups\":[{\"id\":\"only\",\"name\":\"REM-M-NEG\",\"mode\":\"Partida individual\",\"saleValue\":60000,\"saleCosts\":0,\"impracticability\":\"\",\"geography\":\"\",\"gross\":100000,\"carrying\":100000,\"recoverable\":60000,\"completionCosts\":0,\"afterValue\":60000,\"loss\":40000,\"recovery\":0,\"unrecognizedRecovery\":0,\"reason\":\"Venta individual de las remeras en Tucumán.\",\"evidence\":\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\",\"evidenceDate\":\"2026-09-30\"}],\"allowanceAccountId\":\"inventory-stockAllowance\",\"lossAccountId\":\"inventory-stockLoss\",\"recoveryAccountId\":\"inventory-stockRecovery\",\"loss\":40000,\"recovery\":0,\"net\":60000,\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-stockLoss\",\"debit\":40000,\"credit\":0},{\"accountId\":\"inventory-stockAllowance\",\"debit\":0,\"credit\":40000}]}],\"warnings\":[\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\",\"La reversión no supera el costo que habría quedado sin desvalorización.\",\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\",\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\"]}",
+          "proofVersion": 2,
+          "id": "7b5a1335-2932-447f-a47e-33f0ee6a7455",
+          "number": "INT-VI-00000001",
+          "createdAt": "2026-10-12T08:18:12.029Z",
+          "responsible": "Administrador",
+          "entryIds": [
+            "0a75bc36-57e0-48e9-bfb0-fdb75eb71937"
+          ],
+          "preview": {
+            "date": "2026-09-30",
+            "reference": "Pérdida previa al ajuste anual QA",
+            "reason": "Costo y valor de realización comparados en la misma moneda de septiembre.",
+            "scope": "Inventario completo",
+            "scopeReason": "Única partida y depósito en el ensayo.",
+            "changesReason": "",
+            "source": {
+              "batchId": "2a23c783-d76e-4119-83e2-1ea4ebfcd68f",
+              "batchNumber": "INT-VC-00000001",
+              "batchReview": "{\"moves\":[{\"id\":\"reserve-currency-opening\",\"date\":\"2026-09-30\",\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"quantity\":10,\"branchId\":\"central\",\"documentId\":\"\"}],\"rows\":[],\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"value\":100000}],\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-inventory\",\"debit\":100000,\"credit\":0},{\"accountId\":\"3.1\",\"debit\":0,\"credit\":100000}]}]}",
+              "entryIds": [
+                "4e9d3904-acd1-4df1-8282-fe6e4fae678e"
+              ],
+              "inflation": [],
+              "recoveries": []
+            },
+            "beforeBalances": [
+              {
+                "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+                "depositId": "principal",
+                "branchId": "central",
+                "quantity": 10,
+                "gross": 100000,
+                "allowance": 0
+              }
+            ],
+            "rows": [
+              {
+                "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+                "depositId": "principal",
+                "branchId": "central",
+                "sku": "REM-M-NEG",
+                "name": "Remera de algodón · M · Negro",
+                "unit": "Unidad",
+                "depositName": "Depósito principal",
+                "quantity": 10,
+                "value": 100000,
+                "gross": 100000,
+                "allowance": 0,
+                "groupId": "only",
+                "beforeAllowance": 0,
+                "afterAllowance": 40000,
+                "difference": 40000,
+                "beforeValue": 100000,
+                "afterValue": 60000
+              }
+            ],
+            "afterBalances": [
+              {
+                "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+                "depositId": "principal",
+                "branchId": "central",
+                "quantity": 10,
+                "gross": 100000,
+                "allowance": 40000
+              }
+            ],
+            "groups": [
+              {
+                "id": "only",
+                "name": "REM-M-NEG",
+                "mode": "Partida individual",
+                "saleValue": 60000,
+                "saleCosts": 0,
+                "impracticability": "",
+                "geography": "",
+                "gross": 100000,
+                "carrying": 100000,
+                "recoverable": 60000,
+                "completionCosts": 0,
+                "afterValue": 60000,
+                "loss": 40000,
+                "recovery": 0,
+                "unrecognizedRecovery": 0,
+                "reason": "Venta individual de las remeras en Tucumán.",
+                "evidence": "Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.",
+                "evidenceDate": "2026-09-30"
+              }
+            ],
+            "allowanceAccountId": "inventory-stockAllowance",
+            "lossAccountId": "inventory-stockLoss",
+            "recoveryAccountId": "inventory-stockRecovery",
+            "loss": 40000,
+            "recovery": 0,
+            "net": 60000,
+            "journals": [
+              {
+                "branchId": "central",
+                "lines": [
+                  {
+                    "accountId": "inventory-stockLoss",
+                    "debit": 40000,
+                    "credit": 0
+                  },
+                  {
+                    "accountId": "inventory-stockAllowance",
+                    "debit": 0,
+                    "credit": 40000
+                  }
+                ]
+              }
+            ],
+            "warnings": [
+              "Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.",
+              "La reversión no supera el costo que habría quedado sin desvalorización.",
+              "Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.",
+              "La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente."
+            ]
+          }
+        },
+        "costing": {
+          "date": "2026-10-12",
+          "reference": "CPP posterior a conciliación neta QA 2026",
+          "accounts": {
+            "inventory": "inventory-inventory",
+            "opening": "3.1",
+            "cogs": "inventory-cogs",
+            "adjustments": "inventory-adjustments",
+            "transit": "inventory-transit",
+            "wip": "inventory-wip",
+            "unbilled": "inventory-unbilled",
+            "stockAllowance": "inventory-stockAllowance",
+            "stockRecovery": "inventory-stockRecovery"
+          },
+          "receiptCosts": [],
+          "returnCosts": [],
+          "openingInvoices": [],
+          "openingNotes": [],
+          "adjustments": [],
+          "review": "{\"moves\":[{\"id\":\"7c7eba83-1dc6-4450-b23e-0ac98c938439\",\"date\":\"2026-10-12\",\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"quantity\":-3,\"branchId\":\"central\",\"documentId\":\"f6293ee2-18ef-44ca-9090-56d1ee06b1f9\"}],\"rows\":[{\"moveId\":\"7c7eba83-1dc6-4450-b23e-0ac98c938439\",\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"date\":\"2026-10-12\",\"quantity\":-3,\"value\":45000,\"kind\":\"Venta\",\"counterpart\":\"inventory-cogs\",\"allowanceUsed\":18000,\"allowanceRestored\":0,\"netValue\":27000}],\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"value\":105000}],\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-inventory\",\"debit\":0,\"credit\":45000},{\"accountId\":\"inventory-stockAllowance\",\"debit\":18000,\"credit\":0},{\"accountId\":\"inventory-cogs\",\"debit\":27000,\"credit\":0}]}],\"reserve\":{\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"gross\":105000,\"allowance\":42000}],\"rows\":[{\"moveId\":\"7c7eba83-1dc6-4450-b23e-0ac98c938439\",\"used\":18000,\"restored\":0,\"netValue\":27000}],\"releases\":[],\"allowanceAccountId\":\"inventory-stockAllowance\",\"recoveryAccountId\":\"inventory-stockRecovery\"},\"recoveries\":[{\"id\":\"7b5a1335-2932-447f-a47e-33f0ee6a7455\",\"number\":\"INT-VI-00000001\",\"date\":\"2026-09-30\",\"review\":\"{\\\"date\\\":\\\"2026-09-30\\\",\\\"reference\\\":\\\"Pérdida previa al ajuste anual QA\\\",\\\"reason\\\":\\\"Costo y valor de realización comparados en la misma moneda de septiembre.\\\",\\\"scope\\\":\\\"Inventario completo\\\",\\\"scopeReason\\\":\\\"Única partida y depósito en el ensayo.\\\",\\\"changesReason\\\":\\\"\\\",\\\"source\\\":{\\\"batchId\\\":\\\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\\\",\\\"batchNumber\\\":\\\"INT-VC-00000001\\\",\\\"batchReview\\\":\\\"{\\\\\\\"moves\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"reserve-currency-opening\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-09-30\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"documentId\\\\\\\":\\\\\\\"\\\\\\\"}],\\\\\\\"rows\\\\\\\":[],\\\\\\\"balances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"value\\\\\\\":100000}],\\\\\\\"journals\\\\\\\":[{\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"lines\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-inventory\\\\\\\",\\\\\\\"debit\\\\\\\":100000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"3.1\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":100000}]}]}\\\",\\\"entryIds\\\":[\\\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\\\"],\\\"inflation\\\":[],\\\"recoveries\\\":[]},\\\"beforeBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":0}],\\\"rows\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":10,\\\"value\\\":100000,\\\"gross\\\":100000,\\\"allowance\\\":0,\\\"groupId\\\":\\\"only\\\",\\\"beforeAllowance\\\":0,\\\"afterAllowance\\\":40000,\\\"difference\\\":40000,\\\"beforeValue\\\":100000,\\\"afterValue\\\":60000}],\\\"afterBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":40000}],\\\"groups\\\":[{\\\"id\\\":\\\"only\\\",\\\"name\\\":\\\"REM-M-NEG\\\",\\\"mode\\\":\\\"Partida individual\\\",\\\"saleValue\\\":60000,\\\"saleCosts\\\":0,\\\"impracticability\\\":\\\"\\\",\\\"geography\\\":\\\"\\\",\\\"gross\\\":100000,\\\"carrying\\\":100000,\\\"recoverable\\\":60000,\\\"completionCosts\\\":0,\\\"afterValue\\\":60000,\\\"loss\\\":40000,\\\"recovery\\\":0,\\\"unrecognizedRecovery\\\":0,\\\"reason\\\":\\\"Venta individual de las remeras en Tucumán.\\\",\\\"evidence\\\":\\\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\\\",\\\"evidenceDate\\\":\\\"2026-09-30\\\"}],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"lossAccountId\\\":\\\"inventory-stockLoss\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\",\\\"loss\\\":40000,\\\"recovery\\\":0,\\\"net\\\":60000,\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-stockLoss\\\",\\\"debit\\\":40000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"inventory-stockAllowance\\\",\\\"debit\\\":0,\\\"credit\\\":40000}]}],\\\"warnings\\\":[\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\",\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\",\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\",\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\"]}\"}],\"inflation\":[{\"id\":\"66b0e346-745f-47b9-8af6-6ac683cfb03d\",\"number\":\"INT-CI-00000001\",\"date\":\"2026-10-11\",\"review\":\"{\\\"reserve\\\":{\\\"accountId\\\":\\\"inventory-stockAllowance\\\",\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":10,\\\"value\\\":40000,\\\"before\\\":40000,\\\"after\\\":60000,\\\"difference\\\":20000,\\\"reason\\\":\\\"Pérdida reconocida sobre las remeras en moneda de septiembre.\\\",\\\"pieces\\\":[{\\\"sourceId\\\":\\\"1\\\",\\\"month\\\":\\\"2026-09\\\",\\\"before\\\":40000,\\\"after\\\":60000}]}],\\\"accounts\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"before\\\":40000,\\\"difference\\\":20000,\\\"after\\\":60000}],\\\"totalBefore\\\":40000,\\\"totalAfter\\\":60000},\\\"reserveBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":150000,\\\"allowance\\\":60000}],\\\"netBefore\\\":60000,\\\"netAfter\\\":90000,\\\"postingId\\\":\\\"670241b8-0721-4587-9bf6-73516817d201\\\",\\\"postingNumber\\\":\\\"INT-AI-00000001\\\",\\\"date\\\":\\\"2026-10-11\\\",\\\"reference\\\":\\\"Conciliación de inventario neto QA 2026\\\",\\\"reason\\\":\\\"Costo y pérdida del mismo artículo se concilian con el ajuste anual, sin duplicar asientos.\\\",\\\"source\\\":{\\\"reserve\\\":{\\\"accountId\\\":\\\"inventory-stockAllowance\\\",\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":40000}],\\\"accounts\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"before\\\":40000,\\\"difference\\\":20000,\\\"after\\\":60000}],\\\"parts\\\":[{\\\"id\\\":\\\"1\\\",\\\"month\\\":\\\"2026-09\\\",\\\"amount\\\":40000,\\\"adjusted\\\":60000,\\\"coefficient\\\":\\\"1.500000000000\\\"}],\\\"recoveries\\\":[{\\\"id\\\":\\\"7b5a1335-2932-447f-a47e-33f0ee6a7455\\\",\\\"number\\\":\\\"INT-VI-00000001\\\",\\\"date\\\":\\\"2026-09-30\\\",\\\"review\\\":\\\"{\\\\\\\"date\\\\\\\":\\\\\\\"2026-09-30\\\\\\\",\\\\\\\"reference\\\\\\\":\\\\\\\"Pérdida previa al ajuste anual QA\\\\\\\",\\\\\\\"reason\\\\\\\":\\\\\\\"Costo y valor de realización comparados en la misma moneda de septiembre.\\\\\\\",\\\\\\\"scope\\\\\\\":\\\\\\\"Inventario completo\\\\\\\",\\\\\\\"scopeReason\\\\\\\":\\\\\\\"Única partida y depósito en el ensayo.\\\\\\\",\\\\\\\"changesReason\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"source\\\\\\\":{\\\\\\\"batchId\\\\\\\":\\\\\\\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\\\\\\\",\\\\\\\"batchNumber\\\\\\\":\\\\\\\"INT-VC-00000001\\\\\\\",\\\\\\\"batchReview\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"moves\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"reserve-currency-opening\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-09-30\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"documentId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\"}],\\\\\\\\\\\\\\\"rows\\\\\\\\\\\\\\\":[],\\\\\\\\\\\\\\\"balances\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\"value\\\\\\\\\\\\\\\":100000}],\\\\\\\\\\\\\\\"journals\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"lines\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"accountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-inventory\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"debit\\\\\\\\\\\\\\\":100000,\\\\\\\\\\\\\\\"credit\\\\\\\\\\\\\\\":0},{\\\\\\\\\\\\\\\"accountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"3.1\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"debit\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"credit\\\\\\\\\\\\\\\":100000}]}]}\\\\\\\",\\\\\\\"entryIds\\\\\\\":[\\\\\\\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\\\\\\\"],\\\\\\\"inflation\\\\\\\":[],\\\\\\\"recoveries\\\\\\\":[]},\\\\\\\"beforeBalances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":0}],\\\\\\\"rows\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"sku\\\\\\\":\\\\\\\"REM-M-NEG\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"Remera de algodón · M · Negro\\\\\\\",\\\\\\\"unit\\\\\\\":\\\\\\\"Unidad\\\\\\\",\\\\\\\"depositName\\\\\\\":\\\\\\\"Depósito principal\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"value\\\\\\\":100000,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":0,\\\\\\\"groupId\\\\\\\":\\\\\\\"only\\\\\\\",\\\\\\\"beforeAllowance\\\\\\\":0,\\\\\\\"afterAllowance\\\\\\\":40000,\\\\\\\"difference\\\\\\\":40000,\\\\\\\"beforeValue\\\\\\\":100000,\\\\\\\"afterValue\\\\\\\":60000}],\\\\\\\"afterBalances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":40000}],\\\\\\\"groups\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"only\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"REM-M-NEG\\\\\\\",\\\\\\\"mode\\\\\\\":\\\\\\\"Partida individual\\\\\\\",\\\\\\\"saleValue\\\\\\\":60000,\\\\\\\"saleCosts\\\\\\\":0,\\\\\\\"impracticability\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"geography\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"gross\\\\\\\":100000,\\\\\\\"carrying\\\\\\\":100000,\\\\\\\"recoverable\\\\\\\":60000,\\\\\\\"completionCosts\\\\\\\":0,\\\\\\\"afterValue\\\\\\\":60000,\\\\\\\"loss\\\\\\\":40000,\\\\\\\"recovery\\\\\\\":0,\\\\\\\"unrecognizedRecovery\\\\\\\":0,\\\\\\\"reason\\\\\\\":\\\\\\\"Venta individual de las remeras en Tucumán.\\\\\\\",\\\\\\\"evidence\\\\\\\":\\\\\\\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\\\\\\\",\\\\\\\"evidenceDate\\\\\\\":\\\\\\\"2026-09-30\\\\\\\"}],\\\\\\\"allowanceAccountId\\\\\\\":\\\\\\\"inventory-stockAllowance\\\\\\\",\\\\\\\"lossAccountId\\\\\\\":\\\\\\\"inventory-stockLoss\\\\\\\",\\\\\\\"recoveryAccountId\\\\\\\":\\\\\\\"inventory-stockRecovery\\\\\\\",\\\\\\\"loss\\\\\\\":40000,\\\\\\\"recovery\\\\\\\":0,\\\\\\\"net\\\\\\\":60000,\\\\\\\"journals\\\\\\\":[{\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"lines\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-stockLoss\\\\\\\",\\\\\\\"debit\\\\\\\":40000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-stockAllowance\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":40000}]}],\\\\\\\"warnings\\\\\\\":[\\\\\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\\\\\",\\\\\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\\\\\",\\\\\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\\\\\",\\\\\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\\\\\"]}\\\"}]},\\\"id\\\":\\\"670241b8-0721-4587-9bf6-73516817d201\\\",\\\"number\\\":\\\"INT-AI-00000001\\\",\\\"date\\\":\\\"2026-10-11\\\",\\\"provider\\\":\\\"Ensayo\\\",\\\"closingMonth\\\":\\\"2026-10\\\",\\\"indices\\\":[{\\\"month\\\":\\\"2025-12\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-01\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-02\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-03\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-04\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-05\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-06\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-07\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-08\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-09\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-10\\\",\\\"value\\\":\\\"150\\\"}],\\\"entryIds\\\":[\\\"b05c7d10-b6f5-404f-aaf4-0430c11376ae\\\"],\\\"issues\\\":[],\\\"batch\\\":{\\\"date\\\":\\\"2026-10-11\\\",\\\"reference\\\":\\\"Corte exacto con desvalorización QA\\\",\\\"accounts\\\":{\\\"inventory\\\":\\\"inventory-inventory\\\",\\\"opening\\\":\\\"3.1\\\",\\\"cogs\\\":\\\"inventory-cogs\\\",\\\"adjustments\\\":\\\"inventory-adjustments\\\",\\\"transit\\\":\\\"inventory-transit\\\",\\\"wip\\\":\\\"inventory-wip\\\",\\\"unbilled\\\":\\\"inventory-unbilled\\\",\\\"stockAllowance\\\":\\\"inventory-stockAllowance\\\",\\\"stockRecovery\\\":\\\"inventory-stockRecovery\\\"},\\\"review\\\":\\\"{\\\\\\\"moves\\\\\\\":[],\\\\\\\"rows\\\\\\\":[],\\\\\\\"balances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"value\\\\\\\":100000}],\\\\\\\"journals\\\\\\\":[],\\\\\\\"reserve\\\\\\\":{\\\\\\\"balances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":40000}],\\\\\\\"rows\\\\\\\":[],\\\\\\\"releases\\\\\\\":[],\\\\\\\"allowanceAccountId\\\\\\\":\\\\\\\"inventory-stockAllowance\\\\\\\",\\\\\\\"recoveryAccountId\\\\\\\":\\\\\\\"inventory-stockRecovery\\\\\\\"},\\\\\\\"recoveries\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"7b5a1335-2932-447f-a47e-33f0ee6a7455\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"INT-VI-00000001\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-09-30\\\\\\\",\\\\\\\"review\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-09-30\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"reference\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Pérdida previa al ajuste anual QA\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"reason\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Costo y valor de realización comparados en la misma moneda de septiembre.\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"scope\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Inventario completo\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"scopeReason\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Única partida y depósito en el ensayo.\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"changesReason\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"source\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"batchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"batchNumber\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"INT-VC-00000001\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"batchReview\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"{\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"moves\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"reserve-currency-opening\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"date\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"2026-09-30\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"documentId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"}],\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"rows\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":[],\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"balances\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"value\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":100000}],\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"journals\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"lines\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"accountId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"inventory-inventory\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"debit\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":100000,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"credit\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":0},{\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"accountId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"3.1\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"debit\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"credit\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":100000}]}]}\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"entryIds\\\\\\\\\\\\\\\":[\\\\\\\\\\\\\\\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\\\\\\\\\\\\\\\"],\\\\\\\\\\\\\\\"inflation\\\\\\\\\\\\\\\":[],\\\\\\\\\\\\\\\"recoveries\\\\\\\\\\\\\\\":[]},\\\\\\\\\\\\\\\"beforeBalances\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\"gross\\\\\\\\\\\\\\\":100000,\\\\\\\\\\\\\\\"allowance\\\\\\\\\\\\\\\":0}],\\\\\\\\\\\\\\\"rows\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"sku\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"REM-M-NEG\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Remera de algodón · M · Negro\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"unit\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Unidad\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositName\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Depósito principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\"value\\\\\\\\\\\\\\\":100000,\\\\\\\\\\\\\\\"gross\\\\\\\\\\\\\\\":100000,\\\\\\\\\\\\\\\"allowance\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"groupId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"only\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"beforeAllowance\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"afterAllowance\\\\\\\\\\\\\\\":40000,\\\\\\\\\\\\\\\"difference\\\\\\\\\\\\\\\":40000,\\\\\\\\\\\\\\\"beforeValue\\\\\\\\\\\\\\\":100000,\\\\\\\\\\\\\\\"afterValue\\\\\\\\\\\\\\\":60000}],\\\\\\\\\\\\\\\"afterBalances\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\"gross\\\\\\\\\\\\\\\":100000,\\\\\\\\\\\\\\\"allowance\\\\\\\\\\\\\\\":40000}],\\\\\\\\\\\\\\\"groups\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"only\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"REM-M-NEG\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"mode\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Partida individual\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"saleValue\\\\\\\\\\\\\\\":60000,\\\\\\\\\\\\\\\"saleCosts\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"impracticability\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"geography\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"gross\\\\\\\\\\\\\\\":100000,\\\\\\\\\\\\\\\"carrying\\\\\\\\\\\\\\\":100000,\\\\\\\\\\\\\\\"recoverable\\\\\\\\\\\\\\\":60000,\\\\\\\\\\\\\\\"completionCosts\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"afterValue\\\\\\\\\\\\\\\":60000,\\\\\\\\\\\\\\\"loss\\\\\\\\\\\\\\\":40000,\\\\\\\\\\\\\\\"recovery\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"unrecognizedRecovery\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"reason\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Venta individual de las remeras en Tucumán.\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"evidence\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"evidenceDate\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-09-30\\\\\\\\\\\\\\\"}],\\\\\\\\\\\\\\\"allowanceAccountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-stockAllowance\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"lossAccountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-stockLoss\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"recoveryAccountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-stockRecovery\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"loss\\\\\\\\\\\\\\\":40000,\\\\\\\\\\\\\\\"recovery\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"net\\\\\\\\\\\\\\\":60000,\\\\\\\\\\\\\\\"journals\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"lines\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"accountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-stockLoss\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"debit\\\\\\\\\\\\\\\":40000,\\\\\\\\\\\\\\\"credit\\\\\\\\\\\\\\\":0},{\\\\\\\\\\\\\\\"accountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-stockAllowance\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"debit\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"credit\\\\\\\\\\\\\\\":40000}]}],\\\\\\\\\\\\\\\"warnings\\\\\\\\\\\\\\\":[\\\\\\\\\\\\\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\\\\\\\\\\\\\"]}\\\\\\\"}],\\\\\\\"corrections\\\\\\\":[]}\\\",\\\"costVersion\\\":7,\\\"id\\\":\\\"fd7e88dc-62da-4cdd-aa54-bb78c67a7c06\\\",\\\"number\\\":\\\"INT-VC-00000002\\\",\\\"method\\\":\\\"CPP\\\",\\\"reserve\\\":{\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":40000}],\\\"rows\\\":[],\\\"releases\\\":[],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\"},\\\"recoveries\\\":[{\\\"id\\\":\\\"7b5a1335-2932-447f-a47e-33f0ee6a7455\\\",\\\"number\\\":\\\"INT-VI-00000001\\\",\\\"date\\\":\\\"2026-09-30\\\",\\\"review\\\":\\\"{\\\\\\\"date\\\\\\\":\\\\\\\"2026-09-30\\\\\\\",\\\\\\\"reference\\\\\\\":\\\\\\\"Pérdida previa al ajuste anual QA\\\\\\\",\\\\\\\"reason\\\\\\\":\\\\\\\"Costo y valor de realización comparados en la misma moneda de septiembre.\\\\\\\",\\\\\\\"scope\\\\\\\":\\\\\\\"Inventario completo\\\\\\\",\\\\\\\"scopeReason\\\\\\\":\\\\\\\"Única partida y depósito en el ensayo.\\\\\\\",\\\\\\\"changesReason\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"source\\\\\\\":{\\\\\\\"batchId\\\\\\\":\\\\\\\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\\\\\\\",\\\\\\\"batchNumber\\\\\\\":\\\\\\\"INT-VC-00000001\\\\\\\",\\\\\\\"batchReview\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"moves\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"reserve-currency-opening\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-09-30\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"documentId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\"}],\\\\\\\\\\\\\\\"rows\\\\\\\\\\\\\\\":[],\\\\\\\\\\\\\\\"balances\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\"value\\\\\\\\\\\\\\\":100000}],\\\\\\\\\\\\\\\"journals\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"lines\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"accountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-inventory\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"debit\\\\\\\\\\\\\\\":100000,\\\\\\\\\\\\\\\"credit\\\\\\\\\\\\\\\":0},{\\\\\\\\\\\\\\\"accountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"3.1\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"debit\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"credit\\\\\\\\\\\\\\\":100000}]}]}\\\\\\\",\\\\\\\"entryIds\\\\\\\":[\\\\\\\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\\\\\\\"],\\\\\\\"inflation\\\\\\\":[],\\\\\\\"recoveries\\\\\\\":[]},\\\\\\\"beforeBalances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":0}],\\\\\\\"rows\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"sku\\\\\\\":\\\\\\\"REM-M-NEG\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"Remera de algodón · M · Negro\\\\\\\",\\\\\\\"unit\\\\\\\":\\\\\\\"Unidad\\\\\\\",\\\\\\\"depositName\\\\\\\":\\\\\\\"Depósito principal\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"value\\\\\\\":100000,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":0,\\\\\\\"groupId\\\\\\\":\\\\\\\"only\\\\\\\",\\\\\\\"beforeAllowance\\\\\\\":0,\\\\\\\"afterAllowance\\\\\\\":40000,\\\\\\\"difference\\\\\\\":40000,\\\\\\\"beforeValue\\\\\\\":100000,\\\\\\\"afterValue\\\\\\\":60000}],\\\\\\\"afterBalances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":40000}],\\\\\\\"groups\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"only\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"REM-M-NEG\\\\\\\",\\\\\\\"mode\\\\\\\":\\\\\\\"Partida individual\\\\\\\",\\\\\\\"saleValue\\\\\\\":60000,\\\\\\\"saleCosts\\\\\\\":0,\\\\\\\"impracticability\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"geography\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"gross\\\\\\\":100000,\\\\\\\"carrying\\\\\\\":100000,\\\\\\\"recoverable\\\\\\\":60000,\\\\\\\"completionCosts\\\\\\\":0,\\\\\\\"afterValue\\\\\\\":60000,\\\\\\\"loss\\\\\\\":40000,\\\\\\\"recovery\\\\\\\":0,\\\\\\\"unrecognizedRecovery\\\\\\\":0,\\\\\\\"reason\\\\\\\":\\\\\\\"Venta individual de las remeras en Tucumán.\\\\\\\",\\\\\\\"evidence\\\\\\\":\\\\\\\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\\\\\\\",\\\\\\\"evidenceDate\\\\\\\":\\\\\\\"2026-09-30\\\\\\\"}],\\\\\\\"allowanceAccountId\\\\\\\":\\\\\\\"inventory-stockAllowance\\\\\\\",\\\\\\\"lossAccountId\\\\\\\":\\\\\\\"inventory-stockLoss\\\\\\\",\\\\\\\"recoveryAccountId\\\\\\\":\\\\\\\"inventory-stockRecovery\\\\\\\",\\\\\\\"loss\\\\\\\":40000,\\\\\\\"recovery\\\\\\\":0,\\\\\\\"net\\\\\\\":60000,\\\\\\\"journals\\\\\\\":[{\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"lines\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-stockLoss\\\\\\\",\\\\\\\"debit\\\\\\\":40000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-stockAllowance\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":40000}]}],\\\\\\\"warnings\\\\\\\":[\\\\\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\\\\\",\\\\\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\\\\\",\\\\\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\\\\\",\\\\\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\\\\\"]}\\\"}],\\\"responsible\\\":\\\"Administrador\\\",\\\"createdAt\\\":\\\"2026-10-12T08:18:12.040Z\\\",\\\"sourceMoves\\\":[],\\\"rows\\\":[],\\\"corrections\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":10,\\\"value\\\":100000}],\\\"entryIds\\\":[]},\\\"accounts\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"before\\\":100000,\\\"difference\\\":50000,\\\"after\\\":150000}],\\\"parts\\\":[{\\\"id\\\":\\\"0\\\",\\\"month\\\":\\\"2026-09\\\",\\\"amount\\\":100000,\\\"adjusted\\\":150000,\\\"coefficient\\\":\\\"1.500000000000\\\"}]},\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":10,\\\"value\\\":100000,\\\"before\\\":100000,\\\"after\\\":150000,\\\"difference\\\":50000,\\\"reason\\\":\\\"Origen de septiembre del costo bruto de las remeras.\\\",\\\"pieces\\\":[{\\\"sourceId\\\":\\\"0\\\",\\\"month\\\":\\\"2026-09\\\",\\\"before\\\":100000,\\\"after\\\":150000}]}],\\\"accounts\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"before\\\":100000,\\\"difference\\\":50000,\\\"after\\\":150000}],\\\"references\\\":[],\\\"totalBefore\\\":100000,\\\"totalAfter\\\":150000,\\\"warnings\\\":[\\\"Índices sintéticos: conciliación exclusivamente de prueba.\\\",\\\"La conciliación no agrega otro asiento del ajuste ni cambia cantidades o documentos.\\\",\\\"El CPP posterior parte de los valores conciliados. Las notas y facturas sobre recepciones anteriores requieren repartir sus diferencias entre esa base y resultados.\\\",\\\"Las devoluciones de ventas anteriores requieren costo recuperado y respaldo en la misma moneda de la base.\\\",\\\"Revisá medición, orígenes, valor recuperable y moneda homogénea antes de emitir estados contables.\\\"]}\",\"postingId\":\"670241b8-0721-4587-9bf6-73516817d201\"}],\"corrections\":[]}",
+          "costVersion": 7,
+          "id": "29f3a371-0b8f-4114-a686-738de5d97aa2",
+          "number": "INT-VC-00000003",
+          "method": "CPP",
+          "reserve": {
+            "balances": [
+              {
+                "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+                "depositId": "principal",
+                "branchId": "central",
+                "quantity": 7,
+                "gross": 105000,
+                "allowance": 42000
+              }
+            ],
+            "rows": [
+              {
+                "moveId": "7c7eba83-1dc6-4450-b23e-0ac98c938439",
+                "used": 18000,
+                "restored": 0,
+                "netValue": 27000
+              }
+            ],
+            "releases": [],
+            "allowanceAccountId": "inventory-stockAllowance",
+            "recoveryAccountId": "inventory-stockRecovery"
+          },
+          "recoveries": [
+            {
+              "id": "7b5a1335-2932-447f-a47e-33f0ee6a7455",
+              "number": "INT-VI-00000001",
+              "date": "2026-09-30",
+              "review": "{\"date\":\"2026-09-30\",\"reference\":\"Pérdida previa al ajuste anual QA\",\"reason\":\"Costo y valor de realización comparados en la misma moneda de septiembre.\",\"scope\":\"Inventario completo\",\"scopeReason\":\"Única partida y depósito en el ensayo.\",\"changesReason\":\"\",\"source\":{\"batchId\":\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\",\"batchNumber\":\"INT-VC-00000001\",\"batchReview\":\"{\\\"moves\\\":[{\\\"id\\\":\\\"reserve-currency-opening\\\",\\\"date\\\":\\\"2026-09-30\\\",\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"quantity\\\":10,\\\"branchId\\\":\\\"central\\\",\\\"documentId\\\":\\\"\\\"}],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"value\\\":100000}],\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-inventory\\\",\\\"debit\\\":100000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"3.1\\\",\\\"debit\\\":0,\\\"credit\\\":100000}]}]}\",\"entryIds\":[\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\"],\"inflation\":[],\"recoveries\":[]},\"beforeBalances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":0}],\"rows\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":100000,\"gross\":100000,\"allowance\":0,\"groupId\":\"only\",\"beforeAllowance\":0,\"afterAllowance\":40000,\"difference\":40000,\"beforeValue\":100000,\"afterValue\":60000}],\"afterBalances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":40000}],\"groups\":[{\"id\":\"only\",\"name\":\"REM-M-NEG\",\"mode\":\"Partida individual\",\"saleValue\":60000,\"saleCosts\":0,\"impracticability\":\"\",\"geography\":\"\",\"gross\":100000,\"carrying\":100000,\"recoverable\":60000,\"completionCosts\":0,\"afterValue\":60000,\"loss\":40000,\"recovery\":0,\"unrecognizedRecovery\":0,\"reason\":\"Venta individual de las remeras en Tucumán.\",\"evidence\":\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\",\"evidenceDate\":\"2026-09-30\"}],\"allowanceAccountId\":\"inventory-stockAllowance\",\"lossAccountId\":\"inventory-stockLoss\",\"recoveryAccountId\":\"inventory-stockRecovery\",\"loss\":40000,\"recovery\":0,\"net\":60000,\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-stockLoss\",\"debit\":40000,\"credit\":0},{\"accountId\":\"inventory-stockAllowance\",\"debit\":0,\"credit\":40000}]}],\"warnings\":[\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\",\"La reversión no supera el costo que habría quedado sin desvalorización.\",\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\",\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\"]}"
+            }
+          ],
+          "inflation": [
+            {
+              "id": "66b0e346-745f-47b9-8af6-6ac683cfb03d",
+              "number": "INT-CI-00000001",
+              "date": "2026-10-11",
+              "review": "{\"reserve\":{\"accountId\":\"inventory-stockAllowance\",\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":40000,\"before\":40000,\"after\":60000,\"difference\":20000,\"reason\":\"Pérdida reconocida sobre las remeras en moneda de septiembre.\",\"pieces\":[{\"sourceId\":\"1\",\"month\":\"2026-09\",\"before\":40000,\"after\":60000}]}],\"accounts\":[{\"branchId\":\"central\",\"before\":40000,\"difference\":20000,\"after\":60000}],\"totalBefore\":40000,\"totalAfter\":60000},\"reserveBalances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":150000,\"allowance\":60000}],\"netBefore\":60000,\"netAfter\":90000,\"postingId\":\"670241b8-0721-4587-9bf6-73516817d201\",\"postingNumber\":\"INT-AI-00000001\",\"date\":\"2026-10-11\",\"reference\":\"Conciliación de inventario neto QA 2026\",\"reason\":\"Costo y pérdida del mismo artículo se concilian con el ajuste anual, sin duplicar asientos.\",\"source\":{\"reserve\":{\"accountId\":\"inventory-stockAllowance\",\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":40000}],\"accounts\":[{\"branchId\":\"central\",\"before\":40000,\"difference\":20000,\"after\":60000}],\"parts\":[{\"id\":\"1\",\"month\":\"2026-09\",\"amount\":40000,\"adjusted\":60000,\"coefficient\":\"1.500000000000\"}],\"recoveries\":[{\"id\":\"7b5a1335-2932-447f-a47e-33f0ee6a7455\",\"number\":\"INT-VI-00000001\",\"date\":\"2026-09-30\",\"review\":\"{\\\"date\\\":\\\"2026-09-30\\\",\\\"reference\\\":\\\"Pérdida previa al ajuste anual QA\\\",\\\"reason\\\":\\\"Costo y valor de realización comparados en la misma moneda de septiembre.\\\",\\\"scope\\\":\\\"Inventario completo\\\",\\\"scopeReason\\\":\\\"Única partida y depósito en el ensayo.\\\",\\\"changesReason\\\":\\\"\\\",\\\"source\\\":{\\\"batchId\\\":\\\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\\\",\\\"batchNumber\\\":\\\"INT-VC-00000001\\\",\\\"batchReview\\\":\\\"{\\\\\\\"moves\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"reserve-currency-opening\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-09-30\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"documentId\\\\\\\":\\\\\\\"\\\\\\\"}],\\\\\\\"rows\\\\\\\":[],\\\\\\\"balances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"value\\\\\\\":100000}],\\\\\\\"journals\\\\\\\":[{\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"lines\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-inventory\\\\\\\",\\\\\\\"debit\\\\\\\":100000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"3.1\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":100000}]}]}\\\",\\\"entryIds\\\":[\\\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\\\"],\\\"inflation\\\":[],\\\"recoveries\\\":[]},\\\"beforeBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":0}],\\\"rows\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":10,\\\"value\\\":100000,\\\"gross\\\":100000,\\\"allowance\\\":0,\\\"groupId\\\":\\\"only\\\",\\\"beforeAllowance\\\":0,\\\"afterAllowance\\\":40000,\\\"difference\\\":40000,\\\"beforeValue\\\":100000,\\\"afterValue\\\":60000}],\\\"afterBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":40000}],\\\"groups\\\":[{\\\"id\\\":\\\"only\\\",\\\"name\\\":\\\"REM-M-NEG\\\",\\\"mode\\\":\\\"Partida individual\\\",\\\"saleValue\\\":60000,\\\"saleCosts\\\":0,\\\"impracticability\\\":\\\"\\\",\\\"geography\\\":\\\"\\\",\\\"gross\\\":100000,\\\"carrying\\\":100000,\\\"recoverable\\\":60000,\\\"completionCosts\\\":0,\\\"afterValue\\\":60000,\\\"loss\\\":40000,\\\"recovery\\\":0,\\\"unrecognizedRecovery\\\":0,\\\"reason\\\":\\\"Venta individual de las remeras en Tucumán.\\\",\\\"evidence\\\":\\\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\\\",\\\"evidenceDate\\\":\\\"2026-09-30\\\"}],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"lossAccountId\\\":\\\"inventory-stockLoss\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\",\\\"loss\\\":40000,\\\"recovery\\\":0,\\\"net\\\":60000,\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-stockLoss\\\",\\\"debit\\\":40000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"inventory-stockAllowance\\\",\\\"debit\\\":0,\\\"credit\\\":40000}]}],\\\"warnings\\\":[\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\",\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\",\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\",\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\"]}\"}]},\"id\":\"670241b8-0721-4587-9bf6-73516817d201\",\"number\":\"INT-AI-00000001\",\"date\":\"2026-10-11\",\"provider\":\"Ensayo\",\"closingMonth\":\"2026-10\",\"indices\":[{\"month\":\"2025-12\",\"value\":\"100\"},{\"month\":\"2026-01\",\"value\":\"100\"},{\"month\":\"2026-02\",\"value\":\"100\"},{\"month\":\"2026-03\",\"value\":\"100\"},{\"month\":\"2026-04\",\"value\":\"100\"},{\"month\":\"2026-05\",\"value\":\"100\"},{\"month\":\"2026-06\",\"value\":\"100\"},{\"month\":\"2026-07\",\"value\":\"100\"},{\"month\":\"2026-08\",\"value\":\"100\"},{\"month\":\"2026-09\",\"value\":\"100\"},{\"month\":\"2026-10\",\"value\":\"150\"}],\"entryIds\":[\"b05c7d10-b6f5-404f-aaf4-0430c11376ae\"],\"issues\":[],\"batch\":{\"date\":\"2026-10-11\",\"reference\":\"Corte exacto con desvalorización QA\",\"accounts\":{\"inventory\":\"inventory-inventory\",\"opening\":\"3.1\",\"cogs\":\"inventory-cogs\",\"adjustments\":\"inventory-adjustments\",\"transit\":\"inventory-transit\",\"wip\":\"inventory-wip\",\"unbilled\":\"inventory-unbilled\",\"stockAllowance\":\"inventory-stockAllowance\",\"stockRecovery\":\"inventory-stockRecovery\"},\"review\":\"{\\\"moves\\\":[],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"value\\\":100000}],\\\"journals\\\":[],\\\"reserve\\\":{\\\"balances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":40000}],\\\"rows\\\":[],\\\"releases\\\":[],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\"},\\\"recoveries\\\":[{\\\"id\\\":\\\"7b5a1335-2932-447f-a47e-33f0ee6a7455\\\",\\\"number\\\":\\\"INT-VI-00000001\\\",\\\"date\\\":\\\"2026-09-30\\\",\\\"review\\\":\\\"{\\\\\\\"date\\\\\\\":\\\\\\\"2026-09-30\\\\\\\",\\\\\\\"reference\\\\\\\":\\\\\\\"Pérdida previa al ajuste anual QA\\\\\\\",\\\\\\\"reason\\\\\\\":\\\\\\\"Costo y valor de realización comparados en la misma moneda de septiembre.\\\\\\\",\\\\\\\"scope\\\\\\\":\\\\\\\"Inventario completo\\\\\\\",\\\\\\\"scopeReason\\\\\\\":\\\\\\\"Única partida y depósito en el ensayo.\\\\\\\",\\\\\\\"changesReason\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"source\\\\\\\":{\\\\\\\"batchId\\\\\\\":\\\\\\\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\\\\\\\",\\\\\\\"batchNumber\\\\\\\":\\\\\\\"INT-VC-00000001\\\\\\\",\\\\\\\"batchReview\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"moves\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"reserve-currency-opening\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-09-30\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"documentId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\"}],\\\\\\\\\\\\\\\"rows\\\\\\\\\\\\\\\":[],\\\\\\\\\\\\\\\"balances\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":10,\\\\\\\\\\\\\\\"value\\\\\\\\\\\\\\\":100000}],\\\\\\\\\\\\\\\"journals\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"lines\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"accountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-inventory\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"debit\\\\\\\\\\\\\\\":100000,\\\\\\\\\\\\\\\"credit\\\\\\\\\\\\\\\":0},{\\\\\\\\\\\\\\\"accountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"3.1\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"debit\\\\\\\\\\\\\\\":0,\\\\\\\\\\\\\\\"credit\\\\\\\\\\\\\\\":100000}]}]}\\\\\\\",\\\\\\\"entryIds\\\\\\\":[\\\\\\\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\\\\\\\"],\\\\\\\"inflation\\\\\\\":[],\\\\\\\"recoveries\\\\\\\":[]},\\\\\\\"beforeBalances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":0}],\\\\\\\"rows\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"sku\\\\\\\":\\\\\\\"REM-M-NEG\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"Remera de algodón · M · Negro\\\\\\\",\\\\\\\"unit\\\\\\\":\\\\\\\"Unidad\\\\\\\",\\\\\\\"depositName\\\\\\\":\\\\\\\"Depósito principal\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"value\\\\\\\":100000,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":0,\\\\\\\"groupId\\\\\\\":\\\\\\\"only\\\\\\\",\\\\\\\"beforeAllowance\\\\\\\":0,\\\\\\\"afterAllowance\\\\\\\":40000,\\\\\\\"difference\\\\\\\":40000,\\\\\\\"beforeValue\\\\\\\":100000,\\\\\\\"afterValue\\\\\\\":60000}],\\\\\\\"afterBalances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"gross\\\\\\\":100000,\\\\\\\"allowance\\\\\\\":40000}],\\\\\\\"groups\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"only\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"REM-M-NEG\\\\\\\",\\\\\\\"mode\\\\\\\":\\\\\\\"Partida individual\\\\\\\",\\\\\\\"saleValue\\\\\\\":60000,\\\\\\\"saleCosts\\\\\\\":0,\\\\\\\"impracticability\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"geography\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"gross\\\\\\\":100000,\\\\\\\"carrying\\\\\\\":100000,\\\\\\\"recoverable\\\\\\\":60000,\\\\\\\"completionCosts\\\\\\\":0,\\\\\\\"afterValue\\\\\\\":60000,\\\\\\\"loss\\\\\\\":40000,\\\\\\\"recovery\\\\\\\":0,\\\\\\\"unrecognizedRecovery\\\\\\\":0,\\\\\\\"reason\\\\\\\":\\\\\\\"Venta individual de las remeras en Tucumán.\\\\\\\",\\\\\\\"evidence\\\\\\\":\\\\\\\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\\\\\\\",\\\\\\\"evidenceDate\\\\\\\":\\\\\\\"2026-09-30\\\\\\\"}],\\\\\\\"allowanceAccountId\\\\\\\":\\\\\\\"inventory-stockAllowance\\\\\\\",\\\\\\\"lossAccountId\\\\\\\":\\\\\\\"inventory-stockLoss\\\\\\\",\\\\\\\"recoveryAccountId\\\\\\\":\\\\\\\"inventory-stockRecovery\\\\\\\",\\\\\\\"loss\\\\\\\":40000,\\\\\\\"recovery\\\\\\\":0,\\\\\\\"net\\\\\\\":60000,\\\\\\\"journals\\\\\\\":[{\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"lines\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-stockLoss\\\\\\\",\\\\\\\"debit\\\\\\\":40000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-stockAllowance\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":40000}]}],\\\\\\\"warnings\\\\\\\":[\\\\\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\\\\\",\\\\\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\\\\\",\\\\\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\\\\\",\\\\\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\\\\\"]}\\\"}],\\\"corrections\\\":[]}\",\"costVersion\":7,\"id\":\"fd7e88dc-62da-4cdd-aa54-bb78c67a7c06\",\"number\":\"INT-VC-00000002\",\"method\":\"CPP\",\"reserve\":{\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"gross\":100000,\"allowance\":40000}],\"rows\":[],\"releases\":[],\"allowanceAccountId\":\"inventory-stockAllowance\",\"recoveryAccountId\":\"inventory-stockRecovery\"},\"recoveries\":[{\"id\":\"7b5a1335-2932-447f-a47e-33f0ee6a7455\",\"number\":\"INT-VI-00000001\",\"date\":\"2026-09-30\",\"review\":\"{\\\"date\\\":\\\"2026-09-30\\\",\\\"reference\\\":\\\"Pérdida previa al ajuste anual QA\\\",\\\"reason\\\":\\\"Costo y valor de realización comparados en la misma moneda de septiembre.\\\",\\\"scope\\\":\\\"Inventario completo\\\",\\\"scopeReason\\\":\\\"Única partida y depósito en el ensayo.\\\",\\\"changesReason\\\":\\\"\\\",\\\"source\\\":{\\\"batchId\\\":\\\"2a23c783-d76e-4119-83e2-1ea4ebfcd68f\\\",\\\"batchNumber\\\":\\\"INT-VC-00000001\\\",\\\"batchReview\\\":\\\"{\\\\\\\"moves\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"reserve-currency-opening\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-09-30\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"documentId\\\\\\\":\\\\\\\"\\\\\\\"}],\\\\\\\"rows\\\\\\\":[],\\\\\\\"balances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"75cea566-a49f-4032-b19a-77249bddd327\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"value\\\\\\\":100000}],\\\\\\\"journals\\\\\\\":[{\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"lines\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-inventory\\\\\\\",\\\\\\\"debit\\\\\\\":100000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"3.1\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":100000}]}]}\\\",\\\"entryIds\\\":[\\\"4e9d3904-acd1-4df1-8282-fe6e4fae678e\\\"],\\\"inflation\\\":[],\\\"recoveries\\\":[]},\\\"beforeBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":0}],\\\"rows\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":10,\\\"value\\\":100000,\\\"gross\\\":100000,\\\"allowance\\\":0,\\\"groupId\\\":\\\"only\\\",\\\"beforeAllowance\\\":0,\\\"afterAllowance\\\":40000,\\\"difference\\\":40000,\\\"beforeValue\\\":100000,\\\"afterValue\\\":60000}],\\\"afterBalances\\\":[{\\\"productId\\\":\\\"75cea566-a49f-4032-b19a-77249bddd327\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"gross\\\":100000,\\\"allowance\\\":40000}],\\\"groups\\\":[{\\\"id\\\":\\\"only\\\",\\\"name\\\":\\\"REM-M-NEG\\\",\\\"mode\\\":\\\"Partida individual\\\",\\\"saleValue\\\":60000,\\\"saleCosts\\\":0,\\\"impracticability\\\":\\\"\\\",\\\"geography\\\":\\\"\\\",\\\"gross\\\":100000,\\\"carrying\\\":100000,\\\"recoverable\\\":60000,\\\"completionCosts\\\":0,\\\"afterValue\\\":60000,\\\"loss\\\":40000,\\\"recovery\\\":0,\\\"unrecognizedRecovery\\\":0,\\\"reason\\\":\\\"Venta individual de las remeras en Tucumán.\\\",\\\"evidence\\\":\\\"Cotización sintética de $600; costo bruto $1000 en la misma moneda de septiembre.\\\",\\\"evidenceDate\\\":\\\"2026-09-30\\\"}],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"lossAccountId\\\":\\\"inventory-stockLoss\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\",\\\"loss\\\":40000,\\\"recovery\\\":0,\\\"net\\\":60000,\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-stockLoss\\\",\\\"debit\\\":40000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"inventory-stockAllowance\\\",\\\"debit\\\":0,\\\"credit\\\":40000}]}],\\\"warnings\\\":[\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\",\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\",\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\",\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\"]}\"}],\"responsible\":\"Administrador\",\"createdAt\":\"2026-10-12T08:18:12.040Z\",\"sourceMoves\":[],\"rows\":[],\"corrections\":[],\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":100000}],\"entryIds\":[]},\"accounts\":[{\"branchId\":\"central\",\"before\":100000,\"difference\":50000,\"after\":150000}],\"parts\":[{\"id\":\"0\",\"month\":\"2026-09\",\"amount\":100000,\"adjusted\":150000,\"coefficient\":\"1.500000000000\"}]},\"balances\":[{\"productId\":\"75cea566-a49f-4032-b19a-77249bddd327\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":100000,\"before\":100000,\"after\":150000,\"difference\":50000,\"reason\":\"Origen de septiembre del costo bruto de las remeras.\",\"pieces\":[{\"sourceId\":\"0\",\"month\":\"2026-09\",\"before\":100000,\"after\":150000}]}],\"accounts\":[{\"branchId\":\"central\",\"before\":100000,\"difference\":50000,\"after\":150000}],\"references\":[],\"totalBefore\":100000,\"totalAfter\":150000,\"warnings\":[\"Índices sintéticos: conciliación exclusivamente de prueba.\",\"La conciliación no agrega otro asiento del ajuste ni cambia cantidades o documentos.\",\"El CPP posterior parte de los valores conciliados. Las notas y facturas sobre recepciones anteriores requieren repartir sus diferencias entre esa base y resultados.\",\"Las devoluciones de ventas anteriores requieren costo recuperado y respaldo en la misma moneda de la base.\",\"Revisá medición, orígenes, valor recuperable y moneda homogénea antes de emitir estados contables.\"]}",
+              "postingId": "670241b8-0721-4587-9bf6-73516817d201"
+            }
+          ],
+          "responsible": "Administrador",
+          "createdAt": "2026-10-12T15:55:46.188Z",
+          "sourceMoves": [
+            {
+              "id": "7c7eba83-1dc6-4450-b23e-0ac98c938439",
+              "date": "2026-10-12",
+              "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+              "depositId": "principal",
+              "quantity": -3,
+              "reason": "INT-RM-X-00001-00000001",
+              "documentId": "f6293ee2-18ef-44ca-9090-56d1ee06b1f9",
+              "branchId": "central"
+            }
+          ],
+          "rows": [
+            {
+              "moveId": "7c7eba83-1dc6-4450-b23e-0ac98c938439",
+              "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+              "depositId": "principal",
+              "branchId": "central",
+              "date": "2026-10-12",
+              "quantity": -3,
+              "value": 45000,
+              "kind": "Venta",
+              "counterpart": "inventory-cogs",
+              "allowanceUsed": 18000,
+              "allowanceRestored": 0,
+              "netValue": 27000
+            }
+          ],
+          "corrections": [],
+          "balances": [
+            {
+              "productId": "75cea566-a49f-4032-b19a-77249bddd327",
+              "depositId": "principal",
+              "branchId": "central",
+              "sku": "REM-M-NEG",
+              "name": "Remera de algodón · M · Negro",
+              "unit": "Unidad",
+              "depositName": "Depósito principal",
+              "quantity": 7,
+              "value": 105000
+            }
+          ],
+          "entryIds": [
+            "5f1e2b13-ede7-4796-99a9-1eba191e686a"
+          ]
+        },
+        "ledger": {
+          "from": "2026-10-12",
+          "to": "2026-12-31",
+          "branchId": "all",
+          "rows": [
+            {
+              "accountId": "1.1.1",
+              "code": "1.1.1",
+              "name": "Caja",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.2",
+              "code": "1.1.2",
+              "name": "Bancos",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.3",
+              "code": "1.1.3",
+              "name": "Deudores por ventas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 36300,
+              "credit": 0,
+              "closing": 36300
+            },
+            {
+              "accountId": "1.1.4",
+              "code": "1.1.4",
+              "name": "IVA crédito fiscal",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.5",
+              "code": "1.1.5",
+              "name": "Valores a depositar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.6",
+              "code": "1.1.6",
+              "name": "Retenciones sufridas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.7",
+              "code": "1.1.7",
+              "name": "Percepciones sufridas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.8",
+              "code": "1.1.8",
+              "name": "Cupones de tarjetas a cobrar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.1",
+              "code": "2.1.1",
+              "name": "Proveedores",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.2",
+              "code": "2.1.2",
+              "name": "IVA débito fiscal",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 6300,
+              "closing": -6300
+            },
+            {
+              "accountId": "2.1.3",
+              "code": "2.1.3",
+              "name": "Retenciones a depositar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.4",
+              "code": "2.1.4",
+              "name": "Percepciones a depositar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.5",
+              "code": "2.1.5",
+              "name": "Cheques propios emitidos",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.1",
+              "code": "3.1",
+              "name": "Capital y saldos iniciales",
+              "group": "Patrimonio neto",
+              "opening": -100000,
+              "debit": 0,
+              "credit": 0,
+              "closing": -100000
+            },
+            {
+              "accountId": "4.1",
+              "code": "4.1",
+              "name": "Ventas",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 30000,
+              "closing": -30000
+            },
+            {
+              "accountId": "5.1",
+              "code": "5.1",
+              "name": "Compras y gastos",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.2",
+              "code": "5.2",
+              "name": "Comisiones de vendedores",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.3",
+              "code": "5.3",
+              "name": "Cargos de tarjetas",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-inventory",
+              "code": "1.1.9",
+              "name": "Existencias de mercadería",
+              "group": "Activo",
+              "opening": 150000,
+              "debit": 0,
+              "credit": 45000,
+              "closing": 105000
+            },
+            {
+              "accountId": "inventory-cogs",
+              "code": "5.4",
+              "name": "Costo de mercadería vendida",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 27000,
+              "credit": 0,
+              "closing": 27000
+            },
+            {
+              "accountId": "inventory-adjustments",
+              "code": "5.5",
+              "name": "Diferencias de inventario",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-transit",
+              "code": "1.1.10",
+              "name": "Traslados de mercadería a conciliar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-wip",
+              "code": "1.1.11",
+              "name": "Producción en proceso",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-unbilled",
+              "code": "2.1.6",
+              "name": "Mercadería recibida sin facturar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-stockAllowance",
+              "code": "1.1.12",
+              "name": "Desvalorización acumulada de inventario",
+              "group": "Activo",
+              "opening": -60000,
+              "debit": 18000,
+              "credit": 0,
+              "closing": -42000
+            },
+            {
+              "accountId": "inventory-stockLoss",
+              "code": "5.12",
+              "name": "Pérdidas por desvalorización de inventario",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-stockRecovery",
+              "code": "4.12",
+              "name": "Reversiones de desvalorización de inventario",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.90.1",
+              "code": "3.90.1",
+              "name": "Capital suscripto",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.90.2",
+              "code": "3.90.2",
+              "name": "Ajuste del capital",
+              "group": "Patrimonio neto",
+              "opening": -50000,
+              "debit": 0,
+              "credit": 0,
+              "closing": -50000
+            },
+            {
+              "accountId": "3.90.3",
+              "code": "3.90.3",
+              "name": "Aportes irrevocables",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.90.4",
+              "code": "3.90.4",
+              "name": "Primas de emisión",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.90.5",
+              "code": "3.90.5",
+              "name": "Ganancias reservadas",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.90.6",
+              "code": "3.90.6",
+              "name": "Resultados no asignados",
+              "group": "Patrimonio neto",
+              "opening": 60000,
+              "debit": 0,
+              "credit": 0,
+              "closing": 60000
+            },
+            {
+              "accountId": "3.90.7",
+              "code": "3.90.7",
+              "name": "Resultados diferidos",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "4.90",
+              "code": "4.90",
+              "name": "RECPAM monetario positivo",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.90",
+              "code": "5.90",
+              "name": "RECPAM monetario negativo",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "4.91",
+              "code": "4.91",
+              "name": "Otros resultados del ajuste y redondeos positivos",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.91",
+              "code": "5.91",
+              "name": "Otros resultados del ajuste y redondeos negativos",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            }
+          ],
+          "totals": {
+            "openingDebit": 210000,
+            "openingCredit": 210000,
+            "debit": 81300,
+            "credit": 81300,
+            "closingDebit": 228300,
+            "closingCredit": 228300
+          },
+          "entryIds": [
+            "4e9d3904-acd1-4df1-8282-fe6e4fae678e",
+            "0a75bc36-57e0-48e9-bfb0-fdb75eb71937",
+            "b05c7d10-b6f5-404f-aaf4-0430c11376ae",
+            "5d3f5510-2a8e-41a7-a9a9-88289d9eeacc",
+            "9fb0e923-126e-43b2-9f1d-23a27ade902d",
+            "5f1e2b13-ede7-4796-99a9-1eba191e686a"
+          ]
+        },
+        "pdfPages": 14,
+        "xlsxSheets": [
+          "Constancia",
+          "Artículo y depósito",
+          "Mayor por sucursal",
+          "Fuentes asignadas",
+          "Antigüedades fuente",
+          "Índices conservados",
+          "Recepciones pendientes",
+          "Respaldo y continuidad",
+          "Cuentas del CPP",
+          "Desvalorización por partida",
+          "Mayor de desvalorización",
+          "Fuentes de desvalorización",
+          "Antigüedades de pérdida",
+          "Neto y comparaciones"
+        ],
+        "preservation": "Cortes nominales, pérdida original $400, fuentes, cierre y apertura conservados. INT-CI lleva costo a $1500 y pérdida a $600, neto $900, sin otro asiento. El siguiente CPP deja siete unidades, bruto $1050, pérdida $420 y neto $630."
+      }
+    },
+    {
+      "database": "var/qa-inventory-recoverability.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-inventory-inflation.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-asset-inflation.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-inflation-posting.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-reexpression.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-statements.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-asset-impairment.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-asset-disposal.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-asset-reestimate.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-fixed-assets.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-service-cancellation.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-journal-reversal.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-revenue-accrual.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-exercise-opening.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-year-end.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-service-reestimates.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-service-accruals.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    }
+  ],
+  "verification": {
+    "domain": "350 pruebas aprobadas; código 0",
+    "files": "28 pruebas aprobadas fuera de la restricción del conversor PDF; código 0",
+    "http": "51 pruebas aprobadas con servidores locales autorizados; código 0",
+    "fiscal": "22 pruebas aprobadas; código 0",
+    "build": "Compilación compartida y de servidor verificadas",
+    "lint": "Sin advertencias; código 0",
+    "pdfVisualQA": "Catorce páginas revisadas en dos contactos; páginas 10, 11 y 14 también inspeccionadas en tamaño completo."
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "date": "2026-10-14",
+  "synthetic": true,
+  "browser": {
+    "database": "var/qa-accounts-aging.sqlite",
+    "revision": 1,
+    "initial": {
+      "pending": 270000,
+      "overdue": 170000,
+      "unapplied": 5000,
+      "balance": 265000
+    },
+    "later": {
+      "pending": 250000,
+      "overdue": 180000,
+      "unapplied": 5000,
+      "balance": 245000
+    },
+    "supplier": {
+      "balance": 81050,
+      "overdue": 80450
+    },
+    "allOperationsUnchanged": true,
+    "currentAccountPreservesCutoff": true
+  },
+  "checks": [
+    {
+      "database": "var/qa-accounts-aging.sqlite",
+      "companyId": "sica",
+      "revision": 1,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-card-disputes.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-multi-textil.sqlite",
+      "companyId": "textil",
+      "revision": 1,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-multi-servicios.sqlite",
+      "companyId": "servicios",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-shifts.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-material-reservations.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-material-reservations-finished.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-sessions.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-bank-csv.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-bank-groups.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-current-closing.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-current-closing-finished.sqlite",
+      "companyId": "sica",
+      "revision": 10,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-recoverability.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-recoverability-finished.sqlite",
+      "companyId": "sica",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-inflation.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-inflation-finished.sqlite",
+      "companyId": "sica",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-vnr-bridge.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-finished-correction.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-correction.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-conversion.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-current-vnr.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-reserve-currency.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-recoverability.sqlite",
+      "companyId": "sica",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-inflation.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-inflation.sqlite",
+      "companyId": "sica",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inflation-posting.sqlite",
+      "companyId": "sica",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-reexpression.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-statements.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-impairment.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-disposal.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-reestimate.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-fixed-assets.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-service-cancellation.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-journal-reversal.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-revenue-accrual.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-exercise-opening.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-year-end.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-service-reestimates.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-service-accruals.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "companyId": "sica",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "companyId": "sica",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "aging": "Conciliada con cuenta corriente",
+      "state": "Validación completa después de JSON"
+    }
+  ],
+  "transcripts": [
+    "output/accounts-aging-cutoff-2026-10-14.txt",
+    "output/accounts-aging-later-2026-10-14.txt",
+    "output/accounts-aging-supplier-2026-10-14.txt"
+  ],
+  "exports": {
+    "xlsx": "output/accounts-aging-2026-10-14.xlsx",
+    "pdf": "output/pdf/accounts-aging-2026-10-14.pdf",
+    "pages": 1,
+    "visualReview": "PDF de una página renderizado e inspeccionado, sin recortes ni superposición.",
+    "render": "output/qa/accounts-aging-render/summary.png"
+  },
+  "visual": "Captura nativa no disponible; recorrido DOM y datos persistentes comprobados.",
+  "limits": [
+    "Las aplicaciones se respetan por fecha, sin compensación automática de anticipos ni entre sucursales.",
+    "No mide incobrabilidad ni genera asientos, deuda o impuestos.",
+    "La cobertura integral del PPTX continúa abierta."
+  ],
+  "tests": {
+    "domain": 474,
+    "http": 70,
+    "logs": [
+      "output/qa/accounts-aging-domain.log",
+      "output/qa/accounts-aging-http.log"
+    ]
+  },
+  "accountTranscript": "output/accounts-aging-current-account-2026-10-14.txt"
+}

@@ -1,0 +1,221 @@
+- complementary:
+  - link "SICA Contabilidad y administración":
+    - /url: /
+    - heading "SICA" [level=1]
+    - generic: Contabilidad y administración
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - NUEVAS ESTIMACIONES
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 3 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Bienes de uso y depreciaciones" [level=1]
+  - paragraph: Costo documentado, puesta en marcha y cargos revisados con historial.
+  - button "Preparar cuentas"
+  - button "Capitalizar compra" [disabled]
+  - button "Preparar depreciación"
+  - text: Registrá el artículo como
+  - link "Bien de uso":
+    - /url: /productos/articulos
+  - text: y su
+  - link "factura de compra":
+    - /url: /proveedores/compras
+  - text: . Revisá recepción, destino a uso propio, beneficios esperados y costo antes de capitalizarlo. La reclasificación conserva el IVA y la deuda original. Un remito de bienes de uso conserva su recepción y no suma mercadería al stock de reventa.
+  - generic: Fecha de consulta
+  - textbox "Fecha de consulta": 2026-10-20
+  - generic: Costo nominal registrado
+  - strong: $ 1.000,00
+  - generic: Depreciación contabilizada
+  - strong: $ 400,00
+  - generic: Cargo pendiente al corte
+  - strong: $ 0,00
+  - heading "Registro de bienes de uso" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Identificación Clase Costo ARS Depreciación registrada ARS Cargo pendiente ARS Valor neto registrado ARS Estado Detalle":
+        - columnheader "Constancia"
+        - columnheader "Identificación"
+        - columnheader "Clase"
+        - columnheader "Costo ARS"
+        - columnheader "Depreciación registrada ARS"
+        - columnheader "Cargo pendiente ARS"
+        - columnheader "Valor neto registrado ARS"
+        - columnheader "Estado"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-BU-00000001 Equipo textil QA Maquinarias $ 1.000,00 $ 400,00 $ 0,00 $ 600,00 En uso Ver alta Reestimar vida y residual":
+        - cell "INT-BU-00000001"
+        - cell "Equipo textil QA"
+        - cell "Maquinarias"
+        - cell "$ 1.000,00"
+        - cell "$ 400,00"
+        - cell "$ 0,00"
+        - cell "$ 600,00"
+        - cell "En uso"
+        - cell "Ver alta Reestimar vida y residual":
+          - button "Ver alta"
+          - button "Reestimar vida y residual"
+  - heading "Depreciaciones conservadas" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte global Referencia Cargo global ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte global"
+        - columnheader "Referencia"
+        - columnheader "Cargo global ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-DP-00000001 10/10/2026 Cargo sintético previo al cambio $ 300,00 Administrador Ver depreciación":
+        - cell "INT-DP-00000001"
+        - cell "10/10/2026"
+        - cell "Cargo sintético previo al cambio"
+        - cell "$ 300,00"
+        - cell "Administrador"
+        - cell "Ver depreciación":
+          - button "Ver depreciación"
+      - row "INT-DP-00000002 20/10/2026 Cargo posterior revisado QA 2026 $ 100,00 Administrador Ver depreciación":
+        - cell "INT-DP-00000002"
+        - cell "20/10/2026"
+        - cell "Cargo posterior revisado QA 2026"
+        - cell "$ 100,00"
+        - cell "Administrador"
+        - cell "Ver depreciación":
+          - button "Ver depreciación"
+  - heading "Puestas en marcha conservadas" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - heading "Cambios de estimaciones conservados" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Desde Bien de uso Nueva fecha final Residual ARS Referencia Detalle":
+        - columnheader "Constancia"
+        - columnheader "Desde"
+        - columnheader "Bien de uso"
+        - columnheader "Nueva fecha final"
+        - columnheader "Residual ARS"
+        - columnheader "Referencia"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-RE-00000001 11/10/2026 INT-BU-00000001 10/12/2026 $ 100,00 Vida útil revisada QA 2026 Ver cambio de estimación":
+        - cell "INT-RE-00000001"
+        - cell "11/10/2026"
+        - cell "INT-BU-00000001"
+        - cell "10/12/2026"
+        - cell "$ 100,00"
+        - cell "Vida útil revisada QA 2026"
+        - cell "Ver cambio de estimación":
+          - button "Ver cambio de estimación"
+  - dialog "Constancia INT-RE-00000001":
+    - heading "Constancia INT-RE-00000001" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: 11/10/2026 · Vida útil revisada QA 2026 · Administrador
+    - paragraph: "Informe técnico sintético del 11/10: uso remanente de sesenta días y residual 100 ARS. Nueva evidencia para consumo futuro; conserva costo y los cargos cerrados hasta el 10/10. Duración de ensayo, sin tasa fiscal presumida."
+    - paragraph: "INT-BU-00000001 · Costo $ 1.000,00 · Depreciación contabilizada hasta 10/10/2026: $ 300,00 · Neto conservado $ 700,00"
+    - strong: Estimación anterior
+    - paragraph:
+      - text: "Fin: 31/10/2026"
+      - text: "Residual: $ 100,00"
+    - strong: Nueva estimación desde 11/10/2026
+    - paragraph:
+      - text: "Fin: 10/12/2026"
+      - text: "Residual: $ 100,00"
+      - text: "Base restante: $ 600,00 · 60 días"
+    - paragraph: La constancia conserva el costo y los cargos anteriores. No genera otro asiento; los siguientes cortes distribuirán sólo la base restante desde la fecha del cambio.
+    - paragraph: "Cargos conservados: INT-DP-00000001 (10/10/2026, $ 300,00)"
+  - generic: El modelo inicial usa costo nominal y depreciación lineal diaria, con vida útil y residual fundamentados; no presume tasas fiscales. Los cortes incluyen todas las sucursales y contabilizan sólo el cargo nuevo. Los cambios fundamentados de vida útil y residual conservan los cargos anteriores y se aplican hacia adelante. Las notas, bajas, deterioro, revaluación, costos de fabricación e inflación requieren ampliar sus circuitos antes de emitir estados contables.

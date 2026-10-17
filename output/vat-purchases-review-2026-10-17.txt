@@ -1,0 +1,300 @@
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas" [expanded]:
+      - generic: Finanzas
+    - link "Cajas y movimientos":
+      - /url: /finanzas/cajas
+    - link "Cajas y cuentas bancarias":
+      - /url: /finanzas/cuentas-tesoreria
+    - link "Bancos y conciliación":
+      - /url: /finanzas/bancos
+    - link "Extractos bancarios":
+      - /url: /finanzas/bancos/extractos
+    - link "Cartera de cheques":
+      - /url: /finanzas/cheques
+    - link "IVA ventas y compras":
+      - /url: /finanzas/impuestos
+    - link "Cuentas por cobrar / pagar":
+      - /url: /finanzas/cuentas
+    - link "Tarjetas de crédito":
+      - /url: /finanzas/tarjetas
+    - link "Liquidaciones de tarjetas":
+      - /url: /finanzas/liquidaciones-tarjetas
+    - link "Retenciones y percepciones":
+      - /url: /finanzas/retenciones
+    - link "Formas de pago y cobro":
+      - /url: /finanzas/formas-pago
+    - link "Entidades bancarias":
+      - /url: /finanzas/entidades
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · IVA compras
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades"
+    - option "Casa Central" [selected]
+    - option "Sucursal de ensayo IVA"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 1 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "IVA ventas y compras" [level=1]
+  - paragraph: Filtrá el período y la sucursal desde el selector superior.
+  - generic: Desde
+  - textbox "Desde": 2026-01-01
+  - generic: Hasta
+  - textbox "Hasta": 2026-12-31
+  - generic: Incluir internos X
+  - checkbox "Incluir internos X"
+  - generic: "Libro de trabajo: no constituye una presentación de IVA Simple. Las identificaciones de proveedores están sin constatación y las ventas pueden estar pendientes de CAE. Las notas de crédito restan. Los comprobantes C no discriminan IVA."
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 4 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha Libro Referencia Original proveedor CUIT Contraparte Neto IVA Percepciones Total Estado":
+        - columnheader "Fecha"
+        - columnheader "Libro"
+        - columnheader "Referencia"
+        - columnheader "Original proveedor"
+        - columnheader "CUIT"
+        - columnheader "Contraparte"
+        - columnheader "Neto"
+        - columnheader "IVA"
+        - columnheader "Percepciones"
+        - columnheader "Total"
+        - columnheader "Estado"
+    - rowgroup:
+      - row "15/10/2026 Compras INT-FC-A-00001-00000001 001 · 00004-00000001 20123456786 Textiles Ñandú SA $ 370,00 $ 42,00 $ 3,00 $ 415,00 Datos de original · sin constatación":
+        - cell "15/10/2026"
+        - cell "Compras"
+        - cell "INT-FC-A-00001-00000001"
+        - cell "001 · 00004-00000001"
+        - cell "20123456786"
+        - cell "Textiles Ñandú SA"
+        - cell "$ 370,00"
+        - cell "$ 42,00"
+        - cell "$ 3,00"
+        - cell "$ 415,00"
+        - cell "Datos de original · sin constatación"
+      - row "16/10/2026 Compras INT-NC-A-00001-00000001 003 · 00004-00000002 20123456786 Textiles Ñandú SA -$ 10,00 -$ 2,10 -$ 0,00 -$ 12,10 Datos de original · sin constatación":
+        - cell "16/10/2026"
+        - cell "Compras"
+        - cell "INT-NC-A-00001-00000001"
+        - cell "003 · 00004-00000002"
+        - cell "20123456786"
+        - cell "Textiles Ñandú SA"
+        - cell "-$ 10,00"
+        - cell "-$ 2,10"
+        - cell "-$ 0,00"
+        - cell "-$ 12,10"
+        - cell "Datos de original · sin constatación"
+      - row "16/10/2026 Compras INT-ND-A-00001-00000001 002 · 00004-00000003 20123456786 Textiles Ñandú SA $ 10,00 $ 2,70 $ 0,00 $ 12,70 Datos de original · sin constatación":
+        - cell "16/10/2026"
+        - cell "Compras"
+        - cell "INT-ND-A-00001-00000001"
+        - cell "002 · 00004-00000003"
+        - cell "20123456786"
+        - cell "Textiles Ñandú SA"
+        - cell "$ 10,00"
+        - cell "$ 2,70"
+        - cell "$ 0,00"
+        - cell "$ 12,70"
+        - cell "Datos de original · sin constatación"
+      - row "17/10/2026 Compras INT-FC-C-00001-00000001 011 · 00004-00000005 30712345671 Proveedor C de ensayo $ 30,00 $ 0,00 $ 0,00 $ 30,00 Datos de original · sin constatación":
+        - cell "17/10/2026"
+        - cell "Compras"
+        - cell "INT-FC-C-00001-00000001"
+        - cell "011 · 00004-00000005"
+        - cell "30712345671"
+        - cell "Proveedor C de ensayo"
+        - cell "$ 30,00"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 30,00"
+        - cell "Datos de original · sin constatación"
+  - heading "Preparación para IVA Simple · Compras ordinarias" [level=2]
+  - generic: Prepará los TXT de compras A/B/C en pesos por mes de emisión y para todas las sucursales. Los originales y el crédito computable requieren revisión. Esta salida no presenta la declaración jurada ni incluye ventas, importaciones, prorrateo global o regímenes especiales.
+  - generic: Mes de compras para IVA Simple
+  - textbox "Mes de compras para IVA Simple": 2026-10
+  - button "Preparar compras para IVA Simple"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - dialog "Preparar compras · 2026-10":
+    - heading "Preparar compras · 2026-10" [level=2]
+    - button "Cerrar":
+    - paragraph:
+      - strong: SICA Textil · IVA compras · CUIT 30712345671 · 2026-10
+    - paragraph: Asignación directa · Todas las sucursales · Preparación de compras · sin presentación ARCA
+    - generic: Total neto de notas
+    - strong: $ 476,20
+    - generic: IVA discriminado neto
+    - strong: $ 42,60
+    - generic: Crédito computable neto
+    - strong: $ 31,00
+    - generic: IVA no computable neto
+    - strong: $ 11,60
+    - generic: Preparación de compras ordinarias A/B/C en ARS; no incluye ventas, importaciones, regímenes especiales ni ajustes de la declaración.
+    - generic: Los originales están declarados sin constatación ARCA. Revisá su validez y evitá duplicar comprobantes ya precargados en el portal.
+    - generic: No se envía ni finaliza la registración ni se determina el saldo de la declaración jurada.
+    - generic: El mes se selecciona por fecha de emisión. Revisá por separado compras que deban imputarse a otro período fiscal.
+    - generic: 1 comprobante(s) X interno(s) excluido(s) del archivo; revisá que no oculten originales pendientes.
+    - generic: El IVA contenido en compras B permanece en el registro interno, pero no se informa como IVA discriminado ni crédito computable en estos archivos.
+    - generic: 5 registros
+    - table:
+      - rowgroup:
+        - row "Emisión Referencia interna Original CUIT proveedor Proveedor conservado Denominación TXT Total sin signo IVA discriminado Crédito sin signo Código operación Alícuotas Detalle de alícuotas":
+          - columnheader "Emisión"
+          - columnheader "Referencia interna"
+          - columnheader "Original"
+          - columnheader "CUIT proveedor"
+          - columnheader "Proveedor conservado"
+          - columnheader "Denominación TXT"
+          - columnheader "Total sin signo"
+          - columnheader "IVA discriminado"
+          - columnheader "Crédito sin signo"
+          - columnheader "Código operación"
+          - columnheader "Alícuotas"
+          - columnheader "Detalle de alícuotas"
+      - rowgroup:
+        - 'row "15/10/2026 INT-FC-A-00001-00000001 001 · 00004-00000001 20123456786 Textiles Ñandú SA Textiles Ñandú SA $ 415,00 $ 42,00 $ 30,00 0 2 0004: base $ 200,00, IVA $ 21,00; 0005: base $ 100,00, IVA $ 21,00"':
+          - cell "15/10/2026"
+          - cell "INT-FC-A-00001-00000001"
+          - cell "001 · 00004-00000001"
+          - cell "20123456786"
+          - cell "Textiles Ñandú SA"
+          - cell "Textiles Ñandú SA"
+          - cell "$ 415,00"
+          - cell "$ 42,00"
+          - cell "$ 30,00"
+          - cell "0"
+          - cell "2"
+          - 'cell "0004: base $ 200,00, IVA $ 21,00; 0005: base $ 100,00, IVA $ 21,00"'
+        - 'row "16/10/2026 INT-NC-A-00001-00000001 003 · 00004-00000002 20123456786 Textiles Ñandú SA Textiles Ñandú SA $ 12,10 $ 2,10 $ 1,00 0 1 0005: base $ 10,00, IVA $ 2,10"':
+          - cell "16/10/2026"
+          - cell "INT-NC-A-00001-00000001"
+          - cell "003 · 00004-00000002"
+          - cell "20123456786"
+          - cell "Textiles Ñandú SA"
+          - cell "Textiles Ñandú SA"
+          - cell "$ 12,10"
+          - cell "$ 2,10"
+          - cell "$ 1,00"
+          - cell "0"
+          - cell "1"
+          - 'cell "0005: base $ 10,00, IVA $ 2,10"'
+        - 'row "16/10/2026 INT-ND-A-00001-00000001 002 · 00004-00000003 20123456786 Textiles Ñandú SA Textiles Ñandú SA $ 12,70 $ 2,70 $ 2,00 0 1 0006: base $ 10,00, IVA $ 2,70"':
+          - cell "16/10/2026"
+          - cell "INT-ND-A-00001-00000001"
+          - cell "002 · 00004-00000003"
+          - cell "20123456786"
+          - cell "Textiles Ñandú SA"
+          - cell "Textiles Ñandú SA"
+          - cell "$ 12,70"
+          - cell "$ 2,70"
+          - cell "$ 2,00"
+          - cell "0"
+          - cell "1"
+          - 'cell "0006: base $ 10,00, IVA $ 2,70"'
+        - row "17/10/2026 INT-FC-B-00002-00000001 006 · 00004-00000004 20123456786 Textiles Ñandú SA Textiles Ñandú SA $ 30,60 $ 0,00 $ 0,00 0 0":
+          - cell "17/10/2026"
+          - cell "INT-FC-B-00002-00000001"
+          - cell "006 · 00004-00000004"
+          - cell "20123456786"
+          - cell "Textiles Ñandú SA"
+          - cell "Textiles Ñandú SA"
+          - cell "$ 30,60"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+          - cell "0"
+          - cell "0"
+          - cell
+        - row "17/10/2026 INT-FC-C-00001-00000001 011 · 00004-00000005 30712345671 Proveedor C de ensayo Proveedor C de ensayo $ 30,00 $ 0,00 $ 0,00 0 0":
+          - cell "17/10/2026"
+          - cell "INT-FC-C-00001-00000001"
+          - cell "011 · 00004-00000005"
+          - cell "30712345671"
+          - cell "Proveedor C de ensayo"
+          - cell "Proveedor C de ensayo"
+          - cell "$ 30,00"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+          - cell "0"
+          - cell "0"
+          - cell
+    - paragraph: "Las notas de crédito se escriben con importes positivos en el TXT; su tipo determina la resta. Los totales anteriores muestran su efecto neto. Cabeceras: 1635 bytes. Alícuotas: 344 bytes. ANSI ISO-8859-1 y finales de línea CRLF."
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "Interno X Emisión Total interno":
+          - columnheader "Interno X"
+          - columnheader "Emisión"
+          - columnheader "Total interno"
+      - rowgroup:
+        - row "INT-FC-X-00001-00000001 17/10/2026 $ 7,00":
+          - cell "INT-FC-X-00001-00000001"
+          - cell "17/10/2026"
+          - cell "$ 7,00"
+    - button "Modificar preparación"
+    - button "Conservar preparación revisada"
+  - heading "Devengamientos y conciliaciones de ventas sin factura" [level=2]
+  - generic: Estas constancias internas complementan el papel de trabajo. No son comprobantes fiscales ni filas para cargar directamente en IVA Simple. La conciliación descuenta el neto e IVA ya reconocidos para que la factura no los duplique. Una fecha contable distinta del nacimiento fiscal necesita revisar la imputación del impuesto.
+  - generic: IVA ventas registrado en el período
+  - strong: $ 0,00
+  - generic: Comprobantes seleccionados más devengamientos y descuentos; sujeto a revisión fiscal.
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.

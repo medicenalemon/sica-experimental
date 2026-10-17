@@ -1,0 +1,5 @@
+import assert from 'node:assert/strict'
+import {Repository} from '../server/repository.mjs'
+import {writeFile} from 'node:fs/promises'
+const repository=await Repository.open({filename:'var/qa-vat-ledger.sqlite'})
+try{const before=repository.read();assert.equal(before.revision,3);assert.equal(before.state.vatLedger.length,2);const id=before.state.vatLedger[1].preview.documents[0].id,supplier=before.state.parties.find(p=>p.id===before.state.documents.find(d=>d.id===id).partyId),name='Textiles Ñandú · nombre actualizado de ensayo',auth=await repository.login('admin','Sica-Vat-Ledger-QA-2026',false,'source-change-qa');await repository.mutate(auth.token,{revision:before.revision,requestId:crypto.randomUUID(),command:{type:'party.save',party:{...supplier,name}}});repository.logout(auth.token);await writeFile('output/qa/vat-ledger-source-change.json',JSON.stringify({partyId:supplier.id,before:supplier.name,after:name,revision:repository.read().revision},null,2)+'\n');console.log({revision:repository.read().revision,sourceNameChanged:true})}finally{await repository.close()}

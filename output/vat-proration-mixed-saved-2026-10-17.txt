@@ -1,0 +1,430 @@
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas" [expanded]:
+      - generic: Finanzas
+    - link "Cajas y movimientos":
+      - /url: /finanzas/cajas
+    - link "Cajas y cuentas bancarias":
+      - /url: /finanzas/cuentas-tesoreria
+    - link "Bancos y conciliación":
+      - /url: /finanzas/bancos
+    - link "Extractos bancarios":
+      - /url: /finanzas/bancos/extractos
+    - link "Cartera de cheques":
+      - /url: /finanzas/cheques
+    - link "IVA ventas y compras":
+      - /url: /finanzas/impuestos
+    - link "Cuentas por cobrar / pagar":
+      - /url: /finanzas/cuentas
+    - link "Tarjetas de crédito":
+      - /url: /finanzas/tarjetas
+    - link "Liquidaciones de tarjetas":
+      - /url: /finanzas/liquidaciones-tarjetas
+    - link "Retenciones y percepciones":
+      - /url: /finanzas/retenciones
+    - link "Formas de pago y cobro":
+      - /url: /finanzas/formas-pago
+    - link "Entidades bancarias":
+      - /url: /finanzas/entidades
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · IVA compras
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+    - option "Sucursal de ensayo IVA"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 3 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "IVA ventas y compras" [level=1]
+  - paragraph: Filtrá el período y la sucursal desde el selector superior.
+  - generic: Desde
+  - textbox "Desde": 2026-01-01
+  - generic: Hasta
+  - textbox "Hasta": 2026-12-31
+  - generic: Incluir internos X
+  - checkbox "Incluir internos X"
+  - generic: "Libro de trabajo: no constituye una presentación de IVA Simple. Las identificaciones de proveedores están sin constatación y las ventas pueden estar pendientes de CAE. Las notas de crédito restan. Los comprobantes C no discriminan IVA."
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 5 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha Libro Referencia Original proveedor CUIT Contraparte Neto IVA Percepciones Total Estado":
+        - columnheader "Fecha"
+        - columnheader "Libro"
+        - columnheader "Referencia"
+        - columnheader "Original proveedor"
+        - columnheader "CUIT"
+        - columnheader "Contraparte"
+        - columnheader "Neto"
+        - columnheader "IVA"
+        - columnheader "Percepciones"
+        - columnheader "Total"
+        - columnheader "Estado"
+    - rowgroup:
+      - row "15/10/2026 Compras INT-FC-A-00001-00000001 001 · 00004-00000001 20123456786 Textiles Ñandú SA $ 370,00 $ 42,00 $ 3,00 $ 415,00 Datos de original · sin constatación":
+        - cell "15/10/2026"
+        - cell "Compras"
+        - cell "INT-FC-A-00001-00000001"
+        - cell "001 · 00004-00000001"
+        - cell "20123456786"
+        - cell "Textiles Ñandú SA"
+        - cell "$ 370,00"
+        - cell "$ 42,00"
+        - cell "$ 3,00"
+        - cell "$ 415,00"
+        - cell "Datos de original · sin constatación"
+      - row "16/10/2026 Compras INT-NC-A-00001-00000001 003 · 00004-00000002 20123456786 Textiles Ñandú SA -$ 10,00 -$ 2,10 -$ 0,00 -$ 12,10 Datos de original · sin constatación":
+        - cell "16/10/2026"
+        - cell "Compras"
+        - cell "INT-NC-A-00001-00000001"
+        - cell "003 · 00004-00000002"
+        - cell "20123456786"
+        - cell "Textiles Ñandú SA"
+        - cell "-$ 10,00"
+        - cell "-$ 2,10"
+        - cell "-$ 0,00"
+        - cell "-$ 12,10"
+        - cell "Datos de original · sin constatación"
+      - row "16/10/2026 Compras INT-ND-A-00001-00000001 002 · 00004-00000003 20123456786 Textiles Ñandú SA $ 10,00 $ 2,70 $ 0,00 $ 12,70 Datos de original · sin constatación":
+        - cell "16/10/2026"
+        - cell "Compras"
+        - cell "INT-ND-A-00001-00000001"
+        - cell "002 · 00004-00000003"
+        - cell "20123456786"
+        - cell "Textiles Ñandú SA"
+        - cell "$ 10,00"
+        - cell "$ 2,70"
+        - cell "$ 0,00"
+        - cell "$ 12,70"
+        - cell "Datos de original · sin constatación"
+      - row "17/10/2026 Compras INT-FC-B-00002-00000001 006 · 00004-00000004 20123456786 Textiles Ñandú SA $ 26,00 $ 4,20 $ 0,40 $ 30,60 Datos de original · sin constatación":
+        - cell "17/10/2026"
+        - cell "Compras"
+        - cell "INT-FC-B-00002-00000001"
+        - cell "006 · 00004-00000004"
+        - cell "20123456786"
+        - cell "Textiles Ñandú SA"
+        - cell "$ 26,00"
+        - cell "$ 4,20"
+        - cell "$ 0,40"
+        - cell "$ 30,60"
+        - cell "Datos de original · sin constatación"
+      - row "17/10/2026 Compras INT-FC-C-00001-00000001 011 · 00004-00000005 30712345671 Proveedor C de ensayo $ 30,00 $ 0,00 $ 0,00 $ 30,00 Datos de original · sin constatación":
+        - cell "17/10/2026"
+        - cell "Compras"
+        - cell "INT-FC-C-00001-00000001"
+        - cell "011 · 00004-00000005"
+        - cell "30712345671"
+        - cell "Proveedor C de ensayo"
+        - cell "$ 30,00"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 30,00"
+        - cell "Datos de original · sin constatación"
+  - heading "Preparación para IVA Simple · Compras ordinarias" [level=2]
+  - generic: Prepará los TXT de compras A/B/C en pesos por mes de emisión y para todas las sucursales. Los originales y el crédito computable requieren revisión. El criterio puede ser directo, global o mixto. Esta salida no presenta la declaración jurada ni incluye ventas, importaciones o regímenes especiales.
+  - generic: Mes de compras para IVA Simple
+  - textbox "Mes de compras para IVA Simple": 2026-10
+  - button "Preparar compras para IVA Simple"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 3 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Mes Referencia Cómputo Compras Crédito neto Responsable Estado Detalle":
+        - columnheader "Constancia"
+        - columnheader "Mes"
+        - columnheader "Referencia"
+        - columnheader "Cómputo"
+        - columnheader "Compras"
+        - columnheader "Crédito neto"
+        - columnheader "Responsable"
+        - columnheader "Estado"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-IC-00000003 2026-10 IVA-MIXTO-UI-02 Asignación directa y global 5 $ 25,45 Administrador Última preparación Ver preparación":
+        - cell "INT-IC-00000003"
+        - cell "2026-10"
+        - cell "IVA-MIXTO-UI-02"
+        - cell "Asignación directa y global"
+        - cell "5"
+        - cell "$ 25,45"
+        - cell "Administrador"
+        - cell "Última preparación"
+        - cell "Ver preparación":
+          - button "Ver preparación"
+      - row "INT-IC-00000002 2026-10 IVA-GLOBAL-UI-01 Prorrateo global 5 $ 25,45 Administrador Versión anterior Ver preparación":
+        - cell "INT-IC-00000002"
+        - cell "2026-10"
+        - cell "IVA-GLOBAL-UI-01"
+        - cell "Prorrateo global"
+        - cell "5"
+        - cell "$ 25,45"
+        - cell "Administrador"
+        - cell "Versión anterior"
+        - cell "Ver preparación":
+          - button "Ver preparación"
+      - row "INT-IC-00000001 2026-10 IVA-COMPRAS-ENSAYO-01 Asignación directa 5 $ 31,00 Administrador Versión anterior Ver preparación":
+        - cell "INT-IC-00000001"
+        - cell "2026-10"
+        - cell "IVA-COMPRAS-ENSAYO-01"
+        - cell "Asignación directa"
+        - cell "5"
+        - cell "$ 31,00"
+        - cell "Administrador"
+        - cell "Versión anterior"
+        - cell "Ver preparación":
+          - button "Ver preparación"
+  - dialog "IVA compras · INT-IC-00000003":
+    - heading "IVA compras · INT-IC-00000003" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: Administrador · 17/10/2026, 01:03:26 · IVA-MIXTO-UI-02
+    - paragraph: "Ensayo mixto con el mismo cálculo global conservado: el TXT sólo informará asignaciones directas y restituciones, sin sumar el prorrateo por segunda vez."
+    - paragraph: Reemplaza como preparación a INT-IC-00000002; conserva el antecedente. No es una rectificativa presentada.
+    - paragraph:
+      - strong: SICA Textil · IVA compras · CUIT 30712345671 · 2026-10
+    - paragraph: Asignación directa y global · Todas las sucursales · Preparación de compras · sin presentación ARCA
+    - generic: Total neto de notas
+    - strong: $ 476,20
+    - generic: IVA discriminado neto
+    - strong: $ 42,60
+    - generic: Crédito computable neto
+    - strong: $ 25,45
+    - generic: IVA no computable neto
+    - strong: $ 17,15
+    - heading "CF computable global · papel de trabajo" [level=2]
+    - paragraph: "Bases fiscales declaradas de 01/01/2026 a 31/10/2026. Referencia: BASES-UI-75-POR-CIENTO."
+    - paragraph: "Bases netas sintéticas acumuladas del ejercicio: 7500 gravadas, 2000 exentas y 500 no gravadas. Se revisa el uso común por 21 ARS y el crédito previamente computado de la nota por 1 ARS."
+    - paragraph: "Gravadas: $ 7.500,00; exentas: $ 2.000,00; no gravadas: $ 500,00. Total: $ 10.000,00. Proporción: 75 %."
+    - paragraph: "IVA discriminado en facturas y débitos: $ 44,70. Asignación directa: $ 10,70; uso común: $ 21,00; excluido de ambos: $ 13,00. El prorrateo redondea una vez sobre el total común."
+    - generic: 5 registros
+    - button "XLSX":
+      - text: XLSX
+    - button "PDF":
+      - text: PDF
+    - table:
+      - rowgroup:
+        - row "Campo de trabajo para el portal Importe ARS":
+          - columnheader "Campo de trabajo para el portal"
+          - columnheader "Importe ARS"
+      - rowgroup:
+        - row "Crédito computable con asignación directa $ 10,70":
+          - cell "Crédito computable con asignación directa"
+          - cell "$ 10,70"
+        - row "Crédito computable determinado por prorrateo $ 15,75":
+          - cell "Crédito computable determinado por prorrateo"
+          - cell "$ 15,75"
+        - row "Crédito computable global $ 26,45":
+          - cell "Crédito computable global"
+          - cell "$ 26,45"
+        - row "Crédito no computable global $ 18,25":
+          - cell "Crédito no computable global"
+          - cell "$ 18,25"
+        - row "Crédito computable a restituir $ 1,00":
+          - cell "Crédito computable a restituir"
+          - cell "$ 1,00"
+    - generic: Estos campos globales se revisan por separado en el portal. Los TXT no contienen el crédito calculado por prorrateo. El importe a restituir corresponde al crédito histórico declarado para las notas, no a la proporción actual. No se generó una presentación ni un ajuste anual.
+    - generic: 5 registros
+    - table:
+      - rowgroup:
+        - row "Comprobante Directo Uso común Excluido / sin restitución A restituir":
+          - columnheader "Comprobante"
+          - columnheader "Directo"
+          - columnheader "Uso común"
+          - columnheader "Excluido / sin restitución"
+          - columnheader "A restituir"
+      - rowgroup:
+        - row "INT-FC-A-00001-00000001 $ 10,00 $ 20,00 $ 12,00 $ 0,00":
+          - cell "INT-FC-A-00001-00000001"
+          - cell "$ 10,00"
+          - cell "$ 20,00"
+          - cell "$ 12,00"
+          - cell "$ 0,00"
+        - row "INT-ND-A-00001-00000001 $ 0,70 $ 1,00 $ 1,00 $ 0,00":
+          - cell "INT-ND-A-00001-00000001"
+          - cell "$ 0,70"
+          - cell "$ 1,00"
+          - cell "$ 1,00"
+          - cell "$ 0,00"
+        - row "INT-NC-A-00001-00000001 $ 0,00 $ 0,00 $ 1,10 $ 1,00":
+          - cell "INT-NC-A-00001-00000001"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+          - cell "$ 1,10"
+          - cell "$ 1,00"
+        - row "INT-FC-C-00001-00000001 $ 0,00 $ 0,00 $ 0,00 $ 0,00":
+          - cell "INT-FC-C-00001-00000001"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+        - row "INT-FC-B-00002-00000001 $ 0,00 $ 0,00 $ 0,00 $ 0,00":
+          - cell "INT-FC-B-00002-00000001"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+    - generic: Esta preparación no registra asientos. Revisá por separado la contabilización del IVA no computable y las restituciones, y conciliá el crédito declarado con el diario.
+    - generic "Alcance y observaciones de la preparación (8)"
+    - generic: 5 registros
+    - table:
+      - rowgroup:
+        - row "Emisión Referencia interna Original CUIT proveedor Proveedor conservado Denominación TXT Total sin signo IVA discriminado Crédito en TXT Código operación Alícuotas Detalle de alícuotas":
+          - columnheader "Emisión"
+          - columnheader "Referencia interna"
+          - columnheader "Original"
+          - columnheader "CUIT proveedor"
+          - columnheader "Proveedor conservado"
+          - columnheader "Denominación TXT"
+          - columnheader "Total sin signo"
+          - columnheader "IVA discriminado"
+          - columnheader "Crédito en TXT"
+          - columnheader "Código operación"
+          - columnheader "Alícuotas"
+          - columnheader "Detalle de alícuotas"
+      - rowgroup:
+        - 'row "15/10/2026 INT-FC-A-00001-00000001 001 · 00004-00000001 20123456786 Textiles Ñandú SA Textiles Ñandú SA $ 415,00 $ 42,00 $ 10,00 0 2 0004: base $ 200,00, IVA $ 21,00; 0005: base $ 100,00, IVA $ 21,00"':
+          - cell "15/10/2026"
+          - cell "INT-FC-A-00001-00000001"
+          - cell "001 · 00004-00000001"
+          - cell "20123456786"
+          - cell "Textiles Ñandú SA"
+          - cell "Textiles Ñandú SA"
+          - cell "$ 415,00"
+          - cell "$ 42,00"
+          - cell "$ 10,00"
+          - cell "0"
+          - cell "2"
+          - 'cell "0004: base $ 200,00, IVA $ 21,00; 0005: base $ 100,00, IVA $ 21,00"'
+        - 'row "16/10/2026 INT-ND-A-00001-00000001 002 · 00004-00000003 20123456786 Textiles Ñandú SA Textiles Ñandú SA $ 12,70 $ 2,70 $ 0,70 0 1 0006: base $ 10,00, IVA $ 2,70"':
+          - cell "16/10/2026"
+          - cell "INT-ND-A-00001-00000001"
+          - cell "002 · 00004-00000003"
+          - cell "20123456786"
+          - cell "Textiles Ñandú SA"
+          - cell "Textiles Ñandú SA"
+          - cell "$ 12,70"
+          - cell "$ 2,70"
+          - cell "$ 0,70"
+          - cell "0"
+          - cell "1"
+          - 'cell "0006: base $ 10,00, IVA $ 2,70"'
+        - 'row "16/10/2026 INT-NC-A-00001-00000001 003 · 00004-00000002 20123456786 Textiles Ñandú SA Textiles Ñandú SA $ 12,10 $ 2,10 $ 1,00 0 1 0005: base $ 10,00, IVA $ 2,10"':
+          - cell "16/10/2026"
+          - cell "INT-NC-A-00001-00000001"
+          - cell "003 · 00004-00000002"
+          - cell "20123456786"
+          - cell "Textiles Ñandú SA"
+          - cell "Textiles Ñandú SA"
+          - cell "$ 12,10"
+          - cell "$ 2,10"
+          - cell "$ 1,00"
+          - cell "0"
+          - cell "1"
+          - 'cell "0005: base $ 10,00, IVA $ 2,10"'
+        - row "17/10/2026 INT-FC-C-00001-00000001 011 · 00004-00000005 30712345671 Proveedor C de ensayo Proveedor C de ensayo $ 30,00 $ 0,00 $ 0,00 0 0":
+          - cell "17/10/2026"
+          - cell "INT-FC-C-00001-00000001"
+          - cell "011 · 00004-00000005"
+          - cell "30712345671"
+          - cell "Proveedor C de ensayo"
+          - cell "Proveedor C de ensayo"
+          - cell "$ 30,00"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+          - cell "0"
+          - cell "0"
+          - cell
+        - row "17/10/2026 INT-FC-B-00002-00000001 006 · 00004-00000004 20123456786 Textiles Ñandú SA Textiles Ñandú SA $ 30,60 $ 0,00 $ 0,00 0 0":
+          - cell "17/10/2026"
+          - cell "INT-FC-B-00002-00000001"
+          - cell "006 · 00004-00000004"
+          - cell "20123456786"
+          - cell "Textiles Ñandú SA"
+          - cell "Textiles Ñandú SA"
+          - cell "$ 30,60"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+          - cell "0"
+          - cell "0"
+          - cell
+    - paragraph: "Las notas de crédito se escriben con importes positivos en el TXT; su tipo determina la resta. Los totales anteriores muestran su efecto neto. Cabeceras: 1635 bytes. Alícuotas: 344 bytes. ANSI ISO-8859-1 y finales de línea CRLF."
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "Interno X Emisión Total interno":
+          - columnheader "Interno X"
+          - columnheader "Emisión"
+          - columnheader "Total interno"
+      - rowgroup:
+        - row "INT-FC-X-00001-00000001 17/10/2026 $ 7,00":
+          - cell "INT-FC-X-00001-00000001"
+          - cell "17/10/2026"
+          - cell "$ 7,00"
+    - button "Descargar cabeceras TXT conservadas"
+    - button "Descargar alícuotas TXT conservadas"
+    - button "Descargar papel de prorrateo JSON"
+  - heading "Devengamientos y conciliaciones de ventas sin factura" [level=2]
+  - generic: Estas constancias internas complementan el papel de trabajo. No son comprobantes fiscales ni filas para cargar directamente en IVA Simple. La conciliación descuenta el neto e IVA ya reconocidos para que la factura no los duplique. Una fecha contable distinta del nacimiento fiscal necesita revisar la imputación del impuesto.
+  - generic: IVA ventas registrado en el período
+  - strong: $ 0,00
+  - generic: Comprobantes seleccionados más devengamientos y descuentos; sujeto a revisión fiscal.
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.

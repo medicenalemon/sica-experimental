@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-08T23:20:28.550Z",
+  "synthetic": true,
+  "goalComplete": false,
+  "tests": {
+    "domain": 126,
+    "files": 13,
+    "http": 30,
+    "fiscal": 22
+  },
+  "totalTests": 191,
+  "sharedBuild": true,
+  "lint": true,
+  "databases": [
+    {
+      "filename": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "stateValid": true,
+      "sqliteIntegrity": "ok",
+      "auditChainValid": true,
+      "auditCount": 5
+    },
+    {
+      "filename": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "stateValid": true,
+      "sqliteIntegrity": "ok",
+      "auditChainValid": true,
+      "auditCount": 2
+    },
+    {
+      "filename": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "stateValid": true,
+      "sqliteIntegrity": "ok",
+      "auditChainValid": true,
+      "auditCount": 6
+    },
+    {
+      "filename": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "stateValid": true,
+      "sqliteIntegrity": "ok",
+      "auditChainValid": true,
+      "auditCount": 3
+    }
+  ],
+  "ui": {
+    "host": "http://127.0.0.3:3008",
+    "revision": 5,
+    "pendingCreditCutoffRejected": true,
+    "linkedCreditDoesNotRepeatStock": true,
+    "customerAndSupplierReturnsReviewedAndPosted": true,
+    "screenshot": "stock-returns-2026-10-08.png"
+  },
+  "limitations": [
+    "Datos sintéticos; sin emisión fiscal real",
+    "Política de diferencia del proveedor requiere revisión para la entidad",
+    "Recepción/devengamiento no facturado, conversión completa, valor recuperable, inflación y otros cierres siguen pendientes"
+  ]
+}

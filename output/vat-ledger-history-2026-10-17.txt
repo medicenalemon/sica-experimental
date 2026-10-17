@@ -1,0 +1,137 @@
+Browser tab: 4, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.48:3053/contabilidad/conciliacion-iva".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.48:3053/contabilidad/conciliacion-iva
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.48:3053/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.48:3053/
+				7 button (collapsed) Description: Clientes, Secondary Actions: Expand
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (collapsed) Description: Finanzas, Secondary Actions: Expand
+				10 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				11 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				12 button (expanded) Description: Contabilidad, Secondary Actions: Collapse
+				13 container
+					14 link Description: Plan de cuentas, Value: 127.0.0.48:3053/contabilidad/plan
+					15 link Description: Configuración de cuentas, Value: 127.0.0.48:3053/contabilidad/configuracion
+					16 link Description: Libro diario, Value: 127.0.0.48:3053/contabilidad/diario
+					17 link Description: Libro mayor, Value: 127.0.0.48:3053/contabilidad/mayor
+					18 link Description: Conciliación de IVA compras, Value: 127.0.0.48:3053/contabilidad/conciliacion-iva
+					19 link Description: Sumas y saldos, Value: 127.0.0.48:3053/contabilidad/balance
+					20 link Description: Preparación de estados, Value: 127.0.0.48:3053/contabilidad/estados
+					21 link Description: Moneda de cierre y RECPAM, Value: 127.0.0.48:3053/contabilidad/moneda-cierre
+					22 link Description: Bienes de uso y depreciaciones, Value: 127.0.0.48:3053/contabilidad/bienes-de-uso
+					23 link Description: Valuación de inventario, Value: 127.0.0.48:3053/contabilidad/inventario
+					24 link Description: Servicios devengados, Value: 127.0.0.48:3053/contabilidad/servicios-devengados
+					25 link Description: Ingresos devengados, Value: 127.0.0.48:3053/contabilidad/ingresos-devengados
+					26 link Description: Cierres de períodos, Value: 127.0.0.48:3053/contabilidad/cierres
+					27 link Description: Cierre de resultados, Value: 127.0.0.48:3053/contabilidad/cierre-resultados
+					28 link Description: Apertura de ejercicio, Value: 127.0.0.48:3053/contabilidad/apertura-ejercicio
+				29 button (collapsed) Description: Producción, Secondary Actions: Expand
+				30 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				31 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				32 button (collapsed) Description: Administración, Secondary Actions: Expand
+				33 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				34 link Description: Configuración, Value: 127.0.0.48:3053/configuracion
+				35 link Description: Acerca de, Value: 127.0.0.48:3053/acerca-de
+			36 text Versión experimental
+			37 button Colapsar menú
+		38 container
+			39 text SICA Textil · Ajuste anual IVA
+			40 container
+				41 text Responsable Inscripto  ·  Tucumán
+			42 container
+				43 text Sucursal
+				44 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					45 menu
+						46 (selected) Todas las unidades
+						47 Casa Central
+						48 Sucursal de ensayo IVA
+			49 link Description: Acerca de y fuentes, Value: 127.0.0.48:3053/acerca-de
+			50 text AD
+			51 button Cerrar sesión
+			52 text Base compartida · Versión 3 · Datos en el servidor  · Comprobantes sin autorización ARCA
+			53 text SICA / GESTIÓN INTEGRAL
+			54 heading Conciliación contable de IVA compras, Value: 1
+				55 text Conciliación contable de IVA compras
+			56 text Compras originales, ajustes manuales y crédito fiscal preparado. Revisión consolidada de todas las sucursales.
+			57 link Description: Ver preparaciones fiscales, Value: 127.0.0.48:3053/finanzas/impuestos
+			58 heading Fuente fiscal y corte de revisión, Value: 2
+				59 text Fuente fiscal y corte de revisión
+			60 text Elegí una preparación mensual INT-IC o un ajuste anual INT-IA vigente de un período terminado. La conciliación compara sus importes con los movimientos en las cuentas de IVA que selecciones; conserva diferencias y respaldos sin contabilizar automáticamente.
+			61 container
+				62 text Preparación fiscal para conciliar
+				63 pop up button (collapsed, settable) Description: Preparación fiscal para conciliar, Value: Anual · 2025-01-01 a 2025-12-31 · INT-IA-00000001, Secondary Actions: Expand
+					64 menu
+						65 Seleccionar fuente…
+						66 Mensual · 2025-01 · INT-IC-00000001
+						67 Mensual · 2025-06 · INT-IC-00000002
+						68 Mensual · 2025-12 · INT-IC-00000003
+						69 (selected) Anual · 2025-01-01 a 2025-12-31 · INT-IA-00000001
+			70 button Preparar conciliación de IVA
+			71 heading Conciliaciones de IVA conservadas, Value: 2
+				72 text Conciliaciones de IVA conservadas
+			73 text field (settable) Buscar registros
+			74 text 2  registros
+			75 button XLSX
+			76 button PDF
+			77 table
+				78 row
+					79 cell
+						80 text CONSTANCIA
+					81 cell
+						82 text FUENTE FISCAL
+					83 cell
+						84 text REFERENCIA
+					85 cell
+						86 text CORTE CONTABLE
+					87 cell
+						88 text DIFERENCIA
+					89 cell
+						90 text RESULTADO ARITMÉTICO
+					91 cell
+						92 text RESPONSABLE
+					93 cell
+						94 text ESTADO
+					95 cell
+						96 text DETALLE
+				97 row
+					98 cell
+						99 text INT-IV-00000002
+					100 cell
+						101 text INT-IA-00000001
+					102 cell
+						103 text IVA-MAYOR-UI-02
+					104 cell
+						105 text 31/12/2025
+					106 cell
+						107 text $ 0,00
+					108 cell
+						109 text Sin diferencia aritmética
+					110 cell
+						111 text Administrador
+					112 cell
+						113 text Última revisión
+					114 cell
+						115 button Ver conciliación de IVA
+				116 row
+					117 cell
+						118 text INT-IV-00000001
+					119 cell
+						120 text INT-IA-00000001
+					121 cell
+						122 text IVA-MAYOR-UI-01
+					123 cell
+						124 text 31/12/2025
+					125 cell
+						126 text $ 37,18
+					127 cell
+						128 text Con diferencia pendiente
+					129 cell
+						130 text Administrador
+					131 cell
+						132 text Versión anterior
+					133 cell
+						134 button Ver conciliación de IVA
+
+The focused UI element is 115 button Ver conciliación de IVA

@@ -1,0 +1,24 @@
+{
+  "path": "output/pdf/sica-produccion-simulada.pdf",
+  "pages": 1,
+  "environment": "produccion",
+  "simulated": true,
+  "total": 24200,
+  "number": 142,
+  "qrUrl": "https://www.arca.gob.ar/fe/qr/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyNi0xMC0xNyIsImN1aXQiOjMwNzEyMzQ1NjcxLCJwdG9WdGEiOjEsInRpcG9DbXAiOjEsIm5yb0NtcCI6MTQyLCJpbXBvcnRlIjoyNDIsIm1vbmVkYSI6IlBFUyIsImN0eiI6MSwidGlwb0RvY1JlYyI6ODAsIm5yb0RvY1JlYyI6MjAxMjM0NTY3ODYsInRpcG9Db2RBdXQiOiJFIiwiY29kQXV0Ijo3MjExMTExMTExMTExMX0%3D",
+  "qrPayload": {
+    "ver": 1,
+    "fecha": "2026-10-17",
+    "cuit": 30712345671,
+    "ptoVta": 1,
+    "tipoCmp": 1,
+    "nroCmp": 142,
+    "importe": 242,
+    "moneda": "PES",
+    "ctz": 1,
+    "tipoDocRec": 80,
+    "nroDocRec": 20123456786,
+    "tipoCodAut": "E",
+    "codAut": 72111111111111
+  }
+}

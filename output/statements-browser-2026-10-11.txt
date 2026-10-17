@@ -1,0 +1,128 @@
+Expediente INT-EC-00000001
+
+Administrador · Estados de preparación QA 2026
+
+SICA QA - ESTADOS CONTABLES · 01/01/2026 a 11/10/2026
+
+Papel de trabajo nominal · Estados de preparación QA 2026
+
+Base y observaciones de preparación (3)
+Activo
+$ 4.286,00
+Pasivo
+$ 536,00
+Patrimonio neto
+$ 3.750,00
+Resultado del período
+$ 650,00
+Variación de efectivo
+$ 700,00
+Diferencias de conciliación
+$ 0,00
+Situación, evolución patrimonial y efectivo
+Situación patrimonial
+Resultados
+Evolución patrimonio
+Flujos de efectivo
+Flujos - detalle
+Patrimonio - detalle
+Notas
+Distribución de cuentas
+Fuentes del diario
+
+Comparativo patrimonial: Pendiente. Comparativo del período: Pendiente. Primera preparación sintética de ensayo; no se ha incorporado información del ejercicio anterior. No se afirma una dispensa normativa.
+
+15 registros
+CONCEPTO	ACTUAL ARS	COMPARATIVO ARS	NOTAS
+Activo corriente · Caja y bancos	$ 1.700,00	Pendiente	Nota 2
+Activo corriente · Cuentas por cobrar y derechos a facturar	$ 210,00	Pendiente	Nota 2
+Activo corriente · Otros créditos	$ 126,00	Pendiente	Nota 2
+Activo corriente · Bienes de cambio	$ 300,00	Pendiente	Nota 2
+Activo no corriente · Bienes de uso	$ 1.950,00	Pendiente	Nota 2
+Pasivo corriente · Deudas comerciales	$ 326,00	Pendiente	Nota 2
+Pasivo corriente · Deudas fiscales	$ 210,00	Pendiente	Nota 2
+Total activo corriente	$ 2.336,00	Pendiente	
+Total activo no corriente	$ 1.950,00	Pendiente	
+Total activo	$ 4.286,00	Pendiente	
+Total pasivo corriente	$ 536,00	Pendiente	
+Total pasivo no corriente	$ 0,00	Pendiente	
+Total pasivo	$ 536,00	Pendiente	
+Patrimonio neto (ver evolución)	$ 3.750,00	Pendiente	Nota 3
+Diferencia de conciliación	$ 0,00	Pendiente	
+Descargar expediente XLSX
+Descargar expediente PDF
+
+Expediente INT-EC-00000001
+
+Administrador · Estados de preparación QA 2026
+
+SICA QA - ESTADOS CONTABLES · 01/01/2026 a 11/10/2026
+
+Papel de trabajo nominal · Estados de preparación QA 2026
+
+Base y observaciones de preparación (3)
+Activo
+$ 4.286,00
+Pasivo
+$ 536,00
+Patrimonio neto
+$ 3.750,00
+Resultado del período
+$ 650,00
+Variación de efectivo
+$ 700,00
+Diferencias de conciliación
+$ 0,00
+Situación, evolución patrimonial y efectivo
+Situación patrimonial
+Resultados
+Evolución patrimonio
+Flujos de efectivo
+Flujos - detalle
+Patrimonio - detalle
+Notas
+Distribución de cuentas
+Fuentes del diario
+
+Comparativo patrimonial: Pendiente. Comparativo del período: Pendiente. Primera preparación sintética de ensayo; no se ha incorporado información del ejercicio anterior. No se afirma una dispensa normativa.
+
+8 registros
+CONCEPTO	ACTUAL ARS	COMPARATIVO ARS	NOTAS
+Efectivo y equivalentes al inicio	$ 1.000,00	Pendiente	Nota 4
+Operativas	$ 600,00	Pendiente	Nota 4
+Inversión	$ 0,00	Pendiente	Nota 4
+Financiación	$ 100,00	Pendiente	Nota 4
+Efectos sobre efectivo	$ 0,00	Pendiente	Nota 4
+Variación neta	$ 700,00	Pendiente	
+Efectivo y equivalentes al cierre	$ 1.700,00	Pendiente	Nota 4
+Diferencia de conciliación	$ 0,00	Pendiente	
+Descargar expediente XLSX
+Descargar expediente PDF
+
+Resultados:
+CONCEPTO	ACTUAL ARS	COMPARATIVO ARS	NOTAS
+Ingresos · Ventas y servicios	$ 1.000,00	Pendiente	Nota 2
+Gastos · Costo de ventas	$ 300,00	Pendiente	Nota 2
+Gastos · Otros gastos	$ 50,00	Pendiente	Nota 2
+Total ingresos	$ 1.000,00	Pendiente	
+Total gastos	$ 350,00	Pendiente	
+Resultado del período	$ 650,00	Pendiente	Nota 2
+
+Evolución del patrimonio:
+VARIACIÓN	CAPITAL	AJUSTE CAPITAL	APORTES IRREV.	PRIMAS	RESERVAS	NO ASIGNADOS	DIFERIDOS	TOTAL ARS	COMPARATIVO TOTAL
+Saldo inicial	$ 3.000,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 3.000,00	Pendiente
+Aportes · 2026-01-11 · Aporte sintético de propietarios	$ 200,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 200,00	Pendiente
+Retiros y distribuciones · 2026-01-12 · Distribución sintética	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	-$ 100,00	$ 0,00	-$ 100,00	Pendiente
+Asignaciones y transferencias · 2026-01-13 · Asignación sintética a reserva	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 80,00	-$ 80,00	$ 0,00	$ 0,00	Pendiente
+Resultado del período	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 650,00	$ 0,00	$ 650,00	Pendiente
+Saldo final	$ 3.200,00	$ 0,00	$ 0,00	$ 0,00	$ 80,00	$ 470,00	$ 0,00	$ 3.750,00	Pendiente
+
+Notas conservadas:
+NOTA	TÍTULO	CONTENIDO
+Nota 1	Entidad, actividad y marco de preparación	Empresa sintética de ensayo: comercio textil, Responsable Inscripto en Tucumán. Diario de prueba para verificar la preparación individual de estados; no representa una entidad ni actividad real.
+Nota 2	Bases de medición, rubros y políticas contables	Importes nominales en ARS. Rubros revisados: mercadería al costo conservado, costo de ventas, bienes de uso menos depreciación, deudas y créditos sin compensación. Queda pendiente la reexpresión en moneda de cierre y las restantes mediciones normativas.
+Nota 3	Patrimonio y decisiones de propietarios	Saldo anterior sintético de capital 3000 ARS; aporte de 200, distribución de 100 y asignación de 80 a reserva. Resultado del período 650 ARS. Las decisiones y sus asientos son exclusivamente de ensayo.
+Nota 4	Efectivo, equivalentes y operaciones sin efectivo	Caja y banco de libre disponibilidad en la prueba. Cobros operativos 1000 ARS, pagos operativos 400, aporte 200 y distribución 100; transferencia interna de 100 entre banco y caja. Depreciación y asignación a reserva sin flujo de efectivo.
+Nota 5	Contingencias y hechos posteriores	En este caso sintético no se informan contingencias ni hechos posteriores. Para una entidad real requieren revisión documentada hasta la fecha de preparación profesional.
+
+No se recibió un evento de descarga XLSX; la verificación de bytes se realiza con las funciones del producto.

@@ -1,0 +1,545 @@
+Browser tab: 3, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.47:3052/finanzas/impuestos".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.47:3052/finanzas/impuestos
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.47:3052/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.47:3052/
+				7 button (collapsed) Description: Clientes, Secondary Actions: Expand
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (expanded) Description: Finanzas, Secondary Actions: Collapse
+				10 link Description: Cajas y movimientos, Value: 127.0.0.47:3052/finanzas/cajas
+				11 link Description: Cajas y cuentas bancarias, Value: 127.0.0.47:3052/finanzas/cuentas-tesoreria
+				12 link Description: Bancos y conciliación, Value: 127.0.0.47:3052/finanzas/bancos
+				13 link Description: Extractos bancarios, Value: 127.0.0.47:3052/finanzas/bancos/extractos
+				14 link Description: Cartera de cheques, Value: 127.0.0.47:3052/finanzas/cheques
+				15 link Description: IVA ventas y compras, Value: 127.0.0.47:3052/finanzas/impuestos
+				16 link Description: Cuentas por cobrar / pagar, Value: 127.0.0.47:3052/finanzas/cuentas
+				17 link Description: Tarjetas de crédito, Value: 127.0.0.47:3052/finanzas/tarjetas
+				18 link Description: Liquidaciones de tarjetas, Value: 127.0.0.47:3052/finanzas/liquidaciones-tarjetas
+				19 link Description: Retenciones y percepciones, Value: 127.0.0.47:3052/finanzas/retenciones
+				20 link Description: Formas de pago y cobro, Value: 127.0.0.47:3052/finanzas/formas-pago
+				21 link Description: Entidades bancarias, Value: 127.0.0.47:3052/finanzas/entidades
+				22 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				23 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				24 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				25 button (collapsed) Description: Producción, Secondary Actions: Expand
+				26 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				27 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				28 button (collapsed) Description: Administración, Secondary Actions: Expand
+				29 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				30 link Description: Configuración, Value: 127.0.0.47:3052/configuracion
+				31 link Description: Acerca de, Value: 127.0.0.47:3052/acerca-de
+			32 text Versión experimental
+			33 button Colapsar menú
+		34 container
+			35 text SICA Textil · Ajuste anual IVA
+			36 container
+				37 text Responsable Inscripto  ·  Tucumán
+			38 container
+				39 text Sucursal
+				40 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					41 menu
+						42 (selected) Todas las unidades
+						43 Casa Central
+						44 Sucursal de ensayo IVA
+			45 link Description: Acerca de y fuentes, Value: 127.0.0.47:3052/acerca-de
+			46 text AD
+			47 button Cerrar sesión
+			48 text Base compartida · Versión 3 · Datos en el servidor  · Comprobantes sin autorización ARCA
+			49 text SICA / GESTIÓN INTEGRAL
+			50 heading IVA ventas y compras, Value: 1
+				51 text IVA ventas y compras
+			52 text Filtrá el período y la sucursal desde el selector superior.
+			53 container
+				54 text Desde
+				55 date field (settable) Description: Desde, Value: 2025-01-01
+					56 container
+						57 stepper
+						58 stepper
+						59 stepper
+					60 pop up button Mostrar selector de fecha Mostrar selector de fecha
+			61 container
+				62 text Hasta
+				63 date field (settable) Description: Hasta, Value: 2025-12-31
+					64 container
+						65 stepper
+						66 stepper
+						67 stepper
+					68 pop up button Mostrar selector de fecha Mostrar selector de fecha
+			69 container
+				70 text Incluir internos X
+				71 checkbox (settable, integer) Description: Incluir internos X, Value: 0
+			72 text Libro de trabajo: no constituye una presentación de IVA Simple. Las identificaciones de proveedores están sin constatación y las ventas pueden estar pendientes de CAE. Las notas de crédito restan. Los comprobantes C no discriminan IVA.
+			73 text field (settable) Buscar registros
+			74 text 4  registros
+			75 button XLSX
+			76 button PDF
+			77 table
+				78 row
+					79 cell
+						80 text FECHA
+					81 cell
+						82 text LIBRO
+					83 cell
+						84 text REFERENCIA
+					85 cell
+						86 text ORIGINAL PROVEEDOR
+					87 cell
+						88 text CUIT
+					89 cell
+						90 text CONTRAPARTE
+					91 cell
+						92 text NETO
+					93 cell
+						94 text IVA
+					95 cell
+						96 text PERCEPCIONES
+					97 cell
+						98 text TOTAL
+					99 cell
+						100 text ESTADO
+				101 row
+					102 cell
+						103 text 15/01/2025
+					104 cell
+						105 text Compras
+					106 cell
+						107 text INT-FC-A-00001-00000001
+					108 cell
+						109 text 001 · 00004-00000001
+					110 cell
+						111 text 20123456786
+					112 cell
+						113 text Textiles Ñandú SA
+					114 cell
+						115 text $ 200,00
+					116 cell
+						117 text $ 42,00
+					118 cell
+						119 text $ 0,00
+					120 cell
+						121 text $ 242,00
+					122 cell
+						123 text Datos de original · sin constatación
+				124 row
+					125 cell
+						126 text 15/06/2025
+					127 cell
+						128 text Compras
+					129 cell
+						130 text INT-FC-A-00001-00000002
+					131 cell
+						132 text 001 · 00004-00000002
+					133 cell
+						134 text 20123456786
+					135 cell
+						136 text Textiles Ñandú SA
+					137 cell
+						138 text $ 200,00
+					139 cell
+						140 text $ 42,00
+					141 cell
+						142 text $ 0,00
+					143 cell
+						144 text $ 242,00
+					145 cell
+						146 text Datos de original · sin constatación
+				147 row
+					148 cell
+						149 text 20/06/2025
+					150 cell
+						151 text Compras
+					152 cell
+						153 text INT-NC-A-00001-00000001
+					154 cell
+						155 text 003 · 00004-00000003
+					156 cell
+						157 text 20123456786
+					158 cell
+						159 text Textiles Ñandú SA
+					160 cell
+						161 text -$ 10,00
+					162 cell
+						163 text -$ 2,10
+					164 cell
+						165 text -$ 0,00
+					166 cell
+						167 text -$ 12,10
+					168 cell
+						169 text Datos de original · sin constatación
+				170 row
+					171 cell
+						172 text 15/12/2025
+					173 cell
+						174 text Compras
+					175 cell
+						176 text INT-FC-A-00001-00000003
+					177 cell
+						178 text 001 · 00004-00000004
+					179 cell
+						180 text 20123456786
+					181 cell
+						182 text Textiles Ñandú SA
+					183 cell
+						184 text $ 100,00
+					185 cell
+						186 text $ 21,00
+					187 cell
+						188 text $ 0,00
+					189 cell
+						190 text $ 121,00
+					191 cell
+						192 text Datos de original · sin constatación
+			193 heading Preparación para IVA Simple · Compras ordinarias, Value: 2
+				194 text Preparación para IVA Simple · Compras ordinarias
+			195 text Prepará los TXT de compras A/B/C en pesos por mes de emisión y para todas las sucursales. Los originales y el crédito computable requieren revisión. El criterio puede ser directo, global o mixto. Esta salida no presenta la declaración jurada ni incluye ventas, importaciones o regímenes especiales.
+			196 container
+				197 text Mes de compras para IVA Simple
+				198 date field (settable) Description: Mes de compras para IVA Simple, Value: 2026-10
+					199 container
+						200 stepper
+						201 stepper
+					202 pop up button Mostrar selector de mes Mostrar selector de mes
+			203 button Preparar compras para IVA Simple
+			204 text field (settable) Buscar registros
+			205 text 0  registros
+			206 button XLSX
+			207 button PDF
+			208 heading Todavía no hay registros., Value: 3
+				209 text Todavía no hay registros.
+			210 text Los datos que registres aquí aparecerán en los módulos relacionados.
+			211 heading Ajuste anual del prorrateo de IVA, Value: 2
+				212 text Ajuste anual del prorrateo de IVA
+			213 text Compará la proporción anual definitiva con el crédito prorrateado computado que declare el responsable para cada mes. Las compras de uso común devueltas requieren conciliación con su factura y restitución histórica. Se conserva un papel de trabajo para revisar en el cierre fiscal.
+			214 container
+				215 text Ejercicio para ajuste anual de IVA
+				216 pop up button (collapsed, settable) Description: Ejercicio para ajuste anual de IVA, Value: 01/01/2025 a 31/12/2025, Secondary Actions: Expand
+					217 menu
+						218 (selected) 01/01/2025 a 31/12/2025
+			219 button Preparar ajuste anual de IVA
+			220 text field (settable) Buscar registros
+			221 text 2  registros
+			222 button XLSX
+			223 button PDF
+			224 table
+				225 row
+					226 cell
+						227 text CONSTANCIA
+					228 cell
+						229 text REFERENCIA
+					230 cell
+						231 text A FAVOR DE EMPRESA
+					232 cell
+						233 text A FAVOR DE ARCA
+					234 cell
+						235 text RESPONSABLE
+					236 cell
+						237 text ESTADO
+					238 cell
+						239 text DETALLE
+				240 row
+					241 cell
+						242 text INT-IA-00000002
+					243 cell
+						244 text IVA-ANUAL-UI-02
+					245 cell
+						246 text $ 0,00
+					247 cell
+						248 text $ 29,87
+					249 cell
+						250 text Administrador
+					251 cell
+						252 text Última preparación
+					253 cell
+						254 button Ver ajuste anual
+				255 row
+					256 cell
+						257 text INT-IA-00000001
+					258 cell
+						259 text IVA-ANUAL-UI-01
+					260 cell
+						261 text $ 6,67
+					262 cell
+						263 text $ 0,00
+					264 cell
+						265 text Administrador
+					266 cell
+						267 text Versión anterior
+					268 cell
+						269 button Ver ajuste anual
+			545 container Ajuste anual · INT-IA-00000001
+				546 container
+					547 heading Ajuste anual · INT-IA-00000001, Value: 2
+						548 text Ajuste anual · INT-IA-00000001
+					549 button Cerrar
+				550 container
+					551 text IVA-ANUAL-UI-01  ·  Administrador  ·  17/10/2026, 01:21:38
+				552 container
+					553 text SICA Textil · Ajuste anual IVA  · CUIT  30712345671
+				554 container
+					555 text Ejercicio  01/01/2025  a  31/12/2025  · período de cierre  2025-12 .
+				556 text Ajuste a favor de la empresa
+				557 text $ 6,67
+				558 text Ajuste a favor de ARCA
+				559 text $ 0,00
+				560 text Crédito anual sobre IVA común neto
+				561 text $ 48,72
+				562 container
+					563 text Bases netas fiscales declaradas: gravadas  $ 8.000,00 , exentas  $ 2.000,00  y no gravadas  $ 0,00 . Proporción anual:  80 % . Referencia:  BASES-ANUALES-2025-UI .
+				564 container
+					565 text IVA común de compras:  $ 63,00 ; devuelto del mismo ejercicio:  $ 2,10 ; común neto sujeto a la proporción:  $ 60,90 .
+				566 container
+					567 text Crédito estimado preparado:  $ 43,05 . Cómputo declarado por mes:  $ 43,05 ; restitución histórica común:  $ 1,00 ; cómputo neto comparado:  $ 42,05 .
+				568 text El resultado requiere revisión en Ajustes al Crédito Fiscal del período de cierre de IVA Simple. Esta preparación no acredita una declaración presentada, no registra asientos y no cambia los TXT mensuales.
+				569 text 12  registros
+				570 table
+					571 row
+						572 cell
+							573 text MES
+						574 cell
+							575 text PREPARACIÓN CONSERVADA
+						576 cell
+							577 text IVA COMÚN
+						578 cell
+							579 text PRORRATEO PREPARADO
+						580 cell
+							581 text CÓMPUTO DECLARADO
+						582 cell
+							583 text DIFERENCIA
+						584 cell
+							585 text RESPALDO DECLARADO
+					586 row
+						587 cell
+							588 text 2025-01
+						589 cell
+							590 text INT-IC-00000001
+						591 cell
+							592 text $ 21,00
+						593 cell
+							594 text $ 10,50
+						595 cell
+							596 text $ 10,50
+						597 cell
+							598 text $ 0,00
+						599 cell
+							600 text COMPUTO-DECLARADO-2025-01
+					601 row
+						602 cell
+							603 text 2025-02
+						604 cell
+							605 text Sin compras ordinarias · confirmado
+						606 cell
+							607 text $ 0,00
+						608 cell
+							609 text $ 0,00
+						610 cell
+							611 text $ 0,00
+						612 cell
+							613 text $ 0,00
+						614 cell
+							615 text COMPUTO-DECLARADO-2025-02
+					616 row
+						617 cell
+							618 text 2025-03
+						619 cell
+							620 text Sin compras ordinarias · confirmado
+						621 cell
+							622 text $ 0,00
+						623 cell
+							624 text $ 0,00
+						625 cell
+							626 text $ 0,00
+						627 cell
+							628 text $ 0,00
+						629 cell
+							630 text COMPUTO-DECLARADO-2025-03
+					631 row
+						632 cell
+							633 text 2025-04
+						634 cell
+							635 text Sin compras ordinarias · confirmado
+						636 cell
+							637 text $ 0,00
+						638 cell
+							639 text $ 0,00
+						640 cell
+							641 text $ 0,00
+						642 cell
+							643 text $ 0,00
+						644 cell
+							645 text COMPUTO-DECLARADO-2025-04
+					646 row
+						647 cell
+							648 text 2025-05
+						649 cell
+							650 text Sin compras ordinarias · confirmado
+						651 cell
+							652 text $ 0,00
+						653 cell
+							654 text $ 0,00
+						655 cell
+							656 text $ 0,00
+						657 cell
+							658 text $ 0,00
+						659 cell
+							660 text COMPUTO-DECLARADO-2025-05
+					661 row
+						662 cell
+							663 text 2025-06
+						664 cell
+							665 text INT-IC-00000002
+						666 cell
+							667 text $ 21,00
+						668 cell
+							669 text $ 15,75
+						670 cell
+							671 text $ 15,75
+						672 cell
+							673 text $ 0,00
+						674 cell
+							675 text COMPUTO-DECLARADO-2025-06
+					676 row
+						677 cell
+							678 text 2025-07
+						679 cell
+							680 text Sin compras ordinarias · confirmado
+						681 cell
+							682 text $ 0,00
+						683 cell
+							684 text $ 0,00
+						685 cell
+							686 text $ 0,00
+						687 cell
+							688 text $ 0,00
+						689 cell
+							690 text COMPUTO-DECLARADO-2025-07
+					691 row
+						692 cell
+							693 text 2025-08
+						694 cell
+							695 text Sin compras ordinarias · confirmado
+						696 cell
+							697 text $ 0,00
+						698 cell
+							699 text $ 0,00
+						700 cell
+							701 text $ 0,00
+						702 cell
+							703 text $ 0,00
+						704 cell
+							705 text COMPUTO-DECLARADO-2025-08
+					706 row
+						707 cell
+							708 text 2025-09
+						709 cell
+							710 text Sin compras ordinarias · confirmado
+						711 cell
+							712 text $ 0,00
+						713 cell
+							714 text $ 0,00
+						715 cell
+							716 text $ 0,00
+						717 cell
+							718 text $ 0,00
+						719 cell
+							720 text COMPUTO-DECLARADO-2025-09
+					721 row
+						722 cell
+							723 text 2025-10
+						724 cell
+							725 text Sin compras ordinarias · confirmado
+						726 cell
+							727 text $ 0,00
+						728 cell
+							729 text $ 0,00
+						730 cell
+							731 text $ 0,00
+						732 cell
+							733 text $ 0,00
+						734 cell
+							735 text COMPUTO-DECLARADO-2025-10
+					736 row
+						737 cell
+							738 text 2025-11
+						739 cell
+							740 text Sin compras ordinarias · confirmado
+						741 cell
+							742 text $ 0,00
+						743 cell
+							744 text $ 0,00
+						745 cell
+							746 text $ 0,00
+						747 cell
+							748 text $ 0,00
+						749 cell
+							750 text COMPUTO-DECLARADO-2025-11
+					751 row
+						752 cell
+							753 text 2025-12
+						754 cell
+							755 text INT-IC-00000003
+						756 cell
+							757 text $ 21,00
+						758 cell
+							759 text $ 16,80
+						760 cell
+							761 text $ 16,80
+						762 cell
+							763 text $ 0,00
+						764 cell
+							765 text COMPUTO-DECLARADO-2025-12
+				766 text 1  registros
+				767 table
+					768 row
+						769 cell
+							770 text NOTA DE CRÉDITO
+						771 cell
+							772 text FACTURA DE ORIGEN
+						773 cell
+							774 text EMISIÓN DE ORIGEN
+						775 cell
+							776 text ALCANCE ANUAL
+						777 cell
+							778 text IVA DE LA NOTA
+						779 cell
+							780 text RESTITUCIÓN MENSUAL TOTAL
+						781 cell
+							782 text COMÚN DEVUELTO DEL EJERCICIO
+						783 cell
+							784 text CRÉDITO COMÚN RESTITUIDO DEL EJERCICIO
+					785 row
+						786 cell
+							787 text INT-NC-A-00001-00000001
+						788 cell
+							789 text INT-FC-A-00001-00000001
+						790 cell
+							791 text 2025-01-15
+						792 cell
+							793 text Compra del ejercicio
+						794 cell
+							795 text $ 2,10
+						796 cell
+							797 text $ 1,00
+						798 cell
+							799 text $ 2,10
+						800 cell
+							801 text $ 1,00
+				802 button (collapsed) Fundamentos y observaciones de la revisión, Secondary Actions: Expand
+					803 text Fundamentos y observaciones de la revisión
+				804 button Descargar papel de ajuste anual JSON
+			532 heading Devengamientos y conciliaciones de ventas sin factura, Value: 2
+				533 text Devengamientos y conciliaciones de ventas sin factura
+			534 text Estas constancias internas complementan el papel de trabajo. No son comprobantes fiscales ni filas para cargar directamente en IVA Simple. La conciliación descuenta el neto e IVA ya reconocidos para que la factura no los duplique. Una fecha contable distinta del nacimiento fiscal necesita revisar la imputación del impuesto.
+			535 text IVA ventas registrado en el período
+			536 text $ 0,00
+			537 text Comprobantes seleccionados más devengamientos y descuentos; sujeto a revisión fiscal.
+			538 text field (settable) Buscar registros
+			539 text 0  registros
+			540 button XLSX
+			541 button PDF
+			542 heading Todavía no hay registros., Value: 3
+				543 text Todavía no hay registros.
+			544 text Los datos que registres aquí aparecerán en los módulos relacionados.
+
+The focused UI element is 549 button Cerrar

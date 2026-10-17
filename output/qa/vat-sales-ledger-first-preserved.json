@@ -1,0 +1,435 @@
+{
+  "id": "7242190e-a859-4693-a7bf-2a9051f3b88a",
+  "number": "INT-IDV-00000001",
+  "responsible": "Administrador",
+  "createdAt": "2026-10-17T18:21:16.303Z",
+  "review": "{\"input\":{\"sourceId\":\"e78c62fa-5251-4d79-80c7-f42548bbf663\",\"asOf\":\"2026-10-17\",\"accountIds\":[\"2.1.2\"],\"manual\":[],\"reference\":\"IVA-VENTAS-DIARIO-UI-1\",\"reason\":\"Ensayo de septiembre: conservar por separado comprobantes, ingresos de agosto y septiembre y los movimientos reales de IVA. Sin modificar asientos.\",\"previousId\":\"\",\"confirmed\":true},\"source\":{\"company\":{\"name\":\"SICA Textil · IVA ventas de ensayo\",\"cuit\":\"30712345671\",\"iva\":\"Responsable Inscripto\"},\"exercises\":[{\"start\":\"2026-01-01\",\"end\":\"2026-12-31\"}],\"branches\":[{\"id\":\"central\",\"name\":\"Casa Central\"},{\"id\":\"segunda\",\"name\":\"Sucursal de ensayo\"}],\"accounts\":[{\"id\":\"2.1.2\",\"code\":\"2.1.2\",\"name\":\"IVA débito fiscal\",\"group\":\"Pasivo\",\"postable\":true}],\"documentIds\":[\"118322ef-3076-40ab-a094-8dcd3317607c\",\"e8af94c8-9dd4-4799-b445-11ea12512f66\",\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\",\"3254c0bd-7527-4df9-8e50-343431b73bbf\",\"be97bcea-3976-4e0a-a1e5-73b3ed7eeda0\",\"eef3edcc-84e7-4a93-b76f-74be09f5fafd\",\"d73589db-b1fa-446e-a4bc-1cdce6735919\",\"f951e911-fe7b-4cc5-bb17-7a9fcb87af39\"],\"entryIds\":[\"9e2ef9e2-e49b-41bb-9c03-1330de60d718\",\"4c1a166a-36cb-4d6b-a263-f67101a62bf2\",\"5cf12d80-5e18-4839-813e-f6c772676abd\",\"47375717-b42e-43b4-838f-209038f977ec\",\"045f3bd0-457c-407f-96c2-0976224f6ad7\",\"be4751b8-c7bd-44ea-82d3-68d8372c2f67\",\"2b0aec2c-861e-4716-8108-48753f7d0b41\",\"f6e53392-d96e-454a-8e4d-d0f05c90ee26\",\"d43cc813-b635-4273-b8a0-f6e012745903\",\"0dfa0f58-6838-44f7-85c1-1fae18d286ed\"],\"reversalIds\":[],\"preparationIds\":[\"e78c62fa-5251-4d79-80c7-f42548bbf663\"],\"accrualIds\":[\"1804a575-ae18-4472-8c39-068b1e9a4093\",\"e280b443-b9bd-4ee7-b893-11f43ee537fe\"],\"settlementIds\":[\"9fad3eee-e3e5-479a-96bb-dfb413819792\"]},\"from\":\"2026-09-01\",\"to\":\"2026-09-30\",\"sourceNumber\":\"INT-IVT-00000001\",\"sourceReview\":\"{\\\"input\\\":{\\\"period\\\":\\\"2026-09\\\",\\\"environment\\\":\\\"produccion\\\",\\\"previousId\\\":\\\"\\\",\\\"reference\\\":\\\"IVA-VENTAS-CONTABLE-BASE\\\",\\\"reason\\\":\\\"Revisión sintética de todas las ventas y notas del mes, de ambas sucursales.\\\",\\\"scopeConfirmed\\\":true},\\\"source\\\":{\\\"company\\\":{\\\"name\\\":\\\"SICA Textil · IVA ventas de ensayo\\\",\\\"cuit\\\":\\\"30712345671\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"documentPrefixIds\\\":[\\\"118322ef-3076-40ab-a094-8dcd3317607c\\\",\\\"e8af94c8-9dd4-4799-b445-11ea12512f66\\\",\\\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\\\",\\\"3254c0bd-7527-4df9-8e50-343431b73bbf\\\",\\\"be97bcea-3976-4e0a-a1e5-73b3ed7eeda0\\\",\\\"eef3edcc-84e7-4a93-b76f-74be09f5fafd\\\",\\\"d73589db-b1fa-446e-a4bc-1cdce6735919\\\",\\\"f951e911-fe7b-4cc5-bb17-7a9fcb87af39\\\"],\\\"authorizations\\\":[{\\\"documentId\\\":\\\"118322ef-3076-40ab-a094-8dcd3317607c\\\",\\\"request\\\":{\\\"issuer\\\":\\\"30712345671\\\",\\\"point\\\":1,\\\"type\\\":1,\\\"letter\\\":\\\"A\\\",\\\"documentId\\\":\\\"118322ef-3076-40ab-a094-8dcd3317607c\\\",\\\"detail\\\":{\\\"Concepto\\\":1,\\\"DocTipo\\\":80,\\\"DocNro\\\":\\\"20123456786\\\",\\\"CbteFch\\\":\\\"20260905\\\",\\\"ImpTotal\\\":35700,\\\"ImpTotConc\\\":500,\\\"ImpNeto\\\":30000,\\\"ImpOpEx\\\":1000,\\\"ImpTrib\\\":0,\\\"ImpIVA\\\":4200,\\\"MonId\\\":\\\"PES\\\",\\\"MonCotiz\\\":1,\\\"CondicionIVAReceptorId\\\":1,\\\"CbteDesde\\\":142,\\\"CbteHasta\\\":142},\\\"iva\\\":[{\\\"Id\\\":5,\\\"BaseImp\\\":10000,\\\"Importe\\\":2100},{\\\"Id\\\":4,\\\"BaseImp\\\":20000,\\\"Importe\\\":2100}],\\\"tributes\\\":[],\\\"associated\\\":[],\\\"snapshot\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\",\\\"issuer\\\":{\\\"name\\\":\\\"SICA Textil · IVA ventas de ensayo\\\",\\\"cuit\\\":\\\"30712345671\\\",\\\"iibbRegistration\\\":\\\"Inscripción sintética\\\",\\\"activityStart\\\":\\\"2020-01-01\\\",\\\"address\\\":\\\"Domicilio sintético de Tucumán\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"receiver\\\":{\\\"name\\\":\\\"Comprador Ñandú de ensayo con nombre largo\\\",\\\"cuit\\\":\\\"20123456786\\\",\\\"address\\\":\\\"Domicilio sintético del comprador\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"lines\\\":[{\\\"productId\\\":\\\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\\\",\\\"description\\\":\\\"Textil de ensayo 21\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":10000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0},{\\\"productId\\\":\\\"iva-venta-10.5\\\",\\\"description\\\":\\\"Textil de ensayo 10.5\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":20000,\\\"tax\\\":\\\"10.5\\\",\\\"discount\\\":0},{\\\"productId\\\":\\\"iva-venta-Exento\\\",\\\"description\\\":\\\"Textil de ensayo Exento\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":1000,\\\"tax\\\":\\\"Exento\\\",\\\"discount\\\":0},{\\\"productId\\\":\\\"iva-venta-No gravado\\\",\\\"description\\\":\\\"Textil de ensayo No gravado\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":500,\\\"tax\\\":\\\"No gravado\\\",\\\"discount\\\":0}],\\\"branchName\\\":\\\"Casa Central\\\"}},\\\"record\\\":{\\\"environment\\\":\\\"produccion\\\",\\\"simulated\\\":true,\\\"state\\\":\\\"aprobado\\\",\\\"point\\\":1,\\\"type\\\":1,\\\"number\\\":142,\\\"cae\\\":\\\"72111111111111\\\",\\\"expires\\\":\\\"2026-12-31\\\",\\\"messages\\\":[],\\\"updated\\\":\\\"2026-10-17T18:17:52.660Z\\\",\\\"options\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\"}},\\\"unchanged\\\":true},{\\\"documentId\\\":\\\"3254c0bd-7527-4df9-8e50-343431b73bbf\\\",\\\"request\\\":{\\\"issuer\\\":\\\"30712345671\\\",\\\"point\\\":2,\\\"type\\\":6,\\\"letter\\\":\\\"B\\\",\\\"documentId\\\":\\\"3254c0bd-7527-4df9-8e50-343431b73bbf\\\",\\\"detail\\\":{\\\"Concepto\\\":1,\\\"DocTipo\\\":80,\\\"DocNro\\\":\\\"20123456794\\\",\\\"CbteFch\\\":\\\"20260905\\\",\\\"ImpTotal\\\":12100,\\\"ImpTotConc\\\":0,\\\"ImpNeto\\\":10000,\\\"ImpOpEx\\\":0,\\\"ImpTrib\\\":0,\\\"ImpIVA\\\":2100,\\\"MonId\\\":\\\"PES\\\",\\\"MonCotiz\\\":1,\\\"CondicionIVAReceptorId\\\":5,\\\"CbteDesde\\\":1,\\\"CbteHasta\\\":1},\\\"iva\\\":[{\\\"Id\\\":5,\\\"BaseImp\\\":10000,\\\"Importe\\\":2100}],\\\"tributes\\\":[],\\\"associated\\\":[],\\\"snapshot\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\",\\\"issuer\\\":{\\\"name\\\":\\\"SICA Textil · IVA ventas de ensayo\\\",\\\"cuit\\\":\\\"30712345671\\\",\\\"iibbRegistration\\\":\\\"Inscripción sintética\\\",\\\"activityStart\\\":\\\"2020-01-01\\\",\\\"address\\\":\\\"Domicilio sintético de Tucumán\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"receiver\\\":{\\\"name\\\":\\\"Consumidor final de ensayo\\\",\\\"cuit\\\":\\\"20123456794\\\",\\\"address\\\":\\\"Domicilio sintético del comprador\\\",\\\"iva\\\":\\\"Consumidor Final\\\"},\\\"lines\\\":[{\\\"productId\\\":\\\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\\\",\\\"description\\\":\\\"Textil de ensayo 21\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":12100,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}],\\\"branchName\\\":\\\"Sucursal de ensayo\\\",\\\"nationalIndirect\\\":{\\\"amount\\\":0,\\\"reference\\\":\\\"Sin impuestos nacionales indirectos en este ensayo\\\"}}},\\\"record\\\":{\\\"environment\\\":\\\"produccion\\\",\\\"simulated\\\":true,\\\"state\\\":\\\"aprobado\\\",\\\"point\\\":2,\\\"type\\\":6,\\\"number\\\":1,\\\"cae\\\":\\\"72111111111111\\\",\\\"expires\\\":\\\"2026-12-31\\\",\\\"messages\\\":[],\\\"updated\\\":\\\"2026-10-17T18:17:52.995Z\\\",\\\"options\\\":{\\\"nationalIndirect\\\":{\\\"amount\\\":0,\\\"reference\\\":\\\"Sin impuestos nacionales indirectos en este ensayo\\\"},\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\"}},\\\"unchanged\\\":true},{\\\"documentId\\\":\\\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\\\",\\\"request\\\":{\\\"issuer\\\":\\\"30712345671\\\",\\\"point\\\":1,\\\"type\\\":2,\\\"letter\\\":\\\"A\\\",\\\"documentId\\\":\\\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\\\",\\\"detail\\\":{\\\"Concepto\\\":1,\\\"DocTipo\\\":80,\\\"DocNro\\\":\\\"20123456786\\\",\\\"CbteFch\\\":\\\"20260905\\\",\\\"ImpTotal\\\":1105,\\\"ImpTotConc\\\":0,\\\"ImpNeto\\\":1000,\\\"ImpOpEx\\\":0,\\\"ImpTrib\\\":0,\\\"ImpIVA\\\":105,\\\"MonId\\\":\\\"PES\\\",\\\"MonCotiz\\\":1,\\\"CondicionIVAReceptorId\\\":1,\\\"CbteDesde\\\":1,\\\"CbteHasta\\\":1},\\\"iva\\\":[{\\\"Id\\\":4,\\\"BaseImp\\\":1000,\\\"Importe\\\":105}],\\\"tributes\\\":[],\\\"associated\\\":[{\\\"Tipo\\\":1,\\\"PtoVta\\\":1,\\\"Nro\\\":142,\\\"Cuit\\\":\\\"30712345671\\\",\\\"CbteFch\\\":\\\"20260905\\\"}],\\\"snapshot\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\",\\\"issuer\\\":{\\\"name\\\":\\\"SICA Textil · IVA ventas de ensayo\\\",\\\"cuit\\\":\\\"30712345671\\\",\\\"iibbRegistration\\\":\\\"Inscripción sintética\\\",\\\"activityStart\\\":\\\"2020-01-01\\\",\\\"address\\\":\\\"Domicilio sintético de Tucumán\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"receiver\\\":{\\\"name\\\":\\\"Comprador Ñandú de ensayo con nombre largo\\\",\\\"cuit\\\":\\\"20123456786\\\",\\\"address\\\":\\\"Domicilio sintético del comprador\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"lines\\\":[{\\\"productId\\\":\\\"iva-venta-10.5\\\",\\\"description\\\":\\\"Textil de ensayo 10.5\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":1000,\\\"tax\\\":\\\"10.5\\\",\\\"discount\\\":0}],\\\"branchName\\\":\\\"Casa Central\\\"}},\\\"record\\\":{\\\"environment\\\":\\\"produccion\\\",\\\"simulated\\\":true,\\\"state\\\":\\\"aprobado\\\",\\\"point\\\":1,\\\"type\\\":2,\\\"number\\\":1,\\\"cae\\\":\\\"72111111111111\\\",\\\"expires\\\":\\\"2026-12-31\\\",\\\"messages\\\":[],\\\"updated\\\":\\\"2026-10-17T18:17:52.912Z\\\",\\\"options\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\"}},\\\"unchanged\\\":true},{\\\"documentId\\\":\\\"d73589db-b1fa-446e-a4bc-1cdce6735919\\\",\\\"request\\\":{\\\"issuer\\\":\\\"30712345671\\\",\\\"point\\\":1,\\\"type\\\":1,\\\"letter\\\":\\\"A\\\",\\\"documentId\\\":\\\"d73589db-b1fa-446e-a4bc-1cdce6735919\\\",\\\"detail\\\":{\\\"Concepto\\\":1,\\\"DocTipo\\\":80,\\\"DocNro\\\":\\\"20123456786\\\",\\\"CbteFch\\\":\\\"20260905\\\",\\\"ImpTotal\\\":14520,\\\"ImpTotConc\\\":0,\\\"ImpNeto\\\":12000,\\\"ImpOpEx\\\":0,\\\"ImpTrib\\\":0,\\\"ImpIVA\\\":2520,\\\"MonId\\\":\\\"PES\\\",\\\"MonCotiz\\\":1,\\\"CondicionIVAReceptorId\\\":1,\\\"CbteDesde\\\":143,\\\"CbteHasta\\\":143},\\\"iva\\\":[{\\\"Id\\\":5,\\\"BaseImp\\\":12000,\\\"Importe\\\":2520}],\\\"tributes\\\":[],\\\"associated\\\":[],\\\"snapshot\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\",\\\"issuer\\\":{\\\"name\\\":\\\"SICA Textil · IVA ventas de ensayo\\\",\\\"cuit\\\":\\\"30712345671\\\",\\\"iibbRegistration\\\":\\\"Inscripción sintética\\\",\\\"activityStart\\\":\\\"2020-01-01\\\",\\\"address\\\":\\\"Domicilio sintético de Tucumán\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"receiver\\\":{\\\"name\\\":\\\"Comprador Ñandú de ensayo con nombre largo\\\",\\\"cuit\\\":\\\"20123456786\\\",\\\"address\\\":\\\"Domicilio sintético del comprador\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"lines\\\":[{\\\"productId\\\":\\\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\\\",\\\"description\\\":\\\"Textil de ensayo 21\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":12000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}],\\\"branchName\\\":\\\"Casa Central\\\"}},\\\"record\\\":{\\\"environment\\\":\\\"produccion\\\",\\\"simulated\\\":true,\\\"state\\\":\\\"aprobado\\\",\\\"point\\\":1,\\\"type\\\":1,\\\"number\\\":143,\\\"cae\\\":\\\"72111111111111\\\",\\\"expires\\\":\\\"2026-12-31\\\",\\\"messages\\\":[],\\\"updated\\\":\\\"2026-10-17T18:17:53.080Z\\\",\\\"options\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\"}},\\\"unchanged\\\":true},{\\\"documentId\\\":\\\"e8af94c8-9dd4-4799-b445-11ea12512f66\\\",\\\"request\\\":{\\\"issuer\\\":\\\"30712345671\\\",\\\"point\\\":1,\\\"type\\\":3,\\\"letter\\\":\\\"A\\\",\\\"documentId\\\":\\\"e8af94c8-9dd4-4799-b445-11ea12512f66\\\",\\\"detail\\\":{\\\"Concepto\\\":1,\\\"DocTipo\\\":80,\\\"DocNro\\\":\\\"20123456786\\\",\\\"CbteFch\\\":\\\"20260905\\\",\\\"ImpTotal\\\":1210,\\\"ImpTotConc\\\":0,\\\"ImpNeto\\\":1000,\\\"ImpOpEx\\\":0,\\\"ImpTrib\\\":0,\\\"ImpIVA\\\":210,\\\"MonId\\\":\\\"PES\\\",\\\"MonCotiz\\\":1,\\\"CondicionIVAReceptorId\\\":1,\\\"CbteDesde\\\":1,\\\"CbteHasta\\\":1},\\\"iva\\\":[{\\\"Id\\\":5,\\\"BaseImp\\\":1000,\\\"Importe\\\":210}],\\\"tributes\\\":[],\\\"associated\\\":[{\\\"Tipo\\\":1,\\\"PtoVta\\\":1,\\\"Nro\\\":142,\\\"Cuit\\\":\\\"30712345671\\\",\\\"CbteFch\\\":\\\"20260905\\\"}],\\\"snapshot\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\",\\\"issuer\\\":{\\\"name\\\":\\\"SICA Textil · IVA ventas de ensayo\\\",\\\"cuit\\\":\\\"30712345671\\\",\\\"iibbRegistration\\\":\\\"Inscripción sintética\\\",\\\"activityStart\\\":\\\"2020-01-01\\\",\\\"address\\\":\\\"Domicilio sintético de Tucumán\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"receiver\\\":{\\\"name\\\":\\\"Comprador Ñandú de ensayo con nombre largo\\\",\\\"cuit\\\":\\\"20123456786\\\",\\\"address\\\":\\\"Domicilio sintético del comprador\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"lines\\\":[{\\\"productId\\\":\\\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\\\",\\\"description\\\":\\\"Textil de ensayo 21\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":1000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}],\\\"branchName\\\":\\\"Casa Central\\\"}},\\\"record\\\":{\\\"environment\\\":\\\"produccion\\\",\\\"simulated\\\":true,\\\"state\\\":\\\"aprobado\\\",\\\"point\\\":1,\\\"type\\\":3,\\\"number\\\":1,\\\"cae\\\":\\\"72111111111111\\\",\\\"expires\\\":\\\"2026-12-31\\\",\\\"messages\\\":[],\\\"updated\\\":\\\"2026-10-17T18:17:52.760Z\\\",\\\"options\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\"}},\\\"unchanged\\\":true}]},\\\"rows\\\":[{\\\"document\\\":{\\\"id\\\":\\\"118322ef-3076-40ab-a094-8dcd3317607c\\\",\\\"number\\\":\\\"INT-FC-A-00001-00000001\\\",\\\"kind\\\":\\\"factura\\\",\\\"letter\\\":\\\"A\\\",\\\"date\\\":\\\"2026-09-05\\\",\\\"branchId\\\":\\\"central\\\",\\\"partyId\\\":\\\"fd0feaf3-8d7b-4ea7-8ee3-4810f880d91a\\\",\\\"sourceId\\\":\\\"\\\",\\\"lines\\\":[{\\\"productId\\\":\\\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\\\",\\\"description\\\":\\\"Textil de ensayo 21\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":10000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0},{\\\"productId\\\":\\\"iva-venta-10.5\\\",\\\"description\\\":\\\"Textil de ensayo 10.5\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":20000,\\\"tax\\\":\\\"10.5\\\",\\\"discount\\\":0},{\\\"productId\\\":\\\"iva-venta-Exento\\\",\\\"description\\\":\\\"Textil de ensayo Exento\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":1000,\\\"tax\\\":\\\"Exento\\\",\\\"discount\\\":0},{\\\"productId\\\":\\\"iva-venta-No gravado\\\",\\\"description\\\":\\\"Textil de ensayo No gravado\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":500,\\\"tax\\\":\\\"No gravado\\\",\\\"discount\\\":0}],\\\"net\\\":31500,\\\"vat\\\":4200,\\\"perceptions\\\":0,\\\"total\\\":35700},\\\"authorization\\\":{\\\"documentId\\\":\\\"118322ef-3076-40ab-a094-8dcd3317607c\\\",\\\"request\\\":{\\\"issuer\\\":\\\"30712345671\\\",\\\"point\\\":1,\\\"type\\\":1,\\\"letter\\\":\\\"A\\\",\\\"documentId\\\":\\\"118322ef-3076-40ab-a094-8dcd3317607c\\\",\\\"detail\\\":{\\\"Concepto\\\":1,\\\"DocTipo\\\":80,\\\"DocNro\\\":\\\"20123456786\\\",\\\"CbteFch\\\":\\\"20260905\\\",\\\"ImpTotal\\\":35700,\\\"ImpTotConc\\\":500,\\\"ImpNeto\\\":30000,\\\"ImpOpEx\\\":1000,\\\"ImpTrib\\\":0,\\\"ImpIVA\\\":4200,\\\"MonId\\\":\\\"PES\\\",\\\"MonCotiz\\\":1,\\\"CondicionIVAReceptorId\\\":1,\\\"CbteDesde\\\":142,\\\"CbteHasta\\\":142},\\\"iva\\\":[{\\\"Id\\\":5,\\\"BaseImp\\\":10000,\\\"Importe\\\":2100},{\\\"Id\\\":4,\\\"BaseImp\\\":20000,\\\"Importe\\\":2100}],\\\"tributes\\\":[],\\\"associated\\\":[],\\\"snapshot\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\",\\\"issuer\\\":{\\\"name\\\":\\\"SICA Textil · IVA ventas de ensayo\\\",\\\"cuit\\\":\\\"30712345671\\\",\\\"iibbRegistration\\\":\\\"Inscripción sintética\\\",\\\"activityStart\\\":\\\"2020-01-01\\\",\\\"address\\\":\\\"Domicilio sintético de Tucumán\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"receiver\\\":{\\\"name\\\":\\\"Comprador Ñandú de ensayo con nombre largo\\\",\\\"cuit\\\":\\\"20123456786\\\",\\\"address\\\":\\\"Domicilio sintético del comprador\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"lines\\\":[{\\\"productId\\\":\\\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\\\",\\\"description\\\":\\\"Textil de ensayo 21\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":10000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0},{\\\"productId\\\":\\\"iva-venta-10.5\\\",\\\"description\\\":\\\"Textil de ensayo 10.5\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":20000,\\\"tax\\\":\\\"10.5\\\",\\\"discount\\\":0},{\\\"productId\\\":\\\"iva-venta-Exento\\\",\\\"description\\\":\\\"Textil de ensayo Exento\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":1000,\\\"tax\\\":\\\"Exento\\\",\\\"discount\\\":0},{\\\"productId\\\":\\\"iva-venta-No gravado\\\",\\\"description\\\":\\\"Textil de ensayo No gravado\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":500,\\\"tax\\\":\\\"No gravado\\\",\\\"discount\\\":0}],\\\"branchName\\\":\\\"Casa Central\\\"}},\\\"record\\\":{\\\"environment\\\":\\\"produccion\\\",\\\"simulated\\\":true,\\\"state\\\":\\\"aprobado\\\",\\\"point\\\":1,\\\"type\\\":1,\\\"number\\\":142,\\\"cae\\\":\\\"72111111111111\\\",\\\"expires\\\":\\\"2026-12-31\\\",\\\"messages\\\":[],\\\"updated\\\":\\\"2026-10-17T18:17:52.660Z\\\",\\\"options\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\"}},\\\"unchanged\\\":true},\\\"original\\\":\\\"Factura A 00001-00000142\\\",\\\"name\\\":\\\"Comprador Ñandú de ensayo con nombre largo\\\",\\\"fileName\\\":\\\"Comprador Ñandú de ensayo con \\\",\\\"operation\\\":\\\"0\\\",\\\"net\\\":30000,\\\"exempt\\\":1000,\\\"untaxed\\\":500,\\\"vat\\\":4200,\\\"perceptions\\\":0,\\\"total\\\":35700,\\\"header\\\":\\\"202609050010000100000000000000000142000000000000000001428000000000020123456786Comprador Ñandú de ensayo con 000000000035700000000000000500000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000PES00010000002000000000000000000000000\\\",\\\"details\\\":[\\\"00100001000000000000000001420000000000100000005000000000002100\\\",\\\"00100001000000000000000001420000000000200000004000000000002100\\\"]},{\\\"document\\\":{\\\"id\\\":\\\"3254c0bd-7527-4df9-8e50-343431b73bbf\\\",\\\"number\\\":\\\"INT-FC-B-00002-00000001\\\",\\\"kind\\\":\\\"factura\\\",\\\"letter\\\":\\\"B\\\",\\\"date\\\":\\\"2026-09-05\\\",\\\"branchId\\\":\\\"segunda\\\",\\\"partyId\\\":\\\"iva-consumidor-final\\\",\\\"sourceId\\\":\\\"\\\",\\\"lines\\\":[{\\\"productId\\\":\\\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\\\",\\\"description\\\":\\\"Textil de ensayo 21\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":12100,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}],\\\"net\\\":10000,\\\"vat\\\":2100,\\\"perceptions\\\":0,\\\"total\\\":12100},\\\"authorization\\\":{\\\"documentId\\\":\\\"3254c0bd-7527-4df9-8e50-343431b73bbf\\\",\\\"request\\\":{\\\"issuer\\\":\\\"30712345671\\\",\\\"point\\\":2,\\\"type\\\":6,\\\"letter\\\":\\\"B\\\",\\\"documentId\\\":\\\"3254c0bd-7527-4df9-8e50-343431b73bbf\\\",\\\"detail\\\":{\\\"Concepto\\\":1,\\\"DocTipo\\\":80,\\\"DocNro\\\":\\\"20123456794\\\",\\\"CbteFch\\\":\\\"20260905\\\",\\\"ImpTotal\\\":12100,\\\"ImpTotConc\\\":0,\\\"ImpNeto\\\":10000,\\\"ImpOpEx\\\":0,\\\"ImpTrib\\\":0,\\\"ImpIVA\\\":2100,\\\"MonId\\\":\\\"PES\\\",\\\"MonCotiz\\\":1,\\\"CondicionIVAReceptorId\\\":5,\\\"CbteDesde\\\":1,\\\"CbteHasta\\\":1},\\\"iva\\\":[{\\\"Id\\\":5,\\\"BaseImp\\\":10000,\\\"Importe\\\":2100}],\\\"tributes\\\":[],\\\"associated\\\":[],\\\"snapshot\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\",\\\"issuer\\\":{\\\"name\\\":\\\"SICA Textil · IVA ventas de ensayo\\\",\\\"cuit\\\":\\\"30712345671\\\",\\\"iibbRegistration\\\":\\\"Inscripción sintética\\\",\\\"activityStart\\\":\\\"2020-01-01\\\",\\\"address\\\":\\\"Domicilio sintético de Tucumán\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"receiver\\\":{\\\"name\\\":\\\"Consumidor final de ensayo\\\",\\\"cuit\\\":\\\"20123456794\\\",\\\"address\\\":\\\"Domicilio sintético del comprador\\\",\\\"iva\\\":\\\"Consumidor Final\\\"},\\\"lines\\\":[{\\\"productId\\\":\\\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\\\",\\\"description\\\":\\\"Textil de ensayo 21\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":12100,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}],\\\"branchName\\\":\\\"Sucursal de ensayo\\\",\\\"nationalIndirect\\\":{\\\"amount\\\":0,\\\"reference\\\":\\\"Sin impuestos nacionales indirectos en este ensayo\\\"}}},\\\"record\\\":{\\\"environment\\\":\\\"produccion\\\",\\\"simulated\\\":true,\\\"state\\\":\\\"aprobado\\\",\\\"point\\\":2,\\\"type\\\":6,\\\"number\\\":1,\\\"cae\\\":\\\"72111111111111\\\",\\\"expires\\\":\\\"2026-12-31\\\",\\\"messages\\\":[],\\\"updated\\\":\\\"2026-10-17T18:17:52.995Z\\\",\\\"options\\\":{\\\"nationalIndirect\\\":{\\\"amount\\\":0,\\\"reference\\\":\\\"Sin impuestos nacionales indirectos en este ensayo\\\"},\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\"}},\\\"unchanged\\\":true},\\\"original\\\":\\\"Factura B 00002-00000001\\\",\\\"name\\\":\\\"Consumidor final de ensayo\\\",\\\"fileName\\\":\\\"Consumidor final de ensayo\\\",\\\"operation\\\":\\\"0\\\",\\\"net\\\":10000,\\\"exempt\\\":0,\\\"untaxed\\\":0,\\\"vat\\\":2100,\\\"perceptions\\\":0,\\\"total\\\":12100,\\\"header\\\":\\\"202609050060000200000000000000000001000000000000000000018000000000020123456794Consumidor final de ensayo    000000000012100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000001000000000000000000000000\\\",\\\"details\\\":[\\\"00600002000000000000000000010000000000100000005000000000002100\\\"]},{\\\"document\\\":{\\\"id\\\":\\\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\\\",\\\"number\\\":\\\"INT-ND-A-00001-00000001\\\",\\\"kind\\\":\\\"debito\\\",\\\"letter\\\":\\\"A\\\",\\\"date\\\":\\\"2026-09-05\\\",\\\"branchId\\\":\\\"central\\\",\\\"partyId\\\":\\\"fd0feaf3-8d7b-4ea7-8ee3-4810f880d91a\\\",\\\"sourceId\\\":\\\"118322ef-3076-40ab-a094-8dcd3317607c\\\",\\\"lines\\\":[{\\\"productId\\\":\\\"iva-venta-10.5\\\",\\\"description\\\":\\\"Textil de ensayo 10.5\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":1000,\\\"tax\\\":\\\"10.5\\\",\\\"discount\\\":0}],\\\"net\\\":1000,\\\"vat\\\":105,\\\"perceptions\\\":0,\\\"total\\\":1105},\\\"authorization\\\":{\\\"documentId\\\":\\\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\\\",\\\"request\\\":{\\\"issuer\\\":\\\"30712345671\\\",\\\"point\\\":1,\\\"type\\\":2,\\\"letter\\\":\\\"A\\\",\\\"documentId\\\":\\\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\\\",\\\"detail\\\":{\\\"Concepto\\\":1,\\\"DocTipo\\\":80,\\\"DocNro\\\":\\\"20123456786\\\",\\\"CbteFch\\\":\\\"20260905\\\",\\\"ImpTotal\\\":1105,\\\"ImpTotConc\\\":0,\\\"ImpNeto\\\":1000,\\\"ImpOpEx\\\":0,\\\"ImpTrib\\\":0,\\\"ImpIVA\\\":105,\\\"MonId\\\":\\\"PES\\\",\\\"MonCotiz\\\":1,\\\"CondicionIVAReceptorId\\\":1,\\\"CbteDesde\\\":1,\\\"CbteHasta\\\":1},\\\"iva\\\":[{\\\"Id\\\":4,\\\"BaseImp\\\":1000,\\\"Importe\\\":105}],\\\"tributes\\\":[],\\\"associated\\\":[{\\\"Tipo\\\":1,\\\"PtoVta\\\":1,\\\"Nro\\\":142,\\\"Cuit\\\":\\\"30712345671\\\",\\\"CbteFch\\\":\\\"20260905\\\"}],\\\"snapshot\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\",\\\"issuer\\\":{\\\"name\\\":\\\"SICA Textil · IVA ventas de ensayo\\\",\\\"cuit\\\":\\\"30712345671\\\",\\\"iibbRegistration\\\":\\\"Inscripción sintética\\\",\\\"activityStart\\\":\\\"2020-01-01\\\",\\\"address\\\":\\\"Domicilio sintético de Tucumán\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"receiver\\\":{\\\"name\\\":\\\"Comprador Ñandú de ensayo con nombre largo\\\",\\\"cuit\\\":\\\"20123456786\\\",\\\"address\\\":\\\"Domicilio sintético del comprador\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"lines\\\":[{\\\"productId\\\":\\\"iva-venta-10.5\\\",\\\"description\\\":\\\"Textil de ensayo 10.5\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":1000,\\\"tax\\\":\\\"10.5\\\",\\\"discount\\\":0}],\\\"branchName\\\":\\\"Casa Central\\\"}},\\\"record\\\":{\\\"environment\\\":\\\"produccion\\\",\\\"simulated\\\":true,\\\"state\\\":\\\"aprobado\\\",\\\"point\\\":1,\\\"type\\\":2,\\\"number\\\":1,\\\"cae\\\":\\\"72111111111111\\\",\\\"expires\\\":\\\"2026-12-31\\\",\\\"messages\\\":[],\\\"updated\\\":\\\"2026-10-17T18:17:52.912Z\\\",\\\"options\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\"}},\\\"unchanged\\\":true},\\\"original\\\":\\\"Nota de débito A 00001-00000001\\\",\\\"name\\\":\\\"Comprador Ñandú de ensayo con nombre largo\\\",\\\"fileName\\\":\\\"Comprador Ñandú de ensayo con \\\",\\\"operation\\\":\\\"0\\\",\\\"net\\\":1000,\\\"exempt\\\":0,\\\"untaxed\\\":0,\\\"vat\\\":105,\\\"perceptions\\\":0,\\\"total\\\":1105,\\\"header\\\":\\\"202609050020000100000000000000000001000000000000000000018000000000020123456786Comprador Ñandú de ensayo con 000000000001105000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000001000000000000000000000000\\\",\\\"details\\\":[\\\"00200001000000000000000000010000000000010000004000000000000105\\\"]},{\\\"document\\\":{\\\"id\\\":\\\"d73589db-b1fa-446e-a4bc-1cdce6735919\\\",\\\"number\\\":\\\"INT-FC-A-00001-00000002\\\",\\\"kind\\\":\\\"factura\\\",\\\"letter\\\":\\\"A\\\",\\\"date\\\":\\\"2026-09-05\\\",\\\"branchId\\\":\\\"central\\\",\\\"partyId\\\":\\\"fd0feaf3-8d7b-4ea7-8ee3-4810f880d91a\\\",\\\"sourceId\\\":\\\"eef3edcc-84e7-4a93-b76f-74be09f5fafd\\\",\\\"lines\\\":[{\\\"productId\\\":\\\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\\\",\\\"description\\\":\\\"Textil de ensayo 21\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":12000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}],\\\"net\\\":12000,\\\"vat\\\":2520,\\\"perceptions\\\":0,\\\"total\\\":14520},\\\"authorization\\\":{\\\"documentId\\\":\\\"d73589db-b1fa-446e-a4bc-1cdce6735919\\\",\\\"request\\\":{\\\"issuer\\\":\\\"30712345671\\\",\\\"point\\\":1,\\\"type\\\":1,\\\"letter\\\":\\\"A\\\",\\\"documentId\\\":\\\"d73589db-b1fa-446e-a4bc-1cdce6735919\\\",\\\"detail\\\":{\\\"Concepto\\\":1,\\\"DocTipo\\\":80,\\\"DocNro\\\":\\\"20123456786\\\",\\\"CbteFch\\\":\\\"20260905\\\",\\\"ImpTotal\\\":14520,\\\"ImpTotConc\\\":0,\\\"ImpNeto\\\":12000,\\\"ImpOpEx\\\":0,\\\"ImpTrib\\\":0,\\\"ImpIVA\\\":2520,\\\"MonId\\\":\\\"PES\\\",\\\"MonCotiz\\\":1,\\\"CondicionIVAReceptorId\\\":1,\\\"CbteDesde\\\":143,\\\"CbteHasta\\\":143},\\\"iva\\\":[{\\\"Id\\\":5,\\\"BaseImp\\\":12000,\\\"Importe\\\":2520}],\\\"tributes\\\":[],\\\"associated\\\":[],\\\"snapshot\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\",\\\"issuer\\\":{\\\"name\\\":\\\"SICA Textil · IVA ventas de ensayo\\\",\\\"cuit\\\":\\\"30712345671\\\",\\\"iibbRegistration\\\":\\\"Inscripción sintética\\\",\\\"activityStart\\\":\\\"2020-01-01\\\",\\\"address\\\":\\\"Domicilio sintético de Tucumán\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"receiver\\\":{\\\"name\\\":\\\"Comprador Ñandú de ensayo con nombre largo\\\",\\\"cuit\\\":\\\"20123456786\\\",\\\"address\\\":\\\"Domicilio sintético del comprador\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"lines\\\":[{\\\"productId\\\":\\\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\\\",\\\"description\\\":\\\"Textil de ensayo 21\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":12000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}],\\\"branchName\\\":\\\"Casa Central\\\"}},\\\"record\\\":{\\\"environment\\\":\\\"produccion\\\",\\\"simulated\\\":true,\\\"state\\\":\\\"aprobado\\\",\\\"point\\\":1,\\\"type\\\":1,\\\"number\\\":143,\\\"cae\\\":\\\"72111111111111\\\",\\\"expires\\\":\\\"2026-12-31\\\",\\\"messages\\\":[],\\\"updated\\\":\\\"2026-10-17T18:17:53.080Z\\\",\\\"options\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\"}},\\\"unchanged\\\":true},\\\"original\\\":\\\"Factura A 00001-00000143\\\",\\\"name\\\":\\\"Comprador Ñandú de ensayo con nombre largo\\\",\\\"fileName\\\":\\\"Comprador Ñandú de ensayo con \\\",\\\"operation\\\":\\\"0\\\",\\\"net\\\":12000,\\\"exempt\\\":0,\\\"untaxed\\\":0,\\\"vat\\\":2520,\\\"perceptions\\\":0,\\\"total\\\":14520,\\\"header\\\":\\\"202609050010000100000000000000000143000000000000000001438000000000020123456786Comprador Ñandú de ensayo con 000000000014520000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000001000000000000000000000000\\\",\\\"details\\\":[\\\"00100001000000000000000001430000000000120000005000000000002520\\\"]},{\\\"document\\\":{\\\"id\\\":\\\"e8af94c8-9dd4-4799-b445-11ea12512f66\\\",\\\"number\\\":\\\"INT-NC-A-00001-00000001\\\",\\\"kind\\\":\\\"credito\\\",\\\"letter\\\":\\\"A\\\",\\\"date\\\":\\\"2026-09-05\\\",\\\"branchId\\\":\\\"central\\\",\\\"partyId\\\":\\\"fd0feaf3-8d7b-4ea7-8ee3-4810f880d91a\\\",\\\"sourceId\\\":\\\"118322ef-3076-40ab-a094-8dcd3317607c\\\",\\\"lines\\\":[{\\\"productId\\\":\\\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\\\",\\\"description\\\":\\\"Textil de ensayo 21\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":1000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}],\\\"net\\\":1000,\\\"vat\\\":210,\\\"perceptions\\\":0,\\\"total\\\":1210},\\\"authorization\\\":{\\\"documentId\\\":\\\"e8af94c8-9dd4-4799-b445-11ea12512f66\\\",\\\"request\\\":{\\\"issuer\\\":\\\"30712345671\\\",\\\"point\\\":1,\\\"type\\\":3,\\\"letter\\\":\\\"A\\\",\\\"documentId\\\":\\\"e8af94c8-9dd4-4799-b445-11ea12512f66\\\",\\\"detail\\\":{\\\"Concepto\\\":1,\\\"DocTipo\\\":80,\\\"DocNro\\\":\\\"20123456786\\\",\\\"CbteFch\\\":\\\"20260905\\\",\\\"ImpTotal\\\":1210,\\\"ImpTotConc\\\":0,\\\"ImpNeto\\\":1000,\\\"ImpOpEx\\\":0,\\\"ImpTrib\\\":0,\\\"ImpIVA\\\":210,\\\"MonId\\\":\\\"PES\\\",\\\"MonCotiz\\\":1,\\\"CondicionIVAReceptorId\\\":1,\\\"CbteDesde\\\":1,\\\"CbteHasta\\\":1},\\\"iva\\\":[{\\\"Id\\\":5,\\\"BaseImp\\\":1000,\\\"Importe\\\":210}],\\\"tributes\\\":[],\\\"associated\\\":[{\\\"Tipo\\\":1,\\\"PtoVta\\\":1,\\\"Nro\\\":142,\\\"Cuit\\\":\\\"30712345671\\\",\\\"CbteFch\\\":\\\"20260905\\\"}],\\\"snapshot\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\",\\\"issuer\\\":{\\\"name\\\":\\\"SICA Textil · IVA ventas de ensayo\\\",\\\"cuit\\\":\\\"30712345671\\\",\\\"iibbRegistration\\\":\\\"Inscripción sintética\\\",\\\"activityStart\\\":\\\"2020-01-01\\\",\\\"address\\\":\\\"Domicilio sintético de Tucumán\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"receiver\\\":{\\\"name\\\":\\\"Comprador Ñandú de ensayo con nombre largo\\\",\\\"cuit\\\":\\\"20123456786\\\",\\\"address\\\":\\\"Domicilio sintético del comprador\\\",\\\"iva\\\":\\\"Responsable Inscripto\\\"},\\\"lines\\\":[{\\\"productId\\\":\\\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\\\",\\\"description\\\":\\\"Textil de ensayo 21\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":1000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}],\\\"branchName\\\":\\\"Casa Central\\\"}},\\\"record\\\":{\\\"environment\\\":\\\"produccion\\\",\\\"simulated\\\":true,\\\"state\\\":\\\"aprobado\\\",\\\"point\\\":1,\\\"type\\\":3,\\\"number\\\":1,\\\"cae\\\":\\\"72111111111111\\\",\\\"expires\\\":\\\"2026-12-31\\\",\\\"messages\\\":[],\\\"updated\\\":\\\"2026-10-17T18:17:52.760Z\\\",\\\"options\\\":{\\\"saleTerms\\\":\\\"Cuenta corriente de ensayo\\\"}},\\\"unchanged\\\":true},\\\"original\\\":\\\"Nota de crédito A 00001-00000001\\\",\\\"name\\\":\\\"Comprador Ñandú de ensayo con nombre largo\\\",\\\"fileName\\\":\\\"Comprador Ñandú de ensayo con \\\",\\\"operation\\\":\\\"0\\\",\\\"net\\\":1000,\\\"exempt\\\":0,\\\"untaxed\\\":0,\\\"vat\\\":210,\\\"perceptions\\\":0,\\\"total\\\":1210,\\\"header\\\":\\\"202609050030000100000000000000000001000000000000000000018000000000020123456786Comprador Ñandú de ensayo con 000000000001210000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000001000000000000000000000000\\\",\\\"details\\\":[\\\"00300001000000000000000000010000000000010000005000000000000210\\\"]}],\\\"excluded\\\":[{\\\"id\\\":\\\"be97bcea-3976-4e0a-a1e5-73b3ed7eeda0\\\",\\\"number\\\":\\\"INT-FC-X-00001-00000001\\\",\\\"date\\\":\\\"2026-09-05\\\",\\\"total\\\":3000}],\\\"simulation\\\":true,\\\"totals\\\":{\\\"total\\\":62215,\\\"net\\\":52000,\\\"exempt\\\":1000,\\\"untaxed\\\":500,\\\"vat\\\":8715,\\\"perceptions\\\":0},\\\"bytes\\\":{\\\"headers\\\":1340,\\\"aliquots\\\":384},\\\"status\\\":\\\"ENSAYO · no presentar ante ARCA\\\",\\\"warnings\\\":[\\\"Contiene homologación o autorizaciones simuladas: los archivos son sólo de ensayo y no se deben presentar.\\\",\\\"Ventas ordinarias A/B en PES con CUIT, de todas las sucursales por mes de emisión. Revisá otras operaciones y ajustes fuera de este alcance.\\\",\\\"Se utilizan la numeración fiscal, receptor y valores de la solicitud aprobada; no se sustituyen por referencias internas ni datos actuales del cliente.\\\",\\\"Las notas de crédito tienen importes positivos en los archivos y restan en los totales. No se agrupan ventas diarias.\\\",\\\"No sube archivos, no concilia precargas ni confirma la declaración jurada; evitá duplicar comprobantes ya registrados en el portal.\\\"]}\",\"simulation\":true,\"documents\":[{\"id\":\"118322ef-3076-40ab-a094-8dcd3317607c\",\"number\":\"INT-FC-A-00001-00000001\",\"date\":\"2026-09-05\",\"fiscalNumber\":\"Factura A 00001-00000142\",\"fiscalVat\":4200,\"entry\":{\"id\":\"9e2ef9e2-e49b-41bb-9c03-1330de60d718\",\"date\":\"2026-09-05\",\"concept\":\"INT-FC-A-00001-00000001\",\"branchId\":\"central\",\"documentId\":\"118322ef-3076-40ab-a094-8dcd3317607c\",\"lines\":[{\"accountId\":\"1.1.3\",\"debit\":35700,\"credit\":0},{\"accountId\":\"4.1\",\"debit\":0,\"credit\":31500},{\"accountId\":\"2.1.2\",\"debit\":0,\"credit\":4000},{\"accountId\":\"2.1.1\",\"debit\":0,\"credit\":200}]},\"branchName\":\"Casa Central\",\"debit\":0,\"credit\":4000,\"net\":4000},{\"id\":\"3254c0bd-7527-4df9-8e50-343431b73bbf\",\"number\":\"INT-FC-B-00002-00000001\",\"date\":\"2026-09-05\",\"fiscalNumber\":\"Factura B 00002-00000001\",\"fiscalVat\":2100,\"entry\":{\"id\":\"47375717-b42e-43b4-838f-209038f977ec\",\"date\":\"2026-09-05\",\"concept\":\"INT-FC-B-00002-00000001\",\"branchId\":\"segunda\",\"documentId\":\"3254c0bd-7527-4df9-8e50-343431b73bbf\",\"lines\":[{\"accountId\":\"1.1.3\",\"debit\":12100,\"credit\":0},{\"accountId\":\"4.1\",\"debit\":0,\"credit\":10000},{\"accountId\":\"2.1.2\",\"debit\":0,\"credit\":2100}]},\"branchName\":\"Sucursal de ensayo\",\"debit\":0,\"credit\":2100,\"net\":2100},{\"id\":\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\",\"number\":\"INT-ND-A-00001-00000001\",\"date\":\"2026-09-05\",\"fiscalNumber\":\"Nota de débito A 00001-00000001\",\"fiscalVat\":105,\"entry\":{\"id\":\"5cf12d80-5e18-4839-813e-f6c772676abd\",\"date\":\"2026-09-05\",\"concept\":\"INT-ND-A-00001-00000001\",\"branchId\":\"central\",\"documentId\":\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\",\"lines\":[{\"accountId\":\"1.1.3\",\"debit\":1105,\"credit\":0},{\"accountId\":\"4.1\",\"debit\":0,\"credit\":1000},{\"accountId\":\"2.1.2\",\"debit\":0,\"credit\":105}]},\"branchName\":\"Casa Central\",\"debit\":0,\"credit\":105,\"net\":105},{\"id\":\"d73589db-b1fa-446e-a4bc-1cdce6735919\",\"number\":\"INT-FC-A-00001-00000002\",\"date\":\"2026-09-05\",\"fiscalNumber\":\"Factura A 00001-00000143\",\"fiscalVat\":2520,\"entry\":{\"id\":\"2b0aec2c-861e-4716-8108-48753f7d0b41\",\"date\":\"2026-09-05\",\"concept\":\"INT-FC-A-00001-00000002\",\"branchId\":\"central\",\"documentId\":\"d73589db-b1fa-446e-a4bc-1cdce6735919\",\"lines\":[{\"accountId\":\"1.1.3\",\"debit\":14520,\"credit\":0},{\"accountId\":\"4.1\",\"debit\":0,\"credit\":12000},{\"accountId\":\"2.1.2\",\"debit\":0,\"credit\":2520}]},\"branchName\":\"Casa Central\",\"debit\":0,\"credit\":2520,\"net\":2520},{\"id\":\"e8af94c8-9dd4-4799-b445-11ea12512f66\",\"number\":\"INT-NC-A-00001-00000001\",\"date\":\"2026-09-05\",\"fiscalNumber\":\"Nota de crédito A 00001-00000001\",\"fiscalVat\":-210,\"entry\":{\"id\":\"4c1a166a-36cb-4d6b-a263-f67101a62bf2\",\"date\":\"2026-09-05\",\"concept\":\"INT-NC-A-00001-00000001\",\"branchId\":\"central\",\"documentId\":\"e8af94c8-9dd4-4799-b445-11ea12512f66\",\"lines\":[{\"accountId\":\"1.1.3\",\"debit\":0,\"credit\":1210},{\"accountId\":\"4.1\",\"debit\":1000,\"credit\":0},{\"accountId\":\"2.1.2\",\"debit\":210,\"credit\":0}]},\"branchName\":\"Casa Central\",\"debit\":210,\"credit\":0,\"net\":-210}],\"revenues\":[{\"id\":\"9fad3eee-e3e5-479a-96bb-dfb413819792\",\"number\":\"INT-CI-00000001\",\"date\":\"2026-09-06\",\"kind\":\"Descuento de importes ya reconocidos\",\"source\":\"INT-FC-A-00001-00000002\",\"fiscalReason\":\"IVA sintético 21% revisado al aceptar la entrega, sin anticipos. Requiere validación fiscal real.\",\"workVat\":-2100,\"entry\":{\"id\":\"f6e53392-d96e-454a-8e4d-d0f05c90ee26\",\"date\":\"2026-09-06\",\"concept\":\"INT-CI-00000001\",\"branchId\":\"central\",\"documentId\":\"9fad3eee-e3e5-479a-96bb-dfb413819792\",\"revenueRecordId\":\"9fad3eee-e3e5-479a-96bb-dfb413819792\",\"lines\":[{\"accountId\":\"4.1\",\"debit\":10000,\"credit\":0},{\"accountId\":\"2.1.2\",\"debit\":2100,\"credit\":0},{\"accountId\":\"1.1.12\",\"debit\":0,\"credit\":12100}]},\"branchName\":\"Casa Central\",\"debit\":2100,\"credit\":0,\"net\":-2100},{\"id\":\"e280b443-b9bd-4ee7-b893-11f43ee537fe\",\"number\":\"INT-DI-00000002\",\"date\":\"2026-09-10\",\"kind\":\"Ingreso e IVA sin factura\",\"source\":\"INT-RM-X-00001-00000002\",\"fiscalReason\":\"IVA sintético 21% revisado al aceptar la entrega, sin anticipos. Requiere validación fiscal real.\",\"workVat\":1050,\"entry\":{\"id\":\"d43cc813-b635-4273-b8a0-f6e012745903\",\"date\":\"2026-09-10\",\"concept\":\"INT-DI-00000002\",\"branchId\":\"central\",\"documentId\":\"e280b443-b9bd-4ee7-b893-11f43ee537fe\",\"revenueRecordId\":\"e280b443-b9bd-4ee7-b893-11f43ee537fe\",\"lines\":[{\"accountId\":\"1.1.12\",\"debit\":6050,\"credit\":0},{\"accountId\":\"4.1\",\"debit\":0,\"credit\":5000},{\"accountId\":\"2.1.2\",\"debit\":0,\"credit\":1050}]},\"branchName\":\"Casa Central\",\"debit\":0,\"credit\":1050,\"net\":1050}],\"origins\":[{\"id\":\"1804a575-ae18-4472-8c39-068b1e9a4093\",\"number\":\"INT-DI-00000001\",\"date\":\"2026-08-20\",\"source\":\"INT-RM-X-00001-00000001\",\"vat\":2100,\"includedInMonth\":false,\"entry\":{\"id\":\"be4751b8-c7bd-44ea-82d3-68d8372c2f67\",\"date\":\"2026-08-20\",\"concept\":\"INT-DI-00000001\",\"branchId\":\"central\",\"documentId\":\"1804a575-ae18-4472-8c39-068b1e9a4093\",\"revenueRecordId\":\"1804a575-ae18-4472-8c39-068b1e9a4093\",\"lines\":[{\"accountId\":\"1.1.12\",\"debit\":12100,\"credit\":0},{\"accountId\":\"4.1\",\"debit\":0,\"credit\":10000},{\"accountId\":\"2.1.2\",\"debit\":0,\"credit\":2100}]},\"branchName\":\"Casa Central\",\"debit\":0,\"credit\":2100,\"net\":2100}],\"adjustments\":[],\"laterSettlements\":[],\"pendingInvoiceIds\":[],\"unselectedManualIds\":[\"0dfa0f58-6838-44f7-85c1-1fae18d286ed\"],\"branches\":[{\"id\":\"central\",\"name\":\"Casa Central\",\"original\":6415,\"revenues\":-1050,\"adjustments\":0,\"net\":5365},{\"id\":\"segunda\",\"name\":\"Sucursal de ensayo\",\"original\":2100,\"revenues\":0,\"adjustments\":0,\"net\":2100}],\"totals\":{\"registered\":8715,\"supplement\":-1050,\"target\":7665,\"original\":8515,\"revenues\":-1050,\"adjustments\":0,\"book\":7465,\"registeredDifference\":-1250,\"difference\":-200},\"warnings\":[\"Conciliación de movimientos vinculados, no del saldo total del mayor, saldo técnico ni declaración presentada. El signo de IVA débito es Haber menos Debe.\",\"El IVA registrado conserva los comprobantes INT-IVT. La referencia de trabajo suma el papel de ingresos devengados y sus conciliaciones del mismo mes; no modifica los TXT ni determina un ajuste admitido por ARCA.\",\"Los asientos originales de las ventas se incluyen hasta el corte. Los ingresos y conciliaciones automáticos se incluyen por su fecha contable dentro del mes, incluso si su factura pertenece a otro mes. Los orígenes anteriores se muestran como contexto y no se suman nuevamente.\",\"Las cuentas se eligen expresamente. Revisá cuentas históricas, percepciones y otros pasivos; los demás movimientos del diario no se incorporan por compartir la cuenta.\",\"Guardar esta revisión no registra asientos ni cambia impuestos. La fecha fiscal, clasificación de ajustes, bases y aceptación de la declaración requieren revisión independiente.\",\"La fuente fiscal contiene homologación o autorizaciones simuladas. Toda esta conciliación es de ensayo, sin validez para presentar.\",\"Hay 1 ajuste(s) manual(es) de las cuentas elegidas sin vincular.\"],\"status\":\"Con diferencia pendiente\"}",
+  "preview": {
+    "input": {
+      "sourceId": "e78c62fa-5251-4d79-80c7-f42548bbf663",
+      "asOf": "2026-10-17",
+      "accountIds": [
+        "2.1.2"
+      ],
+      "manual": [],
+      "reference": "IVA-VENTAS-DIARIO-UI-1",
+      "reason": "Ensayo de septiembre: conservar por separado comprobantes, ingresos de agosto y septiembre y los movimientos reales de IVA. Sin modificar asientos.",
+      "previousId": "",
+      "confirmed": true
+    },
+    "source": {
+      "company": {
+        "name": "SICA Textil · IVA ventas de ensayo",
+        "cuit": "30712345671",
+        "iva": "Responsable Inscripto"
+      },
+      "exercises": [
+        {
+          "start": "2026-01-01",
+          "end": "2026-12-31"
+        }
+      ],
+      "branches": [
+        {
+          "id": "central",
+          "name": "Casa Central"
+        },
+        {
+          "id": "segunda",
+          "name": "Sucursal de ensayo"
+        }
+      ],
+      "accounts": [
+        {
+          "id": "2.1.2",
+          "code": "2.1.2",
+          "name": "IVA débito fiscal",
+          "group": "Pasivo",
+          "postable": true
+        }
+      ],
+      "documentIds": [
+        "118322ef-3076-40ab-a094-8dcd3317607c",
+        "e8af94c8-9dd4-4799-b445-11ea12512f66",
+        "658d4b14-cefd-49ec-bec4-1a1f7e4fd435",
+        "3254c0bd-7527-4df9-8e50-343431b73bbf",
+        "be97bcea-3976-4e0a-a1e5-73b3ed7eeda0",
+        "eef3edcc-84e7-4a93-b76f-74be09f5fafd",
+        "d73589db-b1fa-446e-a4bc-1cdce6735919",
+        "f951e911-fe7b-4cc5-bb17-7a9fcb87af39"
+      ],
+      "entryIds": [
+        "9e2ef9e2-e49b-41bb-9c03-1330de60d718",
+        "4c1a166a-36cb-4d6b-a263-f67101a62bf2",
+        "5cf12d80-5e18-4839-813e-f6c772676abd",
+        "47375717-b42e-43b4-838f-209038f977ec",
+        "045f3bd0-457c-407f-96c2-0976224f6ad7",
+        "be4751b8-c7bd-44ea-82d3-68d8372c2f67",
+        "2b0aec2c-861e-4716-8108-48753f7d0b41",
+        "f6e53392-d96e-454a-8e4d-d0f05c90ee26",
+        "d43cc813-b635-4273-b8a0-f6e012745903",
+        "0dfa0f58-6838-44f7-85c1-1fae18d286ed"
+      ],
+      "reversalIds": [],
+      "preparationIds": [
+        "e78c62fa-5251-4d79-80c7-f42548bbf663"
+      ],
+      "accrualIds": [
+        "1804a575-ae18-4472-8c39-068b1e9a4093",
+        "e280b443-b9bd-4ee7-b893-11f43ee537fe"
+      ],
+      "settlementIds": [
+        "9fad3eee-e3e5-479a-96bb-dfb413819792"
+      ]
+    },
+    "from": "2026-09-01",
+    "to": "2026-09-30",
+    "sourceNumber": "INT-IVT-00000001",
+    "sourceReview": "{\"input\":{\"period\":\"2026-09\",\"environment\":\"produccion\",\"previousId\":\"\",\"reference\":\"IVA-VENTAS-CONTABLE-BASE\",\"reason\":\"Revisión sintética de todas las ventas y notas del mes, de ambas sucursales.\",\"scopeConfirmed\":true},\"source\":{\"company\":{\"name\":\"SICA Textil · IVA ventas de ensayo\",\"cuit\":\"30712345671\",\"iva\":\"Responsable Inscripto\"},\"documentPrefixIds\":[\"118322ef-3076-40ab-a094-8dcd3317607c\",\"e8af94c8-9dd4-4799-b445-11ea12512f66\",\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\",\"3254c0bd-7527-4df9-8e50-343431b73bbf\",\"be97bcea-3976-4e0a-a1e5-73b3ed7eeda0\",\"eef3edcc-84e7-4a93-b76f-74be09f5fafd\",\"d73589db-b1fa-446e-a4bc-1cdce6735919\",\"f951e911-fe7b-4cc5-bb17-7a9fcb87af39\"],\"authorizations\":[{\"documentId\":\"118322ef-3076-40ab-a094-8dcd3317607c\",\"request\":{\"issuer\":\"30712345671\",\"point\":1,\"type\":1,\"letter\":\"A\",\"documentId\":\"118322ef-3076-40ab-a094-8dcd3317607c\",\"detail\":{\"Concepto\":1,\"DocTipo\":80,\"DocNro\":\"20123456786\",\"CbteFch\":\"20260905\",\"ImpTotal\":35700,\"ImpTotConc\":500,\"ImpNeto\":30000,\"ImpOpEx\":1000,\"ImpTrib\":0,\"ImpIVA\":4200,\"MonId\":\"PES\",\"MonCotiz\":1,\"CondicionIVAReceptorId\":1,\"CbteDesde\":142,\"CbteHasta\":142},\"iva\":[{\"Id\":5,\"BaseImp\":10000,\"Importe\":2100},{\"Id\":4,\"BaseImp\":20000,\"Importe\":2100}],\"tributes\":[],\"associated\":[],\"snapshot\":{\"saleTerms\":\"Cuenta corriente de ensayo\",\"issuer\":{\"name\":\"SICA Textil · IVA ventas de ensayo\",\"cuit\":\"30712345671\",\"iibbRegistration\":\"Inscripción sintética\",\"activityStart\":\"2020-01-01\",\"address\":\"Domicilio sintético de Tucumán\",\"iva\":\"Responsable Inscripto\"},\"receiver\":{\"name\":\"Comprador Ñandú de ensayo con nombre largo\",\"cuit\":\"20123456786\",\"address\":\"Domicilio sintético del comprador\",\"iva\":\"Responsable Inscripto\"},\"lines\":[{\"productId\":\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\",\"description\":\"Textil de ensayo 21\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":10000,\"tax\":\"21\",\"discount\":0},{\"productId\":\"iva-venta-10.5\",\"description\":\"Textil de ensayo 10.5\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":20000,\"tax\":\"10.5\",\"discount\":0},{\"productId\":\"iva-venta-Exento\",\"description\":\"Textil de ensayo Exento\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":1000,\"tax\":\"Exento\",\"discount\":0},{\"productId\":\"iva-venta-No gravado\",\"description\":\"Textil de ensayo No gravado\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":500,\"tax\":\"No gravado\",\"discount\":0}],\"branchName\":\"Casa Central\"}},\"record\":{\"environment\":\"produccion\",\"simulated\":true,\"state\":\"aprobado\",\"point\":1,\"type\":1,\"number\":142,\"cae\":\"72111111111111\",\"expires\":\"2026-12-31\",\"messages\":[],\"updated\":\"2026-10-17T18:17:52.660Z\",\"options\":{\"saleTerms\":\"Cuenta corriente de ensayo\"}},\"unchanged\":true},{\"documentId\":\"3254c0bd-7527-4df9-8e50-343431b73bbf\",\"request\":{\"issuer\":\"30712345671\",\"point\":2,\"type\":6,\"letter\":\"B\",\"documentId\":\"3254c0bd-7527-4df9-8e50-343431b73bbf\",\"detail\":{\"Concepto\":1,\"DocTipo\":80,\"DocNro\":\"20123456794\",\"CbteFch\":\"20260905\",\"ImpTotal\":12100,\"ImpTotConc\":0,\"ImpNeto\":10000,\"ImpOpEx\":0,\"ImpTrib\":0,\"ImpIVA\":2100,\"MonId\":\"PES\",\"MonCotiz\":1,\"CondicionIVAReceptorId\":5,\"CbteDesde\":1,\"CbteHasta\":1},\"iva\":[{\"Id\":5,\"BaseImp\":10000,\"Importe\":2100}],\"tributes\":[],\"associated\":[],\"snapshot\":{\"saleTerms\":\"Cuenta corriente de ensayo\",\"issuer\":{\"name\":\"SICA Textil · IVA ventas de ensayo\",\"cuit\":\"30712345671\",\"iibbRegistration\":\"Inscripción sintética\",\"activityStart\":\"2020-01-01\",\"address\":\"Domicilio sintético de Tucumán\",\"iva\":\"Responsable Inscripto\"},\"receiver\":{\"name\":\"Consumidor final de ensayo\",\"cuit\":\"20123456794\",\"address\":\"Domicilio sintético del comprador\",\"iva\":\"Consumidor Final\"},\"lines\":[{\"productId\":\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\",\"description\":\"Textil de ensayo 21\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":12100,\"tax\":\"21\",\"discount\":0}],\"branchName\":\"Sucursal de ensayo\",\"nationalIndirect\":{\"amount\":0,\"reference\":\"Sin impuestos nacionales indirectos en este ensayo\"}}},\"record\":{\"environment\":\"produccion\",\"simulated\":true,\"state\":\"aprobado\",\"point\":2,\"type\":6,\"number\":1,\"cae\":\"72111111111111\",\"expires\":\"2026-12-31\",\"messages\":[],\"updated\":\"2026-10-17T18:17:52.995Z\",\"options\":{\"nationalIndirect\":{\"amount\":0,\"reference\":\"Sin impuestos nacionales indirectos en este ensayo\"},\"saleTerms\":\"Cuenta corriente de ensayo\"}},\"unchanged\":true},{\"documentId\":\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\",\"request\":{\"issuer\":\"30712345671\",\"point\":1,\"type\":2,\"letter\":\"A\",\"documentId\":\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\",\"detail\":{\"Concepto\":1,\"DocTipo\":80,\"DocNro\":\"20123456786\",\"CbteFch\":\"20260905\",\"ImpTotal\":1105,\"ImpTotConc\":0,\"ImpNeto\":1000,\"ImpOpEx\":0,\"ImpTrib\":0,\"ImpIVA\":105,\"MonId\":\"PES\",\"MonCotiz\":1,\"CondicionIVAReceptorId\":1,\"CbteDesde\":1,\"CbteHasta\":1},\"iva\":[{\"Id\":4,\"BaseImp\":1000,\"Importe\":105}],\"tributes\":[],\"associated\":[{\"Tipo\":1,\"PtoVta\":1,\"Nro\":142,\"Cuit\":\"30712345671\",\"CbteFch\":\"20260905\"}],\"snapshot\":{\"saleTerms\":\"Cuenta corriente de ensayo\",\"issuer\":{\"name\":\"SICA Textil · IVA ventas de ensayo\",\"cuit\":\"30712345671\",\"iibbRegistration\":\"Inscripción sintética\",\"activityStart\":\"2020-01-01\",\"address\":\"Domicilio sintético de Tucumán\",\"iva\":\"Responsable Inscripto\"},\"receiver\":{\"name\":\"Comprador Ñandú de ensayo con nombre largo\",\"cuit\":\"20123456786\",\"address\":\"Domicilio sintético del comprador\",\"iva\":\"Responsable Inscripto\"},\"lines\":[{\"productId\":\"iva-venta-10.5\",\"description\":\"Textil de ensayo 10.5\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":1000,\"tax\":\"10.5\",\"discount\":0}],\"branchName\":\"Casa Central\"}},\"record\":{\"environment\":\"produccion\",\"simulated\":true,\"state\":\"aprobado\",\"point\":1,\"type\":2,\"number\":1,\"cae\":\"72111111111111\",\"expires\":\"2026-12-31\",\"messages\":[],\"updated\":\"2026-10-17T18:17:52.912Z\",\"options\":{\"saleTerms\":\"Cuenta corriente de ensayo\"}},\"unchanged\":true},{\"documentId\":\"d73589db-b1fa-446e-a4bc-1cdce6735919\",\"request\":{\"issuer\":\"30712345671\",\"point\":1,\"type\":1,\"letter\":\"A\",\"documentId\":\"d73589db-b1fa-446e-a4bc-1cdce6735919\",\"detail\":{\"Concepto\":1,\"DocTipo\":80,\"DocNro\":\"20123456786\",\"CbteFch\":\"20260905\",\"ImpTotal\":14520,\"ImpTotConc\":0,\"ImpNeto\":12000,\"ImpOpEx\":0,\"ImpTrib\":0,\"ImpIVA\":2520,\"MonId\":\"PES\",\"MonCotiz\":1,\"CondicionIVAReceptorId\":1,\"CbteDesde\":143,\"CbteHasta\":143},\"iva\":[{\"Id\":5,\"BaseImp\":12000,\"Importe\":2520}],\"tributes\":[],\"associated\":[],\"snapshot\":{\"saleTerms\":\"Cuenta corriente de ensayo\",\"issuer\":{\"name\":\"SICA Textil · IVA ventas de ensayo\",\"cuit\":\"30712345671\",\"iibbRegistration\":\"Inscripción sintética\",\"activityStart\":\"2020-01-01\",\"address\":\"Domicilio sintético de Tucumán\",\"iva\":\"Responsable Inscripto\"},\"receiver\":{\"name\":\"Comprador Ñandú de ensayo con nombre largo\",\"cuit\":\"20123456786\",\"address\":\"Domicilio sintético del comprador\",\"iva\":\"Responsable Inscripto\"},\"lines\":[{\"productId\":\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\",\"description\":\"Textil de ensayo 21\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":12000,\"tax\":\"21\",\"discount\":0}],\"branchName\":\"Casa Central\"}},\"record\":{\"environment\":\"produccion\",\"simulated\":true,\"state\":\"aprobado\",\"point\":1,\"type\":1,\"number\":143,\"cae\":\"72111111111111\",\"expires\":\"2026-12-31\",\"messages\":[],\"updated\":\"2026-10-17T18:17:53.080Z\",\"options\":{\"saleTerms\":\"Cuenta corriente de ensayo\"}},\"unchanged\":true},{\"documentId\":\"e8af94c8-9dd4-4799-b445-11ea12512f66\",\"request\":{\"issuer\":\"30712345671\",\"point\":1,\"type\":3,\"letter\":\"A\",\"documentId\":\"e8af94c8-9dd4-4799-b445-11ea12512f66\",\"detail\":{\"Concepto\":1,\"DocTipo\":80,\"DocNro\":\"20123456786\",\"CbteFch\":\"20260905\",\"ImpTotal\":1210,\"ImpTotConc\":0,\"ImpNeto\":1000,\"ImpOpEx\":0,\"ImpTrib\":0,\"ImpIVA\":210,\"MonId\":\"PES\",\"MonCotiz\":1,\"CondicionIVAReceptorId\":1,\"CbteDesde\":1,\"CbteHasta\":1},\"iva\":[{\"Id\":5,\"BaseImp\":1000,\"Importe\":210}],\"tributes\":[],\"associated\":[{\"Tipo\":1,\"PtoVta\":1,\"Nro\":142,\"Cuit\":\"30712345671\",\"CbteFch\":\"20260905\"}],\"snapshot\":{\"saleTerms\":\"Cuenta corriente de ensayo\",\"issuer\":{\"name\":\"SICA Textil · IVA ventas de ensayo\",\"cuit\":\"30712345671\",\"iibbRegistration\":\"Inscripción sintética\",\"activityStart\":\"2020-01-01\",\"address\":\"Domicilio sintético de Tucumán\",\"iva\":\"Responsable Inscripto\"},\"receiver\":{\"name\":\"Comprador Ñandú de ensayo con nombre largo\",\"cuit\":\"20123456786\",\"address\":\"Domicilio sintético del comprador\",\"iva\":\"Responsable Inscripto\"},\"lines\":[{\"productId\":\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\",\"description\":\"Textil de ensayo 21\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":1000,\"tax\":\"21\",\"discount\":0}],\"branchName\":\"Casa Central\"}},\"record\":{\"environment\":\"produccion\",\"simulated\":true,\"state\":\"aprobado\",\"point\":1,\"type\":3,\"number\":1,\"cae\":\"72111111111111\",\"expires\":\"2026-12-31\",\"messages\":[],\"updated\":\"2026-10-17T18:17:52.760Z\",\"options\":{\"saleTerms\":\"Cuenta corriente de ensayo\"}},\"unchanged\":true}]},\"rows\":[{\"document\":{\"id\":\"118322ef-3076-40ab-a094-8dcd3317607c\",\"number\":\"INT-FC-A-00001-00000001\",\"kind\":\"factura\",\"letter\":\"A\",\"date\":\"2026-09-05\",\"branchId\":\"central\",\"partyId\":\"fd0feaf3-8d7b-4ea7-8ee3-4810f880d91a\",\"sourceId\":\"\",\"lines\":[{\"productId\":\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\",\"description\":\"Textil de ensayo 21\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":10000,\"tax\":\"21\",\"discount\":0},{\"productId\":\"iva-venta-10.5\",\"description\":\"Textil de ensayo 10.5\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":20000,\"tax\":\"10.5\",\"discount\":0},{\"productId\":\"iva-venta-Exento\",\"description\":\"Textil de ensayo Exento\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":1000,\"tax\":\"Exento\",\"discount\":0},{\"productId\":\"iva-venta-No gravado\",\"description\":\"Textil de ensayo No gravado\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":500,\"tax\":\"No gravado\",\"discount\":0}],\"net\":31500,\"vat\":4200,\"perceptions\":0,\"total\":35700},\"authorization\":{\"documentId\":\"118322ef-3076-40ab-a094-8dcd3317607c\",\"request\":{\"issuer\":\"30712345671\",\"point\":1,\"type\":1,\"letter\":\"A\",\"documentId\":\"118322ef-3076-40ab-a094-8dcd3317607c\",\"detail\":{\"Concepto\":1,\"DocTipo\":80,\"DocNro\":\"20123456786\",\"CbteFch\":\"20260905\",\"ImpTotal\":35700,\"ImpTotConc\":500,\"ImpNeto\":30000,\"ImpOpEx\":1000,\"ImpTrib\":0,\"ImpIVA\":4200,\"MonId\":\"PES\",\"MonCotiz\":1,\"CondicionIVAReceptorId\":1,\"CbteDesde\":142,\"CbteHasta\":142},\"iva\":[{\"Id\":5,\"BaseImp\":10000,\"Importe\":2100},{\"Id\":4,\"BaseImp\":20000,\"Importe\":2100}],\"tributes\":[],\"associated\":[],\"snapshot\":{\"saleTerms\":\"Cuenta corriente de ensayo\",\"issuer\":{\"name\":\"SICA Textil · IVA ventas de ensayo\",\"cuit\":\"30712345671\",\"iibbRegistration\":\"Inscripción sintética\",\"activityStart\":\"2020-01-01\",\"address\":\"Domicilio sintético de Tucumán\",\"iva\":\"Responsable Inscripto\"},\"receiver\":{\"name\":\"Comprador Ñandú de ensayo con nombre largo\",\"cuit\":\"20123456786\",\"address\":\"Domicilio sintético del comprador\",\"iva\":\"Responsable Inscripto\"},\"lines\":[{\"productId\":\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\",\"description\":\"Textil de ensayo 21\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":10000,\"tax\":\"21\",\"discount\":0},{\"productId\":\"iva-venta-10.5\",\"description\":\"Textil de ensayo 10.5\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":20000,\"tax\":\"10.5\",\"discount\":0},{\"productId\":\"iva-venta-Exento\",\"description\":\"Textil de ensayo Exento\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":1000,\"tax\":\"Exento\",\"discount\":0},{\"productId\":\"iva-venta-No gravado\",\"description\":\"Textil de ensayo No gravado\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":500,\"tax\":\"No gravado\",\"discount\":0}],\"branchName\":\"Casa Central\"}},\"record\":{\"environment\":\"produccion\",\"simulated\":true,\"state\":\"aprobado\",\"point\":1,\"type\":1,\"number\":142,\"cae\":\"72111111111111\",\"expires\":\"2026-12-31\",\"messages\":[],\"updated\":\"2026-10-17T18:17:52.660Z\",\"options\":{\"saleTerms\":\"Cuenta corriente de ensayo\"}},\"unchanged\":true},\"original\":\"Factura A 00001-00000142\",\"name\":\"Comprador Ñandú de ensayo con nombre largo\",\"fileName\":\"Comprador Ñandú de ensayo con \",\"operation\":\"0\",\"net\":30000,\"exempt\":1000,\"untaxed\":500,\"vat\":4200,\"perceptions\":0,\"total\":35700,\"header\":\"202609050010000100000000000000000142000000000000000001428000000000020123456786Comprador Ñandú de ensayo con 000000000035700000000000000500000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000PES00010000002000000000000000000000000\",\"details\":[\"00100001000000000000000001420000000000100000005000000000002100\",\"00100001000000000000000001420000000000200000004000000000002100\"]},{\"document\":{\"id\":\"3254c0bd-7527-4df9-8e50-343431b73bbf\",\"number\":\"INT-FC-B-00002-00000001\",\"kind\":\"factura\",\"letter\":\"B\",\"date\":\"2026-09-05\",\"branchId\":\"segunda\",\"partyId\":\"iva-consumidor-final\",\"sourceId\":\"\",\"lines\":[{\"productId\":\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\",\"description\":\"Textil de ensayo 21\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":12100,\"tax\":\"21\",\"discount\":0}],\"net\":10000,\"vat\":2100,\"perceptions\":0,\"total\":12100},\"authorization\":{\"documentId\":\"3254c0bd-7527-4df9-8e50-343431b73bbf\",\"request\":{\"issuer\":\"30712345671\",\"point\":2,\"type\":6,\"letter\":\"B\",\"documentId\":\"3254c0bd-7527-4df9-8e50-343431b73bbf\",\"detail\":{\"Concepto\":1,\"DocTipo\":80,\"DocNro\":\"20123456794\",\"CbteFch\":\"20260905\",\"ImpTotal\":12100,\"ImpTotConc\":0,\"ImpNeto\":10000,\"ImpOpEx\":0,\"ImpTrib\":0,\"ImpIVA\":2100,\"MonId\":\"PES\",\"MonCotiz\":1,\"CondicionIVAReceptorId\":5,\"CbteDesde\":1,\"CbteHasta\":1},\"iva\":[{\"Id\":5,\"BaseImp\":10000,\"Importe\":2100}],\"tributes\":[],\"associated\":[],\"snapshot\":{\"saleTerms\":\"Cuenta corriente de ensayo\",\"issuer\":{\"name\":\"SICA Textil · IVA ventas de ensayo\",\"cuit\":\"30712345671\",\"iibbRegistration\":\"Inscripción sintética\",\"activityStart\":\"2020-01-01\",\"address\":\"Domicilio sintético de Tucumán\",\"iva\":\"Responsable Inscripto\"},\"receiver\":{\"name\":\"Consumidor final de ensayo\",\"cuit\":\"20123456794\",\"address\":\"Domicilio sintético del comprador\",\"iva\":\"Consumidor Final\"},\"lines\":[{\"productId\":\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\",\"description\":\"Textil de ensayo 21\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":12100,\"tax\":\"21\",\"discount\":0}],\"branchName\":\"Sucursal de ensayo\",\"nationalIndirect\":{\"amount\":0,\"reference\":\"Sin impuestos nacionales indirectos en este ensayo\"}}},\"record\":{\"environment\":\"produccion\",\"simulated\":true,\"state\":\"aprobado\",\"point\":2,\"type\":6,\"number\":1,\"cae\":\"72111111111111\",\"expires\":\"2026-12-31\",\"messages\":[],\"updated\":\"2026-10-17T18:17:52.995Z\",\"options\":{\"nationalIndirect\":{\"amount\":0,\"reference\":\"Sin impuestos nacionales indirectos en este ensayo\"},\"saleTerms\":\"Cuenta corriente de ensayo\"}},\"unchanged\":true},\"original\":\"Factura B 00002-00000001\",\"name\":\"Consumidor final de ensayo\",\"fileName\":\"Consumidor final de ensayo\",\"operation\":\"0\",\"net\":10000,\"exempt\":0,\"untaxed\":0,\"vat\":2100,\"perceptions\":0,\"total\":12100,\"header\":\"202609050060000200000000000000000001000000000000000000018000000000020123456794Consumidor final de ensayo    000000000012100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000001000000000000000000000000\",\"details\":[\"00600002000000000000000000010000000000100000005000000000002100\"]},{\"document\":{\"id\":\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\",\"number\":\"INT-ND-A-00001-00000001\",\"kind\":\"debito\",\"letter\":\"A\",\"date\":\"2026-09-05\",\"branchId\":\"central\",\"partyId\":\"fd0feaf3-8d7b-4ea7-8ee3-4810f880d91a\",\"sourceId\":\"118322ef-3076-40ab-a094-8dcd3317607c\",\"lines\":[{\"productId\":\"iva-venta-10.5\",\"description\":\"Textil de ensayo 10.5\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":1000,\"tax\":\"10.5\",\"discount\":0}],\"net\":1000,\"vat\":105,\"perceptions\":0,\"total\":1105},\"authorization\":{\"documentId\":\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\",\"request\":{\"issuer\":\"30712345671\",\"point\":1,\"type\":2,\"letter\":\"A\",\"documentId\":\"658d4b14-cefd-49ec-bec4-1a1f7e4fd435\",\"detail\":{\"Concepto\":1,\"DocTipo\":80,\"DocNro\":\"20123456786\",\"CbteFch\":\"20260905\",\"ImpTotal\":1105,\"ImpTotConc\":0,\"ImpNeto\":1000,\"ImpOpEx\":0,\"ImpTrib\":0,\"ImpIVA\":105,\"MonId\":\"PES\",\"MonCotiz\":1,\"CondicionIVAReceptorId\":1,\"CbteDesde\":1,\"CbteHasta\":1},\"iva\":[{\"Id\":4,\"BaseImp\":1000,\"Importe\":105}],\"tributes\":[],\"associated\":[{\"Tipo\":1,\"PtoVta\":1,\"Nro\":142,\"Cuit\":\"30712345671\",\"CbteFch\":\"20260905\"}],\"snapshot\":{\"saleTerms\":\"Cuenta corriente de ensayo\",\"issuer\":{\"name\":\"SICA Textil · IVA ventas de ensayo\",\"cuit\":\"30712345671\",\"iibbRegistration\":\"Inscripción sintética\",\"activityStart\":\"2020-01-01\",\"address\":\"Domicilio sintético de Tucumán\",\"iva\":\"Responsable Inscripto\"},\"receiver\":{\"name\":\"Comprador Ñandú de ensayo con nombre largo\",\"cuit\":\"20123456786\",\"address\":\"Domicilio sintético del comprador\",\"iva\":\"Responsable Inscripto\"},\"lines\":[{\"productId\":\"iva-venta-10.5\",\"description\":\"Textil de ensayo 10.5\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":1000,\"tax\":\"10.5\",\"discount\":0}],\"branchName\":\"Casa Central\"}},\"record\":{\"environment\":\"produccion\",\"simulated\":true,\"state\":\"aprobado\",\"point\":1,\"type\":2,\"number\":1,\"cae\":\"72111111111111\",\"expires\":\"2026-12-31\",\"messages\":[],\"updated\":\"2026-10-17T18:17:52.912Z\",\"options\":{\"saleTerms\":\"Cuenta corriente de ensayo\"}},\"unchanged\":true},\"original\":\"Nota de débito A 00001-00000001\",\"name\":\"Comprador Ñandú de ensayo con nombre largo\",\"fileName\":\"Comprador Ñandú de ensayo con \",\"operation\":\"0\",\"net\":1000,\"exempt\":0,\"untaxed\":0,\"vat\":105,\"perceptions\":0,\"total\":1105,\"header\":\"202609050020000100000000000000000001000000000000000000018000000000020123456786Comprador Ñandú de ensayo con 000000000001105000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000001000000000000000000000000\",\"details\":[\"00200001000000000000000000010000000000010000004000000000000105\"]},{\"document\":{\"id\":\"d73589db-b1fa-446e-a4bc-1cdce6735919\",\"number\":\"INT-FC-A-00001-00000002\",\"kind\":\"factura\",\"letter\":\"A\",\"date\":\"2026-09-05\",\"branchId\":\"central\",\"partyId\":\"fd0feaf3-8d7b-4ea7-8ee3-4810f880d91a\",\"sourceId\":\"eef3edcc-84e7-4a93-b76f-74be09f5fafd\",\"lines\":[{\"productId\":\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\",\"description\":\"Textil de ensayo 21\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":12000,\"tax\":\"21\",\"discount\":0}],\"net\":12000,\"vat\":2520,\"perceptions\":0,\"total\":14520},\"authorization\":{\"documentId\":\"d73589db-b1fa-446e-a4bc-1cdce6735919\",\"request\":{\"issuer\":\"30712345671\",\"point\":1,\"type\":1,\"letter\":\"A\",\"documentId\":\"d73589db-b1fa-446e-a4bc-1cdce6735919\",\"detail\":{\"Concepto\":1,\"DocTipo\":80,\"DocNro\":\"20123456786\",\"CbteFch\":\"20260905\",\"ImpTotal\":14520,\"ImpTotConc\":0,\"ImpNeto\":12000,\"ImpOpEx\":0,\"ImpTrib\":0,\"ImpIVA\":2520,\"MonId\":\"PES\",\"MonCotiz\":1,\"CondicionIVAReceptorId\":1,\"CbteDesde\":143,\"CbteHasta\":143},\"iva\":[{\"Id\":5,\"BaseImp\":12000,\"Importe\":2520}],\"tributes\":[],\"associated\":[],\"snapshot\":{\"saleTerms\":\"Cuenta corriente de ensayo\",\"issuer\":{\"name\":\"SICA Textil · IVA ventas de ensayo\",\"cuit\":\"30712345671\",\"iibbRegistration\":\"Inscripción sintética\",\"activityStart\":\"2020-01-01\",\"address\":\"Domicilio sintético de Tucumán\",\"iva\":\"Responsable Inscripto\"},\"receiver\":{\"name\":\"Comprador Ñandú de ensayo con nombre largo\",\"cuit\":\"20123456786\",\"address\":\"Domicilio sintético del comprador\",\"iva\":\"Responsable Inscripto\"},\"lines\":[{\"productId\":\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\",\"description\":\"Textil de ensayo 21\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":12000,\"tax\":\"21\",\"discount\":0}],\"branchName\":\"Casa Central\"}},\"record\":{\"environment\":\"produccion\",\"simulated\":true,\"state\":\"aprobado\",\"point\":1,\"type\":1,\"number\":143,\"cae\":\"72111111111111\",\"expires\":\"2026-12-31\",\"messages\":[],\"updated\":\"2026-10-17T18:17:53.080Z\",\"options\":{\"saleTerms\":\"Cuenta corriente de ensayo\"}},\"unchanged\":true},\"original\":\"Factura A 00001-00000143\",\"name\":\"Comprador Ñandú de ensayo con nombre largo\",\"fileName\":\"Comprador Ñandú de ensayo con \",\"operation\":\"0\",\"net\":12000,\"exempt\":0,\"untaxed\":0,\"vat\":2520,\"perceptions\":0,\"total\":14520,\"header\":\"202609050010000100000000000000000143000000000000000001438000000000020123456786Comprador Ñandú de ensayo con 000000000014520000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000001000000000000000000000000\",\"details\":[\"00100001000000000000000001430000000000120000005000000000002520\"]},{\"document\":{\"id\":\"e8af94c8-9dd4-4799-b445-11ea12512f66\",\"number\":\"INT-NC-A-00001-00000001\",\"kind\":\"credito\",\"letter\":\"A\",\"date\":\"2026-09-05\",\"branchId\":\"central\",\"partyId\":\"fd0feaf3-8d7b-4ea7-8ee3-4810f880d91a\",\"sourceId\":\"118322ef-3076-40ab-a094-8dcd3317607c\",\"lines\":[{\"productId\":\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\",\"description\":\"Textil de ensayo 21\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":1000,\"tax\":\"21\",\"discount\":0}],\"net\":1000,\"vat\":210,\"perceptions\":0,\"total\":1210},\"authorization\":{\"documentId\":\"e8af94c8-9dd4-4799-b445-11ea12512f66\",\"request\":{\"issuer\":\"30712345671\",\"point\":1,\"type\":3,\"letter\":\"A\",\"documentId\":\"e8af94c8-9dd4-4799-b445-11ea12512f66\",\"detail\":{\"Concepto\":1,\"DocTipo\":80,\"DocNro\":\"20123456786\",\"CbteFch\":\"20260905\",\"ImpTotal\":1210,\"ImpTotConc\":0,\"ImpNeto\":1000,\"ImpOpEx\":0,\"ImpTrib\":0,\"ImpIVA\":210,\"MonId\":\"PES\",\"MonCotiz\":1,\"CondicionIVAReceptorId\":1,\"CbteDesde\":1,\"CbteHasta\":1},\"iva\":[{\"Id\":5,\"BaseImp\":1000,\"Importe\":210}],\"tributes\":[],\"associated\":[{\"Tipo\":1,\"PtoVta\":1,\"Nro\":142,\"Cuit\":\"30712345671\",\"CbteFch\":\"20260905\"}],\"snapshot\":{\"saleTerms\":\"Cuenta corriente de ensayo\",\"issuer\":{\"name\":\"SICA Textil · IVA ventas de ensayo\",\"cuit\":\"30712345671\",\"iibbRegistration\":\"Inscripción sintética\",\"activityStart\":\"2020-01-01\",\"address\":\"Domicilio sintético de Tucumán\",\"iva\":\"Responsable Inscripto\"},\"receiver\":{\"name\":\"Comprador Ñandú de ensayo con nombre largo\",\"cuit\":\"20123456786\",\"address\":\"Domicilio sintético del comprador\",\"iva\":\"Responsable Inscripto\"},\"lines\":[{\"productId\":\"3d78728c-e8fa-478f-a89e-ad63e80cd46d\",\"description\":\"Textil de ensayo 21\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":1000,\"tax\":\"21\",\"discount\":0}],\"branchName\":\"Casa Central\"}},\"record\":{\"environment\":\"produccion\",\"simulated\":true,\"state\":\"aprobado\",\"point\":1,\"type\":3,\"number\":1,\"cae\":\"72111111111111\",\"expires\":\"2026-12-31\",\"messages\":[],\"updated\":\"2026-10-17T18:17:52.760Z\",\"options\":{\"saleTerms\":\"Cuenta corriente de ensayo\"}},\"unchanged\":true},\"original\":\"Nota de crédito A 00001-00000001\",\"name\":\"Comprador Ñandú de ensayo con nombre largo\",\"fileName\":\"Comprador Ñandú de ensayo con \",\"operation\":\"0\",\"net\":1000,\"exempt\":0,\"untaxed\":0,\"vat\":210,\"perceptions\":0,\"total\":1210,\"header\":\"202609050030000100000000000000000001000000000000000000018000000000020123456786Comprador Ñandú de ensayo con 000000000001210000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000PES00010000001000000000000000000000000\",\"details\":[\"00300001000000000000000000010000000000010000005000000000000210\"]}],\"excluded\":[{\"id\":\"be97bcea-3976-4e0a-a1e5-73b3ed7eeda0\",\"number\":\"INT-FC-X-00001-00000001\",\"date\":\"2026-09-05\",\"total\":3000}],\"simulation\":true,\"totals\":{\"total\":62215,\"net\":52000,\"exempt\":1000,\"untaxed\":500,\"vat\":8715,\"perceptions\":0},\"bytes\":{\"headers\":1340,\"aliquots\":384},\"status\":\"ENSAYO · no presentar ante ARCA\",\"warnings\":[\"Contiene homologación o autorizaciones simuladas: los archivos son sólo de ensayo y no se deben presentar.\",\"Ventas ordinarias A/B en PES con CUIT, de todas las sucursales por mes de emisión. Revisá otras operaciones y ajustes fuera de este alcance.\",\"Se utilizan la numeración fiscal, receptor y valores de la solicitud aprobada; no se sustituyen por referencias internas ni datos actuales del cliente.\",\"Las notas de crédito tienen importes positivos en los archivos y restan en los totales. No se agrupan ventas diarias.\",\"No sube archivos, no concilia precargas ni confirma la declaración jurada; evitá duplicar comprobantes ya registrados en el portal.\"]}",
+    "simulation": true,
+    "documents": [
+      {
+        "id": "118322ef-3076-40ab-a094-8dcd3317607c",
+        "number": "INT-FC-A-00001-00000001",
+        "date": "2026-09-05",
+        "fiscalNumber": "Factura A 00001-00000142",
+        "fiscalVat": 4200,
+        "entry": {
+          "id": "9e2ef9e2-e49b-41bb-9c03-1330de60d718",
+          "date": "2026-09-05",
+          "concept": "INT-FC-A-00001-00000001",
+          "branchId": "central",
+          "documentId": "118322ef-3076-40ab-a094-8dcd3317607c",
+          "lines": [
+            {
+              "accountId": "1.1.3",
+              "debit": 35700,
+              "credit": 0
+            },
+            {
+              "accountId": "4.1",
+              "debit": 0,
+              "credit": 31500
+            },
+            {
+              "accountId": "2.1.2",
+              "debit": 0,
+              "credit": 4000
+            },
+            {
+              "accountId": "2.1.1",
+              "debit": 0,
+              "credit": 200
+            }
+          ]
+        },
+        "branchName": "Casa Central",
+        "debit": 0,
+        "credit": 4000,
+        "net": 4000
+      },
+      {
+        "id": "3254c0bd-7527-4df9-8e50-343431b73bbf",
+        "number": "INT-FC-B-00002-00000001",
+        "date": "2026-09-05",
+        "fiscalNumber": "Factura B 00002-00000001",
+        "fiscalVat": 2100,
+        "entry": {
+          "id": "47375717-b42e-43b4-838f-209038f977ec",
+          "date": "2026-09-05",
+          "concept": "INT-FC-B-00002-00000001",
+          "branchId": "segunda",
+          "documentId": "3254c0bd-7527-4df9-8e50-343431b73bbf",
+          "lines": [
+            {
+              "accountId": "1.1.3",
+              "debit": 12100,
+              "credit": 0
+            },
+            {
+              "accountId": "4.1",
+              "debit": 0,
+              "credit": 10000
+            },
+            {
+              "accountId": "2.1.2",
+              "debit": 0,
+              "credit": 2100
+            }
+          ]
+        },
+        "branchName": "Sucursal de ensayo",
+        "debit": 0,
+        "credit": 2100,
+        "net": 2100
+      },
+      {
+        "id": "658d4b14-cefd-49ec-bec4-1a1f7e4fd435",
+        "number": "INT-ND-A-00001-00000001",
+        "date": "2026-09-05",
+        "fiscalNumber": "Nota de débito A 00001-00000001",
+        "fiscalVat": 105,
+        "entry": {
+          "id": "5cf12d80-5e18-4839-813e-f6c772676abd",
+          "date": "2026-09-05",
+          "concept": "INT-ND-A-00001-00000001",
+          "branchId": "central",
+          "documentId": "658d4b14-cefd-49ec-bec4-1a1f7e4fd435",
+          "lines": [
+            {
+              "accountId": "1.1.3",
+              "debit": 1105,
+              "credit": 0
+            },
+            {
+              "accountId": "4.1",
+              "debit": 0,
+              "credit": 1000
+            },
+            {
+              "accountId": "2.1.2",
+              "debit": 0,
+              "credit": 105
+            }
+          ]
+        },
+        "branchName": "Casa Central",
+        "debit": 0,
+        "credit": 105,
+        "net": 105
+      },
+      {
+        "id": "d73589db-b1fa-446e-a4bc-1cdce6735919",
+        "number": "INT-FC-A-00001-00000002",
+        "date": "2026-09-05",
+        "fiscalNumber": "Factura A 00001-00000143",
+        "fiscalVat": 2520,
+        "entry": {
+          "id": "2b0aec2c-861e-4716-8108-48753f7d0b41",
+          "date": "2026-09-05",
+          "concept": "INT-FC-A-00001-00000002",
+          "branchId": "central",
+          "documentId": "d73589db-b1fa-446e-a4bc-1cdce6735919",
+          "lines": [
+            {
+              "accountId": "1.1.3",
+              "debit": 14520,
+              "credit": 0
+            },
+            {
+              "accountId": "4.1",
+              "debit": 0,
+              "credit": 12000
+            },
+            {
+              "accountId": "2.1.2",
+              "debit": 0,
+              "credit": 2520
+            }
+          ]
+        },
+        "branchName": "Casa Central",
+        "debit": 0,
+        "credit": 2520,
+        "net": 2520
+      },
+      {
+        "id": "e8af94c8-9dd4-4799-b445-11ea12512f66",
+        "number": "INT-NC-A-00001-00000001",
+        "date": "2026-09-05",
+        "fiscalNumber": "Nota de crédito A 00001-00000001",
+        "fiscalVat": -210,
+        "entry": {
+          "id": "4c1a166a-36cb-4d6b-a263-f67101a62bf2",
+          "date": "2026-09-05",
+          "concept": "INT-NC-A-00001-00000001",
+          "branchId": "central",
+          "documentId": "e8af94c8-9dd4-4799-b445-11ea12512f66",
+          "lines": [
+            {
+              "accountId": "1.1.3",
+              "debit": 0,
+              "credit": 1210
+            },
+            {
+              "accountId": "4.1",
+              "debit": 1000,
+              "credit": 0
+            },
+            {
+              "accountId": "2.1.2",
+              "debit": 210,
+              "credit": 0
+            }
+          ]
+        },
+        "branchName": "Casa Central",
+        "debit": 210,
+        "credit": 0,
+        "net": -210
+      }
+    ],
+    "revenues": [
+      {
+        "id": "9fad3eee-e3e5-479a-96bb-dfb413819792",
+        "number": "INT-CI-00000001",
+        "date": "2026-09-06",
+        "kind": "Descuento de importes ya reconocidos",
+        "source": "INT-FC-A-00001-00000002",
+        "fiscalReason": "IVA sintético 21% revisado al aceptar la entrega, sin anticipos. Requiere validación fiscal real.",
+        "workVat": -2100,
+        "entry": {
+          "id": "f6e53392-d96e-454a-8e4d-d0f05c90ee26",
+          "date": "2026-09-06",
+          "concept": "INT-CI-00000001",
+          "branchId": "central",
+          "documentId": "9fad3eee-e3e5-479a-96bb-dfb413819792",
+          "revenueRecordId": "9fad3eee-e3e5-479a-96bb-dfb413819792",
+          "lines": [
+            {
+              "accountId": "4.1",
+              "debit": 10000,
+              "credit": 0
+            },
+            {
+              "accountId": "2.1.2",
+              "debit": 2100,
+              "credit": 0
+            },
+            {
+              "accountId": "1.1.12",
+              "debit": 0,
+              "credit": 12100
+            }
+          ]
+        },
+        "branchName": "Casa Central",
+        "debit": 2100,
+        "credit": 0,
+        "net": -2100
+      },
+      {
+        "id": "e280b443-b9bd-4ee7-b893-11f43ee537fe",
+        "number": "INT-DI-00000002",
+        "date": "2026-09-10",
+        "kind": "Ingreso e IVA sin factura",
+        "source": "INT-RM-X-00001-00000002",
+        "fiscalReason": "IVA sintético 21% revisado al aceptar la entrega, sin anticipos. Requiere validación fiscal real.",
+        "workVat": 1050,
+        "entry": {
+          "id": "d43cc813-b635-4273-b8a0-f6e012745903",
+          "date": "2026-09-10",
+          "concept": "INT-DI-00000002",
+          "branchId": "central",
+          "documentId": "e280b443-b9bd-4ee7-b893-11f43ee537fe",
+          "revenueRecordId": "e280b443-b9bd-4ee7-b893-11f43ee537fe",
+          "lines": [
+            {
+              "accountId": "1.1.12",
+              "debit": 6050,
+              "credit": 0
+            },
+            {
+              "accountId": "4.1",
+              "debit": 0,
+              "credit": 5000
+            },
+            {
+              "accountId": "2.1.2",
+              "debit": 0,
+              "credit": 1050
+            }
+          ]
+        },
+        "branchName": "Casa Central",
+        "debit": 0,
+        "credit": 1050,
+        "net": 1050
+      }
+    ],
+    "origins": [
+      {
+        "id": "1804a575-ae18-4472-8c39-068b1e9a4093",
+        "number": "INT-DI-00000001",
+        "date": "2026-08-20",
+        "source": "INT-RM-X-00001-00000001",
+        "vat": 2100,
+        "includedInMonth": false,
+        "entry": {
+          "id": "be4751b8-c7bd-44ea-82d3-68d8372c2f67",
+          "date": "2026-08-20",
+          "concept": "INT-DI-00000001",
+          "branchId": "central",
+          "documentId": "1804a575-ae18-4472-8c39-068b1e9a4093",
+          "revenueRecordId": "1804a575-ae18-4472-8c39-068b1e9a4093",
+          "lines": [
+            {
+              "accountId": "1.1.12",
+              "debit": 12100,
+              "credit": 0
+            },
+            {
+              "accountId": "4.1",
+              "debit": 0,
+              "credit": 10000
+            },
+            {
+              "accountId": "2.1.2",
+              "debit": 0,
+              "credit": 2100
+            }
+          ]
+        },
+        "branchName": "Casa Central",
+        "debit": 0,
+        "credit": 2100,
+        "net": 2100
+      }
+    ],
+    "adjustments": [],
+    "laterSettlements": [],
+    "pendingInvoiceIds": [],
+    "unselectedManualIds": [
+      "0dfa0f58-6838-44f7-85c1-1fae18d286ed"
+    ],
+    "branches": [
+      {
+        "id": "central",
+        "name": "Casa Central",
+        "original": 6415,
+        "revenues": -1050,
+        "adjustments": 0,
+        "net": 5365
+      },
+      {
+        "id": "segunda",
+        "name": "Sucursal de ensayo",
+        "original": 2100,
+        "revenues": 0,
+        "adjustments": 0,
+        "net": 2100
+      }
+    ],
+    "totals": {
+      "registered": 8715,
+      "supplement": -1050,
+      "target": 7665,
+      "original": 8515,
+      "revenues": -1050,
+      "adjustments": 0,
+      "book": 7465,
+      "registeredDifference": -1250,
+      "difference": -200
+    },
+    "warnings": [
+      "Conciliación de movimientos vinculados, no del saldo total del mayor, saldo técnico ni declaración presentada. El signo de IVA débito es Haber menos Debe.",
+      "El IVA registrado conserva los comprobantes INT-IVT. La referencia de trabajo suma el papel de ingresos devengados y sus conciliaciones del mismo mes; no modifica los TXT ni determina un ajuste admitido por ARCA.",
+      "Los asientos originales de las ventas se incluyen hasta el corte. Los ingresos y conciliaciones automáticos se incluyen por su fecha contable dentro del mes, incluso si su factura pertenece a otro mes. Los orígenes anteriores se muestran como contexto y no se suman nuevamente.",
+      "Las cuentas se eligen expresamente. Revisá cuentas históricas, percepciones y otros pasivos; los demás movimientos del diario no se incorporan por compartir la cuenta.",
+      "Guardar esta revisión no registra asientos ni cambia impuestos. La fecha fiscal, clasificación de ajustes, bases y aceptación de la declaración requieren revisión independiente.",
+      "La fuente fiscal contiene homologación o autorizaciones simuladas. Toda esta conciliación es de ensayo, sin validez para presentar.",
+      "Hay 1 ajuste(s) manual(es) de las cuentas elegidas sin vincular."
+    ],
+    "status": "Con diferencia pendiente"
+  }
+}

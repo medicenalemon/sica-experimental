@@ -1,0 +1,71 @@
+SICA QA - REVERSIÓN DEL DIARIO
+Responsable Inscripto · Tucumán
+Sucursal
+Todas las unidades
+Casa Central
+AD
+Base compartida · Versión 3 · Datos en el servidor · Comprobantes sin autorización ARCA
+
+SICA / GESTIÓN INTEGRAL
+
+Libro diario
+
+Asientos automáticos y manuales con control de partida doble.
+
+Asiento manual
+Ejercicio para consultar
+Rango personalizado
+01/01/2026 a 31/12/2026
+Desde
+Hasta
+Total Debe
+$ 400,00
+Total Haber
+$ 400,00
+Diferencia
+$ 0,00
+Partida doble equilibrada
+6 registros
+XLSX
+PDF
+FECHA	ASIENTO / CONCEPTO	CUENTA	DEBE	HABER
+03/10/2026	Gasto sintético duplicado QA	Compras y gastos	$ 150,00	$ 0,00
+03/10/2026	Gasto sintético duplicado QA	Proveedores	$ 0,00	$ 150,00
+04/10/2026	INT-RA-00000001	Compras y gastos	$ 0,00	$ 150,00
+04/10/2026	INT-RA-00000001	Proveedores	$ 150,00	$ 0,00
+04/10/2026	Gasto corregido QA 2026	Compras y gastos	$ 100,00	$ 0,00
+04/10/2026	Gasto corregido QA 2026	Proveedores	$ 0,00	$ 100,00
+Correcciones con historial
+Revertir asiento manual
+La reversión conserva el original y agrega su contrapartida con fecha, motivo y responsable. Se admite una reversión por asiento identificado como manual, dentro de fechas abiertas del ejercicio. Las correcciones de períodos cerrados, comprobantes automáticos y registros antiguos sin identificación requieren revisar su origen y tratamiento específico. Después de revertir, podés cargar el asiento correcto.
+1 registros
+XLSX
+PDF
+CONSTANCIA	REVERSIÓN	FECHA ORIGINAL	ASIENTO ORIGINAL	MOTIVO	RESPONSABLE	DETALLE
+INT-RA-00000001	04/10/2026	03/10/2026	Gasto sintético duplicado QA	Carga manual equivocada por 150 ARS; se conserva el original y se registrará el gasto correcto de 100 ARS.	Administrador	Ver reversión
+Constancia de reversión manual
+
+Reversión sintética QA 2026 · 04/10/2026
+
+Original: Gasto sintético duplicado QA · 03/10/2026
+
+Carga manual equivocada por 150 ARS; se conserva el original y se registrará el gasto correcto de 100 ARS.
+
+2 registros
+CUENTA	DEBE ARS	HABER ARS
+Compras y gastos	$ 0,00	$ 150,00
+Proveedores	$ 150,00	$ 0,00
+
+CONSTANCIA RECUPERADA
+Constancia de reversión manual
+
+Reversión sintética QA 2026 · 04/10/2026
+
+Original: Gasto sintético duplicado QA · 03/10/2026
+
+Carga manual equivocada por 150 ARS; se conserva el original y se registrará el gasto correcto de 100 ARS.
+
+2 registros
+CUENTA	DEBE ARS	HABER ARS
+Compras y gastos	$ 0,00	$ 150,00
+Proveedores	$ 150,00	$ 0,00

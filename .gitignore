@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.server/
+var/
+.env
+.env.*
+!.env.example
+server/companies.local.json

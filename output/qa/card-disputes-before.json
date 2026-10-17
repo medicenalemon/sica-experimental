@@ -1,0 +1,269 @@
+{
+  "documents": [
+    {
+      "side": "cliente",
+      "partyId": "86fbb55f-c25b-4449-a951-cff9b5fa076c",
+      "branchId": "central",
+      "date": "2026-10-14",
+      "due": "2026-10-14",
+      "sourceId": "",
+      "depositId": "principal",
+      "perceptions": 0,
+      "observations": "Ensayo sintético de tarjeta",
+      "responsible": "Administrador",
+      "costCenter": "",
+      "official": false,
+      "valued": false,
+      "seller": "",
+      "priceList": "",
+      "kind": "factura",
+      "letter": "A",
+      "lines": [
+        {
+          "productId": "b58d774e-0830-407d-bbd0-602e69f41ef7",
+          "description": "Remera de algodón · M · Negro",
+          "quantity": 2,
+          "unit": "Unidad",
+          "price": 50000,
+          "tax": "21",
+          "discount": 0
+        }
+      ],
+      "payments": [],
+      "allocations": [],
+      "net": 100000,
+      "vat": 21000,
+      "total": 121000,
+      "id": "cea75636-8fcc-4145-a9a6-d431e97e3aa6",
+      "number": "INT-FC-A-00001-00000001",
+      "fiscalStatus": "pendiente"
+    },
+    {
+      "side": "cliente",
+      "partyId": "86fbb55f-c25b-4449-a951-cff9b5fa076c",
+      "branchId": "central",
+      "date": "2026-10-14",
+      "due": "2026-10-14",
+      "sourceId": "",
+      "depositId": "principal",
+      "perceptions": 0,
+      "observations": "Ensayo sintético de tarjeta",
+      "responsible": "Administrador",
+      "costCenter": "",
+      "official": false,
+      "valued": false,
+      "seller": "",
+      "priceList": "",
+      "kind": "cobro",
+      "letter": "X",
+      "lines": [],
+      "payments": [
+        {
+          "method": "Tarjeta de crédito",
+          "amount": 100000,
+          "treasuryId": "",
+          "reference": "CUP-CB-ENSAYO",
+          "cardId": "visa",
+          "cardDue": "2026-11-13"
+        }
+      ],
+      "allocations": [
+        {
+          "documentId": "cea75636-8fcc-4145-a9a6-d431e97e3aa6",
+          "amount": 100000
+        }
+      ],
+      "net": 100000,
+      "vat": 0,
+      "total": 100000,
+      "id": "c9e90401-3de6-4d97-a965-a9939f094465",
+      "number": "INT-RC-X-00001-00000001",
+      "fiscalStatus": "interno"
+    },
+    {
+      "side": "proveedor",
+      "partyId": "d46e66c1-b823-4d04-b9bd-21ff50206f83",
+      "branchId": "central",
+      "date": "2026-10-14",
+      "due": "2026-10-14",
+      "sourceId": "",
+      "depositId": "principal",
+      "perceptions": 0,
+      "observations": "Comisión 3% sobre INT-RC-X-00001-00000001",
+      "responsible": "Administrador",
+      "costCenter": "",
+      "official": false,
+      "valued": false,
+      "seller": "",
+      "priceList": "",
+      "kind": "debito",
+      "letter": "X",
+      "lines": [],
+      "payments": [],
+      "allocations": [],
+      "net": 3000,
+      "vat": 0,
+      "total": 3000,
+      "id": "3642a940-cc40-43c1-92f9-276a8534a292",
+      "number": "INT-COM-INT-RC-X-00001-00000001",
+      "fiscalStatus": "interno"
+    }
+  ],
+  "entries": [
+    {
+      "id": "e677e2d7-b3c3-4d8a-bb66-406ae3b3ff94",
+      "date": "2026-10-14",
+      "concept": "INT-FC-A-00001-00000001",
+      "branchId": "central",
+      "documentId": "cea75636-8fcc-4145-a9a6-d431e97e3aa6",
+      "lines": [
+        {
+          "accountId": "1.1.3",
+          "debit": 121000,
+          "credit": 0
+        },
+        {
+          "accountId": "4.1",
+          "debit": 0,
+          "credit": 100000
+        },
+        {
+          "accountId": "2.1.2",
+          "debit": 0,
+          "credit": 21000
+        }
+      ]
+    },
+    {
+      "id": "c19d627e-d6bc-48eb-9cf4-2da00a9b7641",
+      "date": "2026-10-14",
+      "concept": "INT-RC-X-00001-00000001",
+      "branchId": "central",
+      "documentId": "c9e90401-3de6-4d97-a965-a9939f094465",
+      "lines": [
+        {
+          "accountId": "1.1.3",
+          "debit": 0,
+          "credit": 100000
+        },
+        {
+          "accountId": "1.1.8",
+          "debit": 100000,
+          "credit": 0
+        }
+      ]
+    },
+    {
+      "id": "01e32452-bcfe-4023-a9dc-5f2fbd1dbacc",
+      "date": "2026-10-14",
+      "concept": "Comisión 3% sobre INT-RC-X-00001-00000001",
+      "branchId": "central",
+      "documentId": "3642a940-cc40-43c1-92f9-276a8534a292",
+      "lines": [
+        {
+          "accountId": "5.2",
+          "debit": 3000,
+          "credit": 0
+        },
+        {
+          "accountId": "2.1.1",
+          "debit": 0,
+          "credit": 3000
+        }
+      ]
+    },
+    {
+      "id": "f47b4181-db77-4c72-abf7-d2f8c899d6f0",
+      "date": "2026-10-14",
+      "concept": "Liquidación tarjeta LIQ-CB-ENSAYO",
+      "branchId": "central",
+      "documentId": "e82c91a4-6632-4460-8cee-0aabefc21669",
+      "lines": [
+        {
+          "accountId": "1.1.2",
+          "debit": 95000,
+          "credit": 0
+        },
+        {
+          "accountId": "5.3",
+          "debit": 3000,
+          "credit": 0
+        },
+        {
+          "accountId": "1.1.6",
+          "debit": 2000,
+          "credit": 0
+        },
+        {
+          "accountId": "1.1.8",
+          "debit": 0,
+          "credit": 100000
+        }
+      ]
+    }
+  ],
+  "stockMoves": [
+    {
+      "id": "198bc71f-7ead-4639-8ec6-8f4d9143d468",
+      "date": "2026-10-14",
+      "productId": "b58d774e-0830-407d-bbd0-602e69f41ef7",
+      "depositId": "principal",
+      "quantity": 40,
+      "reason": "Stock inicial de ejemplo (sin valuación contable)",
+      "documentId": "",
+      "branchId": "central"
+    },
+    {
+      "id": "8992a6b7-d961-46d7-8db4-8a1ce14e09ac",
+      "date": "2026-10-14",
+      "productId": "6d7c0c7a-5512-47b7-a408-cf4c6310437c",
+      "depositId": "principal",
+      "quantity": 20,
+      "reason": "Stock inicial de ejemplo (sin valuación contable)",
+      "documentId": "",
+      "branchId": "central"
+    }
+  ],
+  "cardSettlements": [
+    {
+      "date": "2026-10-14",
+      "reference": "LIQ-CB-ENSAYO",
+      "branchId": "central",
+      "treasuryId": "banco-demo",
+      "cardId": "visa",
+      "items": [
+        {
+          "receiptId": "c9e90401-3de6-4d97-a965-a9939f094465",
+          "paymentIndex": 0,
+          "amount": 100000
+        }
+      ],
+      "fee": 3000,
+      "withholdings": [
+        {
+          "method": "Retención",
+          "amount": 2000,
+          "treasuryId": "",
+          "reference": "CERT-CB-ENSAYO",
+          "tax": "Ingresos Brutos",
+          "jurisdiction": "Tucumán"
+        }
+      ],
+      "id": "e82c91a4-6632-4460-8cee-0aabefc21669",
+      "gross": 100000,
+      "net": 95000
+    }
+  ],
+  "treasuryMoves": [
+    {
+      "id": "46d679a6-facc-4cb1-ba03-69762736880e",
+      "date": "2026-10-14",
+      "treasuryId": "banco-demo",
+      "amount": 95000,
+      "reason": "Liquidación tarjeta LIQ-CB-ENSAYO",
+      "documentId": "e82c91a4-6632-4460-8cee-0aabefc21669",
+      "branchId": "central",
+      "reconciled": false
+    }
+  ]
+}

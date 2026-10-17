@@ -1,0 +1,587 @@
+{
+  "date": "2026-10-11",
+  "synthetic": true,
+  "tests": {
+    "domain": 213,
+    "files": 13,
+    "http": 37,
+    "fiscal": 22,
+    "total": 285
+  },
+  "browser": {
+    "accrual": "Cinco unidades aceptadas: neto 100 ARS, IVA 21 y activo sin facturar 121",
+    "invoice": "Factura interna A del 05/10/2026: neto 110 ARS, IVA 23,10 y saldo de cliente 133,10; sin CAE",
+    "settlement": "INT-CI-00000001 conservada después de recargar; activo pendiente cero, diferencias neta 10 e IVA 2,10",
+    "taxWorkingPaper": "Al corte 03/10, IVA 21 ARS sin factura; al corte 05/10, IVA 23,10 con devengamiento y descuento separados",
+    "screenshots": [
+      "output/revenue-settlement-2026-10-11.png",
+      "output/revenue-vat-work-2026-10-11.png"
+    ]
+  },
+  "checks": [
+    {
+      "database": "var/qa-revenue-accrual.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados",
+      "revenue": {
+        "accrual": {
+          "date": "2026-10-03",
+          "sourceId": "a01a7c29-7ea7-4562-8309-b6b902d024fa",
+          "reference": "Entrega textil aceptada QA 2026",
+          "reason": "Cinco remeras entregadas y aceptadas con precio fijo sintético de 100 ARS netos; control transferido al cliente.",
+          "fiscalReason": "Caso sintético gravado al 21%; entrega y nacimiento de IVA al 03/10/2026, sin anticipos.",
+          "assetId": "1.1.12",
+          "vatAccountId": "2.1.2",
+          "lines": [
+            {
+              "productId": "9ce81030-d4b0-45a3-b968-d61ce819ef31",
+              "value": 10000,
+              "accountId": "4.2",
+              "tax": "21",
+              "recognition": "Entrega aceptada",
+              "evidence": "Acta sintética QA-003 de recepción aceptada; contrato de cinco unidades a precio fijo."
+            }
+          ],
+          "review": "{\"date\":\"2026-10-03\",\"reference\":\"Entrega textil aceptada QA 2026\",\"reason\":\"Cinco remeras entregadas y aceptadas con precio fijo sintético de 100 ARS netos; control transferido al cliente.\",\"fiscalReason\":\"Caso sintético gravado al 21%; entrega y nacimiento de IVA al 03/10/2026, sin anticipos.\",\"assetId\":\"1.1.12\",\"vatAccountId\":\"2.1.2\",\"source\":{\"id\":\"a01a7c29-7ea7-4562-8309-b6b902d024fa\",\"number\":\"INT-RM-X-00001-00000001\",\"date\":\"2026-10-03\",\"branchId\":\"central\",\"lines\":[{\"productId\":\"9ce81030-d4b0-45a3-b968-d61ce819ef31\",\"quantity\":5,\"unit\":\"Unidad\"}]},\"lines\":[{\"productId\":\"9ce81030-d4b0-45a3-b968-d61ce819ef31\",\"value\":10000,\"accountId\":\"4.2\",\"tax\":\"21\",\"recognition\":\"Entrega aceptada\",\"evidence\":\"Acta sintética QA-003 de recepción aceptada; contrato de cinco unidades a precio fijo.\",\"quantity\":5,\"vat\":2100}],\"net\":10000,\"vat\":2100,\"total\":12100,\"entry\":[{\"accountId\":\"1.1.12\",\"debit\":12100,\"credit\":0},{\"accountId\":\"4.2\",\"debit\":0,\"credit\":10000},{\"accountId\":\"2.1.2\",\"debit\":0,\"credit\":2100}]}",
+          "id": "f9d75216-0afb-49c6-a774-144d9c62ba1f",
+          "number": "INT-DI-00000001",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-11T05:31:04.181Z",
+          "entryId": "271c6f98-d490-4465-9243-e943922b7dd7",
+          "preview": {
+            "date": "2026-10-03",
+            "reference": "Entrega textil aceptada QA 2026",
+            "reason": "Cinco remeras entregadas y aceptadas con precio fijo sintético de 100 ARS netos; control transferido al cliente.",
+            "fiscalReason": "Caso sintético gravado al 21%; entrega y nacimiento de IVA al 03/10/2026, sin anticipos.",
+            "assetId": "1.1.12",
+            "vatAccountId": "2.1.2",
+            "source": {
+              "id": "a01a7c29-7ea7-4562-8309-b6b902d024fa",
+              "number": "INT-RM-X-00001-00000001",
+              "date": "2026-10-03",
+              "branchId": "central",
+              "lines": [
+                {
+                  "productId": "9ce81030-d4b0-45a3-b968-d61ce819ef31",
+                  "quantity": 5,
+                  "unit": "Unidad"
+                }
+              ]
+            },
+            "lines": [
+              {
+                "productId": "9ce81030-d4b0-45a3-b968-d61ce819ef31",
+                "value": 10000,
+                "accountId": "4.2",
+                "tax": "21",
+                "recognition": "Entrega aceptada",
+                "evidence": "Acta sintética QA-003 de recepción aceptada; contrato de cinco unidades a precio fijo.",
+                "quantity": 5,
+                "vat": 2100
+              }
+            ],
+            "net": 10000,
+            "vat": 2100,
+            "total": 12100,
+            "entry": [
+              {
+                "accountId": "1.1.12",
+                "debit": 12100,
+                "credit": 0
+              },
+              {
+                "accountId": "4.2",
+                "debit": 0,
+                "credit": 10000
+              },
+              {
+                "accountId": "2.1.2",
+                "debit": 0,
+                "credit": 2100
+              }
+            ]
+          }
+        },
+        "settlement": {
+          "date": "2026-10-05",
+          "accrualId": "f9d75216-0afb-49c6-a774-144d9c62ba1f",
+          "invoiceId": "f003bc59-8b82-4a16-bff0-89dc550a9021",
+          "reference": "Factura de entrega conciliada QA 2026",
+          "reason": "Factura sintética de 110 ARS netos: diferencia de 10 ARS de ingreso y 2,10 ARS de IVA revisadas. Se conserva el remito y el saldo de clientes.",
+          "review": "{\"date\":\"2026-10-05\",\"reference\":\"Factura de entrega conciliada QA 2026\",\"reason\":\"Factura sintética de 110 ARS netos: diferencia de 10 ARS de ingreso y 2,10 ARS de IVA revisadas. Se conserva el remito y el saldo de clientes.\",\"accrualId\":\"f9d75216-0afb-49c6-a774-144d9c62ba1f\",\"invoiceId\":\"f003bc59-8b82-4a16-bff0-89dc550a9021\",\"invoiceNumber\":\"INT-FC-A-00001-00000001\",\"invoiceDate\":\"2026-10-05\",\"invoicePostingDate\":\"2026-10-05\",\"branchId\":\"central\",\"assetId\":\"1.1.12\",\"vatAccountId\":\"2.1.2\",\"salesAccountId\":\"4.1\",\"invoiceVatAccountId\":\"2.1.2\",\"estimatedNet\":10000,\"estimatedVat\":2100,\"invoiceNet\":11000,\"invoiceVat\":2310,\"difference\":1000,\"vatDifference\":210,\"lines\":[{\"productId\":\"9ce81030-d4b0-45a3-b968-d61ce819ef31\",\"accountId\":\"4.2\",\"estimatedNet\":10000,\"estimatedVat\":2100,\"invoiceNet\":11000,\"invoiceVat\":2310,\"difference\":1000,\"vatDifference\":210}],\"entry\":[{\"accountId\":\"4.1\",\"debit\":11000,\"credit\":0},{\"accountId\":\"2.1.2\",\"debit\":2100,\"credit\":0},{\"accountId\":\"1.1.12\",\"debit\":0,\"credit\":12100},{\"accountId\":\"4.2\",\"debit\":0,\"credit\":1000}]}",
+          "id": "c894afae-ff15-4a1e-b097-4f4e4312dd1c",
+          "number": "INT-CI-00000001",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-11T05:33:27.129Z",
+          "entryId": "123982f3-3ac8-4069-8943-f8e67941437e",
+          "preview": {
+            "date": "2026-10-05",
+            "reference": "Factura de entrega conciliada QA 2026",
+            "reason": "Factura sintética de 110 ARS netos: diferencia de 10 ARS de ingreso y 2,10 ARS de IVA revisadas. Se conserva el remito y el saldo de clientes.",
+            "accrualId": "f9d75216-0afb-49c6-a774-144d9c62ba1f",
+            "invoiceId": "f003bc59-8b82-4a16-bff0-89dc550a9021",
+            "invoiceNumber": "INT-FC-A-00001-00000001",
+            "invoiceDate": "2026-10-05",
+            "invoicePostingDate": "2026-10-05",
+            "branchId": "central",
+            "assetId": "1.1.12",
+            "vatAccountId": "2.1.2",
+            "salesAccountId": "4.1",
+            "invoiceVatAccountId": "2.1.2",
+            "estimatedNet": 10000,
+            "estimatedVat": 2100,
+            "invoiceNet": 11000,
+            "invoiceVat": 2310,
+            "difference": 1000,
+            "vatDifference": 210,
+            "lines": [
+              {
+                "productId": "9ce81030-d4b0-45a3-b968-d61ce819ef31",
+                "accountId": "4.2",
+                "estimatedNet": 10000,
+                "estimatedVat": 2100,
+                "invoiceNet": 11000,
+                "invoiceVat": 2310,
+                "difference": 1000,
+                "vatDifference": 210
+              }
+            ],
+            "entry": [
+              {
+                "accountId": "4.1",
+                "debit": 11000,
+                "credit": 0
+              },
+              {
+                "accountId": "2.1.2",
+                "debit": 2100,
+                "credit": 0
+              },
+              {
+                "accountId": "1.1.12",
+                "debit": 0,
+                "credit": 12100
+              },
+              {
+                "accountId": "4.2",
+                "debit": 0,
+                "credit": 1000
+              }
+            ]
+          }
+        },
+        "invoiceId": "f003bc59-8b82-4a16-bff0-89dc550a9021",
+        "balancesCents": {
+          "unbilledAsset": 0,
+          "income": -11000,
+          "vat": -2310,
+          "customers": 13310,
+          "inventory": 5000,
+          "cogs": 5000
+        },
+        "balance": {
+          "from": "2026-01-01",
+          "to": "2026-12-31",
+          "branchId": "all",
+          "rows": [
+            {
+              "accountId": "1.1.1",
+              "code": "1.1.1",
+              "name": "Caja",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.2",
+              "code": "1.1.2",
+              "name": "Bancos",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.3",
+              "code": "1.1.3",
+              "name": "Deudores por ventas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 13310,
+              "credit": 0,
+              "closing": 13310
+            },
+            {
+              "accountId": "1.1.4",
+              "code": "1.1.4",
+              "name": "IVA crédito fiscal",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.5",
+              "code": "1.1.5",
+              "name": "Valores a depositar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.6",
+              "code": "1.1.6",
+              "name": "Retenciones sufridas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.7",
+              "code": "1.1.7",
+              "name": "Percepciones sufridas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.8",
+              "code": "1.1.8",
+              "name": "Cupones de tarjetas a cobrar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.1",
+              "code": "2.1.1",
+              "name": "Proveedores",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.2",
+              "code": "2.1.2",
+              "name": "IVA débito fiscal",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 2100,
+              "credit": 4410,
+              "closing": -2310
+            },
+            {
+              "accountId": "2.1.3",
+              "code": "2.1.3",
+              "name": "Retenciones a depositar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.4",
+              "code": "2.1.4",
+              "name": "Percepciones a depositar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.5",
+              "code": "2.1.5",
+              "name": "Cheques propios emitidos",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.1",
+              "code": "3.1",
+              "name": "Capital y saldos iniciales",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 10000,
+              "closing": -10000
+            },
+            {
+              "accountId": "4.1",
+              "code": "4.1",
+              "name": "Ventas",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 11000,
+              "credit": 11000,
+              "closing": 0
+            },
+            {
+              "accountId": "5.1",
+              "code": "5.1",
+              "name": "Compras y gastos",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.2",
+              "code": "5.2",
+              "name": "Comisiones de vendedores",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.3",
+              "code": "5.3",
+              "name": "Cargos de tarjetas",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.12",
+              "code": "1.1.12",
+              "name": "Ventas realizadas sin facturar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 12100,
+              "credit": 12100,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-inventory",
+              "code": "1.1.9",
+              "name": "Existencias de mercadería",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 10000,
+              "credit": 5000,
+              "closing": 5000
+            },
+            {
+              "accountId": "inventory-cogs",
+              "code": "5.4",
+              "name": "Costo de mercadería vendida",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 5000,
+              "credit": 0,
+              "closing": 5000
+            },
+            {
+              "accountId": "inventory-adjustments",
+              "code": "5.5",
+              "name": "Diferencias de inventario",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-transit",
+              "code": "1.1.10",
+              "name": "Traslados de mercadería a conciliar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-wip",
+              "code": "1.1.11",
+              "name": "Producción en proceso",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-unbilled",
+              "code": "2.1.6",
+              "name": "Mercadería recibida sin facturar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "4.2",
+              "code": "4.2",
+              "name": "Ventas de entregas aceptadas",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 11000,
+              "closing": -11000
+            }
+          ],
+          "totals": {
+            "openingDebit": 0,
+            "openingCredit": 0,
+            "debit": 53510,
+            "credit": 53510,
+            "closingDebit": 23310,
+            "closingCredit": 23310
+          },
+          "entryIds": [
+            "3c0dcd61-a20f-4fc8-865f-c7e018a731c8",
+            "bc0f3afd-0f42-4aa4-be44-13e598e63bc1",
+            "271c6f98-d490-4465-9243-e943922b7dd7",
+            "5c99a0df-f8e4-49a6-a325-cb580678b838",
+            "123982f3-3ac8-4069-8943-f8e67941437e"
+          ]
+        },
+        "taxWorkingPaper": {
+          "before": [
+            {
+              "id": "f9d75216-0afb-49c6-a774-144d9c62ba1f",
+              "date": "2026-10-03",
+              "branchId": "central",
+              "number": "INT-DI-00000001",
+              "source": "INT-RM-X-00001-00000001",
+              "kind": "Ingreso e IVA sin factura",
+              "net": 10000,
+              "vat": 2100,
+              "total": 12100
+            }
+          ],
+          "after": [
+            {
+              "id": "f9d75216-0afb-49c6-a774-144d9c62ba1f",
+              "date": "2026-10-03",
+              "branchId": "central",
+              "number": "INT-DI-00000001",
+              "source": "INT-RM-X-00001-00000001",
+              "kind": "Ingreso e IVA sin factura",
+              "net": 10000,
+              "vat": 2100,
+              "total": 12100
+            },
+            {
+              "id": "c894afae-ff15-4a1e-b097-4f4e4312dd1c",
+              "date": "2026-10-05",
+              "branchId": "central",
+              "number": "INT-CI-00000001",
+              "source": "INT-FC-A-00001-00000001",
+              "kind": "Descuento de importes ya reconocidos",
+              "net": -10000,
+              "vat": -2100,
+              "total": -12100
+            }
+          ],
+          "vatBeforeInvoice": 2100,
+          "vatAfterSettlement": 2310
+        }
+      }
+    },
+    {
+      "database": "var/qa-exercise-opening.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-year-end.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-service-reestimates.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-service-accruals.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    }
+  ]
+}

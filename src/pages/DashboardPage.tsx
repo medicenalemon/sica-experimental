@@ -1,233 +1,31 @@
-import {
-  BarChart3,
-  TrendingUp,
-  Users,
-  DollarSign,
-  Package,
-  ArrowUpRight,
-  ArrowDownRight,
-} from 'lucide-react'
-
+import { Link } from 'react-router-dom'
+import { ArrowUpRight, Plus, BookOpen, AlertTriangle, CheckCircle2 } from 'lucide-react'
+import { useStore } from '@/state/context'
+import { money, today, dateLabel } from '@/domain/constants'
+import { documentSign, partyBalance, remainingLines, isCommercialDocument } from '@/domain/engine'
+import { canAccess } from '@/domain/permissions'
+import { Page, Panel, Metric, DataTable, Hint } from '@/components/gestion/UI'
 export default function DashboardPage() {
-  return (
-    <div className="page-container">
-      {/* Header */}
-      <div style={{ marginBottom: '2rem', animation: 'fadeIn 0.4s ease-out' }}>
-        <h1 style={{
-          fontSize: '1.75rem',
-          fontWeight: 700,
-          color: 'var(--text-primary)',
-          marginBottom: '0.25rem',
-        }}>
-          Bienvenido a SICA
-        </h1>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-          Panel de control — Vista general del sistema
-        </p>
-      </div>
-
-      {/* Stats Grid */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-        gap: '1.25rem',
-        marginBottom: '2rem',
-      }}>
-        <StatCard
-          label="Ventas del Mes"
-          value="$2,450,000"
-          change="+12.5%"
-          positive
-          icon={TrendingUp}
-          color="var(--primary-500)"
-          bgColor="var(--primary-50)"
-          delay={0}
-        />
-        <StatCard
-          label="Clientes Activos"
-          value="384"
-          change="+8"
-          positive
-          icon={Users}
-          color="var(--success-600)"
-          bgColor="var(--success-50)"
-          delay={1}
-        />
-        <StatCard
-          label="Compras del Mes"
-          value="$1,120,000"
-          change="-3.2%"
-          positive={false}
-          icon={DollarSign}
-          color="var(--warning-600)"
-          bgColor="var(--warning-50)"
-          delay={2}
-        />
-        <StatCard
-          label="Productos en Stock"
-          value="1,256"
-          change="+24"
-          positive
-          icon={Package}
-          color="var(--info-600)"
-          bgColor="var(--info-50)"
-          delay={3}
-        />
-      </div>
-
-      {/* Content Placeholder */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '2fr 1fr',
-        gap: '1.25rem',
-      }}>
-        <div className="card" style={{ animation: 'fadeIn 0.5s ease-out 0.3s both' }}>
-          <div className="card-header" style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <BarChart3 size={18} style={{ color: 'var(--primary-500)' }} />
-              <span style={{ fontWeight: 600, fontSize: '0.95rem' }}>Resumen de Operaciones</span>
-            </div>
-            <span style={{
-              fontSize: '0.78rem',
-              color: 'var(--text-muted)',
-              padding: '4px 10px',
-              background: 'var(--surface-tertiary)',
-              borderRadius: 'var(--radius-full)',
-            }}>
-              Últimos 30 días
-            </span>
-          </div>
-          <div className="card-body" style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            minHeight: '300px',
-            color: 'var(--text-muted)',
-            fontSize: '0.9rem',
-          }}>
-            Los gráficos estarán disponibles próximamente
-          </div>
-        </div>
-
-        <div className="card" style={{ animation: 'fadeIn 0.5s ease-out 0.4s both' }}>
-          <div className="card-header">
-            <span style={{ fontWeight: 600, fontSize: '0.95rem' }}>Actividad Reciente</span>
-          </div>
-          <div className="card-body" style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '0.75rem',
-          }}>
-            {[
-              { text: 'Nueva venta registrada #1024', time: 'Hace 5 min' },
-              { text: 'Stock actualizado: Producto A', time: 'Hace 15 min' },
-              { text: 'Pago recibido de Cliente X', time: 'Hace 1 hora' },
-              { text: 'Orden de compra #502 creada', time: 'Hace 2 horas' },
-              { text: 'Nuevo cliente registrado', time: 'Hace 3 horas' },
-            ].map((activity, i) => (
-              <div
-                key={i}
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  padding: '0.5rem 0',
-                  borderBottom: i < 4 ? '1px solid var(--border-light)' : 'none',
-                }}
-              >
-                <span style={{ fontSize: '0.84rem', color: 'var(--text-primary)' }}>
-                  {activity.text}
-                </span>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', whiteSpace: 'nowrap', marginLeft: '0.5rem' }}>
-                  {activity.time}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-/* ── StatCard sub-component ── */
-
-interface StatCardProps {
-  label: string
-  value: string
-  change: string
-  positive: boolean
-  icon: React.ComponentType<{ size?: number }>
-  color: string
-  bgColor: string
-  delay: number
-}
-
-function StatCard({ label, value, change, positive, icon: Icon, bgColor, delay }: StatCardProps) {
-  return (
-    <div
-      className="card"
-      style={{
-        padding: '1.25rem 1.5rem',
-        animation: `fadeIn 0.4s ease-out ${delay * 0.1}s both`,
-        cursor: 'default',
-        transition: 'all 0.2s ease',
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = 'translateY(-2px)'
-        e.currentTarget.style.boxShadow = 'var(--shadow-md)'
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = 'translateY(0)'
-        e.currentTarget.style.boxShadow = 'var(--shadow-sm)'
-      }}
-    >
-      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
-        <div>
-          <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 500, marginBottom: '0.5rem' }}>
-            {label}
-          </p>
-          <p style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.2 }}>
-            {value}
-          </p>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.25rem',
-            marginTop: '0.5rem',
-          }}>
-            {positive ? (
-              <ArrowUpRight size={14} style={{ color: 'var(--success-500)' }} />
-            ) : (
-              <ArrowDownRight size={14} style={{ color: 'var(--danger-500)' }} />
-            )}
-            <span style={{
-              fontSize: '0.78rem',
-              fontWeight: 600,
-              color: positive ? 'var(--success-600)' : 'var(--danger-600)',
-            }}>
-              {change}
-            </span>
-            <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>vs. mes anterior</span>
-          </div>
-        </div>
-        <div style={{
-          width: 44,
-          height: 44,
-          borderRadius: 'var(--radius-lg)',
-          background: bgColor,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexShrink: 0,
-        }}>
-          <Icon size={22} />
-        </div>
-      </div>
-    </div>
-  )
+ const {data,branch,session}=useStore()
+ const allowed=(path:string)=>canAccess(session,path)
+ const sales=allowed('/clientes/ventas')||allowed('/reportes/ventas'),purchases=allowed('/proveedores/compras')||allowed('/reportes/compras')
+ const docs=data.documents.filter(d=>branch==='all'||d.branchId===branch)
+ const month=today().slice(0,7)
+ const invoices=docs.filter(d=>['factura','credito','debito'].includes(d.kind)&&isCommercialDocument(d))
+ const cardCosts=(key:string)=>(data.cardSettlements||[]).filter(s=>(branch==='all'||s.branchId===branch)&&s.date.startsWith(key)).reduce((n,s)=>n+s.fee,0)
+ const total=(side:string)=>invoices.filter(d=>d.side===side&&d.date.startsWith(month)).reduce((n,d)=>n+d.total*(d.kind==='credito'?-1:1),0)+(side==='proveedor'?cardCosts(month):0)
+ const balance=(side:string)=>data.parties.filter(p=>p.side===side).reduce((n,p)=>n+partyBalance(data,p.id,branch==='all'?undefined:branch),0)
+ const low=data.products.filter(p=>p.kind==='Producto'&&data.stockMoves.filter(m=>m.productId===p.id&&(branch==='all'||m.branchId===branch)).reduce((n,m)=>n+m.quantity,0)<p.minimum)
+ const activity=data.audit.slice(-5).reverse()
+ const pending=docs.filter(d=>d.kind==='pedido'&&remainingLines(data,d).length).length
+ const months=Array.from({length:6},(_,i)=>{const d=new Date(`${today()}T12:00:00Z`);d.setUTCMonth(d.getUTCMonth()-5+i,1);const key=d.toISOString().slice(0,7);return {key,label:new Intl.DateTimeFormat('es-AR',{month:'short',timeZone:'UTC'}).format(d),sales:invoices.filter(d=>d.side==='cliente'&&d.date.startsWith(key)).reduce((n,d)=>n+d.total*(d.kind==='credito'?-1:1),0),purchases:cardCosts(key)+invoices.filter(d=>d.side==='proveedor'&&d.date.startsWith(key)).reduce((n,d)=>n+d.total*(d.kind==='credito'?-1:1),0)}})
+ const max=Math.max(1,...months.flatMap(m=>[m.sales,m.purchases]))
+ const actions=[['Nueva venta','/clientes/ventas/factura'],['Registrar cobro','/clientes/cobros/nuevo'],['Nuevo pedido','/clientes/pedidos/nuevo']].filter(([,path])=>canAccess(session,path))
+ return <Page title="Tu empresa, en una sola vista" subtitle={`${dateLabel(today())} · ${branch==='all'?'Todas las unidades de negocio':data.masters.branches.find(b=>b.id===branch)?.name}`} actions={actions.slice(0,1).map(([label,path])=><Link key={path} className="button" to={path}><Plus size={16}/>{label}</Link>)}>
+ {!data.settings.onboarding&&session?.role==='Administrador General'&&<Hint><div className="setup-callout"><div><strong>Prepará SICA para tu empresa</strong><p>Configurá el ejemplo textil en Tucumán o cargá los datos de tu organización.</p></div><Link className="button" to="/onboarding">Configurar empresa<ArrowUpRight size={16}/></Link></div></Hint>}
+ <div className="metrics-grid four">{sales&&<Metric label="Ventas del mes" value={money(total('cliente'))} detail="Facturas y notas registradas"/>}{purchases&&<Metric label="Compras del mes" value={money(total('proveedor'))} detail="Gastos y compras de la empresa"/>}{allowed('/clientes/cuenta-corriente')&&<Metric label="Saldo a cobrar" value={money(balance('cliente'))} detail={`${data.parties.filter(p=>p.side==='cliente').length} clientes registrados`}/>}{allowed('/proveedores/cuenta-corriente')&&<Metric label="Saldo a pagar" value={money(balance('proveedor'))} detail={`${data.parties.filter(p=>p.side==='proveedor').length} proveedores registrados`}/>}</div>
+ <div className="dashboard-grid">{sales&&purchases&&<Panel title="Ventas y compras" actions={<span className="muted">Últimos 6 meses</span>}><div className="chart-legend"><span><i className="sales"/>Ventas</span><span><i className="purchases"/>Compras</span></div><div className="bar-chart" role="img" aria-label="Comparación mensual de ventas y compras">{months.map(m=><div className="bar-group" key={m.key}><div className="bars"><div className="sales" style={{height:`${Math.max(1,m.sales/max*100)}%`}} title={`${m.label}: ventas ${money(m.sales)}`}/><div className="purchases" style={{height:`${Math.max(1,m.purchases/max*100)}%`}} title={`${m.label}: compras ${money(m.purchases)}`}/></div><span>{m.label}</span></div>)}</div>{!invoices.length&&<p className="muted chart-empty">El gráfico se completará al registrar operaciones.</p>}</Panel>}<Panel title="Para revisar"><div className="attention-list">{allowed('/clientes/pedidos')&&<Link to="/clientes/pedidos"><span><BookOpen size={18}/>Pedidos por entregar</span><strong>{pending}</strong></Link>}{allowed('/stock/inventario')&&<Link to="/stock/inventario"><span><AlertTriangle size={18}/>Artículos bajo mínimo</span><strong>{low.length}</strong></Link>}{allowed('/finanzas/cheques')&&<Link to="/finanzas/cheques"><span><CheckCircle2 size={18}/>Cheques en cartera</span><strong>{data.cheques.filter(c=>c.status==='En cartera'&&(branch==='all'||c.branchId===branch)).length}</strong></Link>}</div><div className="quick-links">{actions.map(([label,path])=><Link key={path} to={path}>{label}<ArrowUpRight size={15}/></Link>)}</div></Panel></div>
+ <div className="dashboard-grid"><Panel title="Últimas operaciones"><DataTable search={false} exportable={false} rows={docs.filter(d=>documentSign(d.kind)!==0).slice(-6).reverse().map(d=>({...d,date:dateLabel(d.date),party:data.parties.find(p=>p.id===d.partyId)?.name,total:money(d.total)}))} columns={[{key:'date',label:'Fecha'},{key:'number',label:'Referencia'},{key:'party',label:'Contraparte'},{key:'total',label:'Total'}]}/></Panel>{allowed('/administracion/auditoria')&&<Panel title="Actividad reciente"><div className="activity-list">{activity.length?activity.map(a=><div key={a.id}><span className="activity-dot"/><div><strong>{a.action}</strong><p>{a.detail}</p><small>{a.user} · {new Date(a.at).toLocaleString('es-AR',{timeZone:'America/Argentina/Tucuman'})}</small></div></div>):<p className="muted">Las acciones del equipo aparecerán aquí.</p>}</div></Panel>}</div>
+ <Hint>Los indicadores se calculan con operaciones registradas en esta instalación. La autorización fiscal se consulta en Configuración.</Hint>
+ </Page>
 }

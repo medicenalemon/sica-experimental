@@ -1,0 +1,1130 @@
+
+DIAPOSITIVA 1
+Productos
+**1. Productos**
+1. **Alimentos y Bebidas**
+   - Productos frescos (frutas, verduras, carnes, pescados)
+   - Productos envasados (conservas, lácteos, snacks)
+   - Bebidas alcohólicas y no alcohólicas
+   - Comida preparada
+2. **Electrónica y Tecnología**
+   - Electrodomésticos (refrigeradores, lavadoras, televisores)
+   - Equipos de informática (computadoras, impresoras, accesorios)
+   - Equipos de comunicación (teléfonos móviles, tablets)
+   - Electrónica de consumo (auriculares, dispositivos inteligentes)
+3. **Ropa y Accesorios**
+   - Ropa de hombre, mujer y niños
+   - Calzado
+   - Accesorios de moda (bolsos, joyería, gafas)
+   - Ropa deportiva y equipos
+4. **Muebles y Decoración**
+   - Muebles de interior (sofás, sillas, mesas)
+   - Decoración (cuadros, lámparas, alfombras)
+   - Artículos para el hogar (vajillas, utensilios de cocina)
+5. **Artículos de Ferretería y Construcción**
+   - Herramientas (manuales y eléctricas)
+   - Materiales de construcción (cemento, madera, ladrillos)
+   - Productos de plomería y electricidad
+6. **Vehículos y Repuestos**
+   - Autos, motos, bicicletas
+   - Repuestos y accesorios (neumáticos, aceites, baterías)
+7. **Productos de Higiene y Cuidado Personal**
+   - Cosméticos y maquillaje
+   - Productos para el cuidado de la piel y el cabello
+   - Productos de higiene personal (jabones, cremas, desodorantes)
+8. **Juguetería y Juegos**
+   - Juguetes para niños
+   - Juegos de mesa
+   - Videojuegos y consolas
+9. **Artículos de Papelería**
+   - Material de oficina (papel, bolígrafos, carpetas)
+   - Libros y revistas
+   - Suministros escolares
+
+DIAPOSITIVA 2
+Productos
+0. **Productos Agrícolas y Ganaderos**
+    - Semillas y fertilizantes
+    - Animales vivos y productos ganaderos (leche, lana)
+    - Maquinaria agrícola
+11. **Productos Químicos y Farmacéuticos**
+    - Productos de limpieza y desinfección
+    - Medicamentos
+    - Productos veterinarios
+12. **Artículos Deportivos y de Entretenimiento**
+    - Equipos deportivos (pelotas, raquetas, bicicletas)
+    - Equipos de camping y actividades al aire libre
+    - Ropa y calzado especializado
+
+DIAPOSITIVA 3
+Servicios
+ **2. Servicios**
+1. **Servicios de Consultoría**
+   - Consultoría empresarial
+   - Consultoría en recursos humanos
+   - Consultoría financiera y contable
+2. **Servicios de Marketing y Publicidad**
+   - Publicidad en medios (digital y tradicional)
+   - Diseño gráfico y web
+   - Estrategias de marketing digital
+3. **Servicios Financieros**
+   - Banca y seguros
+   - Asesoría de inversiones
+   - Servicios de contabilidad y auditoría
+4. **Servicios de Salud y Bienestar**
+   - Medicina general y especializada
+   - Psicología y terapia
+   - Servicios de spa y wellness
+5. **Servicios Educativos**
+   - Educación formal (colegios, universidades)
+   - Formación y capacitación (cursos, talleres)
+   - Clases particulares y tutorías
+6. **Servicios de Transporte y Logística**
+   - Transporte terrestre, aéreo y marítimo
+   - Servicios de mensajería y paquetería
+   - Almacenamiento y distribución
+.
+7. **Servicios de Tecnología**
+   - Desarrollo de software y aplicaciones
+   - Servicios de IT (soporte técnico, mantenimiento)
+   - Alquiler de equipos tecnológicos
+8. **Servicios Legales y Jurídicos**
+   - Asesoría legal
+   - Representación ante tribunales
+   - Servicios notariales
+9. **Servicios de Mantenimiento y Reparación**
+   - Reparación de electrodomésticos
+   - Mantenimiento de vehículos
+   - Servicios de plomería y electricidad
+10. **Servicios de Entretenimiento y Ocio**
+    - Organización de eventos y fiestas
+    - Producción audiovisual
+    - Servicios de catering y gastronomía
+11. **Servicios Inmobiliarios**
+    - Alquiler y venta de inmuebles
+    - Gestión de propiedades
+    - Consultoría en bienes raíces
+12. **Servicios de Turismo y Hospitalidad**
+    - Agencias de viajes
+    - Guías turísticos
+    - Servicios de alojamiento (hoteles, hostales)
+
+DIAPOSITIVA 4
+Servicios
+13. **Servicios de Seguridad**
+    - Vigilancia privada
+    - Sistemas de seguridad y alarmas
+    - Asesoría en prevención de riesgos
+14. **Servicios de Recursos Humanos**
+    - Selección de personal
+    - Outsourcing de servicios
+    - Capacitación y desarrollo profesional
+15. **Servicios de Belleza y Estética**
+    - Peluquería y barbería
+    - Centros de estética
+    - Servicios de manicura y pedicura
+16. **Servicios de Diseño y Arquitectura**
+    - Diseño de interiores
+    - Arquitectura y construcción
+    - Paisajismo y jardinería
+
+DIAPOSITIVA 5
+S.I.J. (despues vemos esto)
+Soluciones Integrales 
+Jurídicas
+ (se adicionaran 
+módulos
+ contables y administrativo a posteriori)
+Login
+Contraseña
+Auto Login
+Auto Login
+Auto Login
+Base datos de usuarios y contraseñas guardadas para auto login
+Notas: Calculadora, block de notas, agenda
+
+DIAPOSITIVA 6
+Estado del Arte
+Esto es lo que mas se parece a lo que queremos 
+España – Programa Justicia Digital
+En España hay un programa llamado Digital Justice (Justicia Digital) cuyo objetivo es gestión electrónica de los expedientes judiciales en todos los niveles jurisdiccionales (civil, penal, lo social, administrativo contencioso). Incluye gestión de documentos judiciales electrónicos, interoperabilidad con otros sistemas, nuevos métodos de trabajo para reducir el uso de papel. 
+Eipa
+Estados Unidos – Wisconsin: CCAP (Consolidated Court Automation Programs)
+Un ejemplo estatal en EE.UU. que integra gestión de casos, gestión financiera de tribunales, paneles de control (“dashboards”) para jueces y funcionarios, seguimiento de expedir documentos, audiencias, órdenes, etc. Es un sistema desarrollado para cubrir gran parte del ciclo de los procesos judiciales. 
+
+DIAPOSITIVA 7
+LEXIUS ARGENTINA
+
+DIAPOSITIVA 8
+
+
+DIAPOSITIVA 9
+
+
+DIAPOSITIVA 10
+FUNCIONES
+
+DIAPOSITIVA 11
+
+
+DIAPOSITIVA 12
+
+
+DIAPOSITIVA 13
+
+
+DIAPOSITIVA 14
+Legal One
+ de Thomson Reuters Argentina
+ 
+
+DIAPOSITIVA 15
+
+
+DIAPOSITIVA 16
+
+
+DIAPOSITIVA 17
+En qué podemos dar valor agregado?
+
+DIAPOSITIVA 18
+Funcionalidades comunes / críticas
+Los sistemas más maduros tienen al menos estas capacidades:
+Registro electrónico del expediente completo: documentos, pruebas, denuncias, escritos, notificaciones, actuaciones, resoluciones.
+Presentación electrónica (e-filing) de escritos y documentos por parte de los abogados o partes, sin necesidad de entrega física.
+Gestión de calendarios judiciales, audiencias, plazos, notificaciones automáticas.
+Acceso seguro para distintos roles (jueces, litigantes, funcionarios), con permisos, controles de integridad, trazabilidad.
+Archivo electrónico, conservación de documentos, historial completo de lo actuado.
+Herramientas de auditoría y métricas: seguimiento del tiempo de resolución, cuellos de botella, carga de trabajo, cumplimiento de plazos - mas adelante
+En algunos casos, juicio virtual u opciones para audiencias remotas.
+Firma electrónica y verificación legal de documentos digitales.
+
+DIAPOSITIVA 19
+Retos observados
+Estos son algunos de los desafíos frecuentes que enfrentan estos sistemas:
+Seguridad y protección de datos: confidencialidad, integridad, acceso restringido, protección contra hacking, caídas del sistema.
+Interoperabilidad y estandarización: distintas jurisdicciones, diferentes niveles (tribunales inferiores, superiores, fiscalía, policía) necesitan comunicarse.
+Infraestructura tecnológica: no todos los juzgados tienen buen acceso a internet, hardware adecuado, capacitación del personal.
+Resistencia al cambio / capacitación: costumbre del papel, cultura institucional, hábitos, falta de habilidades digitales.
+Costos: tanto de desarrollo/adquisición, mantenimiento, capacitación, soporte. En sistemas nacionales de justicia puede ser significativo.
+
+DIAPOSITIVA 20
+Buenas prácticas
+Basado en las experiencias, algunas claves para que un sistema de expediente jurídico digital funcione bien:
+Sistemas modulares: permitir que se vaya expandiendo por fases (por ejemplo primero expediente digital interno, luego e-filing, después audiencias remotas, etc.).
+Interoperabilidad y estándares: definir formatos de documentos, interfaces, APIs, protocolos para comunicación entre actores.
+Seguridad fuerte: roles de acceso, auditorías, cifrado, respaldo de datos, recuperación ante desastres.
+Capacitación y cambio cultural: entrenar al personal, abogados, partes; acompañar con políticas de transición (por ejemplo, admitiendo papel mientras se adapta lo digital).
+Usabilidad y experiencia de usuario: que las plataformas no sean complicadas, que los litigantes y abogados puedan usar sin necesidad de alta tecnología; interfaces amigables.
+
+DIAPOSITIVA 21
+Si quieres, puedo revisar casos concretos de sistemas en Latinoamérica (por ejemplo Brasil, México, Argentina, Chile) para que veas cómo lo están implementando y qué lecciones podrían servir en Tucumán o a nivel nacional.
+En México ya hay varios casos y componentes de sistemas de expediente / gestión electrónica de asuntos judiciales. No todos los sistemas son iguales, hay diversidad según el nivel federal, estatal, materia, tecnología, etc. Acá te detallo algunos ejemplos, qué hacen, qué limitaciones tienen, y cómo está la situación general.
+Ejemplos concretos en México
+Poder Judicial de la Federación — Portal de Servicios en Línea
+Existe un portal donde se pueden hacer distintos trámites en línea para los Juzgados de Distrito y Tribunales de Circuito en todo el país. 
+serviciosenlinea.pjf.gob.mx
+Algunas de las funciones: presentación de demandas, promociones o escritos iniciales; consulta de notificaciones electrónicas; consulta de expediente electrónico; consulta de documentos de acuerdos judiciales; impresión de acuses. 
+serviciosenlinea.pjf.gob.mx
+Esto permite que partes interesadas puedan hacer mucho del flujo del expediente sin ir físicamente al juzgado, al menos para ciertos actos procesales.
+Poder Judicial de la Ciudad de México — Consulta de expediente digital
+En CDMX hay un servicio donde los legitimados pueden consultar expediente digital en línea a través de un trámite. 
+poderjudicialcdmx.gob.mx
+Hay que proporcionar datos como número de expediente / toca, actor, sala o juzgado, año, etc. 
+poderjudicialcdmx.gob.mx
+Poder Judicial de Tlaxcala — “Sistema de Gestión de Expediente Electrónico”
+En el Estado de Tlaxcala ya implementaron un sistema para gestión del expediente electrónico en el Poder Judicial del estado. 
+tsjtlaxcala.gob.mx
+Permite seguimiento de expedientes mediante código QR; digitalización de la demanda inicial; seguimiento en las diferentes etapas del expediente. 
+tsjtlaxcala.gob.mx
+Estado general y retos observados
+Heterogeneidad: no todos los estados tienen los mismos sistemas ni al mismo grado. Algunos tienen expediente electrónico en ciertas materias o juzgados, otros apenas lo comienzan. Según informes, durante la pandemia muchos poderes judiciales avanzaron en digitalización, pero el progreso ha sido desigual. 
+Limitaciones:
+Cobertura incompleta: algunos juzgados no tienen la infraestructura, otros carecen de normativas locales que avalen plenamente la equivalencia legal de documentos digitales, firmas, notificaciones digitales, etc.
+Funcionalidades parciales: por ejemplo, se puede consultar expediente, presentar escritos iniciales, etc., pero no siempre todas las etapas del procedimiento están digitalizadas. A veces no están disponibles todas las notificaciones electrónicas, ni todos los documentos; a veces no se admite firma electrónica, etc.
+Acceso desigual: dependiendo del estado, del tipo de juzgado, del nivel tecnológico, de la conectividad, etc. También depende de los usuarios (abogados, partes litigantes) que tengan medios digitales adecuados.
+Ventajas observadas: ahorro de papel, mayor rapidez de trámites; posibilidad de seguimiento remoto; reducir desplazamientos; mayor transparencia si los usuarios pueden consultar el estatus digital del expediente.
+
+DIAPOSITIVA 22
+PODER JUDICIAL DE LA NACIÓN ARGENTINA
+Corte Suprema de Justicia de la Nación
+Tribunales Inferiores
+2.1      Cámara Federal de Apelaciones
+2.2      Tribunales Orales Federales y Nacionales
+2.3      Juzgados Federales de Primera Instncia
+2.4      Juzgados Nacionales (solo CABA)
+Consejo de la Magistratura de la Nación
+Ministerio Público
+4.1      Fiscalía
+4.2      Defensoría
+
+DIAPOSITIVA 23
+FUEROS JUDICIALES
+Civil y Comercial
+Laboral
+Penal
+Contensioso administrativo Federal
+Electoral
+Previsional
+Familia y Sucesiones
+SATELITES
+Registro civil
+Registro del automotor
+
+DIAPOSITIVA 24
+Plataforma
+Qué permite / funciones principales
+Fueros o ámbitos que cubre
+Justicia.ar
+Portal unificado del sistema judicial argentino. Ofrece: estructura de los poderes judiciales de cada provincia y nación; características de los fueros; instancias; enlaces a jurisprudencia provincial; estadísticas; directorio de autoridades; glosario jurídico; canales de contacto; herramientas para que la ciudadanía pueda consultar causas digitalizadas. (
+Consejo de Magistratura
+)
+Todos los fueros / jurisdicciones provinciales y nacionales integrados como fuentes informativas.
+Poder Judicial de la Nación (PJN)
+Permite búsquedas de causas federales/nacionales, presentación de escritos, información institucional, trámites judiciales nacionales. Tiene el “Sistema de Consultas Web (SCW)” para consultar causas en trámite. (
+Poder Judicial de la Nación
+)
+Fueros Federales y Nacionales bajo la jurisdicción del PJN; causas en la Corte Suprema; seguridad social en algunos casos.
+Corte Suprema de Justicia de la Nación
+Tiene sitio de “Causas en trámite” para los fueros nacionales/federales; también registro público de procesos colectivos. (
+w2.csjn.gov.ar
+)
+PLATAFORMAS PODER JUDICIAL DE LA NACION
+
+DIAPOSITIVA 25
+Provincia
+Plataforma / Sistema
+Qué permite / a qué fueros aplica
+Salta
+Portal de Expediente Digital (SED)
+Permite expediente digital, presentación de escritos, seguimiento de expedientes en diversos fueros como Civil, Comercial, Trabajo, Familia, etc. (
+Justicia Salta
+)
+Buenos Aires (Provincia)
+MEV – Mesa de Entradas Virtual de la Suprema Corte de la Provincia de Buenos Aires
+Permite consultar causas en trámite en los distintos fueros provinciales (Civil, Laboral, Contencioso Administrativo, Familia, Penal, Paz) y recibir actualizaciones. (
+mev.scba.gov.ar
+)
+Plataforma / Sistema
+Qué permite / funciones principales
+CABA
+EJE-IURIX / Expediente Judicial Electrónico (EJE)
+Tramitación electrónica de expedientes ante el Tribunal Superior de Justicia de CABA: iniciar expedientes, seguimiento remoto del expediente, acceso a información, notificaciones electrónicas, firmas digitales, etc. (
+tsjbaires.gob.ar
+)
+CABA
+Portal del Litigante
+Para abogados y peritos: gestionar causas en línea, presentar escritos, firmar digitalmente, generar cédulas, etc. (
+tsjbaires.gov.ar
+)
+CABA
+Consulta Pública de Expedientes / Causas
+Permite al público general consultar expedientes que no están bajo reserva, ver estado de causas, ver notificaciones publicadas, etc. (
+eje.juscaba.gob.ar
+)
+CABA
+Firma Digital Remota / Firma Cloud
+Para usuarios del sistema EJE, permite firmar documentos digitalmente (“remotamente”), desde dispositivos como PC, tablet, celular, sin necesidad de token físico. (
+consejo.jusbaires.gob.ar
+)
+CABA
+Bus-Justicia / SCJCABA (Sistema de Conciliación de Relaciones de Consumo de CABA)
+En materia de consumo: instancia prejudicial virtual (“MiReclamo”), conciliaciones virtuales, acercamiento entre consumidor y proveedor mediante audiencia virtual designada por conciliador. (
+bus-justicia.org.ar
+)
+
+DIAPOSITIVA 26
+Como cobrar el sistema
+Abono de 
+instalación
+ unico por maquina (hasta 3)
+Abono Fijo 3 bocas
+Bocas adicionales
+
+DIAPOSITIVA 27
+S.I.C.A. (despues vemos esto)
+Soluciones Integrales Contables Administrativas
+Inicio
+Login
+Usuario
+Contraseña
+
+DIAPOSITIVA 28
+Módulos Base
+Onboarding
+Parametros
+Clientes
+Proveedores
+Finanzas
+Compras
+Ventas
+Producto
+*
+Servicios
+Modulo Contable
+Stock
+*
+Depositos/Logistica
+Otros servicios del sistema
+Lista de Precios
+Vendedores
+Reportes
+
+DIAPOSITIVA 29
+ONBOARDING
+
+DIAPOSITIVA 30
+Condicion Fiscal
+
+DIAPOSITIVA 31
+Usuarios
+
+DIAPOSITIVA 32
+Permisos Usuarios
+Administrador General: Acceso total
+Administracion: Facturacion, Orden de pedido, remitos, compras, ventas, reportes, tesoreria, producto, suba masiva
+Deposito: Remitos, orden de pedido, Producto
+Produccion: Orden de Compra, Producto, materiales, ordenes de trabajo, control de maquinaria, asignacion de tareas, Orden de produccion, planificacion de requerimientos, rutas y centros de trabajo, costos de fabricacion, control de planta y capacidad
+
+DIAPOSITIVA 33
+Parametros
+
+DIAPOSITIVA 34
+Menu lateral (a perfeccionar)
+
+DIAPOSITIVA 35
+1.
+Clientes
+1.1 Alta
+1.2. Factura
+1.2.1 Componentes de Factura
+1.3 Cobro
+1.3.1 Forma de pago
+1.4 Nota de crédito
+1.5 Nota de débito
+1.6 Remito de Venta
+1.7 Cuenta Corriente Clientes (exportar xls, pdf)
+
+DIAPOSITIVA 36
+1.1 Alta
+Código de cliente (automatico u opcional)
+Razón Social
+1.1.1 Condición Frente al IVA
+CUIT
+1.1.2 Condiciones Comerciales
+Domicilio
+Teléfono
+Mail
+
+DIAPOSITIVA 37
+1.1.1 Condición Frente al IVA
+Exento
+Responsable Monotributo
+Responsable Inscripto
+No Responsable
+Liberado (Tierra del Fuego)
+Consumidor Final
+Responsable Inscripto RG
+Responsable no Inscripto
+Responsable no Identificado
+
+DIAPOSITIVA 38
+1.1.2 Condiciones Comerciales
+Condición de pago
+Lista de precios Aplicable
+Descuentos %
+Vendedor
+% Vendedor
+Forma de Pago
+Transporte
+
+DIAPOSITIVA 39
+
+
+DIAPOSITIVA 40
+1.2 Factura
+Factura A
+Factura B
+Factura C
+Factura X
+Ejemplos: A, B, C
+X
+
+DIAPOSITIVA 41
+Unidades de medida
+Unidad
+Metro
+Centimetro
+Milimetro
+Kilogramo
+Gramo
+Litro
+Kilometro
+
+DIAPOSITIVA 42
+1.2.1 Componentes de Factura
+Factura A: 
+Fecha
+Razón Social
+Cuit
+Domicilio (de haber)
+Condición frente al IVA
+Base Imponible + 21% 
+Codigo de Producto
+Descripción 
+Precio Neto Unitario
+IVA
+Precio bruto Total
+Responsable
+Observaciones
+Factura B
+Fecha:
+Razón Social
+Cuit
+Domicilio 
+(de haber)
+Condición frente al IVA
+Base Imponible / 1.21
+Codigo de Producto
+Descripción
+Precio Bruto Unitario
+Precio Bruto Total
+Responsable
+Observaciones
+Factura X:
+Fecha
+Razón Social
+Cuit
+Domicilio 
+(de haber)
+Condición frente al IVA
+Precio Neto
+Codigo de Producto
+Descripción
+Precio Neto Unitario
+Precio Neto Total
+Responsable
+Observaciones
+Los campos cuit y condicion frente al IVA son obligatorios en las facturas A, B y C
+Factura C:
+Fecha
+Razón Social
+Cuit
+Domicilio (de haber)
+Condición frente al IVA
+Precio total de la venta.
+Codigo de Producto
+Descripción
+Precio Neto Unitario
+Precio Neto Total
+Responsable
+Observaciones
+
+DIAPOSITIVA 43
+
+
+DIAPOSITIVA 44
+1.3 Cobros
+Fecha
+Tipo de Recibo (A,B,C,X)
+Número de Referencia (automatico)
+Sucursal
+Responsable
+Desciende la cuenta corriente
+
+DIAPOSITIVA 45
+1.3.1 Formas de Cobro (Parte 1)
+1.3.1.1: Efectivo (1 campo)
+1.3.1.2:  Caja
+1.3.1 Mercado Pago
+Transferencia
+1.3.2: Cheque
+1.3.2.1: Campos:
+Importe
+Número de cheque
+Fecha de emisión
+Fecha de vencimiento
+Banco
+Cheque propio
+Cheque terceros 
+Nombre del titular
+
+DIAPOSITIVA 46
+1.3.1 Formas de Cobro
+ (Parte 2)
+1.3.3: Retención de Ganancias
+1.3.4: Retención de Ingresos Brutos
+1.3.5: Retención de IVA
+1.3.6: Retención de Seguridad Social
+Cheque rechazado: Al cambiar el estado de un cheque a “Rechazado” Genera atomaticamente un ND interna en el cliente con esa referencia y los datos del cheque
+
+DIAPOSITIVA 47
+
+
+DIAPOSITIVA 48
+1.4 Componentes de Nota de Crédito (Desciende Cta Cte.)
+Nota de Crédito A: 
+Fecha
+Razón Social
+Cuit
+Domicilio 
+(de haber)
+Condición frente al IVA
+Base Imponible + 21%
+Codigo
+ 
+Descripción 
+Precio Neta Unitario
+IVA
+Precio Bruto Total
+Responsable
+Observaciones
+Nota de Crédito B
+Fecha:
+Razón Social
+Cuit
+Domicilio 
+(de haber)
+Condición frente al IVA
+Base Imponible / 1.21
+Codigo
+Descripción
+Precio Bruto Unitario
+Precio Bruto Total
+Responsable
+Observaciones
+Nota de Crédito X:
+Fecha
+Razón Social
+Cuit
+Domicilio 
+(de haber)
+Condición frente al IVA
+Precio Neto
+Codigo
+Descripción
+Precio Neta Unitario
+Precio Neto Total
+Responsable
+Observaciones
+Los campos cuit y condicion frente al IVA son obligatorios en las Nota de Crédito A, B y C
+Factura C:
+Fecha
+Razón Social
+Cuit
+Domicilio (de haber)
+Condición frente al IVA
+Precio total de la venta.
+Codigo de Producto
+Descripción
+Precio Neto Unitario
+Precio Neto Total
+Responsable
+Observaciones
+
+DIAPOSITIVA 49
+
+
+DIAPOSITIVA 50
+1.5 Componentes de Nota de Débito (Aumenta la Cta Cte.)
+Nota de Débito A: 
+Fecha
+Razón Social
+Cuit
+Domicilio 
+(de haber)
+Condición frente al IVA
+Base Imponible + 21%
+Codigo
+ 
+Descripción 
+Precio Neta Unitario
+IVA
+Precio Bruto Total
+Responsable
+Observaciones
+Nota de Débito B
+Fecha:
+Razón Social
+Cuit
+Domicilio 
+(de haber)
+Condición frente al IVA
+Base Imponible / 1.21
+Codigo
+Descripción
+Precio Bruto Unitario
+Precio Bruto Total
+Responsable
+Observaciones
+Débito X:
+Fecha
+Razón Social
+Cuit
+Domicilio 
+(de haber)
+Condición frente al IVA
+Precio Neto
+Codigo
+Descripción
+Precio Neta Unitario
+Precio Neto Total
+Responsable
+Observaciones
+Los campos cuit y condicion frente al IVA son obligatorios en las Nota de Crédito A, B y C
+Debito
+ C:
+Fecha
+Razón Social
+Cuit
+Domicilio (de haber)
+Condición frente al IVA
+Precio total de la venta.
+Codigo de Producto
+Descripción
+Precio Neto Unitario
+Precio Neto Total
+Responsable
+Observaciones
+
+DIAPOSITIVA 51
+
+
+DIAPOSITIVA 52
+NOTA DE PEDIDO
+La nota de pedido contempla un pedido completo del cliente que alimentara parcial o totalmente al remito de venta.
+
+DIAPOSITIVA 53
+Componentes de notas de pedido
+Numeracion automatica
+Fecha
+Cliente (datos del cliente)
+Vendedor
+Lista de precios
+Pendiente de remitir:
+Unidad
+Codigo
+Descripcion
+Precio unitario
+Precui total
+
+DIAPOSITIVA 54
+1.6 Remito de Venta Componentes
+Fecha
+Cliente
+Codigo
+Descripción
+Observaciones
+Cantidad
+Precio Unitario (OPTATIVO)
+Precio Total (OPTATIVO)
+El remito puede ser valorizado o no. Puede Ser Oficial (R) o X
+EL REMITO DESCUENTA STOCK
+
+DIAPOSITIVA 55
+1.7 Reporte Cuenta Corriente
+Fecha
+Factura
+1.1 Neto
+1.2 Iva
+1.3 Total
+Cobro
+ 2.1 Fecha
+2.2 Aplicacion a FC
+2.3 Saldo
+2.4 Observaciones
+(exportar xls, pdf)
+
+DIAPOSITIVA 56
+Ventas
+Unidades de Negocio: Las unidades de negocio permiten a la empresa separar sus distintas actividades en un mismo sistema, permitiendole asi sacar reportes separados o unificados
+Cada unidad de negocio tiene que tener su sucursal de facturacion a fines de dividir los reportes
+Ejemplo: Una empresa de indumentaria que tiene varias marcas
+Se contara con un switch que permita ver todas las empresas o cada una por su lado.
+
+DIAPOSITIVA 57
+2. Proveedores
+2
+.1 Alta
+2.2. Factura
+2.3 Pago
+2.3.1 Forma de pago
+2.4 Nota de crédito
+2.5 Nota de débito
+2.6 Remito de Compra
+2.7 Cuenta Corriente Proveedores (exportar xls, pdf)
+
+DIAPOSITIVA 58
+2
+.1 Alta
+Código de Proveedor (automatico)
+Razón Social
+1.1.1 Condición Frente al IVA
+CUIT
+Rubro
+1.1.2 Condiciones Comerciales
+Domicilio
+Teléfono
+Mail
+
+DIAPOSITIVA 59
+2
+.1.1 Condición Frente al IVA
+Exento
+Responsable Monotributo
+Responsable Inscripto
+No Responsable
+Liberado (Tierra del Fuego)
+Consumidor Final
+Responsable Inscripto RG
+Responsable no Inscripto
+Responsable no Identificado
+
+DIAPOSITIVA 60
+2
+.1.2 Condiciones Comerciales
+Condición de pago
+Forma de Pago
+Transporte
+
+DIAPOSITIVA 61
+2
+.3 Pagos
+Fecha
+Tipo de Recibo (A,B,C,X)
+Número de Referencia
+Responsable de Emisión
+Desciende la cuenta corriente
+
+DIAPOSITIVA 62
+2
+.3.1 Formas de Pago (Parte 1)
+2.3.1.1: Efectivo (1 campo)
+2.3.1.2:  Caja
+2.3.2: Cheque
+2.3.2.1: Campos:
+Importe (buscador)
+Número de cheque (buscador)
+Fecha de emisión
+Fecha de vencimiento
+Banco
+Cheque propio
+Cheque terceros (Nombre del titular)
+
+DIAPOSITIVA 63
+2
+.3.1 Formas de Pago (Parte 2)
+2.3.3: Retención de Ganancias
+2.3.4: Retención de Ingresos Brutos
+2.3.5: Retención de IVA
+2.3.6: Retención de Seguridad Social
+
+DIAPOSITIVA 64
+2.7 
+Reporte Cuenta Corriente
+Fecha
+Factura
+1.1 Neto
+1.2 Iva
+1.3 Total
+Pagos
+2.1 Fecha
+2.2 Aplicacion a FC
+2.3 Saldo
+Observaciones
+(exportar xls, pdf)
+
+DIAPOSITIVA 65
+2.8
+. Compras
+*CENTRO DE COSTOS
+*Gastos estructurales (alquileres, luz, internet, etc)
+*Gastos de producción (fletes, productos/servicios relacionados directa o indirectamente a la producción o el producto o servicio, ejemplo “Confección”)
+*Materias primas
+*Compra de Producto Terminado
+*Servicios relacionados al funcionamiento de la industria
+*Gastos administrativos
+*Sueldos de Produccion
+*Sueldo de administracion
+Genera reporte de gastos
+
+DIAPOSITIVA 66
+3. Componentes de Finanzas (Parte 1)
+Caja/s (posibilidad de crear 
+múltiples
+ cajas)
+Movimiento de Caja/s
+Cierre de Cajas
+Cartera de Cheques
+Consulta Movimientos Cartera de Cheques
+Alta Formas de Pago/Cobro
+Alta Bancos 
+Movimientos Bancarios
+Consulta IVA Ventas
+Consulta IVA Compras
+Alta Tarjetas de Crédito
+Cuenta por Cobrar
+Cuentas a Pagar
+Percepciones de IIBB
+Retenciones de IIBB
+Retenciones de Ganancias
+Retenciones de IVA
+Retenciones de Seguridad Social
+
+DIAPOSITIVA 67
+3.1 Cajas
+Alta de Cajas
+Pueden coexistir varias cajas segun el deseo del cliente. 
+Ejemplo:
+Caja Única
+Caja (localizada)
+Caja dinero en efectivo
+Caja tarjetas de débito
+Caja Transferencias
+Caja 
+tarjetas de crédito
+
+DIAPOSITIVA 68
+   3.2 Movimientos de Cajas
+Determina los movimientos de ingreso, egreso y Saldo y su motivo (puede mostras movimientos de una o mas cajas seleccionadas)
+Alta de Cajas, pueden ser multiples cajas para una misma empresa. Por ejemplo Caja sucursal 1 o Caja sucursal 2
+3.1 Cajas
+3.4 
+Cartera de Cheques
+Determina cheques en cartera. Las cobranzas con cheques deben pasar automaticamente a la cartera.
+3.3 Cierre de cajas
+Cierre de cajas por caja o todas las cajas al mismo tiempo. Se detemina a donde va el retiro de caja.
+
+DIAPOSITIVA 69
+Componentes
+ de Cartera de Cheques
+Pantalla Inicial:
+Fecha de emision- Buscador
+Fecha de cobro - Buscador
+Numero de cheque - Buscador de parciales
+Importe - Buscador
+Cliente - Buscador
+Listado de cheques con: Lupa para ver detalles del cheque: F. Emision - Fecha Venc. - Numero de cheque - importe - dador - titular)
+Lapiz para editar, solo el perfil de admin puede editar
+Eliminar, 
+solo el perfil de admin puede eliminar
+
+DIAPOSITIVA 70
+3.1.5 Movimientos Cartera de Cheques
+Muestra los ingresos y egresos de cheques de cartera
+3.1.6 Alta Formas de Pago y Cobranza
+Cheques
+Transferencia
+Mercado Pago
+Otras formas alternativas de pago
+Efectivo
+Alta componentes de retencion de Ingresos Brutos (Jurisdicciones)
+Alta componentes de percepciones de Ingresos Brutos (Jurisdicciones)
+Alta componentes de percepcion de Ganancia
+Alta componentes de retencion de IVA
+Alta de componentes de retencion y percepcion de seguridad social
+
+DIAPOSITIVA 71
+3.1.7 Alta Bancos
+Alta de todos los bancos que operan en Argentina. Listado (Desplegable con buscador)
+3.1.8 Movimientos Bancarios
+Muestra ingresos y egresas de una determinada cuenta bancaria (considerar multiples cuenta/consultas)
+3.1.9 Iva Ventas
+Reporte de comprobantes de ventas con IVA (se alimenta de Facturas de venta A,B,C)
+3.1.10 Iva Compras
+Reporte de comprobantes de compra con IVA (se alimenta de facturas de compra, A,B,C)
+3.1.11 Alta Tajetas de Credito
+Alta de todas las tarjetas de credito que operan en Argentina. (Desplegable con buscador
+
+DIAPOSITIVA 72
+3.1.12 Cuentas a Cobrar
+Lista los saldos en cuentas corrientes de Clientes, permite el ingreso indiviual a cada cuenta) A, B, X
+3.1.13 Cuentas a Pagar
+Lista los saldos en cuentas corrientes de proveedores, permite el ingreso indiviual a cada cuenta) A, C, X
+3.1.15 Retencion de IIBB
+3.1.14 Percepcion de IIBB
+3.1.16 Retencion de Ganancias
+3.1.12 Retenciones de IVA
+3.1.12 Retencion de Seguridad social
+Monto adicional facturado por clientes agentes de percepcion en una  determinada jurisdiccion
+Monto adicional facturado por proveedores agente de retencion de una determinada jurisdiccion
+Monto descontado de un pago por un agente de retencion que genera credito fiscal
+Monto descontado de un pago por un agente de retencion que genera credito fiscal
+Monto descontado de un pago por un agente de retencion que genera credito fiscal
+
+DIAPOSITIVA 73
+PRODUCTOS/ARTICULOS (SKU)
+*Madre-Hijo-Nieto (recomendado para vendedores en Mercado Libre):
+Madre: Codigo Primario (con un Buscados deben desplegarse todos los hijos y nietos)
+Hijo: Subcodigo Secunadario (Con un Buscador deben desplegarse todos los nietos)
+Nieto: Subcodigo Terciario
+*Numerica: 12345
+*Alfabetica ABCDE
+*Alfanumerica a34h87
+Boton de seleccion
+Determinan y alimentan movimientos de 
+Stock
+
+DIAPOSITIVA 74
+Rubros y Subrubros
+Rubros y Subrubro: Son marcas que distinguen y agrupan a un conjunto de productos
+
+DIAPOSITIVA 75
+Carga Masiva de SKU
+El sistema debe preever una suba masiva de Productos/SKU desde un xlsx con las siguientes caracteristicas:
+SKU
+Descripcion
+Rubro
+Subrubro
+IVA
+Codigo de barras
+Stock Minimo
+Stock Real
+Proveedor
+Acepta Stock Negativo
+Marca
+Modelo
+Utiliza variantes
+
+DIAPOSITIVA 76
+MODULO CONTABLE
+Plan de Cuentas: 
+Un plan de cuentas es una lista ordenada de todas las cuentas contables que usa una empresa
+, identificadas con nombres y códigos para registrar sus operaciones y presentar sus informes financieros.
+Cuentas Contables:
+Activo
+Pasivo
+Patrimonio neto
+Ingresos y gastos
+Libro diario: El libro diario es el principal registro contable de una empresa donde se anotan, día a día y de forma cronológica, todas las transacciones económicas que ocurren en el negocio (compras, ventas, pagos y cobros). Cada operación se registra mediante un asiento contable
+
+DIAPOSITIVA 77
+MODULO CONTABLE
+Configuracion de cuentas: 
+Una configuración de cuentas contables es el proceso de organizar, clasificar y asociar las cuentas financieras que una empresa usará para registrar sus operaciones
+. Esto incluye definir las cuentas principales, las subcuentas y las reglas automáticas para que el sistema sepas dónde contabilizar cada venta, gasto o pago.
+Libro mayor: 
+El 
+libro mayor
+ es un documento de contabilidad que agrupa los movimientos de cada cuenta de una empresa por separado, mostrando el 
+saldo actualizado
+, el 
+Debe
+ y el 
+Haber
+. Se alimenta de los datos del 
+Libro Diario
+ y se representa de forma clásica en una "T" o en cinco columnas básicas: Fecha, Concepto, Debe, Haber, Saldo.
+Sumar saldos: 
+El 
+balance de sumas y saldos
+ (o balance de comprobación) 
+es un reporte que junta todas las cuentas del libro mayor para mostrar los totales del Debe, del Haber y la diferencia de cada una
+. Su función principal es 
+comprobar que los registros están cuadrados
+ y que no hay errores matemáticos antes de hacer el balance
+
+DIAPOSITIVA 78
+8. 
+Stock
+Stock - Listado - Buscador por Articulo o Descripcion del producto
+Movimientos de stock. Muestra entradas y salidas de stock
+Ajuste de Stock manual. Debe ser autorizado por un admin
+
+DIAPOSITIVA 79
+Deposito/Logistica
+Pedido de Venta (Se carga el pedido completo del cliente)
+Remito: El remito tiene triple funcion, descuenta mercaderia del pedido de venta (que quedara total o parcialmente completado), descuenta 
+STOCK
+, permite emitir la factura en dos clicks. (Sale del Pedido de Venta)
+Factura  (sale del remito)
+
+DIAPOSITIVA 80
+Importaciones (Suba masiva de informacion)
+cambiar el orden y agregar “Saldos Clientes” y “Saldos proveedores”
+
+DIAPOSITIVA 81
+Clientes
+: Permite cargar masivamente los clientes
+Proveedores
+: Permite cargar masivamente los proveedores
+Productos
+: Permite cargar masivamente los productos y sus caracteristicas.
+Variante
+ (acorde a empresa, ej. textil: Talle y Color), sirve para subir masivamente variantes si el clientes ha elegido el formato madre-hijo-nieto para sus productos
+Stock:
+ Permite cargar el stock actualizado en forma masiva. Solo lo puede autorizar un admin
+Precios
+: Permite subir listas de precio masivamente.
+Combos
+: Permite cargar combos de mercaderia masivamente.
+Pedido:
+ Permite carga una nota de pedido en forma masiva
+Orden de compra: 
+Permite la carga masiva de una orden de compra
+e-commerce:
+Vincula los productos del sistema con las integraciones de e-commerce en forma masiva (Coincidencia de sku, MELI, Tienda Nube, etc)
+
+DIAPOSITIVA 82
+Saldos Clientes: 
+Permite la carga masiva de saldos de clientes
+Saldos proveedores:
+ Permite la carga masiva de saldo de proveedores
+Compras
+: Permite la carga masiva de compras
+Pagos:
+ Permite la carga masiva de pagos
+Listas de precios: 
+Permite cargar y actulizar varias listas de precio en simultaneo (Permite elegir a que sucursal, de haberla, pertenece la lista de precios)
+
+DIAPOSITIVA 83
+Como funciona cada importacion
+Se creara un xlsx modelo para cada tipo de importacion, este xlsx debe contar con columnas obligatorias y no obligatorias dependiendo la informacion requerida para cumplir con el objetivo.
+Ese xlsx se subira al sistema que leera las columnas para detectar errores y se
+ñalara los errores en un archivo descargable donde diga donde y cuales son los errores.
+Los items con errores no se subiran al sistema
+
+DIAPOSITIVA 84
+
+
+DIAPOSITIVA 85
+Reportes
+Cuenta corriente clientes
+Cuenta corriente proveedores
+Saldo clientes
+Saldo proveedores
+Ventas por cliente
+Ventas por Rubro
+Iva Ventas
+Iva Compras
+Reporte Gastos por Centro de Costos
+
+DIAPOSITIVA 86
+VENDEDORES
+Un 
+proveedor
+ se puede definir como 
+vendedor. 
+Si un proveedor es vendedor recibe 
+pagos
+ y 
+cobranzas.
+Pagos:
+ Recibe pagos desde el modulo de 
+pago a proveedores
+Cobranzas:
+ Recibe un 
+porcentaje prederminado 
+de las 
+cobranzas 
+a sus 
+Clientes Asignados
+
+DIAPOSITIVA 87
+Lista de Precios
+Lista de precios
+: Define una o varias listas de precios aplicables a 
+clientes
+ por defecto y a 
+Facturacion
+ por eleccion

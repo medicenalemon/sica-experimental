@@ -1,0 +1,376 @@
+Browser tab: 4, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.48:3053/contabilidad/conciliacion-iva".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.48:3053/contabilidad/conciliacion-iva
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.48:3053/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.48:3053/
+				7 button (collapsed) Description: Clientes, Secondary Actions: Expand
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (collapsed) Description: Finanzas, Secondary Actions: Expand
+				10 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				11 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				12 button (expanded) Description: Contabilidad, Secondary Actions: Collapse
+				13 container
+					14 link Description: Plan de cuentas, Value: 127.0.0.48:3053/contabilidad/plan
+					15 link Description: Configuración de cuentas, Value: 127.0.0.48:3053/contabilidad/configuracion
+					16 link Description: Libro diario, Value: 127.0.0.48:3053/contabilidad/diario
+					17 link Description: Libro mayor, Value: 127.0.0.48:3053/contabilidad/mayor
+					18 link Description: Conciliación de IVA compras, Value: 127.0.0.48:3053/contabilidad/conciliacion-iva
+					19 link Description: Sumas y saldos, Value: 127.0.0.48:3053/contabilidad/balance
+					20 link Description: Preparación de estados, Value: 127.0.0.48:3053/contabilidad/estados
+					21 link Description: Moneda de cierre y RECPAM, Value: 127.0.0.48:3053/contabilidad/moneda-cierre
+					22 link Description: Bienes de uso y depreciaciones, Value: 127.0.0.48:3053/contabilidad/bienes-de-uso
+					23 link Description: Valuación de inventario, Value: 127.0.0.48:3053/contabilidad/inventario
+					24 link Description: Servicios devengados, Value: 127.0.0.48:3053/contabilidad/servicios-devengados
+					25 link Description: Ingresos devengados, Value: 127.0.0.48:3053/contabilidad/ingresos-devengados
+					26 link Description: Cierres de períodos, Value: 127.0.0.48:3053/contabilidad/cierres
+					27 link Description: Cierre de resultados, Value: 127.0.0.48:3053/contabilidad/cierre-resultados
+					28 link Description: Apertura de ejercicio, Value: 127.0.0.48:3053/contabilidad/apertura-ejercicio
+				29 button (collapsed) Description: Producción, Secondary Actions: Expand
+				30 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				31 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				32 button (collapsed) Description: Administración, Secondary Actions: Expand
+				33 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				34 link Description: Configuración, Value: 127.0.0.48:3053/configuracion
+				35 link Description: Acerca de, Value: 127.0.0.48:3053/acerca-de
+			36 text Versión experimental
+			37 button Colapsar menú
+		38 container
+			39 text SICA Textil · Ajuste anual IVA
+			40 container
+				41 text Responsable Inscripto  ·  Tucumán
+			42 container
+				43 text Sucursal
+				44 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					45 menu
+						46 (selected) Todas las unidades
+						47 Casa Central
+						48 Sucursal de ensayo IVA
+			49 link Description: Acerca de y fuentes, Value: 127.0.0.48:3053/acerca-de
+			50 text AD
+			51 button Cerrar sesión
+			52 text Base compartida · Versión 4 · Datos en el servidor  · Comprobantes sin autorización ARCA
+			53 text SICA / GESTIÓN INTEGRAL
+			54 heading Conciliación contable de IVA compras, Value: 1
+				55 text Conciliación contable de IVA compras
+			56 text Compras originales, ajustes manuales y crédito fiscal preparado. Revisión consolidada de todas las sucursales.
+			57 link Description: Ver preparaciones fiscales, Value: 127.0.0.48:3053/finanzas/impuestos
+			58 heading Fuente fiscal y corte de revisión, Value: 2
+				59 text Fuente fiscal y corte de revisión
+			60 text Elegí una preparación mensual INT-IC o un ajuste anual INT-IA vigente de un período terminado. La conciliación compara sus importes con los movimientos en las cuentas de IVA que selecciones; conserva diferencias y respaldos sin contabilizar automáticamente.
+			61 container
+				62 text Preparación fiscal para conciliar
+				63 pop up button (collapsed, settable) Description: Preparación fiscal para conciliar, Value: Anual · 2025-01-01 a 2025-12-31 · INT-IA-00000001, Secondary Actions: Expand
+					64 menu
+						65 Seleccionar fuente…
+						66 Mensual · 2025-01 · INT-IC-00000001
+						67 Mensual · 2025-06 · INT-IC-00000002
+						68 Mensual · 2025-12 · INT-IC-00000003
+						69 (selected) Anual · 2025-01-01 a 2025-12-31 · INT-IA-00000001
+			70 text Seleccioná el último ajuste anual de IVA con fuentes vigentes.
+			71 button (disabled) Preparar conciliación de IVA
+			72 heading Conciliaciones de IVA conservadas, Value: 2
+				73 text Conciliaciones de IVA conservadas
+			74 text field (settable) Buscar registros
+			75 text 2  registros
+			76 button XLSX
+			77 button PDF
+			78 table
+				79 row
+					80 cell
+						81 text CONSTANCIA
+					82 cell
+						83 text FUENTE FISCAL
+					84 cell
+						85 text REFERENCIA
+					86 cell
+						87 text CORTE CONTABLE
+					88 cell
+						89 text DIFERENCIA
+					90 cell
+						91 text RESULTADO ARITMÉTICO
+					92 cell
+						93 text RESPONSABLE
+					94 cell
+						95 text ESTADO
+					96 cell
+						97 text DETALLE
+				98 row
+					99 cell
+						100 text INT-IV-00000002
+					101 cell
+						102 text INT-IA-00000001
+					103 cell
+						104 text IVA-MAYOR-UI-02
+					105 cell
+						106 text 31/12/2025
+					107 cell
+						108 text $ 0,00
+					109 cell
+						110 text Sin diferencia aritmética
+					111 cell
+						112 text Administrador
+					113 cell
+						114 text Fuentes cambiaron · revisar
+					115 cell
+						116 button Ver conciliación de IVA
+				117 row
+					118 cell
+						119 text INT-IV-00000001
+					120 cell
+						121 text INT-IA-00000001
+					122 cell
+						123 text IVA-MAYOR-UI-01
+					124 cell
+						125 text 31/12/2025
+					126 cell
+						127 text $ 37,18
+					128 cell
+						129 text Con diferencia pendiente
+					130 cell
+						131 text Administrador
+					132 cell
+						133 text Versión anterior
+					134 cell
+						135 button Ver conciliación de IVA
+			136 container Conciliación IVA · INT-IV-00000002
+				137 container
+					138 heading Conciliación IVA · INT-IV-00000002, Value: 2
+						139 text Conciliación IVA · INT-IV-00000002
+					140 button Cerrar
+				141 container
+					142 text IVA-MAYOR-UI-02  ·  Administrador  ·  17/10/2026, 01:36:13
+				143 text Las fuentes actuales cambiaron. Este detalle y el JSON conservan la revisión anterior; prepará otra versión si corresponde.
+				144 container
+					145 text SICA Textil · Ajuste anual IVA  · CUIT  30712345671
+				146 container
+					147 text Anual  ·  01/01/2025  a  31/12/2025  · fuente  INT-IA-00000001  · corte contable  31/12/2025 .
+				148 text Crédito fiscal preparado / declarado
+				149 text $ 65,72
+				150 text Movimiento contable vinculado
+				151 text $ 65,72
+				152 text Diferencia por revisar
+				153 text $ 0,00
+				154 text Sin diferencia aritmética
+				155 container
+					156 text Cuentas elegidas:  1.1.4 · IVA crédito fiscal .
+				157 container
+					158 text Compras en las cuentas elegidas:  $ 102,90 . Ajustes manuales y reversiones vinculados:  -$ 37,18 .
+				159 container
+					160 text Crédito mensual preparado:  $ 59,05 ; diferencia de cómputos declarados:  $ 0,00 ; ajuste anual total:  $ 6,67 .
+				161 text La diferencia compara movimientos seleccionados con el crédito fiscal preparado o declarado. No representa el saldo total del mayor ni el saldo de una declaración. No se registró un asiento mediante esta conciliación.
+				162 text 3  registros
+				163 button XLSX
+				164 button PDF
+				165 table
+					166 row
+						167 cell
+							168 text MES FISCAL
+						169 cell
+							170 text PREPARACIÓN
+						171 cell
+							172 text CRÉDITO PREPARADO
+						173 cell
+							174 text DIFERENCIA DECLARADA
+						175 cell
+							176 text CÓMPUTO ANTES DEL AJUSTE ANUAL
+					177 row
+						178 cell
+							179 text 2025-01
+						180 cell
+							181 text INT-IC-00000001
+						182 cell
+							183 text $ 20,50
+						184 cell
+							185 text $ 0,00
+						186 cell
+							187 text $ 20,50
+					188 row
+						189 cell
+							190 text 2025-06
+						191 cell
+							192 text INT-IC-00000002
+						193 cell
+							194 text $ 21,75
+						195 cell
+							196 text $ 0,00
+						197 cell
+							198 text $ 21,75
+					199 row
+						200 cell
+							201 text 2025-12
+						202 cell
+							203 text INT-IC-00000003
+						204 cell
+							205 text $ 16,80
+						206 cell
+							207 text $ 0,00
+						208 cell
+							209 text $ 16,80
+				210 text 4  registros
+				211 button XLSX
+				212 button PDF
+				213 table
+					214 row
+						215 cell
+							216 text COMPRA / NOTA
+						217 cell
+							218 text EMISIÓN
+						219 cell
+							220 text FECHA CONTABLE
+						221 cell
+							222 text SUCURSAL
+						223 cell
+							224 text DEBE ELEGIDO
+						225 cell
+							226 text HABER ELEGIDO
+						227 cell
+							228 text MOVIMIENTO NETO
+						229 cell
+							230 text IVA DISCRIMINADO FISCAL
+					231 row
+						232 cell
+							233 text INT-FC-A-00001-00000001
+						234 cell
+							235 text 15/01/2025
+						236 cell
+							237 text 15/01/2025
+						238 cell
+							239 text Casa Central
+						240 cell
+							241 text $ 42,00
+						242 cell
+							243 text $ 0,00
+						244 cell
+							245 text $ 42,00
+						246 cell
+							247 text $ 42,00
+					248 row
+						249 cell
+							250 text INT-FC-A-00001-00000002
+						251 cell
+							252 text 15/06/2025
+						253 cell
+							254 text 15/06/2025
+						255 cell
+							256 text Casa Central
+						257 cell
+							258 text $ 42,00
+						259 cell
+							260 text $ 0,00
+						261 cell
+							262 text $ 42,00
+						263 cell
+							264 text $ 42,00
+					265 row
+						266 cell
+							267 text INT-NC-A-00001-00000001
+						268 cell
+							269 text 20/06/2025
+						270 cell
+							271 text 20/06/2025
+						272 cell
+							273 text Casa Central
+						274 cell
+							275 text $ 0,00
+						276 cell
+							277 text $ 2,10
+						278 cell
+							279 text -$ 2,10
+						280 cell
+							281 text -$ 2,10
+					282 row
+						283 cell
+							284 text INT-FC-A-00001-00000003
+						285 cell
+							286 text 15/12/2025
+						287 cell
+							288 text 15/12/2025
+						289 cell
+							290 text Casa Central
+						291 cell
+							292 text $ 21,00
+						293 cell
+							294 text $ 0,00
+						295 cell
+							296 text $ 21,00
+						297 cell
+							298 text $ 21,00
+				299 text 2  registros
+				300 button XLSX
+				301 button PDF
+				302 table
+					303 row
+						304 cell
+							305 text ORIGEN
+						306 cell
+							307 text FECHA CONTABLE
+						308 cell
+							309 text CONCEPTO DEL ASIENTO
+						310 cell
+							311 text SUCURSAL
+						312 cell
+							313 text MOVIMIENTO EN IVA
+						314 cell
+							315 text RESPALDO
+						316 cell
+							317 text FUNDAMENTO
+					318 row
+						319 cell
+							320 text Manual
+						321 cell
+							322 text 31/01/2025
+						323 cell
+							324 text Ajuste de IVA de enero · ensayo contable
+						325 cell
+							326 text Casa Central
+						327 cell
+							328 text -$ 21,50
+						329 cell
+							330 text RESPALDO-UI-ENERO
+						331 cell
+							332 text Ajuste manual sintético revisado: la constancia vincula el asiento existente, sin generar un nuevo registro contable.
+					333 row
+						334 cell
+							335 text Manual
+						336 cell
+							337 text 31/12/2025
+						338 cell
+							339 text Diferencia anual de IVA · ensayo contable
+						340 cell
+							341 text Casa Central
+						342 cell
+							343 text -$ 15,68
+						344 cell
+							345 text RESPALDO-UI-ANUAL
+						346 cell
+							347 text Ajuste manual sintético revisado: la constancia vincula el asiento existente, sin generar un nuevo registro contable.
+				348 text 1  registros
+				349 button XLSX
+				350 button PDF
+				351 table
+					352 row
+						353 cell
+							354 text SUCURSAL
+						355 cell
+							356 text COMPRAS ORIGINALES
+						357 cell
+							358 text AJUSTES VINCULADOS
+						359 cell
+							360 text MOVIMIENTO VINCULADO
+					361 row
+						362 cell
+							363 text Casa Central
+						364 cell
+							365 text $ 102,90
+						366 cell
+							367 text -$ 37,18
+						368 cell
+							369 text $ 65,72
+				370 text La comparación fiscal es consolidada. No se distribuye automáticamente el prorrateo ni el ajuste anual entre sucursales.
+				371 button (collapsed) Partida doble y alcance de la revisión, Secondary Actions: Expand
+					372 text Partida doble y alcance de la revisión
+				373 button Descargar conciliación IVA JSON
+
+The focused UI element is 140 button Cerrar

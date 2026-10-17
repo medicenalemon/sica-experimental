@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-08",
+  "module": "Asignación revisada de notas de compras recibidas y facturadas antes de la apertura",
+  "costVersion": 3,
+  "tests": {
+    "passed": 176,
+    "failed": 0,
+    "suites": [
+      {
+        "name": "Dominio",
+        "tests": 112,
+        "log": "/tmp/sica-opening-notes-domain.log"
+      },
+      {
+        "name": "Archivos y QR",
+        "tests": 13,
+        "log": "/tmp/sica-opening-notes-files.log"
+      },
+      {
+        "name": "HTTP y persistencia",
+        "tests": 29,
+        "log": "/tmp/sica-opening-notes-http.log"
+      },
+      {
+        "name": "Solicitudes fiscales sintéticas",
+        "tests": 22,
+        "log": "/tmp/sica-opening-notes-fiscal.log"
+      }
+    ]
+  },
+  "checks": {
+    "lint": "passed",
+    "sharedBuild": "passed",
+    "serverBuild": "passed",
+    "gitDiffCheck": "passed"
+  },
+  "uiVerification": {
+    "origin": "http://127.0.0.2:3007/contabilidad/inventario",
+    "revision": 2,
+    "cutDate": "2026-10-03",
+    "synthetic": true,
+    "inventoryARS": 490,
+    "costOfSalesAdjustmentARS": -10,
+    "assignmentEnteredReviewedAndPostedThroughUI": true,
+    "preservedAfterServerRestart": true,
+    "screenshot": "La API del navegador no pudo capturar la pantalla."
+  },
+  "artifact": "output/inventory-opening-note-example.json",
+  "rules": "docs/inventario-valorizado.md",
+  "limits": [
+    "Recepciones anteriores facturadas después de la apertura pendientes de conciliación con devengamiento",
+    "Devoluciones físicas integradas pendientes",
+    "Conversión completa, valor recuperable e inflación pendientes",
+    "Integración fiscal productiva pendiente"
+  ],
+  "goalComplete": false
+}

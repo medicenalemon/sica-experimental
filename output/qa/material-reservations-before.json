@@ -1,0 +1,96 @@
+{
+  "stockMoves": [
+    {
+      "id": "e5215973-a317-4152-90fe-70e44ce6cd51",
+      "date": "2026-10-13",
+      "productId": "7865e717-5011-49fb-8f48-05eb2c979577",
+      "depositId": "principal",
+      "quantity": 40,
+      "reason": "Stock inicial de ejemplo (sin valuación contable)",
+      "documentId": "",
+      "branchId": "central"
+    },
+    {
+      "id": "ea4382bd-d19a-4c7d-b3a8-4f6af7769436",
+      "date": "2026-10-13",
+      "productId": "aab50bef-37a9-4ab6-bb1a-cff267d6fd5c",
+      "depositId": "principal",
+      "quantity": 20,
+      "reason": "Stock inicial de ejemplo (sin valuación contable)",
+      "documentId": "",
+      "branchId": "central"
+    }
+  ],
+  "documents": [],
+  "entries": [],
+  "productionPlans": [
+    {
+      "id": "a6eb4088-d5fc-404e-9363-90ad89e8466b",
+      "scheduleVersion": 2,
+      "orderId": "reserved-order",
+      "branchId": "central",
+      "routeId": "reserved-route",
+      "routeName": "Fabricación de ensayo",
+      "workCenterId": "reserved-center",
+      "workCenterName": "Taller de ensayo",
+      "productId": "aab50bef-37a9-4ab6-bb1a-cff267d6fd5c",
+      "productUnit": "Unidad",
+      "quantity": 2,
+      "dailyHours": 8,
+      "workDays": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "nonWorkingDates": [],
+      "preparedBy": "Administrador",
+      "preparedAt": "2026-10-13T20:25:42.764Z",
+      "operations": [
+        {
+          "id": "0aff99d2-82a3-4bec-aa2b-9795338e0360",
+          "sequence": 1,
+          "name": "Fabricar",
+          "plannedHours": 2,
+          "bookings": [
+            {
+              "date": "2026-10-13",
+              "hours": 2,
+              "startHour": 0
+            }
+          ],
+          "calendar": {
+            "workCenterId": "reserved-center",
+            "workCenterName": "Taller de ensayo",
+            "dailyHours": 8,
+            "dayStart": 0,
+            "workDays": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "nonWorkingDates": []
+          },
+          "status": "Pendiente",
+          "actualHours": 0
+        }
+      ],
+      "materials": [
+        {
+          "productId": "7865e717-5011-49fb-8f48-05eb2c979577",
+          "depositId": "principal",
+          "quantity": 3,
+          "unit": "Unidad",
+          "name": "Remera de algodón · M · Negro"
+        }
+      ]
+    }
+  ]
+}

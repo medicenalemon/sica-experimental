@@ -1,0 +1,2605 @@
+{
+  "date": "2026-10-09",
+  "synthetic": true,
+  "tests": {
+    "domain": 186,
+    "files": 13,
+    "http": 35,
+    "fiscal": 22,
+    "total": 256
+  },
+  "browser": {
+    "selectedBranch": "Casa Central; el cierre incluyó ambas sucursales",
+    "review": "Ganancia 650 ARS en Casa Central, pérdida 100 ARS en la otra sucursal y resultado consolidado 550 ARS",
+    "saved": "INT-CR-00000001 y bloqueo INT-CC-00000001 conservados con asientos por sucursal",
+    "screenshot": "Captura no disponible; no se creó una imagen simulada"
+  },
+  "checks": [
+    {
+      "database": "var/qa-year-end.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados",
+      "yearEnd": {
+        "record": {
+          "reference": "Cierre sintético de resultados QA 2026",
+          "reason": "Prueba nominal con ingresos de 1000 ARS, gastos de 350 ARS en Casa Central y pérdida de 100 ARS en otra sucursal. Resultado consolidado 550 ARS. Sin estados profesionales ni presentación fiscal.",
+          "resultsAccountId": "3.2",
+          "acknowledged": [
+            "year-end"
+          ],
+          "review": "{\"reference\":\"Cierre sintético de resultados QA 2026\",\"reason\":\"Prueba nominal con ingresos de 1000 ARS, gastos de 350 ARS en Casa Central y pérdida de 100 ARS en otra sucursal. Resultado consolidado 550 ARS. Sin estados profesionales ni presentación fiscal.\",\"date\":\"2026-12-31\",\"exerciseStart\":\"2026-01-01\",\"resultsAccountId\":\"3.2\",\"result\":55000,\"annual\":{\"from\":\"2026-01-01\",\"to\":\"2026-12-31\",\"branchId\":\"all\",\"rows\":[{\"accountId\":\"1.1.1\",\"group\":\"Activo\",\"opening\":0,\"debit\":100000,\"credit\":35000,\"closing\":65000},{\"accountId\":\"2.1.1\",\"group\":\"Pasivo\",\"opening\":0,\"debit\":0,\"credit\":10000,\"closing\":-10000},{\"accountId\":\"4.1\",\"group\":\"Ingresos\",\"opening\":0,\"debit\":0,\"credit\":100000,\"closing\":-100000},{\"accountId\":\"5.1\",\"group\":\"Gastos\",\"opening\":0,\"debit\":45000,\"credit\":0,\"closing\":45000}],\"totals\":{\"openingDebit\":0,\"openingCredit\":0,\"debit\":145000,\"credit\":145000,\"closingDebit\":110000,\"closingCredit\":110000},\"entryIds\":[\"c532f78c-a3ad-4337-b836-5648dd3e8526\",\"4e3a612d-41dd-40d6-b4ce-8770cfb7d80f\",\"69cdbd00-597d-4674-8863-8cf6db5e4d5d\"]},\"branches\":[{\"id\":\"central\",\"result\":65000,\"balance\":{\"from\":\"2026-01-01\",\"to\":\"2026-12-31\",\"branchId\":\"central\",\"rows\":[{\"accountId\":\"1.1.1\",\"group\":\"Activo\",\"opening\":0,\"debit\":100000,\"credit\":35000,\"closing\":65000},{\"accountId\":\"4.1\",\"group\":\"Ingresos\",\"opening\":0,\"debit\":0,\"credit\":100000,\"closing\":-100000},{\"accountId\":\"5.1\",\"group\":\"Gastos\",\"opening\":0,\"debit\":35000,\"credit\":0,\"closing\":35000}],\"totals\":{\"openingDebit\":0,\"openingCredit\":0,\"debit\":135000,\"credit\":135000,\"closingDebit\":100000,\"closingCredit\":100000},\"entryIds\":[\"c532f78c-a3ad-4337-b836-5648dd3e8526\",\"4e3a612d-41dd-40d6-b4ce-8770cfb7d80f\"]},\"entry\":[{\"accountId\":\"4.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"5.1\",\"debit\":0,\"credit\":35000},{\"accountId\":\"3.2\",\"debit\":0,\"credit\":65000}]},{\"id\":\"annual-north\",\"result\":-10000,\"balance\":{\"from\":\"2026-01-01\",\"to\":\"2026-12-31\",\"branchId\":\"annual-north\",\"rows\":[{\"accountId\":\"2.1.1\",\"group\":\"Pasivo\",\"opening\":0,\"debit\":0,\"credit\":10000,\"closing\":-10000},{\"accountId\":\"5.1\",\"group\":\"Gastos\",\"opening\":0,\"debit\":10000,\"credit\":0,\"closing\":10000}],\"totals\":{\"openingDebit\":0,\"openingCredit\":0,\"debit\":10000,\"credit\":10000,\"closingDebit\":10000,\"closingCredit\":10000},\"entryIds\":[\"69cdbd00-597d-4674-8863-8cf6db5e4d5d\"]},\"entry\":[{\"accountId\":\"5.1\",\"debit\":0,\"credit\":10000},{\"accountId\":\"3.2\",\"debit\":10000,\"credit\":0}]}],\"before\":{\"reference\":\"Cierre sintético de resultados QA 2026\",\"reason\":\"Prueba nominal con ingresos de 1000 ARS, gastos de 350 ARS en Casa Central y pérdida de 100 ARS en otra sucursal. Resultado consolidado 550 ARS. Sin estados profesionales ni presentación fiscal.\",\"balance\":{\"from\":\"2026-01-01\",\"to\":\"2026-12-31\",\"branchId\":\"all\",\"rows\":[{\"accountId\":\"1.1.1\",\"group\":\"Activo\",\"opening\":0,\"debit\":100000,\"credit\":35000,\"closing\":65000},{\"accountId\":\"2.1.1\",\"group\":\"Pasivo\",\"opening\":0,\"debit\":0,\"credit\":10000,\"closing\":-10000},{\"accountId\":\"4.1\",\"group\":\"Ingresos\",\"opening\":0,\"debit\":0,\"credit\":100000,\"closing\":-100000},{\"accountId\":\"5.1\",\"group\":\"Gastos\",\"opening\":0,\"debit\":45000,\"credit\":0,\"closing\":45000}],\"totals\":{\"openingDebit\":0,\"openingCredit\":0,\"debit\":145000,\"credit\":145000,\"closingDebit\":110000,\"closingCredit\":110000},\"entryIds\":[\"c532f78c-a3ad-4337-b836-5648dd3e8526\",\"4e3a612d-41dd-40d6-b4ce-8770cfb7d80f\",\"69cdbd00-597d-4674-8863-8cf6db5e4d5d\"]},\"branches\":[{\"id\":\"central\",\"balance\":{\"from\":\"2026-01-01\",\"to\":\"2026-12-31\",\"branchId\":\"central\",\"rows\":[{\"accountId\":\"1.1.1\",\"group\":\"Activo\",\"opening\":0,\"debit\":100000,\"credit\":35000,\"closing\":65000},{\"accountId\":\"4.1\",\"group\":\"Ingresos\",\"opening\":0,\"debit\":0,\"credit\":100000,\"closing\":-100000},{\"accountId\":\"5.1\",\"group\":\"Gastos\",\"opening\":0,\"debit\":35000,\"credit\":0,\"closing\":35000}],\"totals\":{\"openingDebit\":0,\"openingCredit\":0,\"debit\":135000,\"credit\":135000,\"closingDebit\":100000,\"closingCredit\":100000},\"entryIds\":[\"c532f78c-a3ad-4337-b836-5648dd3e8526\",\"4e3a612d-41dd-40d6-b4ce-8770cfb7d80f\"]}},{\"id\":\"annual-north\",\"balance\":{\"from\":\"2026-01-01\",\"to\":\"2026-12-31\",\"branchId\":\"annual-north\",\"rows\":[{\"accountId\":\"2.1.1\",\"group\":\"Pasivo\",\"opening\":0,\"debit\":0,\"credit\":10000,\"closing\":-10000},{\"accountId\":\"5.1\",\"group\":\"Gastos\",\"opening\":0,\"debit\":10000,\"credit\":0,\"closing\":10000}],\"totals\":{\"openingDebit\":0,\"openingCredit\":0,\"debit\":10000,\"credit\":10000,\"closingDebit\":10000,\"closingCredit\":10000},\"entryIds\":[\"69cdbd00-597d-4674-8863-8cf6db5e4d5d\"]}}],\"inventoryBatchId\":\"\",\"warnings\":[{\"id\":\"year-end\",\"message\":\"Es un bloqueo operativo de fin de ejercicio. Todavía requiere cierre de resultados, estados contables, notas y ajustes normativos revisados.\",\"reference\":\"2026-12-31\"}],\"sources\":{\"entries\":[{\"id\":\"c532f78c-a3ad-4337-b836-5648dd3e8526\",\"date\":\"2026-10-01\",\"concept\":\"Ingreso nominal sintético\",\"branchId\":\"central\",\"documentId\":\"\",\"lines\":[{\"accountId\":\"1.1.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"4.1\",\"debit\":0,\"credit\":100000}]},{\"id\":\"4e3a612d-41dd-40d6-b4ce-8770cfb7d80f\",\"date\":\"2026-10-02\",\"concept\":\"Gasto nominal sintético\",\"branchId\":\"central\",\"documentId\":\"\",\"lines\":[{\"accountId\":\"5.1\",\"debit\":35000,\"credit\":0},{\"accountId\":\"1.1.1\",\"debit\":0,\"credit\":35000}]},{\"id\":\"69cdbd00-597d-4674-8863-8cf6db5e4d5d\",\"date\":\"2026-10-02\",\"concept\":\"Gasto de sucursal sintético\",\"branchId\":\"annual-north\",\"documentId\":\"\",\"lines\":[{\"accountId\":\"5.1\",\"debit\":10000,\"credit\":0},{\"accountId\":\"2.1.1\",\"debit\":0,\"credit\":10000}]}],\"documents\":[],\"stock\":[],\"treasury\":[]}}}",
+          "id": "e0a81430-8e8d-48d1-b9f8-80b89870c963",
+          "number": "INT-CR-00000001",
+          "date": "2026-12-31",
+          "exerciseStart": "2026-01-01",
+          "exerciseEnd": "2026-12-31",
+          "previousClosedUntil": "",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-09T19:28:31.669Z",
+          "entryIds": [
+            "9d2eb951-0c22-4c08-aee7-7a1a78fef5fa",
+            "09d241eb-8ad8-4a59-8927-c04bd0ec1e48"
+          ],
+          "accountingCloseId": "16ff5bf6-2d45-4b8a-8015-222c9017f6c7",
+          "preview": {
+            "reference": "Cierre sintético de resultados QA 2026",
+            "reason": "Prueba nominal con ingresos de 1000 ARS, gastos de 350 ARS en Casa Central y pérdida de 100 ARS en otra sucursal. Resultado consolidado 550 ARS. Sin estados profesionales ni presentación fiscal.",
+            "date": "2026-12-31",
+            "exerciseStart": "2026-01-01",
+            "resultsAccountId": "3.2",
+            "result": 55000,
+            "annual": {
+              "from": "2026-01-01",
+              "to": "2026-12-31",
+              "branchId": "all",
+              "rows": [
+                {
+                  "accountId": "1.1.1",
+                  "code": "1.1.1",
+                  "name": "Caja",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 100000,
+                  "credit": 35000,
+                  "closing": 65000
+                },
+                {
+                  "accountId": "1.1.2",
+                  "code": "1.1.2",
+                  "name": "Bancos",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.3",
+                  "code": "1.1.3",
+                  "name": "Deudores por ventas",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.4",
+                  "code": "1.1.4",
+                  "name": "IVA crédito fiscal",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.5",
+                  "code": "1.1.5",
+                  "name": "Valores a depositar",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.6",
+                  "code": "1.1.6",
+                  "name": "Retenciones sufridas",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.7",
+                  "code": "1.1.7",
+                  "name": "Percepciones sufridas",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.8",
+                  "code": "1.1.8",
+                  "name": "Cupones de tarjetas a cobrar",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "2.1.1",
+                  "code": "2.1.1",
+                  "name": "Proveedores",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 10000,
+                  "closing": -10000
+                },
+                {
+                  "accountId": "2.1.2",
+                  "code": "2.1.2",
+                  "name": "IVA débito fiscal",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "2.1.3",
+                  "code": "2.1.3",
+                  "name": "Retenciones a depositar",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "2.1.4",
+                  "code": "2.1.4",
+                  "name": "Percepciones a depositar",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "2.1.5",
+                  "code": "2.1.5",
+                  "name": "Cheques propios emitidos",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "3.1",
+                  "code": "3.1",
+                  "name": "Capital y saldos iniciales",
+                  "group": "Patrimonio neto",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "4.1",
+                  "code": "4.1",
+                  "name": "Ventas",
+                  "group": "Ingresos",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 100000,
+                  "closing": -100000
+                },
+                {
+                  "accountId": "5.1",
+                  "code": "5.1",
+                  "name": "Compras y gastos",
+                  "group": "Gastos",
+                  "opening": 0,
+                  "debit": 45000,
+                  "credit": 0,
+                  "closing": 45000
+                },
+                {
+                  "accountId": "5.2",
+                  "code": "5.2",
+                  "name": "Comisiones de vendedores",
+                  "group": "Gastos",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "5.3",
+                  "code": "5.3",
+                  "name": "Cargos de tarjetas",
+                  "group": "Gastos",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "3.2",
+                  "code": "3.2",
+                  "name": "Resultado del ejercicio sin asignar",
+                  "group": "Patrimonio neto",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                }
+              ],
+              "totals": {
+                "openingDebit": 0,
+                "openingCredit": 0,
+                "debit": 145000,
+                "credit": 145000,
+                "closingDebit": 110000,
+                "closingCredit": 110000
+              },
+              "entryIds": [
+                "c532f78c-a3ad-4337-b836-5648dd3e8526",
+                "4e3a612d-41dd-40d6-b4ce-8770cfb7d80f",
+                "69cdbd00-597d-4674-8863-8cf6db5e4d5d"
+              ]
+            },
+            "branches": [
+              {
+                "id": "central",
+                "result": 65000,
+                "balance": {
+                  "from": "2026-01-01",
+                  "to": "2026-12-31",
+                  "branchId": "central",
+                  "rows": [
+                    {
+                      "accountId": "1.1.1",
+                      "code": "1.1.1",
+                      "name": "Caja",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 100000,
+                      "credit": 35000,
+                      "closing": 65000
+                    },
+                    {
+                      "accountId": "1.1.2",
+                      "code": "1.1.2",
+                      "name": "Bancos",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.3",
+                      "code": "1.1.3",
+                      "name": "Deudores por ventas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.4",
+                      "code": "1.1.4",
+                      "name": "IVA crédito fiscal",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.5",
+                      "code": "1.1.5",
+                      "name": "Valores a depositar",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.6",
+                      "code": "1.1.6",
+                      "name": "Retenciones sufridas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.7",
+                      "code": "1.1.7",
+                      "name": "Percepciones sufridas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.8",
+                      "code": "1.1.8",
+                      "name": "Cupones de tarjetas a cobrar",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.1",
+                      "code": "2.1.1",
+                      "name": "Proveedores",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.2",
+                      "code": "2.1.2",
+                      "name": "IVA débito fiscal",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.3",
+                      "code": "2.1.3",
+                      "name": "Retenciones a depositar",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.4",
+                      "code": "2.1.4",
+                      "name": "Percepciones a depositar",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.5",
+                      "code": "2.1.5",
+                      "name": "Cheques propios emitidos",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "3.1",
+                      "code": "3.1",
+                      "name": "Capital y saldos iniciales",
+                      "group": "Patrimonio neto",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "4.1",
+                      "code": "4.1",
+                      "name": "Ventas",
+                      "group": "Ingresos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 100000,
+                      "closing": -100000
+                    },
+                    {
+                      "accountId": "5.1",
+                      "code": "5.1",
+                      "name": "Compras y gastos",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 35000,
+                      "credit": 0,
+                      "closing": 35000
+                    },
+                    {
+                      "accountId": "5.2",
+                      "code": "5.2",
+                      "name": "Comisiones de vendedores",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "5.3",
+                      "code": "5.3",
+                      "name": "Cargos de tarjetas",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "3.2",
+                      "code": "3.2",
+                      "name": "Resultado del ejercicio sin asignar",
+                      "group": "Patrimonio neto",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    }
+                  ],
+                  "totals": {
+                    "openingDebit": 0,
+                    "openingCredit": 0,
+                    "debit": 135000,
+                    "credit": 135000,
+                    "closingDebit": 100000,
+                    "closingCredit": 100000
+                  },
+                  "entryIds": [
+                    "c532f78c-a3ad-4337-b836-5648dd3e8526",
+                    "4e3a612d-41dd-40d6-b4ce-8770cfb7d80f"
+                  ]
+                },
+                "entry": [
+                  {
+                    "accountId": "4.1",
+                    "debit": 100000,
+                    "credit": 0
+                  },
+                  {
+                    "accountId": "5.1",
+                    "debit": 0,
+                    "credit": 35000
+                  },
+                  {
+                    "accountId": "3.2",
+                    "debit": 0,
+                    "credit": 65000
+                  }
+                ]
+              },
+              {
+                "id": "annual-north",
+                "result": -10000,
+                "balance": {
+                  "from": "2026-01-01",
+                  "to": "2026-12-31",
+                  "branchId": "annual-north",
+                  "rows": [
+                    {
+                      "accountId": "1.1.1",
+                      "code": "1.1.1",
+                      "name": "Caja",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.2",
+                      "code": "1.1.2",
+                      "name": "Bancos",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.3",
+                      "code": "1.1.3",
+                      "name": "Deudores por ventas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.4",
+                      "code": "1.1.4",
+                      "name": "IVA crédito fiscal",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.5",
+                      "code": "1.1.5",
+                      "name": "Valores a depositar",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.6",
+                      "code": "1.1.6",
+                      "name": "Retenciones sufridas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.7",
+                      "code": "1.1.7",
+                      "name": "Percepciones sufridas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.8",
+                      "code": "1.1.8",
+                      "name": "Cupones de tarjetas a cobrar",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.1",
+                      "code": "2.1.1",
+                      "name": "Proveedores",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 10000,
+                      "closing": -10000
+                    },
+                    {
+                      "accountId": "2.1.2",
+                      "code": "2.1.2",
+                      "name": "IVA débito fiscal",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.3",
+                      "code": "2.1.3",
+                      "name": "Retenciones a depositar",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.4",
+                      "code": "2.1.4",
+                      "name": "Percepciones a depositar",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.5",
+                      "code": "2.1.5",
+                      "name": "Cheques propios emitidos",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "3.1",
+                      "code": "3.1",
+                      "name": "Capital y saldos iniciales",
+                      "group": "Patrimonio neto",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "4.1",
+                      "code": "4.1",
+                      "name": "Ventas",
+                      "group": "Ingresos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "5.1",
+                      "code": "5.1",
+                      "name": "Compras y gastos",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 10000,
+                      "credit": 0,
+                      "closing": 10000
+                    },
+                    {
+                      "accountId": "5.2",
+                      "code": "5.2",
+                      "name": "Comisiones de vendedores",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "5.3",
+                      "code": "5.3",
+                      "name": "Cargos de tarjetas",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "3.2",
+                      "code": "3.2",
+                      "name": "Resultado del ejercicio sin asignar",
+                      "group": "Patrimonio neto",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    }
+                  ],
+                  "totals": {
+                    "openingDebit": 0,
+                    "openingCredit": 0,
+                    "debit": 10000,
+                    "credit": 10000,
+                    "closingDebit": 10000,
+                    "closingCredit": 10000
+                  },
+                  "entryIds": [
+                    "69cdbd00-597d-4674-8863-8cf6db5e4d5d"
+                  ]
+                },
+                "entry": [
+                  {
+                    "accountId": "5.1",
+                    "debit": 0,
+                    "credit": 10000
+                  },
+                  {
+                    "accountId": "3.2",
+                    "debit": 10000,
+                    "credit": 0
+                  }
+                ]
+              }
+            ],
+            "before": {
+              "reference": "Cierre sintético de resultados QA 2026",
+              "reason": "Prueba nominal con ingresos de 1000 ARS, gastos de 350 ARS en Casa Central y pérdida de 100 ARS en otra sucursal. Resultado consolidado 550 ARS. Sin estados profesionales ni presentación fiscal.",
+              "balance": {
+                "from": "2026-01-01",
+                "to": "2026-12-31",
+                "branchId": "all",
+                "rows": [
+                  {
+                    "accountId": "1.1.1",
+                    "code": "1.1.1",
+                    "name": "Caja",
+                    "group": "Activo",
+                    "opening": 0,
+                    "debit": 100000,
+                    "credit": 35000,
+                    "closing": 65000
+                  },
+                  {
+                    "accountId": "1.1.2",
+                    "code": "1.1.2",
+                    "name": "Bancos",
+                    "group": "Activo",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "1.1.3",
+                    "code": "1.1.3",
+                    "name": "Deudores por ventas",
+                    "group": "Activo",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "1.1.4",
+                    "code": "1.1.4",
+                    "name": "IVA crédito fiscal",
+                    "group": "Activo",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "1.1.5",
+                    "code": "1.1.5",
+                    "name": "Valores a depositar",
+                    "group": "Activo",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "1.1.6",
+                    "code": "1.1.6",
+                    "name": "Retenciones sufridas",
+                    "group": "Activo",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "1.1.7",
+                    "code": "1.1.7",
+                    "name": "Percepciones sufridas",
+                    "group": "Activo",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "1.1.8",
+                    "code": "1.1.8",
+                    "name": "Cupones de tarjetas a cobrar",
+                    "group": "Activo",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "2.1.1",
+                    "code": "2.1.1",
+                    "name": "Proveedores",
+                    "group": "Pasivo",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 10000,
+                    "closing": -10000
+                  },
+                  {
+                    "accountId": "2.1.2",
+                    "code": "2.1.2",
+                    "name": "IVA débito fiscal",
+                    "group": "Pasivo",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "2.1.3",
+                    "code": "2.1.3",
+                    "name": "Retenciones a depositar",
+                    "group": "Pasivo",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "2.1.4",
+                    "code": "2.1.4",
+                    "name": "Percepciones a depositar",
+                    "group": "Pasivo",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "2.1.5",
+                    "code": "2.1.5",
+                    "name": "Cheques propios emitidos",
+                    "group": "Pasivo",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "3.1",
+                    "code": "3.1",
+                    "name": "Capital y saldos iniciales",
+                    "group": "Patrimonio neto",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "4.1",
+                    "code": "4.1",
+                    "name": "Ventas",
+                    "group": "Ingresos",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 100000,
+                    "closing": -100000
+                  },
+                  {
+                    "accountId": "5.1",
+                    "code": "5.1",
+                    "name": "Compras y gastos",
+                    "group": "Gastos",
+                    "opening": 0,
+                    "debit": 45000,
+                    "credit": 0,
+                    "closing": 45000
+                  },
+                  {
+                    "accountId": "5.2",
+                    "code": "5.2",
+                    "name": "Comisiones de vendedores",
+                    "group": "Gastos",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "5.3",
+                    "code": "5.3",
+                    "name": "Cargos de tarjetas",
+                    "group": "Gastos",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  },
+                  {
+                    "accountId": "3.2",
+                    "code": "3.2",
+                    "name": "Resultado del ejercicio sin asignar",
+                    "group": "Patrimonio neto",
+                    "opening": 0,
+                    "debit": 0,
+                    "credit": 0,
+                    "closing": 0
+                  }
+                ],
+                "totals": {
+                  "openingDebit": 0,
+                  "openingCredit": 0,
+                  "debit": 145000,
+                  "credit": 145000,
+                  "closingDebit": 110000,
+                  "closingCredit": 110000
+                },
+                "entryIds": [
+                  "c532f78c-a3ad-4337-b836-5648dd3e8526",
+                  "4e3a612d-41dd-40d6-b4ce-8770cfb7d80f",
+                  "69cdbd00-597d-4674-8863-8cf6db5e4d5d"
+                ]
+              },
+              "branches": [
+                {
+                  "id": "central",
+                  "balance": {
+                    "from": "2026-01-01",
+                    "to": "2026-12-31",
+                    "branchId": "central",
+                    "rows": [
+                      {
+                        "accountId": "1.1.1",
+                        "code": "1.1.1",
+                        "name": "Caja",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 100000,
+                        "credit": 35000,
+                        "closing": 65000
+                      },
+                      {
+                        "accountId": "1.1.2",
+                        "code": "1.1.2",
+                        "name": "Bancos",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.3",
+                        "code": "1.1.3",
+                        "name": "Deudores por ventas",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.4",
+                        "code": "1.1.4",
+                        "name": "IVA crédito fiscal",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.5",
+                        "code": "1.1.5",
+                        "name": "Valores a depositar",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.6",
+                        "code": "1.1.6",
+                        "name": "Retenciones sufridas",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.7",
+                        "code": "1.1.7",
+                        "name": "Percepciones sufridas",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.8",
+                        "code": "1.1.8",
+                        "name": "Cupones de tarjetas a cobrar",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "2.1.1",
+                        "code": "2.1.1",
+                        "name": "Proveedores",
+                        "group": "Pasivo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "2.1.2",
+                        "code": "2.1.2",
+                        "name": "IVA débito fiscal",
+                        "group": "Pasivo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "2.1.3",
+                        "code": "2.1.3",
+                        "name": "Retenciones a depositar",
+                        "group": "Pasivo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "2.1.4",
+                        "code": "2.1.4",
+                        "name": "Percepciones a depositar",
+                        "group": "Pasivo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "2.1.5",
+                        "code": "2.1.5",
+                        "name": "Cheques propios emitidos",
+                        "group": "Pasivo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "3.1",
+                        "code": "3.1",
+                        "name": "Capital y saldos iniciales",
+                        "group": "Patrimonio neto",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "4.1",
+                        "code": "4.1",
+                        "name": "Ventas",
+                        "group": "Ingresos",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 100000,
+                        "closing": -100000
+                      },
+                      {
+                        "accountId": "5.1",
+                        "code": "5.1",
+                        "name": "Compras y gastos",
+                        "group": "Gastos",
+                        "opening": 0,
+                        "debit": 35000,
+                        "credit": 0,
+                        "closing": 35000
+                      },
+                      {
+                        "accountId": "5.2",
+                        "code": "5.2",
+                        "name": "Comisiones de vendedores",
+                        "group": "Gastos",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "5.3",
+                        "code": "5.3",
+                        "name": "Cargos de tarjetas",
+                        "group": "Gastos",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "3.2",
+                        "code": "3.2",
+                        "name": "Resultado del ejercicio sin asignar",
+                        "group": "Patrimonio neto",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      }
+                    ],
+                    "totals": {
+                      "openingDebit": 0,
+                      "openingCredit": 0,
+                      "debit": 135000,
+                      "credit": 135000,
+                      "closingDebit": 100000,
+                      "closingCredit": 100000
+                    },
+                    "entryIds": [
+                      "c532f78c-a3ad-4337-b836-5648dd3e8526",
+                      "4e3a612d-41dd-40d6-b4ce-8770cfb7d80f"
+                    ]
+                  }
+                },
+                {
+                  "id": "annual-north",
+                  "balance": {
+                    "from": "2026-01-01",
+                    "to": "2026-12-31",
+                    "branchId": "annual-north",
+                    "rows": [
+                      {
+                        "accountId": "1.1.1",
+                        "code": "1.1.1",
+                        "name": "Caja",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.2",
+                        "code": "1.1.2",
+                        "name": "Bancos",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.3",
+                        "code": "1.1.3",
+                        "name": "Deudores por ventas",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.4",
+                        "code": "1.1.4",
+                        "name": "IVA crédito fiscal",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.5",
+                        "code": "1.1.5",
+                        "name": "Valores a depositar",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.6",
+                        "code": "1.1.6",
+                        "name": "Retenciones sufridas",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.7",
+                        "code": "1.1.7",
+                        "name": "Percepciones sufridas",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "1.1.8",
+                        "code": "1.1.8",
+                        "name": "Cupones de tarjetas a cobrar",
+                        "group": "Activo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "2.1.1",
+                        "code": "2.1.1",
+                        "name": "Proveedores",
+                        "group": "Pasivo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 10000,
+                        "closing": -10000
+                      },
+                      {
+                        "accountId": "2.1.2",
+                        "code": "2.1.2",
+                        "name": "IVA débito fiscal",
+                        "group": "Pasivo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "2.1.3",
+                        "code": "2.1.3",
+                        "name": "Retenciones a depositar",
+                        "group": "Pasivo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "2.1.4",
+                        "code": "2.1.4",
+                        "name": "Percepciones a depositar",
+                        "group": "Pasivo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "2.1.5",
+                        "code": "2.1.5",
+                        "name": "Cheques propios emitidos",
+                        "group": "Pasivo",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "3.1",
+                        "code": "3.1",
+                        "name": "Capital y saldos iniciales",
+                        "group": "Patrimonio neto",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "4.1",
+                        "code": "4.1",
+                        "name": "Ventas",
+                        "group": "Ingresos",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "5.1",
+                        "code": "5.1",
+                        "name": "Compras y gastos",
+                        "group": "Gastos",
+                        "opening": 0,
+                        "debit": 10000,
+                        "credit": 0,
+                        "closing": 10000
+                      },
+                      {
+                        "accountId": "5.2",
+                        "code": "5.2",
+                        "name": "Comisiones de vendedores",
+                        "group": "Gastos",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "5.3",
+                        "code": "5.3",
+                        "name": "Cargos de tarjetas",
+                        "group": "Gastos",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      },
+                      {
+                        "accountId": "3.2",
+                        "code": "3.2",
+                        "name": "Resultado del ejercicio sin asignar",
+                        "group": "Patrimonio neto",
+                        "opening": 0,
+                        "debit": 0,
+                        "credit": 0,
+                        "closing": 0
+                      }
+                    ],
+                    "totals": {
+                      "openingDebit": 0,
+                      "openingCredit": 0,
+                      "debit": 10000,
+                      "credit": 10000,
+                      "closingDebit": 10000,
+                      "closingCredit": 10000
+                    },
+                    "entryIds": [
+                      "69cdbd00-597d-4674-8863-8cf6db5e4d5d"
+                    ]
+                  }
+                }
+              ],
+              "inventoryBatchId": "",
+              "warnings": [
+                {
+                  "id": "year-end",
+                  "message": "Es un bloqueo operativo de fin de ejercicio. Todavía requiere cierre de resultados, estados contables, notas y ajustes normativos revisados.",
+                  "reference": "2026-12-31"
+                }
+              ],
+              "sources": {
+                "entries": [
+                  {
+                    "id": "c532f78c-a3ad-4337-b836-5648dd3e8526",
+                    "date": "2026-10-01",
+                    "concept": "Ingreso nominal sintético",
+                    "branchId": "central",
+                    "documentId": "",
+                    "lines": [
+                      {
+                        "accountId": "1.1.1",
+                        "debit": 100000,
+                        "credit": 0
+                      },
+                      {
+                        "accountId": "4.1",
+                        "debit": 0,
+                        "credit": 100000
+                      }
+                    ]
+                  },
+                  {
+                    "id": "4e3a612d-41dd-40d6-b4ce-8770cfb7d80f",
+                    "date": "2026-10-02",
+                    "concept": "Gasto nominal sintético",
+                    "branchId": "central",
+                    "documentId": "",
+                    "lines": [
+                      {
+                        "accountId": "5.1",
+                        "debit": 35000,
+                        "credit": 0
+                      },
+                      {
+                        "accountId": "1.1.1",
+                        "debit": 0,
+                        "credit": 35000
+                      }
+                    ]
+                  },
+                  {
+                    "id": "69cdbd00-597d-4674-8863-8cf6db5e4d5d",
+                    "date": "2026-10-02",
+                    "concept": "Gasto de sucursal sintético",
+                    "branchId": "annual-north",
+                    "documentId": "",
+                    "lines": [
+                      {
+                        "accountId": "5.1",
+                        "debit": 10000,
+                        "credit": 0
+                      },
+                      {
+                        "accountId": "2.1.1",
+                        "debit": 0,
+                        "credit": 10000
+                      }
+                    ]
+                  }
+                ],
+                "documents": [],
+                "stock": [],
+                "treasury": []
+              }
+            }
+          },
+          "after": {
+            "from": "2026-01-01",
+            "to": "2026-12-31",
+            "branchId": "all",
+            "rows": [
+              {
+                "accountId": "1.1.1",
+                "code": "1.1.1",
+                "name": "Caja",
+                "group": "Activo",
+                "opening": 0,
+                "debit": 100000,
+                "credit": 35000,
+                "closing": 65000
+              },
+              {
+                "accountId": "1.1.2",
+                "code": "1.1.2",
+                "name": "Bancos",
+                "group": "Activo",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "1.1.3",
+                "code": "1.1.3",
+                "name": "Deudores por ventas",
+                "group": "Activo",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "1.1.4",
+                "code": "1.1.4",
+                "name": "IVA crédito fiscal",
+                "group": "Activo",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "1.1.5",
+                "code": "1.1.5",
+                "name": "Valores a depositar",
+                "group": "Activo",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "1.1.6",
+                "code": "1.1.6",
+                "name": "Retenciones sufridas",
+                "group": "Activo",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "1.1.7",
+                "code": "1.1.7",
+                "name": "Percepciones sufridas",
+                "group": "Activo",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "1.1.8",
+                "code": "1.1.8",
+                "name": "Cupones de tarjetas a cobrar",
+                "group": "Activo",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "2.1.1",
+                "code": "2.1.1",
+                "name": "Proveedores",
+                "group": "Pasivo",
+                "opening": 0,
+                "debit": 0,
+                "credit": 10000,
+                "closing": -10000
+              },
+              {
+                "accountId": "2.1.2",
+                "code": "2.1.2",
+                "name": "IVA débito fiscal",
+                "group": "Pasivo",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "2.1.3",
+                "code": "2.1.3",
+                "name": "Retenciones a depositar",
+                "group": "Pasivo",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "2.1.4",
+                "code": "2.1.4",
+                "name": "Percepciones a depositar",
+                "group": "Pasivo",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "2.1.5",
+                "code": "2.1.5",
+                "name": "Cheques propios emitidos",
+                "group": "Pasivo",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "3.1",
+                "code": "3.1",
+                "name": "Capital y saldos iniciales",
+                "group": "Patrimonio neto",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "4.1",
+                "code": "4.1",
+                "name": "Ventas",
+                "group": "Ingresos",
+                "opening": 0,
+                "debit": 100000,
+                "credit": 100000,
+                "closing": 0
+              },
+              {
+                "accountId": "5.1",
+                "code": "5.1",
+                "name": "Compras y gastos",
+                "group": "Gastos",
+                "opening": 0,
+                "debit": 45000,
+                "credit": 45000,
+                "closing": 0
+              },
+              {
+                "accountId": "5.2",
+                "code": "5.2",
+                "name": "Comisiones de vendedores",
+                "group": "Gastos",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "5.3",
+                "code": "5.3",
+                "name": "Cargos de tarjetas",
+                "group": "Gastos",
+                "opening": 0,
+                "debit": 0,
+                "credit": 0,
+                "closing": 0
+              },
+              {
+                "accountId": "3.2",
+                "code": "3.2",
+                "name": "Resultado del ejercicio sin asignar",
+                "group": "Patrimonio neto",
+                "opening": 0,
+                "debit": 10000,
+                "credit": 65000,
+                "closing": -55000
+              }
+            ],
+            "totals": {
+              "openingDebit": 0,
+              "openingCredit": 0,
+              "debit": 255000,
+              "credit": 255000,
+              "closingDebit": 65000,
+              "closingCredit": 65000
+            },
+            "entryIds": [
+              "c532f78c-a3ad-4337-b836-5648dd3e8526",
+              "4e3a612d-41dd-40d6-b4ce-8770cfb7d80f",
+              "69cdbd00-597d-4674-8863-8cf6db5e4d5d",
+              "9d2eb951-0c22-4c08-aee7-7a1a78fef5fa",
+              "09d241eb-8ad8-4a59-8927-c04bd0ec1e48"
+            ]
+          }
+        },
+        "periodClose": {
+          "id": "16ff5bf6-2d45-4b8a-8015-222c9017f6c7",
+          "number": "INT-CC-00000001",
+          "date": "2026-12-31",
+          "reference": "INT-CR-00000001",
+          "reason": "Prueba nominal con ingresos de 1000 ARS, gastos de 350 ARS en Casa Central y pérdida de 100 ARS en otra sucursal. Resultado consolidado 550 ARS. Sin estados profesionales ni presentación fiscal.",
+          "acknowledged": [
+            "year-end"
+          ],
+          "review": "{\"reference\":\"INT-CR-00000001\",\"reason\":\"Prueba nominal con ingresos de 1000 ARS, gastos de 350 ARS en Casa Central y pérdida de 100 ARS en otra sucursal. Resultado consolidado 550 ARS. Sin estados profesionales ni presentación fiscal.\",\"balance\":{\"from\":\"2026-01-01\",\"to\":\"2026-12-31\",\"branchId\":\"all\",\"rows\":[{\"accountId\":\"1.1.1\",\"group\":\"Activo\",\"opening\":0,\"debit\":100000,\"credit\":35000,\"closing\":65000},{\"accountId\":\"2.1.1\",\"group\":\"Pasivo\",\"opening\":0,\"debit\":0,\"credit\":10000,\"closing\":-10000},{\"accountId\":\"4.1\",\"group\":\"Ingresos\",\"opening\":0,\"debit\":100000,\"credit\":100000,\"closing\":0},{\"accountId\":\"5.1\",\"group\":\"Gastos\",\"opening\":0,\"debit\":45000,\"credit\":45000,\"closing\":0},{\"accountId\":\"3.2\",\"group\":\"Patrimonio neto\",\"opening\":0,\"debit\":10000,\"credit\":65000,\"closing\":-55000}],\"totals\":{\"openingDebit\":0,\"openingCredit\":0,\"debit\":255000,\"credit\":255000,\"closingDebit\":65000,\"closingCredit\":65000},\"entryIds\":[\"c532f78c-a3ad-4337-b836-5648dd3e8526\",\"4e3a612d-41dd-40d6-b4ce-8770cfb7d80f\",\"69cdbd00-597d-4674-8863-8cf6db5e4d5d\",\"9d2eb951-0c22-4c08-aee7-7a1a78fef5fa\",\"09d241eb-8ad8-4a59-8927-c04bd0ec1e48\"]},\"branches\":[{\"id\":\"central\",\"balance\":{\"from\":\"2026-01-01\",\"to\":\"2026-12-31\",\"branchId\":\"central\",\"rows\":[{\"accountId\":\"1.1.1\",\"group\":\"Activo\",\"opening\":0,\"debit\":100000,\"credit\":35000,\"closing\":65000},{\"accountId\":\"4.1\",\"group\":\"Ingresos\",\"opening\":0,\"debit\":100000,\"credit\":100000,\"closing\":0},{\"accountId\":\"5.1\",\"group\":\"Gastos\",\"opening\":0,\"debit\":35000,\"credit\":35000,\"closing\":0},{\"accountId\":\"3.2\",\"group\":\"Patrimonio neto\",\"opening\":0,\"debit\":0,\"credit\":65000,\"closing\":-65000}],\"totals\":{\"openingDebit\":0,\"openingCredit\":0,\"debit\":235000,\"credit\":235000,\"closingDebit\":65000,\"closingCredit\":65000},\"entryIds\":[\"c532f78c-a3ad-4337-b836-5648dd3e8526\",\"4e3a612d-41dd-40d6-b4ce-8770cfb7d80f\",\"9d2eb951-0c22-4c08-aee7-7a1a78fef5fa\"]}},{\"id\":\"annual-north\",\"balance\":{\"from\":\"2026-01-01\",\"to\":\"2026-12-31\",\"branchId\":\"annual-north\",\"rows\":[{\"accountId\":\"2.1.1\",\"group\":\"Pasivo\",\"opening\":0,\"debit\":0,\"credit\":10000,\"closing\":-10000},{\"accountId\":\"5.1\",\"group\":\"Gastos\",\"opening\":0,\"debit\":10000,\"credit\":10000,\"closing\":0},{\"accountId\":\"3.2\",\"group\":\"Patrimonio neto\",\"opening\":0,\"debit\":10000,\"credit\":0,\"closing\":10000}],\"totals\":{\"openingDebit\":0,\"openingCredit\":0,\"debit\":20000,\"credit\":20000,\"closingDebit\":10000,\"closingCredit\":10000},\"entryIds\":[\"69cdbd00-597d-4674-8863-8cf6db5e4d5d\",\"09d241eb-8ad8-4a59-8927-c04bd0ec1e48\"]}}],\"inventoryBatchId\":\"\",\"warnings\":[{\"id\":\"year-end\",\"message\":\"Las cuentas de resultados quedaron cerradas. Todavía requiere estados contables, notas y ajustes normativos revisados.\",\"reference\":\"2026-12-31\"}],\"sources\":{\"entries\":[{\"id\":\"c532f78c-a3ad-4337-b836-5648dd3e8526\",\"date\":\"2026-10-01\",\"concept\":\"Ingreso nominal sintético\",\"branchId\":\"central\",\"documentId\":\"\",\"lines\":[{\"accountId\":\"1.1.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"4.1\",\"debit\":0,\"credit\":100000}]},{\"id\":\"4e3a612d-41dd-40d6-b4ce-8770cfb7d80f\",\"date\":\"2026-10-02\",\"concept\":\"Gasto nominal sintético\",\"branchId\":\"central\",\"documentId\":\"\",\"lines\":[{\"accountId\":\"5.1\",\"debit\":35000,\"credit\":0},{\"accountId\":\"1.1.1\",\"debit\":0,\"credit\":35000}]},{\"id\":\"69cdbd00-597d-4674-8863-8cf6db5e4d5d\",\"date\":\"2026-10-02\",\"concept\":\"Gasto de sucursal sintético\",\"branchId\":\"annual-north\",\"documentId\":\"\",\"lines\":[{\"accountId\":\"5.1\",\"debit\":10000,\"credit\":0},{\"accountId\":\"2.1.1\",\"debit\":0,\"credit\":10000}]},{\"id\":\"9d2eb951-0c22-4c08-aee7-7a1a78fef5fa\",\"date\":\"2026-12-31\",\"concept\":\"INT-CR-00000001\",\"branchId\":\"central\",\"documentId\":\"e0a81430-8e8d-48d1-b9f8-80b89870c963\",\"lines\":[{\"accountId\":\"4.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"5.1\",\"debit\":0,\"credit\":35000},{\"accountId\":\"3.2\",\"debit\":0,\"credit\":65000}]},{\"id\":\"09d241eb-8ad8-4a59-8927-c04bd0ec1e48\",\"date\":\"2026-12-31\",\"concept\":\"INT-CR-00000001\",\"branchId\":\"annual-north\",\"documentId\":\"e0a81430-8e8d-48d1-b9f8-80b89870c963\",\"lines\":[{\"accountId\":\"5.1\",\"debit\":0,\"credit\":10000},{\"accountId\":\"3.2\",\"debit\":10000,\"credit\":0}]}],\"documents\":[],\"stock\":[],\"treasury\":[]},\"resultsClose\":{\"id\":\"e0a81430-8e8d-48d1-b9f8-80b89870c963\",\"number\":\"INT-CR-00000001\",\"resultsAccountId\":\"3.2\",\"result\":55000,\"entryIds\":[\"9d2eb951-0c22-4c08-aee7-7a1a78fef5fa\",\"09d241eb-8ad8-4a59-8927-c04bd0ec1e48\"]}}",
+          "createdAt": "2026-10-09T19:28:31.673Z",
+          "responsible": "Administrador",
+          "previousClosedUntil": "",
+          "exerciseStart": "2026-01-01",
+          "exerciseEnd": "2026-12-31",
+          "preview": {
+            "reference": "INT-CR-00000001",
+            "reason": "Prueba nominal con ingresos de 1000 ARS, gastos de 350 ARS en Casa Central y pérdida de 100 ARS en otra sucursal. Resultado consolidado 550 ARS. Sin estados profesionales ni presentación fiscal.",
+            "balance": {
+              "from": "2026-01-01",
+              "to": "2026-12-31",
+              "branchId": "all",
+              "rows": [
+                {
+                  "accountId": "1.1.1",
+                  "code": "1.1.1",
+                  "name": "Caja",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 100000,
+                  "credit": 35000,
+                  "closing": 65000
+                },
+                {
+                  "accountId": "1.1.2",
+                  "code": "1.1.2",
+                  "name": "Bancos",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.3",
+                  "code": "1.1.3",
+                  "name": "Deudores por ventas",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.4",
+                  "code": "1.1.4",
+                  "name": "IVA crédito fiscal",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.5",
+                  "code": "1.1.5",
+                  "name": "Valores a depositar",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.6",
+                  "code": "1.1.6",
+                  "name": "Retenciones sufridas",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.7",
+                  "code": "1.1.7",
+                  "name": "Percepciones sufridas",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.8",
+                  "code": "1.1.8",
+                  "name": "Cupones de tarjetas a cobrar",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "2.1.1",
+                  "code": "2.1.1",
+                  "name": "Proveedores",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 10000,
+                  "closing": -10000
+                },
+                {
+                  "accountId": "2.1.2",
+                  "code": "2.1.2",
+                  "name": "IVA débito fiscal",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "2.1.3",
+                  "code": "2.1.3",
+                  "name": "Retenciones a depositar",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "2.1.4",
+                  "code": "2.1.4",
+                  "name": "Percepciones a depositar",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "2.1.5",
+                  "code": "2.1.5",
+                  "name": "Cheques propios emitidos",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "3.1",
+                  "code": "3.1",
+                  "name": "Capital y saldos iniciales",
+                  "group": "Patrimonio neto",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "4.1",
+                  "code": "4.1",
+                  "name": "Ventas",
+                  "group": "Ingresos",
+                  "opening": 0,
+                  "debit": 100000,
+                  "credit": 100000,
+                  "closing": 0
+                },
+                {
+                  "accountId": "5.1",
+                  "code": "5.1",
+                  "name": "Compras y gastos",
+                  "group": "Gastos",
+                  "opening": 0,
+                  "debit": 45000,
+                  "credit": 45000,
+                  "closing": 0
+                },
+                {
+                  "accountId": "5.2",
+                  "code": "5.2",
+                  "name": "Comisiones de vendedores",
+                  "group": "Gastos",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "5.3",
+                  "code": "5.3",
+                  "name": "Cargos de tarjetas",
+                  "group": "Gastos",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "3.2",
+                  "code": "3.2",
+                  "name": "Resultado del ejercicio sin asignar",
+                  "group": "Patrimonio neto",
+                  "opening": 0,
+                  "debit": 10000,
+                  "credit": 65000,
+                  "closing": -55000
+                }
+              ],
+              "totals": {
+                "openingDebit": 0,
+                "openingCredit": 0,
+                "debit": 255000,
+                "credit": 255000,
+                "closingDebit": 65000,
+                "closingCredit": 65000
+              },
+              "entryIds": [
+                "c532f78c-a3ad-4337-b836-5648dd3e8526",
+                "4e3a612d-41dd-40d6-b4ce-8770cfb7d80f",
+                "69cdbd00-597d-4674-8863-8cf6db5e4d5d",
+                "9d2eb951-0c22-4c08-aee7-7a1a78fef5fa",
+                "09d241eb-8ad8-4a59-8927-c04bd0ec1e48"
+              ]
+            },
+            "branches": [
+              {
+                "id": "central",
+                "balance": {
+                  "from": "2026-01-01",
+                  "to": "2026-12-31",
+                  "branchId": "central",
+                  "rows": [
+                    {
+                      "accountId": "1.1.1",
+                      "code": "1.1.1",
+                      "name": "Caja",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 100000,
+                      "credit": 35000,
+                      "closing": 65000
+                    },
+                    {
+                      "accountId": "1.1.2",
+                      "code": "1.1.2",
+                      "name": "Bancos",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.3",
+                      "code": "1.1.3",
+                      "name": "Deudores por ventas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.4",
+                      "code": "1.1.4",
+                      "name": "IVA crédito fiscal",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.5",
+                      "code": "1.1.5",
+                      "name": "Valores a depositar",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.6",
+                      "code": "1.1.6",
+                      "name": "Retenciones sufridas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.7",
+                      "code": "1.1.7",
+                      "name": "Percepciones sufridas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.8",
+                      "code": "1.1.8",
+                      "name": "Cupones de tarjetas a cobrar",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.1",
+                      "code": "2.1.1",
+                      "name": "Proveedores",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.2",
+                      "code": "2.1.2",
+                      "name": "IVA débito fiscal",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.3",
+                      "code": "2.1.3",
+                      "name": "Retenciones a depositar",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.4",
+                      "code": "2.1.4",
+                      "name": "Percepciones a depositar",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.5",
+                      "code": "2.1.5",
+                      "name": "Cheques propios emitidos",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "3.1",
+                      "code": "3.1",
+                      "name": "Capital y saldos iniciales",
+                      "group": "Patrimonio neto",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "4.1",
+                      "code": "4.1",
+                      "name": "Ventas",
+                      "group": "Ingresos",
+                      "opening": 0,
+                      "debit": 100000,
+                      "credit": 100000,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "5.1",
+                      "code": "5.1",
+                      "name": "Compras y gastos",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 35000,
+                      "credit": 35000,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "5.2",
+                      "code": "5.2",
+                      "name": "Comisiones de vendedores",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "5.3",
+                      "code": "5.3",
+                      "name": "Cargos de tarjetas",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "3.2",
+                      "code": "3.2",
+                      "name": "Resultado del ejercicio sin asignar",
+                      "group": "Patrimonio neto",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 65000,
+                      "closing": -65000
+                    }
+                  ],
+                  "totals": {
+                    "openingDebit": 0,
+                    "openingCredit": 0,
+                    "debit": 235000,
+                    "credit": 235000,
+                    "closingDebit": 65000,
+                    "closingCredit": 65000
+                  },
+                  "entryIds": [
+                    "c532f78c-a3ad-4337-b836-5648dd3e8526",
+                    "4e3a612d-41dd-40d6-b4ce-8770cfb7d80f",
+                    "9d2eb951-0c22-4c08-aee7-7a1a78fef5fa"
+                  ]
+                }
+              },
+              {
+                "id": "annual-north",
+                "balance": {
+                  "from": "2026-01-01",
+                  "to": "2026-12-31",
+                  "branchId": "annual-north",
+                  "rows": [
+                    {
+                      "accountId": "1.1.1",
+                      "code": "1.1.1",
+                      "name": "Caja",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.2",
+                      "code": "1.1.2",
+                      "name": "Bancos",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.3",
+                      "code": "1.1.3",
+                      "name": "Deudores por ventas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.4",
+                      "code": "1.1.4",
+                      "name": "IVA crédito fiscal",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.5",
+                      "code": "1.1.5",
+                      "name": "Valores a depositar",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.6",
+                      "code": "1.1.6",
+                      "name": "Retenciones sufridas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.7",
+                      "code": "1.1.7",
+                      "name": "Percepciones sufridas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.8",
+                      "code": "1.1.8",
+                      "name": "Cupones de tarjetas a cobrar",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.1",
+                      "code": "2.1.1",
+                      "name": "Proveedores",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 10000,
+                      "closing": -10000
+                    },
+                    {
+                      "accountId": "2.1.2",
+                      "code": "2.1.2",
+                      "name": "IVA débito fiscal",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.3",
+                      "code": "2.1.3",
+                      "name": "Retenciones a depositar",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.4",
+                      "code": "2.1.4",
+                      "name": "Percepciones a depositar",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.5",
+                      "code": "2.1.5",
+                      "name": "Cheques propios emitidos",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "3.1",
+                      "code": "3.1",
+                      "name": "Capital y saldos iniciales",
+                      "group": "Patrimonio neto",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "4.1",
+                      "code": "4.1",
+                      "name": "Ventas",
+                      "group": "Ingresos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "5.1",
+                      "code": "5.1",
+                      "name": "Compras y gastos",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 10000,
+                      "credit": 10000,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "5.2",
+                      "code": "5.2",
+                      "name": "Comisiones de vendedores",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "5.3",
+                      "code": "5.3",
+                      "name": "Cargos de tarjetas",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "3.2",
+                      "code": "3.2",
+                      "name": "Resultado del ejercicio sin asignar",
+                      "group": "Patrimonio neto",
+                      "opening": 0,
+                      "debit": 10000,
+                      "credit": 0,
+                      "closing": 10000
+                    }
+                  ],
+                  "totals": {
+                    "openingDebit": 0,
+                    "openingCredit": 0,
+                    "debit": 20000,
+                    "credit": 20000,
+                    "closingDebit": 10000,
+                    "closingCredit": 10000
+                  },
+                  "entryIds": [
+                    "69cdbd00-597d-4674-8863-8cf6db5e4d5d",
+                    "09d241eb-8ad8-4a59-8927-c04bd0ec1e48"
+                  ]
+                }
+              }
+            ],
+            "inventoryBatchId": "",
+            "warnings": [
+              {
+                "id": "year-end",
+                "message": "Las cuentas de resultados quedaron cerradas. Todavía requiere estados contables, notas y ajustes normativos revisados.",
+                "reference": "2026-12-31"
+              }
+            ],
+            "sources": {
+              "entries": [
+                {
+                  "id": "c532f78c-a3ad-4337-b836-5648dd3e8526",
+                  "date": "2026-10-01",
+                  "concept": "Ingreso nominal sintético",
+                  "branchId": "central",
+                  "documentId": "",
+                  "lines": [
+                    {
+                      "accountId": "1.1.1",
+                      "debit": 100000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "4.1",
+                      "debit": 0,
+                      "credit": 100000
+                    }
+                  ]
+                },
+                {
+                  "id": "4e3a612d-41dd-40d6-b4ce-8770cfb7d80f",
+                  "date": "2026-10-02",
+                  "concept": "Gasto nominal sintético",
+                  "branchId": "central",
+                  "documentId": "",
+                  "lines": [
+                    {
+                      "accountId": "5.1",
+                      "debit": 35000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "1.1.1",
+                      "debit": 0,
+                      "credit": 35000
+                    }
+                  ]
+                },
+                {
+                  "id": "69cdbd00-597d-4674-8863-8cf6db5e4d5d",
+                  "date": "2026-10-02",
+                  "concept": "Gasto de sucursal sintético",
+                  "branchId": "annual-north",
+                  "documentId": "",
+                  "lines": [
+                    {
+                      "accountId": "5.1",
+                      "debit": 10000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "2.1.1",
+                      "debit": 0,
+                      "credit": 10000
+                    }
+                  ]
+                },
+                {
+                  "id": "9d2eb951-0c22-4c08-aee7-7a1a78fef5fa",
+                  "date": "2026-12-31",
+                  "concept": "INT-CR-00000001",
+                  "branchId": "central",
+                  "documentId": "e0a81430-8e8d-48d1-b9f8-80b89870c963",
+                  "lines": [
+                    {
+                      "accountId": "4.1",
+                      "debit": 100000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "5.1",
+                      "debit": 0,
+                      "credit": 35000
+                    },
+                    {
+                      "accountId": "3.2",
+                      "debit": 0,
+                      "credit": 65000
+                    }
+                  ]
+                },
+                {
+                  "id": "09d241eb-8ad8-4a59-8927-c04bd0ec1e48",
+                  "date": "2026-12-31",
+                  "concept": "INT-CR-00000001",
+                  "branchId": "annual-north",
+                  "documentId": "e0a81430-8e8d-48d1-b9f8-80b89870c963",
+                  "lines": [
+                    {
+                      "accountId": "5.1",
+                      "debit": 0,
+                      "credit": 10000
+                    },
+                    {
+                      "accountId": "3.2",
+                      "debit": 10000,
+                      "credit": 0
+                    }
+                  ]
+                }
+              ],
+              "documents": [],
+              "stock": [],
+              "treasury": []
+            },
+            "resultsClose": {
+              "id": "e0a81430-8e8d-48d1-b9f8-80b89870c963",
+              "number": "INT-CR-00000001",
+              "resultsAccountId": "3.2",
+              "result": 55000,
+              "entryIds": [
+                "9d2eb951-0c22-4c08-aee7-7a1a78fef5fa",
+                "09d241eb-8ad8-4a59-8927-c04bd0ec1e48"
+              ]
+            }
+          }
+        },
+        "balancesCents": {
+          "cash": 65000,
+          "suppliers": -10000,
+          "result": -55000,
+          "income": 0,
+          "expense": 0
+        },
+        "entries": [
+          {
+            "id": "c532f78c-a3ad-4337-b836-5648dd3e8526",
+            "date": "2026-10-01",
+            "concept": "Ingreso nominal sintético",
+            "branchId": "central",
+            "documentId": "",
+            "lines": [
+              {
+                "accountId": "1.1.1",
+                "debit": 100000,
+                "credit": 0
+              },
+              {
+                "accountId": "4.1",
+                "debit": 0,
+                "credit": 100000
+              }
+            ]
+          },
+          {
+            "id": "4e3a612d-41dd-40d6-b4ce-8770cfb7d80f",
+            "date": "2026-10-02",
+            "concept": "Gasto nominal sintético",
+            "branchId": "central",
+            "documentId": "",
+            "lines": [
+              {
+                "accountId": "5.1",
+                "debit": 35000,
+                "credit": 0
+              },
+              {
+                "accountId": "1.1.1",
+                "debit": 0,
+                "credit": 35000
+              }
+            ]
+          },
+          {
+            "id": "69cdbd00-597d-4674-8863-8cf6db5e4d5d",
+            "date": "2026-10-02",
+            "concept": "Gasto de sucursal sintético",
+            "branchId": "annual-north",
+            "documentId": "",
+            "lines": [
+              {
+                "accountId": "5.1",
+                "debit": 10000,
+                "credit": 0
+              },
+              {
+                "accountId": "2.1.1",
+                "debit": 0,
+                "credit": 10000
+              }
+            ]
+          },
+          {
+            "id": "9d2eb951-0c22-4c08-aee7-7a1a78fef5fa",
+            "date": "2026-12-31",
+            "concept": "INT-CR-00000001",
+            "branchId": "central",
+            "documentId": "e0a81430-8e8d-48d1-b9f8-80b89870c963",
+            "yearEndCloseId": "e0a81430-8e8d-48d1-b9f8-80b89870c963",
+            "lines": [
+              {
+                "accountId": "4.1",
+                "debit": 100000,
+                "credit": 0
+              },
+              {
+                "accountId": "5.1",
+                "debit": 0,
+                "credit": 35000
+              },
+              {
+                "accountId": "3.2",
+                "debit": 0,
+                "credit": 65000
+              }
+            ]
+          },
+          {
+            "id": "09d241eb-8ad8-4a59-8927-c04bd0ec1e48",
+            "date": "2026-12-31",
+            "concept": "INT-CR-00000001",
+            "branchId": "annual-north",
+            "documentId": "e0a81430-8e8d-48d1-b9f8-80b89870c963",
+            "yearEndCloseId": "e0a81430-8e8d-48d1-b9f8-80b89870c963",
+            "lines": [
+              {
+                "accountId": "5.1",
+                "debit": 0,
+                "credit": 10000
+              },
+              {
+                "accountId": "3.2",
+                "debit": 10000,
+                "credit": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "database": "var/qa-service-reestimates.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-service-accruals.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    }
+  ]
+}

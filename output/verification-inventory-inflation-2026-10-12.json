@@ -1,0 +1,881 @@
+{
+  "date": "2026-10-12",
+  "synthetic": true,
+  "tests": {
+    "domain": 327,
+    "files": 24,
+    "http": 49,
+    "fiscal": 22,
+    "total": 422
+  },
+  "browser": {
+    "result": "Se conservó y recuperó INT-CI con diez unidades, inventario anterior $1000 y en cierre $1500. El cierre posterior registra compra $1000, CMV $500 y saldo $2000 con doce unidades.",
+    "screenshots": [
+      "output/inventory-inflation-2026-10-12.jpg",
+      "output/inventory-inflation-costing-2026-10-12.jpg"
+    ],
+    "transcript": "output/inventory-inflation-browser-2026-10-12.txt",
+    "exports": "Ambos botones se activaron. La verificación de bytes corresponde a los mismos constructores aplicados a la constancia persistida; no se acredita una descarga del navegador.",
+    "capture": "Capturas reales guardadas desde el mismo navegador; constancia INT-CI recuperada y CPP posterior con doce unidades por $2000.",
+    "presentation": "Tab de ensayo conservado como entregable en el navegador de Codex."
+  },
+  "files": {
+    "pdf": "output/pdf/conciliacion-inventario-2026-10-12.pdf",
+    "xlsx": "output/conciliacion-inventario-2026-10-12.xlsx",
+    "readback": "Nueve hojas con cantidades e importes numéricos, índices exactos y nueve páginas de anexo."
+  },
+  "checks": [
+    {
+      "database": "var/qa-inventory-inflation.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON",
+      "inventory": {
+        "record": {
+          "postingId": "c2281906-94c4-47ad-89c9-6e0ea85f319d",
+          "reference": "Conciliación de inventario QA 2026",
+          "reason": "Base revisada para el CPP posterior, con antigüedad de septiembre y ajuste anual ya contabilizado.",
+          "confirmed": true,
+          "lines": [
+            {
+              "productId": "97c1af0d-efa4-4078-9309-41dff66c279d",
+              "depositId": "principal",
+              "pieces": [
+                {
+                  "sourceId": "0",
+                  "amount": 100000
+                }
+              ],
+              "reason": "Diez remeras de apertura por $1.000, conservando cantidad y origen septiembre 100 frente a octubre 150."
+            }
+          ],
+          "review": "{\"postingId\":\"c2281906-94c4-47ad-89c9-6e0ea85f319d\",\"postingNumber\":\"INT-AI-00000001\",\"date\":\"2026-10-11\",\"reference\":\"Conciliación de inventario QA 2026\",\"reason\":\"Base revisada para el CPP posterior, con antigüedad de septiembre y ajuste anual ya contabilizado.\",\"source\":{\"id\":\"c2281906-94c4-47ad-89c9-6e0ea85f319d\",\"number\":\"INT-AI-00000001\",\"date\":\"2026-10-11\",\"provider\":\"Ensayo\",\"closingMonth\":\"2026-10\",\"indices\":[{\"month\":\"2025-12\",\"value\":\"100\"},{\"month\":\"2026-01\",\"value\":\"100\"},{\"month\":\"2026-02\",\"value\":\"100\"},{\"month\":\"2026-03\",\"value\":\"100\"},{\"month\":\"2026-04\",\"value\":\"100\"},{\"month\":\"2026-05\",\"value\":\"100\"},{\"month\":\"2026-06\",\"value\":\"100\"},{\"month\":\"2026-07\",\"value\":\"100\"},{\"month\":\"2026-08\",\"value\":\"100\"},{\"month\":\"2026-09\",\"value\":\"100\"},{\"month\":\"2026-10\",\"value\":\"150\"}],\"entryIds\":[\"ec315e6d-6418-4ee3-bb2c-58abd7232345\"],\"issues\":[],\"batch\":{\"date\":\"2026-10-11\",\"reference\":\"Corte anterior al ajuste de inventario\",\"accounts\":{\"inventory\":\"inventory-inventory\",\"opening\":\"3.1\",\"cogs\":\"inventory-cogs\",\"adjustments\":\"inventory-adjustments\",\"transit\":\"inventory-transit\",\"wip\":\"inventory-wip\",\"unbilled\":\"inventory-unbilled\"},\"review\":\"{\\\"moves\\\":[],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"97c1af0d-efa4-4078-9309-41dff66c279d\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"value\\\":100000}],\\\"journals\\\":[],\\\"corrections\\\":[]}\",\"costVersion\":5,\"id\":\"9c5e72e4-9400-4d4c-a577-24ddd00849ce\",\"number\":\"INT-VC-00000002\",\"method\":\"CPP\",\"responsible\":\"Administrador\",\"createdAt\":\"2026-10-12T05:38:36.756Z\",\"sourceMoves\":[],\"rows\":[],\"corrections\":[],\"balances\":[{\"productId\":\"97c1af0d-efa4-4078-9309-41dff66c279d\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":100000}],\"entryIds\":[]},\"accounts\":[{\"branchId\":\"central\",\"before\":100000,\"difference\":50000,\"after\":150000}],\"parts\":[{\"id\":\"0\",\"month\":\"2026-09\",\"amount\":100000,\"adjusted\":150000,\"coefficient\":\"1.500000000000\"}]},\"balances\":[{\"productId\":\"97c1af0d-efa4-4078-9309-41dff66c279d\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":100000,\"before\":100000,\"after\":150000,\"difference\":50000,\"reason\":\"Diez remeras de apertura por $1.000, conservando cantidad y origen septiembre 100 frente a octubre 150.\",\"pieces\":[{\"sourceId\":\"0\",\"month\":\"2026-09\",\"before\":100000,\"after\":150000}]}],\"accounts\":[{\"branchId\":\"central\",\"before\":100000,\"difference\":50000,\"after\":150000}],\"references\":[],\"totalBefore\":100000,\"totalAfter\":150000,\"warnings\":[\"Índices sintéticos: conciliación exclusivamente de prueba.\",\"La conciliación no agrega otro asiento del ajuste ni cambia cantidades o documentos.\",\"El CPP posterior parte de los valores conciliados. Las notas y facturas sobre recepciones anteriores requieren repartir sus diferencias entre esa base y resultados.\",\"Las devoluciones de ventas anteriores requieren costo recuperado y respaldo en la misma moneda de la base.\",\"Revisá medición, orígenes, valor recuperable y moneda homogénea antes de emitir estados contables.\"]}",
+          "id": "c87e0b35-426e-421f-b2b8-fa8cdc819ac6",
+          "number": "INT-CI-00000001",
+          "date": "2026-10-11",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-12T05:44:56.736Z",
+          "preview": {
+            "postingId": "c2281906-94c4-47ad-89c9-6e0ea85f319d",
+            "postingNumber": "INT-AI-00000001",
+            "date": "2026-10-11",
+            "reference": "Conciliación de inventario QA 2026",
+            "reason": "Base revisada para el CPP posterior, con antigüedad de septiembre y ajuste anual ya contabilizado.",
+            "source": {
+              "id": "c2281906-94c4-47ad-89c9-6e0ea85f319d",
+              "number": "INT-AI-00000001",
+              "date": "2026-10-11",
+              "provider": "Ensayo",
+              "closingMonth": "2026-10",
+              "indices": [
+                {
+                  "month": "2025-12",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-01",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-02",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-03",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-04",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-05",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-06",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-07",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-08",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-09",
+                  "value": "100"
+                },
+                {
+                  "month": "2026-10",
+                  "value": "150"
+                }
+              ],
+              "entryIds": [
+                "ec315e6d-6418-4ee3-bb2c-58abd7232345"
+              ],
+              "issues": [],
+              "batch": {
+                "date": "2026-10-11",
+                "reference": "Corte anterior al ajuste de inventario",
+                "accounts": {
+                  "inventory": "inventory-inventory",
+                  "opening": "3.1",
+                  "cogs": "inventory-cogs",
+                  "adjustments": "inventory-adjustments",
+                  "transit": "inventory-transit",
+                  "wip": "inventory-wip",
+                  "unbilled": "inventory-unbilled"
+                },
+                "review": "{\"moves\":[],\"rows\":[],\"balances\":[{\"productId\":\"97c1af0d-efa4-4078-9309-41dff66c279d\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":10,\"value\":100000}],\"journals\":[],\"corrections\":[]}",
+                "costVersion": 5,
+                "id": "9c5e72e4-9400-4d4c-a577-24ddd00849ce",
+                "number": "INT-VC-00000002",
+                "method": "CPP",
+                "responsible": "Administrador",
+                "createdAt": "2026-10-12T05:38:36.756Z",
+                "sourceMoves": [],
+                "rows": [],
+                "corrections": [],
+                "balances": [
+                  {
+                    "productId": "97c1af0d-efa4-4078-9309-41dff66c279d",
+                    "depositId": "principal",
+                    "branchId": "central",
+                    "sku": "REM-M-NEG",
+                    "name": "Remera de algodón · M · Negro",
+                    "unit": "Unidad",
+                    "depositName": "Depósito principal",
+                    "quantity": 10,
+                    "value": 100000
+                  }
+                ],
+                "entryIds": []
+              },
+              "accounts": [
+                {
+                  "branchId": "central",
+                  "before": 100000,
+                  "difference": 50000,
+                  "after": 150000
+                }
+              ],
+              "parts": [
+                {
+                  "id": "0",
+                  "month": "2026-09",
+                  "amount": 100000,
+                  "adjusted": 150000,
+                  "coefficient": "1.500000000000"
+                }
+              ]
+            },
+            "balances": [
+              {
+                "productId": "97c1af0d-efa4-4078-9309-41dff66c279d",
+                "depositId": "principal",
+                "branchId": "central",
+                "sku": "REM-M-NEG",
+                "name": "Remera de algodón · M · Negro",
+                "unit": "Unidad",
+                "depositName": "Depósito principal",
+                "quantity": 10,
+                "value": 100000,
+                "before": 100000,
+                "after": 150000,
+                "difference": 50000,
+                "reason": "Diez remeras de apertura por $1.000, conservando cantidad y origen septiembre 100 frente a octubre 150.",
+                "pieces": [
+                  {
+                    "sourceId": "0",
+                    "month": "2026-09",
+                    "before": 100000,
+                    "after": 150000
+                  }
+                ]
+              }
+            ],
+            "accounts": [
+              {
+                "branchId": "central",
+                "before": 100000,
+                "difference": 50000,
+                "after": 150000
+              }
+            ],
+            "references": [],
+            "totalBefore": 100000,
+            "totalAfter": 150000,
+            "warnings": [
+              "Índices sintéticos: conciliación exclusivamente de prueba.",
+              "La conciliación no agrega otro asiento del ajuste ni cambia cantidades o documentos.",
+              "El CPP posterior parte de los valores conciliados. Las notas y facturas sobre recepciones anteriores requieren repartir sus diferencias entre esa base y resultados.",
+              "Las devoluciones de ventas anteriores requieren costo recuperado y respaldo en la misma moneda de la base.",
+              "Revisá medición, orígenes, valor recuperable y moneda homogénea antes de emitir estados contables."
+            ]
+          }
+        },
+        "costing": {
+          "date": "2026-10-13",
+          "reference": "CPP posterior conciliado QA 2026",
+          "accounts": {
+            "inventory": "inventory-inventory",
+            "opening": "3.1",
+            "cogs": "inventory-cogs",
+            "adjustments": "inventory-adjustments",
+            "transit": "inventory-transit",
+            "wip": "inventory-wip",
+            "unbilled": "inventory-unbilled"
+          },
+          "receiptCosts": [],
+          "returnCosts": [],
+          "openingInvoices": [],
+          "openingNotes": [],
+          "adjustments": [],
+          "review": "{\"moves\":[{\"id\":\"bcccaf3b-df38-4070-a9ce-b948cfc2eac8\",\"date\":\"2026-10-12\",\"productId\":\"97c1af0d-efa4-4078-9309-41dff66c279d\",\"depositId\":\"principal\",\"quantity\":5,\"branchId\":\"central\",\"documentId\":\"49512867-f0d2-4ec6-bf0e-59eca479d8dc\"},{\"id\":\"12db2a7a-40d7-4e0a-977b-c38ec0374b9c\",\"date\":\"2026-10-13\",\"productId\":\"97c1af0d-efa4-4078-9309-41dff66c279d\",\"depositId\":\"principal\",\"quantity\":-3,\"branchId\":\"central\",\"documentId\":\"efd37778-e8ad-4429-a531-5ec267dc9b28\"}],\"rows\":[{\"moveId\":\"bcccaf3b-df38-4070-a9ce-b948cfc2eac8\",\"productId\":\"97c1af0d-efa4-4078-9309-41dff66c279d\",\"depositId\":\"principal\",\"branchId\":\"central\",\"date\":\"2026-10-12\",\"quantity\":5,\"value\":100000,\"kind\":\"Compra\",\"counterpart\":\"5.1\",\"invoiceId\":\"da14df95-4124-4d40-9018-80cc80998194\"},{\"moveId\":\"12db2a7a-40d7-4e0a-977b-c38ec0374b9c\",\"productId\":\"97c1af0d-efa4-4078-9309-41dff66c279d\",\"depositId\":\"principal\",\"branchId\":\"central\",\"date\":\"2026-10-13\",\"quantity\":-3,\"value\":50000,\"kind\":\"Venta\",\"counterpart\":\"inventory-cogs\"}],\"balances\":[{\"productId\":\"97c1af0d-efa4-4078-9309-41dff66c279d\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":12,\"value\":200000}],\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-inventory\",\"debit\":50000,\"credit\":0},{\"accountId\":\"5.1\",\"debit\":0,\"credit\":100000},{\"accountId\":\"inventory-cogs\",\"debit\":50000,\"credit\":0}]}],\"inflation\":[{\"id\":\"c87e0b35-426e-421f-b2b8-fa8cdc819ac6\",\"number\":\"INT-CI-00000001\",\"date\":\"2026-10-11\",\"review\":\"{\\\"postingId\\\":\\\"c2281906-94c4-47ad-89c9-6e0ea85f319d\\\",\\\"postingNumber\\\":\\\"INT-AI-00000001\\\",\\\"date\\\":\\\"2026-10-11\\\",\\\"reference\\\":\\\"Conciliación de inventario QA 2026\\\",\\\"reason\\\":\\\"Base revisada para el CPP posterior, con antigüedad de septiembre y ajuste anual ya contabilizado.\\\",\\\"source\\\":{\\\"id\\\":\\\"c2281906-94c4-47ad-89c9-6e0ea85f319d\\\",\\\"number\\\":\\\"INT-AI-00000001\\\",\\\"date\\\":\\\"2026-10-11\\\",\\\"provider\\\":\\\"Ensayo\\\",\\\"closingMonth\\\":\\\"2026-10\\\",\\\"indices\\\":[{\\\"month\\\":\\\"2025-12\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-01\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-02\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-03\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-04\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-05\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-06\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-07\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-08\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-09\\\",\\\"value\\\":\\\"100\\\"},{\\\"month\\\":\\\"2026-10\\\",\\\"value\\\":\\\"150\\\"}],\\\"entryIds\\\":[\\\"ec315e6d-6418-4ee3-bb2c-58abd7232345\\\"],\\\"issues\\\":[],\\\"batch\\\":{\\\"date\\\":\\\"2026-10-11\\\",\\\"reference\\\":\\\"Corte anterior al ajuste de inventario\\\",\\\"accounts\\\":{\\\"inventory\\\":\\\"inventory-inventory\\\",\\\"opening\\\":\\\"3.1\\\",\\\"cogs\\\":\\\"inventory-cogs\\\",\\\"adjustments\\\":\\\"inventory-adjustments\\\",\\\"transit\\\":\\\"inventory-transit\\\",\\\"wip\\\":\\\"inventory-wip\\\",\\\"unbilled\\\":\\\"inventory-unbilled\\\"},\\\"review\\\":\\\"{\\\\\\\"moves\\\\\\\":[],\\\\\\\"rows\\\\\\\":[],\\\\\\\"balances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"97c1af0d-efa4-4078-9309-41dff66c279d\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":10,\\\\\\\"value\\\\\\\":100000}],\\\\\\\"journals\\\\\\\":[],\\\\\\\"corrections\\\\\\\":[]}\\\",\\\"costVersion\\\":5,\\\"id\\\":\\\"9c5e72e4-9400-4d4c-a577-24ddd00849ce\\\",\\\"number\\\":\\\"INT-VC-00000002\\\",\\\"method\\\":\\\"CPP\\\",\\\"responsible\\\":\\\"Administrador\\\",\\\"createdAt\\\":\\\"2026-10-12T05:38:36.756Z\\\",\\\"sourceMoves\\\":[],\\\"rows\\\":[],\\\"corrections\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"97c1af0d-efa4-4078-9309-41dff66c279d\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":10,\\\"value\\\":100000}],\\\"entryIds\\\":[]},\\\"accounts\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"before\\\":100000,\\\"difference\\\":50000,\\\"after\\\":150000}],\\\"parts\\\":[{\\\"id\\\":\\\"0\\\",\\\"month\\\":\\\"2026-09\\\",\\\"amount\\\":100000,\\\"adjusted\\\":150000,\\\"coefficient\\\":\\\"1.500000000000\\\"}]},\\\"balances\\\":[{\\\"productId\\\":\\\"97c1af0d-efa4-4078-9309-41dff66c279d\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":10,\\\"value\\\":100000,\\\"before\\\":100000,\\\"after\\\":150000,\\\"difference\\\":50000,\\\"reason\\\":\\\"Diez remeras de apertura por $1.000, conservando cantidad y origen septiembre 100 frente a octubre 150.\\\",\\\"pieces\\\":[{\\\"sourceId\\\":\\\"0\\\",\\\"month\\\":\\\"2026-09\\\",\\\"before\\\":100000,\\\"after\\\":150000}]}],\\\"accounts\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"before\\\":100000,\\\"difference\\\":50000,\\\"after\\\":150000}],\\\"references\\\":[],\\\"totalBefore\\\":100000,\\\"totalAfter\\\":150000,\\\"warnings\\\":[\\\"Índices sintéticos: conciliación exclusivamente de prueba.\\\",\\\"La conciliación no agrega otro asiento del ajuste ni cambia cantidades o documentos.\\\",\\\"El CPP posterior parte de los valores conciliados. Las notas y facturas sobre recepciones anteriores requieren repartir sus diferencias entre esa base y resultados.\\\",\\\"Las devoluciones de ventas anteriores requieren costo recuperado y respaldo en la misma moneda de la base.\\\",\\\"Revisá medición, orígenes, valor recuperable y moneda homogénea antes de emitir estados contables.\\\"]}\",\"postingId\":\"c2281906-94c4-47ad-89c9-6e0ea85f319d\"}],\"corrections\":[]}",
+          "costVersion": 6,
+          "id": "5b00f487-7ea9-4f0a-9a08-f9980a03a556",
+          "number": "INT-VC-00000003",
+          "method": "CPP",
+          "inflation": [
+            {
+              "id": "c87e0b35-426e-421f-b2b8-fa8cdc819ac6",
+              "number": "INT-CI-00000001",
+              "date": "2026-10-11",
+              "review": "{\"postingId\":\"c2281906-94c4-47ad-89c9-6e0ea85f319d\",\"postingNumber\":\"INT-AI-00000001\",\"date\":\"2026-10-11\",\"reference\":\"Conciliación de inventario QA 2026\",\"reason\":\"Base revisada para el CPP posterior, con antigüedad de septiembre y ajuste anual ya contabilizado.\",\"source\":{\"id\":\"c2281906-94c4-47ad-89c9-6e0ea85f319d\",\"number\":\"INT-AI-00000001\",\"date\":\"2026-10-11\",\"provider\":\"Ensayo\",\"closingMonth\":\"2026-10\",\"indices\":[{\"month\":\"2025-12\",\"value\":\"100\"},{\"month\":\"2026-01\",\"value\":\"100\"},{\"month\":\"2026-02\",\"value\":\"100\"},{\"month\":\"2026-03\",\"value\":\"100\"},{\"month\":\"2026-04\",\"value\":\"100\"},{\"month\":\"2026-05\",\"value\":\"100\"},{\"month\":\"2026-06\",\"value\":\"100\"},{\"month\":\"2026-07\",\"value\":\"100\"},{\"month\":\"2026-08\",\"value\":\"100\"},{\"month\":\"2026-09\",\"value\":\"100\"},{\"month\":\"2026-10\",\"value\":\"150\"}],\"entryIds\":[\"ec315e6d-6418-4ee3-bb2c-58abd7232345\"],\"issues\":[],\"batch\":{\"date\":\"2026-10-11\",\"reference\":\"Corte anterior al ajuste de inventario\",\"accounts\":{\"inventory\":\"inventory-inventory\",\"opening\":\"3.1\",\"cogs\":\"inventory-cogs\",\"adjustments\":\"inventory-adjustments\",\"transit\":\"inventory-transit\",\"wip\":\"inventory-wip\",\"unbilled\":\"inventory-unbilled\"},\"review\":\"{\\\"moves\\\":[],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"97c1af0d-efa4-4078-9309-41dff66c279d\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":10,\\\"value\\\":100000}],\\\"journals\\\":[],\\\"corrections\\\":[]}\",\"costVersion\":5,\"id\":\"9c5e72e4-9400-4d4c-a577-24ddd00849ce\",\"number\":\"INT-VC-00000002\",\"method\":\"CPP\",\"responsible\":\"Administrador\",\"createdAt\":\"2026-10-12T05:38:36.756Z\",\"sourceMoves\":[],\"rows\":[],\"corrections\":[],\"balances\":[{\"productId\":\"97c1af0d-efa4-4078-9309-41dff66c279d\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":100000}],\"entryIds\":[]},\"accounts\":[{\"branchId\":\"central\",\"before\":100000,\"difference\":50000,\"after\":150000}],\"parts\":[{\"id\":\"0\",\"month\":\"2026-09\",\"amount\":100000,\"adjusted\":150000,\"coefficient\":\"1.500000000000\"}]},\"balances\":[{\"productId\":\"97c1af0d-efa4-4078-9309-41dff66c279d\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":10,\"value\":100000,\"before\":100000,\"after\":150000,\"difference\":50000,\"reason\":\"Diez remeras de apertura por $1.000, conservando cantidad y origen septiembre 100 frente a octubre 150.\",\"pieces\":[{\"sourceId\":\"0\",\"month\":\"2026-09\",\"before\":100000,\"after\":150000}]}],\"accounts\":[{\"branchId\":\"central\",\"before\":100000,\"difference\":50000,\"after\":150000}],\"references\":[],\"totalBefore\":100000,\"totalAfter\":150000,\"warnings\":[\"Índices sintéticos: conciliación exclusivamente de prueba.\",\"La conciliación no agrega otro asiento del ajuste ni cambia cantidades o documentos.\",\"El CPP posterior parte de los valores conciliados. Las notas y facturas sobre recepciones anteriores requieren repartir sus diferencias entre esa base y resultados.\",\"Las devoluciones de ventas anteriores requieren costo recuperado y respaldo en la misma moneda de la base.\",\"Revisá medición, orígenes, valor recuperable y moneda homogénea antes de emitir estados contables.\"]}",
+              "postingId": "c2281906-94c4-47ad-89c9-6e0ea85f319d"
+            }
+          ],
+          "responsible": "Administrador",
+          "createdAt": "2026-10-12T05:51:04.691Z",
+          "sourceMoves": [
+            {
+              "id": "bcccaf3b-df38-4070-a9ce-b948cfc2eac8",
+              "date": "2026-10-12",
+              "productId": "97c1af0d-efa4-4078-9309-41dff66c279d",
+              "depositId": "principal",
+              "quantity": 5,
+              "reason": "INT-RM-X-00001-00000001",
+              "documentId": "49512867-f0d2-4ec6-bf0e-59eca479d8dc",
+              "branchId": "central"
+            },
+            {
+              "id": "12db2a7a-40d7-4e0a-977b-c38ec0374b9c",
+              "date": "2026-10-13",
+              "productId": "97c1af0d-efa4-4078-9309-41dff66c279d",
+              "depositId": "principal",
+              "quantity": -3,
+              "reason": "INT-RM-X-00001-00000002",
+              "documentId": "efd37778-e8ad-4429-a531-5ec267dc9b28",
+              "branchId": "central"
+            }
+          ],
+          "rows": [
+            {
+              "moveId": "bcccaf3b-df38-4070-a9ce-b948cfc2eac8",
+              "productId": "97c1af0d-efa4-4078-9309-41dff66c279d",
+              "depositId": "principal",
+              "branchId": "central",
+              "date": "2026-10-12",
+              "quantity": 5,
+              "value": 100000,
+              "kind": "Compra",
+              "counterpart": "5.1",
+              "invoiceId": "da14df95-4124-4d40-9018-80cc80998194"
+            },
+            {
+              "moveId": "12db2a7a-40d7-4e0a-977b-c38ec0374b9c",
+              "productId": "97c1af0d-efa4-4078-9309-41dff66c279d",
+              "depositId": "principal",
+              "branchId": "central",
+              "date": "2026-10-13",
+              "quantity": -3,
+              "value": 50000,
+              "kind": "Venta",
+              "counterpart": "inventory-cogs"
+            }
+          ],
+          "corrections": [],
+          "balances": [
+            {
+              "productId": "97c1af0d-efa4-4078-9309-41dff66c279d",
+              "depositId": "principal",
+              "branchId": "central",
+              "sku": "REM-M-NEG",
+              "name": "Remera de algodón · M · Negro",
+              "unit": "Unidad",
+              "depositName": "Depósito principal",
+              "quantity": 12,
+              "value": 200000
+            }
+          ],
+          "entryIds": [
+            "7ad1c79a-c59c-40a8-a3be-1fee8f95d998"
+          ]
+        },
+        "ledger": {
+          "from": "2026-10-12",
+          "to": "2026-12-31",
+          "branchId": "all",
+          "rows": [
+            {
+              "accountId": "1.1.1",
+              "code": "1.1.1",
+              "name": "Caja",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.2",
+              "code": "1.1.2",
+              "name": "Bancos",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.3",
+              "code": "1.1.3",
+              "name": "Deudores por ventas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 108900,
+              "credit": 0,
+              "closing": 108900
+            },
+            {
+              "accountId": "1.1.4",
+              "code": "1.1.4",
+              "name": "IVA crédito fiscal",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 21000,
+              "credit": 0,
+              "closing": 21000
+            },
+            {
+              "accountId": "1.1.5",
+              "code": "1.1.5",
+              "name": "Valores a depositar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.6",
+              "code": "1.1.6",
+              "name": "Retenciones sufridas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.7",
+              "code": "1.1.7",
+              "name": "Percepciones sufridas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.8",
+              "code": "1.1.8",
+              "name": "Cupones de tarjetas a cobrar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.1",
+              "code": "2.1.1",
+              "name": "Proveedores",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 121000,
+              "closing": -121000
+            },
+            {
+              "accountId": "2.1.2",
+              "code": "2.1.2",
+              "name": "IVA débito fiscal",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 18900,
+              "closing": -18900
+            },
+            {
+              "accountId": "2.1.3",
+              "code": "2.1.3",
+              "name": "Retenciones a depositar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.4",
+              "code": "2.1.4",
+              "name": "Percepciones a depositar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.5",
+              "code": "2.1.5",
+              "name": "Cheques propios emitidos",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.1",
+              "code": "3.1",
+              "name": "Capital y saldos iniciales",
+              "group": "Patrimonio neto",
+              "opening": -100000,
+              "debit": 0,
+              "credit": 0,
+              "closing": -100000
+            },
+            {
+              "accountId": "4.1",
+              "code": "4.1",
+              "name": "Ventas",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 90000,
+              "closing": -90000
+            },
+            {
+              "accountId": "5.1",
+              "code": "5.1",
+              "name": "Compras y gastos",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 100000,
+              "credit": 100000,
+              "closing": 0
+            },
+            {
+              "accountId": "5.2",
+              "code": "5.2",
+              "name": "Comisiones de vendedores",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.3",
+              "code": "5.3",
+              "name": "Cargos de tarjetas",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-inventory",
+              "code": "1.1.9",
+              "name": "Existencias de mercadería",
+              "group": "Activo",
+              "opening": 150000,
+              "debit": 50000,
+              "credit": 0,
+              "closing": 200000
+            },
+            {
+              "accountId": "inventory-cogs",
+              "code": "5.4",
+              "name": "Costo de mercadería vendida",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 50000,
+              "credit": 0,
+              "closing": 50000
+            },
+            {
+              "accountId": "inventory-adjustments",
+              "code": "5.5",
+              "name": "Diferencias de inventario",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-transit",
+              "code": "1.1.10",
+              "name": "Traslados de mercadería a conciliar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-wip",
+              "code": "1.1.11",
+              "name": "Producción en proceso",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-unbilled",
+              "code": "2.1.6",
+              "name": "Mercadería recibida sin facturar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.90.1",
+              "code": "3.90.1",
+              "name": "Capital suscripto",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.90.2",
+              "code": "3.90.2",
+              "name": "Ajuste del capital",
+              "group": "Patrimonio neto",
+              "opening": -50000,
+              "debit": 0,
+              "credit": 0,
+              "closing": -50000
+            },
+            {
+              "accountId": "3.90.3",
+              "code": "3.90.3",
+              "name": "Aportes irrevocables",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.90.4",
+              "code": "3.90.4",
+              "name": "Primas de emisión",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.90.5",
+              "code": "3.90.5",
+              "name": "Ganancias reservadas",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.90.6",
+              "code": "3.90.6",
+              "name": "Resultados no asignados",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.90.7",
+              "code": "3.90.7",
+              "name": "Resultados diferidos",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "4.90",
+              "code": "4.90",
+              "name": "RECPAM monetario positivo",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.90",
+              "code": "5.90",
+              "name": "RECPAM monetario negativo",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "4.91",
+              "code": "4.91",
+              "name": "Otros resultados del ajuste y redondeos positivos",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.91",
+              "code": "5.91",
+              "name": "Otros resultados del ajuste y redondeos negativos",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            }
+          ],
+          "totals": {
+            "openingDebit": 150000,
+            "openingCredit": 150000,
+            "debit": 329900,
+            "credit": 329900,
+            "closingDebit": 379900,
+            "closingCredit": 379900
+          },
+          "entryIds": [
+            "86d0b8a3-69ef-4062-8b33-6b8f16c2bea9",
+            "ec315e6d-6418-4ee3-bb2c-58abd7232345",
+            "8f972a2a-f318-4e0d-a35b-c77760726634",
+            "c55d054d-c2e0-40df-b40f-dda003738395",
+            "7ad1c79a-c59c-40a8-a3be-1fee8f95d998"
+          ]
+        },
+        "pdfPages": 9,
+        "xlsxSheets": [
+          "Constancia",
+          "Artículo y depósito",
+          "Mayor por sucursal",
+          "Fuentes asignadas",
+          "Antigüedades fuente",
+          "Índices conservados",
+          "Recepciones pendientes",
+          "Respaldo y continuidad",
+          "Cuentas del CPP"
+        ],
+        "preservation": "La apertura y el corte nominal conservan $1000; INT-CI enlaza $1500 sin asiento adicional. El siguiente CPP incorpora sólo los movimientos posteriores, compra $1000 y CMV $500.",
+        "closing": "Cierre/apertura anteriores conservados; saldo contable y existencias finales $2000, doce unidades."
+      }
+    },
+    {
+      "database": "var/qa-asset-inflation.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-inflation-posting.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-reexpression.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-statements.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-asset-impairment.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-asset-disposal.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-asset-reestimate.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-fixed-assets.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-service-cancellation.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-journal-reversal.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-revenue-accrual.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-exercise-opening.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-year-end.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-service-reestimates.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-service-accruals.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    }
+  ],
+  "render": {
+    "pages": 9,
+    "renderer": "/usr/bin/pdftoppm a 100 dpi",
+    "images": "output/pdf/qa-conciliacion-inventario-final",
+    "unchangedPages": [
+      "page-1.png",
+      "page-2.png",
+      "page-4.png",
+      "page-5.png",
+      "page-6.png",
+      "page-7.png",
+      "page-8.png"
+    ],
+    "updatedLabelPages": [
+      "page-3.png",
+      "page-9.png"
+    ],
+    "review": "Contacto completo revisado; artículos/mayor a resolución completa. Las páginas restantes se comprobaron por igualdad de píxeles después de mejorar las etiquetas."
+  }
+}

@@ -1,0 +1,1443 @@
+{
+  "date": "2026-10-12",
+  "synthetic": true,
+  "tests": {
+    "domain": 394,
+    "files": 32,
+    "http": 55,
+    "fiscal": 22,
+    "total": 503
+  },
+  "browser": {
+    "result": "INT-RPC conservada con INT-RS y CPP9 vinculado; corte INT-VC-00000004, inventario $102, CMV $32 y proceso $17.",
+    "screenshot": "output/production-finished-correction-saved-2026-10-12.jpg",
+    "transcript": "output/production-finished-correction-browser-2026-10-12.txt"
+  },
+  "limitations": [
+    "Las fuentes positivas originales y las bases de reparto se conservan.",
+    "Deben estar valorizados los movimientos y correcciones pendientes antes de revisar la nueva información.",
+    "Las notas/conciliaciones/anulaciones, cambios de asignación, bases de VNR y de moneda de cierre necesitan ampliar sus puentes.",
+    "El objetivo integral y la validación fiscal/profesional permanecen abiertos."
+  ],
+  "checks": [
+    {
+      "database": "var/qa-production-finished-correction.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "correction": {
+        "record": {
+          "service": {
+            "date": "2026-10-12",
+            "accrualId": "b5503e22-3f8f-477c-921c-27fd2b2388ad",
+            "reference": "Nueva cotización con lote terminado QA",
+            "reason": "Nueva información recibida: el servicio cuesta $30, conservando alcance y cantidades.",
+            "lines": [
+              {
+                "productId": "pc-fixed-service",
+                "value": 3000
+              }
+            ]
+          },
+          "reason": "Nueva cotización del servicio fijo. Se conservan tres horas reales frente a diez normales: A terminado con una unidad vendida, B todavía en proceso.",
+          "allocationConfirmed": true,
+          "review": "{\"date\":\"2026-10-12\",\"reason\":\"Nueva cotización del servicio fijo. Se conservan tres horas reales frente a diez normales: A terminado con una unidad vendida, B todavía en proceso.\",\"service\":{\"date\":\"2026-10-12\",\"reference\":\"Nueva cotización con lote terminado QA\",\"reason\":\"Nueva información recibida: el servicio cuesta $30, conservando alcance y cantidades.\",\"accrualId\":\"b5503e22-3f8f-477c-921c-27fd2b2388ad\",\"accrualNumber\":\"INT-DS-00000001\",\"previousReestimateId\":\"\",\"branchId\":\"central\",\"liabilityId\":\"2.1.7\",\"previousValue\":6000,\"total\":3000,\"difference\":-3000,\"lines\":[{\"productId\":\"pc-fixed-service\",\"accountId\":\"pc-fixed\",\"previousValue\":6000,\"value\":3000,\"difference\":-3000}],\"entry\":[{\"accountId\":\"pc-fixed\",\"debit\":0,\"credit\":3000},{\"accountId\":\"2.1.7\",\"debit\":3000,\"credit\":0}]},\"entryPrefixIds\":[\"3060e008-a91b-491e-8028-f3ae8c7906ed\",\"e9e4238b-2938-47c0-9f50-c361c96a793d\",\"14d82644-a008-4245-858b-5e4792007db9\",\"6358378a-605b-42bb-b368-2b794ec47758\",\"8e36a5dc-30af-4083-98be-0731638cb138\",\"24d45bb9-7e51-4bf5-841b-5ffb4ba41d66\",\"49a45313-7b6e-465d-bff9-2cac0b440745\",\"d0b57015-d021-40ef-920f-3d689a20594e\"],\"stockPrefixIds\":[\"pc-opening\",\"46cf1e12-11eb-4542-8a6a-9e46c53ba2eb\",\"0e6ecd32-3b14-42f4-b3e1-bb21e3cd77a3\",\"2774dadf-0851-4655-9ac3-f9a31288fe36\"],\"costPrefixIds\":[\"ea6777b8-1ee3-42e0-8393-827fc9ebb096\"],\"correctionPrefixIds\":[],\"layers\":[{\"productionCostId\":\"ea6777b8-1ee3-42e0-8393-827fc9ebb096\",\"number\":\"INT-PC-00000001\",\"measurement\":{\"recordId\":\"ea6777b8-1ee3-42e0-8393-827fc9ebb096\",\"pools\":[{\"poolId\":\"pool-0\",\"kind\":\"Directo\",\"beforeGross\":3000,\"gross\":3000,\"beforeCapitalized\":3000,\"capitalized\":3000,\"unabsorbed\":0,\"difference\":0,\"reason\":\"Nueva cotización del servicio fijo. Se conservan tres horas reales frente a diez normales: A terminado con una unidad vendida, B todavía en proceso.\",\"allocations\":[{\"orderId\":\"pc-a\",\"before\":2000,\"after\":2000,\"difference\":0},{\"orderId\":\"pc-b\",\"before\":1000,\"after\":1000,\"difference\":0}]},{\"poolId\":\"pool-1\",\"kind\":\"Fijo\",\"beforeGross\":6000,\"gross\":3000,\"beforeCapitalized\":1800,\"capitalized\":900,\"unabsorbed\":2100,\"difference\":-900,\"reason\":\"Nueva cotización del servicio fijo. Se conservan tres horas reales frente a diez normales: A terminado con una unidad vendida, B todavía en proceso.\",\"allocations\":[{\"orderId\":\"pc-a\",\"before\":1200,\"after\":600,\"difference\":-600},{\"orderId\":\"pc-b\",\"before\":600,\"after\":300,\"difference\":-300}]},{\"poolId\":\"pool-2\",\"kind\":\"Variable\",\"beforeGross\":1200,\"gross\":1200,\"beforeCapitalized\":1200,\"capitalized\":1200,\"unabsorbed\":0,\"difference\":0,\"reason\":\"Nueva cotización del servicio fijo. Se conservan tres horas reales frente a diez normales: A terminado con una unidad vendida, B todavía en proceso.\",\"allocations\":[{\"orderId\":\"pc-a\",\"before\":800,\"after\":800,\"difference\":0},{\"orderId\":\"pc-b\",\"before\":400,\"after\":400,\"difference\":0}]},{\"poolId\":\"pool-3\",\"kind\":\"Excluido\",\"beforeGross\":500,\"gross\":500,\"beforeCapitalized\":0,\"capitalized\":0,\"unabsorbed\":500,\"difference\":0,\"reason\":\"Nueva cotización del servicio fijo. Se conservan tres horas reales frente a diez normales: A terminado con una unidad vendida, B todavía en proceso.\",\"allocations\":[]}],\"allocations\":[{\"orderId\":\"pc-a\",\"before\":4000,\"after\":3400,\"difference\":-600},{\"orderId\":\"pc-b\",\"before\":2000,\"after\":1700,\"difference\":-300}],\"beforeCapitalized\":6000,\"capitalized\":5100,\"difference\":-900,\"beforeUnabsorbed\":4700,\"unabsorbed\":2600,\"expenseDifference\":-2100},\"sources\":[{\"poolId\":\"pool-0\",\"entryId\":\"e9e4238b-2938-47c0-9f50-c361c96a793d\",\"lineIndex\":0,\"accountId\":\"pc-labor\",\"value\":3000,\"capitalized\":3000},{\"poolId\":\"pool-1\",\"entryId\":\"8e36a5dc-30af-4083-98be-0731638cb138\",\"lineIndex\":0,\"accountId\":\"pc-fixed\",\"value\":3000,\"capitalized\":900},{\"poolId\":\"pool-2\",\"entryId\":\"14d82644-a008-4245-858b-5e4792007db9\",\"lineIndex\":0,\"accountId\":\"pc-variable\",\"value\":1200,\"capitalized\":1200},{\"poolId\":\"pool-3\",\"entryId\":\"6358378a-605b-42bb-b368-2b794ec47758\",\"lineIndex\":0,\"accountId\":\"pc-administration\",\"value\":500,\"capitalized\":0}],\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}],\"lines\":[{\"accountId\":\"inventory-wip\",\"debit\":0,\"credit\":900},{\"accountId\":\"pc-fixed\",\"debit\":900,\"credit\":0}],\"difference\":-900,\"expenseDifference\":-2100,\"version\":2,\"destinations\":{\"wip\":-300,\"inventory\":-300,\"cogs\":-300,\"other\":[]},\"inventory\":{\"correctionId\":\"production-correction:INT-RPC-00000001\",\"number\":\"INT-RPC-00000001\",\"batchPrefixIds\":[\"cf1cf3ac-ba62-40b6-846b-573fc8d4d37c\",\"5b4107dc-c065-4225-b065-141647c10675\",\"5cb96c6d-adc1-491a-9274-e17ecaeca0c8\"],\"input\":{\"date\":\"2026-10-12\",\"reference\":\"INT-RPC-00000001 · CPP conciliado\",\"accounts\":{\"inventory\":\"inventory-inventory\",\"opening\":\"3.1\",\"cogs\":\"inventory-cogs\",\"adjustments\":\"inventory-adjustments\",\"transit\":\"inventory-transit\",\"wip\":\"inventory-wip\",\"unbilled\":\"inventory-unbilled\"},\"costVersion\":9,\"review\":\"{\\\"moves\\\":[],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"35470965-9ffa-4a7c-9c1d-e0bcb363c62c\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":7,\\\"value\\\":7000},{\\\"productId\\\":\\\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":1,\\\"value\\\":3200}],\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-inventory\\\",\\\"debit\\\":0,\\\"credit\\\":300},{\\\"accountId\\\":\\\"inventory-wip\\\",\\\"debit\\\":600,\\\"credit\\\":0},{\\\"accountId\\\":\\\"inventory-cogs\\\",\\\"debit\\\":0,\\\"credit\\\":300}]}],\\\"productionCosts\\\":[{\\\"id\\\":\\\"ea6777b8-1ee3-42e0-8393-827fc9ebb096\\\",\\\"number\\\":\\\"INT-PC-00000001\\\",\\\"date\\\":\\\"2026-10-03\\\",\\\"wipAccountId\\\":\\\"inventory-wip\\\",\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":3400},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":1700}],\\\"review\\\":\\\"{\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-03\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"wipAccountId\\\\\\\":\\\\\\\"inventory-wip\\\\\\\",\\\\\\\"orders\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\\\\\\\",\\\\\\\"quantity\\\\\\\":2,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\"},{\\\\\\\"id\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\\\\\\\",\\\\\\\"quantity\\\\\\\":2,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\"}],\\\\\\\"allocations\\\\\\\":[{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"amount\\\\\\\":3400},{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"amount\\\\\\\":1700}]}\\\",\\\"corrections\\\":[{\\\"id\\\":\\\"production-correction:INT-RPC-00000001\\\",\\\"number\\\":\\\"INT-RPC-00000001\\\",\\\"date\\\":\\\"2026-10-12\\\",\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":3400},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":1700}]}]}],\\\"corrections\\\":[]}\"},\"preview\":{\"sourceMoves\":[],\"rows\":[],\"balances\":[{\"productId\":\"35470965-9ffa-4a7c-9c1d-e0bcb363c62c\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":7,\"value\":7000},{\"productId\":\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"PANT-42-AZ\",\"name\":\"Pantalón · 42 · Azul\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":1,\"value\":3200}],\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-inventory\",\"debit\":0,\"credit\":300},{\"accountId\":\"inventory-wip\",\"debit\":600,\"credit\":0},{\"accountId\":\"inventory-cogs\",\"debit\":0,\"credit\":300}]}],\"corrections\":[],\"productionCosts\":[{\"id\":\"ea6777b8-1ee3-42e0-8393-827fc9ebb096\",\"number\":\"INT-PC-00000001\",\"date\":\"2026-10-03\",\"wipAccountId\":\"inventory-wip\",\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}],\"review\":\"{\\\"date\\\":\\\"2026-10-03\\\",\\\"branchId\\\":\\\"central\\\",\\\"wipAccountId\\\":\\\"inventory-wip\\\",\\\"orders\\\":[{\\\"id\\\":\\\"pc-a\\\",\\\"productId\\\":\\\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"},{\\\"id\\\":\\\"pc-b\\\",\\\"productId\\\":\\\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"}],\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":3400},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":1700}]}\",\"corrections\":[{\"id\":\"production-correction:INT-RPC-00000001\",\"number\":\"INT-RPC-00000001\",\"date\":\"2026-10-12\",\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}]}]}}}",
+          "version": 2,
+          "id": "production-correction:INT-RPC-00000001",
+          "number": "INT-RPC-00000001",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-13T02:33:36.486Z",
+          "sourceId": "2fc60184-0e13-49ac-b1c1-522c13f0b252",
+          "sourceEntryId": "55b2d88b-219d-4b91-b4d0-44144e278cd4",
+          "entryIds": [
+            "30b286c3-aaf5-4384-871a-a52e314e6d00"
+          ],
+          "preview": {
+            "date": "2026-10-12",
+            "reason": "Nueva cotización del servicio fijo. Se conservan tres horas reales frente a diez normales: A terminado con una unidad vendida, B todavía en proceso.",
+            "service": {
+              "date": "2026-10-12",
+              "reference": "Nueva cotización con lote terminado QA",
+              "reason": "Nueva información recibida: el servicio cuesta $30, conservando alcance y cantidades.",
+              "accrualId": "b5503e22-3f8f-477c-921c-27fd2b2388ad",
+              "accrualNumber": "INT-DS-00000001",
+              "previousReestimateId": "",
+              "branchId": "central",
+              "liabilityId": "2.1.7",
+              "previousValue": 6000,
+              "total": 3000,
+              "difference": -3000,
+              "lines": [
+                {
+                  "productId": "pc-fixed-service",
+                  "accountId": "pc-fixed",
+                  "previousValue": 6000,
+                  "value": 3000,
+                  "difference": -3000
+                }
+              ],
+              "entry": [
+                {
+                  "accountId": "pc-fixed",
+                  "debit": 0,
+                  "credit": 3000
+                },
+                {
+                  "accountId": "2.1.7",
+                  "debit": 3000,
+                  "credit": 0
+                }
+              ]
+            },
+            "entryPrefixIds": [
+              "3060e008-a91b-491e-8028-f3ae8c7906ed",
+              "e9e4238b-2938-47c0-9f50-c361c96a793d",
+              "14d82644-a008-4245-858b-5e4792007db9",
+              "6358378a-605b-42bb-b368-2b794ec47758",
+              "8e36a5dc-30af-4083-98be-0731638cb138",
+              "24d45bb9-7e51-4bf5-841b-5ffb4ba41d66",
+              "49a45313-7b6e-465d-bff9-2cac0b440745",
+              "d0b57015-d021-40ef-920f-3d689a20594e"
+            ],
+            "stockPrefixIds": [
+              "pc-opening",
+              "46cf1e12-11eb-4542-8a6a-9e46c53ba2eb",
+              "0e6ecd32-3b14-42f4-b3e1-bb21e3cd77a3",
+              "2774dadf-0851-4655-9ac3-f9a31288fe36"
+            ],
+            "costPrefixIds": [
+              "ea6777b8-1ee3-42e0-8393-827fc9ebb096"
+            ],
+            "correctionPrefixIds": [],
+            "layers": [
+              {
+                "productionCostId": "ea6777b8-1ee3-42e0-8393-827fc9ebb096",
+                "number": "INT-PC-00000001",
+                "measurement": {
+                  "recordId": "ea6777b8-1ee3-42e0-8393-827fc9ebb096",
+                  "pools": [
+                    {
+                      "poolId": "pool-0",
+                      "kind": "Directo",
+                      "beforeGross": 3000,
+                      "gross": 3000,
+                      "beforeCapitalized": 3000,
+                      "capitalized": 3000,
+                      "unabsorbed": 0,
+                      "difference": 0,
+                      "reason": "Nueva cotización del servicio fijo. Se conservan tres horas reales frente a diez normales: A terminado con una unidad vendida, B todavía en proceso.",
+                      "allocations": [
+                        {
+                          "orderId": "pc-a",
+                          "before": 2000,
+                          "after": 2000,
+                          "difference": 0
+                        },
+                        {
+                          "orderId": "pc-b",
+                          "before": 1000,
+                          "after": 1000,
+                          "difference": 0
+                        }
+                      ]
+                    },
+                    {
+                      "poolId": "pool-1",
+                      "kind": "Fijo",
+                      "beforeGross": 6000,
+                      "gross": 3000,
+                      "beforeCapitalized": 1800,
+                      "capitalized": 900,
+                      "unabsorbed": 2100,
+                      "difference": -900,
+                      "reason": "Nueva cotización del servicio fijo. Se conservan tres horas reales frente a diez normales: A terminado con una unidad vendida, B todavía en proceso.",
+                      "allocations": [
+                        {
+                          "orderId": "pc-a",
+                          "before": 1200,
+                          "after": 600,
+                          "difference": -600
+                        },
+                        {
+                          "orderId": "pc-b",
+                          "before": 600,
+                          "after": 300,
+                          "difference": -300
+                        }
+                      ]
+                    },
+                    {
+                      "poolId": "pool-2",
+                      "kind": "Variable",
+                      "beforeGross": 1200,
+                      "gross": 1200,
+                      "beforeCapitalized": 1200,
+                      "capitalized": 1200,
+                      "unabsorbed": 0,
+                      "difference": 0,
+                      "reason": "Nueva cotización del servicio fijo. Se conservan tres horas reales frente a diez normales: A terminado con una unidad vendida, B todavía en proceso.",
+                      "allocations": [
+                        {
+                          "orderId": "pc-a",
+                          "before": 800,
+                          "after": 800,
+                          "difference": 0
+                        },
+                        {
+                          "orderId": "pc-b",
+                          "before": 400,
+                          "after": 400,
+                          "difference": 0
+                        }
+                      ]
+                    },
+                    {
+                      "poolId": "pool-3",
+                      "kind": "Excluido",
+                      "beforeGross": 500,
+                      "gross": 500,
+                      "beforeCapitalized": 0,
+                      "capitalized": 0,
+                      "unabsorbed": 500,
+                      "difference": 0,
+                      "reason": "Nueva cotización del servicio fijo. Se conservan tres horas reales frente a diez normales: A terminado con una unidad vendida, B todavía en proceso.",
+                      "allocations": []
+                    }
+                  ],
+                  "allocations": [
+                    {
+                      "orderId": "pc-a",
+                      "before": 4000,
+                      "after": 3400,
+                      "difference": -600
+                    },
+                    {
+                      "orderId": "pc-b",
+                      "before": 2000,
+                      "after": 1700,
+                      "difference": -300
+                    }
+                  ],
+                  "beforeCapitalized": 6000,
+                  "capitalized": 5100,
+                  "difference": -900,
+                  "beforeUnabsorbed": 4700,
+                  "unabsorbed": 2600,
+                  "expenseDifference": -2100
+                },
+                "sources": [
+                  {
+                    "poolId": "pool-0",
+                    "entryId": "e9e4238b-2938-47c0-9f50-c361c96a793d",
+                    "lineIndex": 0,
+                    "accountId": "pc-labor",
+                    "value": 3000,
+                    "capitalized": 3000
+                  },
+                  {
+                    "poolId": "pool-1",
+                    "entryId": "8e36a5dc-30af-4083-98be-0731638cb138",
+                    "lineIndex": 0,
+                    "accountId": "pc-fixed",
+                    "value": 3000,
+                    "capitalized": 900
+                  },
+                  {
+                    "poolId": "pool-2",
+                    "entryId": "14d82644-a008-4245-858b-5e4792007db9",
+                    "lineIndex": 0,
+                    "accountId": "pc-variable",
+                    "value": 1200,
+                    "capitalized": 1200
+                  },
+                  {
+                    "poolId": "pool-3",
+                    "entryId": "6358378a-605b-42bb-b368-2b794ec47758",
+                    "lineIndex": 0,
+                    "accountId": "pc-administration",
+                    "value": 500,
+                    "capitalized": 0
+                  }
+                ],
+                "allocations": [
+                  {
+                    "orderId": "pc-a",
+                    "amount": 3400
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "amount": 1700
+                  }
+                ]
+              }
+            ],
+            "lines": [
+              {
+                "accountId": "inventory-wip",
+                "debit": 0,
+                "credit": 900
+              },
+              {
+                "accountId": "pc-fixed",
+                "debit": 900,
+                "credit": 0
+              }
+            ],
+            "difference": -900,
+            "expenseDifference": -2100,
+            "version": 2,
+            "destinations": {
+              "wip": -300,
+              "inventory": -300,
+              "cogs": -300,
+              "other": []
+            },
+            "inventory": {
+              "correctionId": "production-correction:INT-RPC-00000001",
+              "number": "INT-RPC-00000001",
+              "batchPrefixIds": [
+                "cf1cf3ac-ba62-40b6-846b-573fc8d4d37c",
+                "5b4107dc-c065-4225-b065-141647c10675",
+                "5cb96c6d-adc1-491a-9274-e17ecaeca0c8"
+              ],
+              "input": {
+                "date": "2026-10-12",
+                "reference": "INT-RPC-00000001 · CPP conciliado",
+                "accounts": {
+                  "inventory": "inventory-inventory",
+                  "opening": "3.1",
+                  "cogs": "inventory-cogs",
+                  "adjustments": "inventory-adjustments",
+                  "transit": "inventory-transit",
+                  "wip": "inventory-wip",
+                  "unbilled": "inventory-unbilled"
+                },
+                "costVersion": 9,
+                "review": "{\"moves\":[],\"rows\":[],\"balances\":[{\"productId\":\"35470965-9ffa-4a7c-9c1d-e0bcb363c62c\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"value\":7000},{\"productId\":\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"value\":3200}],\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-inventory\",\"debit\":0,\"credit\":300},{\"accountId\":\"inventory-wip\",\"debit\":600,\"credit\":0},{\"accountId\":\"inventory-cogs\",\"debit\":0,\"credit\":300}]}],\"productionCosts\":[{\"id\":\"ea6777b8-1ee3-42e0-8393-827fc9ebb096\",\"number\":\"INT-PC-00000001\",\"date\":\"2026-10-03\",\"wipAccountId\":\"inventory-wip\",\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}],\"review\":\"{\\\"date\\\":\\\"2026-10-03\\\",\\\"branchId\\\":\\\"central\\\",\\\"wipAccountId\\\":\\\"inventory-wip\\\",\\\"orders\\\":[{\\\"id\\\":\\\"pc-a\\\",\\\"productId\\\":\\\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"},{\\\"id\\\":\\\"pc-b\\\",\\\"productId\\\":\\\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"}],\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":3400},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":1700}]}\",\"corrections\":[{\"id\":\"production-correction:INT-RPC-00000001\",\"number\":\"INT-RPC-00000001\",\"date\":\"2026-10-12\",\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}]}],\"corrections\":[]}"
+              },
+              "preview": {
+                "sourceMoves": [],
+                "rows": [],
+                "balances": [
+                  {
+                    "productId": "35470965-9ffa-4a7c-9c1d-e0bcb363c62c",
+                    "depositId": "principal",
+                    "branchId": "central",
+                    "sku": "REM-M-NEG",
+                    "name": "Remera de algodón · M · Negro",
+                    "unit": "Unidad",
+                    "depositName": "Depósito principal",
+                    "quantity": 7,
+                    "value": 7000
+                  },
+                  {
+                    "productId": "e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a",
+                    "depositId": "principal",
+                    "branchId": "central",
+                    "sku": "PANT-42-AZ",
+                    "name": "Pantalón · 42 · Azul",
+                    "unit": "Unidad",
+                    "depositName": "Depósito principal",
+                    "quantity": 1,
+                    "value": 3200
+                  }
+                ],
+                "journals": [
+                  {
+                    "branchId": "central",
+                    "lines": [
+                      {
+                        "accountId": "inventory-inventory",
+                        "debit": 0,
+                        "credit": 300
+                      },
+                      {
+                        "accountId": "inventory-wip",
+                        "debit": 600,
+                        "credit": 0
+                      },
+                      {
+                        "accountId": "inventory-cogs",
+                        "debit": 0,
+                        "credit": 300
+                      }
+                    ]
+                  }
+                ],
+                "corrections": [],
+                "productionCosts": [
+                  {
+                    "id": "ea6777b8-1ee3-42e0-8393-827fc9ebb096",
+                    "number": "INT-PC-00000001",
+                    "date": "2026-10-03",
+                    "wipAccountId": "inventory-wip",
+                    "allocations": [
+                      {
+                        "orderId": "pc-a",
+                        "amount": 3400
+                      },
+                      {
+                        "orderId": "pc-b",
+                        "amount": 1700
+                      }
+                    ],
+                    "review": "{\"date\":\"2026-10-03\",\"branchId\":\"central\",\"wipAccountId\":\"inventory-wip\",\"orders\":[{\"id\":\"pc-a\",\"productId\":\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\",\"quantity\":2,\"branchId\":\"central\"},{\"id\":\"pc-b\",\"productId\":\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\",\"quantity\":2,\"branchId\":\"central\"}],\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}",
+                    "corrections": [
+                      {
+                        "id": "production-correction:INT-RPC-00000001",
+                        "number": "INT-RPC-00000001",
+                        "date": "2026-10-12",
+                        "allocations": [
+                          {
+                            "orderId": "pc-a",
+                            "amount": 3400
+                          },
+                          {
+                            "orderId": "pc-b",
+                            "amount": 1700
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "inventoryBatchId": "0e6a9d14-17e0-44a2-8fa1-9098daa82add"
+        },
+        "original": {
+          "date": "2026-10-03",
+          "from": "2026-01-01",
+          "to": "2026-10-03",
+          "branchId": "central",
+          "wipAccountId": "inventory-wip",
+          "reference": "Conversión completa QA 2026",
+          "reason": "Gastos sintéticos reconocidos; actividad normal de diez horas. Se excluyen administración y ociosidad.",
+          "orders": [
+            "pc-a",
+            "pc-b"
+          ],
+          "zeroReason": "",
+          "completeConfirmed": true,
+          "currencyConfirmed": true,
+          "inefficiencyConfirmed": true,
+          "pools": [
+            {
+              "id": "pool-0",
+              "name": "Directo",
+              "kind": "Directo",
+              "reason": "Clasificación y exclusiones del ensayo.",
+              "normalActivity": 0,
+              "normalReason": "",
+              "sources": [
+                {
+                  "entryId": "e9e4238b-2938-47c0-9f50-c361c96a793d",
+                  "lineIndex": 0,
+                  "value": 3000
+                }
+              ],
+              "allocations": [
+                {
+                  "orderId": "pc-a",
+                  "units": 2,
+                  "reason": "Horas reales del lote A."
+                },
+                {
+                  "orderId": "pc-b",
+                  "units": 1,
+                  "reason": "Horas reales del lote B."
+                }
+              ]
+            },
+            {
+              "id": "pool-1",
+              "name": "Fijo",
+              "kind": "Fijo",
+              "reason": "Clasificación y exclusiones del ensayo.",
+              "normalActivity": 10,
+              "normalReason": "Diez horas normales según promedio sintético, inferior a la capacidad total.",
+              "sources": [
+                {
+                  "entryId": "8e36a5dc-30af-4083-98be-0731638cb138",
+                  "lineIndex": 0,
+                  "value": 6000
+                }
+              ],
+              "allocations": [
+                {
+                  "orderId": "pc-a",
+                  "units": 2,
+                  "reason": "Horas reales del lote A."
+                },
+                {
+                  "orderId": "pc-b",
+                  "units": 1,
+                  "reason": "Horas reales del lote B."
+                }
+              ]
+            },
+            {
+              "id": "pool-2",
+              "name": "Variable",
+              "kind": "Variable",
+              "reason": "Clasificación y exclusiones del ensayo.",
+              "normalActivity": 0,
+              "normalReason": "",
+              "sources": [
+                {
+                  "entryId": "14d82644-a008-4245-858b-5e4792007db9",
+                  "lineIndex": 0,
+                  "value": 1200
+                }
+              ],
+              "allocations": [
+                {
+                  "orderId": "pc-a",
+                  "units": 2,
+                  "reason": "Horas reales del lote A."
+                },
+                {
+                  "orderId": "pc-b",
+                  "units": 1,
+                  "reason": "Horas reales del lote B."
+                }
+              ]
+            },
+            {
+              "id": "pool-3",
+              "name": "Excluido",
+              "kind": "Excluido",
+              "reason": "Clasificación y exclusiones del ensayo.",
+              "normalActivity": 0,
+              "normalReason": "",
+              "sources": [
+                {
+                  "entryId": "6358378a-605b-42bb-b368-2b794ec47758",
+                  "lineIndex": 0,
+                  "value": 500
+                }
+              ],
+              "allocations": []
+            }
+          ],
+          "review": "{\"date\":\"2026-10-03\",\"from\":\"2026-01-01\",\"to\":\"2026-10-03\",\"reference\":\"Conversión completa QA 2026\",\"reason\":\"Gastos sintéticos reconocidos; actividad normal de diez horas. Se excluyen administración y ociosidad.\",\"branchId\":\"central\",\"wipAccountId\":\"inventory-wip\",\"orders\":[{\"id\":\"pc-a\",\"name\":\"Lote pc-a\",\"productId\":\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\",\"quantity\":2,\"branchId\":\"central\"},{\"id\":\"pc-b\",\"name\":\"Lote pc-b\",\"productId\":\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\",\"quantity\":2,\"branchId\":\"central\"}],\"batchPrefixIds\":[\"cf1cf3ac-ba62-40b6-846b-573fc8d4d37c\"],\"entryPrefixIds\":[\"3060e008-a91b-491e-8028-f3ae8c7906ed\",\"e9e4238b-2938-47c0-9f50-c361c96a793d\",\"14d82644-a008-4245-858b-5e4792007db9\",\"6358378a-605b-42bb-b368-2b794ec47758\",\"8e36a5dc-30af-4083-98be-0731638cb138\"],\"pools\":[{\"id\":\"pool-0\",\"name\":\"Directo\",\"kind\":\"Directo\",\"reason\":\"Clasificación y exclusiones del ensayo.\",\"normalActivity\":0,\"normalReason\":\"\",\"sources\":[{\"entryId\":\"e9e4238b-2938-47c0-9f50-c361c96a793d\",\"lineIndex\":0,\"value\":3000}],\"allocations\":[{\"orderId\":\"pc-a\",\"units\":2,\"reason\":\"Horas reales del lote A.\"},{\"orderId\":\"pc-b\",\"units\":1,\"reason\":\"Horas reales del lote B.\"}],\"gross\":3000,\"actualActivity\":3,\"capitalized\":3000,\"unabsorbed\":0,\"sourceLines\":[{\"entryId\":\"e9e4238b-2938-47c0-9f50-c361c96a793d\",\"date\":\"2026-10-02\",\"concept\":\"Fuente labor\",\"lineIndex\":0,\"accountId\":\"pc-labor\",\"debit\":3000,\"credit\":0,\"value\":3000,\"capitalized\":3000}],\"shares\":[{\"orderId\":\"pc-a\",\"amount\":2000},{\"orderId\":\"pc-b\",\"amount\":1000}]},{\"id\":\"pool-1\",\"name\":\"Fijo\",\"kind\":\"Fijo\",\"reason\":\"Clasificación y exclusiones del ensayo.\",\"normalActivity\":10,\"normalReason\":\"Diez horas normales según promedio sintético, inferior a la capacidad total.\",\"sources\":[{\"entryId\":\"8e36a5dc-30af-4083-98be-0731638cb138\",\"lineIndex\":0,\"value\":6000}],\"allocations\":[{\"orderId\":\"pc-a\",\"units\":2,\"reason\":\"Horas reales del lote A.\"},{\"orderId\":\"pc-b\",\"units\":1,\"reason\":\"Horas reales del lote B.\"}],\"gross\":6000,\"actualActivity\":3,\"capitalized\":1800,\"unabsorbed\":4200,\"sourceLines\":[{\"entryId\":\"8e36a5dc-30af-4083-98be-0731638cb138\",\"date\":\"2026-10-02\",\"concept\":\"INT-DS-00000001\",\"lineIndex\":0,\"accountId\":\"pc-fixed\",\"debit\":6000,\"credit\":0,\"value\":6000,\"capitalized\":1800}],\"shares\":[{\"orderId\":\"pc-a\",\"amount\":1200},{\"orderId\":\"pc-b\",\"amount\":600}]},{\"id\":\"pool-2\",\"name\":\"Variable\",\"kind\":\"Variable\",\"reason\":\"Clasificación y exclusiones del ensayo.\",\"normalActivity\":0,\"normalReason\":\"\",\"sources\":[{\"entryId\":\"14d82644-a008-4245-858b-5e4792007db9\",\"lineIndex\":0,\"value\":1200}],\"allocations\":[{\"orderId\":\"pc-a\",\"units\":2,\"reason\":\"Horas reales del lote A.\"},{\"orderId\":\"pc-b\",\"units\":1,\"reason\":\"Horas reales del lote B.\"}],\"gross\":1200,\"actualActivity\":3,\"capitalized\":1200,\"unabsorbed\":0,\"sourceLines\":[{\"entryId\":\"14d82644-a008-4245-858b-5e4792007db9\",\"date\":\"2026-10-02\",\"concept\":\"Fuente variable\",\"lineIndex\":0,\"accountId\":\"pc-variable\",\"debit\":1200,\"credit\":0,\"value\":1200,\"capitalized\":1200}],\"shares\":[{\"orderId\":\"pc-a\",\"amount\":800},{\"orderId\":\"pc-b\",\"amount\":400}]},{\"id\":\"pool-3\",\"name\":\"Excluido\",\"kind\":\"Excluido\",\"reason\":\"Clasificación y exclusiones del ensayo.\",\"normalActivity\":0,\"normalReason\":\"\",\"sources\":[{\"entryId\":\"6358378a-605b-42bb-b368-2b794ec47758\",\"lineIndex\":0,\"value\":500}],\"allocations\":[],\"gross\":500,\"actualActivity\":0,\"capitalized\":0,\"unabsorbed\":500,\"sourceLines\":[{\"entryId\":\"6358378a-605b-42bb-b368-2b794ec47758\",\"date\":\"2026-10-02\",\"concept\":\"Fuente administration\",\"lineIndex\":0,\"accountId\":\"pc-administration\",\"debit\":500,\"credit\":0,\"value\":500,\"capitalized\":0}],\"shares\":[]}],\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":4000},{\"orderId\":\"pc-b\",\"amount\":2000}],\"gross\":10700,\"capitalized\":6000,\"unabsorbed\":4700,\"lines\":[{\"accountId\":\"inventory-wip\",\"debit\":6000,\"credit\":0},{\"accountId\":\"pc-fixed\",\"debit\":0,\"credit\":1800},{\"accountId\":\"pc-labor\",\"debit\":0,\"credit\":3000},{\"accountId\":\"pc-variable\",\"debit\":0,\"credit\":1200}]}",
+          "id": "ea6777b8-1ee3-42e0-8393-827fc9ebb096",
+          "number": "INT-PC-00000001",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-13T02:27:35.705Z",
+          "entryIds": [
+            "24d45bb9-7e51-4bf5-841b-5ffb4ba41d66"
+          ],
+          "preview": {
+            "date": "2026-10-03",
+            "from": "2026-01-01",
+            "to": "2026-10-03",
+            "reference": "Conversión completa QA 2026",
+            "reason": "Gastos sintéticos reconocidos; actividad normal de diez horas. Se excluyen administración y ociosidad.",
+            "branchId": "central",
+            "wipAccountId": "inventory-wip",
+            "orders": [
+              {
+                "id": "pc-a",
+                "name": "Lote pc-a",
+                "productId": "e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a",
+                "quantity": 2,
+                "branchId": "central"
+              },
+              {
+                "id": "pc-b",
+                "name": "Lote pc-b",
+                "productId": "e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a",
+                "quantity": 2,
+                "branchId": "central"
+              }
+            ],
+            "batchPrefixIds": [
+              "cf1cf3ac-ba62-40b6-846b-573fc8d4d37c"
+            ],
+            "entryPrefixIds": [
+              "3060e008-a91b-491e-8028-f3ae8c7906ed",
+              "e9e4238b-2938-47c0-9f50-c361c96a793d",
+              "14d82644-a008-4245-858b-5e4792007db9",
+              "6358378a-605b-42bb-b368-2b794ec47758",
+              "8e36a5dc-30af-4083-98be-0731638cb138"
+            ],
+            "pools": [
+              {
+                "id": "pool-0",
+                "name": "Directo",
+                "kind": "Directo",
+                "reason": "Clasificación y exclusiones del ensayo.",
+                "normalActivity": 0,
+                "normalReason": "",
+                "sources": [
+                  {
+                    "entryId": "e9e4238b-2938-47c0-9f50-c361c96a793d",
+                    "lineIndex": 0,
+                    "value": 3000
+                  }
+                ],
+                "allocations": [
+                  {
+                    "orderId": "pc-a",
+                    "units": 2,
+                    "reason": "Horas reales del lote A."
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "units": 1,
+                    "reason": "Horas reales del lote B."
+                  }
+                ],
+                "gross": 3000,
+                "actualActivity": 3,
+                "capitalized": 3000,
+                "unabsorbed": 0,
+                "sourceLines": [
+                  {
+                    "entryId": "e9e4238b-2938-47c0-9f50-c361c96a793d",
+                    "date": "2026-10-02",
+                    "concept": "Fuente labor",
+                    "lineIndex": 0,
+                    "accountId": "pc-labor",
+                    "debit": 3000,
+                    "credit": 0,
+                    "value": 3000,
+                    "capitalized": 3000
+                  }
+                ],
+                "shares": [
+                  {
+                    "orderId": "pc-a",
+                    "amount": 2000
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "amount": 1000
+                  }
+                ]
+              },
+              {
+                "id": "pool-1",
+                "name": "Fijo",
+                "kind": "Fijo",
+                "reason": "Clasificación y exclusiones del ensayo.",
+                "normalActivity": 10,
+                "normalReason": "Diez horas normales según promedio sintético, inferior a la capacidad total.",
+                "sources": [
+                  {
+                    "entryId": "8e36a5dc-30af-4083-98be-0731638cb138",
+                    "lineIndex": 0,
+                    "value": 6000
+                  }
+                ],
+                "allocations": [
+                  {
+                    "orderId": "pc-a",
+                    "units": 2,
+                    "reason": "Horas reales del lote A."
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "units": 1,
+                    "reason": "Horas reales del lote B."
+                  }
+                ],
+                "gross": 6000,
+                "actualActivity": 3,
+                "capitalized": 1800,
+                "unabsorbed": 4200,
+                "sourceLines": [
+                  {
+                    "entryId": "8e36a5dc-30af-4083-98be-0731638cb138",
+                    "date": "2026-10-02",
+                    "concept": "INT-DS-00000001",
+                    "lineIndex": 0,
+                    "accountId": "pc-fixed",
+                    "debit": 6000,
+                    "credit": 0,
+                    "value": 6000,
+                    "capitalized": 1800
+                  }
+                ],
+                "shares": [
+                  {
+                    "orderId": "pc-a",
+                    "amount": 1200
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "amount": 600
+                  }
+                ]
+              },
+              {
+                "id": "pool-2",
+                "name": "Variable",
+                "kind": "Variable",
+                "reason": "Clasificación y exclusiones del ensayo.",
+                "normalActivity": 0,
+                "normalReason": "",
+                "sources": [
+                  {
+                    "entryId": "14d82644-a008-4245-858b-5e4792007db9",
+                    "lineIndex": 0,
+                    "value": 1200
+                  }
+                ],
+                "allocations": [
+                  {
+                    "orderId": "pc-a",
+                    "units": 2,
+                    "reason": "Horas reales del lote A."
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "units": 1,
+                    "reason": "Horas reales del lote B."
+                  }
+                ],
+                "gross": 1200,
+                "actualActivity": 3,
+                "capitalized": 1200,
+                "unabsorbed": 0,
+                "sourceLines": [
+                  {
+                    "entryId": "14d82644-a008-4245-858b-5e4792007db9",
+                    "date": "2026-10-02",
+                    "concept": "Fuente variable",
+                    "lineIndex": 0,
+                    "accountId": "pc-variable",
+                    "debit": 1200,
+                    "credit": 0,
+                    "value": 1200,
+                    "capitalized": 1200
+                  }
+                ],
+                "shares": [
+                  {
+                    "orderId": "pc-a",
+                    "amount": 800
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "amount": 400
+                  }
+                ]
+              },
+              {
+                "id": "pool-3",
+                "name": "Excluido",
+                "kind": "Excluido",
+                "reason": "Clasificación y exclusiones del ensayo.",
+                "normalActivity": 0,
+                "normalReason": "",
+                "sources": [
+                  {
+                    "entryId": "6358378a-605b-42bb-b368-2b794ec47758",
+                    "lineIndex": 0,
+                    "value": 500
+                  }
+                ],
+                "allocations": [],
+                "gross": 500,
+                "actualActivity": 0,
+                "capitalized": 0,
+                "unabsorbed": 500,
+                "sourceLines": [
+                  {
+                    "entryId": "6358378a-605b-42bb-b368-2b794ec47758",
+                    "date": "2026-10-02",
+                    "concept": "Fuente administration",
+                    "lineIndex": 0,
+                    "accountId": "pc-administration",
+                    "debit": 500,
+                    "credit": 0,
+                    "value": 500,
+                    "capitalized": 0
+                  }
+                ],
+                "shares": []
+              }
+            ],
+            "allocations": [
+              {
+                "orderId": "pc-a",
+                "amount": 4000
+              },
+              {
+                "orderId": "pc-b",
+                "amount": 2000
+              }
+            ],
+            "gross": 10700,
+            "capitalized": 6000,
+            "unabsorbed": 4700,
+            "lines": [
+              {
+                "accountId": "inventory-wip",
+                "debit": 6000,
+                "credit": 0
+              },
+              {
+                "accountId": "pc-fixed",
+                "debit": 0,
+                "credit": 1800
+              },
+              {
+                "accountId": "pc-labor",
+                "debit": 0,
+                "credit": 3000
+              },
+              {
+                "accountId": "pc-variable",
+                "debit": 0,
+                "credit": 1200
+              }
+            ]
+          }
+        },
+        "batch": {
+          "date": "2026-10-12",
+          "reference": "INT-RPC-00000001 · CPP conciliado",
+          "accounts": {
+            "inventory": "inventory-inventory",
+            "opening": "3.1",
+            "cogs": "inventory-cogs",
+            "adjustments": "inventory-adjustments",
+            "transit": "inventory-transit",
+            "wip": "inventory-wip",
+            "unbilled": "inventory-unbilled"
+          },
+          "costVersion": 9,
+          "review": "{\"moves\":[],\"rows\":[],\"balances\":[{\"productId\":\"35470965-9ffa-4a7c-9c1d-e0bcb363c62c\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"value\":7000},{\"productId\":\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"value\":3200}],\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-inventory\",\"debit\":0,\"credit\":300},{\"accountId\":\"inventory-wip\",\"debit\":600,\"credit\":0},{\"accountId\":\"inventory-cogs\",\"debit\":0,\"credit\":300}]}],\"productionCosts\":[{\"id\":\"ea6777b8-1ee3-42e0-8393-827fc9ebb096\",\"number\":\"INT-PC-00000001\",\"date\":\"2026-10-03\",\"wipAccountId\":\"inventory-wip\",\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}],\"review\":\"{\\\"date\\\":\\\"2026-10-03\\\",\\\"branchId\\\":\\\"central\\\",\\\"wipAccountId\\\":\\\"inventory-wip\\\",\\\"orders\\\":[{\\\"id\\\":\\\"pc-a\\\",\\\"productId\\\":\\\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"},{\\\"id\\\":\\\"pc-b\\\",\\\"productId\\\":\\\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"}],\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":3400},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":1700}]}\",\"corrections\":[{\"id\":\"production-correction:INT-RPC-00000001\",\"number\":\"INT-RPC-00000001\",\"date\":\"2026-10-12\",\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}]}],\"corrections\":[]}",
+          "id": "0e6a9d14-17e0-44a2-8fa1-9098daa82add",
+          "number": "INT-VC-00000004",
+          "method": "CPP",
+          "productionCosts": [
+            {
+              "id": "ea6777b8-1ee3-42e0-8393-827fc9ebb096",
+              "number": "INT-PC-00000001",
+              "date": "2026-10-03",
+              "wipAccountId": "inventory-wip",
+              "allocations": [
+                {
+                  "orderId": "pc-a",
+                  "amount": 3400
+                },
+                {
+                  "orderId": "pc-b",
+                  "amount": 1700
+                }
+              ],
+              "review": "{\"date\":\"2026-10-03\",\"branchId\":\"central\",\"wipAccountId\":\"inventory-wip\",\"orders\":[{\"id\":\"pc-a\",\"productId\":\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\",\"quantity\":2,\"branchId\":\"central\"},{\"id\":\"pc-b\",\"productId\":\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\",\"quantity\":2,\"branchId\":\"central\"}],\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}",
+              "corrections": [
+                {
+                  "id": "production-correction:INT-RPC-00000001",
+                  "number": "INT-RPC-00000001",
+                  "date": "2026-10-12",
+                  "allocations": [
+                    {
+                      "orderId": "pc-a",
+                      "amount": 3400
+                    },
+                    {
+                      "orderId": "pc-b",
+                      "amount": 1700
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "responsible": "Administrador",
+          "createdAt": "2026-10-13T02:33:36.492Z",
+          "sourceMoves": [],
+          "rows": [],
+          "corrections": [],
+          "balances": [
+            {
+              "productId": "35470965-9ffa-4a7c-9c1d-e0bcb363c62c",
+              "depositId": "principal",
+              "branchId": "central",
+              "sku": "REM-M-NEG",
+              "name": "Remera de algodón · M · Negro",
+              "unit": "Unidad",
+              "depositName": "Depósito principal",
+              "quantity": 7,
+              "value": 7000
+            },
+            {
+              "productId": "e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a",
+              "depositId": "principal",
+              "branchId": "central",
+              "sku": "PANT-42-AZ",
+              "name": "Pantalón · 42 · Azul",
+              "unit": "Unidad",
+              "depositName": "Depósito principal",
+              "quantity": 1,
+              "value": 3200
+            }
+          ],
+          "entryIds": [
+            "6289542b-bf20-475a-8dcb-bd48be435fc5"
+          ],
+          "productionCorrectionId": "production-correction:INT-RPC-00000001"
+        },
+        "references": [
+          {
+            "id": "ea6777b8-1ee3-42e0-8393-827fc9ebb096",
+            "number": "INT-PC-00000001",
+            "date": "2026-10-03",
+            "wipAccountId": "inventory-wip",
+            "allocations": [
+              {
+                "orderId": "pc-a",
+                "amount": 3400
+              },
+              {
+                "orderId": "pc-b",
+                "amount": 1700
+              }
+            ],
+            "review": "{\"date\":\"2026-10-03\",\"branchId\":\"central\",\"wipAccountId\":\"inventory-wip\",\"orders\":[{\"id\":\"pc-a\",\"productId\":\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\",\"quantity\":2,\"branchId\":\"central\"},{\"id\":\"pc-b\",\"productId\":\"e6a6ad31-f9d6-4b2b-aa5b-58cfdb95e54a\",\"quantity\":2,\"branchId\":\"central\"}],\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}",
+            "corrections": [
+              {
+                "id": "production-correction:INT-RPC-00000001",
+                "number": "INT-RPC-00000001",
+                "date": "2026-10-12",
+                "allocations": [
+                  {
+                    "orderId": "pc-a",
+                    "amount": 3400
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "amount": 1700
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "ledger": {
+          "from": "2026-01-01",
+          "to": "2026-12-31",
+          "branchId": "all",
+          "rows": [
+            {
+              "accountId": "1.1.1",
+              "code": "1.1.1",
+              "name": "Caja",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.2",
+              "code": "1.1.2",
+              "name": "Bancos",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.3",
+              "code": "1.1.3",
+              "name": "Deudores por ventas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.4",
+              "code": "1.1.4",
+              "name": "IVA crédito fiscal",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.5",
+              "code": "1.1.5",
+              "name": "Valores a depositar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.6",
+              "code": "1.1.6",
+              "name": "Retenciones sufridas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.7",
+              "code": "1.1.7",
+              "name": "Percepciones sufridas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.8",
+              "code": "1.1.8",
+              "name": "Cupones de tarjetas a cobrar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.1",
+              "code": "2.1.1",
+              "name": "Proveedores",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 4700,
+              "closing": -4700
+            },
+            {
+              "accountId": "2.1.2",
+              "code": "2.1.2",
+              "name": "IVA débito fiscal",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.3",
+              "code": "2.1.3",
+              "name": "Retenciones a depositar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.4",
+              "code": "2.1.4",
+              "name": "Percepciones a depositar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.5",
+              "code": "2.1.5",
+              "name": "Cheques propios emitidos",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.1",
+              "code": "3.1",
+              "name": "Capital y saldos iniciales",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 10000,
+              "closing": -10000
+            },
+            {
+              "accountId": "4.1",
+              "code": "4.1",
+              "name": "Ventas",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.1",
+              "code": "5.1",
+              "name": "Compras y gastos",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.2",
+              "code": "5.2",
+              "name": "Comisiones de vendedores",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.3",
+              "code": "5.3",
+              "name": "Cargos de tarjetas",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-inventory",
+              "code": "1.1.9",
+              "name": "Existencias de mercadería",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 14000,
+              "credit": 3800,
+              "closing": 10200
+            },
+            {
+              "accountId": "inventory-cogs",
+              "code": "5.4",
+              "name": "Costo de mercadería vendida",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 3500,
+              "credit": 300,
+              "closing": 3200
+            },
+            {
+              "accountId": "inventory-adjustments",
+              "code": "5.5",
+              "name": "Diferencias de inventario",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-transit",
+              "code": "1.1.10",
+              "name": "Traslados de mercadería a conciliar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-wip",
+              "code": "1.1.11",
+              "name": "Producción en proceso",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 6600,
+              "credit": 4900,
+              "closing": 1700
+            },
+            {
+              "accountId": "inventory-unbilled",
+              "code": "2.1.6",
+              "name": "Mercadería recibida sin facturar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "pc-labor",
+              "code": "5.pc.labor",
+              "name": "Costo labor",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 3000,
+              "credit": 3000,
+              "closing": 0
+            },
+            {
+              "accountId": "pc-fixed",
+              "code": "5.pc.fixed",
+              "name": "Costo fixed",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 6900,
+              "credit": 4800,
+              "closing": 2100
+            },
+            {
+              "accountId": "pc-variable",
+              "code": "5.pc.variable",
+              "name": "Costo variable",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 1200,
+              "credit": 1200,
+              "closing": 0
+            },
+            {
+              "accountId": "pc-administration",
+              "code": "5.pc.administration",
+              "name": "Costo administration",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 500,
+              "credit": 0,
+              "closing": 500
+            },
+            {
+              "accountId": "2.1.7",
+              "code": "2.1.7",
+              "name": "Servicios recibidos sin facturar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 3000,
+              "credit": 6000,
+              "closing": -3000
+            }
+          ],
+          "totals": {
+            "openingDebit": 0,
+            "openingCredit": 0,
+            "debit": 38700,
+            "credit": 38700,
+            "closingDebit": 17700,
+            "closingCredit": 17700
+          },
+          "entryIds": [
+            "3060e008-a91b-491e-8028-f3ae8c7906ed",
+            "e9e4238b-2938-47c0-9f50-c361c96a793d",
+            "14d82644-a008-4245-858b-5e4792007db9",
+            "6358378a-605b-42bb-b368-2b794ec47758",
+            "8e36a5dc-30af-4083-98be-0731638cb138",
+            "24d45bb9-7e51-4bf5-841b-5ffb4ba41d66",
+            "49a45313-7b6e-465d-bff9-2cac0b440745",
+            "d0b57015-d021-40ef-920f-3d689a20594e",
+            "55b2d88b-219d-4b91-b4d0-44144e278cd4",
+            "30b286c3-aaf5-4384-871a-a52e314e6d00",
+            "6289542b-bf20-475a-8dcb-bd48be435fc5"
+          ]
+        },
+        "preservation": "Los tres cortes originales y el asiento de conversión inicial permanecen conservados; INT-RPC agrega reestimación, reclasificación y CPP9 en una operación."
+      }
+    },
+    {
+      "database": "var/qa-production-correction.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-conversion.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-current-vnr.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-reserve-currency.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-recoverability.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-inflation.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-inflation.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inflation-posting.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-reexpression.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-statements.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-impairment.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-disposal.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-reestimate.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-fixed-assets.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-service-cancellation.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-journal-reversal.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-revenue-accrual.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-exercise-opening.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-year-end.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-service-reestimates.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-service-accruals.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    }
+  ]
+}

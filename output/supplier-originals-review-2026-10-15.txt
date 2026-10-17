@@ -1,0 +1,151 @@
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores" [expanded]:
+      - generic: Proveedores
+    - link "Directorio":
+      - /url: /proveedores
+    - link "Alta de proveedores":
+      - /url: /proveedores/alta
+    - link "Compras y facturas":
+      - /url: /proveedores/compras
+    - link "Pagos":
+      - /url: /proveedores/pagos
+    - link "Notas de crédito / débito":
+      - /url: /proveedores/notas
+    - link "Órdenes de compra":
+      - /url: /proveedores/ordenes
+    - link "Remitos de compra":
+      - /url: /proveedores/remitos
+    - link "Cuenta corriente":
+      - /url: /proveedores/cuenta-corriente
+    - link "Centros de costos":
+      - /url: /proveedores/centros-costos
+    - link "Vendedores":
+      - /url: /proveedores/vendedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Originales de proveedores
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 1 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Facturas de compra" [level=1]
+  - paragraph: Operaciones de gestión interna vinculadas a cuentas corrientes, tesorería y contabilidad.
+  - link "Factura":
+    - /url: /proveedores/compras/factura
+    - text: Factura
+  - generic: Registrá el original del proveedor desde «Identificar original». SICA conserva su referencia interna; no emite ni autoriza ese documento por el proveedor.
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Referencia interna Original proveedor Fecha Registro contable Proveedor Total ARS Estado Acciones":
+        - columnheader "Referencia interna"
+        - columnheader "Original proveedor"
+        - columnheader "Fecha"
+        - columnheader "Registro contable"
+        - columnheader "Proveedor"
+        - columnheader "Total ARS"
+        - columnheader "Estado"
+        - columnheader "Acciones"
+    - rowgroup:
+      - row "INT-FC-A-00001-00000001 Sin identificar 01/10/2026 01/10/2026 Proveedor textil de prueba $ 1.210,00 Falta identificar original Ver Identificar original":
+        - cell "INT-FC-A-00001-00000001"
+        - cell "Sin identificar"
+        - cell "01/10/2026"
+        - cell "01/10/2026"
+        - cell "Proveedor textil de prueba"
+        - cell "$ 1.210,00"
+        - cell "Falta identificar original"
+        - cell "Ver Identificar original":
+          - button "Ver":
+            - text: Ver
+          - button "Identificar original"
+      - row "INT-FC-A-00001-00000002 Sin identificar 02/10/2026 02/10/2026 Proveedor textil de prueba $ 363,00 Falta identificar original Ver Identificar original":
+        - cell "INT-FC-A-00001-00000002"
+        - cell "Sin identificar"
+        - cell "02/10/2026"
+        - cell "02/10/2026"
+        - cell "Proveedor textil de prueba"
+        - cell "$ 363,00"
+        - cell "Falta identificar original"
+        - cell "Ver Identificar original":
+          - button "Ver":
+            - text: Ver
+          - button "Identificar original"
+  - dialog "Comprobante original del proveedor":
+    - heading "Comprobante original del proveedor" [level=2]
+    - button "Cerrar":
+    - paragraph: INT-FC-A-00001-00000001 · Emisión 01/10/2026 · Tipo ARCA 001 · Total $ 1.210,00
+    - generic: Copiá los datos del documento recibido. La referencia interna de SICA se conserva. Esta carga no constata la autorización ante ARCA ni cambia importes, impuestos o movimientos.
+    - generic: CUIT del proveedor emisor *
+    - textbox "CUIT del proveedor emisor *": "30712345671"
+    - generic: CUIT de la empresa receptora *
+    - textbox "CUIT de la empresa receptora *": "30712345671"
+    - generic: Punto de venta del proveedor *
+    - spinbutton "Punto de venta del proveedor *": "4"
+    - generic: Número original del comprobante *
+    - spinbutton "Número original del comprobante *": "42"
+    - generic: Autorización informada
+    - combobox "Autorización informada":
+      - option "Sin consignar"
+      - option "CAE" [selected]
+      - option "CAEA"
+      - option "CAI"
+    - generic: Código de autorización *
+    - textbox "Código de autorización *": "12345678901234"
+    - generic: Vencimiento de autorización informado
+    - textbox "Vencimiento de autorización informado"
+    - generic: Fecha de identificación *
+    - textbox "Fecha de identificación *": 2026-10-15
+    - generic: Referencia de identificación *
+    - textbox "Referencia de identificación *": ORIG-ENSAYO-01
+    - generic: Fundamento de identificación o corrección *
+    - textbox "Fundamento de identificación o corrección *": Datos copiados del comprobante sintético recibido; autorización sin constatar.
+    - generic: "Revisado: CUIT 30712345671 → 30712345671; tipo 001, punto 00004, número 00000042; emisión 01/10/2026 y total $ 1.210,00. Datos declarados · sin constatación ARCA."
+    - button "Confirmar identificación revisada" [active]

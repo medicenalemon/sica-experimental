@@ -1,0 +1,285 @@
+- generic: Versión experimental
+- paragraph: Soluciones Integrales Contables Administrativas. Conectá tus ventas, compras, finanzas, inventarios y contabilidad.
+- generic: Control total de tu negocio
+- generic: Métricas en tiempo real
+- generic: Gestión para empresas argentinas
+- img "SICA — Soluciones Integrales Contables Administrativas"
+- heading "Bienvenido a SICA" [level=2]
+- paragraph: Ingresá a la gestión contable y administrativa de tu empresa.
+- generic: Empresa
+- combobox "Empresa":
+  - option "SICA Textil · Tucumán" [selected]
+  - option "SICA Servicios · Tucumán"
+- generic: Usuario
+- textbox "Usuario":
+  - /placeholder: Tu usuario
+- generic: Contraseña
+- textbox "Contraseña"
+- button "Mostrar contraseña":
+- generic: Nombre de terminal (opcional)
+- textbox "Nombre de terminal (opcional)":
+  - /placeholder: "Ejemplo: Caja principal"
+- checkbox "Mantener sesión en este equipo"
+- text: Mantener sesión en este equipo
+- button "Ingresar al sistema":
+  - text: Ingresar al sistema
+- strong: Base compartida
+- paragraph: Ingresá con el usuario asignado. La contraseña inicial del administrador se configura al iniciar el servidor.
+- paragraph: "Autores: Mauricio Montero y Débora Pardes"
+
+TEXTIL
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas" [expanded]:
+      - generic: Herramientas
+    - link "Calculadora":
+      - /url: /herramientas/calculadora
+    - link "Bloc de notas":
+      - /url: /herramientas/notas
+    - link "Agenda":
+      - /url: /herramientas/agenda
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Empresa de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - button "Cambiar empresa"
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 1 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Bloc de notas" [level=1]
+  - paragraph: Guardá notas de trabajo en esta instalación.
+  - button "Nuevo registro":
+    - text: Nuevo registro
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Nombre Acciones":
+        - columnheader "Nombre"
+        - columnheader "Acciones"
+    - rowgroup:
+      - row "Nota exclusiva de Textil Editar":
+        - cell "Nota exclusiva de Textil"
+        - cell "Editar":
+          - button "Editar":
+            - text: Editar
+
+SERVICIOS FINAL
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas" [expanded]:
+      - generic: Herramientas
+    - link "Calculadora":
+      - /url: /herramientas/calculadora
+    - link "Bloc de notas":
+      - /url: /herramientas/notas
+    - link "Agenda":
+      - /url: /herramientas/agenda
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Servicios · Empresa de ensayo
+  - generic: "Responsable Inscripto · Tucumán · Empresa: servicios"
+  - button "Cambiar empresa"
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Bloc de notas" [level=1]
+  - paragraph: Guardá notas de trabajo en esta instalación.
+  - button "Nuevo registro":
+    - text: Nuevo registro
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Nombre Acciones":
+        - columnheader "Nombre"
+        - columnheader "Acciones"
+    - rowgroup:
+      - row "Nota exclusiva de Servicios Editar":
+        - cell "Nota exclusiva de Servicios"
+        - cell "Editar":
+          - button "Editar":
+            - text: Editar
+      - row "Nota agregada sólo en Servicios Editar":
+        - cell "Nota agregada sólo en Servicios"
+        - cell "Editar":
+          - button "Editar":
+            - text: Editar
+
+TEXTIL SEGUNDA PESTAÑA
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas" [expanded]:
+      - generic: Herramientas
+    - link "Calculadora":
+      - /url: /herramientas/calculadora
+    - link "Bloc de notas":
+      - /url: /herramientas/notas
+    - link "Agenda":
+      - /url: /herramientas/agenda
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Empresa de ensayo
+  - generic: "Responsable Inscripto · Tucumán · Empresa: textil"
+  - button "Cambiar empresa"
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 1 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Bloc de notas" [level=1]
+  - paragraph: Guardá notas de trabajo en esta instalación.
+  - button "Nuevo registro":
+    - text: Nuevo registro
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Nombre Acciones":
+        - columnheader "Nombre"
+        - columnheader "Acciones"
+    - rowgroup:
+      - row "Nota exclusiva de Textil Editar":
+        - cell "Nota exclusiva de Textil"
+        - cell "Editar":
+          - button "Editar":
+            - text: Editar

@@ -1,0 +1,209 @@
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores" [expanded]:
+      - generic: Proveedores
+    - link "Directorio":
+      - /url: /proveedores
+    - link "Alta de proveedores":
+      - /url: /proveedores/alta
+    - link "Compras y facturas":
+      - /url: /proveedores/compras
+    - link "Pagos":
+      - /url: /proveedores/pagos
+    - link "Notas de crédito / débito":
+      - /url: /proveedores/notas
+    - link "Órdenes de compra":
+      - /url: /proveedores/ordenes
+    - link "Remitos de compra":
+      - /url: /proveedores/remitos
+    - link "Cuenta corriente":
+      - /url: /proveedores/cuenta-corriente
+    - link "Centros de costos":
+      - /url: /proveedores/centros-costos
+    - link "Vendedores":
+      - /url: /proveedores/vendedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Originales de proveedores
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 4 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Facturas de compra" [level=1]
+  - paragraph: Operaciones de gestión interna vinculadas a cuentas corrientes, tesorería y contabilidad.
+  - link "Factura":
+    - /url: /proveedores/compras/factura
+    - text: Factura
+  - generic: Registrá el original del proveedor desde «Identificar original». SICA conserva su referencia interna; no emite ni autoriza ese documento por el proveedor.
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 3 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Referencia interna Original proveedor Fecha Registro contable Proveedor Total ARS Estado Acciones":
+        - columnheader "Referencia interna"
+        - columnheader "Original proveedor"
+        - columnheader "Fecha"
+        - columnheader "Registro contable"
+        - columnheader "Proveedor"
+        - columnheader "Total ARS"
+        - columnheader "Estado"
+        - columnheader "Acciones"
+    - rowgroup:
+      - row "INT-FC-A-00001-00000001 001 · 00004-00000043 01/10/2026 01/10/2026 Proveedor textil de prueba $ 1.210,00 Recibido · sin constatación Ver Identificar original":
+        - cell "INT-FC-A-00001-00000001"
+        - cell "001 · 00004-00000043"
+        - cell "01/10/2026"
+        - cell "01/10/2026"
+        - cell "Proveedor textil de prueba"
+        - cell "$ 1.210,00"
+        - cell "Recibido · sin constatación"
+        - cell "Ver Identificar original":
+          - button "Ver":
+            - text: Ver
+          - button "Identificar original"
+      - row "INT-FC-A-00001-00000002 Sin identificar 02/10/2026 02/10/2026 Proveedor textil de prueba $ 363,00 Falta identificar original Ver Identificar original":
+        - cell "INT-FC-A-00001-00000002"
+        - cell "Sin identificar"
+        - cell "02/10/2026"
+        - cell "02/10/2026"
+        - cell "Proveedor textil de prueba"
+        - cell "$ 363,00"
+        - cell "Falta identificar original"
+        - cell "Ver Identificar original":
+          - button "Ver":
+            - text: Ver
+          - button "Identificar original"
+      - row "INT-FC-A-00001-00000003 001 · 00004-00000044 15/10/2026 15/10/2026 Proveedor textil de prueba $ 121,00 Recibido · sin constatación Ver Identificar original":
+        - cell "INT-FC-A-00001-00000003"
+        - cell "001 · 00004-00000044"
+        - cell "15/10/2026"
+        - cell "15/10/2026"
+        - cell "Proveedor textil de prueba"
+        - cell "$ 121,00"
+        - cell "Recibido · sin constatación"
+        - cell "Ver Identificar original":
+          - button "Ver":
+            - text: Ver
+          - button "Identificar original"
+  - dialog "Comprobante original del proveedor":
+    - heading "Comprobante original del proveedor" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: INT-FC-A-00001-00000001 · Emisión 01/10/2026 · Tipo ARCA 001 · Total $ 1.210,00
+    - generic: Copiá los datos del documento recibido. La referencia interna de SICA se conserva. Esta carga no constata la autorización ante ARCA ni cambia importes, impuestos o movimientos.
+    - paragraph:
+      - text: "Identificación vigente:"
+      - strong: 001 · 00004-00000043
+      - text: · CUIT emisor 30712345671. La nueva constancia conservará el antecedente INT-CO-00000002.
+    - generic: CUIT del proveedor emisor *
+    - textbox "CUIT del proveedor emisor *": "30712345671"
+    - generic: CUIT de la empresa receptora *
+    - textbox "CUIT de la empresa receptora *": "30712345671"
+    - generic: Punto de venta del proveedor *
+    - spinbutton "Punto de venta del proveedor *": "4"
+    - generic: Número original del comprobante *
+    - spinbutton "Número original del comprobante *": "43"
+    - generic: Autorización informada
+    - combobox "Autorización informada":
+      - option "Sin consignar"
+      - option "CAE" [selected]
+      - option "CAEA"
+      - option "CAI"
+    - generic: Código de autorización *
+    - textbox "Código de autorización *": "12345678901234"
+    - generic: Vencimiento de autorización informado
+    - textbox "Vencimiento de autorización informado"
+    - generic: Fecha de identificación *
+    - textbox "Fecha de identificación *": 2026-10-15
+    - generic: Referencia de identificación *
+    - textbox "Referencia de identificación *"
+    - generic: Fundamento de identificación o corrección *
+    - textbox "Fundamento de identificación o corrección *"
+    - button "Revisar identificación"
+    - textbox "Buscar registros":
+      - /placeholder: Buscar en los registros…
+    - generic: 2 registros
+    - button "XLSX":
+      - text: XLSX
+    - button "PDF":
+      - text: PDF
+    - table:
+      - rowgroup:
+        - row "Constancia Registro Original CUIT emisor CUIT receptor Autorización declarada Código Referencia Fundamento Responsable":
+          - columnheader "Constancia"
+          - columnheader "Registro"
+          - columnheader "Original"
+          - columnheader "CUIT emisor"
+          - columnheader "CUIT receptor"
+          - columnheader "Autorización declarada"
+          - columnheader "Código"
+          - columnheader "Referencia"
+          - columnheader "Fundamento"
+          - columnheader "Responsable"
+      - rowgroup:
+        - row "INT-CO-00000001 15/10/2026 001 · 00004-00000042 30712345671 30712345671 CAE 12345678901234 ORIG-ENSAYO-01 Datos copiados del comprobante sintético recibido; autorización sin constatar. Administrador":
+          - cell "INT-CO-00000001"
+          - cell "15/10/2026"
+          - cell "001 · 00004-00000042"
+          - cell "30712345671"
+          - cell "30712345671"
+          - cell "CAE"
+          - cell "12345678901234"
+          - cell "ORIG-ENSAYO-01"
+          - cell "Datos copiados del comprobante sintético recibido; autorización sin constatar."
+          - cell "Administrador"
+        - row "INT-CO-00000002 15/10/2026 001 · 00004-00000043 30712345671 30712345671 CAE 12345678901234 COR-ENSAYO-01 Corrección del número según el original sintético; se conserva el antecedente 42. Administrador":
+          - cell "INT-CO-00000002"
+          - cell "15/10/2026"
+          - cell "001 · 00004-00000043"
+          - cell "30712345671"
+          - cell "30712345671"
+          - cell "CAE"
+          - cell "12345678901234"
+          - cell "COR-ENSAYO-01"
+          - cell "Corrección del número según el original sintético; se conserva el antecedente 42."
+          - cell "Administrador"

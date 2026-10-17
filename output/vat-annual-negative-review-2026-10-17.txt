@@ -1,0 +1,3 @@
+Browser tab: 3, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.47:3052/finanzas/impuestos".
+There has been no change in the accessibility tree.
+The focused UI element is 1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.47:3052/finanzas/impuestos

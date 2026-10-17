@@ -1,0 +1,112 @@
+{
+  "synthetic": true,
+  "revision": 5,
+  "costVersion": 4,
+  "number": "INT-VC-00000003",
+  "cutDate": "2026-10-08",
+  "returns": [
+    {
+      "number": "INT-DV-00000001",
+      "side": "cliente",
+      "date": "2026-10-08",
+      "sourceNumber": "INT-RM-A-00001-00000002",
+      "party": "Cliente mayorista de prueba",
+      "deposit": "Depósito principal",
+      "noteNumber": "INT-NC-A-00001-00000001",
+      "noteDate": "2026-10-04",
+      "reason": "Cliente devuelve dos remeras; prueba sintética de reposición",
+      "responsible": "Administrador",
+      "lines": [
+        {
+          "sku": "REM-M-NEG",
+          "quantity": 2,
+          "unit": "Unidad"
+        }
+      ]
+    },
+    {
+      "number": "INT-DV-00000002",
+      "side": "proveedor",
+      "date": "2026-10-08",
+      "sourceNumber": "INT-RM-A-00001-00000001",
+      "party": "Proveedor textil de prueba",
+      "deposit": "Depósito principal",
+      "noteNumber": "INT-NC-A-00001-00000002",
+      "noteDate": "2026-10-05",
+      "reason": "Dos remeras enviadas al proveedor; prueba sintética de salida CPP",
+      "responsible": "Administrador",
+      "lines": [
+        {
+          "sku": "REM-M-NEG",
+          "quantity": 2,
+          "unit": "Unidad"
+        }
+      ]
+    }
+  ],
+  "costs": [
+    {
+      "sku": "REM-M-NEG",
+      "kind": "Devolución cliente",
+      "quantity": 2,
+      "valueARS": 24
+    },
+    {
+      "sku": "REM-M-NEG",
+      "kind": "Devolución proveedor",
+      "quantity": -2,
+      "valueARS": 24,
+      "creditedCostARS": 40,
+      "creditedMinusCppARS": 16
+    }
+  ],
+  "balances": [
+    {
+      "sku": "REM-M-NEG",
+      "deposit": "Depósito principal",
+      "quantity": 45,
+      "valueARS": 540
+    },
+    {
+      "sku": "PANT-42-AZ",
+      "deposit": "Depósito principal",
+      "quantity": 20,
+      "valueARS": 200
+    }
+  ],
+  "inventoryARS": 740,
+  "costOfSalesAccumulatedARS": 36,
+  "costOfSalesAdjustmentARS": -24,
+  "priorCuts": [
+    {
+      "number": "INT-VC-00000001",
+      "date": "2026-10-01",
+      "inventoryARS": 600
+    },
+    {
+      "number": "INT-VC-00000002",
+      "date": "2026-10-03",
+      "inventoryARS": 740
+    }
+  ],
+  "journal": [
+    {
+      "branch": "Casa Central",
+      "account": "Compras y gastos",
+      "debitARS": 40,
+      "creditARS": 0
+    },
+    {
+      "branch": "Casa Central",
+      "account": "Costo de mercadería vendida",
+      "debitARS": 0,
+      "creditARS": 24
+    },
+    {
+      "branch": "Casa Central",
+      "account": "Diferencias de inventario",
+      "debitARS": 0,
+      "creditARS": 16
+    }
+  ]
+}

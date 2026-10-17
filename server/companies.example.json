@@ -1,0 +1,4 @@
+[
+  {"id":"textil","label":"SICA Textil · Tucumán","database":"var/textil.sqlite","adminPasswordEnv":"SICA_TEXTIL_ADMIN_PASSWORD","arca":{"mode":"disabled"}},
+  {"id":"servicios","label":"SICA Servicios","database":"var/servicios.sqlite","adminPasswordEnv":"SICA_SERVICIOS_ADMIN_PASSWORD","arca":{"mode":"disabled"}}
+]

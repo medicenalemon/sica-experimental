@@ -1,15 +1,10 @@
-import { Navigate, Outlet } from 'react-router-dom';
-
+import { Navigate, Outlet, useLocation, Link } from 'react-router-dom'
+import { useStore } from '@/state/context'
+import { canAccess } from '@/domain/permissions'
 export default function ProtectedRoute() {
-  // Simulamos la verificación de autenticación
-  // En un entorno real, esto provendría de un Context, Redux, o token JWT.
-  const isAuthenticated = localStorage.getItem('sica_isAuthenticated') === 'true';
-
-  if (!isAuthenticated) {
-    // Si no está autenticado, redirigir al login
-    return <Navigate to="/login" replace />;
-  }
-
-  // Si está autenticado, renderizar las rutas hijas
-  return <Outlet />;
+ const {session,ready}=useStore(),location=useLocation()
+ if(!ready)return <div className="access-denied" role="status">Conectando con SICA…</div>
+ if(!session)return <Navigate to="/login" replace state={{from:location.pathname}}/>
+ if(!canAccess(session,location.pathname))return <div className="access-denied"><h1>Acceso restringido</h1><p>Tu perfil no tiene permiso para esta sección.</p><Link className="button" to="/">Volver al inicio</Link></div>
+ return <Outlet/>
 }

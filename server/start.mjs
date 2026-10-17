@@ -1,0 +1,12 @@
+if(Number(process.versions.node.split('.')[0])<24)throw new Error('El servidor SICA requiere Node.js 24 o superior.')
+process.umask(0o077)
+const {createApplication}=await import('./http.mjs')
+const {loadCompanies}=await import('./companies.mjs')
+const companies=loadCompanies(process.env.SICA_COMPANIES_FILE)
+const host=process.env.SICA_HOST||'127.0.0.1',port=Number(process.env.SICA_PORT||3001),secureCookie=process.env.SICA_SECURE_COOKIE==='true'
+if(!['127.0.0.1','localhost','::1'].includes(host)&&(!secureCookie||!process.env.SICA_ORIGINS?.split(',').every(o=>o.trim().startsWith('https://'))))throw new Error('El acceso de red necesita HTTPS, cookies seguras y SICA_ORIGINS explícitos.')
+const application=await createApplication({filename:process.env.SICA_DATABASE||'var/sica.sqlite',adminPassword:process.env.SICA_ADMIN_PASSWORD,companyId:process.env.SICA_COMPANY_ID||companies?.[0]?.id||'sica',companies,secureCookie,arca:{mode:process.env.SICA_ARCA_MODE||'disabled',cuit:process.env.SICA_ARCA_CUIT?.replace(/[-\s]/g,''),certificate:process.env.SICA_ARCA_CERTIFICATE,key:process.env.SICA_ARCA_PRIVATE_KEY,password:process.env.SICA_ARCA_KEY_PASSWORD||''},origins:process.env.SICA_ORIGINS?.split(',').map(s=>s.trim())})
+application.server.listen(port,host,()=>console.log(`SICA servidor: http://${host}:${port}`))
+let backupRunning=false,backupPromise=Promise.resolve()
+const interval=setInterval(async()=>{if(backupRunning)return;backupRunning=true;try{backupPromise=application.backupFiles();await backupPromise;console.log('Copia de seguridad del servidor creada.')}catch(error){console.error('Falló la copia de seguridad:',error.message)}finally{backupRunning=false}},24*60*60*1000);interval.unref()
+for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>{clearInterval(interval);application.server.close(async()=>{await backupPromise.catch(()=>{});await application.close();process.exit(0)})})

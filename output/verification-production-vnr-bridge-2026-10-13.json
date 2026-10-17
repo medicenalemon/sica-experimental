@@ -1,0 +1,1837 @@
+{
+  "date": "2026-10-13",
+  "synthetic": true,
+  "tests": {
+    "domain": 404,
+    "files": 32,
+    "http": 56,
+    "fiscal": 22,
+    "total": 514
+  },
+  "browser": {
+    "result": "INT-RPC versión 3 e INT-VC-00000005 CPP10 conservados y recuperados; producto terminado bruto $32, pérdida $10 y neto $22, proceso $17 y CMV $32.",
+    "screenshot": "output/production-vnr-bridge-detail-2026-10-13.jpg",
+    "transcript": "output/production-vnr-bridge-browser-2026-10-13.txt"
+  },
+  "limitations": [
+    "La comparación actual con VNR requiere una nueva evaluación con evidencia; el puente conserva la pérdida y aplica el límite de costo.",
+    "Las bases reexpresadas, notas/conciliaciones/anulaciones y fabricación incluida sólo en una apertura manual requieren ampliar sus puentes.",
+    "El objetivo integral y la validación fiscal/profesional permanecen abiertos."
+  ],
+  "checks": [
+    {
+      "database": "var/qa-production-vnr-bridge.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "bridge": {
+        "record": {
+          "service": {
+            "date": "2026-10-13",
+            "accrualId": "e7055d3d-bc99-4ff0-8739-caafdb842139",
+            "reference": "Nueva cotización sobre base VNR QA",
+            "reason": "Nueva información recibida: el servicio cuesta $30, conservando alcance y cantidades.",
+            "lines": [
+              {
+                "productId": "pc-fixed-service",
+                "value": 3000
+              }
+            ]
+          },
+          "reason": "Nueva cotización del servicio fijo. Se mantiene el reparto; el lote A ya vendido parcialmente conserva su evaluación de VNR y B sigue en proceso.",
+          "allocationConfirmed": true,
+          "review": "{\"date\":\"2026-10-13\",\"reason\":\"Nueva cotización del servicio fijo. Se mantiene el reparto; el lote A ya vendido parcialmente conserva su evaluación de VNR y B sigue en proceso.\",\"service\":{\"date\":\"2026-10-13\",\"reference\":\"Nueva cotización sobre base VNR QA\",\"reason\":\"Nueva información recibida: el servicio cuesta $30, conservando alcance y cantidades.\",\"accrualId\":\"e7055d3d-bc99-4ff0-8739-caafdb842139\",\"accrualNumber\":\"INT-DS-00000001\",\"previousReestimateId\":\"\",\"branchId\":\"central\",\"liabilityId\":\"2.1.7\",\"previousValue\":6000,\"total\":3000,\"difference\":-3000,\"lines\":[{\"productId\":\"pc-fixed-service\",\"accountId\":\"pc-fixed\",\"previousValue\":6000,\"value\":3000,\"difference\":-3000}],\"entry\":[{\"accountId\":\"pc-fixed\",\"debit\":0,\"credit\":3000},{\"accountId\":\"2.1.7\",\"debit\":3000,\"credit\":0}]},\"entryPrefixIds\":[\"c4b93709-bd34-47f1-8f90-690134dd4f31\",\"3a1b7111-9657-44ab-bfa4-a2e56a51be30\",\"8dfd9905-5395-4e0e-badf-425c0854198f\",\"5dd22e18-cfc9-4c45-bea3-83a93da52b03\",\"962d5ad9-72ab-4a02-a9f5-f91eaf0f30ac\",\"0ba46baa-791d-4e79-83be-edbd8c0763cd\",\"2a2f57c5-9c8c-4e24-ab82-71bac18075d7\",\"67ba0c88-5456-459f-b75a-fc4e9d09c7fa\",\"c8857014-957f-49d5-b2c3-11e4102adbe9\"],\"stockPrefixIds\":[\"pc-opening\",\"7d959c74-133d-482b-a220-b59ddede37cf\",\"a92cbb6c-f59d-4bb1-a4fd-e685dd6ad262\",\"5b1ee9af-4c66-4c18-a934-620e3e7f7302\"],\"costPrefixIds\":[\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\"],\"correctionPrefixIds\":[],\"layers\":[{\"productionCostId\":\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\",\"number\":\"INT-PC-00000001\",\"measurement\":{\"recordId\":\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\",\"pools\":[{\"poolId\":\"pool-0\",\"kind\":\"Directo\",\"beforeGross\":3000,\"gross\":3000,\"beforeCapitalized\":3000,\"capitalized\":3000,\"unabsorbed\":0,\"difference\":0,\"reason\":\"Nueva cotización del servicio fijo. Se mantiene el reparto; el lote A ya vendido parcialmente conserva su evaluación de VNR y B sigue en proceso.\",\"allocations\":[{\"orderId\":\"pc-a\",\"before\":2000,\"after\":2000,\"difference\":0},{\"orderId\":\"pc-b\",\"before\":1000,\"after\":1000,\"difference\":0}]},{\"poolId\":\"pool-1\",\"kind\":\"Fijo\",\"beforeGross\":6000,\"gross\":3000,\"beforeCapitalized\":1800,\"capitalized\":900,\"unabsorbed\":2100,\"difference\":-900,\"reason\":\"Nueva cotización del servicio fijo. Se mantiene el reparto; el lote A ya vendido parcialmente conserva su evaluación de VNR y B sigue en proceso.\",\"allocations\":[{\"orderId\":\"pc-a\",\"before\":1200,\"after\":600,\"difference\":-600},{\"orderId\":\"pc-b\",\"before\":600,\"after\":300,\"difference\":-300}]},{\"poolId\":\"pool-2\",\"kind\":\"Variable\",\"beforeGross\":1200,\"gross\":1200,\"beforeCapitalized\":1200,\"capitalized\":1200,\"unabsorbed\":0,\"difference\":0,\"reason\":\"Nueva cotización del servicio fijo. Se mantiene el reparto; el lote A ya vendido parcialmente conserva su evaluación de VNR y B sigue en proceso.\",\"allocations\":[{\"orderId\":\"pc-a\",\"before\":800,\"after\":800,\"difference\":0},{\"orderId\":\"pc-b\",\"before\":400,\"after\":400,\"difference\":0}]},{\"poolId\":\"pool-3\",\"kind\":\"Excluido\",\"beforeGross\":500,\"gross\":500,\"beforeCapitalized\":0,\"capitalized\":0,\"unabsorbed\":500,\"difference\":0,\"reason\":\"Nueva cotización del servicio fijo. Se mantiene el reparto; el lote A ya vendido parcialmente conserva su evaluación de VNR y B sigue en proceso.\",\"allocations\":[]}],\"allocations\":[{\"orderId\":\"pc-a\",\"before\":4000,\"after\":3400,\"difference\":-600},{\"orderId\":\"pc-b\",\"before\":2000,\"after\":1700,\"difference\":-300}],\"beforeCapitalized\":6000,\"capitalized\":5100,\"difference\":-900,\"beforeUnabsorbed\":4700,\"unabsorbed\":2600,\"expenseDifference\":-2100},\"sources\":[{\"poolId\":\"pool-0\",\"entryId\":\"3a1b7111-9657-44ab-bfa4-a2e56a51be30\",\"lineIndex\":0,\"accountId\":\"pc-labor\",\"value\":3000,\"capitalized\":3000},{\"poolId\":\"pool-1\",\"entryId\":\"962d5ad9-72ab-4a02-a9f5-f91eaf0f30ac\",\"lineIndex\":0,\"accountId\":\"pc-fixed\",\"value\":3000,\"capitalized\":900},{\"poolId\":\"pool-2\",\"entryId\":\"8dfd9905-5395-4e0e-badf-425c0854198f\",\"lineIndex\":0,\"accountId\":\"pc-variable\",\"value\":1200,\"capitalized\":1200},{\"poolId\":\"pool-3\",\"entryId\":\"5dd22e18-cfc9-4c45-bea3-83a93da52b03\",\"lineIndex\":0,\"accountId\":\"pc-administration\",\"value\":500,\"capitalized\":0}],\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}],\"lines\":[{\"accountId\":\"inventory-wip\",\"debit\":0,\"credit\":900},{\"accountId\":\"pc-fixed\",\"debit\":900,\"credit\":0}],\"difference\":-900,\"expenseDifference\":-2100,\"version\":3,\"destinations\":{\"wip\":-300,\"inventory\":-300,\"cogs\":-300,\"other\":[]},\"inventory\":{\"correctionId\":\"production-correction:INT-RPC-00000001\",\"number\":\"INT-RPC-00000001\",\"batchPrefixIds\":[\"cb5ffc9a-7bd5-4642-b99e-98865e7a93bb\",\"3bcc3203-2389-4158-bf69-4616f9b723f1\",\"697d7a0b-b4df-4725-a758-5332a28dc963\",\"dfbc3cbe-8333-4bec-9461-1852364924ce\"],\"input\":{\"date\":\"2026-10-13\",\"reference\":\"INT-RPC-00000001 · CPP conciliado\",\"accounts\":{\"inventory\":\"inventory-inventory\",\"opening\":\"3.1\",\"cogs\":\"inventory-cogs\",\"adjustments\":\"inventory-adjustments\",\"transit\":\"inventory-transit\",\"wip\":\"inventory-wip\",\"unbilled\":\"inventory-unbilled\",\"stockAllowance\":\"inventory-stockAllowance\",\"stockRecovery\":\"inventory-stockRecovery\"},\"costVersion\":10,\"review\":\"{\\\"moves\\\":[],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":7,\\\"value\\\":7000},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":1,\\\"value\\\":3200}],\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-inventory\\\",\\\"debit\\\":0,\\\"credit\\\":300},{\\\"accountId\\\":\\\"inventory-wip\\\",\\\"debit\\\":600,\\\"credit\\\":0},{\\\"accountId\\\":\\\"inventory-cogs\\\",\\\"debit\\\":0,\\\"credit\\\":300}]}],\\\"productionCosts\\\":[{\\\"id\\\":\\\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\\\",\\\"number\\\":\\\"INT-PC-00000001\\\",\\\"date\\\":\\\"2026-10-03\\\",\\\"wipAccountId\\\":\\\"inventory-wip\\\",\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":3400},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":1700}],\\\"review\\\":\\\"{\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-03\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"wipAccountId\\\\\\\":\\\\\\\"inventory-wip\\\\\\\",\\\\\\\"orders\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"quantity\\\\\\\":2,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\"},{\\\\\\\"id\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"quantity\\\\\\\":2,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\"}],\\\\\\\"allocations\\\\\\\":[{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"amount\\\\\\\":3400},{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"amount\\\\\\\":1700}]}\\\",\\\"corrections\\\":[{\\\"id\\\":\\\"production-correction:INT-RPC-00000001\\\",\\\"number\\\":\\\"INT-RPC-00000001\\\",\\\"date\\\":\\\"2026-10-13\\\",\\\"version\\\":3,\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":3400},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":1700}]}]}],\\\"productionBridge\\\":{\\\"recoveryId\\\":\\\"b0774bd5-8f30-4687-9880-a7b4117d5fea\\\",\\\"sourceBatchId\\\":\\\"dfbc3cbe-8333-4bec-9461-1852364924ce\\\",\\\"productionDate\\\":\\\"2026-10-13\\\",\\\"balances\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"before\\\":7000,\\\"after\\\":7000,\\\"difference\\\":0},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"before\\\":3500,\\\"after\\\":3200,\\\"difference\\\":-300}],\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-inventory\\\",\\\"debit\\\":0,\\\"credit\\\":300},{\\\"accountId\\\":\\\"inventory-wip\\\",\\\"debit\\\":600,\\\"credit\\\":0},{\\\"accountId\\\":\\\"inventory-cogs\\\",\\\"debit\\\":0,\\\"credit\\\":300}]}],\\\"returnCosts\\\":[]},\\\"reserve\\\":{\\\"balances\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":7,\\\"gross\\\":7000,\\\"allowance\\\":0},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":1,\\\"gross\\\":3200,\\\"allowance\\\":1000}],\\\"rows\\\":[],\\\"releases\\\":[],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\"},\\\"recoveries\\\":[{\\\"id\\\":\\\"b0774bd5-8f30-4687-9880-a7b4117d5fea\\\",\\\"number\\\":\\\"INT-VI-00000001\\\",\\\"date\\\":\\\"2026-10-12\\\",\\\"review\\\":\\\"{\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-12\\\\\\\",\\\\\\\"reference\\\\\\\":\\\\\\\"VNR conservado del lote A QA\\\\\\\",\\\\\\\"reason\\\\\\\":\\\\\\\"Precio sintético de realización por partida antes de nueva cotización del servicio.\\\\\\\",\\\\\\\"scope\\\\\\\":\\\\\\\"Inventario completo\\\\\\\",\\\\\\\"scopeReason\\\\\\\":\\\\\\\"Materias primas y producto terminado restantes del corte.\\\\\\\",\\\\\\\"changesReason\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"source\\\\\\\":{\\\\\\\"batchId\\\\\\\":\\\\\\\"dfbc3cbe-8333-4bec-9461-1852364924ce\\\\\\\",\\\\\\\"batchNumber\\\\\\\":\\\\\\\"INT-VC-00000004\\\\\\\",\\\\\\\"batchReview\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"moves\\\\\\\\\\\\\\\":[],\\\\\\\\\\\\\\\"rows\\\\\\\\\\\\\\\":[],\\\\\\\\\\\\\\\"balances\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":7,\\\\\\\\\\\\\\\"value\\\\\\\\\\\\\\\":7000},{\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"depositId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"principal\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":1,\\\\\\\\\\\\\\\"value\\\\\\\\\\\\\\\":3500}],\\\\\\\\\\\\\\\"journals\\\\\\\\\\\\\\\":[],\\\\\\\\\\\\\\\"productionCosts\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"number\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"INT-PC-00000001\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-10-03\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"wipAccountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-wip\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"allocations\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"orderId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-a\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"amount\\\\\\\\\\\\\\\":4000},{\\\\\\\\\\\\\\\"orderId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-b\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"amount\\\\\\\\\\\\\\\":2000}],\\\\\\\\\\\\\\\"review\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"{\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"date\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"2026-10-03\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"wipAccountId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"inventory-wip\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"orders\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"pc-a\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":2,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"},{\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"pc-b\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":2,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"}],\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"allocations\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"orderId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"pc-a\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"amount\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":4000},{\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"orderId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"pc-b\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"amount\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\":2000}]}\\\\\\\\\\\\\\\"}],\\\\\\\\\\\\\\\"corrections\\\\\\\\\\\\\\\":[]}\\\\\\\",\\\\\\\"entryIds\\\\\\\":[\\\\\\\"c4b93709-bd34-47f1-8f90-690134dd4f31\\\\\\\",\\\\\\\"2a2f57c5-9c8c-4e24-ab82-71bac18075d7\\\\\\\",\\\\\\\"67ba0c88-5456-459f-b75a-fc4e9d09c7fa\\\\\\\"],\\\\\\\"inflation\\\\\\\":[],\\\\\\\"recoveries\\\\\\\":[]},\\\\\\\"beforeBalances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":7,\\\\\\\"gross\\\\\\\":7000,\\\\\\\"allowance\\\\\\\":0},{\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":1,\\\\\\\"gross\\\\\\\":3500,\\\\\\\"allowance\\\\\\\":0}],\\\\\\\"rows\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"sku\\\\\\\":\\\\\\\"REM-M-NEG\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"Remera de algodón · M · Negro\\\\\\\",\\\\\\\"unit\\\\\\\":\\\\\\\"Unidad\\\\\\\",\\\\\\\"depositName\\\\\\\":\\\\\\\"Depósito principal\\\\\\\",\\\\\\\"quantity\\\\\\\":7,\\\\\\\"value\\\\\\\":7000,\\\\\\\"gross\\\\\\\":7000,\\\\\\\"allowance\\\\\\\":0,\\\\\\\"groupId\\\\\\\":\\\\\\\"vnr-bridge-0\\\\\\\",\\\\\\\"beforeAllowance\\\\\\\":0,\\\\\\\"afterAllowance\\\\\\\":0,\\\\\\\"difference\\\\\\\":0,\\\\\\\"beforeValue\\\\\\\":7000,\\\\\\\"afterValue\\\\\\\":7000},{\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"sku\\\\\\\":\\\\\\\"PANT-42-AZ\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"Pantalón · 42 · Azul\\\\\\\",\\\\\\\"unit\\\\\\\":\\\\\\\"Unidad\\\\\\\",\\\\\\\"depositName\\\\\\\":\\\\\\\"Depósito principal\\\\\\\",\\\\\\\"quantity\\\\\\\":1,\\\\\\\"value\\\\\\\":3500,\\\\\\\"gross\\\\\\\":3500,\\\\\\\"allowance\\\\\\\":0,\\\\\\\"groupId\\\\\\\":\\\\\\\"vnr-bridge-1\\\\\\\",\\\\\\\"beforeAllowance\\\\\\\":0,\\\\\\\"afterAllowance\\\\\\\":1000,\\\\\\\"difference\\\\\\\":1000,\\\\\\\"beforeValue\\\\\\\":3500,\\\\\\\"afterValue\\\\\\\":2500}],\\\\\\\"afterBalances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":7,\\\\\\\"gross\\\\\\\":7000,\\\\\\\"allowance\\\\\\\":0},{\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":1,\\\\\\\"gross\\\\\\\":3500,\\\\\\\"allowance\\\\\\\":1000}],\\\\\\\"groups\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"vnr-bridge-0\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"REM-M-NEG\\\\\\\",\\\\\\\"mode\\\\\\\":\\\\\\\"Partida individual\\\\\\\",\\\\\\\"saleValue\\\\\\\":7000,\\\\\\\"saleCosts\\\\\\\":0,\\\\\\\"impracticability\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"geography\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"gross\\\\\\\":7000,\\\\\\\"carrying\\\\\\\":7000,\\\\\\\"recoverable\\\\\\\":7000,\\\\\\\"completionCosts\\\\\\\":0,\\\\\\\"afterValue\\\\\\\":7000,\\\\\\\"loss\\\\\\\":0,\\\\\\\"recovery\\\\\\\":0,\\\\\\\"unrecognizedRecovery\\\\\\\":0,\\\\\\\"reason\\\\\\\":\\\\\\\"Venta individual del SKU en el mercado de prueba.\\\\\\\",\\\\\\\"evidence\\\\\\\":\\\\\\\"Cotización sintética documentada para el ensayo.\\\\\\\",\\\\\\\"evidenceDate\\\\\\\":\\\\\\\"2026-10-12\\\\\\\"},{\\\\\\\"id\\\\\\\":\\\\\\\"vnr-bridge-1\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"PANT-42-AZ\\\\\\\",\\\\\\\"mode\\\\\\\":\\\\\\\"Partida individual\\\\\\\",\\\\\\\"saleValue\\\\\\\":2500,\\\\\\\"saleCosts\\\\\\\":0,\\\\\\\"impracticability\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"geography\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"gross\\\\\\\":3500,\\\\\\\"carrying\\\\\\\":3500,\\\\\\\"recoverable\\\\\\\":2500,\\\\\\\"completionCosts\\\\\\\":0,\\\\\\\"afterValue\\\\\\\":2500,\\\\\\\"loss\\\\\\\":1000,\\\\\\\"recovery\\\\\\\":0,\\\\\\\"unrecognizedRecovery\\\\\\\":0,\\\\\\\"reason\\\\\\\":\\\\\\\"Venta individual del SKU en el mercado de prueba.\\\\\\\",\\\\\\\"evidence\\\\\\\":\\\\\\\"Cotización sintética documentada para el ensayo.\\\\\\\",\\\\\\\"evidenceDate\\\\\\\":\\\\\\\"2026-10-12\\\\\\\"}],\\\\\\\"allowanceAccountId\\\\\\\":\\\\\\\"inventory-stockAllowance\\\\\\\",\\\\\\\"lossAccountId\\\\\\\":\\\\\\\"inventory-stockLoss\\\\\\\",\\\\\\\"recoveryAccountId\\\\\\\":\\\\\\\"inventory-stockRecovery\\\\\\\",\\\\\\\"loss\\\\\\\":1000,\\\\\\\"recovery\\\\\\\":0,\\\\\\\"net\\\\\\\":9500,\\\\\\\"journals\\\\\\\":[{\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"lines\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-stockLoss\\\\\\\",\\\\\\\"debit\\\\\\\":1000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"inventory-stockAllowance\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":1000}]}],\\\\\\\"warnings\\\\\\\":[\\\\\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\\\\\",\\\\\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\\\\\",\\\\\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\\\\\",\\\\\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\\\\\"]}\\\"}],\\\"corrections\\\":[]}\"},\"preview\":{\"sourceMoves\":[],\"rows\":[],\"balances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":7,\"value\":7000},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"PANT-42-AZ\",\"name\":\"Pantalón · 42 · Azul\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":1,\"value\":3200}],\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-inventory\",\"debit\":0,\"credit\":300},{\"accountId\":\"inventory-wip\",\"debit\":600,\"credit\":0},{\"accountId\":\"inventory-cogs\",\"debit\":0,\"credit\":300}]}],\"corrections\":[],\"productionBridge\":{\"recoveryId\":\"b0774bd5-8f30-4687-9880-a7b4117d5fea\",\"sourceBatchId\":\"dfbc3cbe-8333-4bec-9461-1852364924ce\",\"productionDate\":\"2026-10-13\",\"balances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"before\":7000,\"after\":7000,\"difference\":0},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"before\":3500,\"after\":3200,\"difference\":-300}],\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-inventory\",\"debit\":0,\"credit\":300},{\"accountId\":\"inventory-wip\",\"debit\":600,\"credit\":0},{\"accountId\":\"inventory-cogs\",\"debit\":0,\"credit\":300}]}],\"returnCosts\":[]},\"reserve\":{\"balances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"gross\":7000,\"allowance\":0},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"gross\":3200,\"allowance\":1000}],\"rows\":[],\"releases\":[],\"allowanceAccountId\":\"inventory-stockAllowance\",\"recoveryAccountId\":\"inventory-stockRecovery\"},\"recoveries\":[{\"id\":\"b0774bd5-8f30-4687-9880-a7b4117d5fea\",\"number\":\"INT-VI-00000001\",\"date\":\"2026-10-12\",\"review\":\"{\\\"date\\\":\\\"2026-10-12\\\",\\\"reference\\\":\\\"VNR conservado del lote A QA\\\",\\\"reason\\\":\\\"Precio sintético de realización por partida antes de nueva cotización del servicio.\\\",\\\"scope\\\":\\\"Inventario completo\\\",\\\"scopeReason\\\":\\\"Materias primas y producto terminado restantes del corte.\\\",\\\"changesReason\\\":\\\"\\\",\\\"source\\\":{\\\"batchId\\\":\\\"dfbc3cbe-8333-4bec-9461-1852364924ce\\\",\\\"batchNumber\\\":\\\"INT-VC-00000004\\\",\\\"batchReview\\\":\\\"{\\\\\\\"moves\\\\\\\":[],\\\\\\\"rows\\\\\\\":[],\\\\\\\"balances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":7,\\\\\\\"value\\\\\\\":7000},{\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":1,\\\\\\\"value\\\\\\\":3500}],\\\\\\\"journals\\\\\\\":[],\\\\\\\"productionCosts\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"INT-PC-00000001\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-03\\\\\\\",\\\\\\\"wipAccountId\\\\\\\":\\\\\\\"inventory-wip\\\\\\\",\\\\\\\"allocations\\\\\\\":[{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"amount\\\\\\\":4000},{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"amount\\\\\\\":2000}],\\\\\\\"review\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-10-03\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"wipAccountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-wip\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"orders\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-a\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":2,\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\"},{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-b\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":2,\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\"}],\\\\\\\\\\\\\\\"allocations\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"orderId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-a\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"amount\\\\\\\\\\\\\\\":4000},{\\\\\\\\\\\\\\\"orderId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-b\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"amount\\\\\\\\\\\\\\\":2000}]}\\\\\\\"}],\\\\\\\"corrections\\\\\\\":[]}\\\",\\\"entryIds\\\":[\\\"c4b93709-bd34-47f1-8f90-690134dd4f31\\\",\\\"2a2f57c5-9c8c-4e24-ab82-71bac18075d7\\\",\\\"67ba0c88-5456-459f-b75a-fc4e9d09c7fa\\\"],\\\"inflation\\\":[],\\\"recoveries\\\":[]},\\\"beforeBalances\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":7,\\\"gross\\\":7000,\\\"allowance\\\":0},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":1,\\\"gross\\\":3500,\\\"allowance\\\":0}],\\\"rows\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":7,\\\"value\\\":7000,\\\"gross\\\":7000,\\\"allowance\\\":0,\\\"groupId\\\":\\\"vnr-bridge-0\\\",\\\"beforeAllowance\\\":0,\\\"afterAllowance\\\":0,\\\"difference\\\":0,\\\"beforeValue\\\":7000,\\\"afterValue\\\":7000},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"PANT-42-AZ\\\",\\\"name\\\":\\\"Pantalón · 42 · Azul\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":1,\\\"value\\\":3500,\\\"gross\\\":3500,\\\"allowance\\\":0,\\\"groupId\\\":\\\"vnr-bridge-1\\\",\\\"beforeAllowance\\\":0,\\\"afterAllowance\\\":1000,\\\"difference\\\":1000,\\\"beforeValue\\\":3500,\\\"afterValue\\\":2500}],\\\"afterBalances\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":7,\\\"gross\\\":7000,\\\"allowance\\\":0},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":1,\\\"gross\\\":3500,\\\"allowance\\\":1000}],\\\"groups\\\":[{\\\"id\\\":\\\"vnr-bridge-0\\\",\\\"name\\\":\\\"REM-M-NEG\\\",\\\"mode\\\":\\\"Partida individual\\\",\\\"saleValue\\\":7000,\\\"saleCosts\\\":0,\\\"impracticability\\\":\\\"\\\",\\\"geography\\\":\\\"\\\",\\\"gross\\\":7000,\\\"carrying\\\":7000,\\\"recoverable\\\":7000,\\\"completionCosts\\\":0,\\\"afterValue\\\":7000,\\\"loss\\\":0,\\\"recovery\\\":0,\\\"unrecognizedRecovery\\\":0,\\\"reason\\\":\\\"Venta individual del SKU en el mercado de prueba.\\\",\\\"evidence\\\":\\\"Cotización sintética documentada para el ensayo.\\\",\\\"evidenceDate\\\":\\\"2026-10-12\\\"},{\\\"id\\\":\\\"vnr-bridge-1\\\",\\\"name\\\":\\\"PANT-42-AZ\\\",\\\"mode\\\":\\\"Partida individual\\\",\\\"saleValue\\\":2500,\\\"saleCosts\\\":0,\\\"impracticability\\\":\\\"\\\",\\\"geography\\\":\\\"\\\",\\\"gross\\\":3500,\\\"carrying\\\":3500,\\\"recoverable\\\":2500,\\\"completionCosts\\\":0,\\\"afterValue\\\":2500,\\\"loss\\\":1000,\\\"recovery\\\":0,\\\"unrecognizedRecovery\\\":0,\\\"reason\\\":\\\"Venta individual del SKU en el mercado de prueba.\\\",\\\"evidence\\\":\\\"Cotización sintética documentada para el ensayo.\\\",\\\"evidenceDate\\\":\\\"2026-10-12\\\"}],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"lossAccountId\\\":\\\"inventory-stockLoss\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\",\\\"loss\\\":1000,\\\"recovery\\\":0,\\\"net\\\":9500,\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-stockLoss\\\",\\\"debit\\\":1000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"inventory-stockAllowance\\\",\\\"debit\\\":0,\\\"credit\\\":1000}]}],\\\"warnings\\\":[\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\",\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\",\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\",\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\"]}\"}],\"productionCosts\":[{\"id\":\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\",\"number\":\"INT-PC-00000001\",\"date\":\"2026-10-03\",\"wipAccountId\":\"inventory-wip\",\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}],\"review\":\"{\\\"date\\\":\\\"2026-10-03\\\",\\\"branchId\\\":\\\"central\\\",\\\"wipAccountId\\\":\\\"inventory-wip\\\",\\\"orders\\\":[{\\\"id\\\":\\\"pc-a\\\",\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"},{\\\"id\\\":\\\"pc-b\\\",\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"}],\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":3400},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":1700}]}\",\"corrections\":[{\"id\":\"production-correction:INT-RPC-00000001\",\"number\":\"INT-RPC-00000001\",\"date\":\"2026-10-13\",\"version\":3,\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}]}]}}}",
+          "version": 3,
+          "id": "production-correction:INT-RPC-00000001",
+          "number": "INT-RPC-00000001",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-13T03:59:01.158Z",
+          "sourceId": "f15436ea-a829-4824-8494-b75290264db5",
+          "sourceEntryId": "e9334d42-9b7b-484f-85d9-5bee48cb9fa6",
+          "entryIds": [
+            "7e874feb-ff96-4aa0-b138-d8dcd9f1cffb"
+          ],
+          "preview": {
+            "date": "2026-10-13",
+            "reason": "Nueva cotización del servicio fijo. Se mantiene el reparto; el lote A ya vendido parcialmente conserva su evaluación de VNR y B sigue en proceso.",
+            "service": {
+              "date": "2026-10-13",
+              "reference": "Nueva cotización sobre base VNR QA",
+              "reason": "Nueva información recibida: el servicio cuesta $30, conservando alcance y cantidades.",
+              "accrualId": "e7055d3d-bc99-4ff0-8739-caafdb842139",
+              "accrualNumber": "INT-DS-00000001",
+              "previousReestimateId": "",
+              "branchId": "central",
+              "liabilityId": "2.1.7",
+              "previousValue": 6000,
+              "total": 3000,
+              "difference": -3000,
+              "lines": [
+                {
+                  "productId": "pc-fixed-service",
+                  "accountId": "pc-fixed",
+                  "previousValue": 6000,
+                  "value": 3000,
+                  "difference": -3000
+                }
+              ],
+              "entry": [
+                {
+                  "accountId": "pc-fixed",
+                  "debit": 0,
+                  "credit": 3000
+                },
+                {
+                  "accountId": "2.1.7",
+                  "debit": 3000,
+                  "credit": 0
+                }
+              ]
+            },
+            "entryPrefixIds": [
+              "c4b93709-bd34-47f1-8f90-690134dd4f31",
+              "3a1b7111-9657-44ab-bfa4-a2e56a51be30",
+              "8dfd9905-5395-4e0e-badf-425c0854198f",
+              "5dd22e18-cfc9-4c45-bea3-83a93da52b03",
+              "962d5ad9-72ab-4a02-a9f5-f91eaf0f30ac",
+              "0ba46baa-791d-4e79-83be-edbd8c0763cd",
+              "2a2f57c5-9c8c-4e24-ab82-71bac18075d7",
+              "67ba0c88-5456-459f-b75a-fc4e9d09c7fa",
+              "c8857014-957f-49d5-b2c3-11e4102adbe9"
+            ],
+            "stockPrefixIds": [
+              "pc-opening",
+              "7d959c74-133d-482b-a220-b59ddede37cf",
+              "a92cbb6c-f59d-4bb1-a4fd-e685dd6ad262",
+              "5b1ee9af-4c66-4c18-a934-620e3e7f7302"
+            ],
+            "costPrefixIds": [
+              "f5d1f59c-b031-4e83-a9ed-5bb75fc6578c"
+            ],
+            "correctionPrefixIds": [],
+            "layers": [
+              {
+                "productionCostId": "f5d1f59c-b031-4e83-a9ed-5bb75fc6578c",
+                "number": "INT-PC-00000001",
+                "measurement": {
+                  "recordId": "f5d1f59c-b031-4e83-a9ed-5bb75fc6578c",
+                  "pools": [
+                    {
+                      "poolId": "pool-0",
+                      "kind": "Directo",
+                      "beforeGross": 3000,
+                      "gross": 3000,
+                      "beforeCapitalized": 3000,
+                      "capitalized": 3000,
+                      "unabsorbed": 0,
+                      "difference": 0,
+                      "reason": "Nueva cotización del servicio fijo. Se mantiene el reparto; el lote A ya vendido parcialmente conserva su evaluación de VNR y B sigue en proceso.",
+                      "allocations": [
+                        {
+                          "orderId": "pc-a",
+                          "before": 2000,
+                          "after": 2000,
+                          "difference": 0
+                        },
+                        {
+                          "orderId": "pc-b",
+                          "before": 1000,
+                          "after": 1000,
+                          "difference": 0
+                        }
+                      ]
+                    },
+                    {
+                      "poolId": "pool-1",
+                      "kind": "Fijo",
+                      "beforeGross": 6000,
+                      "gross": 3000,
+                      "beforeCapitalized": 1800,
+                      "capitalized": 900,
+                      "unabsorbed": 2100,
+                      "difference": -900,
+                      "reason": "Nueva cotización del servicio fijo. Se mantiene el reparto; el lote A ya vendido parcialmente conserva su evaluación de VNR y B sigue en proceso.",
+                      "allocations": [
+                        {
+                          "orderId": "pc-a",
+                          "before": 1200,
+                          "after": 600,
+                          "difference": -600
+                        },
+                        {
+                          "orderId": "pc-b",
+                          "before": 600,
+                          "after": 300,
+                          "difference": -300
+                        }
+                      ]
+                    },
+                    {
+                      "poolId": "pool-2",
+                      "kind": "Variable",
+                      "beforeGross": 1200,
+                      "gross": 1200,
+                      "beforeCapitalized": 1200,
+                      "capitalized": 1200,
+                      "unabsorbed": 0,
+                      "difference": 0,
+                      "reason": "Nueva cotización del servicio fijo. Se mantiene el reparto; el lote A ya vendido parcialmente conserva su evaluación de VNR y B sigue en proceso.",
+                      "allocations": [
+                        {
+                          "orderId": "pc-a",
+                          "before": 800,
+                          "after": 800,
+                          "difference": 0
+                        },
+                        {
+                          "orderId": "pc-b",
+                          "before": 400,
+                          "after": 400,
+                          "difference": 0
+                        }
+                      ]
+                    },
+                    {
+                      "poolId": "pool-3",
+                      "kind": "Excluido",
+                      "beforeGross": 500,
+                      "gross": 500,
+                      "beforeCapitalized": 0,
+                      "capitalized": 0,
+                      "unabsorbed": 500,
+                      "difference": 0,
+                      "reason": "Nueva cotización del servicio fijo. Se mantiene el reparto; el lote A ya vendido parcialmente conserva su evaluación de VNR y B sigue en proceso.",
+                      "allocations": []
+                    }
+                  ],
+                  "allocations": [
+                    {
+                      "orderId": "pc-a",
+                      "before": 4000,
+                      "after": 3400,
+                      "difference": -600
+                    },
+                    {
+                      "orderId": "pc-b",
+                      "before": 2000,
+                      "after": 1700,
+                      "difference": -300
+                    }
+                  ],
+                  "beforeCapitalized": 6000,
+                  "capitalized": 5100,
+                  "difference": -900,
+                  "beforeUnabsorbed": 4700,
+                  "unabsorbed": 2600,
+                  "expenseDifference": -2100
+                },
+                "sources": [
+                  {
+                    "poolId": "pool-0",
+                    "entryId": "3a1b7111-9657-44ab-bfa4-a2e56a51be30",
+                    "lineIndex": 0,
+                    "accountId": "pc-labor",
+                    "value": 3000,
+                    "capitalized": 3000
+                  },
+                  {
+                    "poolId": "pool-1",
+                    "entryId": "962d5ad9-72ab-4a02-a9f5-f91eaf0f30ac",
+                    "lineIndex": 0,
+                    "accountId": "pc-fixed",
+                    "value": 3000,
+                    "capitalized": 900
+                  },
+                  {
+                    "poolId": "pool-2",
+                    "entryId": "8dfd9905-5395-4e0e-badf-425c0854198f",
+                    "lineIndex": 0,
+                    "accountId": "pc-variable",
+                    "value": 1200,
+                    "capitalized": 1200
+                  },
+                  {
+                    "poolId": "pool-3",
+                    "entryId": "5dd22e18-cfc9-4c45-bea3-83a93da52b03",
+                    "lineIndex": 0,
+                    "accountId": "pc-administration",
+                    "value": 500,
+                    "capitalized": 0
+                  }
+                ],
+                "allocations": [
+                  {
+                    "orderId": "pc-a",
+                    "amount": 3400
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "amount": 1700
+                  }
+                ]
+              }
+            ],
+            "lines": [
+              {
+                "accountId": "inventory-wip",
+                "debit": 0,
+                "credit": 900
+              },
+              {
+                "accountId": "pc-fixed",
+                "debit": 900,
+                "credit": 0
+              }
+            ],
+            "difference": -900,
+            "expenseDifference": -2100,
+            "version": 3,
+            "destinations": {
+              "wip": -300,
+              "inventory": -300,
+              "cogs": -300,
+              "other": []
+            },
+            "inventory": {
+              "correctionId": "production-correction:INT-RPC-00000001",
+              "number": "INT-RPC-00000001",
+              "batchPrefixIds": [
+                "cb5ffc9a-7bd5-4642-b99e-98865e7a93bb",
+                "3bcc3203-2389-4158-bf69-4616f9b723f1",
+                "697d7a0b-b4df-4725-a758-5332a28dc963",
+                "dfbc3cbe-8333-4bec-9461-1852364924ce"
+              ],
+              "input": {
+                "date": "2026-10-13",
+                "reference": "INT-RPC-00000001 · CPP conciliado",
+                "accounts": {
+                  "inventory": "inventory-inventory",
+                  "opening": "3.1",
+                  "cogs": "inventory-cogs",
+                  "adjustments": "inventory-adjustments",
+                  "transit": "inventory-transit",
+                  "wip": "inventory-wip",
+                  "unbilled": "inventory-unbilled",
+                  "stockAllowance": "inventory-stockAllowance",
+                  "stockRecovery": "inventory-stockRecovery"
+                },
+                "costVersion": 10,
+                "review": "{\"moves\":[],\"rows\":[],\"balances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"value\":7000},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"value\":3200}],\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-inventory\",\"debit\":0,\"credit\":300},{\"accountId\":\"inventory-wip\",\"debit\":600,\"credit\":0},{\"accountId\":\"inventory-cogs\",\"debit\":0,\"credit\":300}]}],\"productionCosts\":[{\"id\":\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\",\"number\":\"INT-PC-00000001\",\"date\":\"2026-10-03\",\"wipAccountId\":\"inventory-wip\",\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}],\"review\":\"{\\\"date\\\":\\\"2026-10-03\\\",\\\"branchId\\\":\\\"central\\\",\\\"wipAccountId\\\":\\\"inventory-wip\\\",\\\"orders\\\":[{\\\"id\\\":\\\"pc-a\\\",\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"},{\\\"id\\\":\\\"pc-b\\\",\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"}],\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":3400},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":1700}]}\",\"corrections\":[{\"id\":\"production-correction:INT-RPC-00000001\",\"number\":\"INT-RPC-00000001\",\"date\":\"2026-10-13\",\"version\":3,\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}]}],\"productionBridge\":{\"recoveryId\":\"b0774bd5-8f30-4687-9880-a7b4117d5fea\",\"sourceBatchId\":\"dfbc3cbe-8333-4bec-9461-1852364924ce\",\"productionDate\":\"2026-10-13\",\"balances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"before\":7000,\"after\":7000,\"difference\":0},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"before\":3500,\"after\":3200,\"difference\":-300}],\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-inventory\",\"debit\":0,\"credit\":300},{\"accountId\":\"inventory-wip\",\"debit\":600,\"credit\":0},{\"accountId\":\"inventory-cogs\",\"debit\":0,\"credit\":300}]}],\"returnCosts\":[]},\"reserve\":{\"balances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"gross\":7000,\"allowance\":0},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"gross\":3200,\"allowance\":1000}],\"rows\":[],\"releases\":[],\"allowanceAccountId\":\"inventory-stockAllowance\",\"recoveryAccountId\":\"inventory-stockRecovery\"},\"recoveries\":[{\"id\":\"b0774bd5-8f30-4687-9880-a7b4117d5fea\",\"number\":\"INT-VI-00000001\",\"date\":\"2026-10-12\",\"review\":\"{\\\"date\\\":\\\"2026-10-12\\\",\\\"reference\\\":\\\"VNR conservado del lote A QA\\\",\\\"reason\\\":\\\"Precio sintético de realización por partida antes de nueva cotización del servicio.\\\",\\\"scope\\\":\\\"Inventario completo\\\",\\\"scopeReason\\\":\\\"Materias primas y producto terminado restantes del corte.\\\",\\\"changesReason\\\":\\\"\\\",\\\"source\\\":{\\\"batchId\\\":\\\"dfbc3cbe-8333-4bec-9461-1852364924ce\\\",\\\"batchNumber\\\":\\\"INT-VC-00000004\\\",\\\"batchReview\\\":\\\"{\\\\\\\"moves\\\\\\\":[],\\\\\\\"rows\\\\\\\":[],\\\\\\\"balances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":7,\\\\\\\"value\\\\\\\":7000},{\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":1,\\\\\\\"value\\\\\\\":3500}],\\\\\\\"journals\\\\\\\":[],\\\\\\\"productionCosts\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"INT-PC-00000001\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-03\\\\\\\",\\\\\\\"wipAccountId\\\\\\\":\\\\\\\"inventory-wip\\\\\\\",\\\\\\\"allocations\\\\\\\":[{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"amount\\\\\\\":4000},{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"amount\\\\\\\":2000}],\\\\\\\"review\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-10-03\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"wipAccountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-wip\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"orders\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-a\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":2,\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\"},{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-b\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":2,\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\"}],\\\\\\\\\\\\\\\"allocations\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"orderId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-a\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"amount\\\\\\\\\\\\\\\":4000},{\\\\\\\\\\\\\\\"orderId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-b\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"amount\\\\\\\\\\\\\\\":2000}]}\\\\\\\"}],\\\\\\\"corrections\\\\\\\":[]}\\\",\\\"entryIds\\\":[\\\"c4b93709-bd34-47f1-8f90-690134dd4f31\\\",\\\"2a2f57c5-9c8c-4e24-ab82-71bac18075d7\\\",\\\"67ba0c88-5456-459f-b75a-fc4e9d09c7fa\\\"],\\\"inflation\\\":[],\\\"recoveries\\\":[]},\\\"beforeBalances\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":7,\\\"gross\\\":7000,\\\"allowance\\\":0},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":1,\\\"gross\\\":3500,\\\"allowance\\\":0}],\\\"rows\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":7,\\\"value\\\":7000,\\\"gross\\\":7000,\\\"allowance\\\":0,\\\"groupId\\\":\\\"vnr-bridge-0\\\",\\\"beforeAllowance\\\":0,\\\"afterAllowance\\\":0,\\\"difference\\\":0,\\\"beforeValue\\\":7000,\\\"afterValue\\\":7000},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"PANT-42-AZ\\\",\\\"name\\\":\\\"Pantalón · 42 · Azul\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":1,\\\"value\\\":3500,\\\"gross\\\":3500,\\\"allowance\\\":0,\\\"groupId\\\":\\\"vnr-bridge-1\\\",\\\"beforeAllowance\\\":0,\\\"afterAllowance\\\":1000,\\\"difference\\\":1000,\\\"beforeValue\\\":3500,\\\"afterValue\\\":2500}],\\\"afterBalances\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":7,\\\"gross\\\":7000,\\\"allowance\\\":0},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":1,\\\"gross\\\":3500,\\\"allowance\\\":1000}],\\\"groups\\\":[{\\\"id\\\":\\\"vnr-bridge-0\\\",\\\"name\\\":\\\"REM-M-NEG\\\",\\\"mode\\\":\\\"Partida individual\\\",\\\"saleValue\\\":7000,\\\"saleCosts\\\":0,\\\"impracticability\\\":\\\"\\\",\\\"geography\\\":\\\"\\\",\\\"gross\\\":7000,\\\"carrying\\\":7000,\\\"recoverable\\\":7000,\\\"completionCosts\\\":0,\\\"afterValue\\\":7000,\\\"loss\\\":0,\\\"recovery\\\":0,\\\"unrecognizedRecovery\\\":0,\\\"reason\\\":\\\"Venta individual del SKU en el mercado de prueba.\\\",\\\"evidence\\\":\\\"Cotización sintética documentada para el ensayo.\\\",\\\"evidenceDate\\\":\\\"2026-10-12\\\"},{\\\"id\\\":\\\"vnr-bridge-1\\\",\\\"name\\\":\\\"PANT-42-AZ\\\",\\\"mode\\\":\\\"Partida individual\\\",\\\"saleValue\\\":2500,\\\"saleCosts\\\":0,\\\"impracticability\\\":\\\"\\\",\\\"geography\\\":\\\"\\\",\\\"gross\\\":3500,\\\"carrying\\\":3500,\\\"recoverable\\\":2500,\\\"completionCosts\\\":0,\\\"afterValue\\\":2500,\\\"loss\\\":1000,\\\"recovery\\\":0,\\\"unrecognizedRecovery\\\":0,\\\"reason\\\":\\\"Venta individual del SKU en el mercado de prueba.\\\",\\\"evidence\\\":\\\"Cotización sintética documentada para el ensayo.\\\",\\\"evidenceDate\\\":\\\"2026-10-12\\\"}],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"lossAccountId\\\":\\\"inventory-stockLoss\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\",\\\"loss\\\":1000,\\\"recovery\\\":0,\\\"net\\\":9500,\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-stockLoss\\\",\\\"debit\\\":1000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"inventory-stockAllowance\\\",\\\"debit\\\":0,\\\"credit\\\":1000}]}],\\\"warnings\\\":[\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\",\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\",\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\",\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\"]}\"}],\"corrections\":[]}"
+              },
+              "preview": {
+                "sourceMoves": [],
+                "rows": [],
+                "balances": [
+                  {
+                    "productId": "d536b352-ad3b-4c12-ab65-dead506f227a",
+                    "depositId": "principal",
+                    "branchId": "central",
+                    "sku": "REM-M-NEG",
+                    "name": "Remera de algodón · M · Negro",
+                    "unit": "Unidad",
+                    "depositName": "Depósito principal",
+                    "quantity": 7,
+                    "value": 7000
+                  },
+                  {
+                    "productId": "c9820e34-b23b-4c92-8bca-af04a5f79c3f",
+                    "depositId": "principal",
+                    "branchId": "central",
+                    "sku": "PANT-42-AZ",
+                    "name": "Pantalón · 42 · Azul",
+                    "unit": "Unidad",
+                    "depositName": "Depósito principal",
+                    "quantity": 1,
+                    "value": 3200
+                  }
+                ],
+                "journals": [
+                  {
+                    "branchId": "central",
+                    "lines": [
+                      {
+                        "accountId": "inventory-inventory",
+                        "debit": 0,
+                        "credit": 300
+                      },
+                      {
+                        "accountId": "inventory-wip",
+                        "debit": 600,
+                        "credit": 0
+                      },
+                      {
+                        "accountId": "inventory-cogs",
+                        "debit": 0,
+                        "credit": 300
+                      }
+                    ]
+                  }
+                ],
+                "corrections": [],
+                "productionBridge": {
+                  "recoveryId": "b0774bd5-8f30-4687-9880-a7b4117d5fea",
+                  "sourceBatchId": "dfbc3cbe-8333-4bec-9461-1852364924ce",
+                  "productionDate": "2026-10-13",
+                  "balances": [
+                    {
+                      "productId": "d536b352-ad3b-4c12-ab65-dead506f227a",
+                      "depositId": "principal",
+                      "branchId": "central",
+                      "before": 7000,
+                      "after": 7000,
+                      "difference": 0
+                    },
+                    {
+                      "productId": "c9820e34-b23b-4c92-8bca-af04a5f79c3f",
+                      "depositId": "principal",
+                      "branchId": "central",
+                      "before": 3500,
+                      "after": 3200,
+                      "difference": -300
+                    }
+                  ],
+                  "journals": [
+                    {
+                      "branchId": "central",
+                      "lines": [
+                        {
+                          "accountId": "inventory-inventory",
+                          "debit": 0,
+                          "credit": 300
+                        },
+                        {
+                          "accountId": "inventory-wip",
+                          "debit": 600,
+                          "credit": 0
+                        },
+                        {
+                          "accountId": "inventory-cogs",
+                          "debit": 0,
+                          "credit": 300
+                        }
+                      ]
+                    }
+                  ],
+                  "returnCosts": []
+                },
+                "reserve": {
+                  "balances": [
+                    {
+                      "productId": "d536b352-ad3b-4c12-ab65-dead506f227a",
+                      "depositId": "principal",
+                      "branchId": "central",
+                      "quantity": 7,
+                      "gross": 7000,
+                      "allowance": 0
+                    },
+                    {
+                      "productId": "c9820e34-b23b-4c92-8bca-af04a5f79c3f",
+                      "depositId": "principal",
+                      "branchId": "central",
+                      "quantity": 1,
+                      "gross": 3200,
+                      "allowance": 1000
+                    }
+                  ],
+                  "rows": [],
+                  "releases": [],
+                  "allowanceAccountId": "inventory-stockAllowance",
+                  "recoveryAccountId": "inventory-stockRecovery"
+                },
+                "recoveries": [
+                  {
+                    "id": "b0774bd5-8f30-4687-9880-a7b4117d5fea",
+                    "number": "INT-VI-00000001",
+                    "date": "2026-10-12",
+                    "review": "{\"date\":\"2026-10-12\",\"reference\":\"VNR conservado del lote A QA\",\"reason\":\"Precio sintético de realización por partida antes de nueva cotización del servicio.\",\"scope\":\"Inventario completo\",\"scopeReason\":\"Materias primas y producto terminado restantes del corte.\",\"changesReason\":\"\",\"source\":{\"batchId\":\"dfbc3cbe-8333-4bec-9461-1852364924ce\",\"batchNumber\":\"INT-VC-00000004\",\"batchReview\":\"{\\\"moves\\\":[],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":7,\\\"value\\\":7000},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":1,\\\"value\\\":3500}],\\\"journals\\\":[],\\\"productionCosts\\\":[{\\\"id\\\":\\\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\\\",\\\"number\\\":\\\"INT-PC-00000001\\\",\\\"date\\\":\\\"2026-10-03\\\",\\\"wipAccountId\\\":\\\"inventory-wip\\\",\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":4000},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":2000}],\\\"review\\\":\\\"{\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-03\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"wipAccountId\\\\\\\":\\\\\\\"inventory-wip\\\\\\\",\\\\\\\"orders\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"quantity\\\\\\\":2,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\"},{\\\\\\\"id\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"quantity\\\\\\\":2,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\"}],\\\\\\\"allocations\\\\\\\":[{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"amount\\\\\\\":4000},{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"amount\\\\\\\":2000}]}\\\"}],\\\"corrections\\\":[]}\",\"entryIds\":[\"c4b93709-bd34-47f1-8f90-690134dd4f31\",\"2a2f57c5-9c8c-4e24-ab82-71bac18075d7\",\"67ba0c88-5456-459f-b75a-fc4e9d09c7fa\"],\"inflation\":[],\"recoveries\":[]},\"beforeBalances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"gross\":7000,\"allowance\":0},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"gross\":3500,\"allowance\":0}],\"rows\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":7,\"value\":7000,\"gross\":7000,\"allowance\":0,\"groupId\":\"vnr-bridge-0\",\"beforeAllowance\":0,\"afterAllowance\":0,\"difference\":0,\"beforeValue\":7000,\"afterValue\":7000},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"PANT-42-AZ\",\"name\":\"Pantalón · 42 · Azul\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":1,\"value\":3500,\"gross\":3500,\"allowance\":0,\"groupId\":\"vnr-bridge-1\",\"beforeAllowance\":0,\"afterAllowance\":1000,\"difference\":1000,\"beforeValue\":3500,\"afterValue\":2500}],\"afterBalances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"gross\":7000,\"allowance\":0},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"gross\":3500,\"allowance\":1000}],\"groups\":[{\"id\":\"vnr-bridge-0\",\"name\":\"REM-M-NEG\",\"mode\":\"Partida individual\",\"saleValue\":7000,\"saleCosts\":0,\"impracticability\":\"\",\"geography\":\"\",\"gross\":7000,\"carrying\":7000,\"recoverable\":7000,\"completionCosts\":0,\"afterValue\":7000,\"loss\":0,\"recovery\":0,\"unrecognizedRecovery\":0,\"reason\":\"Venta individual del SKU en el mercado de prueba.\",\"evidence\":\"Cotización sintética documentada para el ensayo.\",\"evidenceDate\":\"2026-10-12\"},{\"id\":\"vnr-bridge-1\",\"name\":\"PANT-42-AZ\",\"mode\":\"Partida individual\",\"saleValue\":2500,\"saleCosts\":0,\"impracticability\":\"\",\"geography\":\"\",\"gross\":3500,\"carrying\":3500,\"recoverable\":2500,\"completionCosts\":0,\"afterValue\":2500,\"loss\":1000,\"recovery\":0,\"unrecognizedRecovery\":0,\"reason\":\"Venta individual del SKU en el mercado de prueba.\",\"evidence\":\"Cotización sintética documentada para el ensayo.\",\"evidenceDate\":\"2026-10-12\"}],\"allowanceAccountId\":\"inventory-stockAllowance\",\"lossAccountId\":\"inventory-stockLoss\",\"recoveryAccountId\":\"inventory-stockRecovery\",\"loss\":1000,\"recovery\":0,\"net\":9500,\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-stockLoss\",\"debit\":1000,\"credit\":0},{\"accountId\":\"inventory-stockAllowance\",\"debit\":0,\"credit\":1000}]}],\"warnings\":[\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\",\"La reversión no supera el costo que habría quedado sin desvalorización.\",\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\",\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\"]}"
+                  }
+                ],
+                "productionCosts": [
+                  {
+                    "id": "f5d1f59c-b031-4e83-a9ed-5bb75fc6578c",
+                    "number": "INT-PC-00000001",
+                    "date": "2026-10-03",
+                    "wipAccountId": "inventory-wip",
+                    "allocations": [
+                      {
+                        "orderId": "pc-a",
+                        "amount": 3400
+                      },
+                      {
+                        "orderId": "pc-b",
+                        "amount": 1700
+                      }
+                    ],
+                    "review": "{\"date\":\"2026-10-03\",\"branchId\":\"central\",\"wipAccountId\":\"inventory-wip\",\"orders\":[{\"id\":\"pc-a\",\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"quantity\":2,\"branchId\":\"central\"},{\"id\":\"pc-b\",\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"quantity\":2,\"branchId\":\"central\"}],\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}",
+                    "corrections": [
+                      {
+                        "id": "production-correction:INT-RPC-00000001",
+                        "number": "INT-RPC-00000001",
+                        "date": "2026-10-13",
+                        "version": 3,
+                        "allocations": [
+                          {
+                            "orderId": "pc-a",
+                            "amount": 3400
+                          },
+                          {
+                            "orderId": "pc-b",
+                            "amount": 1700
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "inventoryBatchId": "f368558c-6fed-405b-8ce8-99637f2df507"
+        },
+        "original": {
+          "date": "2026-10-03",
+          "from": "2026-01-01",
+          "to": "2026-10-03",
+          "branchId": "central",
+          "wipAccountId": "inventory-wip",
+          "reference": "Conversión completa QA 2026",
+          "reason": "Gastos sintéticos reconocidos; actividad normal de diez horas. Se excluyen administración y ociosidad.",
+          "orders": [
+            "pc-a",
+            "pc-b"
+          ],
+          "zeroReason": "",
+          "completeConfirmed": true,
+          "currencyConfirmed": true,
+          "inefficiencyConfirmed": true,
+          "pools": [
+            {
+              "id": "pool-0",
+              "name": "Directo",
+              "kind": "Directo",
+              "reason": "Clasificación y exclusiones del ensayo.",
+              "normalActivity": 0,
+              "normalReason": "",
+              "sources": [
+                {
+                  "entryId": "3a1b7111-9657-44ab-bfa4-a2e56a51be30",
+                  "lineIndex": 0,
+                  "value": 3000
+                }
+              ],
+              "allocations": [
+                {
+                  "orderId": "pc-a",
+                  "units": 2,
+                  "reason": "Horas reales del lote A."
+                },
+                {
+                  "orderId": "pc-b",
+                  "units": 1,
+                  "reason": "Horas reales del lote B."
+                }
+              ]
+            },
+            {
+              "id": "pool-1",
+              "name": "Fijo",
+              "kind": "Fijo",
+              "reason": "Clasificación y exclusiones del ensayo.",
+              "normalActivity": 10,
+              "normalReason": "Diez horas normales según promedio sintético, inferior a la capacidad total.",
+              "sources": [
+                {
+                  "entryId": "962d5ad9-72ab-4a02-a9f5-f91eaf0f30ac",
+                  "lineIndex": 0,
+                  "value": 6000
+                }
+              ],
+              "allocations": [
+                {
+                  "orderId": "pc-a",
+                  "units": 2,
+                  "reason": "Horas reales del lote A."
+                },
+                {
+                  "orderId": "pc-b",
+                  "units": 1,
+                  "reason": "Horas reales del lote B."
+                }
+              ]
+            },
+            {
+              "id": "pool-2",
+              "name": "Variable",
+              "kind": "Variable",
+              "reason": "Clasificación y exclusiones del ensayo.",
+              "normalActivity": 0,
+              "normalReason": "",
+              "sources": [
+                {
+                  "entryId": "8dfd9905-5395-4e0e-badf-425c0854198f",
+                  "lineIndex": 0,
+                  "value": 1200
+                }
+              ],
+              "allocations": [
+                {
+                  "orderId": "pc-a",
+                  "units": 2,
+                  "reason": "Horas reales del lote A."
+                },
+                {
+                  "orderId": "pc-b",
+                  "units": 1,
+                  "reason": "Horas reales del lote B."
+                }
+              ]
+            },
+            {
+              "id": "pool-3",
+              "name": "Excluido",
+              "kind": "Excluido",
+              "reason": "Clasificación y exclusiones del ensayo.",
+              "normalActivity": 0,
+              "normalReason": "",
+              "sources": [
+                {
+                  "entryId": "5dd22e18-cfc9-4c45-bea3-83a93da52b03",
+                  "lineIndex": 0,
+                  "value": 500
+                }
+              ],
+              "allocations": []
+            }
+          ],
+          "review": "{\"date\":\"2026-10-03\",\"from\":\"2026-01-01\",\"to\":\"2026-10-03\",\"reference\":\"Conversión completa QA 2026\",\"reason\":\"Gastos sintéticos reconocidos; actividad normal de diez horas. Se excluyen administración y ociosidad.\",\"branchId\":\"central\",\"wipAccountId\":\"inventory-wip\",\"orders\":[{\"id\":\"pc-a\",\"name\":\"Lote pc-a\",\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"quantity\":2,\"branchId\":\"central\"},{\"id\":\"pc-b\",\"name\":\"Lote pc-b\",\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"quantity\":2,\"branchId\":\"central\"}],\"batchPrefixIds\":[\"cb5ffc9a-7bd5-4642-b99e-98865e7a93bb\"],\"entryPrefixIds\":[\"c4b93709-bd34-47f1-8f90-690134dd4f31\",\"3a1b7111-9657-44ab-bfa4-a2e56a51be30\",\"8dfd9905-5395-4e0e-badf-425c0854198f\",\"5dd22e18-cfc9-4c45-bea3-83a93da52b03\",\"962d5ad9-72ab-4a02-a9f5-f91eaf0f30ac\"],\"pools\":[{\"id\":\"pool-0\",\"name\":\"Directo\",\"kind\":\"Directo\",\"reason\":\"Clasificación y exclusiones del ensayo.\",\"normalActivity\":0,\"normalReason\":\"\",\"sources\":[{\"entryId\":\"3a1b7111-9657-44ab-bfa4-a2e56a51be30\",\"lineIndex\":0,\"value\":3000}],\"allocations\":[{\"orderId\":\"pc-a\",\"units\":2,\"reason\":\"Horas reales del lote A.\"},{\"orderId\":\"pc-b\",\"units\":1,\"reason\":\"Horas reales del lote B.\"}],\"gross\":3000,\"actualActivity\":3,\"capitalized\":3000,\"unabsorbed\":0,\"sourceLines\":[{\"entryId\":\"3a1b7111-9657-44ab-bfa4-a2e56a51be30\",\"date\":\"2026-10-02\",\"concept\":\"Fuente labor\",\"lineIndex\":0,\"accountId\":\"pc-labor\",\"debit\":3000,\"credit\":0,\"value\":3000,\"capitalized\":3000}],\"shares\":[{\"orderId\":\"pc-a\",\"amount\":2000},{\"orderId\":\"pc-b\",\"amount\":1000}]},{\"id\":\"pool-1\",\"name\":\"Fijo\",\"kind\":\"Fijo\",\"reason\":\"Clasificación y exclusiones del ensayo.\",\"normalActivity\":10,\"normalReason\":\"Diez horas normales según promedio sintético, inferior a la capacidad total.\",\"sources\":[{\"entryId\":\"962d5ad9-72ab-4a02-a9f5-f91eaf0f30ac\",\"lineIndex\":0,\"value\":6000}],\"allocations\":[{\"orderId\":\"pc-a\",\"units\":2,\"reason\":\"Horas reales del lote A.\"},{\"orderId\":\"pc-b\",\"units\":1,\"reason\":\"Horas reales del lote B.\"}],\"gross\":6000,\"actualActivity\":3,\"capitalized\":1800,\"unabsorbed\":4200,\"sourceLines\":[{\"entryId\":\"962d5ad9-72ab-4a02-a9f5-f91eaf0f30ac\",\"date\":\"2026-10-02\",\"concept\":\"INT-DS-00000001\",\"lineIndex\":0,\"accountId\":\"pc-fixed\",\"debit\":6000,\"credit\":0,\"value\":6000,\"capitalized\":1800}],\"shares\":[{\"orderId\":\"pc-a\",\"amount\":1200},{\"orderId\":\"pc-b\",\"amount\":600}]},{\"id\":\"pool-2\",\"name\":\"Variable\",\"kind\":\"Variable\",\"reason\":\"Clasificación y exclusiones del ensayo.\",\"normalActivity\":0,\"normalReason\":\"\",\"sources\":[{\"entryId\":\"8dfd9905-5395-4e0e-badf-425c0854198f\",\"lineIndex\":0,\"value\":1200}],\"allocations\":[{\"orderId\":\"pc-a\",\"units\":2,\"reason\":\"Horas reales del lote A.\"},{\"orderId\":\"pc-b\",\"units\":1,\"reason\":\"Horas reales del lote B.\"}],\"gross\":1200,\"actualActivity\":3,\"capitalized\":1200,\"unabsorbed\":0,\"sourceLines\":[{\"entryId\":\"8dfd9905-5395-4e0e-badf-425c0854198f\",\"date\":\"2026-10-02\",\"concept\":\"Fuente variable\",\"lineIndex\":0,\"accountId\":\"pc-variable\",\"debit\":1200,\"credit\":0,\"value\":1200,\"capitalized\":1200}],\"shares\":[{\"orderId\":\"pc-a\",\"amount\":800},{\"orderId\":\"pc-b\",\"amount\":400}]},{\"id\":\"pool-3\",\"name\":\"Excluido\",\"kind\":\"Excluido\",\"reason\":\"Clasificación y exclusiones del ensayo.\",\"normalActivity\":0,\"normalReason\":\"\",\"sources\":[{\"entryId\":\"5dd22e18-cfc9-4c45-bea3-83a93da52b03\",\"lineIndex\":0,\"value\":500}],\"allocations\":[],\"gross\":500,\"actualActivity\":0,\"capitalized\":0,\"unabsorbed\":500,\"sourceLines\":[{\"entryId\":\"5dd22e18-cfc9-4c45-bea3-83a93da52b03\",\"date\":\"2026-10-02\",\"concept\":\"Fuente administration\",\"lineIndex\":0,\"accountId\":\"pc-administration\",\"debit\":500,\"credit\":0,\"value\":500,\"capitalized\":0}],\"shares\":[]}],\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":4000},{\"orderId\":\"pc-b\",\"amount\":2000}],\"gross\":10700,\"capitalized\":6000,\"unabsorbed\":4700,\"lines\":[{\"accountId\":\"inventory-wip\",\"debit\":6000,\"credit\":0},{\"accountId\":\"pc-fixed\",\"debit\":0,\"credit\":1800},{\"accountId\":\"pc-labor\",\"debit\":0,\"credit\":3000},{\"accountId\":\"pc-variable\",\"debit\":0,\"credit\":1200}]}",
+          "id": "f5d1f59c-b031-4e83-a9ed-5bb75fc6578c",
+          "number": "INT-PC-00000001",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-13T03:51:02.745Z",
+          "entryIds": [
+            "0ba46baa-791d-4e79-83be-edbd8c0763cd"
+          ],
+          "preview": {
+            "date": "2026-10-03",
+            "from": "2026-01-01",
+            "to": "2026-10-03",
+            "reference": "Conversión completa QA 2026",
+            "reason": "Gastos sintéticos reconocidos; actividad normal de diez horas. Se excluyen administración y ociosidad.",
+            "branchId": "central",
+            "wipAccountId": "inventory-wip",
+            "orders": [
+              {
+                "id": "pc-a",
+                "name": "Lote pc-a",
+                "productId": "c9820e34-b23b-4c92-8bca-af04a5f79c3f",
+                "quantity": 2,
+                "branchId": "central"
+              },
+              {
+                "id": "pc-b",
+                "name": "Lote pc-b",
+                "productId": "c9820e34-b23b-4c92-8bca-af04a5f79c3f",
+                "quantity": 2,
+                "branchId": "central"
+              }
+            ],
+            "batchPrefixIds": [
+              "cb5ffc9a-7bd5-4642-b99e-98865e7a93bb"
+            ],
+            "entryPrefixIds": [
+              "c4b93709-bd34-47f1-8f90-690134dd4f31",
+              "3a1b7111-9657-44ab-bfa4-a2e56a51be30",
+              "8dfd9905-5395-4e0e-badf-425c0854198f",
+              "5dd22e18-cfc9-4c45-bea3-83a93da52b03",
+              "962d5ad9-72ab-4a02-a9f5-f91eaf0f30ac"
+            ],
+            "pools": [
+              {
+                "id": "pool-0",
+                "name": "Directo",
+                "kind": "Directo",
+                "reason": "Clasificación y exclusiones del ensayo.",
+                "normalActivity": 0,
+                "normalReason": "",
+                "sources": [
+                  {
+                    "entryId": "3a1b7111-9657-44ab-bfa4-a2e56a51be30",
+                    "lineIndex": 0,
+                    "value": 3000
+                  }
+                ],
+                "allocations": [
+                  {
+                    "orderId": "pc-a",
+                    "units": 2,
+                    "reason": "Horas reales del lote A."
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "units": 1,
+                    "reason": "Horas reales del lote B."
+                  }
+                ],
+                "gross": 3000,
+                "actualActivity": 3,
+                "capitalized": 3000,
+                "unabsorbed": 0,
+                "sourceLines": [
+                  {
+                    "entryId": "3a1b7111-9657-44ab-bfa4-a2e56a51be30",
+                    "date": "2026-10-02",
+                    "concept": "Fuente labor",
+                    "lineIndex": 0,
+                    "accountId": "pc-labor",
+                    "debit": 3000,
+                    "credit": 0,
+                    "value": 3000,
+                    "capitalized": 3000
+                  }
+                ],
+                "shares": [
+                  {
+                    "orderId": "pc-a",
+                    "amount": 2000
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "amount": 1000
+                  }
+                ]
+              },
+              {
+                "id": "pool-1",
+                "name": "Fijo",
+                "kind": "Fijo",
+                "reason": "Clasificación y exclusiones del ensayo.",
+                "normalActivity": 10,
+                "normalReason": "Diez horas normales según promedio sintético, inferior a la capacidad total.",
+                "sources": [
+                  {
+                    "entryId": "962d5ad9-72ab-4a02-a9f5-f91eaf0f30ac",
+                    "lineIndex": 0,
+                    "value": 6000
+                  }
+                ],
+                "allocations": [
+                  {
+                    "orderId": "pc-a",
+                    "units": 2,
+                    "reason": "Horas reales del lote A."
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "units": 1,
+                    "reason": "Horas reales del lote B."
+                  }
+                ],
+                "gross": 6000,
+                "actualActivity": 3,
+                "capitalized": 1800,
+                "unabsorbed": 4200,
+                "sourceLines": [
+                  {
+                    "entryId": "962d5ad9-72ab-4a02-a9f5-f91eaf0f30ac",
+                    "date": "2026-10-02",
+                    "concept": "INT-DS-00000001",
+                    "lineIndex": 0,
+                    "accountId": "pc-fixed",
+                    "debit": 6000,
+                    "credit": 0,
+                    "value": 6000,
+                    "capitalized": 1800
+                  }
+                ],
+                "shares": [
+                  {
+                    "orderId": "pc-a",
+                    "amount": 1200
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "amount": 600
+                  }
+                ]
+              },
+              {
+                "id": "pool-2",
+                "name": "Variable",
+                "kind": "Variable",
+                "reason": "Clasificación y exclusiones del ensayo.",
+                "normalActivity": 0,
+                "normalReason": "",
+                "sources": [
+                  {
+                    "entryId": "8dfd9905-5395-4e0e-badf-425c0854198f",
+                    "lineIndex": 0,
+                    "value": 1200
+                  }
+                ],
+                "allocations": [
+                  {
+                    "orderId": "pc-a",
+                    "units": 2,
+                    "reason": "Horas reales del lote A."
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "units": 1,
+                    "reason": "Horas reales del lote B."
+                  }
+                ],
+                "gross": 1200,
+                "actualActivity": 3,
+                "capitalized": 1200,
+                "unabsorbed": 0,
+                "sourceLines": [
+                  {
+                    "entryId": "8dfd9905-5395-4e0e-badf-425c0854198f",
+                    "date": "2026-10-02",
+                    "concept": "Fuente variable",
+                    "lineIndex": 0,
+                    "accountId": "pc-variable",
+                    "debit": 1200,
+                    "credit": 0,
+                    "value": 1200,
+                    "capitalized": 1200
+                  }
+                ],
+                "shares": [
+                  {
+                    "orderId": "pc-a",
+                    "amount": 800
+                  },
+                  {
+                    "orderId": "pc-b",
+                    "amount": 400
+                  }
+                ]
+              },
+              {
+                "id": "pool-3",
+                "name": "Excluido",
+                "kind": "Excluido",
+                "reason": "Clasificación y exclusiones del ensayo.",
+                "normalActivity": 0,
+                "normalReason": "",
+                "sources": [
+                  {
+                    "entryId": "5dd22e18-cfc9-4c45-bea3-83a93da52b03",
+                    "lineIndex": 0,
+                    "value": 500
+                  }
+                ],
+                "allocations": [],
+                "gross": 500,
+                "actualActivity": 0,
+                "capitalized": 0,
+                "unabsorbed": 500,
+                "sourceLines": [
+                  {
+                    "entryId": "5dd22e18-cfc9-4c45-bea3-83a93da52b03",
+                    "date": "2026-10-02",
+                    "concept": "Fuente administration",
+                    "lineIndex": 0,
+                    "accountId": "pc-administration",
+                    "debit": 500,
+                    "credit": 0,
+                    "value": 500,
+                    "capitalized": 0
+                  }
+                ],
+                "shares": []
+              }
+            ],
+            "allocations": [
+              {
+                "orderId": "pc-a",
+                "amount": 4000
+              },
+              {
+                "orderId": "pc-b",
+                "amount": 2000
+              }
+            ],
+            "gross": 10700,
+            "capitalized": 6000,
+            "unabsorbed": 4700,
+            "lines": [
+              {
+                "accountId": "inventory-wip",
+                "debit": 6000,
+                "credit": 0
+              },
+              {
+                "accountId": "pc-fixed",
+                "debit": 0,
+                "credit": 1800
+              },
+              {
+                "accountId": "pc-labor",
+                "debit": 0,
+                "credit": 3000
+              },
+              {
+                "accountId": "pc-variable",
+                "debit": 0,
+                "credit": 1200
+              }
+            ]
+          }
+        },
+        "recovery": {
+          "date": "2026-10-12",
+          "reference": "VNR conservado del lote A QA",
+          "reason": "Precio sintético de realización por partida antes de nueva cotización del servicio.",
+          "scope": "Inventario completo",
+          "scopeReason": "Materias primas y producto terminado restantes del corte.",
+          "currencyConfirmed": true,
+          "scopeConfirmed": true,
+          "changesReason": "",
+          "allowanceAccountId": "inventory-stockAllowance",
+          "lossAccountId": "inventory-stockLoss",
+          "recoveryAccountId": "inventory-stockRecovery",
+          "groups": [
+            {
+              "id": "vnr-bridge-0",
+              "name": "REM-M-NEG",
+              "mode": "Partida individual",
+              "reason": "Venta individual del SKU en el mercado de prueba.",
+              "impracticability": "",
+              "geography": "",
+              "members": [
+                {
+                  "productId": "d536b352-ad3b-4c12-ab65-dead506f227a",
+                  "depositId": "principal"
+                }
+              ],
+              "saleValue": 7000,
+              "saleCosts": 0,
+              "completionCosts": 0,
+              "evidence": "Cotización sintética documentada para el ensayo.",
+              "evidenceDate": "2026-10-12"
+            },
+            {
+              "id": "vnr-bridge-1",
+              "name": "PANT-42-AZ",
+              "mode": "Partida individual",
+              "reason": "Venta individual del SKU en el mercado de prueba.",
+              "impracticability": "",
+              "geography": "",
+              "members": [
+                {
+                  "productId": "c9820e34-b23b-4c92-8bca-af04a5f79c3f",
+                  "depositId": "principal"
+                }
+              ],
+              "saleValue": 2500,
+              "saleCosts": 0,
+              "completionCosts": 0,
+              "evidence": "Cotización sintética documentada para el ensayo.",
+              "evidenceDate": "2026-10-12"
+            }
+          ],
+          "review": "{\"date\":\"2026-10-12\",\"reference\":\"VNR conservado del lote A QA\",\"reason\":\"Precio sintético de realización por partida antes de nueva cotización del servicio.\",\"scope\":\"Inventario completo\",\"scopeReason\":\"Materias primas y producto terminado restantes del corte.\",\"changesReason\":\"\",\"source\":{\"batchId\":\"dfbc3cbe-8333-4bec-9461-1852364924ce\",\"batchNumber\":\"INT-VC-00000004\",\"batchReview\":\"{\\\"moves\\\":[],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":7,\\\"value\\\":7000},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":1,\\\"value\\\":3500}],\\\"journals\\\":[],\\\"productionCosts\\\":[{\\\"id\\\":\\\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\\\",\\\"number\\\":\\\"INT-PC-00000001\\\",\\\"date\\\":\\\"2026-10-03\\\",\\\"wipAccountId\\\":\\\"inventory-wip\\\",\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":4000},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":2000}],\\\"review\\\":\\\"{\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-03\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"wipAccountId\\\\\\\":\\\\\\\"inventory-wip\\\\\\\",\\\\\\\"orders\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"quantity\\\\\\\":2,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\"},{\\\\\\\"id\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"quantity\\\\\\\":2,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\"}],\\\\\\\"allocations\\\\\\\":[{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"amount\\\\\\\":4000},{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"amount\\\\\\\":2000}]}\\\"}],\\\"corrections\\\":[]}\",\"entryIds\":[\"c4b93709-bd34-47f1-8f90-690134dd4f31\",\"2a2f57c5-9c8c-4e24-ab82-71bac18075d7\",\"67ba0c88-5456-459f-b75a-fc4e9d09c7fa\"],\"inflation\":[],\"recoveries\":[]},\"beforeBalances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"gross\":7000,\"allowance\":0},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"gross\":3500,\"allowance\":0}],\"rows\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":7,\"value\":7000,\"gross\":7000,\"allowance\":0,\"groupId\":\"vnr-bridge-0\",\"beforeAllowance\":0,\"afterAllowance\":0,\"difference\":0,\"beforeValue\":7000,\"afterValue\":7000},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"PANT-42-AZ\",\"name\":\"Pantalón · 42 · Azul\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":1,\"value\":3500,\"gross\":3500,\"allowance\":0,\"groupId\":\"vnr-bridge-1\",\"beforeAllowance\":0,\"afterAllowance\":1000,\"difference\":1000,\"beforeValue\":3500,\"afterValue\":2500}],\"afterBalances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"gross\":7000,\"allowance\":0},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"gross\":3500,\"allowance\":1000}],\"groups\":[{\"id\":\"vnr-bridge-0\",\"name\":\"REM-M-NEG\",\"mode\":\"Partida individual\",\"saleValue\":7000,\"saleCosts\":0,\"impracticability\":\"\",\"geography\":\"\",\"gross\":7000,\"carrying\":7000,\"recoverable\":7000,\"completionCosts\":0,\"afterValue\":7000,\"loss\":0,\"recovery\":0,\"unrecognizedRecovery\":0,\"reason\":\"Venta individual del SKU en el mercado de prueba.\",\"evidence\":\"Cotización sintética documentada para el ensayo.\",\"evidenceDate\":\"2026-10-12\"},{\"id\":\"vnr-bridge-1\",\"name\":\"PANT-42-AZ\",\"mode\":\"Partida individual\",\"saleValue\":2500,\"saleCosts\":0,\"impracticability\":\"\",\"geography\":\"\",\"gross\":3500,\"carrying\":3500,\"recoverable\":2500,\"completionCosts\":0,\"afterValue\":2500,\"loss\":1000,\"recovery\":0,\"unrecognizedRecovery\":0,\"reason\":\"Venta individual del SKU en el mercado de prueba.\",\"evidence\":\"Cotización sintética documentada para el ensayo.\",\"evidenceDate\":\"2026-10-12\"}],\"allowanceAccountId\":\"inventory-stockAllowance\",\"lossAccountId\":\"inventory-stockLoss\",\"recoveryAccountId\":\"inventory-stockRecovery\",\"loss\":1000,\"recovery\":0,\"net\":9500,\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-stockLoss\",\"debit\":1000,\"credit\":0},{\"accountId\":\"inventory-stockAllowance\",\"debit\":0,\"credit\":1000}]}],\"warnings\":[\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\",\"La reversión no supera el costo que habría quedado sin desvalorización.\",\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\",\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\"]}",
+          "proofVersion": 2,
+          "id": "b0774bd5-8f30-4687-9880-a7b4117d5fea",
+          "number": "INT-VI-00000001",
+          "createdAt": "2026-10-13T03:51:02.767Z",
+          "responsible": "Administrador",
+          "entryIds": [
+            "c8857014-957f-49d5-b2c3-11e4102adbe9"
+          ],
+          "preview": {
+            "date": "2026-10-12",
+            "reference": "VNR conservado del lote A QA",
+            "reason": "Precio sintético de realización por partida antes de nueva cotización del servicio.",
+            "scope": "Inventario completo",
+            "scopeReason": "Materias primas y producto terminado restantes del corte.",
+            "changesReason": "",
+            "source": {
+              "batchId": "dfbc3cbe-8333-4bec-9461-1852364924ce",
+              "batchNumber": "INT-VC-00000004",
+              "batchReview": "{\"moves\":[],\"rows\":[],\"balances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"value\":7000},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"value\":3500}],\"journals\":[],\"productionCosts\":[{\"id\":\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\",\"number\":\"INT-PC-00000001\",\"date\":\"2026-10-03\",\"wipAccountId\":\"inventory-wip\",\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":4000},{\"orderId\":\"pc-b\",\"amount\":2000}],\"review\":\"{\\\"date\\\":\\\"2026-10-03\\\",\\\"branchId\\\":\\\"central\\\",\\\"wipAccountId\\\":\\\"inventory-wip\\\",\\\"orders\\\":[{\\\"id\\\":\\\"pc-a\\\",\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"},{\\\"id\\\":\\\"pc-b\\\",\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"}],\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":4000},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":2000}]}\"}],\"corrections\":[]}",
+              "entryIds": [
+                "c4b93709-bd34-47f1-8f90-690134dd4f31",
+                "2a2f57c5-9c8c-4e24-ab82-71bac18075d7",
+                "67ba0c88-5456-459f-b75a-fc4e9d09c7fa"
+              ],
+              "inflation": [],
+              "recoveries": []
+            },
+            "beforeBalances": [
+              {
+                "productId": "d536b352-ad3b-4c12-ab65-dead506f227a",
+                "depositId": "principal",
+                "branchId": "central",
+                "quantity": 7,
+                "gross": 7000,
+                "allowance": 0
+              },
+              {
+                "productId": "c9820e34-b23b-4c92-8bca-af04a5f79c3f",
+                "depositId": "principal",
+                "branchId": "central",
+                "quantity": 1,
+                "gross": 3500,
+                "allowance": 0
+              }
+            ],
+            "rows": [
+              {
+                "productId": "d536b352-ad3b-4c12-ab65-dead506f227a",
+                "depositId": "principal",
+                "branchId": "central",
+                "sku": "REM-M-NEG",
+                "name": "Remera de algodón · M · Negro",
+                "unit": "Unidad",
+                "depositName": "Depósito principal",
+                "quantity": 7,
+                "value": 7000,
+                "gross": 7000,
+                "allowance": 0,
+                "groupId": "vnr-bridge-0",
+                "beforeAllowance": 0,
+                "afterAllowance": 0,
+                "difference": 0,
+                "beforeValue": 7000,
+                "afterValue": 7000
+              },
+              {
+                "productId": "c9820e34-b23b-4c92-8bca-af04a5f79c3f",
+                "depositId": "principal",
+                "branchId": "central",
+                "sku": "PANT-42-AZ",
+                "name": "Pantalón · 42 · Azul",
+                "unit": "Unidad",
+                "depositName": "Depósito principal",
+                "quantity": 1,
+                "value": 3500,
+                "gross": 3500,
+                "allowance": 0,
+                "groupId": "vnr-bridge-1",
+                "beforeAllowance": 0,
+                "afterAllowance": 1000,
+                "difference": 1000,
+                "beforeValue": 3500,
+                "afterValue": 2500
+              }
+            ],
+            "afterBalances": [
+              {
+                "productId": "d536b352-ad3b-4c12-ab65-dead506f227a",
+                "depositId": "principal",
+                "branchId": "central",
+                "quantity": 7,
+                "gross": 7000,
+                "allowance": 0
+              },
+              {
+                "productId": "c9820e34-b23b-4c92-8bca-af04a5f79c3f",
+                "depositId": "principal",
+                "branchId": "central",
+                "quantity": 1,
+                "gross": 3500,
+                "allowance": 1000
+              }
+            ],
+            "groups": [
+              {
+                "id": "vnr-bridge-0",
+                "name": "REM-M-NEG",
+                "mode": "Partida individual",
+                "saleValue": 7000,
+                "saleCosts": 0,
+                "impracticability": "",
+                "geography": "",
+                "gross": 7000,
+                "carrying": 7000,
+                "recoverable": 7000,
+                "completionCosts": 0,
+                "afterValue": 7000,
+                "loss": 0,
+                "recovery": 0,
+                "unrecognizedRecovery": 0,
+                "reason": "Venta individual del SKU en el mercado de prueba.",
+                "evidence": "Cotización sintética documentada para el ensayo.",
+                "evidenceDate": "2026-10-12"
+              },
+              {
+                "id": "vnr-bridge-1",
+                "name": "PANT-42-AZ",
+                "mode": "Partida individual",
+                "saleValue": 2500,
+                "saleCosts": 0,
+                "impracticability": "",
+                "geography": "",
+                "gross": 3500,
+                "carrying": 3500,
+                "recoverable": 2500,
+                "completionCosts": 0,
+                "afterValue": 2500,
+                "loss": 1000,
+                "recovery": 0,
+                "unrecognizedRecovery": 0,
+                "reason": "Venta individual del SKU en el mercado de prueba.",
+                "evidence": "Cotización sintética documentada para el ensayo.",
+                "evidenceDate": "2026-10-12"
+              }
+            ],
+            "allowanceAccountId": "inventory-stockAllowance",
+            "lossAccountId": "inventory-stockLoss",
+            "recoveryAccountId": "inventory-stockRecovery",
+            "loss": 1000,
+            "recovery": 0,
+            "net": 9500,
+            "journals": [
+              {
+                "branchId": "central",
+                "lines": [
+                  {
+                    "accountId": "inventory-stockLoss",
+                    "debit": 1000,
+                    "credit": 0
+                  },
+                  {
+                    "accountId": "inventory-stockAllowance",
+                    "debit": 0,
+                    "credit": 1000
+                  }
+                ]
+              }
+            ],
+            "warnings": [
+              "Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.",
+              "La reversión no supera el costo que habría quedado sin desvalorización.",
+              "Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.",
+              "La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente."
+            ]
+          }
+        },
+        "batch": {
+          "date": "2026-10-13",
+          "reference": "INT-RPC-00000001 · CPP conciliado",
+          "accounts": {
+            "inventory": "inventory-inventory",
+            "opening": "3.1",
+            "cogs": "inventory-cogs",
+            "adjustments": "inventory-adjustments",
+            "transit": "inventory-transit",
+            "wip": "inventory-wip",
+            "unbilled": "inventory-unbilled",
+            "stockAllowance": "inventory-stockAllowance",
+            "stockRecovery": "inventory-stockRecovery"
+          },
+          "costVersion": 10,
+          "review": "{\"moves\":[],\"rows\":[],\"balances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"value\":7000},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"value\":3200}],\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-inventory\",\"debit\":0,\"credit\":300},{\"accountId\":\"inventory-wip\",\"debit\":600,\"credit\":0},{\"accountId\":\"inventory-cogs\",\"debit\":0,\"credit\":300}]}],\"productionCosts\":[{\"id\":\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\",\"number\":\"INT-PC-00000001\",\"date\":\"2026-10-03\",\"wipAccountId\":\"inventory-wip\",\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}],\"review\":\"{\\\"date\\\":\\\"2026-10-03\\\",\\\"branchId\\\":\\\"central\\\",\\\"wipAccountId\\\":\\\"inventory-wip\\\",\\\"orders\\\":[{\\\"id\\\":\\\"pc-a\\\",\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"},{\\\"id\\\":\\\"pc-b\\\",\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"quantity\\\":2,\\\"branchId\\\":\\\"central\\\"}],\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":3400},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":1700}]}\",\"corrections\":[{\"id\":\"production-correction:INT-RPC-00000001\",\"number\":\"INT-RPC-00000001\",\"date\":\"2026-10-13\",\"version\":3,\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}]}],\"productionBridge\":{\"recoveryId\":\"b0774bd5-8f30-4687-9880-a7b4117d5fea\",\"sourceBatchId\":\"dfbc3cbe-8333-4bec-9461-1852364924ce\",\"productionDate\":\"2026-10-13\",\"balances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"before\":7000,\"after\":7000,\"difference\":0},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"before\":3500,\"after\":3200,\"difference\":-300}],\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-inventory\",\"debit\":0,\"credit\":300},{\"accountId\":\"inventory-wip\",\"debit\":600,\"credit\":0},{\"accountId\":\"inventory-cogs\",\"debit\":0,\"credit\":300}]}],\"returnCosts\":[]},\"reserve\":{\"balances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"gross\":7000,\"allowance\":0},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"gross\":3200,\"allowance\":1000}],\"rows\":[],\"releases\":[],\"allowanceAccountId\":\"inventory-stockAllowance\",\"recoveryAccountId\":\"inventory-stockRecovery\"},\"recoveries\":[{\"id\":\"b0774bd5-8f30-4687-9880-a7b4117d5fea\",\"number\":\"INT-VI-00000001\",\"date\":\"2026-10-12\",\"review\":\"{\\\"date\\\":\\\"2026-10-12\\\",\\\"reference\\\":\\\"VNR conservado del lote A QA\\\",\\\"reason\\\":\\\"Precio sintético de realización por partida antes de nueva cotización del servicio.\\\",\\\"scope\\\":\\\"Inventario completo\\\",\\\"scopeReason\\\":\\\"Materias primas y producto terminado restantes del corte.\\\",\\\"changesReason\\\":\\\"\\\",\\\"source\\\":{\\\"batchId\\\":\\\"dfbc3cbe-8333-4bec-9461-1852364924ce\\\",\\\"batchNumber\\\":\\\"INT-VC-00000004\\\",\\\"batchReview\\\":\\\"{\\\\\\\"moves\\\\\\\":[],\\\\\\\"rows\\\\\\\":[],\\\\\\\"balances\\\\\\\":[{\\\\\\\"productId\\\\\\\":\\\\\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":7,\\\\\\\"value\\\\\\\":7000},{\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"depositId\\\\\\\":\\\\\\\"principal\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"quantity\\\\\\\":1,\\\\\\\"value\\\\\\\":3500}],\\\\\\\"journals\\\\\\\":[],\\\\\\\"productionCosts\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"INT-PC-00000001\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-03\\\\\\\",\\\\\\\"wipAccountId\\\\\\\":\\\\\\\"inventory-wip\\\\\\\",\\\\\\\"allocations\\\\\\\":[{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"amount\\\\\\\":4000},{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"amount\\\\\\\":2000}],\\\\\\\"review\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-10-03\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"wipAccountId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"inventory-wip\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"orders\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-a\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":2,\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\"},{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-b\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"productId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"quantity\\\\\\\\\\\\\\\":2,\\\\\\\\\\\\\\\"branchId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"central\\\\\\\\\\\\\\\"}],\\\\\\\\\\\\\\\"allocations\\\\\\\\\\\\\\\":[{\\\\\\\\\\\\\\\"orderId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-a\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"amount\\\\\\\\\\\\\\\":4000},{\\\\\\\\\\\\\\\"orderId\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"pc-b\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"amount\\\\\\\\\\\\\\\":2000}]}\\\\\\\"}],\\\\\\\"corrections\\\\\\\":[]}\\\",\\\"entryIds\\\":[\\\"c4b93709-bd34-47f1-8f90-690134dd4f31\\\",\\\"2a2f57c5-9c8c-4e24-ab82-71bac18075d7\\\",\\\"67ba0c88-5456-459f-b75a-fc4e9d09c7fa\\\"],\\\"inflation\\\":[],\\\"recoveries\\\":[]},\\\"beforeBalances\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":7,\\\"gross\\\":7000,\\\"allowance\\\":0},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":1,\\\"gross\\\":3500,\\\"allowance\\\":0}],\\\"rows\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"REM-M-NEG\\\",\\\"name\\\":\\\"Remera de algodón · M · Negro\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":7,\\\"value\\\":7000,\\\"gross\\\":7000,\\\"allowance\\\":0,\\\"groupId\\\":\\\"vnr-bridge-0\\\",\\\"beforeAllowance\\\":0,\\\"afterAllowance\\\":0,\\\"difference\\\":0,\\\"beforeValue\\\":7000,\\\"afterValue\\\":7000},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"sku\\\":\\\"PANT-42-AZ\\\",\\\"name\\\":\\\"Pantalón · 42 · Azul\\\",\\\"unit\\\":\\\"Unidad\\\",\\\"depositName\\\":\\\"Depósito principal\\\",\\\"quantity\\\":1,\\\"value\\\":3500,\\\"gross\\\":3500,\\\"allowance\\\":0,\\\"groupId\\\":\\\"vnr-bridge-1\\\",\\\"beforeAllowance\\\":0,\\\"afterAllowance\\\":1000,\\\"difference\\\":1000,\\\"beforeValue\\\":3500,\\\"afterValue\\\":2500}],\\\"afterBalances\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":7,\\\"gross\\\":7000,\\\"allowance\\\":0},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":1,\\\"gross\\\":3500,\\\"allowance\\\":1000}],\\\"groups\\\":[{\\\"id\\\":\\\"vnr-bridge-0\\\",\\\"name\\\":\\\"REM-M-NEG\\\",\\\"mode\\\":\\\"Partida individual\\\",\\\"saleValue\\\":7000,\\\"saleCosts\\\":0,\\\"impracticability\\\":\\\"\\\",\\\"geography\\\":\\\"\\\",\\\"gross\\\":7000,\\\"carrying\\\":7000,\\\"recoverable\\\":7000,\\\"completionCosts\\\":0,\\\"afterValue\\\":7000,\\\"loss\\\":0,\\\"recovery\\\":0,\\\"unrecognizedRecovery\\\":0,\\\"reason\\\":\\\"Venta individual del SKU en el mercado de prueba.\\\",\\\"evidence\\\":\\\"Cotización sintética documentada para el ensayo.\\\",\\\"evidenceDate\\\":\\\"2026-10-12\\\"},{\\\"id\\\":\\\"vnr-bridge-1\\\",\\\"name\\\":\\\"PANT-42-AZ\\\",\\\"mode\\\":\\\"Partida individual\\\",\\\"saleValue\\\":2500,\\\"saleCosts\\\":0,\\\"impracticability\\\":\\\"\\\",\\\"geography\\\":\\\"\\\",\\\"gross\\\":3500,\\\"carrying\\\":3500,\\\"recoverable\\\":2500,\\\"completionCosts\\\":0,\\\"afterValue\\\":2500,\\\"loss\\\":1000,\\\"recovery\\\":0,\\\"unrecognizedRecovery\\\":0,\\\"reason\\\":\\\"Venta individual del SKU en el mercado de prueba.\\\",\\\"evidence\\\":\\\"Cotización sintética documentada para el ensayo.\\\",\\\"evidenceDate\\\":\\\"2026-10-12\\\"}],\\\"allowanceAccountId\\\":\\\"inventory-stockAllowance\\\",\\\"lossAccountId\\\":\\\"inventory-stockLoss\\\",\\\"recoveryAccountId\\\":\\\"inventory-stockRecovery\\\",\\\"loss\\\":1000,\\\"recovery\\\":0,\\\"net\\\":9500,\\\"journals\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"inventory-stockLoss\\\",\\\"debit\\\":1000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"inventory-stockAllowance\\\",\\\"debit\\\":0,\\\"credit\\\":1000}]}],\\\"warnings\\\":[\\\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\\\",\\\"La reversión no supera el costo que habría quedado sin desvalorización.\\\",\\\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\\\",\\\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\\\"]}\"}],\"corrections\":[]}",
+          "id": "f368558c-6fed-405b-8ce8-99637f2df507",
+          "number": "INT-VC-00000005",
+          "method": "CPP",
+          "productionCosts": [
+            {
+              "id": "f5d1f59c-b031-4e83-a9ed-5bb75fc6578c",
+              "number": "INT-PC-00000001",
+              "date": "2026-10-03",
+              "wipAccountId": "inventory-wip",
+              "allocations": [
+                {
+                  "orderId": "pc-a",
+                  "amount": 3400
+                },
+                {
+                  "orderId": "pc-b",
+                  "amount": 1700
+                }
+              ],
+              "review": "{\"date\":\"2026-10-03\",\"branchId\":\"central\",\"wipAccountId\":\"inventory-wip\",\"orders\":[{\"id\":\"pc-a\",\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"quantity\":2,\"branchId\":\"central\"},{\"id\":\"pc-b\",\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"quantity\":2,\"branchId\":\"central\"}],\"allocations\":[{\"orderId\":\"pc-a\",\"amount\":3400},{\"orderId\":\"pc-b\",\"amount\":1700}]}",
+              "corrections": [
+                {
+                  "id": "production-correction:INT-RPC-00000001",
+                  "number": "INT-RPC-00000001",
+                  "date": "2026-10-13",
+                  "version": 3,
+                  "allocations": [
+                    {
+                      "orderId": "pc-a",
+                      "amount": 3400
+                    },
+                    {
+                      "orderId": "pc-b",
+                      "amount": 1700
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "productionBridge": {
+            "recoveryId": "b0774bd5-8f30-4687-9880-a7b4117d5fea",
+            "sourceBatchId": "dfbc3cbe-8333-4bec-9461-1852364924ce",
+            "productionDate": "2026-10-13",
+            "balances": [
+              {
+                "productId": "d536b352-ad3b-4c12-ab65-dead506f227a",
+                "depositId": "principal",
+                "branchId": "central",
+                "before": 7000,
+                "after": 7000,
+                "difference": 0
+              },
+              {
+                "productId": "c9820e34-b23b-4c92-8bca-af04a5f79c3f",
+                "depositId": "principal",
+                "branchId": "central",
+                "before": 3500,
+                "after": 3200,
+                "difference": -300
+              }
+            ],
+            "journals": [
+              {
+                "branchId": "central",
+                "lines": [
+                  {
+                    "accountId": "inventory-inventory",
+                    "debit": 0,
+                    "credit": 300
+                  },
+                  {
+                    "accountId": "inventory-wip",
+                    "debit": 600,
+                    "credit": 0
+                  },
+                  {
+                    "accountId": "inventory-cogs",
+                    "debit": 0,
+                    "credit": 300
+                  }
+                ]
+              }
+            ],
+            "returnCosts": []
+          },
+          "reserve": {
+            "balances": [
+              {
+                "productId": "d536b352-ad3b-4c12-ab65-dead506f227a",
+                "depositId": "principal",
+                "branchId": "central",
+                "quantity": 7,
+                "gross": 7000,
+                "allowance": 0
+              },
+              {
+                "productId": "c9820e34-b23b-4c92-8bca-af04a5f79c3f",
+                "depositId": "principal",
+                "branchId": "central",
+                "quantity": 1,
+                "gross": 3200,
+                "allowance": 1000
+              }
+            ],
+            "rows": [],
+            "releases": [],
+            "allowanceAccountId": "inventory-stockAllowance",
+            "recoveryAccountId": "inventory-stockRecovery"
+          },
+          "recoveries": [
+            {
+              "id": "b0774bd5-8f30-4687-9880-a7b4117d5fea",
+              "number": "INT-VI-00000001",
+              "date": "2026-10-12",
+              "review": "{\"date\":\"2026-10-12\",\"reference\":\"VNR conservado del lote A QA\",\"reason\":\"Precio sintético de realización por partida antes de nueva cotización del servicio.\",\"scope\":\"Inventario completo\",\"scopeReason\":\"Materias primas y producto terminado restantes del corte.\",\"changesReason\":\"\",\"source\":{\"batchId\":\"dfbc3cbe-8333-4bec-9461-1852364924ce\",\"batchNumber\":\"INT-VC-00000004\",\"batchReview\":\"{\\\"moves\\\":[],\\\"rows\\\":[],\\\"balances\\\":[{\\\"productId\\\":\\\"d536b352-ad3b-4c12-ab65-dead506f227a\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":7,\\\"value\\\":7000},{\\\"productId\\\":\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\",\\\"depositId\\\":\\\"principal\\\",\\\"branchId\\\":\\\"central\\\",\\\"quantity\\\":1,\\\"value\\\":3500}],\\\"journals\\\":[],\\\"productionCosts\\\":[{\\\"id\\\":\\\"f5d1f59c-b031-4e83-a9ed-5bb75fc6578c\\\",\\\"number\\\":\\\"INT-PC-00000001\\\",\\\"date\\\":\\\"2026-10-03\\\",\\\"wipAccountId\\\":\\\"inventory-wip\\\",\\\"allocations\\\":[{\\\"orderId\\\":\\\"pc-a\\\",\\\"amount\\\":4000},{\\\"orderId\\\":\\\"pc-b\\\",\\\"amount\\\":2000}],\\\"review\\\":\\\"{\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-03\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"wipAccountId\\\\\\\":\\\\\\\"inventory-wip\\\\\\\",\\\\\\\"orders\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"quantity\\\\\\\":2,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\"},{\\\\\\\"id\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\\\\\\\",\\\\\\\"quantity\\\\\\\":2,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\"}],\\\\\\\"allocations\\\\\\\":[{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-a\\\\\\\",\\\\\\\"amount\\\\\\\":4000},{\\\\\\\"orderId\\\\\\\":\\\\\\\"pc-b\\\\\\\",\\\\\\\"amount\\\\\\\":2000}]}\\\"}],\\\"corrections\\\":[]}\",\"entryIds\":[\"c4b93709-bd34-47f1-8f90-690134dd4f31\",\"2a2f57c5-9c8c-4e24-ab82-71bac18075d7\",\"67ba0c88-5456-459f-b75a-fc4e9d09c7fa\"],\"inflation\":[],\"recoveries\":[]},\"beforeBalances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"gross\":7000,\"allowance\":0},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"gross\":3500,\"allowance\":0}],\"rows\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"REM-M-NEG\",\"name\":\"Remera de algodón · M · Negro\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":7,\"value\":7000,\"gross\":7000,\"allowance\":0,\"groupId\":\"vnr-bridge-0\",\"beforeAllowance\":0,\"afterAllowance\":0,\"difference\":0,\"beforeValue\":7000,\"afterValue\":7000},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"sku\":\"PANT-42-AZ\",\"name\":\"Pantalón · 42 · Azul\",\"unit\":\"Unidad\",\"depositName\":\"Depósito principal\",\"quantity\":1,\"value\":3500,\"gross\":3500,\"allowance\":0,\"groupId\":\"vnr-bridge-1\",\"beforeAllowance\":0,\"afterAllowance\":1000,\"difference\":1000,\"beforeValue\":3500,\"afterValue\":2500}],\"afterBalances\":[{\"productId\":\"d536b352-ad3b-4c12-ab65-dead506f227a\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":7,\"gross\":7000,\"allowance\":0},{\"productId\":\"c9820e34-b23b-4c92-8bca-af04a5f79c3f\",\"depositId\":\"principal\",\"branchId\":\"central\",\"quantity\":1,\"gross\":3500,\"allowance\":1000}],\"groups\":[{\"id\":\"vnr-bridge-0\",\"name\":\"REM-M-NEG\",\"mode\":\"Partida individual\",\"saleValue\":7000,\"saleCosts\":0,\"impracticability\":\"\",\"geography\":\"\",\"gross\":7000,\"carrying\":7000,\"recoverable\":7000,\"completionCosts\":0,\"afterValue\":7000,\"loss\":0,\"recovery\":0,\"unrecognizedRecovery\":0,\"reason\":\"Venta individual del SKU en el mercado de prueba.\",\"evidence\":\"Cotización sintética documentada para el ensayo.\",\"evidenceDate\":\"2026-10-12\"},{\"id\":\"vnr-bridge-1\",\"name\":\"PANT-42-AZ\",\"mode\":\"Partida individual\",\"saleValue\":2500,\"saleCosts\":0,\"impracticability\":\"\",\"geography\":\"\",\"gross\":3500,\"carrying\":3500,\"recoverable\":2500,\"completionCosts\":0,\"afterValue\":2500,\"loss\":1000,\"recovery\":0,\"unrecognizedRecovery\":0,\"reason\":\"Venta individual del SKU en el mercado de prueba.\",\"evidence\":\"Cotización sintética documentada para el ensayo.\",\"evidenceDate\":\"2026-10-12\"}],\"allowanceAccountId\":\"inventory-stockAllowance\",\"lossAccountId\":\"inventory-stockLoss\",\"recoveryAccountId\":\"inventory-stockRecovery\",\"loss\":1000,\"recovery\":0,\"net\":9500,\"journals\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"inventory-stockLoss\",\"debit\":1000,\"credit\":0},{\"accountId\":\"inventory-stockAllowance\",\"debit\":0,\"credit\":1000}]}],\"warnings\":[\"Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.\",\"La reversión no supera el costo que habría quedado sin desvalorización.\",\"Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.\",\"La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.\"]}"
+            }
+          ],
+          "responsible": "Administrador",
+          "createdAt": "2026-10-13T03:59:01.176Z",
+          "sourceMoves": [],
+          "rows": [],
+          "corrections": [],
+          "balances": [
+            {
+              "productId": "d536b352-ad3b-4c12-ab65-dead506f227a",
+              "depositId": "principal",
+              "branchId": "central",
+              "sku": "REM-M-NEG",
+              "name": "Remera de algodón · M · Negro",
+              "unit": "Unidad",
+              "depositName": "Depósito principal",
+              "quantity": 7,
+              "value": 7000
+            },
+            {
+              "productId": "c9820e34-b23b-4c92-8bca-af04a5f79c3f",
+              "depositId": "principal",
+              "branchId": "central",
+              "sku": "PANT-42-AZ",
+              "name": "Pantalón · 42 · Azul",
+              "unit": "Unidad",
+              "depositName": "Depósito principal",
+              "quantity": 1,
+              "value": 3200
+            }
+          ],
+          "entryIds": [
+            "7b01fa09-3bc2-4187-92bb-5fc4676732cd"
+          ],
+          "productionCorrectionId": "production-correction:INT-RPC-00000001"
+        },
+        "ledger": {
+          "from": "2026-01-01",
+          "to": "2026-12-31",
+          "branchId": "all",
+          "rows": [
+            {
+              "accountId": "1.1.1",
+              "code": "1.1.1",
+              "name": "Caja",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.2",
+              "code": "1.1.2",
+              "name": "Bancos",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.3",
+              "code": "1.1.3",
+              "name": "Deudores por ventas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.4",
+              "code": "1.1.4",
+              "name": "IVA crédito fiscal",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.5",
+              "code": "1.1.5",
+              "name": "Valores a depositar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.6",
+              "code": "1.1.6",
+              "name": "Retenciones sufridas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.7",
+              "code": "1.1.7",
+              "name": "Percepciones sufridas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.8",
+              "code": "1.1.8",
+              "name": "Cupones de tarjetas a cobrar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.1",
+              "code": "2.1.1",
+              "name": "Proveedores",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 4700,
+              "closing": -4700
+            },
+            {
+              "accountId": "2.1.2",
+              "code": "2.1.2",
+              "name": "IVA débito fiscal",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.3",
+              "code": "2.1.3",
+              "name": "Retenciones a depositar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.4",
+              "code": "2.1.4",
+              "name": "Percepciones a depositar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.5",
+              "code": "2.1.5",
+              "name": "Cheques propios emitidos",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.1",
+              "code": "3.1",
+              "name": "Capital y saldos iniciales",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 10000,
+              "closing": -10000
+            },
+            {
+              "accountId": "4.1",
+              "code": "4.1",
+              "name": "Ventas",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.1",
+              "code": "5.1",
+              "name": "Compras y gastos",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.2",
+              "code": "5.2",
+              "name": "Comisiones de vendedores",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.3",
+              "code": "5.3",
+              "name": "Cargos de tarjetas",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-inventory",
+              "code": "1.1.9",
+              "name": "Existencias de mercadería",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 14000,
+              "credit": 3800,
+              "closing": 10200
+            },
+            {
+              "accountId": "inventory-cogs",
+              "code": "5.4",
+              "name": "Costo de mercadería vendida",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 3500,
+              "credit": 300,
+              "closing": 3200
+            },
+            {
+              "accountId": "inventory-adjustments",
+              "code": "5.5",
+              "name": "Diferencias de inventario",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-transit",
+              "code": "1.1.10",
+              "name": "Traslados de mercadería a conciliar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "inventory-wip",
+              "code": "1.1.11",
+              "name": "Producción en proceso",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 6600,
+              "credit": 4900,
+              "closing": 1700
+            },
+            {
+              "accountId": "inventory-unbilled",
+              "code": "2.1.6",
+              "name": "Mercadería recibida sin facturar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "pc-labor",
+              "code": "5.pc.labor",
+              "name": "Costo labor",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 3000,
+              "credit": 3000,
+              "closing": 0
+            },
+            {
+              "accountId": "pc-fixed",
+              "code": "5.pc.fixed",
+              "name": "Costo fixed",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 6900,
+              "credit": 4800,
+              "closing": 2100
+            },
+            {
+              "accountId": "pc-variable",
+              "code": "5.pc.variable",
+              "name": "Costo variable",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 1200,
+              "credit": 1200,
+              "closing": 0
+            },
+            {
+              "accountId": "pc-administration",
+              "code": "5.pc.administration",
+              "name": "Costo administration",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 500,
+              "credit": 0,
+              "closing": 500
+            },
+            {
+              "accountId": "2.1.7",
+              "code": "2.1.7",
+              "name": "Servicios recibidos sin facturar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 3000,
+              "credit": 6000,
+              "closing": -3000
+            },
+            {
+              "accountId": "inventory-stockAllowance",
+              "code": "1.1.12",
+              "name": "Desvalorización acumulada de inventario",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 1000,
+              "closing": -1000
+            },
+            {
+              "accountId": "inventory-stockLoss",
+              "code": "5.12",
+              "name": "Pérdidas por desvalorización de inventario",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 1000,
+              "credit": 0,
+              "closing": 1000
+            },
+            {
+              "accountId": "inventory-stockRecovery",
+              "code": "4.12",
+              "name": "Reversiones de desvalorización de inventario",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            }
+          ],
+          "totals": {
+            "openingDebit": 0,
+            "openingCredit": 0,
+            "debit": 39700,
+            "credit": 39700,
+            "closingDebit": 18700,
+            "closingCredit": 18700
+          },
+          "entryIds": [
+            "c4b93709-bd34-47f1-8f90-690134dd4f31",
+            "3a1b7111-9657-44ab-bfa4-a2e56a51be30",
+            "8dfd9905-5395-4e0e-badf-425c0854198f",
+            "5dd22e18-cfc9-4c45-bea3-83a93da52b03",
+            "962d5ad9-72ab-4a02-a9f5-f91eaf0f30ac",
+            "0ba46baa-791d-4e79-83be-edbd8c0763cd",
+            "2a2f57c5-9c8c-4e24-ab82-71bac18075d7",
+            "67ba0c88-5456-459f-b75a-fc4e9d09c7fa",
+            "c8857014-957f-49d5-b2c3-11e4102adbe9",
+            "e9334d42-9b7b-484f-85d9-5bee48cb9fa6",
+            "7e874feb-ff96-4aa0-b138-d8dcd9f1cffb",
+            "7b01fa09-3bc2-4187-92bb-5fc4676732cd"
+          ]
+        },
+        "preservation": "INT-PC, INT-VI y cuatro cortes originales permanecen conservados. RPC vincula reestimación y CPP10; bruto $102, pérdida $10 y neto $92."
+      }
+    },
+    {
+      "database": "var/qa-production-finished-correction.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-correction.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-conversion.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-current-vnr.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-reserve-currency.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-recoverability.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-inflation.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-inflation.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inflation-posting.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-reexpression.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-statements.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-impairment.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-disposal.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-asset-reestimate.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-fixed-assets.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-service-cancellation.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-journal-reversal.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-revenue-accrual.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-exercise-opening.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-year-end.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-service-reestimates.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-service-accruals.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON"
+    }
+  ]
+}

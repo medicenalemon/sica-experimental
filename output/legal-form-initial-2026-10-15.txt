@@ -1,0 +1,171 @@
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración" [active]:
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+- main:
+  - strong: SICA Textil · Forma jurídica
+  - generic: Responsable Inscripto · Tucumán
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 1 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Parámetros del sistema" [level=1]
+  - paragraph: "Ejemplo inicial: comercio textil, responsable inscripto, Tucumán. Podés adaptar cada parámetro a la empresa real."
+  - heading "Empresa y actividad" [level=2]
+  - generic: Razón social *
+  - textbox "Razón social *": SICA Textil · Forma jurídica
+  - generic: Forma jurídica
+  - combobox "Forma jurídica":
+    - option "Sin especificar"
+    - option "Sociedad comercial · forma por definir" [selected]
+    - option "SRL"
+    - option "SAS"
+    - option "SA"
+    - option "Persona humana"
+    - option "Otra forma jurídica"
+  - generic: Elegí la forma de la empresa. Es un dato declarado; no verifica inscripción registral ni modifica impuestos automáticamente.
+  - generic: CUIT
+  - textbox "CUIT"
+  - generic: Opcional en la empresa de prueba. Obligatorio para la integración fiscal real.
+  - generic: Actividad / industria
+  - textbox "Actividad / industria": Comercio textil
+  - generic: Provincia
+  - combobox "Provincia":
+    - option "Buenos Aires"
+    - option "CABA"
+    - option "Catamarca"
+    - option "Chaco"
+    - option "Chubut"
+    - option "Córdoba"
+    - option "Corrientes"
+    - option "Entre Ríos"
+    - option "Formosa"
+    - option "Jujuy"
+    - option "La Pampa"
+    - option "La Rioja"
+    - option "Mendoza"
+    - option "Misiones"
+    - option "Neuquén"
+    - option "Río Negro"
+    - option "Salta"
+    - option "San Juan"
+    - option "San Luis"
+    - option "Santa Cruz"
+    - option "Santa Fe"
+    - option "Santiago del Estero"
+    - option "Tierra del Fuego"
+    - option "Tucumán" [selected]
+  - generic: Domicilio
+  - textbox "Domicilio"
+  - heading "Condición fiscal y contable" [level=2]
+  - generic: Condición de la empresa
+  - combobox "Condición de la empresa":
+    - option "Responsable Inscripto" [selected]
+    - option "Responsable Monotributo"
+    - option "Exento"
+  - generic: IVA por defecto
+  - combobox "IVA por defecto":
+    - option "21" [selected]
+    - option "10.5"
+    - option "27"
+    - option "5"
+    - option "2.5"
+    - option "0"
+    - option "Exento"
+    - option "No gravado"
+  - generic: "Ingresos Brutos: inscripción o condición"
+  - 'textbox "Ingresos Brutos: inscripción o condición"'
+  - generic: "Según constancia: número de inscripción, Convenio Multilateral o condición correspondiente. No se presume por provincia."
+  - generic: Inicio de actividades
+  - textbox "Inicio de actividades"
+  - generic: Fecha de la empresa; puede especificarse otra por establecimiento en Sucursales.
+  - generic: Marco contable
+  - textbox "Marco contable": RT 54 / NUA · revisar adopción jurisdiccional
+  - text: Las retenciones y percepciones de Ingresos Brutos se parametrizan por jurisdicción y vigencia.
+  - link "Configurar regímenes":
+    - /url: /finanzas/retenciones
+  - text: . El marco contable y su adopción provincial requieren revisión del profesional responsable.
+  - heading "Operación y ejercicio" [level=2]
+  - generic: Formato de SKU
+  - combobox "Formato de SKU":
+    - option "Numérico"
+    - option "Alfabético"
+    - option "Alfanumérico"
+    - option "Madre-Hijo-Nieto" [selected]
+  - generic: Inicio del ejercicio
+  - textbox "Inicio del ejercicio": 2026-01-01
+  - generic: Fin del ejercicio
+  - textbox "Fin del ejercicio": 2026-12-31
+  - generic: Período cerrado hasta
+  - textbox "Período cerrado hasta"
+  - generic: Consultá y registrá el bloqueo revisado desde Contabilidad → Cierres de períodos.
+  - link "Cierres de períodos":
+    - /url: /contabilidad/cierres
+  - link "Apertura del siguiente ejercicio":
+    - /url: /contabilidad/apertura-ejercicio
+  - link "Sucursales":
+    - /url: /administracion/sucursales
+  - link "Usuarios y perfiles":
+    - /url: /administracion/usuarios
+  - link "Listas de precios":
+    - /url: /administracion/listas-precios
+  - button "Guardar y comenzar":
+    - text: Guardar y comenzar
+  - heading "Datos de prueba y copia de seguridad" [level=2]
+  - button "Descargar copia operativa JSON":
+    - text: Descargar copia operativa JSON
+  - button "Cargar ejemplo textil" [disabled]:
+    - text: Cargar ejemplo textil
+  - button "Revisar migración de la base local"
+  - button "Copias anteriores a restauraciones"
+  - generic: Restaurar copia JSON
+  - button "Restaurar copia JSON"
+  - generic: Los datos compartidos se guardan en el servidor. La restauración conserva los usuarios actuales y una copia de recuperación. El JSON conserva las operaciones; la recuperación de solicitudes ARCA requiere el respaldo SQLite del servidor. Las copias contienen información de la empresa y deben conservarse en un lugar privado.
+  - heading "Integraciones y normativa" [level=2]
+  - strong: ARCA · Facturación electrónica
+  - paragraph: WSAA y WSFEv1 disponibles para homologación. Configurá certificado, clave privada y CUIT en el servidor; revisá cada solicitud desde las facturas o notas de venta. Producción sigue deshabilitada.
+  - generic: Homologación · requiere credenciales
+  - strong: Mercado Libre / Tienda Nube
+  - paragraph: Los vínculos de SKU se pueden registrar. La sincronización necesita autorización de las cuentas.
+  - generic: Sin conexión
+  - strong: Normativa argentina
+  - paragraph: Fuentes oficiales y decisiones de implementación.
+  - link "Consultar fuentes":
+    - /url: /acerca-de

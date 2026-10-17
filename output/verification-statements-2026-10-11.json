@@ -1,0 +1,1546 @@
+{
+  "date": "2026-10-11",
+  "synthetic": true,
+  "tests": {
+    "domain": 289,
+    "files": 16,
+    "http": 45,
+    "fiscal": 22,
+    "total": 372
+  },
+  "browser": {
+    "result": "Expediente INT-EC-00000001 conservado y recuperado después de recargar la interfaz, con los cuatro estados conciliados y cinco notas. Activo 4286 ARS, pasivo 536, patrimonio 3750, resultado 650 y variación de efectivo 700. Sin modificar asientos, documentos, stock ni tesorería.",
+    "screenshots": [
+      "output/statements-2026-10-11.png"
+    ],
+    "transcript": "output/statements-browser-2026-10-11.txt"
+  },
+  "files": {
+    "pdf": "output/pdf/estados-preparacion-2026-10-11.pdf",
+    "xlsx": "output/estados-preparacion-2026-10-11.xlsx",
+    "browserDownload": "El evento de descarga no se toma como prueba de bytes; se verifican XLSX y PDF generados por las mismas funciones del producto.",
+    "visualReview": {
+      "pages": 11,
+      "renderer": "Poppler del sistema",
+      "result": "Once páginas inspeccionadas: márgenes, encabezados, notas, tablas, continuación y numeración correctos; separadores fuera del texto."
+    }
+  },
+  "checks": [
+    {
+      "database": "var/qa-statements.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON",
+      "statements": {
+        "record": {
+          "from": "2026-01-01",
+          "to": "2026-10-11",
+          "reference": "Estados de preparación QA 2026",
+          "reason": "Caso sintético: preparación de los cuatro estados con conciliación de rubros, patrimonio, efectivo y notas, a partir del diario conservado.",
+          "classificationConfirmed": true,
+          "cashConfirmed": true,
+          "nominalConfirmed": true,
+          "allocations": [
+            {
+              "accountId": "1.1.1",
+              "items": [
+                {
+                  "rubricId": "ac-cash",
+                  "amount": 10000,
+                  "noteId": "criteria"
+                }
+              ]
+            },
+            {
+              "accountId": "1.1.2",
+              "items": [
+                {
+                  "rubricId": "ac-cash",
+                  "amount": 160000,
+                  "noteId": "criteria"
+                }
+              ]
+            },
+            {
+              "accountId": "1.1.3",
+              "items": [
+                {
+                  "rubricId": "ac-customers",
+                  "amount": 21000,
+                  "noteId": "criteria"
+                }
+              ]
+            },
+            {
+              "accountId": "1.1.4",
+              "items": [
+                {
+                  "rubricId": "ac-other-credits",
+                  "amount": 12600,
+                  "noteId": "criteria"
+                }
+              ]
+            },
+            {
+              "accountId": "1.1.9",
+              "items": [
+                {
+                  "rubricId": "ac-inventory",
+                  "amount": 30000,
+                  "noteId": "criteria"
+                }
+              ]
+            },
+            {
+              "accountId": "1.2.1",
+              "items": [
+                {
+                  "rubricId": "an-fixed",
+                  "amount": 200000,
+                  "noteId": "criteria"
+                }
+              ]
+            },
+            {
+              "accountId": "1.2.2",
+              "items": [
+                {
+                  "rubricId": "an-fixed",
+                  "amount": -5000,
+                  "noteId": "criteria"
+                }
+              ]
+            },
+            {
+              "accountId": "2.1.1",
+              "items": [
+                {
+                  "rubricId": "pc-suppliers",
+                  "amount": -32600,
+                  "noteId": "criteria"
+                }
+              ]
+            },
+            {
+              "accountId": "2.1.2",
+              "items": [
+                {
+                  "rubricId": "pc-tax",
+                  "amount": -21000,
+                  "noteId": "criteria"
+                }
+              ]
+            },
+            {
+              "accountId": "3.1",
+              "items": [
+                {
+                  "rubricId": "eq-capital",
+                  "amount": -320000,
+                  "noteId": "equity"
+                }
+              ]
+            },
+            {
+              "accountId": "3.2",
+              "items": [
+                {
+                  "rubricId": "eq-unassigned",
+                  "amount": 18000,
+                  "noteId": "equity"
+                }
+              ]
+            },
+            {
+              "accountId": "3.3",
+              "items": [
+                {
+                  "rubricId": "eq-reserves",
+                  "amount": -8000,
+                  "noteId": "equity"
+                }
+              ]
+            },
+            {
+              "accountId": "4.1",
+              "items": [
+                {
+                  "rubricId": "in-sales",
+                  "amount": -100000,
+                  "noteId": "criteria"
+                }
+              ]
+            },
+            {
+              "accountId": "5.4",
+              "items": [
+                {
+                  "rubricId": "ex-cogs",
+                  "amount": 30000,
+                  "noteId": "criteria"
+                }
+              ]
+            },
+            {
+              "accountId": "5.9",
+              "items": [
+                {
+                  "rubricId": "ex-other-expenses",
+                  "amount": 5000,
+                  "noteId": "criteria"
+                }
+              ]
+            }
+          ],
+          "cashAccounts": [
+            "1.1.1",
+            "1.1.2"
+          ],
+          "cashBasis": "Caja y depósitos bancarios a la vista de libre disponibilidad, sin efectivo restringido ni inversiones equivalentes en este caso sintético.",
+          "cashLines": [
+            {
+              "entryId": "collection",
+              "lineIndex": 0,
+              "parts": [
+                {
+                  "category": "op-customers",
+                  "amount": 100000,
+                  "noteId": "cash",
+                  "reason": "Cobro sintético de venta a clientes según el diario."
+                }
+              ]
+            },
+            {
+              "entryId": "payment",
+              "lineIndex": 1,
+              "parts": [
+                {
+                  "category": "op-suppliers",
+                  "amount": -40000,
+                  "noteId": "cash",
+                  "reason": "Pago sintético a proveedor de mercadería según el diario."
+                }
+              ]
+            },
+            {
+              "entryId": "contribution",
+              "lineIndex": 0,
+              "parts": [
+                {
+                  "category": "fin-receipts",
+                  "amount": 20000,
+                  "noteId": "cash",
+                  "reason": "Aporte sintético de propietarios depositado en banco."
+                }
+              ]
+            },
+            {
+              "entryId": "distribution",
+              "lineIndex": 1,
+              "parts": [
+                {
+                  "category": "fin-payments",
+                  "amount": -10000,
+                  "noteId": "cash",
+                  "reason": "Distribución sintética a propietarios desde banco."
+                }
+              ]
+            },
+            {
+              "entryId": "transfer",
+              "lineIndex": 0,
+              "parts": [
+                {
+                  "category": "transfer",
+                  "amount": 10000,
+                  "noteId": "cash",
+                  "reason": "Ingreso interno a caja, sin flujo externo."
+                }
+              ]
+            },
+            {
+              "entryId": "transfer",
+              "lineIndex": 1,
+              "parts": [
+                {
+                  "category": "transfer",
+                  "amount": -10000,
+                  "noteId": "cash",
+                  "reason": "Salida interna de banco, contrapartida del ingreso a caja."
+                }
+              ]
+            }
+          ],
+          "equityEntries": [
+            {
+              "entryId": "contribution",
+              "category": "Aportes",
+              "noteId": "equity",
+              "reason": "Aporte de capital sintético, documentado para el ensayo."
+            },
+            {
+              "entryId": "distribution",
+              "category": "Retiros y distribuciones",
+              "noteId": "equity",
+              "reason": "Distribución sintética de resultados a propietarios."
+            },
+            {
+              "entryId": "reserve",
+              "category": "Asignaciones y transferencias",
+              "noteId": "equity",
+              "reason": "Asignación interna sintética de resultados a reserva, sin cambiar el patrimonio total."
+            }
+          ],
+          "notes": [
+            {
+              "id": "cash",
+              "title": "Efectivo, equivalentes y operaciones sin efectivo",
+              "body": "Caja y banco de libre disponibilidad en la prueba. Cobros operativos 1000 ARS, pagos operativos 400, aporte 200 y distribución 100; transferencia interna de 100 entre banco y caja. Depreciación y asignación a reserva sin flujo de efectivo."
+            },
+            {
+              "id": "criteria",
+              "title": "Bases de medición, rubros y políticas contables",
+              "body": "Importes nominales en ARS. Rubros revisados: mercadería al costo conservado, costo de ventas, bienes de uso menos depreciación, deudas y créditos sin compensación. Queda pendiente la reexpresión en moneda de cierre y las restantes mediciones normativas."
+            },
+            {
+              "id": "entity",
+              "title": "Entidad, actividad y marco de preparación",
+              "body": "Empresa sintética de ensayo: comercio textil, Responsable Inscripto en Tucumán. Diario de prueba para verificar la preparación individual de estados; no representa una entidad ni actividad real."
+            },
+            {
+              "id": "equity",
+              "title": "Patrimonio y decisiones de propietarios",
+              "body": "Saldo anterior sintético de capital 3000 ARS; aporte de 200, distribución de 100 y asignación de 80 a reserva. Resultado del período 650 ARS. Las decisiones y sus asientos son exclusivamente de ensayo."
+            },
+            {
+              "id": "events",
+              "title": "Contingencias y hechos posteriores",
+              "body": "En este caso sintético no se informan contingencias ni hechos posteriores. Para una entidad real requieren revisión documentada hasta la fecha de preparación profesional."
+            }
+          ],
+          "priorPositionId": "",
+          "priorPeriodId": "",
+          "comparativeReason": "Primera preparación sintética de ensayo; no se ha incorporado información del ejercicio anterior. No se afirma una dispensa normativa.",
+          "review": "{\"from\":\"2026-01-01\",\"to\":\"2026-10-11\",\"reference\":\"Estados de preparación QA 2026\",\"reason\":\"Caso sintético: preparación de los cuatro estados con conciliación de rubros, patrimonio, efectivo y notas, a partir del diario conservado.\",\"basis\":\"Papel de trabajo nominal\",\"source\":{\"identity\":{\"name\":\"SICA QA - ESTADOS CONTABLES\",\"cuit\":\"\",\"address\":\"\",\"province\":\"Tucumán\",\"industry\":\"Comercio textil\",\"accountingStandard\":\"RT 54 / NUA · revisar adopción jurisdiccional\"},\"accounts\":[{\"id\":\"1.1.1\",\"code\":\"1.1.1\",\"name\":\"Caja\",\"group\":\"Activo\"},{\"id\":\"1.1.2\",\"code\":\"1.1.2\",\"name\":\"Bancos\",\"group\":\"Activo\"},{\"id\":\"1.1.3\",\"code\":\"1.1.3\",\"name\":\"Deudores por ventas\",\"group\":\"Activo\"},{\"id\":\"1.1.4\",\"code\":\"1.1.4\",\"name\":\"IVA crédito fiscal\",\"group\":\"Activo\"},{\"id\":\"1.1.9\",\"code\":\"1.1.9\",\"name\":\"Mercadería\",\"group\":\"Activo\"},{\"id\":\"1.2.1\",\"code\":\"1.2.1\",\"name\":\"Bienes de uso al costo\",\"group\":\"Activo\"},{\"id\":\"1.2.2\",\"code\":\"1.2.2\",\"name\":\"Depreciación acumulada\",\"group\":\"Activo\"},{\"id\":\"2.1.1\",\"code\":\"2.1.1\",\"name\":\"Proveedores\",\"group\":\"Pasivo\"},{\"id\":\"2.1.2\",\"code\":\"2.1.2\",\"name\":\"IVA débito fiscal\",\"group\":\"Pasivo\"},{\"id\":\"3.1\",\"code\":\"3.1\",\"name\":\"Capital y saldos iniciales\",\"group\":\"Patrimonio neto\"},{\"id\":\"3.2\",\"code\":\"3.2\",\"name\":\"Resultados no asignados\",\"group\":\"Patrimonio neto\"},{\"id\":\"3.3\",\"code\":\"3.3\",\"name\":\"Reserva legal\",\"group\":\"Patrimonio neto\"},{\"id\":\"4.1\",\"code\":\"4.1\",\"name\":\"Ventas\",\"group\":\"Ingresos\"},{\"id\":\"5.4\",\"code\":\"5.4\",\"name\":\"Costo de ventas\",\"group\":\"Gastos\"},{\"id\":\"5.9\",\"code\":\"5.9\",\"name\":\"Depreciación de bienes de uso\",\"group\":\"Gastos\"}],\"entries\":[{\"id\":\"opening\",\"date\":\"2025-12-31\",\"concept\":\"Saldo anterior sintético\",\"branchId\":\"central\",\"documentId\":\"\",\"manual\":true,\"lines\":[{\"accountId\":\"1.1.2\",\"debit\":100000,\"credit\":0},{\"accountId\":\"1.2.1\",\"debit\":200000,\"credit\":0},{\"accountId\":\"3.1\",\"debit\":0,\"credit\":300000}]},{\"id\":\"sale\",\"date\":\"2026-01-05\",\"concept\":\"Venta sintética con IVA\",\"branchId\":\"central\",\"documentId\":\"\",\"manual\":true,\"lines\":[{\"accountId\":\"1.1.3\",\"debit\":121000,\"credit\":0},{\"accountId\":\"4.1\",\"debit\":0,\"credit\":100000},{\"accountId\":\"2.1.2\",\"debit\":0,\"credit\":21000}]},{\"id\":\"collection\",\"date\":\"2026-01-06\",\"concept\":\"Cobro parcial sintético\",\"branchId\":\"central\",\"documentId\":\"\",\"manual\":true,\"lines\":[{\"accountId\":\"1.1.2\",\"debit\":100000,\"credit\":0},{\"accountId\":\"1.1.3\",\"debit\":0,\"credit\":100000}]},{\"id\":\"purchase\",\"date\":\"2026-01-07\",\"concept\":\"Mercadería sintética\",\"branchId\":\"central\",\"documentId\":\"\",\"manual\":true,\"lines\":[{\"accountId\":\"1.1.9\",\"debit\":60000,\"credit\":0},{\"accountId\":\"1.1.4\",\"debit\":12600,\"credit\":0},{\"accountId\":\"2.1.1\",\"debit\":0,\"credit\":72600}]},{\"id\":\"payment\",\"date\":\"2026-01-08\",\"concept\":\"Pago parcial sintético\",\"branchId\":\"central\",\"documentId\":\"\",\"manual\":true,\"lines\":[{\"accountId\":\"2.1.1\",\"debit\":40000,\"credit\":0},{\"accountId\":\"1.1.2\",\"debit\":0,\"credit\":40000}]},{\"id\":\"cost\",\"date\":\"2026-01-09\",\"concept\":\"Costo de venta sintético\",\"branchId\":\"central\",\"documentId\":\"\",\"manual\":true,\"lines\":[{\"accountId\":\"5.4\",\"debit\":30000,\"credit\":0},{\"accountId\":\"1.1.9\",\"debit\":0,\"credit\":30000}]},{\"id\":\"depreciation\",\"date\":\"2026-01-10\",\"concept\":\"Depreciación sintética\",\"branchId\":\"central\",\"documentId\":\"\",\"manual\":true,\"lines\":[{\"accountId\":\"5.9\",\"debit\":5000,\"credit\":0},{\"accountId\":\"1.2.2\",\"debit\":0,\"credit\":5000}]},{\"id\":\"contribution\",\"date\":\"2026-01-11\",\"concept\":\"Aporte sintético de propietarios\",\"branchId\":\"central\",\"documentId\":\"\",\"manual\":true,\"lines\":[{\"accountId\":\"1.1.2\",\"debit\":20000,\"credit\":0},{\"accountId\":\"3.1\",\"debit\":0,\"credit\":20000}]},{\"id\":\"distribution\",\"date\":\"2026-01-12\",\"concept\":\"Distribución sintética\",\"branchId\":\"central\",\"documentId\":\"\",\"manual\":true,\"lines\":[{\"accountId\":\"3.2\",\"debit\":10000,\"credit\":0},{\"accountId\":\"1.1.2\",\"debit\":0,\"credit\":10000}]},{\"id\":\"reserve\",\"date\":\"2026-01-13\",\"concept\":\"Asignación sintética a reserva\",\"branchId\":\"central\",\"documentId\":\"\",\"manual\":true,\"lines\":[{\"accountId\":\"3.2\",\"debit\":8000,\"credit\":0},{\"accountId\":\"3.3\",\"debit\":0,\"credit\":8000}]},{\"id\":\"transfer\",\"date\":\"2026-01-14\",\"concept\":\"Transferencia sintética banco a caja\",\"branchId\":\"central\",\"documentId\":\"\",\"manual\":true,\"lines\":[{\"accountId\":\"1.1.1\",\"debit\":10000,\"credit\":0},{\"accountId\":\"1.1.2\",\"debit\":0,\"credit\":10000}]}],\"journalPrefixIds\":[\"opening\",\"sale\",\"collection\",\"purchase\",\"payment\",\"cost\",\"depreciation\",\"contribution\",\"distribution\",\"reserve\",\"transfer\"]},\"position\":{\"rows\":[{\"id\":\"ac-cash\",\"name\":\"Caja y bancos\",\"section\":\"Activo corriente\",\"amount\":170000,\"noteIds\":[\"criteria\"],\"accounts\":[{\"id\":\"1.1.1\",\"amount\":10000},{\"id\":\"1.1.2\",\"amount\":160000}]},{\"id\":\"ac-customers\",\"name\":\"Cuentas por cobrar y derechos a facturar\",\"section\":\"Activo corriente\",\"amount\":21000,\"noteIds\":[\"criteria\"],\"accounts\":[{\"id\":\"1.1.3\",\"amount\":21000}]},{\"id\":\"ac-other-credits\",\"name\":\"Otros créditos\",\"section\":\"Activo corriente\",\"amount\":12600,\"noteIds\":[\"criteria\"],\"accounts\":[{\"id\":\"1.1.4\",\"amount\":12600}]},{\"id\":\"ac-inventory\",\"name\":\"Bienes de cambio\",\"section\":\"Activo corriente\",\"amount\":30000,\"noteIds\":[\"criteria\"],\"accounts\":[{\"id\":\"1.1.9\",\"amount\":30000}]},{\"id\":\"an-fixed\",\"name\":\"Bienes de uso\",\"section\":\"Activo no corriente\",\"amount\":195000,\"noteIds\":[\"criteria\"],\"accounts\":[{\"id\":\"1.2.1\",\"amount\":200000},{\"id\":\"1.2.2\",\"amount\":-5000}]},{\"id\":\"pc-suppliers\",\"name\":\"Deudas comerciales\",\"section\":\"Pasivo corriente\",\"amount\":32600,\"noteIds\":[\"criteria\"],\"accounts\":[{\"id\":\"2.1.1\",\"amount\":32600}]},{\"id\":\"pc-tax\",\"name\":\"Deudas fiscales\",\"section\":\"Pasivo corriente\",\"amount\":21000,\"noteIds\":[\"criteria\"],\"accounts\":[{\"id\":\"2.1.2\",\"amount\":21000}]}],\"currentAssets\":233600,\"nonCurrentAssets\":195000,\"assets\":428600,\"currentLiabilities\":53600,\"nonCurrentLiabilities\":0,\"liabilities\":53600,\"equity\":375000,\"difference\":0},\"results\":{\"rows\":[{\"id\":\"in-sales\",\"name\":\"Ventas y servicios\",\"section\":\"Ingresos\",\"amount\":100000,\"noteIds\":[\"criteria\"],\"accounts\":[{\"id\":\"4.1\",\"amount\":100000}]},{\"id\":\"ex-cogs\",\"name\":\"Costo de ventas\",\"section\":\"Gastos\",\"amount\":30000,\"noteIds\":[\"criteria\"],\"accounts\":[{\"id\":\"5.4\",\"amount\":30000}]},{\"id\":\"ex-other-expenses\",\"name\":\"Otros gastos\",\"section\":\"Gastos\",\"amount\":5000,\"noteIds\":[\"criteria\"],\"accounts\":[{\"id\":\"5.9\",\"amount\":5000}]}],\"income\":100000,\"expenses\":35000,\"profit\":65000,\"openingResults\":0},\"equity\":{\"components\":[{\"id\":\"eq-capital\",\"name\":\"Capital suscripto\",\"section\":\"Patrimonio neto\"},{\"id\":\"eq-capital-adjustment\",\"name\":\"Ajuste del capital\",\"section\":\"Patrimonio neto\"},{\"id\":\"eq-irrevocable\",\"name\":\"Aportes irrevocables\",\"section\":\"Patrimonio neto\"},{\"id\":\"eq-premium\",\"name\":\"Primas de emisión\",\"section\":\"Patrimonio neto\"},{\"id\":\"eq-reserves\",\"name\":\"Ganancias reservadas\",\"section\":\"Patrimonio neto\"},{\"id\":\"eq-unassigned\",\"name\":\"Resultados no asignados\",\"section\":\"Patrimonio neto\"},{\"id\":\"eq-deferred\",\"name\":\"Resultados diferidos\",\"section\":\"Patrimonio neto\"}],\"rows\":[{\"id\":\"opening\",\"label\":\"Saldo inicial\",\"noteId\":\"equity\",\"reason\":\"Saldos contables anteriores al inicio del ejercicio\",\"values\":{\"eq-capital\":300000,\"eq-capital-adjustment\":0,\"eq-irrevocable\":0,\"eq-premium\":0,\"eq-reserves\":0,\"eq-unassigned\":0,\"eq-deferred\":0},\"total\":300000},{\"id\":\"contribution\",\"label\":\"Aportes · 2026-01-11 · Aporte sintético de propietarios\",\"noteId\":\"equity\",\"reason\":\"Aporte de capital sintético, documentado para el ensayo.\",\"values\":{\"eq-capital\":20000,\"eq-capital-adjustment\":0,\"eq-irrevocable\":0,\"eq-premium\":0,\"eq-reserves\":0,\"eq-unassigned\":0,\"eq-deferred\":0},\"total\":20000},{\"id\":\"distribution\",\"label\":\"Retiros y distribuciones · 2026-01-12 · Distribución sintética\",\"noteId\":\"equity\",\"reason\":\"Distribución sintética de resultados a propietarios.\",\"values\":{\"eq-capital\":0,\"eq-capital-adjustment\":0,\"eq-irrevocable\":0,\"eq-premium\":0,\"eq-reserves\":0,\"eq-unassigned\":-10000,\"eq-deferred\":0},\"total\":-10000},{\"id\":\"reserve\",\"label\":\"Asignaciones y transferencias · 2026-01-13 · Asignación sintética a reserva\",\"noteId\":\"equity\",\"reason\":\"Asignación interna sintética de resultados a reserva, sin cambiar el patrimonio total.\",\"values\":{\"eq-capital\":0,\"eq-capital-adjustment\":0,\"eq-irrevocable\":0,\"eq-premium\":0,\"eq-reserves\":8000,\"eq-unassigned\":-8000,\"eq-deferred\":0},\"total\":0},{\"id\":\"result\",\"label\":\"Resultado del período\",\"noteId\":\"criteria\",\"reason\":\"Resultado conciliado con el estado de resultados, antes de su asiento de cierre\",\"values\":{\"eq-capital\":0,\"eq-capital-adjustment\":0,\"eq-irrevocable\":0,\"eq-premium\":0,\"eq-reserves\":0,\"eq-unassigned\":65000,\"eq-deferred\":0},\"total\":65000},{\"id\":\"closing\",\"label\":\"Saldo final\",\"noteId\":\"equity\",\"reason\":\"Saldos iniciales más variaciones y resultado del período\",\"values\":{\"eq-capital\":320000,\"eq-capital-adjustment\":0,\"eq-irrevocable\":0,\"eq-premium\":0,\"eq-reserves\":8000,\"eq-unassigned\":47000,\"eq-deferred\":0},\"total\":375000}],\"opening\":300000,\"closing\":375000,\"difference\":0},\"cash\":{\"accountIds\":[\"1.1.1\",\"1.1.2\"],\"basis\":\"Caja y depósitos bancarios a la vista de libre disponibilidad, sin efectivo restringido ni inversiones equivalentes en este caso sintético.\",\"opening\":100000,\"closing\":170000,\"variation\":70000,\"rows\":[{\"entryId\":\"collection\",\"date\":\"2026-01-06\",\"concept\":\"Cobro parcial sintético\",\"lineIndex\":0,\"accountId\":\"1.1.2\",\"category\":\"op-customers\",\"activity\":\"Operativas\",\"amount\":100000,\"noteId\":\"cash\",\"reason\":\"Cobro sintético de venta a clientes según el diario.\"},{\"entryId\":\"payment\",\"date\":\"2026-01-08\",\"concept\":\"Pago parcial sintético\",\"lineIndex\":1,\"accountId\":\"1.1.2\",\"category\":\"op-suppliers\",\"activity\":\"Operativas\",\"amount\":-40000,\"noteId\":\"cash\",\"reason\":\"Pago sintético a proveedor de mercadería según el diario.\"},{\"entryId\":\"contribution\",\"date\":\"2026-01-11\",\"concept\":\"Aporte sintético de propietarios\",\"lineIndex\":0,\"accountId\":\"1.1.2\",\"category\":\"fin-receipts\",\"activity\":\"Financiación\",\"amount\":20000,\"noteId\":\"cash\",\"reason\":\"Aporte sintético de propietarios depositado en banco.\"},{\"entryId\":\"distribution\",\"date\":\"2026-01-12\",\"concept\":\"Distribución sintética\",\"lineIndex\":1,\"accountId\":\"1.1.2\",\"category\":\"fin-payments\",\"activity\":\"Financiación\",\"amount\":-10000,\"noteId\":\"cash\",\"reason\":\"Distribución sintética a propietarios desde banco.\"},{\"entryId\":\"transfer\",\"date\":\"2026-01-14\",\"concept\":\"Transferencia sintética banco a caja\",\"lineIndex\":0,\"accountId\":\"1.1.1\",\"category\":\"transfer\",\"activity\":\"Transferencias internas\",\"amount\":10000,\"noteId\":\"cash\",\"reason\":\"Ingreso interno a caja, sin flujo externo.\"},{\"entryId\":\"transfer\",\"date\":\"2026-01-14\",\"concept\":\"Transferencia sintética banco a caja\",\"lineIndex\":1,\"accountId\":\"1.1.2\",\"category\":\"transfer\",\"activity\":\"Transferencias internas\",\"amount\":-10000,\"noteId\":\"cash\",\"reason\":\"Salida interna de banco, contrapartida del ingreso a caja.\"}],\"totals\":[{\"activity\":\"Operativas\",\"amount\":60000},{\"activity\":\"Inversión\",\"amount\":0},{\"activity\":\"Financiación\",\"amount\":10000},{\"activity\":\"Efectos sobre efectivo\",\"amount\":0},{\"activity\":\"Transferencias internas\",\"amount\":0}],\"difference\":0},\"notes\":[{\"id\":\"cash\",\"title\":\"Efectivo, equivalentes y operaciones sin efectivo\",\"body\":\"Caja y banco de libre disponibilidad en la prueba. Cobros operativos 1000 ARS, pagos operativos 400, aporte 200 y distribución 100; transferencia interna de 100 entre banco y caja. Depreciación y asignación a reserva sin flujo de efectivo.\"},{\"id\":\"criteria\",\"title\":\"Bases de medición, rubros y políticas contables\",\"body\":\"Importes nominales en ARS. Rubros revisados: mercadería al costo conservado, costo de ventas, bienes de uso menos depreciación, deudas y créditos sin compensación. Queda pendiente la reexpresión en moneda de cierre y las restantes mediciones normativas.\"},{\"id\":\"entity\",\"title\":\"Entidad, actividad y marco de preparación\",\"body\":\"Empresa sintética de ensayo: comercio textil, Responsable Inscripto en Tucumán. Diario de prueba para verificar la preparación individual de estados; no representa una entidad ni actividad real.\"},{\"id\":\"equity\",\"title\":\"Patrimonio y decisiones de propietarios\",\"body\":\"Saldo anterior sintético de capital 3000 ARS; aporte de 200, distribución de 100 y asignación de 80 a reserva. Resultado del período 650 ARS. Las decisiones y sus asientos son exclusivamente de ensayo.\"},{\"id\":\"events\",\"title\":\"Contingencias y hechos posteriores\",\"body\":\"En este caso sintético no se informan contingencias ni hechos posteriores. Para una entidad real requieren revisión documentada hasta la fecha de preparación profesional.\"}],\"classifications\":{\"allocations\":[{\"accountId\":\"1.1.1\",\"items\":[{\"rubricId\":\"ac-cash\",\"amount\":10000,\"noteId\":\"criteria\"}]},{\"accountId\":\"1.1.2\",\"items\":[{\"rubricId\":\"ac-cash\",\"amount\":160000,\"noteId\":\"criteria\"}]},{\"accountId\":\"1.1.3\",\"items\":[{\"rubricId\":\"ac-customers\",\"amount\":21000,\"noteId\":\"criteria\"}]},{\"accountId\":\"1.1.4\",\"items\":[{\"rubricId\":\"ac-other-credits\",\"amount\":12600,\"noteId\":\"criteria\"}]},{\"accountId\":\"1.1.9\",\"items\":[{\"rubricId\":\"ac-inventory\",\"amount\":30000,\"noteId\":\"criteria\"}]},{\"accountId\":\"1.2.1\",\"items\":[{\"rubricId\":\"an-fixed\",\"amount\":200000,\"noteId\":\"criteria\"}]},{\"accountId\":\"1.2.2\",\"items\":[{\"rubricId\":\"an-fixed\",\"amount\":-5000,\"noteId\":\"criteria\"}]},{\"accountId\":\"2.1.1\",\"items\":[{\"rubricId\":\"pc-suppliers\",\"amount\":-32600,\"noteId\":\"criteria\"}]},{\"accountId\":\"2.1.2\",\"items\":[{\"rubricId\":\"pc-tax\",\"amount\":-21000,\"noteId\":\"criteria\"}]},{\"accountId\":\"3.1\",\"items\":[{\"rubricId\":\"eq-capital\",\"amount\":-320000,\"noteId\":\"equity\"}]},{\"accountId\":\"3.2\",\"items\":[{\"rubricId\":\"eq-unassigned\",\"amount\":18000,\"noteId\":\"equity\"}]},{\"accountId\":\"3.3\",\"items\":[{\"rubricId\":\"eq-reserves\",\"amount\":-8000,\"noteId\":\"equity\"}]},{\"accountId\":\"4.1\",\"items\":[{\"rubricId\":\"in-sales\",\"amount\":-100000,\"noteId\":\"criteria\"}]},{\"accountId\":\"5.4\",\"items\":[{\"rubricId\":\"ex-cogs\",\"amount\":30000,\"noteId\":\"criteria\"}]},{\"accountId\":\"5.9\",\"items\":[{\"rubricId\":\"ex-other-expenses\",\"amount\":5000,\"noteId\":\"criteria\"}]}],\"cashLines\":[{\"entryId\":\"collection\",\"lineIndex\":0,\"parts\":[{\"category\":\"op-customers\",\"amount\":100000,\"noteId\":\"cash\",\"reason\":\"Cobro sintético de venta a clientes según el diario.\"}]},{\"entryId\":\"payment\",\"lineIndex\":1,\"parts\":[{\"category\":\"op-suppliers\",\"amount\":-40000,\"noteId\":\"cash\",\"reason\":\"Pago sintético a proveedor de mercadería según el diario.\"}]},{\"entryId\":\"contribution\",\"lineIndex\":0,\"parts\":[{\"category\":\"fin-receipts\",\"amount\":20000,\"noteId\":\"cash\",\"reason\":\"Aporte sintético de propietarios depositado en banco.\"}]},{\"entryId\":\"distribution\",\"lineIndex\":1,\"parts\":[{\"category\":\"fin-payments\",\"amount\":-10000,\"noteId\":\"cash\",\"reason\":\"Distribución sintética a propietarios desde banco.\"}]},{\"entryId\":\"transfer\",\"lineIndex\":0,\"parts\":[{\"category\":\"transfer\",\"amount\":10000,\"noteId\":\"cash\",\"reason\":\"Ingreso interno a caja, sin flujo externo.\"}]},{\"entryId\":\"transfer\",\"lineIndex\":1,\"parts\":[{\"category\":\"transfer\",\"amount\":-10000,\"noteId\":\"cash\",\"reason\":\"Salida interna de banco, contrapartida del ingreso a caja.\"}]}],\"equityEntries\":[{\"entryId\":\"contribution\",\"category\":\"Aportes\",\"noteId\":\"equity\",\"reason\":\"Aporte de capital sintético, documentado para el ensayo.\"},{\"entryId\":\"distribution\",\"category\":\"Retiros y distribuciones\",\"noteId\":\"equity\",\"reason\":\"Distribución sintética de resultados a propietarios.\"},{\"entryId\":\"reserve\",\"category\":\"Asignaciones y transferencias\",\"noteId\":\"equity\",\"reason\":\"Asignación interna sintética de resultados a reserva, sin cambiar el patrimonio total.\"}]},\"comparative\":{\"position\":null,\"period\":null,\"reason\":\"Primera preparación sintética de ensayo; no se ha incorporado información del ejercicio anterior. No se afirma una dispensa normativa.\"},\"warnings\":[\"Cifras nominales: pendiente reexpresión en moneda de cierre, incluidos comparativos, patrimonio y flujos.\",\"Expediente de preparación: no acredita estados contables normativos emitidos ni certificación profesional.\",\"Información comparativa pendiente de incorporar o justificar conforme al caso de la entidad.\"]}",
+          "id": "9601640b-cc07-4832-b756-854fb29d85c2",
+          "number": "INT-EC-00000001",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-11T17:54:08.136Z",
+          "preview": {
+            "from": "2026-01-01",
+            "to": "2026-10-11",
+            "reference": "Estados de preparación QA 2026",
+            "reason": "Caso sintético: preparación de los cuatro estados con conciliación de rubros, patrimonio, efectivo y notas, a partir del diario conservado.",
+            "basis": "Papel de trabajo nominal",
+            "source": {
+              "identity": {
+                "name": "SICA QA - ESTADOS CONTABLES",
+                "cuit": "",
+                "address": "",
+                "province": "Tucumán",
+                "industry": "Comercio textil",
+                "accountingStandard": "RT 54 / NUA · revisar adopción jurisdiccional"
+              },
+              "accounts": [
+                {
+                  "id": "1.1.1",
+                  "code": "1.1.1",
+                  "name": "Caja",
+                  "group": "Activo"
+                },
+                {
+                  "id": "1.1.2",
+                  "code": "1.1.2",
+                  "name": "Bancos",
+                  "group": "Activo"
+                },
+                {
+                  "id": "1.1.3",
+                  "code": "1.1.3",
+                  "name": "Deudores por ventas",
+                  "group": "Activo"
+                },
+                {
+                  "id": "1.1.4",
+                  "code": "1.1.4",
+                  "name": "IVA crédito fiscal",
+                  "group": "Activo"
+                },
+                {
+                  "id": "1.1.9",
+                  "code": "1.1.9",
+                  "name": "Mercadería",
+                  "group": "Activo"
+                },
+                {
+                  "id": "1.2.1",
+                  "code": "1.2.1",
+                  "name": "Bienes de uso al costo",
+                  "group": "Activo"
+                },
+                {
+                  "id": "1.2.2",
+                  "code": "1.2.2",
+                  "name": "Depreciación acumulada",
+                  "group": "Activo"
+                },
+                {
+                  "id": "2.1.1",
+                  "code": "2.1.1",
+                  "name": "Proveedores",
+                  "group": "Pasivo"
+                },
+                {
+                  "id": "2.1.2",
+                  "code": "2.1.2",
+                  "name": "IVA débito fiscal",
+                  "group": "Pasivo"
+                },
+                {
+                  "id": "3.1",
+                  "code": "3.1",
+                  "name": "Capital y saldos iniciales",
+                  "group": "Patrimonio neto"
+                },
+                {
+                  "id": "3.2",
+                  "code": "3.2",
+                  "name": "Resultados no asignados",
+                  "group": "Patrimonio neto"
+                },
+                {
+                  "id": "3.3",
+                  "code": "3.3",
+                  "name": "Reserva legal",
+                  "group": "Patrimonio neto"
+                },
+                {
+                  "id": "4.1",
+                  "code": "4.1",
+                  "name": "Ventas",
+                  "group": "Ingresos"
+                },
+                {
+                  "id": "5.4",
+                  "code": "5.4",
+                  "name": "Costo de ventas",
+                  "group": "Gastos"
+                },
+                {
+                  "id": "5.9",
+                  "code": "5.9",
+                  "name": "Depreciación de bienes de uso",
+                  "group": "Gastos"
+                }
+              ],
+              "entries": [
+                {
+                  "id": "opening",
+                  "date": "2025-12-31",
+                  "concept": "Saldo anterior sintético",
+                  "branchId": "central",
+                  "documentId": "",
+                  "manual": true,
+                  "lines": [
+                    {
+                      "accountId": "1.1.2",
+                      "debit": 100000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "1.2.1",
+                      "debit": 200000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "3.1",
+                      "debit": 0,
+                      "credit": 300000
+                    }
+                  ]
+                },
+                {
+                  "id": "sale",
+                  "date": "2026-01-05",
+                  "concept": "Venta sintética con IVA",
+                  "branchId": "central",
+                  "documentId": "",
+                  "manual": true,
+                  "lines": [
+                    {
+                      "accountId": "1.1.3",
+                      "debit": 121000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "4.1",
+                      "debit": 0,
+                      "credit": 100000
+                    },
+                    {
+                      "accountId": "2.1.2",
+                      "debit": 0,
+                      "credit": 21000
+                    }
+                  ]
+                },
+                {
+                  "id": "collection",
+                  "date": "2026-01-06",
+                  "concept": "Cobro parcial sintético",
+                  "branchId": "central",
+                  "documentId": "",
+                  "manual": true,
+                  "lines": [
+                    {
+                      "accountId": "1.1.2",
+                      "debit": 100000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "1.1.3",
+                      "debit": 0,
+                      "credit": 100000
+                    }
+                  ]
+                },
+                {
+                  "id": "purchase",
+                  "date": "2026-01-07",
+                  "concept": "Mercadería sintética",
+                  "branchId": "central",
+                  "documentId": "",
+                  "manual": true,
+                  "lines": [
+                    {
+                      "accountId": "1.1.9",
+                      "debit": 60000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "1.1.4",
+                      "debit": 12600,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "2.1.1",
+                      "debit": 0,
+                      "credit": 72600
+                    }
+                  ]
+                },
+                {
+                  "id": "payment",
+                  "date": "2026-01-08",
+                  "concept": "Pago parcial sintético",
+                  "branchId": "central",
+                  "documentId": "",
+                  "manual": true,
+                  "lines": [
+                    {
+                      "accountId": "2.1.1",
+                      "debit": 40000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "1.1.2",
+                      "debit": 0,
+                      "credit": 40000
+                    }
+                  ]
+                },
+                {
+                  "id": "cost",
+                  "date": "2026-01-09",
+                  "concept": "Costo de venta sintético",
+                  "branchId": "central",
+                  "documentId": "",
+                  "manual": true,
+                  "lines": [
+                    {
+                      "accountId": "5.4",
+                      "debit": 30000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "1.1.9",
+                      "debit": 0,
+                      "credit": 30000
+                    }
+                  ]
+                },
+                {
+                  "id": "depreciation",
+                  "date": "2026-01-10",
+                  "concept": "Depreciación sintética",
+                  "branchId": "central",
+                  "documentId": "",
+                  "manual": true,
+                  "lines": [
+                    {
+                      "accountId": "5.9",
+                      "debit": 5000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "1.2.2",
+                      "debit": 0,
+                      "credit": 5000
+                    }
+                  ]
+                },
+                {
+                  "id": "contribution",
+                  "date": "2026-01-11",
+                  "concept": "Aporte sintético de propietarios",
+                  "branchId": "central",
+                  "documentId": "",
+                  "manual": true,
+                  "lines": [
+                    {
+                      "accountId": "1.1.2",
+                      "debit": 20000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "3.1",
+                      "debit": 0,
+                      "credit": 20000
+                    }
+                  ]
+                },
+                {
+                  "id": "distribution",
+                  "date": "2026-01-12",
+                  "concept": "Distribución sintética",
+                  "branchId": "central",
+                  "documentId": "",
+                  "manual": true,
+                  "lines": [
+                    {
+                      "accountId": "3.2",
+                      "debit": 10000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "1.1.2",
+                      "debit": 0,
+                      "credit": 10000
+                    }
+                  ]
+                },
+                {
+                  "id": "reserve",
+                  "date": "2026-01-13",
+                  "concept": "Asignación sintética a reserva",
+                  "branchId": "central",
+                  "documentId": "",
+                  "manual": true,
+                  "lines": [
+                    {
+                      "accountId": "3.2",
+                      "debit": 8000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "3.3",
+                      "debit": 0,
+                      "credit": 8000
+                    }
+                  ]
+                },
+                {
+                  "id": "transfer",
+                  "date": "2026-01-14",
+                  "concept": "Transferencia sintética banco a caja",
+                  "branchId": "central",
+                  "documentId": "",
+                  "manual": true,
+                  "lines": [
+                    {
+                      "accountId": "1.1.1",
+                      "debit": 10000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "1.1.2",
+                      "debit": 0,
+                      "credit": 10000
+                    }
+                  ]
+                }
+              ],
+              "journalPrefixIds": [
+                "opening",
+                "sale",
+                "collection",
+                "purchase",
+                "payment",
+                "cost",
+                "depreciation",
+                "contribution",
+                "distribution",
+                "reserve",
+                "transfer"
+              ]
+            },
+            "position": {
+              "rows": [
+                {
+                  "id": "ac-cash",
+                  "name": "Caja y bancos",
+                  "section": "Activo corriente",
+                  "amount": 170000,
+                  "noteIds": [
+                    "criteria"
+                  ],
+                  "accounts": [
+                    {
+                      "id": "1.1.1",
+                      "amount": 10000
+                    },
+                    {
+                      "id": "1.1.2",
+                      "amount": 160000
+                    }
+                  ]
+                },
+                {
+                  "id": "ac-customers",
+                  "name": "Cuentas por cobrar y derechos a facturar",
+                  "section": "Activo corriente",
+                  "amount": 21000,
+                  "noteIds": [
+                    "criteria"
+                  ],
+                  "accounts": [
+                    {
+                      "id": "1.1.3",
+                      "amount": 21000
+                    }
+                  ]
+                },
+                {
+                  "id": "ac-other-credits",
+                  "name": "Otros créditos",
+                  "section": "Activo corriente",
+                  "amount": 12600,
+                  "noteIds": [
+                    "criteria"
+                  ],
+                  "accounts": [
+                    {
+                      "id": "1.1.4",
+                      "amount": 12600
+                    }
+                  ]
+                },
+                {
+                  "id": "ac-inventory",
+                  "name": "Bienes de cambio",
+                  "section": "Activo corriente",
+                  "amount": 30000,
+                  "noteIds": [
+                    "criteria"
+                  ],
+                  "accounts": [
+                    {
+                      "id": "1.1.9",
+                      "amount": 30000
+                    }
+                  ]
+                },
+                {
+                  "id": "an-fixed",
+                  "name": "Bienes de uso",
+                  "section": "Activo no corriente",
+                  "amount": 195000,
+                  "noteIds": [
+                    "criteria"
+                  ],
+                  "accounts": [
+                    {
+                      "id": "1.2.1",
+                      "amount": 200000
+                    },
+                    {
+                      "id": "1.2.2",
+                      "amount": -5000
+                    }
+                  ]
+                },
+                {
+                  "id": "pc-suppliers",
+                  "name": "Deudas comerciales",
+                  "section": "Pasivo corriente",
+                  "amount": 32600,
+                  "noteIds": [
+                    "criteria"
+                  ],
+                  "accounts": [
+                    {
+                      "id": "2.1.1",
+                      "amount": 32600
+                    }
+                  ]
+                },
+                {
+                  "id": "pc-tax",
+                  "name": "Deudas fiscales",
+                  "section": "Pasivo corriente",
+                  "amount": 21000,
+                  "noteIds": [
+                    "criteria"
+                  ],
+                  "accounts": [
+                    {
+                      "id": "2.1.2",
+                      "amount": 21000
+                    }
+                  ]
+                }
+              ],
+              "currentAssets": 233600,
+              "nonCurrentAssets": 195000,
+              "assets": 428600,
+              "currentLiabilities": 53600,
+              "nonCurrentLiabilities": 0,
+              "liabilities": 53600,
+              "equity": 375000,
+              "difference": 0
+            },
+            "results": {
+              "rows": [
+                {
+                  "id": "in-sales",
+                  "name": "Ventas y servicios",
+                  "section": "Ingresos",
+                  "amount": 100000,
+                  "noteIds": [
+                    "criteria"
+                  ],
+                  "accounts": [
+                    {
+                      "id": "4.1",
+                      "amount": 100000
+                    }
+                  ]
+                },
+                {
+                  "id": "ex-cogs",
+                  "name": "Costo de ventas",
+                  "section": "Gastos",
+                  "amount": 30000,
+                  "noteIds": [
+                    "criteria"
+                  ],
+                  "accounts": [
+                    {
+                      "id": "5.4",
+                      "amount": 30000
+                    }
+                  ]
+                },
+                {
+                  "id": "ex-other-expenses",
+                  "name": "Otros gastos",
+                  "section": "Gastos",
+                  "amount": 5000,
+                  "noteIds": [
+                    "criteria"
+                  ],
+                  "accounts": [
+                    {
+                      "id": "5.9",
+                      "amount": 5000
+                    }
+                  ]
+                }
+              ],
+              "income": 100000,
+              "expenses": 35000,
+              "profit": 65000,
+              "openingResults": 0
+            },
+            "equity": {
+              "components": [
+                {
+                  "id": "eq-capital",
+                  "name": "Capital suscripto",
+                  "section": "Patrimonio neto"
+                },
+                {
+                  "id": "eq-capital-adjustment",
+                  "name": "Ajuste del capital",
+                  "section": "Patrimonio neto"
+                },
+                {
+                  "id": "eq-irrevocable",
+                  "name": "Aportes irrevocables",
+                  "section": "Patrimonio neto"
+                },
+                {
+                  "id": "eq-premium",
+                  "name": "Primas de emisión",
+                  "section": "Patrimonio neto"
+                },
+                {
+                  "id": "eq-reserves",
+                  "name": "Ganancias reservadas",
+                  "section": "Patrimonio neto"
+                },
+                {
+                  "id": "eq-unassigned",
+                  "name": "Resultados no asignados",
+                  "section": "Patrimonio neto"
+                },
+                {
+                  "id": "eq-deferred",
+                  "name": "Resultados diferidos",
+                  "section": "Patrimonio neto"
+                }
+              ],
+              "rows": [
+                {
+                  "id": "opening",
+                  "label": "Saldo inicial",
+                  "noteId": "equity",
+                  "reason": "Saldos contables anteriores al inicio del ejercicio",
+                  "values": {
+                    "eq-capital": 300000,
+                    "eq-capital-adjustment": 0,
+                    "eq-irrevocable": 0,
+                    "eq-premium": 0,
+                    "eq-reserves": 0,
+                    "eq-unassigned": 0,
+                    "eq-deferred": 0
+                  },
+                  "total": 300000
+                },
+                {
+                  "id": "contribution",
+                  "label": "Aportes · 2026-01-11 · Aporte sintético de propietarios",
+                  "noteId": "equity",
+                  "reason": "Aporte de capital sintético, documentado para el ensayo.",
+                  "values": {
+                    "eq-capital": 20000,
+                    "eq-capital-adjustment": 0,
+                    "eq-irrevocable": 0,
+                    "eq-premium": 0,
+                    "eq-reserves": 0,
+                    "eq-unassigned": 0,
+                    "eq-deferred": 0
+                  },
+                  "total": 20000
+                },
+                {
+                  "id": "distribution",
+                  "label": "Retiros y distribuciones · 2026-01-12 · Distribución sintética",
+                  "noteId": "equity",
+                  "reason": "Distribución sintética de resultados a propietarios.",
+                  "values": {
+                    "eq-capital": 0,
+                    "eq-capital-adjustment": 0,
+                    "eq-irrevocable": 0,
+                    "eq-premium": 0,
+                    "eq-reserves": 0,
+                    "eq-unassigned": -10000,
+                    "eq-deferred": 0
+                  },
+                  "total": -10000
+                },
+                {
+                  "id": "reserve",
+                  "label": "Asignaciones y transferencias · 2026-01-13 · Asignación sintética a reserva",
+                  "noteId": "equity",
+                  "reason": "Asignación interna sintética de resultados a reserva, sin cambiar el patrimonio total.",
+                  "values": {
+                    "eq-capital": 0,
+                    "eq-capital-adjustment": 0,
+                    "eq-irrevocable": 0,
+                    "eq-premium": 0,
+                    "eq-reserves": 8000,
+                    "eq-unassigned": -8000,
+                    "eq-deferred": 0
+                  },
+                  "total": 0
+                },
+                {
+                  "id": "result",
+                  "label": "Resultado del período",
+                  "noteId": "criteria",
+                  "reason": "Resultado conciliado con el estado de resultados, antes de su asiento de cierre",
+                  "values": {
+                    "eq-capital": 0,
+                    "eq-capital-adjustment": 0,
+                    "eq-irrevocable": 0,
+                    "eq-premium": 0,
+                    "eq-reserves": 0,
+                    "eq-unassigned": 65000,
+                    "eq-deferred": 0
+                  },
+                  "total": 65000
+                },
+                {
+                  "id": "closing",
+                  "label": "Saldo final",
+                  "noteId": "equity",
+                  "reason": "Saldos iniciales más variaciones y resultado del período",
+                  "values": {
+                    "eq-capital": 320000,
+                    "eq-capital-adjustment": 0,
+                    "eq-irrevocable": 0,
+                    "eq-premium": 0,
+                    "eq-reserves": 8000,
+                    "eq-unassigned": 47000,
+                    "eq-deferred": 0
+                  },
+                  "total": 375000
+                }
+              ],
+              "opening": 300000,
+              "closing": 375000,
+              "difference": 0
+            },
+            "cash": {
+              "accountIds": [
+                "1.1.1",
+                "1.1.2"
+              ],
+              "basis": "Caja y depósitos bancarios a la vista de libre disponibilidad, sin efectivo restringido ni inversiones equivalentes en este caso sintético.",
+              "opening": 100000,
+              "closing": 170000,
+              "variation": 70000,
+              "rows": [
+                {
+                  "entryId": "collection",
+                  "date": "2026-01-06",
+                  "concept": "Cobro parcial sintético",
+                  "lineIndex": 0,
+                  "accountId": "1.1.2",
+                  "category": "op-customers",
+                  "activity": "Operativas",
+                  "amount": 100000,
+                  "noteId": "cash",
+                  "reason": "Cobro sintético de venta a clientes según el diario."
+                },
+                {
+                  "entryId": "payment",
+                  "date": "2026-01-08",
+                  "concept": "Pago parcial sintético",
+                  "lineIndex": 1,
+                  "accountId": "1.1.2",
+                  "category": "op-suppliers",
+                  "activity": "Operativas",
+                  "amount": -40000,
+                  "noteId": "cash",
+                  "reason": "Pago sintético a proveedor de mercadería según el diario."
+                },
+                {
+                  "entryId": "contribution",
+                  "date": "2026-01-11",
+                  "concept": "Aporte sintético de propietarios",
+                  "lineIndex": 0,
+                  "accountId": "1.1.2",
+                  "category": "fin-receipts",
+                  "activity": "Financiación",
+                  "amount": 20000,
+                  "noteId": "cash",
+                  "reason": "Aporte sintético de propietarios depositado en banco."
+                },
+                {
+                  "entryId": "distribution",
+                  "date": "2026-01-12",
+                  "concept": "Distribución sintética",
+                  "lineIndex": 1,
+                  "accountId": "1.1.2",
+                  "category": "fin-payments",
+                  "activity": "Financiación",
+                  "amount": -10000,
+                  "noteId": "cash",
+                  "reason": "Distribución sintética a propietarios desde banco."
+                },
+                {
+                  "entryId": "transfer",
+                  "date": "2026-01-14",
+                  "concept": "Transferencia sintética banco a caja",
+                  "lineIndex": 0,
+                  "accountId": "1.1.1",
+                  "category": "transfer",
+                  "activity": "Transferencias internas",
+                  "amount": 10000,
+                  "noteId": "cash",
+                  "reason": "Ingreso interno a caja, sin flujo externo."
+                },
+                {
+                  "entryId": "transfer",
+                  "date": "2026-01-14",
+                  "concept": "Transferencia sintética banco a caja",
+                  "lineIndex": 1,
+                  "accountId": "1.1.2",
+                  "category": "transfer",
+                  "activity": "Transferencias internas",
+                  "amount": -10000,
+                  "noteId": "cash",
+                  "reason": "Salida interna de banco, contrapartida del ingreso a caja."
+                }
+              ],
+              "totals": [
+                {
+                  "activity": "Operativas",
+                  "amount": 60000
+                },
+                {
+                  "activity": "Inversión",
+                  "amount": 0
+                },
+                {
+                  "activity": "Financiación",
+                  "amount": 10000
+                },
+                {
+                  "activity": "Efectos sobre efectivo",
+                  "amount": 0
+                },
+                {
+                  "activity": "Transferencias internas",
+                  "amount": 0
+                }
+              ],
+              "difference": 0
+            },
+            "notes": [
+              {
+                "id": "cash",
+                "title": "Efectivo, equivalentes y operaciones sin efectivo",
+                "body": "Caja y banco de libre disponibilidad en la prueba. Cobros operativos 1000 ARS, pagos operativos 400, aporte 200 y distribución 100; transferencia interna de 100 entre banco y caja. Depreciación y asignación a reserva sin flujo de efectivo."
+              },
+              {
+                "id": "criteria",
+                "title": "Bases de medición, rubros y políticas contables",
+                "body": "Importes nominales en ARS. Rubros revisados: mercadería al costo conservado, costo de ventas, bienes de uso menos depreciación, deudas y créditos sin compensación. Queda pendiente la reexpresión en moneda de cierre y las restantes mediciones normativas."
+              },
+              {
+                "id": "entity",
+                "title": "Entidad, actividad y marco de preparación",
+                "body": "Empresa sintética de ensayo: comercio textil, Responsable Inscripto en Tucumán. Diario de prueba para verificar la preparación individual de estados; no representa una entidad ni actividad real."
+              },
+              {
+                "id": "equity",
+                "title": "Patrimonio y decisiones de propietarios",
+                "body": "Saldo anterior sintético de capital 3000 ARS; aporte de 200, distribución de 100 y asignación de 80 a reserva. Resultado del período 650 ARS. Las decisiones y sus asientos son exclusivamente de ensayo."
+              },
+              {
+                "id": "events",
+                "title": "Contingencias y hechos posteriores",
+                "body": "En este caso sintético no se informan contingencias ni hechos posteriores. Para una entidad real requieren revisión documentada hasta la fecha de preparación profesional."
+              }
+            ],
+            "classifications": {
+              "allocations": [
+                {
+                  "accountId": "1.1.1",
+                  "items": [
+                    {
+                      "rubricId": "ac-cash",
+                      "amount": 10000,
+                      "noteId": "criteria"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "1.1.2",
+                  "items": [
+                    {
+                      "rubricId": "ac-cash",
+                      "amount": 160000,
+                      "noteId": "criteria"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "1.1.3",
+                  "items": [
+                    {
+                      "rubricId": "ac-customers",
+                      "amount": 21000,
+                      "noteId": "criteria"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "1.1.4",
+                  "items": [
+                    {
+                      "rubricId": "ac-other-credits",
+                      "amount": 12600,
+                      "noteId": "criteria"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "1.1.9",
+                  "items": [
+                    {
+                      "rubricId": "ac-inventory",
+                      "amount": 30000,
+                      "noteId": "criteria"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "1.2.1",
+                  "items": [
+                    {
+                      "rubricId": "an-fixed",
+                      "amount": 200000,
+                      "noteId": "criteria"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "1.2.2",
+                  "items": [
+                    {
+                      "rubricId": "an-fixed",
+                      "amount": -5000,
+                      "noteId": "criteria"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "2.1.1",
+                  "items": [
+                    {
+                      "rubricId": "pc-suppliers",
+                      "amount": -32600,
+                      "noteId": "criteria"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "2.1.2",
+                  "items": [
+                    {
+                      "rubricId": "pc-tax",
+                      "amount": -21000,
+                      "noteId": "criteria"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "3.1",
+                  "items": [
+                    {
+                      "rubricId": "eq-capital",
+                      "amount": -320000,
+                      "noteId": "equity"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "3.2",
+                  "items": [
+                    {
+                      "rubricId": "eq-unassigned",
+                      "amount": 18000,
+                      "noteId": "equity"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "3.3",
+                  "items": [
+                    {
+                      "rubricId": "eq-reserves",
+                      "amount": -8000,
+                      "noteId": "equity"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "4.1",
+                  "items": [
+                    {
+                      "rubricId": "in-sales",
+                      "amount": -100000,
+                      "noteId": "criteria"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "5.4",
+                  "items": [
+                    {
+                      "rubricId": "ex-cogs",
+                      "amount": 30000,
+                      "noteId": "criteria"
+                    }
+                  ]
+                },
+                {
+                  "accountId": "5.9",
+                  "items": [
+                    {
+                      "rubricId": "ex-other-expenses",
+                      "amount": 5000,
+                      "noteId": "criteria"
+                    }
+                  ]
+                }
+              ],
+              "cashLines": [
+                {
+                  "entryId": "collection",
+                  "lineIndex": 0,
+                  "parts": [
+                    {
+                      "category": "op-customers",
+                      "amount": 100000,
+                      "noteId": "cash",
+                      "reason": "Cobro sintético de venta a clientes según el diario."
+                    }
+                  ]
+                },
+                {
+                  "entryId": "payment",
+                  "lineIndex": 1,
+                  "parts": [
+                    {
+                      "category": "op-suppliers",
+                      "amount": -40000,
+                      "noteId": "cash",
+                      "reason": "Pago sintético a proveedor de mercadería según el diario."
+                    }
+                  ]
+                },
+                {
+                  "entryId": "contribution",
+                  "lineIndex": 0,
+                  "parts": [
+                    {
+                      "category": "fin-receipts",
+                      "amount": 20000,
+                      "noteId": "cash",
+                      "reason": "Aporte sintético de propietarios depositado en banco."
+                    }
+                  ]
+                },
+                {
+                  "entryId": "distribution",
+                  "lineIndex": 1,
+                  "parts": [
+                    {
+                      "category": "fin-payments",
+                      "amount": -10000,
+                      "noteId": "cash",
+                      "reason": "Distribución sintética a propietarios desde banco."
+                    }
+                  ]
+                },
+                {
+                  "entryId": "transfer",
+                  "lineIndex": 0,
+                  "parts": [
+                    {
+                      "category": "transfer",
+                      "amount": 10000,
+                      "noteId": "cash",
+                      "reason": "Ingreso interno a caja, sin flujo externo."
+                    }
+                  ]
+                },
+                {
+                  "entryId": "transfer",
+                  "lineIndex": 1,
+                  "parts": [
+                    {
+                      "category": "transfer",
+                      "amount": -10000,
+                      "noteId": "cash",
+                      "reason": "Salida interna de banco, contrapartida del ingreso a caja."
+                    }
+                  ]
+                }
+              ],
+              "equityEntries": [
+                {
+                  "entryId": "contribution",
+                  "category": "Aportes",
+                  "noteId": "equity",
+                  "reason": "Aporte de capital sintético, documentado para el ensayo."
+                },
+                {
+                  "entryId": "distribution",
+                  "category": "Retiros y distribuciones",
+                  "noteId": "equity",
+                  "reason": "Distribución sintética de resultados a propietarios."
+                },
+                {
+                  "entryId": "reserve",
+                  "category": "Asignaciones y transferencias",
+                  "noteId": "equity",
+                  "reason": "Asignación interna sintética de resultados a reserva, sin cambiar el patrimonio total."
+                }
+              ]
+            },
+            "comparative": {
+              "position": null,
+              "period": null,
+              "reason": "Primera preparación sintética de ensayo; no se ha incorporado información del ejercicio anterior. No se afirma una dispensa normativa."
+            },
+            "warnings": [
+              "Cifras nominales: pendiente reexpresión en moneda de cierre, incluidos comparativos, patrimonio y flujos.",
+              "Expediente de preparación: no acredita estados contables normativos emitidos ni certificación profesional.",
+              "Información comparativa pendiente de incorporar o justificar conforme al caso de la entidad."
+            ]
+          }
+        },
+        "pdfPages": 11,
+        "xlsxBytes": 18919,
+        "totalsCents": {
+          "assets": 428600,
+          "liabilities": 53600,
+          "equity": 375000,
+          "profit": 65000,
+          "openingCash": 100000,
+          "closingCash": 170000,
+          "cashChange": 70000,
+          "debit": 716600,
+          "credit": 716600
+        },
+        "journal": "Conservado sin agregar ni modificar asientos",
+        "documents": "Conservados",
+        "stock": "Conservado",
+        "treasury": "Conservada"
+      }
+    },
+    {
+      "database": "var/qa-asset-impairment.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-asset-disposal.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-asset-reestimate.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-fixed-assets.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-service-cancellation.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-journal-reversal.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-revenue-accrual.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-exercise-opening.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-year-end.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-service-reestimates.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-service-accruals.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después del recorrido JSON"
+    }
+  ]
+}

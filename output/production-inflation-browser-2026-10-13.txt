@@ -1,0 +1,1097 @@
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Preparación de estados":
+      - /url: /contabilidad/estados
+    - link "Moneda de cierre y RECPAM":
+      - /url: /contabilidad/moneda-cierre
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - CONVERSION EN MONEDA DE CIERRE
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 1 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Valuación de inventario y costo de ventas" [level=1]
+  - paragraph: Apertura y cierres revisables con costo promedio ponderado por SKU y depósito.
+  - button "Preparar cierre valorizado"
+  - heading "Conciliar moneda de cierre por artículo y depósito" [level=2]
+  - generic: Enlazá INT-AI con el inventario al corte. Conservá cantidades y distribuí cada antigüedad entre artículos y depósitos. La conciliación incorpora la base del CPP posterior sin repetir el asiento del ajuste.
+  - generic: Ajuste anual para conciliar inventario
+  - combobox "Ajuste anual para conciliar inventario":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 12/10/2026 · Ensayo · Conciliado"
+  - button "Preparar conciliación de inventario" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Ajuste Referencia En cierre ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Ajuste"
+        - columnheader "Referencia"
+        - columnheader "En cierre ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CI-00000001 12/10/2026 INT-AI-00000001 Materias primas en moneda de cierre QA $ 150,00 Administrador Ver conciliación de inventario":
+        - cell "INT-CI-00000001"
+        - cell "12/10/2026"
+        - cell "INT-AI-00000001"
+        - cell "Materias primas en moneda de cierre QA"
+        - cell "$ 150,00"
+        - cell "Administrador"
+        - cell "Ver conciliación de inventario":
+          - button "Ver conciliación de inventario"
+  - heading "Conciliar conversión en proceso con moneda de cierre" [level=2]
+  - generic: Después de contabilizar el ajuste anual, distribuí las antigüedades del mayor entre las órdenes pendientes. Los materiales conservan su conciliación por artículo y depósito. Revisá por separado el valor recuperable de la producción en proceso antes de emitir estados contables.
+  - generic: Referencia de conciliación de conversión
+  - textbox "Referencia de conciliación de conversión": Conversión en cierre por orden QA navegador
+  - generic: Fundamento de conciliación de conversión
+  - textbox "Fundamento de conciliación de conversión": Antigüedad de septiembre repartida entre las dos órdenes pendientes, con conservación de las imputaciones originales.
+  - group "Lote pc-a · inventory-wip":
+    - generic: Lote pc-a · inventory-wip
+    - paragraph: Sucursal central · Costo anterior $ 40,00
+    - generic: Respaldo del reparto de conversión pc-a · inventory-wip
+    - textbox "Respaldo del reparto de conversión pc-a · inventory-wip": Costo imputado en septiembre a la orden, conciliado con el mayor.
+    - generic: Antigüedad de conversión pc-a · inventory-wip, parte 1
+    - combobox "Antigüedad de conversión pc-a · inventory-wip, parte 1":
+      - option "Seleccionar fuente…"
+      - option "2026-09 · Antes $ 60,00 · En cierre $ 90,00 · Coef. 1.500000000000" [selected]
+    - generic: Importe de conversión pc-a · inventory-wip, parte 1 ARS
+    - spinbutton "Importe de conversión pc-a · inventory-wip, parte 1 ARS": "40"
+    - button "Quitar antigüedad 1 de pc-a · inventory-wip"
+    - button "Agregar antigüedad de pc-a · inventory-wip"
+  - group "Lote pc-b · inventory-wip":
+    - generic: Lote pc-b · inventory-wip
+    - paragraph: Sucursal central · Costo anterior $ 20,00
+    - generic: Respaldo del reparto de conversión pc-b · inventory-wip
+    - textbox "Respaldo del reparto de conversión pc-b · inventory-wip": Costo imputado en septiembre a la orden, conciliado con el mayor.
+    - generic: Antigüedad de conversión pc-b · inventory-wip, parte 1
+    - combobox "Antigüedad de conversión pc-b · inventory-wip, parte 1":
+      - option "Seleccionar fuente…"
+      - option "2026-09 · Antes $ 60,00 · En cierre $ 90,00 · Coef. 1.500000000000" [selected]
+    - generic: Importe de conversión pc-b · inventory-wip, parte 1 ARS
+    - spinbutton "Importe de conversión pc-b · inventory-wip, parte 1 ARS": "20"
+    - button "Quitar antigüedad 1 de pc-b · inventory-wip"
+    - button "Agregar antigüedad de pc-b · inventory-wip"
+  - checkbox "Confirmo las órdenes, antigüedades y su conciliación con el mayor de producción en proceso." [checked]
+  - text: Confirmo las órdenes, antigüedades y su conciliación con el mayor de producción en proceso.
+  - button "Descartar conciliación de conversión"
+  - button "Revisar conciliación de conversión"
+  - dialog "Revisar conversión en moneda de cierre":
+    - heading "Revisar conversión en moneda de cierre" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: INT-AI-00000001 · 12/10/2026 · Serie Ensayo
+    - generic: Conversión antes del ajuste
+    - strong: $ 60,00
+    - generic: Conversión en moneda de cierre
+    - strong: $ 90,00
+    - generic: Diferencia conciliada
+    - strong: $ 30,00
+    - generic: 2 registros
+    - table:
+      - rowgroup:
+        - row "Orden Sucursal Cuenta en proceso Anterior ARS Ajuste ARS En cierre ARS":
+          - columnheader "Orden"
+          - columnheader "Sucursal"
+          - columnheader "Cuenta en proceso"
+          - columnheader "Anterior ARS"
+          - columnheader "Ajuste ARS"
+          - columnheader "En cierre ARS"
+      - rowgroup:
+        - row "pc-a central inventory-wip $ 40,00 $ 20,00 $ 60,00":
+          - cell "pc-a"
+          - cell "central"
+          - cell "inventory-wip"
+          - cell "$ 40,00"
+          - cell "$ 20,00"
+          - cell "$ 60,00"
+        - row "pc-b central inventory-wip $ 20,00 $ 10,00 $ 30,00":
+          - cell "pc-b"
+          - cell "central"
+          - cell "inventory-wip"
+          - cell "$ 20,00"
+          - cell "$ 10,00"
+          - cell "$ 30,00"
+    - generic: 2 registros
+    - table:
+      - rowgroup:
+        - row "Orden Cuenta Origen Anterior ARS En cierre ARS":
+          - columnheader "Orden"
+          - columnheader "Cuenta"
+          - columnheader "Origen"
+          - columnheader "Anterior ARS"
+          - columnheader "En cierre ARS"
+      - rowgroup:
+        - row "pc-a inventory-wip 2026-09 $ 40,00 $ 60,00":
+          - cell "pc-a"
+          - cell "inventory-wip"
+          - cell "2026-09"
+          - cell "$ 40,00"
+          - cell "$ 60,00"
+        - row "pc-b inventory-wip 2026-09 $ 20,00 $ 30,00":
+          - cell "pc-b"
+          - cell "inventory-wip"
+          - cell "2026-09"
+          - cell "$ 20,00"
+          - cell "$ 30,00"
+    - generic: El asiento del ajuste anual ya está contabilizado. Esta constancia conserva la base por orden; al finalizar la fabricación, el CPP trasladará su conversión ajustada desde producción en proceso.
+    - generic: Serie sintética de prueba. Requiere índices y antecedentes reales para su uso en una entidad.
+    - button "Conservar conciliación de conversión"
+  - heading "Valor recuperable del inventario" [level=2]
+  - generic: Compará con el valor neto de realización en la moneda del corte. Revisá la forma de venta y el conjunto completo antes de compensar partidas. Las reversiones necesitan nuevas estimaciones y se limitan al costo sin pérdida.
+  - button "Comparar VNR actual al cierre · INT-AI-00000001"
+  - button "Preparar comparación de inventario"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Pérdida ARS Reversión ARS Neto ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Pérdida ARS"
+        - columnheader "Reversión ARS"
+        - columnheader "Neto ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VI-00000001 12/10/2026 VNR actual de materias primas QA $ 0,00 $ 0,00 $ 150,00 Administrador Ver valor recuperable":
+        - cell "INT-VI-00000001"
+        - cell "12/10/2026"
+        - cell "VNR actual de materias primas QA"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 150,00"
+        - cell "Administrador"
+        - cell "Ver valor recuperable":
+          - button "Ver valor recuperable"
+  - heading "Costos de conversión de producción" [level=2]
+  - generic: "Imputá gastos ya registrados: mano de obra, servicios, depreciaciones y otros costos. Los costos fijos se absorben con actividad normal; ociosidad, ineficiencias y gastos excluidos permanecen en resultados. El CPP posterior incorpora la conversión al terminar cada lote, conservando lo que sigue en proceso."
+  - button "Preparar imputación de producción"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Fecha Referencia Activado original ARS Gasto original ARS Detalle":
+        - columnheader "Constancia"
+        - columnheader "Fecha"
+        - columnheader "Referencia"
+        - columnheader "Activado original ARS"
+        - columnheader "Gasto original ARS"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-PC-00000001 03/09/2026 Conversión completa QA 2026 $ 60,00 $ 47,00 Ver costos de producción":
+        - cell "INT-PC-00000001"
+        - cell "03/09/2026"
+        - cell "Conversión completa QA 2026"
+        - cell "$ 60,00"
+        - cell "$ 47,00"
+        - cell "Ver costos de producción":
+          - button "Ver costos de producción"
+  - heading "Correcciones vinculadas de producción" [level=2]
+  - generic: Revisá nueva información sobre servicios estimados incorporados a proceso, lotes terminados o vendidos. Se conservan las cantidades y el reparto original, incluida la absorción de costos fijos por actividad normal. La constancia registra juntos la reestimación del servicio y el cambio de conversión. Para lotes terminados, conservá primero su CPP y los movimientos pendientes. La revisión incluye un nuevo corte que concilia existencias y costo de ventas. La base de VNR se concilia con el costo bruto revisado y la pérdida conservada. Las bases reexpresadas requieren todavía su puente de moneda.
+  - button "Preparar reestimación vinculada de producción" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - generic: El primer corte incorpora saldos y valores de apertura revisados. Los siguientes calculan las salidas por promedio ponderado y reclasifican compras recibidas desde su cuenta de gasto original. Cada recepción necesita factura vinculada o una estimación total documentada de sus artículos físicos. La estimación reconoce deuda por mercadería sin facturar; la factura posterior la cancela y concilia diferencias de costo. Las notas de compra corrigen el costo desde la recepción o mediante una asignación revisada sobre la apertura, y registran la diferencia en el nuevo corte; no cambian cantidades. Los movimientos de stock hasta el último corte quedan conservados.
+  - generic: Corte de la valuación
+  - strong: 12/10/2026
+  - generic: Costo bruto de existencias al corte
+  - strong: $ 150,00
+  - generic: Valor neto de existencias al corte
+  - strong: $ 150,00
+  - generic: Costo de ventas neto del cierre
+  - strong: $ 0,00
+  - generic: Mercadería sin facturar al corte
+  - strong: $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Tipo Movimientos Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Tipo"
+        - columnheader "Movimientos"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VC-00000001 01/09/2026 Materias primas de conversión QA Apertura 1 Administrador Ver valuación":
+        - cell "INT-VC-00000001"
+        - cell "01/09/2026"
+        - cell "Materias primas de conversión QA"
+        - cell "Apertura"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000002 12/10/2026 Corte anual con dos órdenes pendientes QA Cierre 0 Administrador Ver valuación":
+        - cell "INT-VC-00000002"
+        - cell "12/10/2026"
+        - cell "Corte anual con dos órdenes pendientes QA"
+        - cell "Cierre"
+        - cell "0"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+  - paragraph:
+    - strong: "Base de moneda de cierre:"
+    - text: INT-CI-00000001, corte 12/10/2026. Revisá que las estimaciones de esta operación estén en la misma base monetaria.
+  - heading "Existencias valorizadas · INT-VC-00000002" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "SKU Artículo Depósito Cantidad Unidad Costo medio ARS / unidad Costo bruto ARS Pérdida acumulada ARS Valor neto ARS":
+        - columnheader "SKU"
+        - columnheader "Artículo"
+        - columnheader "Depósito"
+        - columnheader "Cantidad"
+        - columnheader "Unidad"
+        - columnheader "Costo medio ARS / unidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida acumulada ARS"
+        - columnheader "Valor neto ARS"
+    - rowgroup:
+      - row "REM-M-NEG Remera de algodón · M · Negro Depósito principal 10 Unidad $ 15,00 $ 150,00 $ 0,00 $ 150,00":
+        - cell "REM-M-NEG"
+        - cell "Remera de algodón · M · Negro"
+        - cell "Depósito principal"
+        - cell "10"
+        - cell "Unidad"
+        - cell "$ 15,00"
+        - cell "$ 150,00"
+        - cell "$ 0,00"
+        - cell "$ 150,00"
+  - generic: Asientos en la fecha de corte, por sucursal. Los traslados conservan costo y la fabricación incorpora el costo valorizado de sus materiales y las imputaciones revisadas de conversión. Las correcciones de precio de compras alcanzan también ventas y materiales ya consumidos. Un costo de ventas neto negativo en un corte revierte costos anteriores. Las devoluciones físicas se vinculan al remito y a su nota. Las de clientes reponen el costo de la entrega original; las de proveedores descargan CPP y muestran la diferencia con el importe acreditado. Esa diferencia se registra en Diferencias de inventario; revisá esta política y el asiento para tu empresa. La conciliación INT-CI incorpora el ajuste anual al CPP posterior. Revisá la moneda de nuevas adquisiciones y costos recuperados; INT-VI compara el valor neto de realización y conserva pérdidas y reversiones. Las salidas posteriores consumen la pérdida proporcional en el CPP; INT-CI también concilia la pérdida acumulada en moneda de cierre. Revisá el VNR actual al cierre, los materiales anormales y las demás ampliaciones de producción. El costo medio mostrado se redondea a centavos; las salidas se calculan sobre el valor total conservado.
+
+RECUPERADO DESPUÉS DE RECARGAR
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Preparación de estados":
+      - /url: /contabilidad/estados
+    - link "Moneda de cierre y RECPAM":
+      - /url: /contabilidad/moneda-cierre
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - CONVERSION EN MONEDA DE CIERRE
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Valuación de inventario y costo de ventas" [level=1]
+  - paragraph: Apertura y cierres revisables con costo promedio ponderado por SKU y depósito.
+  - button "Preparar cierre valorizado"
+  - heading "Conciliar moneda de cierre por artículo y depósito" [level=2]
+  - generic: Enlazá INT-AI con el inventario al corte. Conservá cantidades y distribuí cada antigüedad entre artículos y depósitos. La conciliación incorpora la base del CPP posterior sin repetir el asiento del ajuste.
+  - generic: Ajuste anual para conciliar inventario
+  - combobox "Ajuste anual para conciliar inventario":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 12/10/2026 · Ensayo · Conciliado"
+  - button "Preparar conciliación de inventario" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Ajuste Referencia En cierre ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Ajuste"
+        - columnheader "Referencia"
+        - columnheader "En cierre ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CI-00000001 12/10/2026 INT-AI-00000001 Materias primas en moneda de cierre QA $ 150,00 Administrador Ver conciliación de inventario":
+        - cell "INT-CI-00000001"
+        - cell "12/10/2026"
+        - cell "INT-AI-00000001"
+        - cell "Materias primas en moneda de cierre QA"
+        - cell "$ 150,00"
+        - cell "Administrador"
+        - cell "Ver conciliación de inventario":
+          - button "Ver conciliación de inventario"
+  - heading "Conciliar conversión en proceso con moneda de cierre" [level=2]
+  - generic: Después de contabilizar el ajuste anual, distribuí las antigüedades del mayor entre las órdenes pendientes. Los materiales conservan su conciliación por artículo y depósito. Revisá por separado el valor recuperable de la producción en proceso antes de emitir estados contables.
+  - generic: Ajuste anual para conciliar conversión
+  - combobox "Ajuste anual para conciliar conversión":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 12/10/2026 · Conciliado"
+  - button "Preparar conciliación de conversión" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Fecha Referencia Anterior ARS En cierre ARS Detalle":
+        - columnheader "Constancia"
+        - columnheader "Fecha"
+        - columnheader "Referencia"
+        - columnheader "Anterior ARS"
+        - columnheader "En cierre ARS"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CP-00000001 12/10/2026 Conversión en cierre por orden QA navegador $ 60,00 $ 90,00 Ver conciliación de conversión":
+        - cell "INT-CP-00000001"
+        - cell "12/10/2026"
+        - cell "Conversión en cierre por orden QA navegador"
+        - cell "$ 60,00"
+        - cell "$ 90,00"
+        - cell "Ver conciliación de conversión":
+          - button "Ver conciliación de conversión"
+  - dialog "Conversión en cierre INT-CP-00000001":
+    - heading "Conversión en cierre INT-CP-00000001" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: Antigüedad de septiembre repartida entre las dos órdenes pendientes, con conservación de las imputaciones originales. · Administrador
+    - paragraph: INT-AI-00000001 · 12/10/2026 · Serie Ensayo
+    - generic: Conversión antes del ajuste
+    - strong: $ 60,00
+    - generic: Conversión en moneda de cierre
+    - strong: $ 90,00
+    - generic: Diferencia conciliada
+    - strong: $ 30,00
+    - generic: 2 registros
+    - table:
+      - rowgroup:
+        - row "Orden Sucursal Cuenta en proceso Anterior ARS Ajuste ARS En cierre ARS":
+          - columnheader "Orden"
+          - columnheader "Sucursal"
+          - columnheader "Cuenta en proceso"
+          - columnheader "Anterior ARS"
+          - columnheader "Ajuste ARS"
+          - columnheader "En cierre ARS"
+      - rowgroup:
+        - row "pc-a central inventory-wip $ 40,00 $ 20,00 $ 60,00":
+          - cell "pc-a"
+          - cell "central"
+          - cell "inventory-wip"
+          - cell "$ 40,00"
+          - cell "$ 20,00"
+          - cell "$ 60,00"
+        - row "pc-b central inventory-wip $ 20,00 $ 10,00 $ 30,00":
+          - cell "pc-b"
+          - cell "central"
+          - cell "inventory-wip"
+          - cell "$ 20,00"
+          - cell "$ 10,00"
+          - cell "$ 30,00"
+    - generic: 2 registros
+    - table:
+      - rowgroup:
+        - row "Orden Cuenta Origen Anterior ARS En cierre ARS":
+          - columnheader "Orden"
+          - columnheader "Cuenta"
+          - columnheader "Origen"
+          - columnheader "Anterior ARS"
+          - columnheader "En cierre ARS"
+      - rowgroup:
+        - row "pc-a inventory-wip 2026-09 $ 40,00 $ 60,00":
+          - cell "pc-a"
+          - cell "inventory-wip"
+          - cell "2026-09"
+          - cell "$ 40,00"
+          - cell "$ 60,00"
+        - row "pc-b inventory-wip 2026-09 $ 20,00 $ 30,00":
+          - cell "pc-b"
+          - cell "inventory-wip"
+          - cell "2026-09"
+          - cell "$ 20,00"
+          - cell "$ 30,00"
+    - generic: El asiento del ajuste anual ya está contabilizado. Esta constancia conserva la base por orden; al finalizar la fabricación, el CPP trasladará su conversión ajustada desde producción en proceso.
+    - generic: Serie sintética de prueba. Requiere índices y antecedentes reales para su uso en una entidad.
+  - heading "Valor recuperable del inventario" [level=2]
+  - generic: Compará con el valor neto de realización en la moneda del corte. Revisá la forma de venta y el conjunto completo antes de compensar partidas. Las reversiones necesitan nuevas estimaciones y se limitan al costo sin pérdida.
+  - button "Comparar VNR actual al cierre · INT-AI-00000001"
+  - button "Preparar comparación de inventario"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Pérdida ARS Reversión ARS Neto ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Pérdida ARS"
+        - columnheader "Reversión ARS"
+        - columnheader "Neto ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VI-00000001 12/10/2026 VNR actual de materias primas QA $ 0,00 $ 0,00 $ 150,00 Administrador Ver valor recuperable":
+        - cell "INT-VI-00000001"
+        - cell "12/10/2026"
+        - cell "VNR actual de materias primas QA"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 150,00"
+        - cell "Administrador"
+        - cell "Ver valor recuperable":
+          - button "Ver valor recuperable"
+  - heading "Costos de conversión de producción" [level=2]
+  - generic: "Imputá gastos ya registrados: mano de obra, servicios, depreciaciones y otros costos. Los costos fijos se absorben con actividad normal; ociosidad, ineficiencias y gastos excluidos permanecen en resultados. El CPP posterior incorpora la conversión al terminar cada lote, conservando lo que sigue en proceso."
+  - button "Preparar imputación de producción"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Fecha Referencia Activado original ARS Gasto original ARS Detalle":
+        - columnheader "Constancia"
+        - columnheader "Fecha"
+        - columnheader "Referencia"
+        - columnheader "Activado original ARS"
+        - columnheader "Gasto original ARS"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-PC-00000001 03/09/2026 Conversión completa QA 2026 $ 60,00 $ 47,00 Ver costos de producción":
+        - cell "INT-PC-00000001"
+        - cell "03/09/2026"
+        - cell "Conversión completa QA 2026"
+        - cell "$ 60,00"
+        - cell "$ 47,00"
+        - cell "Ver costos de producción":
+          - button "Ver costos de producción"
+  - heading "Correcciones vinculadas de producción" [level=2]
+  - generic: Revisá nueva información sobre servicios estimados incorporados a proceso, lotes terminados o vendidos. Se conservan las cantidades y el reparto original, incluida la absorción de costos fijos por actividad normal. La constancia registra juntos la reestimación del servicio y el cambio de conversión. Para lotes terminados, conservá primero su CPP y los movimientos pendientes. La revisión incluye un nuevo corte que concilia existencias y costo de ventas. La base de VNR se concilia con el costo bruto revisado y la pérdida conservada. Las bases reexpresadas requieren todavía su puente de moneda.
+  - button "Preparar reestimación vinculada de producción" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - generic: El primer corte incorpora saldos y valores de apertura revisados. Los siguientes calculan las salidas por promedio ponderado y reclasifican compras recibidas desde su cuenta de gasto original. Cada recepción necesita factura vinculada o una estimación total documentada de sus artículos físicos. La estimación reconoce deuda por mercadería sin facturar; la factura posterior la cancela y concilia diferencias de costo. Las notas de compra corrigen el costo desde la recepción o mediante una asignación revisada sobre la apertura, y registran la diferencia en el nuevo corte; no cambian cantidades. Los movimientos de stock hasta el último corte quedan conservados.
+  - generic: Corte de la valuación
+  - strong: 12/10/2026
+  - generic: Costo bruto de existencias al corte
+  - strong: $ 150,00
+  - generic: Valor neto de existencias al corte
+  - strong: $ 150,00
+  - generic: Costo de ventas neto del cierre
+  - strong: $ 0,00
+  - generic: Mercadería sin facturar al corte
+  - strong: $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Tipo Movimientos Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Tipo"
+        - columnheader "Movimientos"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VC-00000001 01/09/2026 Materias primas de conversión QA Apertura 1 Administrador Ver valuación":
+        - cell "INT-VC-00000001"
+        - cell "01/09/2026"
+        - cell "Materias primas de conversión QA"
+        - cell "Apertura"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000002 12/10/2026 Corte anual con dos órdenes pendientes QA Cierre 0 Administrador Ver valuación":
+        - cell "INT-VC-00000002"
+        - cell "12/10/2026"
+        - cell "Corte anual con dos órdenes pendientes QA"
+        - cell "Cierre"
+        - cell "0"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+  - paragraph:
+    - strong: "Base de moneda de cierre:"
+    - text: INT-CI-00000001, corte 12/10/2026. Revisá que las estimaciones de esta operación estén en la misma base monetaria.
+  - heading "Existencias valorizadas · INT-VC-00000002" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "SKU Artículo Depósito Cantidad Unidad Costo medio ARS / unidad Costo bruto ARS Pérdida acumulada ARS Valor neto ARS":
+        - columnheader "SKU"
+        - columnheader "Artículo"
+        - columnheader "Depósito"
+        - columnheader "Cantidad"
+        - columnheader "Unidad"
+        - columnheader "Costo medio ARS / unidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida acumulada ARS"
+        - columnheader "Valor neto ARS"
+    - rowgroup:
+      - row "REM-M-NEG Remera de algodón · M · Negro Depósito principal 10 Unidad $ 15,00 $ 150,00 $ 0,00 $ 150,00":
+        - cell "REM-M-NEG"
+        - cell "Remera de algodón · M · Negro"
+        - cell "Depósito principal"
+        - cell "10"
+        - cell "Unidad"
+        - cell "$ 15,00"
+        - cell "$ 150,00"
+        - cell "$ 0,00"
+        - cell "$ 150,00"
+  - generic: Asientos en la fecha de corte, por sucursal. Los traslados conservan costo y la fabricación incorpora el costo valorizado de sus materiales y las imputaciones revisadas de conversión. Las correcciones de precio de compras alcanzan también ventas y materiales ya consumidos. Un costo de ventas neto negativo en un corte revierte costos anteriores. Las devoluciones físicas se vinculan al remito y a su nota. Las de clientes reponen el costo de la entrega original; las de proveedores descargan CPP y muestran la diferencia con el importe acreditado. Esa diferencia se registra en Diferencias de inventario; revisá esta política y el asiento para tu empresa. La conciliación INT-CI incorpora el ajuste anual al CPP posterior. Revisá la moneda de nuevas adquisiciones y costos recuperados; INT-VI compara el valor neto de realización y conserva pérdidas y reversiones. Las salidas posteriores consumen la pérdida proporcional en el CPP; INT-CI también concilia la pérdida acumulada en moneda de cierre. Revisá el VNR actual al cierre, los materiales anormales y las demás ampliaciones de producción. El costo medio mostrado se redondea a centavos; las salidas se calculan sobre el valor total conservado.
+
+VERSIÓN FINAL CON NOMBRES DE CUENTAS Y ÓRDENES
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Preparación de estados":
+      - /url: /contabilidad/estados
+    - link "Moneda de cierre y RECPAM":
+      - /url: /contabilidad/moneda-cierre
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - CONVERSION EN MONEDA DE CIERRE
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Valuación de inventario y costo de ventas" [level=1]
+  - paragraph: Apertura y cierres revisables con costo promedio ponderado por SKU y depósito.
+  - button "Preparar cierre valorizado"
+  - heading "Conciliar moneda de cierre por artículo y depósito" [level=2]
+  - generic: Enlazá INT-AI con el inventario al corte. Conservá cantidades y distribuí cada antigüedad entre artículos y depósitos. La conciliación incorpora la base del CPP posterior sin repetir el asiento del ajuste.
+  - generic: Ajuste anual para conciliar inventario
+  - combobox "Ajuste anual para conciliar inventario":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 12/10/2026 · Ensayo · Conciliado"
+  - button "Preparar conciliación de inventario" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Ajuste Referencia En cierre ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Ajuste"
+        - columnheader "Referencia"
+        - columnheader "En cierre ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CI-00000001 12/10/2026 INT-AI-00000001 Materias primas en moneda de cierre QA $ 150,00 Administrador Ver conciliación de inventario":
+        - cell "INT-CI-00000001"
+        - cell "12/10/2026"
+        - cell "INT-AI-00000001"
+        - cell "Materias primas en moneda de cierre QA"
+        - cell "$ 150,00"
+        - cell "Administrador"
+        - cell "Ver conciliación de inventario":
+          - button "Ver conciliación de inventario"
+  - heading "Conciliar conversión en proceso con moneda de cierre" [level=2]
+  - generic: Después de contabilizar el ajuste anual, distribuí las antigüedades del mayor entre las órdenes pendientes. Los materiales conservan su conciliación por artículo y depósito. Revisá por separado el valor recuperable de la producción en proceso antes de emitir estados contables.
+  - generic: Ajuste anual para conciliar conversión
+  - combobox "Ajuste anual para conciliar conversión":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 12/10/2026 · Conciliado"
+  - button "Preparar conciliación de conversión" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Fecha Referencia Anterior ARS En cierre ARS Detalle":
+        - columnheader "Constancia"
+        - columnheader "Fecha"
+        - columnheader "Referencia"
+        - columnheader "Anterior ARS"
+        - columnheader "En cierre ARS"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CP-00000001 12/10/2026 Conversión en cierre por orden QA navegador $ 60,00 $ 90,00 Ver conciliación de conversión":
+        - cell "INT-CP-00000001"
+        - cell "12/10/2026"
+        - cell "Conversión en cierre por orden QA navegador"
+        - cell "$ 60,00"
+        - cell "$ 90,00"
+        - cell "Ver conciliación de conversión":
+          - button "Ver conciliación de conversión"
+  - dialog "Conversión en cierre INT-CP-00000001":
+    - heading "Conversión en cierre INT-CP-00000001" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: Antigüedad de septiembre repartida entre las dos órdenes pendientes, con conservación de las imputaciones originales. · Administrador
+    - paragraph: INT-AI-00000001 · 12/10/2026 · Serie Ensayo
+    - generic: Conversión antes del ajuste
+    - strong: $ 60,00
+    - generic: Conversión en moneda de cierre
+    - strong: $ 90,00
+    - generic: Diferencia conciliada
+    - strong: $ 30,00
+    - generic: 2 registros
+    - table:
+      - rowgroup:
+        - row "Orden Sucursal Cuenta en proceso Anterior ARS Ajuste ARS En cierre ARS":
+          - columnheader "Orden"
+          - columnheader "Sucursal"
+          - columnheader "Cuenta en proceso"
+          - columnheader "Anterior ARS"
+          - columnheader "Ajuste ARS"
+          - columnheader "En cierre ARS"
+      - rowgroup:
+        - row "Lote pc-a Casa Central 1.1.11 · Producción en proceso $ 40,00 $ 20,00 $ 60,00":
+          - cell "Lote pc-a"
+          - cell "Casa Central"
+          - cell "1.1.11 · Producción en proceso"
+          - cell "$ 40,00"
+          - cell "$ 20,00"
+          - cell "$ 60,00"
+        - row "Lote pc-b Casa Central 1.1.11 · Producción en proceso $ 20,00 $ 10,00 $ 30,00":
+          - cell "Lote pc-b"
+          - cell "Casa Central"
+          - cell "1.1.11 · Producción en proceso"
+          - cell "$ 20,00"
+          - cell "$ 10,00"
+          - cell "$ 30,00"
+    - generic: 2 registros
+    - table:
+      - rowgroup:
+        - row "Orden Cuenta Origen Anterior ARS En cierre ARS":
+          - columnheader "Orden"
+          - columnheader "Cuenta"
+          - columnheader "Origen"
+          - columnheader "Anterior ARS"
+          - columnheader "En cierre ARS"
+      - rowgroup:
+        - row "Lote pc-a 1.1.11 · Producción en proceso 2026-09 $ 40,00 $ 60,00":
+          - cell "Lote pc-a"
+          - cell "1.1.11 · Producción en proceso"
+          - cell "2026-09"
+          - cell "$ 40,00"
+          - cell "$ 60,00"
+        - row "Lote pc-b 1.1.11 · Producción en proceso 2026-09 $ 20,00 $ 30,00":
+          - cell "Lote pc-b"
+          - cell "1.1.11 · Producción en proceso"
+          - cell "2026-09"
+          - cell "$ 20,00"
+          - cell "$ 30,00"
+    - generic: El asiento del ajuste anual ya está contabilizado. Esta constancia conserva la base por orden; al finalizar la fabricación, el CPP trasladará su conversión ajustada desde producción en proceso.
+    - generic: Serie sintética de prueba. Requiere índices y antecedentes reales para su uso en una entidad.
+  - heading "Valor recuperable del inventario" [level=2]
+  - generic: Compará con el valor neto de realización en la moneda del corte. Revisá la forma de venta y el conjunto completo antes de compensar partidas. Las reversiones necesitan nuevas estimaciones y se limitan al costo sin pérdida.
+  - button "Comparar VNR actual al cierre · INT-AI-00000001"
+  - button "Preparar comparación de inventario"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Pérdida ARS Reversión ARS Neto ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Pérdida ARS"
+        - columnheader "Reversión ARS"
+        - columnheader "Neto ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VI-00000001 12/10/2026 VNR actual de materias primas QA $ 0,00 $ 0,00 $ 150,00 Administrador Ver valor recuperable":
+        - cell "INT-VI-00000001"
+        - cell "12/10/2026"
+        - cell "VNR actual de materias primas QA"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 150,00"
+        - cell "Administrador"
+        - cell "Ver valor recuperable":
+          - button "Ver valor recuperable"
+  - heading "Costos de conversión de producción" [level=2]
+  - generic: "Imputá gastos ya registrados: mano de obra, servicios, depreciaciones y otros costos. Los costos fijos se absorben con actividad normal; ociosidad, ineficiencias y gastos excluidos permanecen en resultados. El CPP posterior incorpora la conversión al terminar cada lote, conservando lo que sigue en proceso."
+  - button "Preparar imputación de producción"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Fecha Referencia Activado original ARS Gasto original ARS Detalle":
+        - columnheader "Constancia"
+        - columnheader "Fecha"
+        - columnheader "Referencia"
+        - columnheader "Activado original ARS"
+        - columnheader "Gasto original ARS"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-PC-00000001 03/09/2026 Conversión completa QA 2026 $ 60,00 $ 47,00 Ver costos de producción":
+        - cell "INT-PC-00000001"
+        - cell "03/09/2026"
+        - cell "Conversión completa QA 2026"
+        - cell "$ 60,00"
+        - cell "$ 47,00"
+        - cell "Ver costos de producción":
+          - button "Ver costos de producción"
+  - heading "Correcciones vinculadas de producción" [level=2]
+  - generic: Revisá nueva información sobre servicios estimados incorporados a proceso, lotes terminados o vendidos. Se conservan las cantidades y el reparto original, incluida la absorción de costos fijos por actividad normal. La constancia registra juntos la reestimación del servicio y el cambio de conversión. Para lotes terminados, conservá primero su CPP y los movimientos pendientes. La revisión incluye un nuevo corte que concilia existencias y costo de ventas. La base de VNR se concilia con el costo bruto revisado y la pérdida conservada. Las bases reexpresadas requieren todavía su puente de moneda.
+  - button "Preparar reestimación vinculada de producción" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - generic: El primer corte incorpora saldos y valores de apertura revisados. Los siguientes calculan las salidas por promedio ponderado y reclasifican compras recibidas desde su cuenta de gasto original. Cada recepción necesita factura vinculada o una estimación total documentada de sus artículos físicos. La estimación reconoce deuda por mercadería sin facturar; la factura posterior la cancela y concilia diferencias de costo. Las notas de compra corrigen el costo desde la recepción o mediante una asignación revisada sobre la apertura, y registran la diferencia en el nuevo corte; no cambian cantidades. Los movimientos de stock hasta el último corte quedan conservados.
+  - generic: Corte de la valuación
+  - strong: 12/10/2026
+  - generic: Costo bruto de existencias al corte
+  - strong: $ 150,00
+  - generic: Valor neto de existencias al corte
+  - strong: $ 150,00
+  - generic: Costo de ventas neto del cierre
+  - strong: $ 0,00
+  - generic: Mercadería sin facturar al corte
+  - strong: $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Tipo Movimientos Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Tipo"
+        - columnheader "Movimientos"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VC-00000001 01/09/2026 Materias primas de conversión QA Apertura 1 Administrador Ver valuación":
+        - cell "INT-VC-00000001"
+        - cell "01/09/2026"
+        - cell "Materias primas de conversión QA"
+        - cell "Apertura"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000002 12/10/2026 Corte anual con dos órdenes pendientes QA Cierre 0 Administrador Ver valuación":
+        - cell "INT-VC-00000002"
+        - cell "12/10/2026"
+        - cell "Corte anual con dos órdenes pendientes QA"
+        - cell "Cierre"
+        - cell "0"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+  - paragraph:
+    - strong: "Base de moneda de cierre:"
+    - text: INT-CI-00000001, corte 12/10/2026. Revisá que las estimaciones de esta operación estén en la misma base monetaria.
+  - heading "Existencias valorizadas · INT-VC-00000002" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "SKU Artículo Depósito Cantidad Unidad Costo medio ARS / unidad Costo bruto ARS Pérdida acumulada ARS Valor neto ARS":
+        - columnheader "SKU"
+        - columnheader "Artículo"
+        - columnheader "Depósito"
+        - columnheader "Cantidad"
+        - columnheader "Unidad"
+        - columnheader "Costo medio ARS / unidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida acumulada ARS"
+        - columnheader "Valor neto ARS"
+    - rowgroup:
+      - row "REM-M-NEG Remera de algodón · M · Negro Depósito principal 10 Unidad $ 15,00 $ 150,00 $ 0,00 $ 150,00":
+        - cell "REM-M-NEG"
+        - cell "Remera de algodón · M · Negro"
+        - cell "Depósito principal"
+        - cell "10"
+        - cell "Unidad"
+        - cell "$ 15,00"
+        - cell "$ 150,00"
+        - cell "$ 0,00"
+        - cell "$ 150,00"
+  - generic: Asientos en la fecha de corte, por sucursal. Los traslados conservan costo y la fabricación incorpora el costo valorizado de sus materiales y las imputaciones revisadas de conversión. Las correcciones de precio de compras alcanzan también ventas y materiales ya consumidos. Un costo de ventas neto negativo en un corte revierte costos anteriores. Las devoluciones físicas se vinculan al remito y a su nota. Las de clientes reponen el costo de la entrega original; las de proveedores descargan CPP y muestran la diferencia con el importe acreditado. Esa diferencia se registra en Diferencias de inventario; revisá esta política y el asiento para tu empresa. La conciliación INT-CI incorpora el ajuste anual al CPP posterior. Revisá la moneda de nuevas adquisiciones y costos recuperados; INT-VI compara el valor neto de realización y conserva pérdidas y reversiones. Las salidas posteriores consumen la pérdida proporcional en el CPP; INT-CI también concilia la pérdida acumulada en moneda de cierre. Revisá el VNR actual al cierre, los materiales anormales y las demás ampliaciones de producción. El costo medio mostrado se redondea a centavos; las salidas se calculan sobre el valor total conservado.

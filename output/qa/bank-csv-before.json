@@ -1,0 +1,27 @@
+{
+  "documents": [],
+  "entries": [],
+  "stockMoves": [
+    {
+      "id": "bcec7016-bb11-4d25-8712-8e9ebbffc367",
+      "date": "2026-10-13",
+      "productId": "d8243a91-0145-451c-a6cf-9b72413c4367",
+      "depositId": "principal",
+      "quantity": 40,
+      "reason": "Stock inicial de ejemplo (sin valuación contable)",
+      "documentId": "",
+      "branchId": "central"
+    },
+    {
+      "id": "0c5ef127-0ba9-4669-9f2c-4d8f3beea292",
+      "date": "2026-10-13",
+      "productId": "f5a95052-8c5f-4cf2-9e0e-99fa4fa2ad6e",
+      "depositId": "principal",
+      "quantity": 20,
+      "reason": "Stock inicial de ejemplo (sin valuación contable)",
+      "documentId": "",
+      "branchId": "central"
+    }
+  ],
+  "treasuryMoves": []
+}

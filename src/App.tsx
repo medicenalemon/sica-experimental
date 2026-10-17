@@ -1,99 +1,63 @@
+import VatSalesLedgerPage from './pages/gestion/VatSalesLedgerPage'
+import VatLedgerPage from './pages/gestion/VatLedgerPage'
+import ReexpressionPage from './pages/gestion/ReexpressionPage'
+import StatementsPage from './pages/gestion/StatementsPage'
+import FixedAssetsPage from './pages/gestion/FixedAssetsPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { StoreProvider } from '@/state/Store'
 import AppLayout from '@/components/layout/AppLayout'
 import AuthLayout from '@/components/layout/AuthLayout'
 import ProtectedRoute from '@/components/auth/ProtectedRoute'
 import DashboardPage from '@/pages/DashboardPage'
 import LoginPage from '@/pages/auth/LoginPage'
-import PlaceholderPage from '@/components/shared/PlaceholderPage'
+import PartiesPage from '@/pages/gestion/PartiesPage'
+import DocumentsPage from '@/pages/gestion/DocumentsPage'
+import MasterPage from '@/pages/gestion/MasterPage'
+import ReportsPage, { CurrentAccount, InventoryPage, AccountsSummary } from '@/pages/gestion/ReportsPage'
+import InventoryCostPage from '@/pages/gestion/InventoryCostPage'
+import RevenueAccrualsPage from '@/pages/gestion/RevenueAccrualsPage'
+import ServiceAccrualsPage from '@/pages/gestion/ServiceAccrualsPage'
+import AccountingClosePage from '@/pages/gestion/AccountingClosePage'
+import ExerciseOpeningPage from '@/pages/gestion/ExerciseOpeningPage'
+import YearEndClosePage from '@/pages/gestion/YearEndClosePage'
+import AccountingPage from '@/pages/gestion/AccountingPage'
+import TreasuryPage, { ChequesPage } from '@/pages/gestion/TreasuryPage'
+import SessionsPage from '@/pages/gestion/SessionsPage'
+import SettingsPage, { UsersPage, AuditPage } from '@/pages/gestion/SettingsPage'
+import AboutPage from '@/pages/gestion/AboutPage'
+import ImportsPage from '@/pages/gestion/ImportsPage'
+import CardsPage from '@/pages/gestion/CardsPage'
+import BankStatementsPage from '@/pages/gestion/BankStatementsPage'
+import StockReturnsPage from '@/pages/gestion/StockReturnsPage'
+import StockTransfersPage from '@/pages/gestion/StockTransfersPage'
+import ProductionPage from '@/pages/gestion/ProductionPage'
+import ToolsPage from '@/pages/gestion/ToolsPage'
+import ModulePage, { NotFound } from '@/pages/gestion/ModulePage'
+import { modules } from '@/domain/modules'
+import type { Kind, Side } from '@/domain/types'
 
 export default function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<AuthLayout />}>
-          <Route path="/login" element={<LoginPage />} />
-        </Route>
-
-        <Route element={<ProtectedRoute />}>
-          <Route element={<AppLayout />}>
-            {/* ── Inicio ── */}
-          <Route path="/" element={<DashboardPage />} />
-
-          {/* ── Clientes ── */}
-          <Route path="/clientes" element={<PlaceholderPage title="Clientes" description="Módulo de gestión integral de clientes." />} />
-          <Route path="/clientes/alta" element={<PlaceholderPage title="Alta de Clientes" description="Registrar nuevos clientes en el sistema." />} />
-          <Route path="/clientes/ventas" element={<PlaceholderPage title="Ventas" description="Gestionar las ventas a clientes." />} />
-          <Route path="/clientes/cobros" element={<PlaceholderPage title="Cobros" description="Registrar y administrar cobros." />} />
-          <Route path="/clientes/notas" element={<PlaceholderPage title="Notas (Crédito / Débito)" description="Gestión de notas de crédito y débito de clientes." />} />
-          <Route path="/clientes/remitos" element={<PlaceholderPage title="Remitos de Venta" description="Gestión de remitos de venta." />} />
-          <Route path="/clientes/pedidos" element={<PlaceholderPage title="Pedidos de Venta" description="Administrar pedidos de venta pendientes." />} />
-          <Route path="/clientes/cuenta-corriente" element={<PlaceholderPage title="Cuenta Corriente Clientes" description="Consultar saldos y movimientos de clientes." />} />
-
-          {/* ── Proveedores ── */}
-          <Route path="/proveedores" element={<PlaceholderPage title="Proveedores" description="Módulo de gestión integral de proveedores." />} />
-          <Route path="/proveedores/alta" element={<PlaceholderPage title="Alta de Proveedores" description="Registrar nuevos proveedores en el sistema." />} />
-          <Route path="/proveedores/compras" element={<PlaceholderPage title="Compras" description="Gestionar órdenes de compra a proveedores." />} />
-          <Route path="/proveedores/pagos" element={<PlaceholderPage title="Pagos" description="Registrar pagos realizados a proveedores." />} />
-          <Route path="/proveedores/notas" element={<PlaceholderPage title="Notas (Crédito / Débito)" description="Gestión de notas de crédito y débito de proveedores." />} />
-          <Route path="/proveedores/remitos" element={<PlaceholderPage title="Remitos de Compra" description="Gestión de remitos de compra." />} />
-          <Route path="/proveedores/cuenta-corriente" element={<PlaceholderPage title="Cuenta Corriente Proveedores" description="Consultar saldos y movimientos de proveedores." />} />
-
-          {/* ── Finanzas ── */}
-          <Route path="/finanzas" element={<PlaceholderPage title="Finanzas" description="Módulo de gestión financiera integral." />} />
-          <Route path="/finanzas/cajas" element={<PlaceholderPage title="Cajas" description="Administrar cajas y movimientos de efectivo." />} />
-          <Route path="/finanzas/bancos" element={<PlaceholderPage title="Bancos" description="Gestión de cuentas bancarias y conciliaciones." />} />
-          <Route path="/finanzas/cheques" element={<PlaceholderPage title="Cheques" description="Control de cheques emitidos y recibidos." />} />
-          <Route path="/finanzas/impuestos" element={<PlaceholderPage title="Impuestos" description="Gestión de impuestos y obligaciones fiscales." />} />
-          <Route path="/finanzas/cuentas" element={<PlaceholderPage title="Cuentas por Cobrar / Pagar" description="Control de cuentas pendientes de cobro y pago." />} />
-          <Route path="/finanzas/tarjetas" element={<PlaceholderPage title="Tarjetas de Crédito" description="Gestión de pagos con tarjetas de crédito." />} />
-          <Route path="/finanzas/retenciones" element={<PlaceholderPage title="Retenciones y Percepciones" description="Administrar retenciones y percepciones impositivas." />} />
-
-          {/* ── Productos y Servicios ── */}
-          <Route path="/productos" element={<PlaceholderPage title="Productos y Servicios" description="Catálogo de productos y servicios." />} />
-          <Route path="/productos/articulos" element={<PlaceholderPage title="Productos / Artículos (SKU)" description="Gestión del catálogo de artículos con SKU." />} />
-          <Route path="/productos/rubros" element={<PlaceholderPage title="Rubros y Subrubros" description="Clasificación de productos por rubros." />} />
-          <Route path="/productos/servicios" element={<PlaceholderPage title="Servicios" description="Gestión de servicios ofrecidos." />} />
-          <Route path="/productos/variantes" element={<PlaceholderPage title="Variantes" description="Variantes de productos (talle, color, etc.)." />} />
-
-          {/* ── Stock y Logística ── */}
-          <Route path="/stock" element={<PlaceholderPage title="Stock y Logística" description="Gestión de inventario y logística." />} />
-          <Route path="/stock/inventario" element={<PlaceholderPage title="Stock" description="Consultar existencias de stock." />} />
-          <Route path="/stock/depositos" element={<PlaceholderPage title="Depósitos / Logística" description="Administrar depósitos y puntos logísticos." />} />
-          <Route path="/stock/movimientos" element={<PlaceholderPage title="Movimientos de Stock" description="Historial de movimientos de inventario." />} />
-          <Route path="/stock/ajustes" element={<PlaceholderPage title="Ajustes de Stock" description="Realizar ajustes de inventario." />} />
-
-          {/* ── Importaciones ── */}
-          <Route path="/importaciones" element={<PlaceholderPage title="Importaciones (Suba Masiva)" description="Carga masiva de datos al sistema." />} />
-          <Route path="/importaciones/gestionar" element={<PlaceholderPage title="Gestionar Importaciones" description="Iniciar y configurar importaciones masivas." />} />
-          <Route path="/importaciones/historial" element={<PlaceholderPage title="Historial de Importaciones" description="Consultar importaciones realizadas." />} />
-          <Route path="/importaciones/saldos-clientes" element={<PlaceholderPage title="Saldos Clientes" description="Importar saldos iniciales de clientes." />} />
-          <Route path="/importaciones/saldos-proveedores" element={<PlaceholderPage title="Saldos Proveedores" description="Importar saldos iniciales de proveedores." />} />
-
-          {/* ── Reportes ── */}
-          <Route path="/reportes" element={<PlaceholderPage title="Reportes" description="Centro de reportes y analytics." />} />
-          <Route path="/reportes/ventas" element={<PlaceholderPage title="Reportes de Ventas" description="Análisis detallado de ventas." />} />
-          <Route path="/reportes/compras" element={<PlaceholderPage title="Reportes de Compras" description="Análisis detallado de compras." />} />
-          <Route path="/reportes/financieros" element={<PlaceholderPage title="Reportes Financieros" description="Estados financieros y balances." />} />
-          <Route path="/reportes/impositivos" element={<PlaceholderPage title="Reportes Impositivos" description="Reportes de obligaciones fiscales." />} />
-          <Route path="/reportes/inventario" element={<PlaceholderPage title="Reportes de Inventario" description="Análisis de stock e inventario." />} />
-          <Route path="/reportes/cuentas-corrientes" element={<PlaceholderPage title="Reportes de Cuentas Corrientes" description="Estado de cuentas corrientes." />} />
-
-          {/* ── Administración ── */}
-          <Route path="/administracion" element={<PlaceholderPage title="Administración" description="Panel de administración del sistema." />} />
-          <Route path="/administracion/usuarios" element={<PlaceholderPage title="Usuarios y Perfiles" description="Gestionar usuarios, roles y permisos." />} />
-          <Route path="/administracion/sucursales" element={<PlaceholderPage title="Sucursales / Unidades de Negocio" description="Administrar sucursales y puntos de operación." />} />
-          <Route path="/administracion/listas-precios" element={<PlaceholderPage title="Listas de Precios" description="Configurar listas de precios por canal." />} />
-          <Route path="/administracion/parametros" element={<PlaceholderPage title="Parámetros del Sistema" description="Configuración general del sistema." />} />
-          <Route path="/administracion/auditoria" element={<PlaceholderPage title="Auditoría" description="Registro de auditoría y trazabilidad." />} />
-
-          {/* ── Configuración ── */}
-          <Route path="/configuracion" element={<PlaceholderPage title="Configuración" description="Ajustes generales y preferencias del sistema." />} />
-
-          {/* ── 404 ── */}
-          <Route path="*" element={<PlaceholderPage title="Página no encontrada" description="La ruta solicitada no existe en el sistema." />} />
-          </Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  )
+ const operations:[string,Side,Kind][]=[
+ ['/clientes/ventas','cliente','factura'],['/clientes/notas/credito','cliente','credito'],['/clientes/notas/debito','cliente','debito'],['/clientes/cobros','cliente','cobro'],['/clientes/pedidos','cliente','pedido'],['/clientes/remitos','cliente','remito'],
+ ['/proveedores/compras','proveedor','factura'],['/proveedores/notas/credito','proveedor','credito'],['/proveedores/notas/debito','proveedor','debito'],['/proveedores/pagos','proveedor','pago'],['/proveedores/ordenes','proveedor','orden-compra'],['/proveedores/remitos','proveedor','remito'],
+ ]
+ return <StoreProvider><BrowserRouter><Routes><Route element={<AuthLayout/>}><Route path="/login" element={<LoginPage/>}/></Route><Route element={<ProtectedRoute/>}><Route element={<AppLayout/>}>
+ <Route path="/" element={<DashboardPage/>}/><Route path="/produccion" element={<ProductionPage/>}/>
+ {(['cliente','proveedor'] as Side[]).map(side=>{const base=side==='cliente'?'/clientes':'/proveedores';return <Route key={side}><Route path={base} element={<PartiesPage side={side}/>}/><Route path={`${base}/alta`} element={<PartiesPage key={`${side}-form`} side={side} form/>}/><Route path={`${base}/cuenta-corriente`} element={<CurrentAccount side={side}/>}/><Route path={`${base}/notas`} element={<DocumentsPage side={side} kind="credito" notes/>}/></Route>})}
+ {operations.map(([path,side,kind])=>['credito','debito'].includes(kind)?<Route key={path} path={path} element={<DocumentsPage side={side} kind={kind} form/>}/>:<Route key={path}><Route path={path} element={<DocumentsPage side={side} kind={kind}/>}/><Route path={`${path}/${kind==='factura'?'factura':'nuevo'}`} element={<DocumentsPage side={side} kind={kind} form/>}/></Route>)}
+ {modules.map(m=><Route key={m.path} path={m.path} element={<MasterPage key={m.path} path={m.path}/>}/>)}
+ <Route path="/proveedores/vendedores" element={<PartiesPage side="proveedor" sellers/>}/>
+ <Route path="/productos/articulos" element={<MasterPage key="articulos" path="/productos/articulos" products/>}/><Route path="/productos/servicios" element={<MasterPage key="servicios" path="/productos/servicios" products service/>}/>
+ <Route path="/stock/inventario" element={<InventoryPage/>}/><Route path="/stock/movimientos" element={<InventoryPage movements/>}/><Route path="/stock/ajustes" element={<InventoryPage adjustment/>}/>
+ <Route path="/stock/devoluciones" element={<StockReturnsPage/>}/>
+ <Route path="/stock/traslados" element={<StockTransfersPage/>}/>
+ <Route path="/finanzas/bancos/extractos" element={<BankStatementsPage/>}/>
+ <Route path="/finanzas/liquidaciones-tarjetas" element={<CardsPage/>}/><Route path="/finanzas/cajas" element={<TreasuryPage/>}/><Route path="/finanzas/bancos" element={<TreasuryPage type="Banco"/>}/><Route path="/finanzas/cheques" element={<ChequesPage/>}/><Route path="/finanzas/cuentas" element={<AccountsSummary/>}/><Route path="/finanzas/impuestos" element={<ReportsPage type="impositivos"/>}/>
+ <Route path="/reportes" element={<ReportsPage/>}/>{['ventas','compras','financieros','impositivos','inventario','cuentas-corrientes'].map(t=><Route key={t} path={`/reportes/${t}`} element={<ReportsPage key={t} type={t}/>}/>)}
+ <Route path="/contabilidad/conciliacion-iva-ventas" element={<VatSalesLedgerPage/>}/><Route path="/contabilidad/conciliacion-iva" element={<VatLedgerPage/>}/><Route path="/contabilidad/moneda-cierre" element={<ReexpressionPage/>}/><Route path="/contabilidad/estados" element={<StatementsPage/>}/><Route path="/contabilidad/bienes-de-uso" element={<FixedAssetsPage/>}/><Route path="/contabilidad/ingresos-devengados" element={<RevenueAccrualsPage/>}/><Route path="/contabilidad/servicios-devengados" element={<ServiceAccrualsPage/>}/><Route path="/contabilidad/apertura-ejercicio" element={<ExerciseOpeningPage/>}/><Route path="/contabilidad/cierre-resultados" element={<YearEndClosePage/>}/><Route path="/contabilidad/cierres" element={<AccountingClosePage/>}/><Route path="/contabilidad/inventario" element={<InventoryCostPage/>}/><Route path="/contabilidad" element={<AccountingPage/>}/>{['diario','mayor','balance','configuracion'].map(t=><Route key={t} path={`/contabilidad/${t}`} element={<AccountingPage key={t} type={t}/>}/>)}
+ <Route path="/importaciones" element={<ImportsPage/>}/><Route path="/importaciones/gestionar" element={<ImportsPage/>}/><Route path="/importaciones/historial" element={<ImportsPage history/>}/>{['saldos-clientes','saldos-proveedores'].map(t=><Route key={t} path={`/importaciones/${t}`} element={<ImportsPage key={t} type={t}/>}/>)}
+ <Route path="/configuracion" element={<SettingsPage/>}/><Route path="/administracion/parametros" element={<SettingsPage/>}/><Route path="/administracion/sesiones" element={<SessionsPage/>}/><Route path="/administracion/usuarios" element={<UsersPage/>}/><Route path="/administracion/auditoria" element={<AuditPage/>}/><Route path="/onboarding" element={<SettingsPage onboarding/>}/><Route path="/acerca-de" element={<AboutPage/>}/><Route path="/herramientas/calculadora" element={<ToolsPage/>}/>
+ {['/finanzas','/productos','/stock','/administracion','/herramientas'].map(path=><Route key={path} path={path} element={<ModulePage path={path}/>}/>)}
+ <Route path="*" element={<NotFound/>}/>
+ </Route></Route></Routes></BrowserRouter></StoreProvider>
 }

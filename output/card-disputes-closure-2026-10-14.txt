@@ -1,0 +1,220 @@
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas" [expanded]:
+      - generic: Finanzas
+    - link "Cajas y movimientos":
+      - /url: /finanzas/cajas
+    - link "Cajas y cuentas bancarias":
+      - /url: /finanzas/cuentas-tesoreria
+    - link "Bancos y conciliación":
+      - /url: /finanzas/bancos
+    - link "Extractos bancarios":
+      - /url: /finanzas/bancos/extractos
+    - link "Cartera de cheques":
+      - /url: /finanzas/cheques
+    - link "IVA ventas y compras":
+      - /url: /finanzas/impuestos
+    - link "Cuentas por cobrar / pagar":
+      - /url: /finanzas/cuentas
+    - link "Tarjetas de crédito":
+      - /url: /finanzas/tarjetas
+    - link "Liquidaciones de tarjetas":
+      - /url: /finanzas/liquidaciones-tarjetas
+    - link "Retenciones y percepciones":
+      - /url: /finanzas/retenciones
+    - link "Formas de pago y cobro":
+      - /url: /finanzas/formas-pago
+    - link "Entidades bancarias":
+      - /url: /finanzas/entidades
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Contracargos de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 3 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Liquidaciones de tarjetas" [level=1]
+  - paragraph: Cupones pendientes, acreditaciones netas, cargos y retenciones de cada liquidación.
+  - link "Configurar tarjetas":
+    - /url: /finanzas/tarjetas
+  - button "Registrar liquidación" [disabled]:
+    - text: Registrar liquidación
+  - generic: Cupones pendientes
+  - strong: "0"
+  - generic: Bruto por liquidar
+  - strong: $ 0,00
+  - generic: Neto acreditado
+  - strong: $ 950,00
+  - generic: Registrar una liquidación no transfiere dinero. Copiá los importes del resumen y los certificados del agente. Los cargos se registran como gasto bruto; el crédito fiscal de la factura del servicio necesita su comprobante y una imputación contable revisada, sin duplicar el gasto.
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - heading "Historial de liquidaciones" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha Liquidación Tarjeta Banco Bruto Cargos Retenciones Neto Detalle":
+        - columnheader "Fecha"
+        - columnheader "Liquidación"
+        - columnheader "Tarjeta"
+        - columnheader "Banco"
+        - columnheader "Bruto"
+        - columnheader "Cargos"
+        - columnheader "Retenciones"
+        - columnheader "Neto"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "14/10/2026 LIQ-CB-ENSAYO Visa Banco de prueba $ 1.000,00 $ 30,00 $ 20,00 $ 950,00 Ver":
+        - cell "14/10/2026"
+        - cell "LIQ-CB-ENSAYO"
+        - cell "Visa"
+        - cell "Banco de prueba"
+        - cell "$ 1.000,00"
+        - cell "$ 30,00"
+        - cell "$ 20,00"
+        - cell "$ 950,00"
+        - cell "Ver":
+          - button "Ver"
+  - heading "Contracargos y reclamos a procesadoras" [level=2]
+  - button "Registrar contracargo"
+  - generic: Reclamos pendientes de resolución
+  - strong: $ 150,00
+  - generic: Registrá la notificación de la procesadora y el origen afectado. Un reclamo como activo requiere un crédito cierto documentado. Un reclamo contingente reconoce la reducción del origen como pérdida y mantiene un control separado; su cierre no duplica el gasto. Los cupones apartados se excluyen de futuras liquidaciones. Las constancias conservan los recibos y liquidaciones originales.
+  - paragraph:
+    - button "Preparar cuentas de reclamos, pérdidas y recuperos"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Fecha Recibo Referencia Origen Reclamo Pendiente Responsable Acción":
+        - columnheader "Constancia"
+        - columnheader "Fecha"
+        - columnheader "Recibo"
+        - columnheader "Referencia"
+        - columnheader "Origen"
+        - columnheader "Reclamo"
+        - columnheader "Pendiente"
+        - columnheader "Responsable"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "INT-TC-00000001 14/10/2026 INT-RC-X-00001-00000001 CB-ENSAYO-01 Liquidación LIQ-CB-ENSAYO $ 400,00 $ 150,00 Administrador Resolver":
+        - cell "INT-TC-00000001"
+        - cell "14/10/2026"
+        - cell "INT-RC-X-00001-00000001"
+        - cell "CB-ENSAYO-01"
+        - cell "Liquidación LIQ-CB-ENSAYO"
+        - cell "$ 400,00"
+        - cell "$ 150,00"
+        - cell "Administrador"
+        - cell "Resolver":
+          - button "Resolver"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Contracargo Fecha Referencia Resultado Importe Responsable":
+        - columnheader "Constancia"
+        - columnheader "Contracargo"
+        - columnheader "Fecha"
+        - columnheader "Referencia"
+        - columnheader "Resultado"
+        - columnheader "Importe"
+        - columnheader "Responsable"
+    - rowgroup:
+      - row "INT-TR-00000002 INT-TC-00000001 14/10/2026 REF-CB-ENSAYO Reintegrado $ 250,00 Administrador":
+        - cell "INT-TR-00000002"
+        - cell "INT-TC-00000001"
+        - cell "14/10/2026"
+        - cell "REF-CB-ENSAYO"
+        - cell "Reintegrado"
+        - cell "$ 250,00"
+        - cell "Administrador"
+  - dialog "Resolver reclamo a procesadora":
+    - heading "Resolver reclamo a procesadora" [level=2]
+    - button "Cerrar":
+    - generic: Resultado de la resolución *
+    - combobox "Resultado de la resolución *":
+      - option "Reintegrado por procesadora / cupón restituido"
+      - option "Pérdida / cierre de reclamo contingente" [selected]
+      - option "Recupero posterior de una pérdida cerrada"
+    - generic: Fecha contable *
+    - textbox "Fecha contable *": 2026-10-14
+    - generic: Importe ARS *
+    - spinbutton "Importe ARS *": "150"
+    - generic: Referencia del documento de procesadora *
+    - textbox "Referencia del documento de procesadora *": CIE-CB-ENSAYO
+    - generic: Fundamento y evidencia *
+    - textbox "Fundamento y evidencia *": Rechazo definitivo sintético de los $150 restantes. Cierre del control de reclamo.
+    - paragraph: "Disponible del origen / reclamo: $ 150,00. Movimiento bancario: $ 0,00."
+    - generic: Esta resolución cierra el control del reclamo contingente. La pérdida ya registrada se conserva; no genera otro asiento ni movimiento bancario.
+    - textbox "Buscar registros":
+      - /placeholder: Buscar en los registros…
+    - generic: 0 registros
+    - heading "Todavía no hay registros." [level=3]
+    - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+    - generic: El reclamo no cambia el IVA ni las aplicaciones del cliente. Una modificación comercial o una deuda exigible al cliente requiere su propio circuito y fundamento. La registración bancaria es interna y debe conciliarse con el extracto.
+    - button "Confirmar registración revisada" [active]

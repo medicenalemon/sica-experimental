@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-08",
+  "module": "Correcciones de precio por notas de compras recibidas después de la apertura",
+  "tests": {
+    "passed": 169,
+    "failed": 0,
+    "suites": [
+      {
+        "name": "Dominio",
+        "tests": 106,
+        "log": "/tmp/sica-notes-domain.log"
+      },
+      {
+        "name": "Archivos y QR",
+        "tests": 13,
+        "log": "/tmp/sica-notes-files.log"
+      },
+      {
+        "name": "HTTP y persistencia",
+        "tests": 28,
+        "log": "/tmp/sica-notes-http.log"
+      },
+      {
+        "name": "Solicitudes fiscales sintéticas",
+        "tests": 22,
+        "log": "/tmp/sica-notes-fiscal.log"
+      }
+    ]
+  },
+  "checks": {
+    "lint": "passed",
+    "sharedBuild": "passed",
+    "serverBuild": "passed",
+    "gitDiffCheck": "passed"
+  },
+  "uiVerification": {
+    "origin": "http://127.0.0.1:3006/contabilidad/inventario",
+    "revision": 6,
+    "cutDate": "2026-10-04",
+    "synthetic": true,
+    "inventoryARS": 722,
+    "costOfSalesAdjustmentARS": -2,
+    "costOfSalesAccumulatedARS": 58,
+    "noteCreatedAndClosingPostedThroughUI": true,
+    "preservedAfterReload": true,
+    "screenshot": "La API del navegador no pudo capturar la pantalla."
+  },
+  "artifact": "output/inventory-note-example.json",
+  "rules": "docs/inventario-valorizado.md",
+  "limits": [
+    "Asignación de notas sobre compras anteriores a la apertura pendiente",
+    "Devoluciones físicas integradas pendientes",
+    "Conversión completa, valor recuperable e inflación pendientes",
+    "Integración fiscal productiva pendiente"
+  ],
+  "goalComplete": false
+}

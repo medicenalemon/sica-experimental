@@ -1,0 +1,53 @@
+{
+  "synthetic": true,
+  "revision": 6,
+  "number": "INT-VC-00000003",
+  "costVersion": 2,
+  "cutDate": "2026-10-04",
+  "note": {
+    "number": "INT-NC-A-00001-00000001",
+    "date": "2026-10-04",
+    "netARS": 20,
+    "vatARS": 4.2
+  },
+  "inventoryARS": 722,
+  "costOfSalesAdjustmentARS": -2,
+  "costOfSalesAccumulatedARS": 58,
+  "priorPreserved": {
+    "number": "INT-VC-00000002",
+    "cutDate": "2026-10-03",
+    "inventoryARS": 740,
+    "costOfSalesARS": 60
+  },
+  "balances": [
+    {
+      "sku": "REM-M-NEG",
+      "deposit": "Depósito principal",
+      "quantity": 45,
+      "valueARS": 522
+    },
+    {
+      "sku": "PANT-42-AZ",
+      "deposit": "Depósito principal",
+      "quantity": 20,
+      "valueARS": 200
+    }
+  ],
+  "entries": [
+    {
+      "account": "Existencias de mercadería",
+      "debitARS": 0,
+      "creditARS": 18
+    },
+    {
+      "account": "Compras y gastos",
+      "debitARS": 20,
+      "creditARS": 0
+    },
+    {
+      "account": "Costo de mercadería vendida",
+      "debitARS": 0,
+      "creditARS": 2
+    }
+  ]
+}

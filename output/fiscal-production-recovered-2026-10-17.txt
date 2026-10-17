@@ -1,0 +1,113 @@
+Browser tab: 1, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.49:3054/clientes/notas".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.49:3054/clientes/notas
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.49:3054/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.49:3054/
+				7 button (expanded) Description: Clientes, Secondary Actions: Collapse
+				8 link Description: Directorio, Value: 127.0.0.49:3054/clientes
+				9 link Description: Alta de clientes, Value: 127.0.0.49:3054/clientes/alta
+				10 link Description: Ventas y facturas, Value: 127.0.0.49:3054/clientes/ventas
+				11 link Description: Cobros, Value: 127.0.0.49:3054/clientes/cobros
+				12 link Description: Notas de crédito / débito, Value: 127.0.0.49:3054/clientes/notas
+				13 link Description: Pedidos de venta, Value: 127.0.0.49:3054/clientes/pedidos
+				14 link Description: Remitos de venta, Value: 127.0.0.49:3054/clientes/remitos
+				15 link Description: Cuenta corriente, Value: 127.0.0.49:3054/clientes/cuenta-corriente
+				16 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				17 button (collapsed) Description: Finanzas, Secondary Actions: Expand
+				18 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				19 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				20 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				21 button (collapsed) Description: Producción, Secondary Actions: Expand
+				22 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				23 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				24 button (collapsed) Description: Administración, Secondary Actions: Expand
+				25 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				26 link Description: Configuración, Value: 127.0.0.49:3054/configuracion
+				27 link Description: Acerca de, Value: 127.0.0.49:3054/acerca-de
+			28 text Versión experimental
+			29 button Colapsar menú
+		30 container
+			31 text SICA Textil · Producción simulada
+			32 container
+				33 text Responsable Inscripto  ·  Tucumán
+			34 container
+				35 text Sucursal
+				36 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					37 menu
+						38 (selected) Todas las unidades
+						39 Casa Central
+			40 link Description: Acerca de y fuentes, Value: 127.0.0.49:3054/acerca-de
+			41 text AD
+			42 button Cerrar sesión
+			43 text Base compartida · Versión 11 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			44 text SICA / GESTIÓN INTEGRAL
+			45 heading Notas de crédito y débito, Value: 1
+				46 text Notas de crédito y débito
+			47 text Operaciones de gestión interna vinculadas a cuentas corrientes, tesorería y contabilidad.
+			48 link Description: Nota de crédito, Value: 127.0.0.49:3054/clientes/notas/credito
+			49 link Description: Nota de débito, Value: 127.0.0.49:3054/clientes/notas/debito
+			50 text field (settable) Buscar registros
+			51 text 1  registros
+			52 button XLSX
+			53 button PDF
+			54 table
+				55 row
+					56 cell
+						57 text REFERENCIA INTERNA
+					58 cell
+						59 text FECHA
+					60 cell
+						61 text REGISTRO CONTABLE
+					62 cell
+						63 text CLIENTE
+					64 cell
+						65 text TOTAL ARS
+					66 cell
+						67 text ESTADO
+					68 cell
+						69 text ACCIONES
+				70 row
+					71 cell
+						72 text INT-NC-A-00001-00000001
+					73 cell
+						74 text 17/10/2026
+					75 cell
+						76 text 17/10/2026
+					77 cell
+						78 text Cliente monotributista de ensayo
+					79 cell
+						80 text $ 121,00
+					81 cell
+						82 text CAE simulado · sin validez fiscal
+					83 cell
+						84 button Ver
+						85 button ARCA
+			86 container ARCA · Producción simulada
+				87 container
+					88 heading ARCA · Producción simulada, Value: 2
+						89 text ARCA · Producción simulada
+					90 button Cerrar
+				91 container
+					92 text INT-NC-A-00001-00000001  · Total  $ 121,00
+				93 container
+					94 text Ambiente de la solicitud
+					95 pop up button (collapsed, settable) Description: Ambiente de la solicitud, Value: Producción · ambiente configurado, Secondary Actions: Expand
+						96 menu
+							97 (selected) Producción · ambiente configurado
+				98 text Simulación de producción con datos de ensayo. No contacta ARCA ni autoriza un comprobante real.
+				99 container
+					100 text Condición de venta para el comprobante
+					101 text field (disabled) Description: Condición de venta para el comprobante, Value: Cuenta corriente de ensayo
+				102 text Aprobado en producción simulada
+				103 container
+					104 text Punto  00001  · Tipo  3  · Número  00000001
+				105 container
+					106 text CAE simulado 72111111111111  · Vence  2026-12-31
+				107 button Cerrar
+				108 button PDF de simulación con QR
+				109 button Revisar solicitud
+				110 button (disabled) Reintentar la misma solicitud
+
+The focused UI element is 90 button Cerrar

@@ -1,0 +1,466 @@
+Vista previa CSV válida:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas" [expanded]:
+      - generic: Finanzas
+    - link "Cajas y movimientos":
+      - /url: /finanzas/cajas
+    - link "Cajas y cuentas bancarias":
+      - /url: /finanzas/cuentas-tesoreria
+    - link "Bancos y conciliación":
+      - /url: /finanzas/bancos
+    - link "Extractos bancarios":
+      - /url: /finanzas/bancos/extractos
+    - link "Cartera de cheques":
+      - /url: /finanzas/cheques
+    - link "IVA ventas y compras":
+      - /url: /finanzas/impuestos
+    - link "Cuentas por cobrar / pagar":
+      - /url: /finanzas/cuentas
+    - link "Tarjetas de crédito":
+      - /url: /finanzas/tarjetas
+    - link "Liquidaciones de tarjetas":
+      - /url: /finanzas/liquidaciones-tarjetas
+    - link "Retenciones y percepciones":
+      - /url: /finanzas/retenciones
+    - link "Formas de pago y cobro":
+      - /url: /finanzas/formas-pago
+    - link "Entidades bancarias":
+      - /url: /finanzas/entidades
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Extracto CSV de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 1 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Extractos y conciliación bancaria" [level=1]
+  - paragraph: Revisá saldos, vinculá movimientos y conservá la evidencia de cada conciliación.
+  - link "Movimientos bancarios":
+    - /url: /finanzas/bancos
+  - button "Cargar extracto"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - generic: "Los formatos XLSX y CSV usan Fecha (AAAA-MM-DD), Referencia única de operación, Descripcion e Importe ARS con signo: positivo ingreso, negativo egreso. Adaptá el archivo exportado por tu banco a esas columnas. No hay conexión automática con bancos ni conversión de moneda."
+  - dialog "Cargar extracto bancario":
+    - heading "Cargar extracto bancario" [level=2]
+    - button "Cerrar":
+    - generic: Cuenta bancaria *
+    - combobox "Cuenta bancaria *":
+      - option "Banco de prueba" [selected]
+    - generic: Referencia del extracto *
+    - textbox "Referencia del extracto *": extracto-bancario-valido.csv
+    - generic: Desde *
+    - textbox "Desde *": 2026-10-13
+    - generic: Hasta *
+    - textbox "Hasta *": 2026-10-13
+    - generic: Saldo inicial ARS *
+    - textbox "Saldo inicial ARS *": "0"
+    - generic: Saldo final ARS *
+    - textbox "Saldo final ARS *": "0"
+    - button "Descargar modelo XLSX"
+    - generic: Leer archivo XLSX o CSV
+    - button "Leer archivo XLSX o CSV"
+    - generic: CSV en UTF-8, con encabezados Fecha, Referencia, Descripcion e Importe. Se detecta coma, punto y coma o tabulación. Usá comillas para celdas que contienen el separador; la coma decimal necesita comillas en CSV separado por comas. Los saltos de línea dentro de celdas se muestran como espacios.
+    - generic: Filas del extracto
+    - textbox "Filas del extracto":
+      - /placeholder: "Fecha\tReferencia\tDescripcion\tImporte\n2026-10-13\tOP-001\tTransferencia recibida\t10000.00"
+      - text: 2026-10-13 CSV-01 Primera parte, ensayo 2000,00 2026-10-13 CSV-02 Segunda parte; ensayo 4000,00 2026-10-13 CSV-CARGO Cargo pendiente -100,00
+    - generic: "También podés pegar filas desde una planilla: Fecha, Referencia, Descripcion e Importe, separadas por tabulaciones. No uses separadores de miles."
+    - paragraph: "3 filas válidas · Neto de movimientos: $ 5.900,00"
+    - textbox "Buscar registros":
+      - /placeholder: Buscar en los registros…
+    - generic: 3 registros
+    - table:
+      - rowgroup:
+        - row "Fecha Referencia Descripción Importe":
+          - columnheader "Fecha"
+          - columnheader "Referencia"
+          - columnheader "Descripción"
+          - columnheader "Importe"
+      - rowgroup:
+        - row "2026-10-13 CSV-01 Primera parte, ensayo $ 2.000,00":
+          - cell "2026-10-13"
+          - cell "CSV-01"
+          - cell "Primera parte, ensayo"
+          - cell "$ 2.000,00"
+        - row "2026-10-13 CSV-02 Segunda parte; ensayo $ 4.000,00":
+          - cell "2026-10-13"
+          - cell "CSV-02"
+          - cell "Segunda parte; ensayo"
+          - cell "$ 4.000,00"
+        - row "2026-10-13 CSV-CARGO Cargo pendiente -$ 100,00":
+          - cell "2026-10-13"
+          - cell "CSV-CARGO"
+          - cell "Cargo pendiente"
+          - cell "-$ 100,00"
+    - button "Guardar extracto revisado"
+
+Rechazo del CSV inválido:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas" [expanded]:
+      - generic: Finanzas
+    - link "Cajas y movimientos":
+      - /url: /finanzas/cajas
+    - link "Cajas y cuentas bancarias":
+      - /url: /finanzas/cuentas-tesoreria
+    - link "Bancos y conciliación":
+      - /url: /finanzas/bancos
+    - link "Extractos bancarios":
+      - /url: /finanzas/bancos/extractos
+    - link "Cartera de cheques":
+      - /url: /finanzas/cheques
+    - link "IVA ventas y compras":
+      - /url: /finanzas/impuestos
+    - link "Cuentas por cobrar / pagar":
+      - /url: /finanzas/cuentas
+    - link "Tarjetas de crédito":
+      - /url: /finanzas/tarjetas
+    - link "Liquidaciones de tarjetas":
+      - /url: /finanzas/liquidaciones-tarjetas
+    - link "Retenciones y percepciones":
+      - /url: /finanzas/retenciones
+    - link "Formas de pago y cobro":
+      - /url: /finanzas/formas-pago
+    - link "Entidades bancarias":
+      - /url: /finanzas/entidades
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Extracto CSV de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 1 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Extractos y conciliación bancaria" [level=1]
+  - paragraph: Revisá saldos, vinculá movimientos y conservá la evidencia de cada conciliación.
+  - link "Movimientos bancarios":
+    - /url: /finanzas/bancos
+  - button "Cargar extracto"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - generic: "Los formatos XLSX y CSV usan Fecha (AAAA-MM-DD), Referencia única de operación, Descripcion e Importe ARS con signo: positivo ingreso, negativo egreso. Adaptá el archivo exportado por tu banco a esas columnas. No hay conexión automática con bancos ni conversión de moneda."
+  - dialog "Cargar extracto bancario":
+    - heading "Cargar extracto bancario" [level=2]
+    - button "Cerrar":
+    - generic: Cuenta bancaria *
+    - combobox "Cuenta bancaria *":
+      - option "Banco de prueba" [selected]
+    - generic: Referencia del extracto *
+    - textbox "Referencia del extracto *": extracto-bancario-valido.csv
+    - generic: Desde *
+    - textbox "Desde *": 2026-10-13
+    - generic: Hasta *
+    - textbox "Hasta *": 2026-10-13
+    - generic: Saldo inicial ARS *
+    - textbox "Saldo inicial ARS *": "0"
+    - generic: Saldo final ARS *
+    - textbox "Saldo final ARS *": "0"
+    - button "Descargar modelo XLSX"
+    - generic: Leer archivo XLSX o CSV
+    - button "Leer archivo XLSX o CSV"
+    - generic: CSV en UTF-8, con encabezados Fecha, Referencia, Descripcion e Importe. Se detecta coma, punto y coma o tabulación. Usá comillas para celdas que contienen el separador; la coma decimal necesita comillas en CSV separado por comas. Los saltos de línea dentro de celdas se muestran como espacios.
+    - generic: Filas del extracto
+    - textbox "Filas del extracto":
+      - /placeholder: "Fecha\tReferencia\tDescripcion\tImporte\n2026-10-13\tOP-001\tTransferencia recibida\t10000.00"
+    - generic: "También podés pegar filas desde una planilla: Fecha, Referencia, Descripcion e Importe, separadas por tabulaciones. No uses separadores de miles."
+    - paragraph: "0 filas válidas · Neto de movimientos: $ 0,00"
+    - textbox "Buscar registros":
+      - /placeholder: Buscar en los registros…
+    - generic: 0 registros
+    - heading "Todavía no hay registros." [level=3]
+    - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+    - alert: "CSV: falta cerrar una celda entre comillas iniciada en la fila 2."
+    - button "Guardar extracto revisado" [disabled]
+
+Extracto recuperado:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas" [expanded]:
+      - generic: Finanzas
+    - link "Cajas y movimientos":
+      - /url: /finanzas/cajas
+    - link "Cajas y cuentas bancarias":
+      - /url: /finanzas/cuentas-tesoreria
+    - link "Bancos y conciliación":
+      - /url: /finanzas/bancos
+    - link "Extractos bancarios":
+      - /url: /finanzas/bancos/extractos
+    - link "Cartera de cheques":
+      - /url: /finanzas/cheques
+    - link "IVA ventas y compras":
+      - /url: /finanzas/impuestos
+    - link "Cuentas por cobrar / pagar":
+      - /url: /finanzas/cuentas
+    - link "Tarjetas de crédito":
+      - /url: /finanzas/tarjetas
+    - link "Liquidaciones de tarjetas":
+      - /url: /finanzas/liquidaciones-tarjetas
+    - link "Retenciones y percepciones":
+      - /url: /finanzas/retenciones
+    - link "Formas de pago y cobro":
+      - /url: /finanzas/formas-pago
+    - link "Entidades bancarias":
+      - /url: /finanzas/entidades
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Extracto CSV de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Extractos y conciliación bancaria" [level=1]
+  - paragraph: Revisá saldos, vinculá movimientos y conservá la evidencia de cada conciliación.
+  - link "Movimientos bancarios":
+    - /url: /finanzas/bancos
+  - button "Cargar extracto"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Referencia Cuenta Período Saldo inicial Saldo final Filas vinculadas Estado Acción":
+        - columnheader "Referencia"
+        - columnheader "Cuenta"
+        - columnheader "Período"
+        - columnheader "Saldo inicial"
+        - columnheader "Saldo final"
+        - columnheader "Filas vinculadas"
+        - columnheader "Estado"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "CSV de ensayo con separadores entre comillas Banco de prueba 13/10/2026 — 13/10/2026 $ 0,00 $ 5.900,00 0/3 Activo Revisar":
+        - cell "CSV de ensayo con separadores entre comillas"
+        - cell "Banco de prueba"
+        - cell "13/10/2026 — 13/10/2026"
+        - cell "$ 0,00"
+        - cell "$ 5.900,00"
+        - cell "0/3"
+        - cell "Activo"
+        - cell "Revisar":
+          - button "Revisar" [active]
+  - heading "CSV de ensayo con separadores entre comillas · Banco de prueba" [level=2]
+  - button "Cerrar revisión"
+  - paragraph: 13/10/2026 — 13/10/2026 · Cargado por Administrador · Activo
+  - generic: Saldo final del extracto
+  - strong: $ 5.900,00
+  - generic: Saldo SICA al fin del período
+  - strong: $ 0,00
+  - generic: Diferencia sin ajustar
+  - strong: $ 5.900,00
+  - button "Vincular filas seleccionadas" [disabled]
+  - generic: 0 filas · $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 3 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Agrupar Fecha bancaria Referencia Descripción Importe Movimientos SICA Filas del grupo Responsable del último vínculo Acción":
+        - columnheader "Agrupar"
+        - columnheader "Fecha bancaria"
+        - columnheader "Referencia"
+        - columnheader "Descripción"
+        - columnheader "Importe"
+        - columnheader "Movimientos SICA"
+        - columnheader "Filas del grupo"
+        - columnheader "Responsable del último vínculo"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "Seleccionar fila CSV-01 13/10/2026 CSV-01 Primera parte, ensayo $ 2.000,00 Pendiente — — Vincular fila CSV-01":
+        - cell "Seleccionar fila CSV-01":
+          - checkbox "Seleccionar fila CSV-01"
+        - cell "13/10/2026"
+        - cell "CSV-01"
+        - cell "Primera parte, ensayo"
+        - cell "$ 2.000,00"
+        - cell "Pendiente"
+        - cell "—"
+        - cell "—"
+        - cell "Vincular fila CSV-01":
+          - button "Vincular fila CSV-01": Vincular
+      - row "Seleccionar fila CSV-02 13/10/2026 CSV-02 Segunda parte; ensayo $ 4.000,00 Pendiente — — Vincular fila CSV-02":
+        - cell "Seleccionar fila CSV-02":
+          - checkbox "Seleccionar fila CSV-02"
+        - cell "13/10/2026"
+        - cell "CSV-02"
+        - cell "Segunda parte; ensayo"
+        - cell "$ 4.000,00"
+        - cell "Pendiente"
+        - cell "—"
+        - cell "—"
+        - cell "Vincular fila CSV-02":
+          - button "Vincular fila CSV-02": Vincular
+      - row "Seleccionar fila CSV-CARGO 13/10/2026 CSV-CARGO Cargo pendiente -$ 100,00 Pendiente — — Vincular fila CSV-CARGO":
+        - cell "Seleccionar fila CSV-CARGO":
+          - checkbox "Seleccionar fila CSV-CARGO"
+        - cell "13/10/2026"
+        - cell "CSV-CARGO"
+        - cell "Cargo pendiente"
+        - cell "-$ 100,00"
+        - cell "Pendiente"
+        - cell "—"
+        - cell "—"
+        - cell "Vincular fila CSV-CARGO":
+          - button "Vincular fila CSV-CARGO": Vincular
+  - generic: Neto pendiente en extracto
+  - strong: $ 5.900,00
+  - generic: Neto pendiente en SICA hasta el cierre
+  - strong: $ 0,00
+  - generic: Diferencia por explicar
+  - strong: $ 0,00
+  - generic: Extracto − pendientes del extracto + pendientes SICA − saldo SICA
+  - generic: Los netos pueden ser cero aunque existan filas pendientes. Revisá cada movimiento y los saldos de apertura. Un vínculo requiere la misma cuenta, signo e importe exacto. Cargar o vincular el extracto no crea cobros, pagos, gastos ni asientos.
+  - button "Anular extracto sin vínculos"
+  - heading "Historial de revisión" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - generic: "Los formatos XLSX y CSV usan Fecha (AAAA-MM-DD), Referencia única de operación, Descripcion e Importe ARS con signo: positivo ingreso, negativo egreso. Adaptá el archivo exportado por tu banco a esas columnas. No hay conexión automática con bancos ni conversión de moneda."

@@ -1,0 +1,541 @@
+Browser tab: 2, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.50:3055/finanzas/impuestos".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.50:3055/finanzas/impuestos
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.50:3055/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.50:3055/
+				7 button (collapsed) Description: Clientes, Secondary Actions: Expand
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (expanded) Description: Finanzas, Secondary Actions: Collapse
+				260 link Description: Cajas y movimientos, Value: 127.0.0.50:3055/finanzas/cajas
+				261 link Description: Cajas y cuentas bancarias, Value: 127.0.0.50:3055/finanzas/cuentas-tesoreria
+				262 link Description: Bancos y conciliación, Value: 127.0.0.50:3055/finanzas/bancos
+				263 link Description: Extractos bancarios, Value: 127.0.0.50:3055/finanzas/bancos/extractos
+				264 link Description: Cartera de cheques, Value: 127.0.0.50:3055/finanzas/cheques
+				265 link Description: IVA ventas y compras, Value: 127.0.0.50:3055/finanzas/impuestos
+				266 link Description: Cuentas por cobrar / pagar, Value: 127.0.0.50:3055/finanzas/cuentas
+				267 link Description: Tarjetas de crédito, Value: 127.0.0.50:3055/finanzas/tarjetas
+				268 link Description: Liquidaciones de tarjetas, Value: 127.0.0.50:3055/finanzas/liquidaciones-tarjetas
+				269 link Description: Retenciones y percepciones, Value: 127.0.0.50:3055/finanzas/retenciones
+				270 link Description: Formas de pago y cobro, Value: 127.0.0.50:3055/finanzas/formas-pago
+				271 link Description: Entidades bancarias, Value: 127.0.0.50:3055/finanzas/entidades
+				23 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				24 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				25 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				26 button (collapsed) Description: Producción, Secondary Actions: Expand
+				27 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				28 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				29 button (collapsed) Description: Administración, Secondary Actions: Expand
+				30 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				31 link Description: Configuración, Value: 127.0.0.50:3055/configuracion
+				32 link Description: Acerca de, Value: 127.0.0.50:3055/acerca-de
+			33 text Versión experimental
+			34 button Colapsar menú
+		35 container
+			36 text SICA Textil · IVA ventas de ensayo
+			37 container
+				38 text Responsable Inscripto  ·  Tucumán
+			39 container
+				40 text Sucursal
+				41 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					42 menu
+						43 (selected) Todas las unidades
+						44 Casa Central
+						45 Sucursal de ensayo
+			46 link Description: Acerca de y fuentes, Value: 127.0.0.50:3055/acerca-de
+			47 text AD
+			48 button Cerrar sesión
+			49 text Base compartida · Versión 15 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			50 text SICA / GESTIÓN INTEGRAL
+			51 heading IVA ventas y compras, Value: 1
+				52 text IVA ventas y compras
+			53 text Filtrá el período y la sucursal desde el selector superior.
+			54 container
+				55 text Desde
+				56 date field (settable) Description: Desde, Value: 2026-01-01
+					57 container
+						58 stepper
+						59 stepper
+						60 stepper
+					61 pop up button Mostrar selector de fecha Mostrar selector de fecha
+			62 container
+				63 text Hasta
+				64 date field (settable) Description: Hasta, Value: 2026-12-31
+					65 container
+						66 stepper
+						67 stepper
+						68 stepper
+					69 pop up button Mostrar selector de fecha Mostrar selector de fecha
+			70 container
+				71 text Incluir internos X
+				72 checkbox (settable, integer) Description: Incluir internos X, Value: 0
+			73 text Libro de trabajo: no constituye una presentación de IVA Simple. Las identificaciones de proveedores están sin constatación y las ventas pueden estar pendientes de CAE. Las notas de crédito restan. Los comprobantes C no discriminan IVA.
+			74 text field (settable) Buscar registros
+			75 text 4  registros
+			76 button XLSX
+			77 button PDF
+			78 table
+				79 row
+					80 cell
+						81 text FECHA
+					82 cell
+						83 text LIBRO
+					84 cell
+						85 text REFERENCIA
+					86 cell
+						87 text ORIGINAL PROVEEDOR
+					88 cell
+						89 text CUIT
+					90 cell
+						91 text CONTRAPARTE
+					92 cell
+						93 text NETO
+					94 cell
+						95 text IVA
+					96 cell
+						97 text PERCEPCIONES
+					98 cell
+						99 text TOTAL
+					100 cell
+						101 text ESTADO
+				102 row
+					103 cell
+						104 text 01/01/2026
+					105 cell
+						106 text Ventas
+					107 cell
+						108 text INT-FC-A-00001-00000001
+					109 cell
+						110 text —
+					111 cell
+						112 text 20123456786
+					113 cell
+						114 text Comprador Ñandú de ensayo con nombre largo
+					115 cell
+						116 text $ 315,00
+					117 cell
+						118 text $ 42,00
+					119 cell
+						120 text $ 0,00
+					121 cell
+						122 text $ 357,00
+					123 cell
+						124 text CAE simulado · sin validez fiscal
+				125 row
+					126 cell
+						127 text 01/01/2026
+					128 cell
+						129 text Ventas
+					130 cell
+						131 text INT-NC-A-00001-00000001
+					132 cell
+						133 text —
+					134 cell
+						135 text 20123456786
+					136 cell
+						137 text Comprador Ñandú de ensayo con nombre largo
+					138 cell
+						139 text -$ 10,00
+					140 cell
+						141 text -$ 2,10
+					142 cell
+						143 text -$ 0,00
+					144 cell
+						145 text -$ 12,10
+					146 cell
+						147 text CAE simulado · sin validez fiscal
+				148 row
+					149 cell
+						150 text 01/01/2026
+					151 cell
+						152 text Ventas
+					153 cell
+						154 text INT-ND-A-00001-00000001
+					155 cell
+						156 text —
+					157 cell
+						158 text 20123456786
+					159 cell
+						160 text Comprador Ñandú de ensayo con nombre largo
+					161 cell
+						162 text $ 10,00
+					163 cell
+						164 text $ 1,05
+					165 cell
+						166 text $ 0,00
+					167 cell
+						168 text $ 11,05
+					169 cell
+						170 text CAE simulado · sin validez fiscal
+				171 row
+					172 cell
+						173 text 01/01/2026
+					174 cell
+						175 text Ventas
+					176 cell
+						177 text INT-FC-B-00002-00000001
+					178 cell
+						179 text —
+					180 cell
+						181 text 20123456794
+					182 cell
+						183 text Consumidor final de ensayo
+					184 cell
+						185 text $ 100,00
+					186 cell
+						187 text $ 21,00
+					188 cell
+						189 text $ 0,00
+					190 cell
+						191 text $ 121,00
+					192 cell
+						193 text CAE simulado · sin validez fiscal
+			194 heading Preparación para IVA Simple · Ventas ordinarias, Value: 2
+				195 text Preparación para IVA Simple · Ventas ordinarias
+			196 text Prepará ventas A/B autorizadas, en pesos y con CUIT, por mes de emisión de todas las sucursales. Se conserva el receptor y la numeración fiscal originales. Cada venta del mes requiere aprobación en el ambiente elegido; un pendiente bloquea la preparación completa. Homologación y producción simulada generan archivos de ensayo.
+			197 container
+				198 text Mes de ventas para IVA Simple
+				199 date field (settable) Description: Mes de ventas para IVA Simple, Value: 2026-01
+					200 container
+						201 stepper
+						202 stepper
+					203 pop up button Mostrar selector de mes Mostrar selector de mes
+			204 button Preparar ventas para IVA Simple
+			205 text field (settable) Buscar registros
+			206 text 2  registros
+			207 button XLSX
+			208 button PDF
+			272 table
+				273 row
+					274 cell
+						275 text CONSTANCIA
+					276 cell
+						277 text REFERENCIA
+					278 cell
+						279 text AMBIENTE
+					280 cell
+						281 text VENTAS
+					282 cell
+						283 text IVA NETO
+					284 cell
+						285 text RESPONSABLE
+					286 cell
+						287 text ESTADO
+					288 cell
+						289 text DETALLE
+				290 row
+					291 cell
+						292 text INT-IVT-00000002
+					293 cell
+						294 text IVA-VENTAS-UI-2
+					295 cell
+						296 text produccion
+					297 cell
+						298 text 4
+					299 cell
+						300 text $ 61,95
+					301 cell
+						302 text Administrador
+					303 cell
+						304 text ENSAYO · no presentar ante ARCA
+					305 cell
+						306 button Ver preparación de ventas
+				307 row
+					308 cell
+						309 text INT-IVT-00000001
+					310 cell
+						311 text IVA-VENTAS-UI-1
+					312 cell
+						313 text produccion
+					314 cell
+						315 text 4
+					316 cell
+						317 text $ 61,95
+					318 cell
+						319 text Administrador
+					320 cell
+						321 text Versión anterior
+					322 cell
+						323 button Ver preparación de ventas
+			324 container IVA ventas · INT-IVT-00000001
+				325 container
+					326 heading IVA ventas · INT-IVT-00000001, Value: 2
+						327 text IVA ventas · INT-IVT-00000001
+					328 button Cerrar
+				329 container
+					330 text Referencia:  IVA-VENTAS-UI-1 .  Ensayo local del mes completo: ventas de ambas sucursales, notas y originales conservados. Sin conexión ni presentación ARCA.
+				331 container
+					332 text Responsable:  Administrador
+				333 container
+					334 text SICA Textil · IVA ventas de ensayo  · CUIT  30712345671  ·  2026-01
+				335 container
+					336 text Producción  · Todas las sucursales ·  ENSAYO · no presentar ante ARCA
+				337 text Total neto de notas
+				338 text $ 476,95
+				339 text Base gravada neta
+				340 text $ 400,00
+				341 text IVA ventas neto
+				342 text $ 61,95
+				343 text Percepción IIBB neta
+				344 text $ 0,00
+				345 text Contiene homologación o autorizaciones simuladas: los archivos son sólo de ensayo y no se deben presentar.
+				346 text Ventas ordinarias A/B en PES con CUIT, de todas las sucursales por mes de emisión. Revisá otras operaciones y ajustes fuera de este alcance.
+				347 text Se utilizan la numeración fiscal, receptor y valores de la solicitud aprobada; no se sustituyen por referencias internas ni datos actuales del cliente.
+				348 text Las notas de crédito tienen importes positivos en los archivos y restan en los totales. No se agrupan ventas diarias.
+				349 text No sube archivos, no concilia precargas ni confirma la declaración jurada; evitá duplicar comprobantes ya registrados en el portal.
+				350 text 4  registros
+				351 table
+					352 row
+						353 cell
+							354 text EMISIÓN
+						355 cell
+							356 text REFERENCIA INTERNA
+						357 cell
+							358 text NUMERACIÓN FISCAL
+						359 cell
+							360 text CUIT RECEPTOR
+						361 cell
+							362 text RECEPTOR CONSERVADO
+						363 cell
+							364 text DENOMINACIÓN TXT
+						365 cell
+							366 text TOTAL SIN SIGNO
+						367 cell
+							368 text BASE GRAVADA
+						369 cell
+							370 text EXENTO
+						371 cell
+							372 text NO GRAVADO
+						373 cell
+							374 text IVA SIN SIGNO
+						375 cell
+							376 text OPERACIÓN
+						377 cell
+							378 text ALÍCUOTAS
+						379 cell
+							380 text DETALLE
+					381 row
+						382 cell
+							383 text 01/01/2026
+						384 cell
+							385 text INT-ND-A-00001-00000001
+						386 cell
+							387 text Nota de débito A 00001-00000001
+						388 cell
+							389 text 20123456786
+						390 cell
+							391 text Comprador Ñandú de ensayo con nombre largo
+						392 cell
+							393 text Comprador Ñandú de ensayo con
+						394 cell
+							395 text $ 11,05
+						396 cell
+							397 text $ 10,00
+						398 cell
+							399 text $ 0,00
+						400 cell
+							401 text $ 0,00
+						402 cell
+							403 text $ 1,05
+						404 cell
+							405 text 0
+						406 cell
+							407 text 1
+						408 cell
+							409 text 0004: base $ 10,00, IVA $ 1,05
+					410 row
+						411 cell
+							412 text 01/01/2026
+						413 cell
+							414 text INT-NC-A-00001-00000001
+						415 cell
+							416 text Nota de crédito A 00001-00000001
+						417 cell
+							418 text 20123456786
+						419 cell
+							420 text Comprador Ñandú de ensayo con nombre largo
+						421 cell
+							422 text Comprador Ñandú de ensayo con
+						423 cell
+							424 text $ 12,10
+						425 cell
+							426 text $ 10,00
+						427 cell
+							428 text $ 0,00
+						429 cell
+							430 text $ 0,00
+						431 cell
+							432 text $ 2,10
+						433 cell
+							434 text 0
+						435 cell
+							436 text 1
+						437 cell
+							438 text 0005: base $ 10,00, IVA $ 2,10
+					439 row
+						440 cell
+							441 text 01/01/2026
+						442 cell
+							443 text INT-FC-A-00001-00000001
+						444 cell
+							445 text Factura A 00001-00000142
+						446 cell
+							447 text 20123456786
+						448 cell
+							449 text Comprador Ñandú de ensayo con nombre largo
+						450 cell
+							451 text Comprador Ñandú de ensayo con
+						452 cell
+							453 text $ 357,00
+						454 cell
+							455 text $ 300,00
+						456 cell
+							457 text $ 10,00
+						458 cell
+							459 text $ 5,00
+						460 cell
+							461 text $ 42,00
+						462 cell
+							463 text 0
+						464 cell
+							465 text 2
+						466 cell
+							467 text 0005: base $ 100,00, IVA $ 21,00; 0004: base $ 200,00, IVA $ 21,00
+					468 row
+						469 cell
+							470 text 01/01/2026
+						471 cell
+							472 text INT-FC-B-00002-00000001
+						473 cell
+							474 text Factura B 00002-00000001
+						475 cell
+							476 text 20123456794
+						477 cell
+							478 text Consumidor final de ensayo
+						479 cell
+							480 text Consumidor final de ensayo
+						481 cell
+							482 text $ 121,00
+						483 cell
+							484 text $ 100,00
+						485 cell
+							486 text $ 0,00
+						487 cell
+							488 text $ 0,00
+						489 cell
+							490 text $ 21,00
+						491 cell
+							492 text 0
+						493 cell
+							494 text 1
+						495 cell
+							496 text 0005: base $ 100,00, IVA $ 21,00
+				497 container
+					498 text Cabeceras:  1072  bytes; alícuotas:  320  bytes. Registros de 266 y 62 posiciones, ANSI ISO-8859-1 y CRLF. Las notas se escriben sin signo; sus tipos determinan la resta.
+				499 text 1  registros
+				500 table
+					501 row
+						502 cell
+							503 text INTERNO X
+						504 cell
+							505 text EMISIÓN
+						506 cell
+							507 text TOTAL INTERNO
+					508 row
+						509 cell
+							510 text INT-FC-X-00001-00000001
+						511 cell
+							512 text 2026-01-01
+						513 cell
+							514 text $ 30,00
+				515 button Descargar comprobantes de ventas TXT
+				516 button Descargar alícuotas de ventas TXT
+			212 heading Preparación para IVA Simple · Compras ordinarias, Value: 2
+				213 text Preparación para IVA Simple · Compras ordinarias
+			214 text Prepará los TXT de compras A/B/C en pesos por mes de emisión y para todas las sucursales. Los originales y el crédito computable requieren revisión. El criterio puede ser directo, global o mixto. Esta salida no presenta la declaración jurada ni incluye ventas, importaciones o regímenes especiales.
+			215 container
+				216 text Mes de compras para IVA Simple
+				217 date field (settable) Description: Mes de compras para IVA Simple, Value: 2026-10
+					218 container
+						219 stepper
+						220 stepper
+					221 pop up button Mostrar selector de mes Mostrar selector de mes
+			222 button Preparar compras para IVA Simple
+			223 text field (settable) Buscar registros
+			224 text 0  registros
+			225 button XLSX
+			226 button PDF
+			227 heading Todavía no hay registros., Value: 3
+				228 text Todavía no hay registros.
+			229 text Los datos que registres aquí aparecerán en los módulos relacionados.
+			230 heading Ajuste anual del prorrateo de IVA, Value: 2
+				231 text Ajuste anual del prorrateo de IVA
+			232 text Compará la proporción anual definitiva con el crédito prorrateado computado que declare el responsable para cada mes. Las compras de uso común devueltas requieren conciliación con su factura y restitución histórica. Se conserva un papel de trabajo para revisar en el cierre fiscal.
+			233 container
+				234 text Ejercicio para ajuste anual de IVA
+				235 pop up button (collapsed, settable) Description: Ejercicio para ajuste anual de IVA, Value: 01/01/2026 a 31/12/2026, Secondary Actions: Expand
+					236 menu
+						237 (selected) 01/01/2026 a 31/12/2026
+			238 text El ejercicio todavía no terminó. El ajuste anual se prepara una vez concluido el ejercicio completo.
+			239 button (disabled) Preparar ajuste anual de IVA
+			240 text field (settable) Buscar registros
+			241 text 0  registros
+			242 button XLSX
+			243 button PDF
+			244 heading Todavía no hay registros., Value: 3
+				245 text Todavía no hay registros.
+			246 text Los datos que registres aquí aparecerán en los módulos relacionados.
+			247 heading Devengamientos y conciliaciones de ventas sin factura, Value: 2
+				248 text Devengamientos y conciliaciones de ventas sin factura
+			249 text Estas constancias internas complementan el papel de trabajo. No son comprobantes fiscales ni filas para cargar directamente en IVA Simple. La conciliación descuenta el neto e IVA ya reconocidos para que la factura no los duplique. Una fecha contable distinta del nacimiento fiscal necesita revisar la imputación del impuesto.
+			250 text IVA ventas registrado en el período
+			251 text $ 61,95
+			252 text Comprobantes seleccionados más devengamientos y descuentos; sujeto a revisión fiscal.
+			253 text field (settable) Buscar registros
+			254 text 0  registros
+			255 button XLSX
+			256 button PDF
+			257 heading Todavía no hay registros., Value: 3
+				258 text Todavía no hay registros.
+			259 text Los datos que registres aquí aparecerán en los módulos relacionados.
+
+The focused UI element is 328 button Cerrar
+
+IVA ventas · INT-IVT-00000001
+
+Referencia: IVA-VENTAS-UI-1. Ensayo local del mes completo: ventas de ambas sucursales, notas y originales conservados. Sin conexión ni presentación ARCA.
+
+Responsable: Administrador
+
+SICA Textil · IVA ventas de ensayo · CUIT 30712345671 · 2026-01
+
+Producción · Todas las sucursales · ENSAYO · no presentar ante ARCA
+
+Total neto de notas
+$ 476,95
+Base gravada neta
+$ 400,00
+IVA ventas neto
+$ 61,95
+Percepción IIBB neta
+$ 0,00
+Contiene homologación o autorizaciones simuladas: los archivos son sólo de ensayo y no se deben presentar.
+Ventas ordinarias A/B en PES con CUIT, de todas las sucursales por mes de emisión. Revisá otras operaciones y ajustes fuera de este alcance.
+Se utilizan la numeración fiscal, receptor y valores de la solicitud aprobada; no se sustituyen por referencias internas ni datos actuales del cliente.
+Las notas de crédito tienen importes positivos en los archivos y restan en los totales. No se agrupan ventas diarias.
+No sube archivos, no concilia precargas ni confirma la declaración jurada; evitá duplicar comprobantes ya registrados en el portal.
+4 registros
+EMISIÓN	REFERENCIA INTERNA	NUMERACIÓN FISCAL	CUIT RECEPTOR	RECEPTOR CONSERVADO	DENOMINACIÓN TXT	TOTAL SIN SIGNO	BASE GRAVADA	EXENTO	NO GRAVADO	IVA SIN SIGNO	OPERACIÓN	ALÍCUOTAS	DETALLE
+01/01/2026	INT-ND-A-00001-00000001	Nota de débito A 00001-00000001	20123456786	Comprador Ñandú de ensayo con nombre largo	Comprador Ñandú de ensayo con	$ 11,05	$ 10,00	$ 0,00	$ 0,00	$ 1,05	0	1	0004: base $ 10,00, IVA $ 1,05
+01/01/2026	INT-NC-A-00001-00000001	Nota de crédito A 00001-00000001	20123456786	Comprador Ñandú de ensayo con nombre largo	Comprador Ñandú de ensayo con	$ 12,10	$ 10,00	$ 0,00	$ 0,00	$ 2,10	0	1	0005: base $ 10,00, IVA $ 2,10
+01/01/2026	INT-FC-A-00001-00000001	Factura A 00001-00000142	20123456786	Comprador Ñandú de ensayo con nombre largo	Comprador Ñandú de ensayo con	$ 357,00	$ 300,00	$ 10,00	$ 5,00	$ 42,00	0	2	0005: base $ 100,00, IVA $ 21,00; 0004: base $ 200,00, IVA $ 21,00
+01/01/2026	INT-FC-B-00002-00000001	Factura B 00002-00000001	20123456794	Consumidor final de ensayo	Consumidor final de ensayo	$ 121,00	$ 100,00	$ 0,00	$ 0,00	$ 21,00	0	1	0005: base $ 100,00, IVA $ 21,00
+
+Cabeceras: 1072 bytes; alícuotas: 320 bytes. Registros de 266 y 62 posiciones, ANSI ISO-8859-1 y CRLF. Las notas se escriben sin signo; sus tipos determinan la resta.
+
+1 registros
+INTERNO X	EMISIÓN	TOTAL INTERNO
+INT-FC-X-00001-00000001	2026-01-01	$ 30,00
+Descargar comprobantes de ventas TXT
+Descargar alícuotas de ventas TXT

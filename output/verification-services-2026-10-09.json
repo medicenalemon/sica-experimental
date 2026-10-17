@@ -1,0 +1,278 @@
+{
+  "date": "2026-10-09",
+  "synthetic": true,
+  "tests": {
+    "domain": 171,
+    "files": 13,
+    "http": 33,
+    "fiscal": 22,
+    "total": 239
+  },
+  "browser": {
+    "accrual": "Estimación 150 ARS, limpieza/reparación y cuentas revisadas antes de registrar",
+    "invoice": "Factura interna A por 193,60 ARS registrada desde su recepción; 160 netos y 33,60 IVA",
+    "settlement": "Constancia y asiento revisados; diferencia de 10 ARS y estado Conciliado confirmados",
+    "screenshot": "output/service-accruals-2026-10-09.png"
+  },
+  "checks": [
+    {
+      "database": "var/qa-service-accruals.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados",
+      "services": {
+        "accrual": {
+          "number": "INT-DS-00000001",
+          "date": "2026-10-03",
+          "reference": "Contrato sintético de servicios QA",
+          "reason": "Servicios recibidos y consumidos al cierre. Estimación respaldada por un contrato sintético: limpieza 100 ARS y reparación 50 ARS.",
+          "preview": {
+            "date": "2026-10-03",
+            "reference": "Contrato sintético de servicios QA",
+            "reason": "Servicios recibidos y consumidos al cierre. Estimación respaldada por un contrato sintético: limpieza 100 ARS y reparación 50 ARS.",
+            "source": {
+              "id": "a71de3bc-0b01-4962-a04d-ad9aa7c63b8b",
+              "number": "INT-RM-X-00001-00000001",
+              "date": "2026-10-01",
+              "branchId": "central",
+              "partyId": "a2d1d1d8-7e4c-4464-9b2f-7f887de6f182",
+              "lines": [
+                {
+                  "productId": "service-clean",
+                  "quantity": 2,
+                  "unit": "Servicio"
+                },
+                {
+                  "productId": "service-repair",
+                  "quantity": 1,
+                  "unit": "Servicio"
+                }
+              ]
+            },
+            "liabilityId": "2.1.7",
+            "lines": [
+              {
+                "productId": "service-clean",
+                "quantity": 2,
+                "value": 10000,
+                "accountId": "5.8"
+              },
+              {
+                "productId": "service-repair",
+                "quantity": 1,
+                "value": 5000,
+                "accountId": "5.1"
+              }
+            ],
+            "total": 15000,
+            "entry": [
+              {
+                "accountId": "5.8",
+                "debit": 10000,
+                "credit": 0
+              },
+              {
+                "accountId": "5.1",
+                "debit": 5000,
+                "credit": 0
+              },
+              {
+                "accountId": "2.1.7",
+                "debit": 0,
+                "credit": 15000
+              }
+            ]
+          }
+        },
+        "settlement": {
+          "number": "INT-CS-00000001",
+          "date": "2026-10-09",
+          "reference": "Factura conciliada de servicios QA",
+          "reason": "Se revisaron la factura sintética, su cuenta de compra original y la diferencia: limpieza 120 ARS, reparación 40 ARS; se cancela la estimación de 150 ARS.",
+          "preview": {
+            "date": "2026-10-09",
+            "reference": "Factura conciliada de servicios QA",
+            "reason": "Se revisaron la factura sintética, su cuenta de compra original y la diferencia: limpieza 120 ARS, reparación 40 ARS; se cancela la estimación de 150 ARS.",
+            "accrualId": "c5ff3eb5-aa35-41ec-8c5b-c4c54d0907b0",
+            "invoiceId": "ab85697c-70f3-4c19-a73e-77446f46d89a",
+            "invoiceNumber": "INT-FC-A-00001-00000001",
+            "invoiceDate": "2026-10-09",
+            "invoicePostingDate": "2026-10-09",
+            "branchId": "central",
+            "liabilityId": "2.1.7",
+            "purchaseAccountId": "5.1",
+            "estimatedValue": 15000,
+            "invoiceValue": 16000,
+            "difference": 1000,
+            "lines": [
+              {
+                "productId": "service-clean",
+                "estimatedValue": 10000,
+                "invoiceValue": 12000,
+                "difference": 2000,
+                "accountId": "5.8"
+              },
+              {
+                "productId": "service-repair",
+                "estimatedValue": 5000,
+                "invoiceValue": 4000,
+                "difference": -1000,
+                "accountId": "5.1"
+              }
+            ],
+            "entry": [
+              {
+                "accountId": "2.1.7",
+                "debit": 15000,
+                "credit": 0
+              },
+              {
+                "accountId": "5.8",
+                "debit": 2000,
+                "credit": 0
+              },
+              {
+                "accountId": "5.1",
+                "debit": 0,
+                "credit": 17000
+              }
+            ]
+          }
+        },
+        "balancesCents": {
+          "expenseCleaning": 12000,
+          "expenseRepair": 4000,
+          "estimatedLiability": 0,
+          "vatReference": 3360,
+          "suppliers": -19360
+        },
+        "entries": [
+          {
+            "id": "1f290164-2469-492b-a33c-b66485df2a29",
+            "date": "2026-10-03",
+            "concept": "INT-DS-00000001",
+            "branchId": "central",
+            "documentId": "c5ff3eb5-aa35-41ec-8c5b-c4c54d0907b0",
+            "serviceRecordId": "c5ff3eb5-aa35-41ec-8c5b-c4c54d0907b0",
+            "lines": [
+              {
+                "accountId": "5.8",
+                "debit": 10000,
+                "credit": 0
+              },
+              {
+                "accountId": "5.1",
+                "debit": 5000,
+                "credit": 0
+              },
+              {
+                "accountId": "2.1.7",
+                "debit": 0,
+                "credit": 15000
+              }
+            ]
+          },
+          {
+            "id": "5779c9e1-2b02-48bf-b734-0dece158f8bd",
+            "date": "2026-10-09",
+            "concept": "INT-FC-A-00001-00000001",
+            "branchId": "central",
+            "documentId": "ab85697c-70f3-4c19-a73e-77446f46d89a",
+            "lines": [
+              {
+                "accountId": "5.1",
+                "debit": 16000,
+                "credit": 0
+              },
+              {
+                "accountId": "1.1.4",
+                "debit": 3360,
+                "credit": 0
+              },
+              {
+                "accountId": "2.1.1",
+                "debit": 0,
+                "credit": 19360
+              }
+            ]
+          },
+          {
+            "id": "eb09c8e2-5c43-4d4f-b73d-7883e43a09c7",
+            "date": "2026-10-09",
+            "concept": "INT-CS-00000001",
+            "branchId": "central",
+            "documentId": "b751b459-5cde-4d95-a916-306f6c815660",
+            "serviceRecordId": "b751b459-5cde-4d95-a916-306f6c815660",
+            "lines": [
+              {
+                "accountId": "2.1.7",
+                "debit": 15000,
+                "credit": 0
+              },
+              {
+                "accountId": "5.8",
+                "debit": 2000,
+                "credit": 0
+              },
+              {
+                "accountId": "5.1",
+                "debit": 0,
+                "credit": 17000
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    }
+  ]
+}

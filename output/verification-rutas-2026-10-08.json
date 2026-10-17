@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-08",
+  "suites": [
+    {
+      "suite": "domain",
+      "tests": 85,
+      "passed": 85,
+      "failed": 0
+    },
+    {
+      "suite": "files",
+      "tests": 13,
+      "passed": 13,
+      "failed": 0
+    },
+    {
+      "suite": "http",
+      "tests": 27,
+      "passed": 27,
+      "failed": 0
+    },
+    {
+      "suite": "fiscal",
+      "tests": 22,
+      "passed": 22,
+      "failed": 0
+    }
+  ],
+  "total": 147,
+  "scope": "Pruebas locales y servicios fiscales simulados; no emisión fiscal real"
+}

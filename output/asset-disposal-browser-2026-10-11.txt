@@ -1,0 +1,119 @@
+Browser tab: 1, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.16:3021/contabilidad/bienes-de-uso".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 161-162, 167-219, 221-231, 235-273
++					64 stepper
++					65 stepper
++					66 stepper
++			114 heading Depreciaciones conservadas, Value: 2
++				115 text Depreciaciones conservadas
++			116 text field (settable) Buscar registros
++			117 text 2  registros
++			118 button XLSX
++			119 button PDF
++			120 table
++				121 row
++					122 cell
++						123 text CONSTANCIA
++					124 cell
++						125 text CORTE GLOBAL
++					126 cell
++						127 text REFERENCIA
++					128 cell
++						129 text CARGO GLOBAL ARS
++					130 cell
++						131 text RESPONSABLE
++					132 cell
++						133 text DETALLE
++				134 row
++					135 cell
++						136 text INT-DP-00000001
++					137 cell
++						138 text 10/10/2026
++					139 cell
++						140 text Cargo sintético al 2026-10-10
++					141 cell
++						142 text $ 300,00
++					143 cell
++						144 text Administrador
++					145 cell
++						146 button Ver depreciación
++				147 row
++					148 cell
++						149 text INT-DP-00000002
++					150 cell
++						151 text 20/10/2026
++					152 cell
++						153 text Cargo sintético al 2026-10-20
++					154 cell
++						155 text $ 300,00
++					156 cell
++						157 text Administrador
++					158 cell
++						159 button Ver depreciación
++			160 heading Puestas en marcha conservadas, Value: 2
++				161 text Puestas en marcha conservadas
++			162 text field (settable) Buscar registros
+~			163 text 0  registros
+~			164 button XLSX
+~			165 button PDF
+~			166 heading Todavía no hay registros., Value: 3
++				167 text Todavía no hay registros.
++			168 text Los datos que registres aquí aparecerán en los módulos relacionados.
++			169 heading Cambios de estimaciones conservados, Value: 2
++				170 text Cambios de estimaciones conservados
++			171 text field (settable) Buscar registros
++			172 text 0  registros
++			173 button XLSX
++			174 button PDF
++			175 heading Todavía no hay registros., Value: 3
++				176 text Todavía no hay registros.
++			177 text Los datos que registres aquí aparecerán en los módulos relacionados.
++			178 heading Bajas conservadas, Value: 2
++				179 text Bajas conservadas
++			180 button Preparar cuentas de bajas
++			181 text field (settable) Buscar registros
++			182 text 1  registros
++			183 button XLSX
++			184 button PDF
++			185 table
++				186 row
++					187 cell
++						188 text CONSTANCIA
++					189 cell
++						190 text FECHA
++					191 cell
++						192 text BIEN
++					193 cell
++						194 text CAUSA
++					195 cell
++						196 text NETO RETIRADO ARS
++					197 cell
++						198 text VENTA NETA ARS
++					199 cell
++						200 text RESULTADO ARS
++					201 cell
++						202 text DETALLE
++				203 row
++					204 cell
++						205 text INT-BA-00000001
++					206 cell
++						207 text 20/10/2026
++					208 cell
++						209 text INT-BU-00000001
++					210 cell
++						211 text Venta
++					212 cell
++						213 text $ 400,00
++					214 cell
++						215 text $ 800,00
++					216 cell
++						217 text $ 400,00
++					218 cell
++						219 button Ver baja
+~			220 text El modelo inicial usa costo nominal y depreciación lineal diaria, con vida útil y residual fundamentados; no presume tasas fiscales. Los cortes incluyen todas las sucursales y contabilizan sólo el cargo nuevo. Los cambios fundamentados de vida útil y residual conservan los cargos anteriores y se aplican hacia adelante. Las bajas totales conservan sus antecedentes y separan su resultado. Las notas, bajas parciales o diferidas, deterioro, revaluación, costos de fabricación e inflación requieren ampliar sus circuitos antes de emitir estados contables.
+The focused UI element is 64 stepper
+
+DETALLE RECUPERADO
+Browser tab: 1, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.16:3021/contabilidad/bienes-de-uso".
+There has been no change in the accessibility tree.
+The focused UI element is 225 button Cerrar

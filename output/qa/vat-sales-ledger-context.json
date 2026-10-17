@@ -1,0 +1,24 @@
+{
+  "input": {
+    "sourceId": "e78c62fa-5251-4d79-80c7-f42548bbf663",
+    "asOf": "2026-09-30",
+    "accountIds": [
+      "2.1.2"
+    ],
+    "manual": [],
+    "reference": "CONCILIACION-VENTAS-1",
+    "reason": "Comparar comprobantes y diario, con devengamiento anterior y un ingreso del mes todavía sin factura.",
+    "previousId": "",
+    "confirmed": true
+  },
+  "adjustment": {
+    "entryId": "0dfa0f58-6838-44f7-85c1-1fae18d286ed",
+    "reference": "RESPALDO-IVA-200",
+    "reason": "Reclasificación sintética conservada de 200 centavos al IVA débito."
+  },
+  "preparationId": "e78c62fa-5251-4d79-80c7-f42548bbf663",
+  "priorAccrualId": "1804a575-ae18-4472-8c39-068b1e9a4093",
+  "settlementId": "9fad3eee-e3e5-479a-96bb-dfb413819792",
+  "unbilledAccrualId": "e280b443-b9bd-4ee7-b893-11f43ee537fe",
+  "invoiceWithPriorId": "d73589db-b1fa-446e-a4bc-1cdce6735919"
+}

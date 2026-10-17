@@ -1,0 +1,233 @@
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores" [expanded]:
+      - generic: Proveedores
+    - link "Directorio":
+      - /url: /proveedores
+    - link "Alta de proveedores":
+      - /url: /proveedores/alta
+    - link "Compras y facturas":
+      - /url: /proveedores/compras
+    - link "Pagos":
+      - /url: /proveedores/pagos
+    - link "Notas de crédito / débito":
+      - /url: /proveedores/notas
+    - link "Órdenes de compra":
+      - /url: /proveedores/ordenes
+    - link "Remitos de compra":
+      - /url: /proveedores/remitos
+    - link "Cuenta corriente":
+      - /url: /proveedores/cuenta-corriente
+    - link "Centros de costos":
+      - /url: /proveedores/centros-costos
+    - link "Vendedores":
+      - /url: /proveedores/vendedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Originales de proveedores
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 3 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Factura de proveedor" [level=1]
+  - paragraph: Al guardar, SICA registra todos los movimientos relacionados en una sola operación.
+  - link "Volver":
+    - /url: /proveedores/compras
+    - text: Volver
+  - generic: Cargá los importes y fecha del comprobante recibido. Podés identificar el original junto con la compra.
+  - heading "Datos generales" [level=2]
+  - generic: Fecha *
+  - textbox "Fecha *": 2026-10-15
+  - generic: Sucursal *
+  - combobox "Sucursal *":
+    - option "Casa Central" [selected]
+  - generic: Proveedor *
+  - combobox "Proveedor *":
+    - option "Seleccionar…"
+    - option "PRO-00001 · Proveedor textil de prueba" [selected]
+  - generic: CUIT
+  - textbox "CUIT": "30712345671"
+  - generic: Condición IVA
+  - textbox "Condición IVA": Responsable Inscripto
+  - generic: Domicilio
+  - textbox "Domicilio": San Miguel de Tucumán
+  - generic: Clase *
+  - combobox "Clase *":
+    - option "A" [selected]
+    - option "B"
+    - option "C"
+    - option "X"
+  - generic: "Sugerida por condición fiscal: A"
+  - generic: Vencimiento
+  - textbox "Vencimiento": 2026-10-15
+  - generic: Comprobante asociado
+  - combobox "Comprobante asociado":
+    - option "Sin asociación" [selected]
+  - generic: Centro de costos
+  - combobox "Centro de costos":
+    - option "Sin asignar" [selected]
+    - option "Gastos estructurales"
+    - option "Gastos de producción"
+    - option "Materias primas"
+    - option "Producto terminado"
+    - option "Servicios industriales"
+    - option "Gastos administrativos"
+    - option "Sueldos de producción"
+    - option "Sueldos de administración"
+  - heading "Detalle de productos y servicios" [level=2]
+  - table:
+    - rowgroup:
+      - row "Artículo Cantidad Unidad Precio neto ARS IVA Desc. % Total":
+        - columnheader "Artículo"
+        - columnheader "Cantidad"
+        - columnheader "Unidad"
+        - columnheader "Precio neto ARS"
+        - columnheader "IVA"
+        - columnheader "Desc. %"
+        - columnheader "Total"
+        - columnheader
+    - rowgroup:
+      - row "REM-M-NEG · Remera de algodón · M · Negro 1 Unidad 100 21 0 $ 121,00 Quitar línea 1":
+        - cell "REM-M-NEG · Remera de algodón · M · Negro":
+          - combobox "Artículo línea 1":
+            - option "Seleccionar SKU…"
+            - option "REM · Remera de algodón"
+            - option "REM-M · Remera de algodón · Talle M"
+            - option "REM-M-NEG · Remera de algodón · M · Negro" [selected]
+            - option "PANT-42-AZ · Pantalón · 42 · Azul"
+        - cell "1":
+          - spinbutton "Cantidad línea 1": "1"
+        - cell "Unidad":
+          - combobox:
+            - option "Unidad" [selected]
+            - option "Metro"
+            - option "Centímetro"
+            - option "Milímetro"
+            - option "Kilogramo"
+            - option "Gramo"
+            - option "Litro"
+            - option "Kilómetro"
+            - option "Docena"
+            - option "Caja"
+        - cell "100":
+          - spinbutton "Precio línea 1": "100"
+        - cell "21":
+          - combobox:
+            - option "21" [selected]
+            - option "10.5"
+            - option "27"
+            - option "5"
+            - option "2.5"
+            - option "0"
+            - option "Exento"
+            - option "No gravado"
+        - cell "0":
+          - spinbutton "Descuento línea 1": "0"
+        - cell "$ 121,00"
+        - cell "Quitar línea 1":
+          - button "Quitar línea 1":
+  - button "Agregar artículo":
+    - text: Agregar artículo
+  - heading "Original recibido del proveedor" [level=2]
+  - checkbox "Identificar original al guardar" [checked]
+  - text: Identificar original al guardar
+  - generic: La identificación y la compra se guardan juntas. Un número duplicado rechaza toda la operación. Copiá los datos del original; su autorización permanece sin constatación ARCA.
+  - generic: CUIT emisor del original
+  - textbox "CUIT emisor del original": "30712345671"
+  - generic: CUIT receptor del original
+  - textbox "CUIT receptor del original": "30712345671"
+  - generic: Punto de venta del proveedor *
+  - spinbutton "Punto de venta del proveedor *": "4"
+  - generic: Número original del comprobante *
+  - spinbutton "Número original del comprobante *": "43"
+  - generic: Autorización informada
+  - combobox "Autorización informada":
+    - option "Sin consignar" [selected]
+    - option "CAE"
+    - option "CAEA"
+    - option "CAI"
+  - heading "Percepciones y totales" [level=2]
+  - generic: Percepción IIBB ARS
+  - spinbutton "Percepción IIBB ARS": "0"
+  - generic: Jurisdicción
+  - combobox "Jurisdicción":
+    - option "Buenos Aires"
+    - option "CABA"
+    - option "Catamarca"
+    - option "Chaco"
+    - option "Chubut"
+    - option "Córdoba"
+    - option "Corrientes"
+    - option "Entre Ríos"
+    - option "Formosa"
+    - option "Jujuy"
+    - option "La Pampa"
+    - option "La Rioja"
+    - option "Mendoza"
+    - option "Misiones"
+    - option "Neuquén"
+    - option "Río Negro"
+    - option "Salta"
+    - option "San Juan"
+    - option "San Luis"
+    - option "Santa Cruz"
+    - option "Santa Fe"
+    - option "Santiago del Estero"
+    - option "Tierra del Fuego"
+    - option "Tucumán" [selected]
+  - generic: Referencia / régimen
+  - textbox "Referencia / régimen"
+  - heading "Información adicional" [level=2]
+  - generic: Responsable
+  - textbox "Responsable": Administrador
+  - generic: Observaciones
+  - textbox "Observaciones": Compra sintética con identificación conjunta del original.
+  - generic: Neto $ 100,00
+  - generic: IVA $ 21,00
+  - generic: Percepciones $ 0,00
+  - strong: Total $ 121,00
+  - link "Volver":
+    - /url: /proveedores/compras
+    - text: Volver
+  - button "Guardar operación" [active]:
+    - text: Guardar operación

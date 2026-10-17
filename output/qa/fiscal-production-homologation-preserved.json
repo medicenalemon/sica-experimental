@@ -1,0 +1,15 @@
+{
+  "company_id": "sica",
+  "environment": "homologacion",
+  "document_id": "4082565e-fb39-4f8d-a4a8-78805c9c92d8",
+  "issuer": "30712345671",
+  "point": 1,
+  "type": 1,
+  "number": 42,
+  "state": "aprobado",
+  "request": "{\"issuer\":\"30712345671\",\"point\":1,\"type\":1,\"letter\":\"A\",\"documentId\":\"4082565e-fb39-4f8d-a4a8-78805c9c92d8\",\"detail\":{\"Concepto\":1,\"DocTipo\":80,\"DocNro\":\"20123456786\",\"CbteFch\":\"20261017\",\"ImpTotal\":24200,\"ImpTotConc\":0,\"ImpNeto\":20000,\"ImpOpEx\":0,\"ImpTrib\":0,\"ImpIVA\":4200,\"MonId\":\"PES\",\"MonCotiz\":1,\"CondicionIVAReceptorId\":6,\"CbteDesde\":42,\"CbteHasta\":42},\"iva\":[{\"Id\":5,\"BaseImp\":20000,\"Importe\":4200}],\"tributes\":[],\"associated\":[],\"snapshot\":{\"saleTerms\":\"Cuenta corriente de ensayo\",\"issuer\":{\"name\":\"SICA Textil · Producción simulada\",\"cuit\":\"30712345671\",\"iibbRegistration\":\"Inscripción sintética · sin valor registral\",\"activityStart\":\"2020-01-01\",\"address\":\"Av. de ensayo 123, Tucumán\",\"iva\":\"Responsable Inscripto\"},\"receiver\":{\"name\":\"Cliente monotributista de ensayo\",\"cuit\":\"20123456786\",\"address\":\"Domicilio sintético del receptor\",\"iva\":\"Responsable Monotributo\"},\"lines\":[{\"productId\":\"145b18b7-971f-467b-82ab-c157c358e764\",\"description\":\"Remera textil de ensayo\",\"quantity\":2,\"unit\":\"Unidad\",\"price\":10000,\"tax\":\"21\",\"discount\":0}],\"branchName\":\"Casa Central\"}}",
+  "options": "{\"saleTerms\":\"Cuenta corriente de ensayo\"}",
+  "signature": "bc4f9e9f541cdc3f17fe0b12c9a725dfdcf02fba9792e85b88cb36a14fa92de4",
+  "result": "{\"state\":\"aprobado\",\"cae\":\"62111111111111\",\"expires\":\"2026-12-31\",\"messages\":[],\"simulated\":true}",
+  "updated": "2026-10-17T17:35:25.240Z"
+}

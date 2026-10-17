@@ -1,0 +1,12 @@
+SICA · Antigüedad de cuentas al 2026-10-14
+Reporte de gestión interna · ARS · Sin autorización fiscal
+
+
+ Tipo               Código             Contraparte           Sucursal       A vencer /   1-30 días   31-60 días   61-90 días   Más de 90 días   Sin vencimiento   A favor sin   Saldo neto
+                                                                            vence hoy                                                           informado         aplicar
+
+
+ A cobrar           CLI-00001          Cliente               Casa Central   $ 300,00     $ 200,00    $ 400,00     $ 500,00     $ 600,00         $ 700,00          $ 50,00       $ 2.650,00
+                                       mayorista de
+                                       prueba
+

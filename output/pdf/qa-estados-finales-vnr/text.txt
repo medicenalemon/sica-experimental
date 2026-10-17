@@ -1,0 +1,288 @@
+SICA - Expediente de preparación de estados
+INT-AI-00000001-VNR - SICA QA - INVENTARIO NETO EN MONEDA DE CIERRE - 2026-01-01 a 2026-10-11
+
+
+PAPEL DE TRABAJO EN MONEDA DE CIERRE - ARS - Pendiente revision y emision profesional
+
+Referencia: INT-AI-00000001 · Estados finales con VNR actual
+
+Responsable: Administrador
+
+Fundamento: Preparación anual más comparaciones actuales de inventario, con costo y pérdida conciliados. No se reexpresan otra vez los mismos importes.
+
+Marco registrado: RT 54 / NUA · revisar adopción jurisdiccional
+
+CUIT: No informado - Provincia: Tucumán - Actividad: Comercio textil
+
+Efectivo y equivalentes: Caja y depósitos bancarios a la vista, de libre disponibilidad; sin inversiones equivalentes ni efectivo restringido en esta prueba.
+
+Comparativo patrimonial: Pendiente
+
+Comparativo del período: Pendiente
+
+Fundamento comparativo: Ensayo de primera aplicación: sin antecedentes comparativos incorporados; no se presume dispensa normativa.
+
+Índices sintéticos de ensayo: este expediente no debe usarse para una entidad real.
+
+Preparación en moneda de cierre con mediciones y orígenes revisados; faltan las restantes verificaciones y emisión profesional.
+
+El ajuste contable no calcula el ajuste por inflación impositivo ni el impuesto diferido.
+
+No se generan asientos: el diario conserva sus importes de origen. El cierre nominal no incorpora automáticamente esta preparación.
+
+Comparativos en moneda de cierre pendientes; no se presentan cifras nominales como ajustadas.
+
+
+
+
+INT-AI-00000001-VNR - Moneda de cierre - Página 1 de 10
+SICA - Situación patrimonial
+INT-AI-00000001-VNR - SICA QA - INVENTARIO NETO EN MONEDA DE CIERRE - 2026-01-01 a 2026-10-11
+
+
+PAPEL DE TRABAJO EN MONEDA DE CIERRE - ARS - Pendiente revision y emision profesional
+
+ Concepto                                                                         Actual ARS   Comparativo ARS   Notas
+
+
+ Activo corriente · Bienes de cambio                                              800,00       Pendiente         Nota 2
+
+ Total activo corriente                                                           800,00       Pendiente
+
+ Total activo no corriente                                                        0,00         Pendiente
+
+ Total activo                                                                     800,00       Pendiente
+
+ Total pasivo corriente                                                           0,00         Pendiente
+
+ Total pasivo no corriente                                                        0,00         Pendiente
+
+ Total pasivo                                                                     0,00         Pendiente
+
+ Patrimonio neto (ver evolución)                                                  800,00       Pendiente         Nota 3
+
+ Diferencia de conciliación                                                       0,00         Pendiente
+
+
+
+
+INT-AI-00000001-VNR - Moneda de cierre - Página 2 de 10
+SICA - Resultados
+INT-AI-00000001-VNR - SICA QA - INVENTARIO NETO EN MONEDA DE CIERRE - 2026-01-01 a 2026-10-11
+
+
+PAPEL DE TRABAJO EN MONEDA DE CIERRE - ARS - Pendiente revision y emision profesional
+
+ Concepto                                                                         Actual ARS   Comparativo ARS   Notas
+
+
+ Gastos · Pérdidas por desvalorización de inventario                              700,00       Pendiente         Nota 7
+
+ Total ingresos                                                                   0,00         Pendiente
+
+ Total gastos                                                                     700,00       Pendiente
+
+ Resultado del período                                                            -700,00      Pendiente         Nota 2
+
+
+
+
+INT-AI-00000001-VNR - Moneda de cierre - Página 3 de 10
+SICA - Evolución patrimonio
+INT-AI-00000001-VNR - SICA QA - INVENTARIO NETO EN MONEDA DE CIERRE - 2026-01-01 a 2026-10-11
+
+
+PAPEL DE TRABAJO EN MONEDA DE CIERRE - ARS - Pendiente revision y emision profesional
+
+ Variación                                                Capital    Ajuste capital   Aportes irrev.   Primas   Reservas   No asignados   Diferidos   Total ARS   Comparativo
+                                                                                                                                                                  total
+
+
+ Saldo inicial                                            0,00       0,00             0,00             0,00     0,00       0,00           0,00        0,00        Pendiente
+
+ Otras variaciones · 2026-09-30 · INT-VC-00000001 ·       1.000,00   500,00           0,00             0,00     0,00       0,00           0,00        1.500,00    Pendiente
+ Costo previo a la pérdida anual QA · CPP
+
+ Resultado del período                                    0,00       0,00             0,00             0,00     0,00       -700,00        0,00        -700,00     Pendiente
+
+ Saldo final                                              1.000,00   500,00           0,00             0,00     0,00       -700,00        0,00        800,00      Pendiente
+
+
+
+
+INT-AI-00000001-VNR - Moneda de cierre - Página 4 de 10
+SICA - Flujos de efectivo
+INT-AI-00000001-VNR - SICA QA - INVENTARIO NETO EN MONEDA DE CIERRE - 2026-01-01 a 2026-10-11
+
+
+PAPEL DE TRABAJO EN MONEDA DE CIERRE - ARS - Pendiente revision y emision profesional
+
+ Concepto                                                                         Actual ARS   Comparativo ARS   Notas
+
+
+ Efectivo y equivalentes al inicio                                                0,00         Pendiente         Nota 4
+
+ Operativas                                                                       0,00         Pendiente         Nota 4
+
+ Inversión                                                                        0,00         Pendiente         Nota 4
+
+ Financiación                                                                     0,00         Pendiente         Nota 4
+
+ Efectos sobre efectivo                                                           0,00         Pendiente         Nota 4
+
+ Variación neta                                                                   0,00         Pendiente
+
+ Efectivo y equivalentes al cierre                                                0,00         Pendiente         Nota 4
+
+ Diferencia de conciliación                                                       0,00         Pendiente
+
+
+
+
+INT-AI-00000001-VNR - Moneda de cierre - Página 5 de 10
+SICA - Flujos - detalle
+INT-AI-00000001-VNR - SICA QA - INVENTARIO NETO EN MONEDA DE CIERRE - 2026-01-01 a 2026-10-11
+
+
+PAPEL DE TRABAJO EN MONEDA DE CIERRE - ARS - Pendiente revision y emision profesional
+
+ Fecha                                          Asiento                        Clasificación    ARS   Nota y fundamento
+
+
+Sin importes o movimientos en esta sección.
+
+
+
+
+INT-AI-00000001-VNR - Moneda de cierre - Página 6 de 10
+SICA - Patrimonio - detalle
+INT-AI-00000001-VNR - SICA QA - INVENTARIO NETO EN MONEDA DE CIERRE - 2026-01-01 a 2026-10-11
+
+
+PAPEL DE TRABAJO EN MONEDA DE CIERRE - ARS - Pendiente revision y emision profesional
+
+ Variación                                                                                     Componente                ARS        Nota y fundamento
+
+
+ Otras variaciones · 2026-09-30 · INT-VC-00000001 · Costo previo a la pérdida anual QA · CPP   Capital suscripto         1.000,00   Nota 3 · Clasificación sintética según el asiento y su documentación
+                                                                                                                                    de ensayo.
+
+ Otras variaciones · 2026-09-30 · INT-VC-00000001 · Costo previo a la pérdida anual QA · CPP   Ajuste del capital        500,00     Nota 3 · Clasificación sintética según el asiento y su documentación
+                                                                                                                                    de ensayo.
+
+ Resultado del período                                                                         Resultados no asignados   -700,00    Nota 6 · Resultado global: patrimonio final menos patrimonio inicial y
+                                                                                                                                    variaciones reexpresados.
+
+ Saldo final                                                                                   Capital suscripto         1.000,00   Nota 3 · Saldos iniciales más variaciones y resultado del período
+
+ Saldo final                                                                                   Ajuste del capital        500,00     Nota 3 · Saldos iniciales más variaciones y resultado del período
+
+ Saldo final                                                                                   Resultados no asignados   -700,00    Nota 3 · Saldos iniciales más variaciones y resultado del período
+
+
+
+
+INT-AI-00000001-VNR - Moneda de cierre - Página 7 de 10
+SICA - Notas
+INT-AI-00000001-VNR - SICA QA - INVENTARIO NETO EN MONEDA DE CIERRE - 2026-01-01 a 2026-10-11
+
+
+PAPEL DE TRABAJO EN MONEDA DE CIERRE - ARS - Pendiente revision y emision profesional
+
+Nota 1 - Entidad, actividad y marco de preparación
+
+Información sintética del ensayo en moneda de cierre. Entidad, actividad y marco de preparación. No son estados profesionales emitidos.
+
+Nota 2 - Bases de medición, rubros y políticas contables
+
+Información sintética del ensayo en moneda de cierre. Bases de medición, rubros y políticas contables. No son estados profesionales emitidos.
+
+Nota 3 - Patrimonio y decisiones de propietarios
+
+Información sintética del ensayo en moneda de cierre. Patrimonio y decisiones de propietarios. No son estados profesionales emitidos.
+
+Nota 4 - Efectivo, equivalentes y operaciones sin efectivo
+
+Información sintética del ensayo en moneda de cierre. Efectivo, equivalentes y operaciones sin efectivo. No son estados profesionales emitidos.
+
+Nota 5 - Contingencias y hechos posteriores
+
+Información sintética del ensayo en moneda de cierre. Contingencias y hechos posteriores. No son estados profesionales emitidos.
+
+Nota 6 - Unidad de medida y ajuste por inflación
+
+Índices exclusivamente sintéticos: diciembre 100, enero 110, cierre 150. Depreciación según origen de diciembre y mercadería/costo en enero; reservas en moneda del cierre anterior. Capital nominal separado de ajuste.
+Conciliación financiera incluye redondeo de un centavo. Sin cálculo impositivo ni emisión profesional.
+
+Nota 7 - VNR actual del inventario al cierre
+
+INT-VI-00000002 · VNR actual al cierre QA 2026 · 2026-10-11: pérdida 100 ARS, reversión 0 ARS. Cotización actual sintética por $800 en moneda de cierre; costo y pérdida anterior ya reexpresados. REM-M-NEG:
+Cotización de ensayo actual por $800 en octubre; sin gastos directos adicionales. (2026-10-11).
+
+
+
+
+INT-AI-00000001-VNR - Moneda de cierre - Página 8 de 10
+SICA - Distribución de cuentas
+INT-AI-00000001-VNR - SICA QA - INVENTARIO NETO EN MONEDA DE CIERRE - 2026-01-01 a 2026-10-11
+
+
+PAPEL DE TRABAJO EN MONEDA DE CIERRE - ARS - Pendiente revision y emision profesional
+
+ Cuenta                                                   Rubro                                                 Saldo Debe - Haber ARS   Nota
+
+
+ inventory-inventory                                      Activo corriente · Bienes de cambio                   1.500,00                 Nota 2
+
+ inventory-stockAllowance                                 Activo corriente · Bienes de cambio                   -700,00                  Nota 2
+
+ inventory-stockLoss                                      Gastos · Pérdidas por desvalorización de inventario   700,00                   Nota 7
+
+ 3.1                                                      Patrimonio neto · Capital suscripto                   -1.000,00                Nota 3
+
+ 3.90.2                                                   Patrimonio neto · Ajuste del capital                  -500,00                  Nota 3
+
+
+
+
+INT-AI-00000001-VNR - Moneda de cierre - Página 9 de 10
+SICA - Fuentes del diario
+INT-AI-00000001-VNR - SICA QA - INVENTARIO NETO EN MONEDA DE CIERRE - 2026-01-01 a 2026-10-11
+
+
+PAPEL DE TRABAJO EN MONEDA DE CIERRE - ARS - Pendiente revision y emision profesional
+
+ Fecha                                         Identificación del asiento             Concepto                                      Cuenta                     Debe ARS   Haber ARS
+
+
+ 2026-09-30                                    75d56b62-6cdb-43f5-8f6c-c6e5e8b4d331   INT-VC-00000001 · Costo previo a la pérdida   inventory-inventory        1.000,00   0,00
+                                                                                      anual QA · CPP
+
+ 2026-09-30                                    75d56b62-6cdb-43f5-8f6c-c6e5e8b4d331   INT-VC-00000001 · Costo previo a la pérdida   3.1                        0,00       1.000,00
+                                                                                      anual QA · CPP
+
+ 2026-09-30                                    96d23931-b2a0-4680-98a2-04fec70e99e9   INT-VI-00000001 · Pérdida previa al ajuste    inventory-stockLoss        400,00     0,00
+                                                                                      anual QA
+
+ 2026-09-30                                    96d23931-b2a0-4680-98a2-04fec70e99e9   INT-VI-00000001 · Pérdida previa al ajuste    inventory-stockAllowance   0,00       400,00
+                                                                                      anual QA
+
+ 2026-10-11                                    e98acb10-48a2-4b89-ae1e-d711bc440986   INT-AI-00000001                               3.90.2                     0,00       500,00
+
+ 2026-10-11                                    e98acb10-48a2-4b89-ae1e-d711bc440986   INT-AI-00000001                               inventory-inventory        500,00     0,00
+
+ 2026-10-11                                    e98acb10-48a2-4b89-ae1e-d711bc440986   INT-AI-00000001                               inventory-stockAllowance   0,00       200,00
+
+ 2026-10-11                                    e98acb10-48a2-4b89-ae1e-d711bc440986   INT-AI-00000001                               inventory-stockLoss        200,00     0,00
+
+ 2026-10-11                                    f4939749-b22b-4987-8a91-603470cfde74   INT-VI-00000002 · VNR actual al cierre QA     inventory-stockLoss        100,00     0,00
+                                                                                      2026
+
+ 2026-10-11                                    f4939749-b22b-4987-8a91-603470cfde74   INT-VI-00000002 · VNR actual al cierre QA     inventory-stockAllowance   0,00       100,00
+                                                                                      2026
+
+
+
+
+INT-AI-00000001-VNR - Moneda de cierre - Página 10 de 10
+

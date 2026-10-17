@@ -1,0 +1,5 @@
+import {initialState} from '../.server/domain/seed.js'
+import {loadTextileDemo} from '../.server/domain/demo.js'
+import {addManualEntry} from '../.server/domain/engine.js'
+import {prepareYearEndAccount} from '../.server/domain/year-end-close.js'
+export function yearEndFixture(actor){const state=initialState();loadTextileDemo(state);state.stockMoves=[];state.settings.name='SICA QA - CIERRE DE RESULTADOS';state.settings.exerciseStart='2026-01-01';state.settings.exerciseEnd='2026-12-31';prepareYearEndAccount(state,actor);addManualEntry(state,actor.role,'2026-10-01','Ingreso nominal sintético','central',[{accountId:'1.1.1',debit:100000,credit:0},{accountId:'4.1',debit:0,credit:100000}]);addManualEntry(state,actor.role,'2026-10-02','Gasto nominal sintético','central',[{accountId:'5.1',debit:35000,credit:0},{accountId:'1.1.1',debit:0,credit:35000}]);state.masters.branches.push({id:'annual-north',name:'Sucursal anual de prueba',active:true});addManualEntry(state,actor.role,'2026-10-02','Gasto de sucursal sintético','annual-north',[{accountId:'5.1',debit:10000,credit:0},{accountId:'2.1.1',debit:0,credit:10000}]);return state}

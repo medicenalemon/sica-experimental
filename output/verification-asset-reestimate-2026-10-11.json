@@ -1,0 +1,1403 @@
+{
+  "date": "2026-10-11",
+  "synthetic": true,
+  "tests": {
+    "domain": 246,
+    "files": 13,
+    "http": 41,
+    "fiscal": 22,
+    "total": 322
+  },
+  "browser": {
+    "result": "Nueva evidencia al 11/10: base remanente 600 ARS distribuida en sesenta días. Cargo del 20/10 100 ARS, previo cerrado 300 ARS conservado, costo 1000 y neto 600 ARS. Constancia INT-RE y cargos recuperados desde SQLite en versión 3.",
+    "screenshots": [
+      "output/asset-reestimate-2026-10-11.png",
+      "output/asset-reestimate-detail-2026-10-11.png"
+    ],
+    "transcript": "output/asset-reestimate-browser-2026-10-11.txt"
+  },
+  "checks": [
+    {
+      "database": "var/qa-asset-reestimate.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON",
+      "reestimate": {
+        "asset": {
+          "date": "2026-10-01",
+          "invoiceId": "7629994b-2c05-4df7-99e8-8e2b469bfb96",
+          "productId": "fixed-machine",
+          "reference": "Alta sintética QA 2026",
+          "reason": "Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.",
+          "name": "Equipo textil QA",
+          "assetClass": "Maquinarias",
+          "location": "Casa Central, sala de ensayo",
+          "assetAccountId": "1.2.1",
+          "accumulatedAccountId": "1.2.2",
+          "expenseAccountId": "5.9",
+          "method": "Lineal diaria",
+          "commissionedOn": "2026-10-01",
+          "usefulLifeEnd": "2026-10-31",
+          "residual": 10000,
+          "review": "{\"receipt\":{\"id\":\"cb296214-dc01-403d-aa25-0f3a4095c171\",\"number\":\"INT-RM-X-00001-00000001\",\"date\":\"2026-10-01\",\"branchId\":\"central\",\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\"},\"date\":\"2026-10-01\",\"reference\":\"Alta sintética QA 2026\",\"reason\":\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\",\"name\":\"Equipo textil QA\",\"assetClass\":\"Maquinarias\",\"location\":\"Casa Central, sala de ensayo\",\"assetAccountId\":\"1.2.1\",\"accumulatedAccountId\":\"1.2.2\",\"expenseAccountId\":\"5.9\",\"method\":\"Lineal diaria\",\"commissionedOn\":\"2026-10-01\",\"usefulLifeEnd\":\"2026-10-31\",\"residual\":10000,\"cost\":100000,\"branchId\":\"central\",\"invoice\":{\"id\":\"7629994b-2c05-4df7-99e8-8e2b469bfb96\",\"number\":\"INT-FC-A-00001-00000001\",\"date\":\"2026-10-01\",\"postingDate\":\"2026-10-01\",\"entryId\":\"78c113b9-3166-4720-97d5-1e51e17b37ac\",\"purchaseAccountId\":\"5.1\",\"nonRecoverableVat\":false,\"line\":{\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":100000,\"tax\":\"21\",\"discount\":0}},\"entry\":[{\"accountId\":\"1.2.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"5.1\",\"debit\":0,\"credit\":100000}]}",
+          "id": "38a7bef9-9bdf-40d3-bd9e-04e033b5cda8",
+          "number": "INT-BU-00000001",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-11T06:48:41.746Z",
+          "entryId": "c299d692-6e0e-426a-9669-710313a68c3d",
+          "preview": {
+            "receipt": {
+              "id": "cb296214-dc01-403d-aa25-0f3a4095c171",
+              "number": "INT-RM-X-00001-00000001",
+              "date": "2026-10-01",
+              "branchId": "central",
+              "productId": "fixed-machine",
+              "quantity": 1,
+              "unit": "Unidad"
+            },
+            "date": "2026-10-01",
+            "reference": "Alta sintética QA 2026",
+            "reason": "Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.",
+            "name": "Equipo textil QA",
+            "assetClass": "Maquinarias",
+            "location": "Casa Central, sala de ensayo",
+            "assetAccountId": "1.2.1",
+            "accumulatedAccountId": "1.2.2",
+            "expenseAccountId": "5.9",
+            "method": "Lineal diaria",
+            "commissionedOn": "2026-10-01",
+            "usefulLifeEnd": "2026-10-31",
+            "residual": 10000,
+            "cost": 100000,
+            "branchId": "central",
+            "invoice": {
+              "id": "7629994b-2c05-4df7-99e8-8e2b469bfb96",
+              "number": "INT-FC-A-00001-00000001",
+              "date": "2026-10-01",
+              "postingDate": "2026-10-01",
+              "entryId": "78c113b9-3166-4720-97d5-1e51e17b37ac",
+              "purchaseAccountId": "5.1",
+              "nonRecoverableVat": false,
+              "line": {
+                "productId": "fixed-machine",
+                "quantity": 1,
+                "unit": "Unidad",
+                "price": 100000,
+                "tax": "21",
+                "discount": 0
+              }
+            },
+            "entry": [
+              {
+                "accountId": "1.2.1",
+                "debit": 100000,
+                "credit": 0
+              },
+              {
+                "accountId": "5.1",
+                "debit": 0,
+                "credit": 100000
+              }
+            ]
+          }
+        },
+        "reestimate": {
+          "date": "2026-10-11",
+          "assetId": "38a7bef9-9bdf-40d3-bd9e-04e033b5cda8",
+          "reference": "Vida útil revisada QA 2026",
+          "reason": "Informe técnico sintético del 11/10: uso remanente de sesenta días y residual 100 ARS. Nueva evidencia para consumo futuro; conserva costo y los cargos cerrados hasta el 10/10. Duración de ensayo, sin tasa fiscal presumida.",
+          "usefulLifeEnd": "2026-12-10",
+          "residual": 10000,
+          "review": "{\"date\":\"2026-10-11\",\"reference\":\"Vida útil revisada QA 2026\",\"reason\":\"Informe técnico sintético del 11/10: uso remanente de sesenta días y residual 100 ARS. Nueva evidencia para consumo futuro; conserva costo y los cargos cerrados hasta el 10/10. Duración de ensayo, sin tasa fiscal presumida.\",\"assetId\":\"38a7bef9-9bdf-40d3-bd9e-04e033b5cda8\",\"assetNumber\":\"INT-BU-00000001\",\"assetReview\":\"{\\\"receipt\\\":{\\\"id\\\":\\\"cb296214-dc01-403d-aa25-0f3a4095c171\\\",\\\"number\\\":\\\"INT-RM-X-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"branchId\\\":\\\"central\\\",\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\"},\\\"date\\\":\\\"2026-10-01\\\",\\\"reference\\\":\\\"Alta sintética QA 2026\\\",\\\"reason\\\":\\\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\\\",\\\"name\\\":\\\"Equipo textil QA\\\",\\\"assetClass\\\":\\\"Maquinarias\\\",\\\"location\\\":\\\"Casa Central, sala de ensayo\\\",\\\"assetAccountId\\\":\\\"1.2.1\\\",\\\"accumulatedAccountId\\\":\\\"1.2.2\\\",\\\"expenseAccountId\\\":\\\"5.9\\\",\\\"method\\\":\\\"Lineal diaria\\\",\\\"commissionedOn\\\":\\\"2026-10-01\\\",\\\"usefulLifeEnd\\\":\\\"2026-10-31\\\",\\\"residual\\\":10000,\\\"cost\\\":100000,\\\"branchId\\\":\\\"central\\\",\\\"invoice\\\":{\\\"id\\\":\\\"7629994b-2c05-4df7-99e8-8e2b469bfb96\\\",\\\"number\\\":\\\"INT-FC-A-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"postingDate\\\":\\\"2026-10-01\\\",\\\"entryId\\\":\\\"78c113b9-3166-4720-97d5-1e51e17b37ac\\\",\\\"purchaseAccountId\\\":\\\"5.1\\\",\\\"nonRecoverableVat\\\":false,\\\"line\\\":{\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":100000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}},\\\"entry\\\":[{\\\"accountId\\\":\\\"1.2.1\\\",\\\"debit\\\":100000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"5.1\\\",\\\"debit\\\":0,\\\"credit\\\":100000}]}\",\"commissionId\":\"\",\"commissionReview\":\"\",\"branchId\":\"central\",\"commissionedOn\":\"2026-10-01\",\"cutoff\":\"2026-10-10\",\"cost\":100000,\"accumulated\":30000,\"bookValue\":70000,\"previous\":{\"reestimateId\":\"\",\"date\":\"2026-10-01\",\"reference\":\"Alta sintética QA 2026\",\"reason\":\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\",\"usefulLifeEnd\":\"2026-10-31\",\"residual\":10000},\"depreciations\":[{\"id\":\"02381e55-7dd1-4bfb-9b63-5d72b5499255\",\"number\":\"INT-DP-00000001\",\"date\":\"2026-10-10\",\"entryIds\":[\"d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e\"],\"charge\":30000}],\"usefulLifeEnd\":\"2026-12-10\",\"residual\":10000,\"base\":60000,\"remainingDays\":60}",
+          "id": "e5793c92-7528-4da3-907d-2e3af90154cb",
+          "number": "INT-RE-00000001",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-11T06:49:31.374Z",
+          "preview": {
+            "date": "2026-10-11",
+            "reference": "Vida útil revisada QA 2026",
+            "reason": "Informe técnico sintético del 11/10: uso remanente de sesenta días y residual 100 ARS. Nueva evidencia para consumo futuro; conserva costo y los cargos cerrados hasta el 10/10. Duración de ensayo, sin tasa fiscal presumida.",
+            "assetId": "38a7bef9-9bdf-40d3-bd9e-04e033b5cda8",
+            "assetNumber": "INT-BU-00000001",
+            "assetReview": "{\"receipt\":{\"id\":\"cb296214-dc01-403d-aa25-0f3a4095c171\",\"number\":\"INT-RM-X-00001-00000001\",\"date\":\"2026-10-01\",\"branchId\":\"central\",\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\"},\"date\":\"2026-10-01\",\"reference\":\"Alta sintética QA 2026\",\"reason\":\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\",\"name\":\"Equipo textil QA\",\"assetClass\":\"Maquinarias\",\"location\":\"Casa Central, sala de ensayo\",\"assetAccountId\":\"1.2.1\",\"accumulatedAccountId\":\"1.2.2\",\"expenseAccountId\":\"5.9\",\"method\":\"Lineal diaria\",\"commissionedOn\":\"2026-10-01\",\"usefulLifeEnd\":\"2026-10-31\",\"residual\":10000,\"cost\":100000,\"branchId\":\"central\",\"invoice\":{\"id\":\"7629994b-2c05-4df7-99e8-8e2b469bfb96\",\"number\":\"INT-FC-A-00001-00000001\",\"date\":\"2026-10-01\",\"postingDate\":\"2026-10-01\",\"entryId\":\"78c113b9-3166-4720-97d5-1e51e17b37ac\",\"purchaseAccountId\":\"5.1\",\"nonRecoverableVat\":false,\"line\":{\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":100000,\"tax\":\"21\",\"discount\":0}},\"entry\":[{\"accountId\":\"1.2.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"5.1\",\"debit\":0,\"credit\":100000}]}",
+            "commissionId": "",
+            "commissionReview": "",
+            "branchId": "central",
+            "commissionedOn": "2026-10-01",
+            "cutoff": "2026-10-10",
+            "cost": 100000,
+            "accumulated": 30000,
+            "bookValue": 70000,
+            "previous": {
+              "reestimateId": "",
+              "date": "2026-10-01",
+              "reference": "Alta sintética QA 2026",
+              "reason": "Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.",
+              "usefulLifeEnd": "2026-10-31",
+              "residual": 10000
+            },
+            "depreciations": [
+              {
+                "id": "02381e55-7dd1-4bfb-9b63-5d72b5499255",
+                "number": "INT-DP-00000001",
+                "date": "2026-10-10",
+                "entryIds": [
+                  "d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e"
+                ],
+                "charge": 30000
+              }
+            ],
+            "usefulLifeEnd": "2026-12-10",
+            "residual": 10000,
+            "base": 60000,
+            "remainingDays": 60
+          }
+        },
+        "originalDepreciation": {
+          "date": "2026-10-10",
+          "reference": "Cargo sintético previo al cambio",
+          "reason": "Diez días de uso consumidos según información inicial",
+          "review": "{\"date\":\"2026-10-10\",\"reference\":\"Cargo sintético previo al cambio\",\"reason\":\"Diez días de uso consumidos según información inicial\",\"previousBatchId\":\"\",\"rows\":[{\"assetId\":\"38a7bef9-9bdf-40d3-bd9e-04e033b5cda8\",\"number\":\"INT-BU-00000001\",\"assetReview\":\"{\\\"receipt\\\":{\\\"id\\\":\\\"cb296214-dc01-403d-aa25-0f3a4095c171\\\",\\\"number\\\":\\\"INT-RM-X-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"branchId\\\":\\\"central\\\",\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\"},\\\"date\\\":\\\"2026-10-01\\\",\\\"reference\\\":\\\"Alta sintética QA 2026\\\",\\\"reason\\\":\\\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\\\",\\\"name\\\":\\\"Equipo textil QA\\\",\\\"assetClass\\\":\\\"Maquinarias\\\",\\\"location\\\":\\\"Casa Central, sala de ensayo\\\",\\\"assetAccountId\\\":\\\"1.2.1\\\",\\\"accumulatedAccountId\\\":\\\"1.2.2\\\",\\\"expenseAccountId\\\":\\\"5.9\\\",\\\"method\\\":\\\"Lineal diaria\\\",\\\"commissionedOn\\\":\\\"2026-10-01\\\",\\\"usefulLifeEnd\\\":\\\"2026-10-31\\\",\\\"residual\\\":10000,\\\"cost\\\":100000,\\\"branchId\\\":\\\"central\\\",\\\"invoice\\\":{\\\"id\\\":\\\"7629994b-2c05-4df7-99e8-8e2b469bfb96\\\",\\\"number\\\":\\\"INT-FC-A-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"postingDate\\\":\\\"2026-10-01\\\",\\\"entryId\\\":\\\"78c113b9-3166-4720-97d5-1e51e17b37ac\\\",\\\"purchaseAccountId\\\":\\\"5.1\\\",\\\"nonRecoverableVat\\\":false,\\\"line\\\":{\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":100000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}},\\\"entry\\\":[{\\\"accountId\\\":\\\"1.2.1\\\",\\\"debit\\\":100000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"5.1\\\",\\\"debit\\\":0,\\\"credit\\\":100000}]}\",\"commissionId\":\"\",\"commissionReview\":\"\",\"branchId\":\"central\",\"name\":\"Equipo textil QA\",\"assetClass\":\"Maquinarias\",\"cost\":100000,\"residual\":10000,\"commissionedOn\":\"2026-10-01\",\"usefulLifeEnd\":\"2026-10-31\",\"method\":\"Lineal diaria\",\"totalDays\":30,\"elapsedDays\":10,\"previous\":0,\"accumulated\":30000,\"charge\":30000,\"bookValue\":70000,\"assetAccountId\":\"1.2.1\",\"accumulatedAccountId\":\"1.2.2\",\"expenseAccountId\":\"5.9\"}],\"total\":30000,\"entries\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"5.9\",\"debit\":30000,\"credit\":0},{\"accountId\":\"1.2.2\",\"debit\":0,\"credit\":30000}]}]}",
+          "id": "02381e55-7dd1-4bfb-9b63-5d72b5499255",
+          "number": "INT-DP-00000001",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-11T06:48:41.750Z",
+          "entryIds": [
+            "d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e"
+          ],
+          "preview": {
+            "date": "2026-10-10",
+            "reference": "Cargo sintético previo al cambio",
+            "reason": "Diez días de uso consumidos según información inicial",
+            "previousBatchId": "",
+            "rows": [
+              {
+                "assetId": "38a7bef9-9bdf-40d3-bd9e-04e033b5cda8",
+                "number": "INT-BU-00000001",
+                "assetReview": "{\"receipt\":{\"id\":\"cb296214-dc01-403d-aa25-0f3a4095c171\",\"number\":\"INT-RM-X-00001-00000001\",\"date\":\"2026-10-01\",\"branchId\":\"central\",\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\"},\"date\":\"2026-10-01\",\"reference\":\"Alta sintética QA 2026\",\"reason\":\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\",\"name\":\"Equipo textil QA\",\"assetClass\":\"Maquinarias\",\"location\":\"Casa Central, sala de ensayo\",\"assetAccountId\":\"1.2.1\",\"accumulatedAccountId\":\"1.2.2\",\"expenseAccountId\":\"5.9\",\"method\":\"Lineal diaria\",\"commissionedOn\":\"2026-10-01\",\"usefulLifeEnd\":\"2026-10-31\",\"residual\":10000,\"cost\":100000,\"branchId\":\"central\",\"invoice\":{\"id\":\"7629994b-2c05-4df7-99e8-8e2b469bfb96\",\"number\":\"INT-FC-A-00001-00000001\",\"date\":\"2026-10-01\",\"postingDate\":\"2026-10-01\",\"entryId\":\"78c113b9-3166-4720-97d5-1e51e17b37ac\",\"purchaseAccountId\":\"5.1\",\"nonRecoverableVat\":false,\"line\":{\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":100000,\"tax\":\"21\",\"discount\":0}},\"entry\":[{\"accountId\":\"1.2.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"5.1\",\"debit\":0,\"credit\":100000}]}",
+                "commissionId": "",
+                "commissionReview": "",
+                "branchId": "central",
+                "name": "Equipo textil QA",
+                "assetClass": "Maquinarias",
+                "cost": 100000,
+                "residual": 10000,
+                "commissionedOn": "2026-10-01",
+                "usefulLifeEnd": "2026-10-31",
+                "method": "Lineal diaria",
+                "totalDays": 30,
+                "elapsedDays": 10,
+                "previous": 0,
+                "accumulated": 30000,
+                "charge": 30000,
+                "bookValue": 70000,
+                "assetAccountId": "1.2.1",
+                "accumulatedAccountId": "1.2.2",
+                "expenseAccountId": "5.9"
+              }
+            ],
+            "total": 30000,
+            "entries": [
+              {
+                "branchId": "central",
+                "lines": [
+                  {
+                    "accountId": "5.9",
+                    "debit": 30000,
+                    "credit": 0
+                  },
+                  {
+                    "accountId": "1.2.2",
+                    "debit": 0,
+                    "credit": 30000
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "followingDepreciation": {
+          "date": "2026-10-20",
+          "reference": "Cargo posterior revisado QA 2026",
+          "reason": "Corte del 20/10: diez días de la nueva vida remanente de sesenta. Base 600 ARS: cargo nuevo 100 ARS; 300 ARS previos conservados. Ensayo sintético sin tasa fiscal presumida.",
+          "review": "{\"date\":\"2026-10-20\",\"reference\":\"Cargo posterior revisado QA 2026\",\"reason\":\"Corte del 20/10: diez días de la nueva vida remanente de sesenta. Base 600 ARS: cargo nuevo 100 ARS; 300 ARS previos conservados. Ensayo sintético sin tasa fiscal presumida.\",\"previousBatchId\":\"02381e55-7dd1-4bfb-9b63-5d72b5499255\",\"rows\":[{\"reestimateId\":\"e5793c92-7528-4da3-907d-2e3af90154cb\",\"reestimateReview\":\"{\\\"date\\\":\\\"2026-10-11\\\",\\\"reference\\\":\\\"Vida útil revisada QA 2026\\\",\\\"reason\\\":\\\"Informe técnico sintético del 11/10: uso remanente de sesenta días y residual 100 ARS. Nueva evidencia para consumo futuro; conserva costo y los cargos cerrados hasta el 10/10. Duración de ensayo, sin tasa fiscal presumida.\\\",\\\"assetId\\\":\\\"38a7bef9-9bdf-40d3-bd9e-04e033b5cda8\\\",\\\"assetNumber\\\":\\\"INT-BU-00000001\\\",\\\"assetReview\\\":\\\"{\\\\\\\"receipt\\\\\\\":{\\\\\\\"id\\\\\\\":\\\\\\\"cb296214-dc01-403d-aa25-0f3a4095c171\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"INT-RM-X-00001-00000001\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-01\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"fixed-machine\\\\\\\",\\\\\\\"quantity\\\\\\\":1,\\\\\\\"unit\\\\\\\":\\\\\\\"Unidad\\\\\\\"},\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-01\\\\\\\",\\\\\\\"reference\\\\\\\":\\\\\\\"Alta sintética QA 2026\\\\\\\",\\\\\\\"reason\\\\\\\":\\\\\\\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"Equipo textil QA\\\\\\\",\\\\\\\"assetClass\\\\\\\":\\\\\\\"Maquinarias\\\\\\\",\\\\\\\"location\\\\\\\":\\\\\\\"Casa Central, sala de ensayo\\\\\\\",\\\\\\\"assetAccountId\\\\\\\":\\\\\\\"1.2.1\\\\\\\",\\\\\\\"accumulatedAccountId\\\\\\\":\\\\\\\"1.2.2\\\\\\\",\\\\\\\"expenseAccountId\\\\\\\":\\\\\\\"5.9\\\\\\\",\\\\\\\"method\\\\\\\":\\\\\\\"Lineal diaria\\\\\\\",\\\\\\\"commissionedOn\\\\\\\":\\\\\\\"2026-10-01\\\\\\\",\\\\\\\"usefulLifeEnd\\\\\\\":\\\\\\\"2026-10-31\\\\\\\",\\\\\\\"residual\\\\\\\":10000,\\\\\\\"cost\\\\\\\":100000,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"invoice\\\\\\\":{\\\\\\\"id\\\\\\\":\\\\\\\"7629994b-2c05-4df7-99e8-8e2b469bfb96\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"INT-FC-A-00001-00000001\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-01\\\\\\\",\\\\\\\"postingDate\\\\\\\":\\\\\\\"2026-10-01\\\\\\\",\\\\\\\"entryId\\\\\\\":\\\\\\\"78c113b9-3166-4720-97d5-1e51e17b37ac\\\\\\\",\\\\\\\"purchaseAccountId\\\\\\\":\\\\\\\"5.1\\\\\\\",\\\\\\\"nonRecoverableVat\\\\\\\":false,\\\\\\\"line\\\\\\\":{\\\\\\\"productId\\\\\\\":\\\\\\\"fixed-machine\\\\\\\",\\\\\\\"quantity\\\\\\\":1,\\\\\\\"unit\\\\\\\":\\\\\\\"Unidad\\\\\\\",\\\\\\\"price\\\\\\\":100000,\\\\\\\"tax\\\\\\\":\\\\\\\"21\\\\\\\",\\\\\\\"discount\\\\\\\":0}},\\\\\\\"entry\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"1.2.1\\\\\\\",\\\\\\\"debit\\\\\\\":100000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"5.1\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":100000}]}\\\",\\\"commissionId\\\":\\\"\\\",\\\"commissionReview\\\":\\\"\\\",\\\"branchId\\\":\\\"central\\\",\\\"commissionedOn\\\":\\\"2026-10-01\\\",\\\"cutoff\\\":\\\"2026-10-10\\\",\\\"cost\\\":100000,\\\"accumulated\\\":30000,\\\"bookValue\\\":70000,\\\"previous\\\":{\\\"reestimateId\\\":\\\"\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"reference\\\":\\\"Alta sintética QA 2026\\\",\\\"reason\\\":\\\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\\\",\\\"usefulLifeEnd\\\":\\\"2026-10-31\\\",\\\"residual\\\":10000},\\\"depreciations\\\":[{\\\"id\\\":\\\"02381e55-7dd1-4bfb-9b63-5d72b5499255\\\",\\\"number\\\":\\\"INT-DP-00000001\\\",\\\"date\\\":\\\"2026-10-10\\\",\\\"entryIds\\\":[\\\"d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e\\\"],\\\"charge\\\":30000}],\\\"usefulLifeEnd\\\":\\\"2026-12-10\\\",\\\"residual\\\":10000,\\\"base\\\":60000,\\\"remainingDays\\\":60}\",\"baseDate\":\"2026-10-11\",\"baseAccumulated\":30000,\"baseBookValue\":70000,\"assetId\":\"38a7bef9-9bdf-40d3-bd9e-04e033b5cda8\",\"number\":\"INT-BU-00000001\",\"assetReview\":\"{\\\"receipt\\\":{\\\"id\\\":\\\"cb296214-dc01-403d-aa25-0f3a4095c171\\\",\\\"number\\\":\\\"INT-RM-X-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"branchId\\\":\\\"central\\\",\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\"},\\\"date\\\":\\\"2026-10-01\\\",\\\"reference\\\":\\\"Alta sintética QA 2026\\\",\\\"reason\\\":\\\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\\\",\\\"name\\\":\\\"Equipo textil QA\\\",\\\"assetClass\\\":\\\"Maquinarias\\\",\\\"location\\\":\\\"Casa Central, sala de ensayo\\\",\\\"assetAccountId\\\":\\\"1.2.1\\\",\\\"accumulatedAccountId\\\":\\\"1.2.2\\\",\\\"expenseAccountId\\\":\\\"5.9\\\",\\\"method\\\":\\\"Lineal diaria\\\",\\\"commissionedOn\\\":\\\"2026-10-01\\\",\\\"usefulLifeEnd\\\":\\\"2026-10-31\\\",\\\"residual\\\":10000,\\\"cost\\\":100000,\\\"branchId\\\":\\\"central\\\",\\\"invoice\\\":{\\\"id\\\":\\\"7629994b-2c05-4df7-99e8-8e2b469bfb96\\\",\\\"number\\\":\\\"INT-FC-A-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"postingDate\\\":\\\"2026-10-01\\\",\\\"entryId\\\":\\\"78c113b9-3166-4720-97d5-1e51e17b37ac\\\",\\\"purchaseAccountId\\\":\\\"5.1\\\",\\\"nonRecoverableVat\\\":false,\\\"line\\\":{\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":100000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}},\\\"entry\\\":[{\\\"accountId\\\":\\\"1.2.1\\\",\\\"debit\\\":100000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"5.1\\\",\\\"debit\\\":0,\\\"credit\\\":100000}]}\",\"commissionId\":\"\",\"commissionReview\":\"\",\"branchId\":\"central\",\"name\":\"Equipo textil QA\",\"assetClass\":\"Maquinarias\",\"cost\":100000,\"residual\":10000,\"commissionedOn\":\"2026-10-01\",\"usefulLifeEnd\":\"2026-12-10\",\"method\":\"Lineal diaria\",\"totalDays\":60,\"elapsedDays\":10,\"previous\":30000,\"accumulated\":40000,\"charge\":10000,\"bookValue\":60000,\"assetAccountId\":\"1.2.1\",\"accumulatedAccountId\":\"1.2.2\",\"expenseAccountId\":\"5.9\"}],\"total\":10000,\"entries\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"5.9\",\"debit\":10000,\"credit\":0},{\"accountId\":\"1.2.2\",\"debit\":0,\"credit\":10000}]}]}",
+          "id": "818a4a92-74ad-46ae-a3a4-e942da62663c",
+          "number": "INT-DP-00000002",
+          "responsible": "Administrador",
+          "createdAt": "2026-10-11T06:49:45.877Z",
+          "entryIds": [
+            "e2190473-592b-4c75-9bcd-dde95328d0d6"
+          ],
+          "preview": {
+            "date": "2026-10-20",
+            "reference": "Cargo posterior revisado QA 2026",
+            "reason": "Corte del 20/10: diez días de la nueva vida remanente de sesenta. Base 600 ARS: cargo nuevo 100 ARS; 300 ARS previos conservados. Ensayo sintético sin tasa fiscal presumida.",
+            "previousBatchId": "02381e55-7dd1-4bfb-9b63-5d72b5499255",
+            "rows": [
+              {
+                "reestimateId": "e5793c92-7528-4da3-907d-2e3af90154cb",
+                "reestimateReview": "{\"date\":\"2026-10-11\",\"reference\":\"Vida útil revisada QA 2026\",\"reason\":\"Informe técnico sintético del 11/10: uso remanente de sesenta días y residual 100 ARS. Nueva evidencia para consumo futuro; conserva costo y los cargos cerrados hasta el 10/10. Duración de ensayo, sin tasa fiscal presumida.\",\"assetId\":\"38a7bef9-9bdf-40d3-bd9e-04e033b5cda8\",\"assetNumber\":\"INT-BU-00000001\",\"assetReview\":\"{\\\"receipt\\\":{\\\"id\\\":\\\"cb296214-dc01-403d-aa25-0f3a4095c171\\\",\\\"number\\\":\\\"INT-RM-X-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"branchId\\\":\\\"central\\\",\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\"},\\\"date\\\":\\\"2026-10-01\\\",\\\"reference\\\":\\\"Alta sintética QA 2026\\\",\\\"reason\\\":\\\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\\\",\\\"name\\\":\\\"Equipo textil QA\\\",\\\"assetClass\\\":\\\"Maquinarias\\\",\\\"location\\\":\\\"Casa Central, sala de ensayo\\\",\\\"assetAccountId\\\":\\\"1.2.1\\\",\\\"accumulatedAccountId\\\":\\\"1.2.2\\\",\\\"expenseAccountId\\\":\\\"5.9\\\",\\\"method\\\":\\\"Lineal diaria\\\",\\\"commissionedOn\\\":\\\"2026-10-01\\\",\\\"usefulLifeEnd\\\":\\\"2026-10-31\\\",\\\"residual\\\":10000,\\\"cost\\\":100000,\\\"branchId\\\":\\\"central\\\",\\\"invoice\\\":{\\\"id\\\":\\\"7629994b-2c05-4df7-99e8-8e2b469bfb96\\\",\\\"number\\\":\\\"INT-FC-A-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"postingDate\\\":\\\"2026-10-01\\\",\\\"entryId\\\":\\\"78c113b9-3166-4720-97d5-1e51e17b37ac\\\",\\\"purchaseAccountId\\\":\\\"5.1\\\",\\\"nonRecoverableVat\\\":false,\\\"line\\\":{\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":100000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}},\\\"entry\\\":[{\\\"accountId\\\":\\\"1.2.1\\\",\\\"debit\\\":100000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"5.1\\\",\\\"debit\\\":0,\\\"credit\\\":100000}]}\",\"commissionId\":\"\",\"commissionReview\":\"\",\"branchId\":\"central\",\"commissionedOn\":\"2026-10-01\",\"cutoff\":\"2026-10-10\",\"cost\":100000,\"accumulated\":30000,\"bookValue\":70000,\"previous\":{\"reestimateId\":\"\",\"date\":\"2026-10-01\",\"reference\":\"Alta sintética QA 2026\",\"reason\":\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\",\"usefulLifeEnd\":\"2026-10-31\",\"residual\":10000},\"depreciations\":[{\"id\":\"02381e55-7dd1-4bfb-9b63-5d72b5499255\",\"number\":\"INT-DP-00000001\",\"date\":\"2026-10-10\",\"entryIds\":[\"d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e\"],\"charge\":30000}],\"usefulLifeEnd\":\"2026-12-10\",\"residual\":10000,\"base\":60000,\"remainingDays\":60}",
+                "baseDate": "2026-10-11",
+                "baseAccumulated": 30000,
+                "baseBookValue": 70000,
+                "assetId": "38a7bef9-9bdf-40d3-bd9e-04e033b5cda8",
+                "number": "INT-BU-00000001",
+                "assetReview": "{\"receipt\":{\"id\":\"cb296214-dc01-403d-aa25-0f3a4095c171\",\"number\":\"INT-RM-X-00001-00000001\",\"date\":\"2026-10-01\",\"branchId\":\"central\",\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\"},\"date\":\"2026-10-01\",\"reference\":\"Alta sintética QA 2026\",\"reason\":\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\",\"name\":\"Equipo textil QA\",\"assetClass\":\"Maquinarias\",\"location\":\"Casa Central, sala de ensayo\",\"assetAccountId\":\"1.2.1\",\"accumulatedAccountId\":\"1.2.2\",\"expenseAccountId\":\"5.9\",\"method\":\"Lineal diaria\",\"commissionedOn\":\"2026-10-01\",\"usefulLifeEnd\":\"2026-10-31\",\"residual\":10000,\"cost\":100000,\"branchId\":\"central\",\"invoice\":{\"id\":\"7629994b-2c05-4df7-99e8-8e2b469bfb96\",\"number\":\"INT-FC-A-00001-00000001\",\"date\":\"2026-10-01\",\"postingDate\":\"2026-10-01\",\"entryId\":\"78c113b9-3166-4720-97d5-1e51e17b37ac\",\"purchaseAccountId\":\"5.1\",\"nonRecoverableVat\":false,\"line\":{\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":100000,\"tax\":\"21\",\"discount\":0}},\"entry\":[{\"accountId\":\"1.2.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"5.1\",\"debit\":0,\"credit\":100000}]}",
+                "commissionId": "",
+                "commissionReview": "",
+                "branchId": "central",
+                "name": "Equipo textil QA",
+                "assetClass": "Maquinarias",
+                "cost": 100000,
+                "residual": 10000,
+                "commissionedOn": "2026-10-01",
+                "usefulLifeEnd": "2026-12-10",
+                "method": "Lineal diaria",
+                "totalDays": 60,
+                "elapsedDays": 10,
+                "previous": 30000,
+                "accumulated": 40000,
+                "charge": 10000,
+                "bookValue": 60000,
+                "assetAccountId": "1.2.1",
+                "accumulatedAccountId": "1.2.2",
+                "expenseAccountId": "5.9"
+              }
+            ],
+            "total": 10000,
+            "entries": [
+              {
+                "branchId": "central",
+                "lines": [
+                  {
+                    "accountId": "5.9",
+                    "debit": 10000,
+                    "credit": 0
+                  },
+                  {
+                    "accountId": "1.2.2",
+                    "debit": 0,
+                    "credit": 10000
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "originalClose": {
+          "id": "e6dbcf54-8bc2-4f16-847a-cb31e4a15621",
+          "number": "INT-CC-00000001",
+          "date": "2026-10-10",
+          "reference": "Cierre sintético antes de la nueva evidencia",
+          "reason": "Información disponible al 10/10; no hubo cambios posteriores todavía",
+          "acknowledged": [
+            "fixed-asset-policy"
+          ],
+          "review": "{\"reference\":\"Cierre sintético antes de la nueva evidencia\",\"reason\":\"Información disponible al 10/10; no hubo cambios posteriores todavía\",\"balance\":{\"from\":\"2026-01-01\",\"to\":\"2026-10-10\",\"branchId\":\"all\",\"rows\":[{\"accountId\":\"1.1.4\",\"group\":\"Activo\",\"opening\":0,\"debit\":21000,\"credit\":0,\"closing\":21000},{\"accountId\":\"2.1.1\",\"group\":\"Pasivo\",\"opening\":0,\"debit\":0,\"credit\":121000,\"closing\":-121000},{\"accountId\":\"5.1\",\"group\":\"Gastos\",\"opening\":0,\"debit\":100000,\"credit\":100000,\"closing\":0},{\"accountId\":\"1.2.1\",\"group\":\"Activo\",\"opening\":0,\"debit\":100000,\"credit\":0,\"closing\":100000},{\"accountId\":\"1.2.2\",\"group\":\"Activo\",\"opening\":0,\"debit\":0,\"credit\":30000,\"closing\":-30000},{\"accountId\":\"5.9\",\"group\":\"Gastos\",\"opening\":0,\"debit\":30000,\"credit\":0,\"closing\":30000}],\"totals\":{\"openingDebit\":0,\"openingCredit\":0,\"debit\":251000,\"credit\":251000,\"closingDebit\":151000,\"closingCredit\":151000},\"entryIds\":[\"78c113b9-3166-4720-97d5-1e51e17b37ac\",\"c299d692-6e0e-426a-9669-710313a68c3d\",\"d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e\"]},\"branches\":[{\"id\":\"central\",\"balance\":{\"from\":\"2026-01-01\",\"to\":\"2026-10-10\",\"branchId\":\"central\",\"rows\":[{\"accountId\":\"1.1.4\",\"group\":\"Activo\",\"opening\":0,\"debit\":21000,\"credit\":0,\"closing\":21000},{\"accountId\":\"2.1.1\",\"group\":\"Pasivo\",\"opening\":0,\"debit\":0,\"credit\":121000,\"closing\":-121000},{\"accountId\":\"5.1\",\"group\":\"Gastos\",\"opening\":0,\"debit\":100000,\"credit\":100000,\"closing\":0},{\"accountId\":\"1.2.1\",\"group\":\"Activo\",\"opening\":0,\"debit\":100000,\"credit\":0,\"closing\":100000},{\"accountId\":\"1.2.2\",\"group\":\"Activo\",\"opening\":0,\"debit\":0,\"credit\":30000,\"closing\":-30000},{\"accountId\":\"5.9\",\"group\":\"Gastos\",\"opening\":0,\"debit\":30000,\"credit\":0,\"closing\":30000}],\"totals\":{\"openingDebit\":0,\"openingCredit\":0,\"debit\":251000,\"credit\":251000,\"closingDebit\":151000,\"closingCredit\":151000},\"entryIds\":[\"78c113b9-3166-4720-97d5-1e51e17b37ac\",\"c299d692-6e0e-426a-9669-710313a68c3d\",\"d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e\"]}}],\"fixedAssets\":{\"assets\":[{\"date\":\"2026-10-01\",\"invoiceId\":\"7629994b-2c05-4df7-99e8-8e2b469bfb96\",\"productId\":\"fixed-machine\",\"reference\":\"Alta sintética QA 2026\",\"reason\":\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\",\"name\":\"Equipo textil QA\",\"assetClass\":\"Maquinarias\",\"location\":\"Casa Central, sala de ensayo\",\"assetAccountId\":\"1.2.1\",\"accumulatedAccountId\":\"1.2.2\",\"expenseAccountId\":\"5.9\",\"method\":\"Lineal diaria\",\"commissionedOn\":\"2026-10-01\",\"usefulLifeEnd\":\"2026-10-31\",\"residual\":10000,\"review\":\"{\\\"receipt\\\":{\\\"id\\\":\\\"cb296214-dc01-403d-aa25-0f3a4095c171\\\",\\\"number\\\":\\\"INT-RM-X-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"branchId\\\":\\\"central\\\",\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\"},\\\"date\\\":\\\"2026-10-01\\\",\\\"reference\\\":\\\"Alta sintética QA 2026\\\",\\\"reason\\\":\\\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\\\",\\\"name\\\":\\\"Equipo textil QA\\\",\\\"assetClass\\\":\\\"Maquinarias\\\",\\\"location\\\":\\\"Casa Central, sala de ensayo\\\",\\\"assetAccountId\\\":\\\"1.2.1\\\",\\\"accumulatedAccountId\\\":\\\"1.2.2\\\",\\\"expenseAccountId\\\":\\\"5.9\\\",\\\"method\\\":\\\"Lineal diaria\\\",\\\"commissionedOn\\\":\\\"2026-10-01\\\",\\\"usefulLifeEnd\\\":\\\"2026-10-31\\\",\\\"residual\\\":10000,\\\"cost\\\":100000,\\\"branchId\\\":\\\"central\\\",\\\"invoice\\\":{\\\"id\\\":\\\"7629994b-2c05-4df7-99e8-8e2b469bfb96\\\",\\\"number\\\":\\\"INT-FC-A-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"postingDate\\\":\\\"2026-10-01\\\",\\\"entryId\\\":\\\"78c113b9-3166-4720-97d5-1e51e17b37ac\\\",\\\"purchaseAccountId\\\":\\\"5.1\\\",\\\"nonRecoverableVat\\\":false,\\\"line\\\":{\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":100000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}},\\\"entry\\\":[{\\\"accountId\\\":\\\"1.2.1\\\",\\\"debit\\\":100000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"5.1\\\",\\\"debit\\\":0,\\\"credit\\\":100000}]}\",\"id\":\"38a7bef9-9bdf-40d3-bd9e-04e033b5cda8\",\"number\":\"INT-BU-00000001\",\"responsible\":\"Administrador\",\"createdAt\":\"2026-10-11T06:48:41.746Z\",\"entryId\":\"c299d692-6e0e-426a-9669-710313a68c3d\",\"preview\":{\"receipt\":{\"id\":\"cb296214-dc01-403d-aa25-0f3a4095c171\",\"number\":\"INT-RM-X-00001-00000001\",\"date\":\"2026-10-01\",\"branchId\":\"central\",\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\"},\"date\":\"2026-10-01\",\"reference\":\"Alta sintética QA 2026\",\"reason\":\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\",\"name\":\"Equipo textil QA\",\"assetClass\":\"Maquinarias\",\"location\":\"Casa Central, sala de ensayo\",\"assetAccountId\":\"1.2.1\",\"accumulatedAccountId\":\"1.2.2\",\"expenseAccountId\":\"5.9\",\"method\":\"Lineal diaria\",\"commissionedOn\":\"2026-10-01\",\"usefulLifeEnd\":\"2026-10-31\",\"residual\":10000,\"cost\":100000,\"branchId\":\"central\",\"invoice\":{\"id\":\"7629994b-2c05-4df7-99e8-8e2b469bfb96\",\"number\":\"INT-FC-A-00001-00000001\",\"date\":\"2026-10-01\",\"postingDate\":\"2026-10-01\",\"entryId\":\"78c113b9-3166-4720-97d5-1e51e17b37ac\",\"purchaseAccountId\":\"5.1\",\"nonRecoverableVat\":false,\"line\":{\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":100000,\"tax\":\"21\",\"discount\":0}},\"entry\":[{\"accountId\":\"1.2.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"5.1\",\"debit\":0,\"credit\":100000}]}}],\"commissions\":[],\"batches\":[{\"date\":\"2026-10-10\",\"reference\":\"Cargo sintético previo al cambio\",\"reason\":\"Diez días de uso consumidos según información inicial\",\"review\":\"{\\\"date\\\":\\\"2026-10-10\\\",\\\"reference\\\":\\\"Cargo sintético previo al cambio\\\",\\\"reason\\\":\\\"Diez días de uso consumidos según información inicial\\\",\\\"previousBatchId\\\":\\\"\\\",\\\"rows\\\":[{\\\"assetId\\\":\\\"38a7bef9-9bdf-40d3-bd9e-04e033b5cda8\\\",\\\"number\\\":\\\"INT-BU-00000001\\\",\\\"assetReview\\\":\\\"{\\\\\\\"receipt\\\\\\\":{\\\\\\\"id\\\\\\\":\\\\\\\"cb296214-dc01-403d-aa25-0f3a4095c171\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"INT-RM-X-00001-00000001\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-01\\\\\\\",\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"productId\\\\\\\":\\\\\\\"fixed-machine\\\\\\\",\\\\\\\"quantity\\\\\\\":1,\\\\\\\"unit\\\\\\\":\\\\\\\"Unidad\\\\\\\"},\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-01\\\\\\\",\\\\\\\"reference\\\\\\\":\\\\\\\"Alta sintética QA 2026\\\\\\\",\\\\\\\"reason\\\\\\\":\\\\\\\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"Equipo textil QA\\\\\\\",\\\\\\\"assetClass\\\\\\\":\\\\\\\"Maquinarias\\\\\\\",\\\\\\\"location\\\\\\\":\\\\\\\"Casa Central, sala de ensayo\\\\\\\",\\\\\\\"assetAccountId\\\\\\\":\\\\\\\"1.2.1\\\\\\\",\\\\\\\"accumulatedAccountId\\\\\\\":\\\\\\\"1.2.2\\\\\\\",\\\\\\\"expenseAccountId\\\\\\\":\\\\\\\"5.9\\\\\\\",\\\\\\\"method\\\\\\\":\\\\\\\"Lineal diaria\\\\\\\",\\\\\\\"commissionedOn\\\\\\\":\\\\\\\"2026-10-01\\\\\\\",\\\\\\\"usefulLifeEnd\\\\\\\":\\\\\\\"2026-10-31\\\\\\\",\\\\\\\"residual\\\\\\\":10000,\\\\\\\"cost\\\\\\\":100000,\\\\\\\"branchId\\\\\\\":\\\\\\\"central\\\\\\\",\\\\\\\"invoice\\\\\\\":{\\\\\\\"id\\\\\\\":\\\\\\\"7629994b-2c05-4df7-99e8-8e2b469bfb96\\\\\\\",\\\\\\\"number\\\\\\\":\\\\\\\"INT-FC-A-00001-00000001\\\\\\\",\\\\\\\"date\\\\\\\":\\\\\\\"2026-10-01\\\\\\\",\\\\\\\"postingDate\\\\\\\":\\\\\\\"2026-10-01\\\\\\\",\\\\\\\"entryId\\\\\\\":\\\\\\\"78c113b9-3166-4720-97d5-1e51e17b37ac\\\\\\\",\\\\\\\"purchaseAccountId\\\\\\\":\\\\\\\"5.1\\\\\\\",\\\\\\\"nonRecoverableVat\\\\\\\":false,\\\\\\\"line\\\\\\\":{\\\\\\\"productId\\\\\\\":\\\\\\\"fixed-machine\\\\\\\",\\\\\\\"quantity\\\\\\\":1,\\\\\\\"unit\\\\\\\":\\\\\\\"Unidad\\\\\\\",\\\\\\\"price\\\\\\\":100000,\\\\\\\"tax\\\\\\\":\\\\\\\"21\\\\\\\",\\\\\\\"discount\\\\\\\":0}},\\\\\\\"entry\\\\\\\":[{\\\\\\\"accountId\\\\\\\":\\\\\\\"1.2.1\\\\\\\",\\\\\\\"debit\\\\\\\":100000,\\\\\\\"credit\\\\\\\":0},{\\\\\\\"accountId\\\\\\\":\\\\\\\"5.1\\\\\\\",\\\\\\\"debit\\\\\\\":0,\\\\\\\"credit\\\\\\\":100000}]}\\\",\\\"commissionId\\\":\\\"\\\",\\\"commissionReview\\\":\\\"\\\",\\\"branchId\\\":\\\"central\\\",\\\"name\\\":\\\"Equipo textil QA\\\",\\\"assetClass\\\":\\\"Maquinarias\\\",\\\"cost\\\":100000,\\\"residual\\\":10000,\\\"commissionedOn\\\":\\\"2026-10-01\\\",\\\"usefulLifeEnd\\\":\\\"2026-10-31\\\",\\\"method\\\":\\\"Lineal diaria\\\",\\\"totalDays\\\":30,\\\"elapsedDays\\\":10,\\\"previous\\\":0,\\\"accumulated\\\":30000,\\\"charge\\\":30000,\\\"bookValue\\\":70000,\\\"assetAccountId\\\":\\\"1.2.1\\\",\\\"accumulatedAccountId\\\":\\\"1.2.2\\\",\\\"expenseAccountId\\\":\\\"5.9\\\"}],\\\"total\\\":30000,\\\"entries\\\":[{\\\"branchId\\\":\\\"central\\\",\\\"lines\\\":[{\\\"accountId\\\":\\\"5.9\\\",\\\"debit\\\":30000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"1.2.2\\\",\\\"debit\\\":0,\\\"credit\\\":30000}]}]}\",\"id\":\"02381e55-7dd1-4bfb-9b63-5d72b5499255\",\"number\":\"INT-DP-00000001\",\"responsible\":\"Administrador\",\"createdAt\":\"2026-10-11T06:48:41.750Z\",\"entryIds\":[\"d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e\"],\"preview\":{\"date\":\"2026-10-10\",\"reference\":\"Cargo sintético previo al cambio\",\"reason\":\"Diez días de uso consumidos según información inicial\",\"previousBatchId\":\"\",\"rows\":[{\"assetId\":\"38a7bef9-9bdf-40d3-bd9e-04e033b5cda8\",\"number\":\"INT-BU-00000001\",\"assetReview\":\"{\\\"receipt\\\":{\\\"id\\\":\\\"cb296214-dc01-403d-aa25-0f3a4095c171\\\",\\\"number\\\":\\\"INT-RM-X-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"branchId\\\":\\\"central\\\",\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\"},\\\"date\\\":\\\"2026-10-01\\\",\\\"reference\\\":\\\"Alta sintética QA 2026\\\",\\\"reason\\\":\\\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\\\",\\\"name\\\":\\\"Equipo textil QA\\\",\\\"assetClass\\\":\\\"Maquinarias\\\",\\\"location\\\":\\\"Casa Central, sala de ensayo\\\",\\\"assetAccountId\\\":\\\"1.2.1\\\",\\\"accumulatedAccountId\\\":\\\"1.2.2\\\",\\\"expenseAccountId\\\":\\\"5.9\\\",\\\"method\\\":\\\"Lineal diaria\\\",\\\"commissionedOn\\\":\\\"2026-10-01\\\",\\\"usefulLifeEnd\\\":\\\"2026-10-31\\\",\\\"residual\\\":10000,\\\"cost\\\":100000,\\\"branchId\\\":\\\"central\\\",\\\"invoice\\\":{\\\"id\\\":\\\"7629994b-2c05-4df7-99e8-8e2b469bfb96\\\",\\\"number\\\":\\\"INT-FC-A-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"postingDate\\\":\\\"2026-10-01\\\",\\\"entryId\\\":\\\"78c113b9-3166-4720-97d5-1e51e17b37ac\\\",\\\"purchaseAccountId\\\":\\\"5.1\\\",\\\"nonRecoverableVat\\\":false,\\\"line\\\":{\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":100000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}},\\\"entry\\\":[{\\\"accountId\\\":\\\"1.2.1\\\",\\\"debit\\\":100000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"5.1\\\",\\\"debit\\\":0,\\\"credit\\\":100000}]}\",\"commissionId\":\"\",\"commissionReview\":\"\",\"branchId\":\"central\",\"name\":\"Equipo textil QA\",\"assetClass\":\"Maquinarias\",\"cost\":100000,\"residual\":10000,\"commissionedOn\":\"2026-10-01\",\"usefulLifeEnd\":\"2026-10-31\",\"method\":\"Lineal diaria\",\"totalDays\":30,\"elapsedDays\":10,\"previous\":0,\"accumulated\":30000,\"charge\":30000,\"bookValue\":70000,\"assetAccountId\":\"1.2.1\",\"accumulatedAccountId\":\"1.2.2\",\"expenseAccountId\":\"5.9\"}],\"total\":30000,\"entries\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"5.9\",\"debit\":30000,\"credit\":0},{\"accountId\":\"1.2.2\",\"debit\":0,\"credit\":30000}]}]}}]},\"inventoryBatchId\":\"\",\"warnings\":[{\"id\":\"fixed-asset-policy\",\"message\":\"Bienes de uso al costo nominal y depreciación lineal diaria. Revisá vida útil, residual, valor recuperable, inflación y su función antes de emitir estados contables.\",\"reference\":\"Bienes de uso registrados\"}],\"sources\":{\"entries\":[{\"id\":\"78c113b9-3166-4720-97d5-1e51e17b37ac\",\"date\":\"2026-10-01\",\"concept\":\"INT-FC-A-00001-00000001\",\"branchId\":\"central\",\"documentId\":\"7629994b-2c05-4df7-99e8-8e2b469bfb96\",\"lines\":[{\"accountId\":\"5.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"1.1.4\",\"debit\":21000,\"credit\":0},{\"accountId\":\"2.1.1\",\"debit\":0,\"credit\":121000}]},{\"id\":\"c299d692-6e0e-426a-9669-710313a68c3d\",\"date\":\"2026-10-01\",\"concept\":\"INT-BU-00000001\",\"branchId\":\"central\",\"documentId\":\"38a7bef9-9bdf-40d3-bd9e-04e033b5cda8\",\"lines\":[{\"accountId\":\"1.2.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"5.1\",\"debit\":0,\"credit\":100000}]},{\"id\":\"d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e\",\"date\":\"2026-10-10\",\"concept\":\"INT-DP-00000001\",\"branchId\":\"central\",\"documentId\":\"02381e55-7dd1-4bfb-9b63-5d72b5499255\",\"lines\":[{\"accountId\":\"5.9\",\"debit\":30000,\"credit\":0},{\"accountId\":\"1.2.2\",\"debit\":0,\"credit\":30000}]}],\"documents\":[{\"id\":\"cb296214-dc01-403d-aa25-0f3a4095c171\",\"number\":\"INT-RM-X-00001-00000001\",\"date\":\"2026-10-01\",\"kind\":\"remito\",\"side\":\"proveedor\",\"branchId\":\"central\",\"net\":100000,\"vat\":0,\"total\":100000,\"perceptions\":0,\"sourceId\":\"\",\"lines\":[{\"productId\":\"fixed-machine\",\"description\":\"\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":100000,\"tax\":\"21\",\"discount\":0}],\"payments\":[],\"allocations\":[]},{\"id\":\"7629994b-2c05-4df7-99e8-8e2b469bfb96\",\"number\":\"INT-FC-A-00001-00000001\",\"date\":\"2026-10-01\",\"kind\":\"factura\",\"side\":\"proveedor\",\"branchId\":\"central\",\"net\":100000,\"vat\":21000,\"total\":121000,\"perceptions\":0,\"sourceId\":\"cb296214-dc01-403d-aa25-0f3a4095c171\",\"lines\":[{\"productId\":\"fixed-machine\",\"description\":\"\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":100000,\"tax\":\"21\",\"discount\":0}],\"payments\":[],\"allocations\":[]}],\"stock\":[],\"treasury\":[]}}",
+          "createdAt": "2026-10-11T06:48:41.769Z",
+          "responsible": "Administrador",
+          "previousClosedUntil": "",
+          "exerciseStart": "2026-01-01",
+          "exerciseEnd": "2026-12-31",
+          "preview": {
+            "reference": "Cierre sintético antes de la nueva evidencia",
+            "reason": "Información disponible al 10/10; no hubo cambios posteriores todavía",
+            "balance": {
+              "from": "2026-01-01",
+              "to": "2026-10-10",
+              "branchId": "all",
+              "rows": [
+                {
+                  "accountId": "1.1.1",
+                  "code": "1.1.1",
+                  "name": "Caja",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.2",
+                  "code": "1.1.2",
+                  "name": "Bancos",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.3",
+                  "code": "1.1.3",
+                  "name": "Deudores por ventas",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.4",
+                  "code": "1.1.4",
+                  "name": "IVA crédito fiscal",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 21000,
+                  "credit": 0,
+                  "closing": 21000
+                },
+                {
+                  "accountId": "1.1.5",
+                  "code": "1.1.5",
+                  "name": "Valores a depositar",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.6",
+                  "code": "1.1.6",
+                  "name": "Retenciones sufridas",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.7",
+                  "code": "1.1.7",
+                  "name": "Percepciones sufridas",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.1.8",
+                  "code": "1.1.8",
+                  "name": "Cupones de tarjetas a cobrar",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "2.1.1",
+                  "code": "2.1.1",
+                  "name": "Proveedores",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 121000,
+                  "closing": -121000
+                },
+                {
+                  "accountId": "2.1.2",
+                  "code": "2.1.2",
+                  "name": "IVA débito fiscal",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "2.1.3",
+                  "code": "2.1.3",
+                  "name": "Retenciones a depositar",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "2.1.4",
+                  "code": "2.1.4",
+                  "name": "Percepciones a depositar",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "2.1.5",
+                  "code": "2.1.5",
+                  "name": "Cheques propios emitidos",
+                  "group": "Pasivo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "3.1",
+                  "code": "3.1",
+                  "name": "Capital y saldos iniciales",
+                  "group": "Patrimonio neto",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "4.1",
+                  "code": "4.1",
+                  "name": "Ventas",
+                  "group": "Ingresos",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "5.1",
+                  "code": "5.1",
+                  "name": "Compras y gastos",
+                  "group": "Gastos",
+                  "opening": 0,
+                  "debit": 100000,
+                  "credit": 100000,
+                  "closing": 0
+                },
+                {
+                  "accountId": "5.2",
+                  "code": "5.2",
+                  "name": "Comisiones de vendedores",
+                  "group": "Gastos",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "5.3",
+                  "code": "5.3",
+                  "name": "Cargos de tarjetas",
+                  "group": "Gastos",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 0,
+                  "closing": 0
+                },
+                {
+                  "accountId": "1.2.1",
+                  "code": "1.2.1",
+                  "name": "Bienes de uso al costo",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 100000,
+                  "credit": 0,
+                  "closing": 100000
+                },
+                {
+                  "accountId": "1.2.2",
+                  "code": "1.2.2",
+                  "name": "Depreciación acumulada de bienes de uso",
+                  "group": "Activo",
+                  "opening": 0,
+                  "debit": 0,
+                  "credit": 30000,
+                  "closing": -30000
+                },
+                {
+                  "accountId": "5.9",
+                  "code": "5.9",
+                  "name": "Depreciación de bienes de uso",
+                  "group": "Gastos",
+                  "opening": 0,
+                  "debit": 30000,
+                  "credit": 0,
+                  "closing": 30000
+                }
+              ],
+              "totals": {
+                "openingDebit": 0,
+                "openingCredit": 0,
+                "debit": 251000,
+                "credit": 251000,
+                "closingDebit": 151000,
+                "closingCredit": 151000
+              },
+              "entryIds": [
+                "78c113b9-3166-4720-97d5-1e51e17b37ac",
+                "c299d692-6e0e-426a-9669-710313a68c3d",
+                "d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e"
+              ]
+            },
+            "branches": [
+              {
+                "id": "central",
+                "balance": {
+                  "from": "2026-01-01",
+                  "to": "2026-10-10",
+                  "branchId": "central",
+                  "rows": [
+                    {
+                      "accountId": "1.1.1",
+                      "code": "1.1.1",
+                      "name": "Caja",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.2",
+                      "code": "1.1.2",
+                      "name": "Bancos",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.3",
+                      "code": "1.1.3",
+                      "name": "Deudores por ventas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.4",
+                      "code": "1.1.4",
+                      "name": "IVA crédito fiscal",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 21000,
+                      "credit": 0,
+                      "closing": 21000
+                    },
+                    {
+                      "accountId": "1.1.5",
+                      "code": "1.1.5",
+                      "name": "Valores a depositar",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.6",
+                      "code": "1.1.6",
+                      "name": "Retenciones sufridas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.7",
+                      "code": "1.1.7",
+                      "name": "Percepciones sufridas",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.1.8",
+                      "code": "1.1.8",
+                      "name": "Cupones de tarjetas a cobrar",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.1",
+                      "code": "2.1.1",
+                      "name": "Proveedores",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 121000,
+                      "closing": -121000
+                    },
+                    {
+                      "accountId": "2.1.2",
+                      "code": "2.1.2",
+                      "name": "IVA débito fiscal",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.3",
+                      "code": "2.1.3",
+                      "name": "Retenciones a depositar",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.4",
+                      "code": "2.1.4",
+                      "name": "Percepciones a depositar",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "2.1.5",
+                      "code": "2.1.5",
+                      "name": "Cheques propios emitidos",
+                      "group": "Pasivo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "3.1",
+                      "code": "3.1",
+                      "name": "Capital y saldos iniciales",
+                      "group": "Patrimonio neto",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "4.1",
+                      "code": "4.1",
+                      "name": "Ventas",
+                      "group": "Ingresos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "5.1",
+                      "code": "5.1",
+                      "name": "Compras y gastos",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 100000,
+                      "credit": 100000,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "5.2",
+                      "code": "5.2",
+                      "name": "Comisiones de vendedores",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "5.3",
+                      "code": "5.3",
+                      "name": "Cargos de tarjetas",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 0,
+                      "closing": 0
+                    },
+                    {
+                      "accountId": "1.2.1",
+                      "code": "1.2.1",
+                      "name": "Bienes de uso al costo",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 100000,
+                      "credit": 0,
+                      "closing": 100000
+                    },
+                    {
+                      "accountId": "1.2.2",
+                      "code": "1.2.2",
+                      "name": "Depreciación acumulada de bienes de uso",
+                      "group": "Activo",
+                      "opening": 0,
+                      "debit": 0,
+                      "credit": 30000,
+                      "closing": -30000
+                    },
+                    {
+                      "accountId": "5.9",
+                      "code": "5.9",
+                      "name": "Depreciación de bienes de uso",
+                      "group": "Gastos",
+                      "opening": 0,
+                      "debit": 30000,
+                      "credit": 0,
+                      "closing": 30000
+                    }
+                  ],
+                  "totals": {
+                    "openingDebit": 0,
+                    "openingCredit": 0,
+                    "debit": 251000,
+                    "credit": 251000,
+                    "closingDebit": 151000,
+                    "closingCredit": 151000
+                  },
+                  "entryIds": [
+                    "78c113b9-3166-4720-97d5-1e51e17b37ac",
+                    "c299d692-6e0e-426a-9669-710313a68c3d",
+                    "d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e"
+                  ]
+                }
+              }
+            ],
+            "fixedAssets": {
+              "assets": [
+                {
+                  "date": "2026-10-01",
+                  "invoiceId": "7629994b-2c05-4df7-99e8-8e2b469bfb96",
+                  "productId": "fixed-machine",
+                  "reference": "Alta sintética QA 2026",
+                  "reason": "Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.",
+                  "name": "Equipo textil QA",
+                  "assetClass": "Maquinarias",
+                  "location": "Casa Central, sala de ensayo",
+                  "assetAccountId": "1.2.1",
+                  "accumulatedAccountId": "1.2.2",
+                  "expenseAccountId": "5.9",
+                  "method": "Lineal diaria",
+                  "commissionedOn": "2026-10-01",
+                  "usefulLifeEnd": "2026-10-31",
+                  "residual": 10000,
+                  "review": "{\"receipt\":{\"id\":\"cb296214-dc01-403d-aa25-0f3a4095c171\",\"number\":\"INT-RM-X-00001-00000001\",\"date\":\"2026-10-01\",\"branchId\":\"central\",\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\"},\"date\":\"2026-10-01\",\"reference\":\"Alta sintética QA 2026\",\"reason\":\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\",\"name\":\"Equipo textil QA\",\"assetClass\":\"Maquinarias\",\"location\":\"Casa Central, sala de ensayo\",\"assetAccountId\":\"1.2.1\",\"accumulatedAccountId\":\"1.2.2\",\"expenseAccountId\":\"5.9\",\"method\":\"Lineal diaria\",\"commissionedOn\":\"2026-10-01\",\"usefulLifeEnd\":\"2026-10-31\",\"residual\":10000,\"cost\":100000,\"branchId\":\"central\",\"invoice\":{\"id\":\"7629994b-2c05-4df7-99e8-8e2b469bfb96\",\"number\":\"INT-FC-A-00001-00000001\",\"date\":\"2026-10-01\",\"postingDate\":\"2026-10-01\",\"entryId\":\"78c113b9-3166-4720-97d5-1e51e17b37ac\",\"purchaseAccountId\":\"5.1\",\"nonRecoverableVat\":false,\"line\":{\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":100000,\"tax\":\"21\",\"discount\":0}},\"entry\":[{\"accountId\":\"1.2.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"5.1\",\"debit\":0,\"credit\":100000}]}",
+                  "id": "38a7bef9-9bdf-40d3-bd9e-04e033b5cda8",
+                  "number": "INT-BU-00000001",
+                  "responsible": "Administrador",
+                  "createdAt": "2026-10-11T06:48:41.746Z",
+                  "entryId": "c299d692-6e0e-426a-9669-710313a68c3d",
+                  "preview": {
+                    "receipt": {
+                      "id": "cb296214-dc01-403d-aa25-0f3a4095c171",
+                      "number": "INT-RM-X-00001-00000001",
+                      "date": "2026-10-01",
+                      "branchId": "central",
+                      "productId": "fixed-machine",
+                      "quantity": 1,
+                      "unit": "Unidad"
+                    },
+                    "date": "2026-10-01",
+                    "reference": "Alta sintética QA 2026",
+                    "reason": "Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.",
+                    "name": "Equipo textil QA",
+                    "assetClass": "Maquinarias",
+                    "location": "Casa Central, sala de ensayo",
+                    "assetAccountId": "1.2.1",
+                    "accumulatedAccountId": "1.2.2",
+                    "expenseAccountId": "5.9",
+                    "method": "Lineal diaria",
+                    "commissionedOn": "2026-10-01",
+                    "usefulLifeEnd": "2026-10-31",
+                    "residual": 10000,
+                    "cost": 100000,
+                    "branchId": "central",
+                    "invoice": {
+                      "id": "7629994b-2c05-4df7-99e8-8e2b469bfb96",
+                      "number": "INT-FC-A-00001-00000001",
+                      "date": "2026-10-01",
+                      "postingDate": "2026-10-01",
+                      "entryId": "78c113b9-3166-4720-97d5-1e51e17b37ac",
+                      "purchaseAccountId": "5.1",
+                      "nonRecoverableVat": false,
+                      "line": {
+                        "productId": "fixed-machine",
+                        "quantity": 1,
+                        "unit": "Unidad",
+                        "price": 100000,
+                        "tax": "21",
+                        "discount": 0
+                      }
+                    },
+                    "entry": [
+                      {
+                        "accountId": "1.2.1",
+                        "debit": 100000,
+                        "credit": 0
+                      },
+                      {
+                        "accountId": "5.1",
+                        "debit": 0,
+                        "credit": 100000
+                      }
+                    ]
+                  }
+                }
+              ],
+              "commissions": [],
+              "batches": [
+                {
+                  "date": "2026-10-10",
+                  "reference": "Cargo sintético previo al cambio",
+                  "reason": "Diez días de uso consumidos según información inicial",
+                  "review": "{\"date\":\"2026-10-10\",\"reference\":\"Cargo sintético previo al cambio\",\"reason\":\"Diez días de uso consumidos según información inicial\",\"previousBatchId\":\"\",\"rows\":[{\"assetId\":\"38a7bef9-9bdf-40d3-bd9e-04e033b5cda8\",\"number\":\"INT-BU-00000001\",\"assetReview\":\"{\\\"receipt\\\":{\\\"id\\\":\\\"cb296214-dc01-403d-aa25-0f3a4095c171\\\",\\\"number\\\":\\\"INT-RM-X-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"branchId\\\":\\\"central\\\",\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\"},\\\"date\\\":\\\"2026-10-01\\\",\\\"reference\\\":\\\"Alta sintética QA 2026\\\",\\\"reason\\\":\\\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\\\",\\\"name\\\":\\\"Equipo textil QA\\\",\\\"assetClass\\\":\\\"Maquinarias\\\",\\\"location\\\":\\\"Casa Central, sala de ensayo\\\",\\\"assetAccountId\\\":\\\"1.2.1\\\",\\\"accumulatedAccountId\\\":\\\"1.2.2\\\",\\\"expenseAccountId\\\":\\\"5.9\\\",\\\"method\\\":\\\"Lineal diaria\\\",\\\"commissionedOn\\\":\\\"2026-10-01\\\",\\\"usefulLifeEnd\\\":\\\"2026-10-31\\\",\\\"residual\\\":10000,\\\"cost\\\":100000,\\\"branchId\\\":\\\"central\\\",\\\"invoice\\\":{\\\"id\\\":\\\"7629994b-2c05-4df7-99e8-8e2b469bfb96\\\",\\\"number\\\":\\\"INT-FC-A-00001-00000001\\\",\\\"date\\\":\\\"2026-10-01\\\",\\\"postingDate\\\":\\\"2026-10-01\\\",\\\"entryId\\\":\\\"78c113b9-3166-4720-97d5-1e51e17b37ac\\\",\\\"purchaseAccountId\\\":\\\"5.1\\\",\\\"nonRecoverableVat\\\":false,\\\"line\\\":{\\\"productId\\\":\\\"fixed-machine\\\",\\\"quantity\\\":1,\\\"unit\\\":\\\"Unidad\\\",\\\"price\\\":100000,\\\"tax\\\":\\\"21\\\",\\\"discount\\\":0}},\\\"entry\\\":[{\\\"accountId\\\":\\\"1.2.1\\\",\\\"debit\\\":100000,\\\"credit\\\":0},{\\\"accountId\\\":\\\"5.1\\\",\\\"debit\\\":0,\\\"credit\\\":100000}]}\",\"commissionId\":\"\",\"commissionReview\":\"\",\"branchId\":\"central\",\"name\":\"Equipo textil QA\",\"assetClass\":\"Maquinarias\",\"cost\":100000,\"residual\":10000,\"commissionedOn\":\"2026-10-01\",\"usefulLifeEnd\":\"2026-10-31\",\"method\":\"Lineal diaria\",\"totalDays\":30,\"elapsedDays\":10,\"previous\":0,\"accumulated\":30000,\"charge\":30000,\"bookValue\":70000,\"assetAccountId\":\"1.2.1\",\"accumulatedAccountId\":\"1.2.2\",\"expenseAccountId\":\"5.9\"}],\"total\":30000,\"entries\":[{\"branchId\":\"central\",\"lines\":[{\"accountId\":\"5.9\",\"debit\":30000,\"credit\":0},{\"accountId\":\"1.2.2\",\"debit\":0,\"credit\":30000}]}]}",
+                  "id": "02381e55-7dd1-4bfb-9b63-5d72b5499255",
+                  "number": "INT-DP-00000001",
+                  "responsible": "Administrador",
+                  "createdAt": "2026-10-11T06:48:41.750Z",
+                  "entryIds": [
+                    "d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e"
+                  ],
+                  "preview": {
+                    "date": "2026-10-10",
+                    "reference": "Cargo sintético previo al cambio",
+                    "reason": "Diez días de uso consumidos según información inicial",
+                    "previousBatchId": "",
+                    "rows": [
+                      {
+                        "assetId": "38a7bef9-9bdf-40d3-bd9e-04e033b5cda8",
+                        "number": "INT-BU-00000001",
+                        "assetReview": "{\"receipt\":{\"id\":\"cb296214-dc01-403d-aa25-0f3a4095c171\",\"number\":\"INT-RM-X-00001-00000001\",\"date\":\"2026-10-01\",\"branchId\":\"central\",\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\"},\"date\":\"2026-10-01\",\"reference\":\"Alta sintética QA 2026\",\"reason\":\"Equipo de ensayo recibido para uso propio. Costo según factura; vida útil sintética de 30 días y residual de 100 ARS para verificar el cálculo, sin tasa fiscal presumida.\",\"name\":\"Equipo textil QA\",\"assetClass\":\"Maquinarias\",\"location\":\"Casa Central, sala de ensayo\",\"assetAccountId\":\"1.2.1\",\"accumulatedAccountId\":\"1.2.2\",\"expenseAccountId\":\"5.9\",\"method\":\"Lineal diaria\",\"commissionedOn\":\"2026-10-01\",\"usefulLifeEnd\":\"2026-10-31\",\"residual\":10000,\"cost\":100000,\"branchId\":\"central\",\"invoice\":{\"id\":\"7629994b-2c05-4df7-99e8-8e2b469bfb96\",\"number\":\"INT-FC-A-00001-00000001\",\"date\":\"2026-10-01\",\"postingDate\":\"2026-10-01\",\"entryId\":\"78c113b9-3166-4720-97d5-1e51e17b37ac\",\"purchaseAccountId\":\"5.1\",\"nonRecoverableVat\":false,\"line\":{\"productId\":\"fixed-machine\",\"quantity\":1,\"unit\":\"Unidad\",\"price\":100000,\"tax\":\"21\",\"discount\":0}},\"entry\":[{\"accountId\":\"1.2.1\",\"debit\":100000,\"credit\":0},{\"accountId\":\"5.1\",\"debit\":0,\"credit\":100000}]}",
+                        "commissionId": "",
+                        "commissionReview": "",
+                        "branchId": "central",
+                        "name": "Equipo textil QA",
+                        "assetClass": "Maquinarias",
+                        "cost": 100000,
+                        "residual": 10000,
+                        "commissionedOn": "2026-10-01",
+                        "usefulLifeEnd": "2026-10-31",
+                        "method": "Lineal diaria",
+                        "totalDays": 30,
+                        "elapsedDays": 10,
+                        "previous": 0,
+                        "accumulated": 30000,
+                        "charge": 30000,
+                        "bookValue": 70000,
+                        "assetAccountId": "1.2.1",
+                        "accumulatedAccountId": "1.2.2",
+                        "expenseAccountId": "5.9"
+                      }
+                    ],
+                    "total": 30000,
+                    "entries": [
+                      {
+                        "branchId": "central",
+                        "lines": [
+                          {
+                            "accountId": "5.9",
+                            "debit": 30000,
+                            "credit": 0
+                          },
+                          {
+                            "accountId": "1.2.2",
+                            "debit": 0,
+                            "credit": 30000
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "inventoryBatchId": "",
+            "warnings": [
+              {
+                "id": "fixed-asset-policy",
+                "message": "Bienes de uso al costo nominal y depreciación lineal diaria. Revisá vida útil, residual, valor recuperable, inflación y su función antes de emitir estados contables.",
+                "reference": "Bienes de uso registrados"
+              }
+            ],
+            "sources": {
+              "entries": [
+                {
+                  "id": "78c113b9-3166-4720-97d5-1e51e17b37ac",
+                  "date": "2026-10-01",
+                  "concept": "INT-FC-A-00001-00000001",
+                  "branchId": "central",
+                  "documentId": "7629994b-2c05-4df7-99e8-8e2b469bfb96",
+                  "lines": [
+                    {
+                      "accountId": "5.1",
+                      "debit": 100000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "1.1.4",
+                      "debit": 21000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "2.1.1",
+                      "debit": 0,
+                      "credit": 121000
+                    }
+                  ]
+                },
+                {
+                  "id": "c299d692-6e0e-426a-9669-710313a68c3d",
+                  "date": "2026-10-01",
+                  "concept": "INT-BU-00000001",
+                  "branchId": "central",
+                  "documentId": "38a7bef9-9bdf-40d3-bd9e-04e033b5cda8",
+                  "lines": [
+                    {
+                      "accountId": "1.2.1",
+                      "debit": 100000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "5.1",
+                      "debit": 0,
+                      "credit": 100000
+                    }
+                  ]
+                },
+                {
+                  "id": "d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e",
+                  "date": "2026-10-10",
+                  "concept": "INT-DP-00000001",
+                  "branchId": "central",
+                  "documentId": "02381e55-7dd1-4bfb-9b63-5d72b5499255",
+                  "lines": [
+                    {
+                      "accountId": "5.9",
+                      "debit": 30000,
+                      "credit": 0
+                    },
+                    {
+                      "accountId": "1.2.2",
+                      "debit": 0,
+                      "credit": 30000
+                    }
+                  ]
+                }
+              ],
+              "documents": [
+                {
+                  "id": "cb296214-dc01-403d-aa25-0f3a4095c171",
+                  "number": "INT-RM-X-00001-00000001",
+                  "date": "2026-10-01",
+                  "kind": "remito",
+                  "side": "proveedor",
+                  "branchId": "central",
+                  "net": 100000,
+                  "vat": 0,
+                  "total": 100000,
+                  "perceptions": 0,
+                  "sourceId": "",
+                  "lines": [
+                    {
+                      "productId": "fixed-machine",
+                      "description": "",
+                      "quantity": 1,
+                      "unit": "Unidad",
+                      "price": 100000,
+                      "tax": "21",
+                      "discount": 0
+                    }
+                  ],
+                  "payments": [],
+                  "allocations": []
+                },
+                {
+                  "id": "7629994b-2c05-4df7-99e8-8e2b469bfb96",
+                  "number": "INT-FC-A-00001-00000001",
+                  "date": "2026-10-01",
+                  "kind": "factura",
+                  "side": "proveedor",
+                  "branchId": "central",
+                  "net": 100000,
+                  "vat": 21000,
+                  "total": 121000,
+                  "perceptions": 0,
+                  "sourceId": "cb296214-dc01-403d-aa25-0f3a4095c171",
+                  "lines": [
+                    {
+                      "productId": "fixed-machine",
+                      "description": "",
+                      "quantity": 1,
+                      "unit": "Unidad",
+                      "price": 100000,
+                      "tax": "21",
+                      "discount": 0
+                    }
+                  ],
+                  "payments": [],
+                  "allocations": []
+                }
+              ],
+              "stock": [],
+              "treasury": []
+            }
+          }
+        },
+        "balance": {
+          "from": "2026-01-01",
+          "to": "2026-10-20",
+          "branchId": "all",
+          "rows": [
+            {
+              "accountId": "1.1.1",
+              "code": "1.1.1",
+              "name": "Caja",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.2",
+              "code": "1.1.2",
+              "name": "Bancos",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.3",
+              "code": "1.1.3",
+              "name": "Deudores por ventas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.4",
+              "code": "1.1.4",
+              "name": "IVA crédito fiscal",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 21000,
+              "credit": 0,
+              "closing": 21000
+            },
+            {
+              "accountId": "1.1.5",
+              "code": "1.1.5",
+              "name": "Valores a depositar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.6",
+              "code": "1.1.6",
+              "name": "Retenciones sufridas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.7",
+              "code": "1.1.7",
+              "name": "Percepciones sufridas",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.1.8",
+              "code": "1.1.8",
+              "name": "Cupones de tarjetas a cobrar",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.1",
+              "code": "2.1.1",
+              "name": "Proveedores",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 121000,
+              "closing": -121000
+            },
+            {
+              "accountId": "2.1.2",
+              "code": "2.1.2",
+              "name": "IVA débito fiscal",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.3",
+              "code": "2.1.3",
+              "name": "Retenciones a depositar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.4",
+              "code": "2.1.4",
+              "name": "Percepciones a depositar",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "2.1.5",
+              "code": "2.1.5",
+              "name": "Cheques propios emitidos",
+              "group": "Pasivo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "3.1",
+              "code": "3.1",
+              "name": "Capital y saldos iniciales",
+              "group": "Patrimonio neto",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "4.1",
+              "code": "4.1",
+              "name": "Ventas",
+              "group": "Ingresos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.1",
+              "code": "5.1",
+              "name": "Compras y gastos",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 100000,
+              "credit": 100000,
+              "closing": 0
+            },
+            {
+              "accountId": "5.2",
+              "code": "5.2",
+              "name": "Comisiones de vendedores",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "5.3",
+              "code": "5.3",
+              "name": "Cargos de tarjetas",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 0,
+              "credit": 0,
+              "closing": 0
+            },
+            {
+              "accountId": "1.2.1",
+              "code": "1.2.1",
+              "name": "Bienes de uso al costo",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 100000,
+              "credit": 0,
+              "closing": 100000
+            },
+            {
+              "accountId": "1.2.2",
+              "code": "1.2.2",
+              "name": "Depreciación acumulada de bienes de uso",
+              "group": "Activo",
+              "opening": 0,
+              "debit": 0,
+              "credit": 40000,
+              "closing": -40000
+            },
+            {
+              "accountId": "5.9",
+              "code": "5.9",
+              "name": "Depreciación de bienes de uso",
+              "group": "Gastos",
+              "opening": 0,
+              "debit": 40000,
+              "credit": 0,
+              "closing": 40000
+            }
+          ],
+          "totals": {
+            "openingDebit": 0,
+            "openingCredit": 0,
+            "debit": 261000,
+            "credit": 261000,
+            "closingDebit": 161000,
+            "closingCredit": 161000
+          },
+          "entryIds": [
+            "78c113b9-3166-4720-97d5-1e51e17b37ac",
+            "c299d692-6e0e-426a-9669-710313a68c3d",
+            "d9b7aed0-62e9-41cb-a0bf-29ac99ddc06e",
+            "e2190473-592b-4c75-9bcd-dde95328d0d6"
+          ]
+        },
+        "balancesCents": {
+          "cost": 100000,
+          "originalCharge": 30000,
+          "newCharge": 10000,
+          "accumulated": -40000,
+          "expense": 40000,
+          "net": 60000,
+          "purchases": 0,
+          "vat": 21000,
+          "suppliers": -121000,
+          "debit": 261000,
+          "credit": 261000
+        }
+      }
+    },
+    {
+      "database": "var/qa-fixed-assets.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-service-cancellation.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-journal-reversal.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-revenue-accrual.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-exercise-opening.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-year-end.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-service-reestimates.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-service-accruals.sqlite",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa después del recorrido JSON"
+    }
+  ]
+}

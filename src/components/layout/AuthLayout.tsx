@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom';
-import { ShieldCheck } from 'lucide-react';
 
 export default function AuthLayout() {
   return (
@@ -8,14 +7,10 @@ export default function AuthLayout() {
       <div className="auth-branding">
         <div className="auth-branding-content">
           <div className="auth-logo-large">
-            <div className="auth-logo-icon">
-              <ShieldCheck size={48} strokeWidth={1.5} />
-            </div>
-            <h1>SICA ERP</h1>
-            <span className="auth-version">v2.0 Enterprise</span>
+            <span className="auth-version">Versión experimental</span>
           </div>
           <p className="auth-tagline">
-            Sistema Integral Contable Administrativo. Gestiona tus finanzas, stock y operaciones desde una única plataforma inteligente.
+            Soluciones Integrales Contables Administrativas. Conectá tus ventas, compras, finanzas, inventarios y contabilidad.
           </p>
           
           <div className="auth-features">
@@ -29,7 +24,7 @@ export default function AuthLayout() {
             </div>
             <div className="auth-feature-item">
               <div className="feature-dot"></div>
-              <span>Máxima seguridad y encriptación</span>
+              <span>Gestión para empresas argentinas</span>
             </div>
           </div>
         </div>

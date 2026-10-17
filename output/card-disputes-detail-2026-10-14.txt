@@ -1,0 +1,233 @@
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas" [expanded]:
+      - generic: Finanzas
+    - link "Cajas y movimientos":
+      - /url: /finanzas/cajas
+    - link "Cajas y cuentas bancarias":
+      - /url: /finanzas/cuentas-tesoreria
+    - link "Bancos y conciliación":
+      - /url: /finanzas/bancos
+    - link "Extractos bancarios":
+      - /url: /finanzas/bancos/extractos
+    - link "Cartera de cheques":
+      - /url: /finanzas/cheques
+    - link "IVA ventas y compras":
+      - /url: /finanzas/impuestos
+    - link "Cuentas por cobrar / pagar":
+      - /url: /finanzas/cuentas
+    - link "Tarjetas de crédito":
+      - /url: /finanzas/tarjetas
+    - link "Liquidaciones de tarjetas":
+      - /url: /finanzas/liquidaciones-tarjetas
+    - link "Retenciones y percepciones":
+      - /url: /finanzas/retenciones
+    - link "Formas de pago y cobro":
+      - /url: /finanzas/formas-pago
+    - link "Entidades bancarias":
+      - /url: /finanzas/entidades
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Contracargos de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 4 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Liquidaciones de tarjetas" [level=1]
+  - paragraph: Cupones pendientes, acreditaciones netas, cargos y retenciones de cada liquidación.
+  - link "Configurar tarjetas":
+    - /url: /finanzas/tarjetas
+  - button "Registrar liquidación" [disabled]:
+    - text: Registrar liquidación
+  - generic: Cupones pendientes
+  - strong: "0"
+  - generic: Bruto por liquidar
+  - strong: $ 0,00
+  - generic: Neto acreditado
+  - strong: $ 950,00
+  - generic: Registrar una liquidación no transfiere dinero. Copiá los importes del resumen y los certificados del agente. Los cargos se registran como gasto bruto; el crédito fiscal de la factura del servicio necesita su comprobante y una imputación contable revisada, sin duplicar el gasto.
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - heading "Historial de liquidaciones" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha Liquidación Tarjeta Banco Bruto Cargos Retenciones Neto Detalle":
+        - columnheader "Fecha"
+        - columnheader "Liquidación"
+        - columnheader "Tarjeta"
+        - columnheader "Banco"
+        - columnheader "Bruto"
+        - columnheader "Cargos"
+        - columnheader "Retenciones"
+        - columnheader "Neto"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "14/10/2026 LIQ-CB-ENSAYO Visa Banco de prueba $ 1.000,00 $ 30,00 $ 20,00 $ 950,00 Ver":
+        - cell "14/10/2026"
+        - cell "LIQ-CB-ENSAYO"
+        - cell "Visa"
+        - cell "Banco de prueba"
+        - cell "$ 1.000,00"
+        - cell "$ 30,00"
+        - cell "$ 20,00"
+        - cell "$ 950,00"
+        - cell "Ver":
+          - button "Ver"
+  - heading "Contracargos y reclamos a procesadoras" [level=2]
+  - button "Registrar contracargo"
+  - generic: Reclamos pendientes de resolución
+  - strong: $ 0,00
+  - generic: Registrá la notificación de la procesadora y el origen afectado. Un reclamo como activo requiere un crédito cierto documentado. Un reclamo contingente reconoce la reducción del origen como pérdida y mantiene un control separado; su cierre no duplica el gasto. Los cupones apartados se excluyen de futuras liquidaciones. Las constancias conservan los recibos y liquidaciones originales.
+  - paragraph:
+    - button "Preparar cuentas de reclamos, pérdidas y recuperos"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Fecha Recibo Referencia Origen Tratamiento Reclamo Pendiente Responsable Acción":
+        - columnheader "Constancia"
+        - columnheader "Fecha"
+        - columnheader "Recibo"
+        - columnheader "Referencia"
+        - columnheader "Origen"
+        - columnheader "Tratamiento"
+        - columnheader "Reclamo"
+        - columnheader "Pendiente"
+        - columnheader "Responsable"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "INT-TC-00000001 14/10/2026 INT-RC-X-00001-00000001 CB-ENSAYO-01 Liquidación LIQ-CB-ENSAYO Reclamo contingente $ 400,00 $ 0,00 Administrador Ver constancia Resolver":
+        - cell "INT-TC-00000001"
+        - cell "14/10/2026"
+        - cell "INT-RC-X-00001-00000001"
+        - cell "CB-ENSAYO-01"
+        - cell "Liquidación LIQ-CB-ENSAYO"
+        - cell "Reclamo contingente"
+        - cell "$ 400,00"
+        - cell "$ 0,00"
+        - cell "Administrador"
+        - cell "Ver constancia Resolver":
+          - button "Ver constancia"
+          - button "Resolver"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Contracargo Fecha Referencia Resultado Importe Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Contracargo"
+        - columnheader "Fecha"
+        - columnheader "Referencia"
+        - columnheader "Resultado"
+        - columnheader "Importe"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-TR-00000002 INT-TC-00000001 14/10/2026 REF-CB-ENSAYO Reintegrado $ 250,00 Administrador Ver constancia":
+        - cell "INT-TR-00000002"
+        - cell "INT-TC-00000001"
+        - cell "14/10/2026"
+        - cell "REF-CB-ENSAYO"
+        - cell "Reintegrado"
+        - cell "$ 250,00"
+        - cell "Administrador"
+        - cell "Ver constancia":
+          - button "Ver constancia"
+      - row "INT-TR-00000003 INT-TC-00000001 14/10/2026 CIE-CB-ENSAYO Pérdida $ 150,00 Administrador Ver constancia":
+        - cell "INT-TR-00000003"
+        - cell "INT-TC-00000001"
+        - cell "14/10/2026"
+        - cell "CIE-CB-ENSAYO"
+        - cell "Pérdida"
+        - cell "$ 150,00"
+        - cell "Administrador"
+        - cell "Ver constancia":
+          - button "Ver constancia"
+  - dialog "Constancia INT-TR-00000003":
+    - heading "Constancia INT-TR-00000003" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: 14/10/2026 · Administrador
+    - paragraph:
+      - strong: "Referencia:"
+      - text: CIE-CB-ENSAYO ·
+      - strong: "Importe:"
+      - text: $ 150,00
+    - paragraph:
+      - strong: "Tratamiento / resultado:"
+      - text: Pérdida
+    - paragraph:
+      - strong: "Fundamento y evidencia:"
+      - text: Rechazo definitivo sintético de los $150 restantes. Cierre del control de reclamo.
+    - paragraph:
+      - strong: "Recibo:"
+      - text: INT-RC-X-00001-00000001 ·
+      - strong: "Origen:"
+      - text: Liquidación LIQ-CB-ENSAYO
+    - paragraph: "Movimiento bancario registrado: $ 0,00."
+    - generic: Cierre del control contingente sin otro asiento ni movimiento bancario.

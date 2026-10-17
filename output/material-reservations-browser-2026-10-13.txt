@@ -1,0 +1,843 @@
+Revisión de reserva:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción" [expanded]:
+      - generic: Producción
+    - link "Planificación y avance":
+      - /url: /produccion
+    - link "Órdenes de producción":
+      - /url: /produccion/ordenes
+    - link "Materiales y requerimientos":
+      - /url: /produccion/materiales
+    - link "Centros y capacidad":
+      - /url: /produccion/centros
+    - link "Rutas de fabricación":
+      - /url: /produccion/rutas
+    - link "Maquinaria":
+      - /url: /produccion/maquinaria
+    - link "Tareas":
+      - /url: /produccion/tareas
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Reserva de materiales de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 1 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Producción y planificación" [level=1]
+  - paragraph: Rutas, operaciones, materiales y reservas diarias de capacidad.
+  - link "Gestionar órdenes":
+    - /url: /produccion/ordenes
+  - generic: Órdenes abiertas
+  - strong: "1"
+  - generic: Materiales con faltantes
+  - strong: "0"
+  - generic: Centros de trabajo
+  - strong: "1"
+  - generic: Preparar ruta conserva los materiales y la secuencia, y reserva horas dentro de las fechas previstas. Cada operación tiene centro y tiempo del lote. Las rutas anteriores con un único centro reparten su tiempo por igual; sin ruta se estima cantidad ÷ capacidad del centro. Revisá esos tiempos antes de preparar.
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Orden Producto Cantidad Inicio previsto Fin previsto Estado Operaciones Costo previsto Costo de gestión Acción":
+        - columnheader "Orden"
+        - columnheader "Producto"
+        - columnheader "Cantidad"
+        - columnheader "Inicio previsto"
+        - columnheader "Fin previsto"
+        - columnheader "Estado"
+        - columnheader "Operaciones"
+        - columnheader "Costo previsto"
+        - columnheader "Costo de gestión"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "Lote de ensayo con tres insumos Pantalón · 42 · Azul 2 2026-10-13 2026-10-13 Planificada 0/1 $ 0,00 $ 0,00 Reservar materiales Ver ruta Finalizar":
+        - cell "Lote de ensayo con tres insumos"
+        - cell "Pantalón · 42 · Azul"
+        - cell "2"
+        - cell "2026-10-13"
+        - cell "2026-10-13"
+        - cell "Planificada"
+        - cell "0/1"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "Reservar materiales Ver ruta Finalizar":
+          - button "Reservar materiales"
+          - button "Ver ruta"
+          - button "Finalizar" [disabled]
+  - heading "Carga diaria programada" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha Centro Horas reservadas Horas disponibles por día Horas sin reservar":
+        - columnheader "Fecha"
+        - columnheader "Centro"
+        - columnheader "Horas reservadas"
+        - columnheader "Horas disponibles por día"
+        - columnheader "Horas sin reservar"
+    - rowgroup:
+      - row "13/10/2026 Taller de ensayo 2 8 6":
+        - cell "13/10/2026"
+        - cell "Taller de ensayo"
+        - cell "2"
+        - cell "8"
+        - cell "6"
+  - paragraph: Calendario de horas previstas. Las horas reales se registran al completar cada operación. Cancelar una orden antes de iniciarla libera sus reservas.
+  - heading "Requerimientos de materiales" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Orden Material Requerido Existencia física Disponible para la orden Faltante":
+        - columnheader "Orden"
+        - columnheader "Material"
+        - columnheader "Requerido"
+        - columnheader "Existencia física"
+        - columnheader "Disponible para la orden"
+        - columnheader "Faltante"
+    - rowgroup:
+      - row "Lote de ensayo con tres insumos REM-M-NEG 3 40 40 0":
+        - cell "Lote de ensayo con tres insumos"
+        - cell "REM-M-NEG"
+        - cell "3"
+        - cell "40"
+        - cell "40"
+        - cell "0"
+  - heading "Reservas de materiales" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - generic: Reservar conserva el stock físico y aparta todos los materiales del plan. Las salidas respetan las reservas incluso si el SKU admite stock negativo. Liberá los materiales antes de cancelar una orden; finalizar libera y consume su reserva en la misma operación.
+  - dialog "Reservar materiales de producción":
+    - heading "Reservar materiales de producción" [level=2]
+    - button "Cerrar":
+    - generic: Fecha de reserva o liberación *
+    - textbox "Fecha de reserva o liberación *": 2026-10-13
+    - generic: Fundamento *
+    - textbox "Fundamento *": Apartar las tres unidades de insumo del lote de ensayo; conservar su stock físico hasta finalizar.
+    - textbox "Buscar registros":
+      - /placeholder: Buscar en los registros…
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "Material Depósito A reservar Existencia a la fecha Ya reservado Libre a la fecha Mínimo libre con salidas posteriores":
+          - columnheader "Material"
+          - columnheader "Depósito"
+          - columnheader "A reservar"
+          - columnheader "Existencia a la fecha"
+          - columnheader "Ya reservado"
+          - columnheader "Libre a la fecha"
+          - columnheader "Mínimo libre con salidas posteriores"
+      - rowgroup:
+        - row "Remera de algodón · M · Negro Depósito principal 3 40 0 40 40":
+          - cell "Remera de algodón · M · Negro"
+          - cell "Depósito principal"
+          - cell "3"
+          - cell "40"
+          - cell "0"
+          - cell "40"
+          - cell "40"
+    - button "Confirmar reserva revisada" [active]
+  - heading "Capacidad nominal diaria" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Centro Horas por día Unidades / hora Capacidad nominal / día Unidades programadas":
+        - columnheader "Centro"
+        - columnheader "Horas por día"
+        - columnheader "Unidades / hora"
+        - columnheader "Capacidad nominal / día"
+        - columnheader "Unidades programadas"
+    - rowgroup:
+      - row "Taller de ensayo 8 1 8 2":
+        - cell "Taller de ensayo"
+        - cell "8"
+        - cell "1"
+        - cell "8"
+        - cell "2"
+  - link "Órdenes de producción Consultar →":
+    - /url: /produccion/ordenes
+    - heading "Órdenes de producción" [level=2]
+    - paragraph: Consultar →
+  - link "Materiales y requerimientos Consultar →":
+    - /url: /produccion/materiales
+    - heading "Materiales y requerimientos" [level=2]
+    - paragraph: Consultar →
+  - link "Centros y capacidad Consultar →":
+    - /url: /produccion/centros
+    - heading "Centros y capacidad" [level=2]
+    - paragraph: Consultar →
+  - link "Rutas de fabricación Consultar →":
+    - /url: /produccion/rutas
+    - heading "Rutas de fabricación" [level=2]
+    - paragraph: Consultar →
+  - link "Maquinaria Consultar →":
+    - /url: /produccion/maquinaria
+    - heading "Maquinaria" [level=2]
+    - paragraph: Consultar →
+  - link "Tareas Consultar →":
+    - /url: /produccion/tareas
+    - heading "Tareas" [level=2]
+    - paragraph: Consultar →
+  - generic: Finalizar consume los materiales conservados y agrega el producto terminado una sola vez. Los importes de la orden son referencias de gestión. La conversión contable y el costo del lote se revisan en Contabilidad → Valuación de inventario.
+
+Reserva conservada:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción" [expanded]:
+      - generic: Producción
+    - link "Planificación y avance":
+      - /url: /produccion
+    - link "Órdenes de producción":
+      - /url: /produccion/ordenes
+    - link "Materiales y requerimientos":
+      - /url: /produccion/materiales
+    - link "Centros y capacidad":
+      - /url: /produccion/centros
+    - link "Rutas de fabricación":
+      - /url: /produccion/rutas
+    - link "Maquinaria":
+      - /url: /produccion/maquinaria
+    - link "Tareas":
+      - /url: /produccion/tareas
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Reserva de materiales de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Producción y planificación" [level=1]
+  - paragraph: Rutas, operaciones, materiales y reservas diarias de capacidad.
+  - link "Gestionar órdenes":
+    - /url: /produccion/ordenes
+  - generic: Órdenes abiertas
+  - strong: "1"
+  - generic: Materiales con faltantes
+  - strong: "0"
+  - generic: Centros de trabajo
+  - strong: "1"
+  - generic: Preparar ruta conserva los materiales y la secuencia, y reserva horas dentro de las fechas previstas. Cada operación tiene centro y tiempo del lote. Las rutas anteriores con un único centro reparten su tiempo por igual; sin ruta se estima cantidad ÷ capacidad del centro. Revisá esos tiempos antes de preparar.
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Orden Producto Cantidad Inicio previsto Fin previsto Estado Operaciones Costo previsto Costo de gestión Acción":
+        - columnheader "Orden"
+        - columnheader "Producto"
+        - columnheader "Cantidad"
+        - columnheader "Inicio previsto"
+        - columnheader "Fin previsto"
+        - columnheader "Estado"
+        - columnheader "Operaciones"
+        - columnheader "Costo previsto"
+        - columnheader "Costo de gestión"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "Lote de ensayo con tres insumos Pantalón · 42 · Azul 2 2026-10-13 2026-10-13 Planificada 0/1 $ 0,00 $ 0,00 Liberar materiales Ver ruta Finalizar":
+        - cell "Lote de ensayo con tres insumos"
+        - cell "Pantalón · 42 · Azul"
+        - cell "2"
+        - cell "2026-10-13"
+        - cell "2026-10-13"
+        - cell "Planificada"
+        - cell "0/1"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "Liberar materiales Ver ruta Finalizar":
+          - button "Liberar materiales" [active]
+          - button "Ver ruta"
+          - button "Finalizar" [disabled]
+  - heading "Carga diaria programada" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha Centro Horas reservadas Horas disponibles por día Horas sin reservar":
+        - columnheader "Fecha"
+        - columnheader "Centro"
+        - columnheader "Horas reservadas"
+        - columnheader "Horas disponibles por día"
+        - columnheader "Horas sin reservar"
+    - rowgroup:
+      - row "13/10/2026 Taller de ensayo 2 8 6":
+        - cell "13/10/2026"
+        - cell "Taller de ensayo"
+        - cell "2"
+        - cell "8"
+        - cell "6"
+  - paragraph: Calendario de horas previstas. Las horas reales se registran al completar cada operación. Cancelar una orden antes de iniciarla libera sus reservas.
+  - heading "Requerimientos de materiales" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Orden Material Requerido Existencia física Disponible para la orden Faltante":
+        - columnheader "Orden"
+        - columnheader "Material"
+        - columnheader "Requerido"
+        - columnheader "Existencia física"
+        - columnheader "Disponible para la orden"
+        - columnheader "Faltante"
+    - rowgroup:
+      - row "Lote de ensayo con tres insumos REM-M-NEG 3 40 40 0":
+        - cell "Lote de ensayo con tres insumos"
+        - cell "REM-M-NEG"
+        - cell "3"
+        - cell "40"
+        - cell "40"
+        - cell "0"
+  - heading "Reservas de materiales" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Orden Reserva Materiales Estado Liberación / consumo Responsable":
+        - columnheader "Constancia"
+        - columnheader "Orden"
+        - columnheader "Reserva"
+        - columnheader "Materiales"
+        - columnheader "Estado"
+        - columnheader "Liberación / consumo"
+        - columnheader "Responsable"
+    - rowgroup:
+      - 'row "INT-RM-00000001 Lote de ensayo con tres insumos 13/10/2026 Remera de algodón · M · Negro: 3 Unidad Activa — Administrador"':
+        - cell "INT-RM-00000001"
+        - cell "Lote de ensayo con tres insumos"
+        - cell "13/10/2026"
+        - 'cell "Remera de algodón · M · Negro: 3 Unidad"'
+        - cell "Activa"
+        - cell "—"
+        - cell "Administrador"
+  - generic: Reservar conserva el stock físico y aparta todos los materiales del plan. Las salidas respetan las reservas incluso si el SKU admite stock negativo. Liberá los materiales antes de cancelar una orden; finalizar libera y consume su reserva en la misma operación.
+  - heading "Capacidad nominal diaria" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Centro Horas por día Unidades / hora Capacidad nominal / día Unidades programadas":
+        - columnheader "Centro"
+        - columnheader "Horas por día"
+        - columnheader "Unidades / hora"
+        - columnheader "Capacidad nominal / día"
+        - columnheader "Unidades programadas"
+    - rowgroup:
+      - row "Taller de ensayo 8 1 8 2":
+        - cell "Taller de ensayo"
+        - cell "8"
+        - cell "1"
+        - cell "8"
+        - cell "2"
+  - link "Órdenes de producción Consultar →":
+    - /url: /produccion/ordenes
+    - heading "Órdenes de producción" [level=2]
+    - paragraph: Consultar →
+  - link "Materiales y requerimientos Consultar →":
+    - /url: /produccion/materiales
+    - heading "Materiales y requerimientos" [level=2]
+    - paragraph: Consultar →
+  - link "Centros y capacidad Consultar →":
+    - /url: /produccion/centros
+    - heading "Centros y capacidad" [level=2]
+    - paragraph: Consultar →
+  - link "Rutas de fabricación Consultar →":
+    - /url: /produccion/rutas
+    - heading "Rutas de fabricación" [level=2]
+    - paragraph: Consultar →
+  - link "Maquinaria Consultar →":
+    - /url: /produccion/maquinaria
+    - heading "Maquinaria" [level=2]
+    - paragraph: Consultar →
+  - link "Tareas Consultar →":
+    - /url: /produccion/tareas
+    - heading "Tareas" [level=2]
+    - paragraph: Consultar →
+  - generic: Finalizar consume los materiales conservados y agrega el producto terminado una sola vez. Los importes de la orden son referencias de gestión. La conversión contable y el costo del lote se revisan en Contabilidad → Valuación de inventario.
+
+Disponibilidad en inventario:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística" [expanded]:
+      - generic: Stock y logística
+    - link "Inventario":
+      - /url: /stock/inventario
+    - link "Depósitos":
+      - /url: /stock/depositos
+    - link "Movimientos":
+      - /url: /stock/movimientos
+    - link "Traslados entre depósitos":
+      - /url: /stock/traslados
+    - link "Devoluciones físicas":
+      - /url: /stock/devoluciones
+    - link "Ajustes de stock":
+      - /url: /stock/ajustes
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Reserva de materiales de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Inventario" [level=1]
+  - paragraph: Stock por artículo y depósito. Los ajustes manuales requieren Administrador General.
+  - heading "Disponibilidad por fecha" [level=2]
+  - generic: Stock a la fecha
+  - textbox "Stock a la fecha": 2026-10-13
+  - generic: La reserva de producción mantiene la existencia física y reduce lo disponible para otras salidas. Las salidas también revisan las reservas y movimientos posteriores.
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 4 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "SKU Descripción Depósito Existencia física Reservado para producción Disponible para otras salidas Mínimo Estado":
+        - columnheader "SKU"
+        - columnheader "Descripción"
+        - columnheader "Depósito"
+        - columnheader "Existencia física"
+        - columnheader "Reservado para producción"
+        - columnheader "Disponible para otras salidas"
+        - columnheader "Mínimo"
+        - columnheader "Estado"
+    - rowgroup:
+      - row "REM Remera de algodón Depósito principal 0 0 0 5 Bajo mínimo":
+        - cell "REM"
+        - cell "Remera de algodón"
+        - cell "Depósito principal"
+        - cell "0"
+        - cell "0"
+        - cell "0"
+        - cell "5"
+        - cell "Bajo mínimo"
+      - row "REM-M Remera de algodón · Talle M Depósito principal 0 0 0 5 Bajo mínimo":
+        - cell "REM-M"
+        - cell "Remera de algodón · Talle M"
+        - cell "Depósito principal"
+        - cell "0"
+        - cell "0"
+        - cell "0"
+        - cell "5"
+        - cell "Bajo mínimo"
+      - row "REM-M-NEG Remera de algodón · M · Negro Depósito principal 40 3 37 5 Disponible":
+        - cell "REM-M-NEG"
+        - cell "Remera de algodón · M · Negro"
+        - cell "Depósito principal"
+        - cell "40"
+        - cell "3"
+        - cell "37"
+        - cell "5"
+        - cell "Disponible"
+      - row "PANT-42-AZ Pantalón · 42 · Azul Depósito principal 20 0 20 5 Disponible":
+        - cell "PANT-42-AZ"
+        - cell "Pantalón · 42 · Azul"
+        - cell "Depósito principal"
+        - cell "20"
+        - cell "0"
+        - cell "20"
+        - cell "5"
+        - cell "Disponible"
+
+Salida rechazada por reserva:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística" [expanded]:
+      - generic: Stock y logística
+    - link "Inventario":
+      - /url: /stock/inventario
+    - link "Depósitos":
+      - /url: /stock/depositos
+    - link "Movimientos":
+      - /url: /stock/movimientos
+    - link "Traslados entre depósitos":
+      - /url: /stock/traslados
+    - link "Devoluciones físicas":
+      - /url: /stock/devoluciones
+    - link "Ajustes de stock":
+      - /url: /stock/ajustes
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Reserva de materiales de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Ajustes de stock" [level=1]
+  - paragraph: Stock por artículo y depósito. Los ajustes manuales requieren Administrador General.
+  - heading "Registrar ajuste" [level=2]
+  - generic: Producto
+  - combobox "Producto":
+    - option "Seleccionar…"
+    - option "REM · Remera de algodón"
+    - option "REM-M · Remera de algodón · Talle M"
+    - option "REM-M-NEG · Remera de algodón · M · Negro" [selected]
+    - option "PANT-42-AZ · Pantalón · 42 · Azul"
+  - generic: Depósito
+  - combobox "Depósito":
+    - option "Depósito principal" [selected]
+  - generic: Cantidad (+ ingreso / − egreso)
+  - spinbutton "Cantidad (+ ingreso / − egreso)": "-38"
+  - generic: Motivo obligatorio
+  - textbox "Motivo obligatorio": Intento sintético de retirar 38 unidades conservando tres reservadas.
+  - button "Registrar ajuste" [active]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha SKU Descripción Depósito Cantidad Motivo / documento":
+        - columnheader "Fecha"
+        - columnheader "SKU"
+        - columnheader "Descripción"
+        - columnheader "Depósito"
+        - columnheader "Cantidad"
+        - columnheader "Motivo / documento"
+    - rowgroup:
+      - row "13/10/2026 REM-M-NEG Remera de algodón · M · Negro Depósito principal 40 Stock inicial de ejemplo (sin valuación contable)":
+        - cell "13/10/2026"
+        - cell "REM-M-NEG"
+        - cell "Remera de algodón · M · Negro"
+        - cell "Depósito principal"
+        - cell "40"
+        - cell "Stock inicial de ejemplo (sin valuación contable)"
+      - row "13/10/2026 PANT-42-AZ Pantalón · 42 · Azul Depósito principal 20 Stock inicial de ejemplo (sin valuación contable)":
+        - cell "13/10/2026"
+        - cell "PANT-42-AZ"
+        - cell "Pantalón · 42 · Azul"
+        - cell "Depósito principal"
+        - cell "20"
+        - cell "Stock inicial de ejemplo (sin valuación contable)"
+
+Rechazo capturado de inmediato:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística" [expanded]:
+      - generic: Stock y logística
+    - link "Inventario":
+      - /url: /stock/inventario
+    - link "Depósitos":
+      - /url: /stock/depositos
+    - link "Movimientos":
+      - /url: /stock/movimientos
+    - link "Traslados entre depósitos":
+      - /url: /stock/traslados
+    - link "Devoluciones físicas":
+      - /url: /stock/devoluciones
+    - link "Ajustes de stock":
+      - /url: /stock/ajustes
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Reserva de materiales de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Ajustes de stock" [level=1]
+  - paragraph: Stock por artículo y depósito. Los ajustes manuales requieren Administrador General.
+  - heading "Registrar ajuste" [level=2]
+  - generic: Producto
+  - combobox "Producto":
+    - option "Seleccionar…"
+    - option "REM · Remera de algodón"
+    - option "REM-M · Remera de algodón · Talle M"
+    - option "REM-M-NEG · Remera de algodón · M · Negro" [selected]
+    - option "PANT-42-AZ · Pantalón · 42 · Azul"
+  - generic: Depósito
+  - combobox "Depósito":
+    - option "Depósito principal" [selected]
+  - generic: Cantidad (+ ingreso / − egreso)
+  - spinbutton "Cantidad (+ ingreso / − egreso)": "-38"
+  - generic: Motivo obligatorio
+  - textbox "Motivo obligatorio": Repetición sintética para conservar la evidencia del bloqueo.
+  - button "Registrar ajuste" [active]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha SKU Descripción Depósito Cantidad Motivo / documento":
+        - columnheader "Fecha"
+        - columnheader "SKU"
+        - columnheader "Descripción"
+        - columnheader "Depósito"
+        - columnheader "Cantidad"
+        - columnheader "Motivo / documento"
+    - rowgroup:
+      - row "13/10/2026 REM-M-NEG Remera de algodón · M · Negro Depósito principal 40 Stock inicial de ejemplo (sin valuación contable)":
+        - cell "13/10/2026"
+        - cell "REM-M-NEG"
+        - cell "Remera de algodón · M · Negro"
+        - cell "Depósito principal"
+        - cell "40"
+        - cell "Stock inicial de ejemplo (sin valuación contable)"
+      - row "13/10/2026 PANT-42-AZ Pantalón · 42 · Azul Depósito principal 20 Stock inicial de ejemplo (sin valuación contable)":
+        - cell "13/10/2026"
+        - cell "PANT-42-AZ"
+        - cell "Pantalón · 42 · Azul"
+        - cell "Depósito principal"
+        - cell "20"
+        - cell "Stock inicial de ejemplo (sin valuación contable)"
+  - status: "Error: Material reservado de REM-M-NEG al 2026-10-13; liberá la reserva o usá existencias disponibles."

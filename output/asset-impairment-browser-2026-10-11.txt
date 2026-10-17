@@ -1,0 +1,81 @@
+Constancia INT-VR-00000001
+
+Deterioro QA 2026 · Administrador
+
+Caso sintético de prueba: caída del rendimiento económico y tasación externa revisada.
+
+10/10/2026 · Pequeña o mediana · Global · Comparación global
+
+Comparación global de todos los bienes de uso de la empresa de prueba; no existen otros activos comprendidos.
+
+Precio estimado: $ 350,00 · Costos directos de venta: $ 50,00
+
+VNR: $ 300,00 · Valor de uso: $ 400,00 · Recuperable medido: $ 400,00
+
+Neto previo: $ 700,00 · Pérdida: $ 300,00 · Neto tras evaluar: $ 400,00
+
+Costo conservado: $ 1.000,00 · Depreciación contabilizada: $ 300,00 · Deterioro posterior: $ 300,00
+Tope sin deterioro: $ 700,00 · Base restante: $ 300,00 · 20 días
+
+El costo y los cargos anteriores se conservan. El ajuste se registra al finalizar esta fecha y la base restante se distribuye desde el día siguiente, según disponibilidad, vida útil y residual vigentes. El corte de depreciación de esta fecha conserva su cálculo previo al ajuste; el registro muestra el neto posterior. Una evaluación sin ajuste conserva evidencia y no genera otro asiento.
+
+2 registros
+SUCURSAL	CUENTA	DEBE ARS	HABER ARS
+Casa Central	Deterioro acumulado de bienes de uso	$ 0,00	$ 300,00
+Casa Central	Pérdidas por desvalorización de bienes de uso	$ 300,00	$ 0,00
+
+VNR: Tasación sintética QA: venta 350 ARS y costos directos 50 ARS.
+
+Valor de uso: Proyección externa sintética revisada: valor presente 400 ARS. · Valor presente externo sintético; tasa real y flujos en moneda de la fecha, revisados para esta prueba.
+
+Revisar registro de bienes de uso
+
+20/10/2026 · Cargo posterior al deterioro QA 2026
+
+Caso sintético: consumo de la nueva base desde el 11 al 20 de octubre.
+
+Cargo global nuevo $ 150,00
+
+1 registros
+BIEN	IDENTIFICACIÓN	DEPRECIACIÓN ANTERIOR ARS	ACUMULADA AL CORTE ARS	CARGO NUEVO ARS	NETO AL CORTE ARS
+INT-BU-00000001	Equipo textil QA	$ 300,00	$ 450,00	$ 150,00	$ 250,00
+2 registros
+SUCURSAL	CUENTA	DEBE ARS	HABER ARS
+Casa Central	Depreciación de bienes de uso	$ 150,00	$ 0,00
+Casa Central	Depreciación acumulada de bienes de uso	$ 0,00	$ 150,00
+Registrar constancia revisada
+
+Recuperado después de recargar la página:
+Constancia INT-VR-00000002
+
+Recuperación QA 2026 · Administrador
+
+Caso sintético: nueva tasación y revisión de proyecciones luego del deterioro.
+
+20/10/2026 · Pequeña o mediana · Global · Comparación global
+
+Comparación global de todos los bienes de uso de la empresa de prueba; no existen otros activos comprendidos.
+
+Precio estimado: $ 900,00 · Costos directos de venta: $ 0,00
+
+VNR: $ 900,00 · Valor de uso: $ 900,00 · Recuperable medido: $ 900,00
+
+Neto previo: $ 250,00 · Reversión: $ 150,00 · Neto tras evaluar: $ 400,00
+
+Recuperación que supera el ajuste permitido: $ 500,00. La reversión no excede el valor que habría quedado sin deterioro ni los topes individuales determinados.
+
+Costo conservado: $ 1.000,00 · Depreciación contabilizada: $ 450,00 · Deterioro posterior: $ 150,00
+Tope sin deterioro: $ 400,00 · Base restante: $ 300,00 · 10 días
+
+El costo y los cargos anteriores se conservan. El ajuste se registra al finalizar esta fecha y la base restante se distribuye desde el día siguiente, según disponibilidad, vida útil y residual vigentes. El corte de depreciación de esta fecha conserva su cálculo previo al ajuste; el registro muestra el neto posterior. Una evaluación sin ajuste conserva evidencia y no genera otro asiento.
+
+2 registros
+SUCURSAL	CUENTA	DEBE ARS	HABER ARS
+Casa Central	Deterioro acumulado de bienes de uso	$ 150,00	$ 0,00
+Casa Central	Reversiones de desvalorización de bienes de uso	$ 0,00	$ 150,00
+
+VNR: Nueva tasación sintética QA de venta 900 ARS, sin costos directos.
+
+Valor de uso: Nueva proyección externa sintética revisada: valor presente 900 ARS. · Valor presente externo sintético; tasa real y flujos en moneda de la fecha, revisados para esta prueba.
+
+Nueva evidencia: Nueva tasación y proyección externa sintéticas acreditan recuperación; composición y nivel del alcance se mantienen.

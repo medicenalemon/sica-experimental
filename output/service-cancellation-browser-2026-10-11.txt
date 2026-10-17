@@ -1,0 +1,85 @@
+SICA QA - ANULACIÓN DE SERVICIOS
+Responsable Inscripto · Tucumán
+Sucursal
+Todas las unidades
+Casa Central
+AD
+Administrador
+Administrador General
+Base compartida · Versión 3 · Datos en el servidor · Comprobantes sin autorización ARCA
+
+SICA / GESTIÓN INTEGRAL
+
+Servicios recibidos sin factura
+
+Gasto estimado, pasivo conservado y conciliación revisada con la factura.
+
+Preparar cuenta de servicios
+Devengar servicio recibido
+Registrá primero la recepción del servicio en un remito de compra. La estimación necesita fundamento e imputación del gasto y no genera crédito fiscal de IVA, cuenta corriente ni pago. Cuando se registre la factura, conciliá el devengamiento para cancelar el pasivo estimado y evitar duplicar el gasto. Los servicios que integran costos de activos o fabricación requieren un tratamiento específico que todavía no incorpora este circuito.
+Devengamientos visibles
+2
+Pendientes de conciliar
+1
+Pasivo estimado pendiente
+$ 150,00
+Devengamientos conservados
+2 registros
+XLSX
+PDF
+CONSTANCIA	REGISTRO	RECEPCIÓN	PROVEEDOR	ESTIMACIÓN ORIGINAL ARS	ESTIMACIÓN VIGENTE ARS	REFERENCIA	ESTADO	ACCIÓN
+INT-DS-00000001	03/10/2026	INT-RM-X-00001-00000001	Proveedor textil de prueba	$ 150,00	$ 0,00	Estimación sintética según contrato	Anulado	
+Ver constancia
+Conciliar con factura
+Reestimar
+
+INT-DS-00000002	06/10/2026	INT-RM-X-00001-00000001	Proveedor textil de prueba	$ 150,00	$ 150,00	Devengamiento correcto QA 2026	Pendiente de conciliación	
+Ver constancia
+Conciliar con factura
+Reestimar
+Facturar recepción
+Anulaciones con historial
+Anular devengamiento
+La anulación compensa el gasto y el pasivo vigentes, incluidas las reestimaciones, conservando sus antecedentes. Requiere Administrador General, todos los registros afectados en fechas abiertas y una recepción todavía sin factura ni conciliación. Después podés cargar el devengamiento correcto sobre la misma recepción. El remito permanece conservado y debe revisarse si la recepción también era errónea.
+1 registros
+XLSX
+PDF
+CONSTANCIA	REGISTRO	DEVENGAMIENTO ORIGINAL	IMPORTE ANULADO ARS	MOTIVO	RESPONSABLE	DETALLE
+INT-AS-00000001	05/10/2026	INT-DS-00000001	$ 160,00	Estimación cargada sobre una base equivocada; se conservan el original y su reestimación y se registrará limpieza 110 ARS y reparación 40 ARS.	Administrador	Ver anulación
+Constancia INT-AS-00000001
+
+05/10/2026 · Anulación sintética QA 2026 · Administrador
+
+Original INT-DS-00000001 · Recepción INT-RM-X-00001-00000001
+
+Estimación cargada sobre una base equivocada; se conservan el original y su reestimación y se registrará limpieza 110 ARS y reparación 40 ARS.
+
+Reestimaciones incluidas: INT-RS-00000001
+
+2 registros
+SERVICIO	CANTIDAD ORIGINAL	IMPORTE ANULADO ARS
+Servicio de limpieza	2	$ 130,00
+Servicio de reparación	1	$ 30,00
+3 registros
+CUENTA	DEBE ARS	HABER ARS
+Servicios recibidos sin facturar	$ 160,00	$ 0,00
+Servicios de limpieza	$ 0,00	$ 130,00
+Compras y gastos	$ 0,00	$ 30,00
+
+Registro 2026-10-11T05:59:27.343Z · Asiento 1844774d-5b9c-4c31-b705-9b4ffce0abc8
+
+Reestimaciones conservadas
+1 registros
+XLSX
+PDF
+CONSTANCIA	REGISTRO	DEVENGAMIENTO	ESTIMACIÓN ANTERIOR ARS	NUEVA ESTIMACIÓN ARS	DIFERENCIA ARS	REFERENCIA	DETALLE
+INT-RS-00000001	04/10/2026	INT-DS-00000001	$ 150,00	$ 160,00	$ 10,00	Nueva información sintética antes de revisión	Ver constancia
+Conciliaciones conservadas
+0 registros
+XLSX
+PDF
+Todavía no hay registros.
+
+Los datos que registres aquí aparecerán en los módulos relacionados.
+
+La conciliación conserva el asiento original de la factura y agrega su reclasificación: cancela el pasivo estimado, ajusta el gasto a su importe facturado y retira la compra duplicada de la cuenta original. Las notas posteriores requieren revisar su imputación. Los períodos bloqueados no admiten registros retroactivos. Antes de un cierre contable, las estimaciones que ya tienen factura deben estar conciliadas.

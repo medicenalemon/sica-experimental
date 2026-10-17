@@ -1,0 +1,211 @@
+REVISIÓN
+Revisar moneda de cierre
+Resultado global
+$ 197,72
+RECPAM monetario mensual
+-$ 681,82
+Diferencia financiera a revisar
+-$ 0,01
+
+SICA QA - ESTADOS CONTABLES · 01/01/2026 a 11/10/2026
+
+Papel de trabajo en moneda de cierre · Moneda de cierre QA 2026
+
+Base y observaciones de preparación (7)
+Activo
+$ 5.370,09
+Pasivo
+$ 536,00
+Patrimonio neto
+$ 4.834,09
+Resultado del período
+$ 197,72
+Variación de efectivo
+$ 200,00
+Diferencias de conciliación
+$ 0,00
+Situación, evolución patrimonial y efectivo
+Situación patrimonial
+Resultados
+Evolución patrimonio
+Flujos de efectivo
+Flujos - detalle
+Patrimonio - detalle
+Notas
+Distribución de cuentas
+Fuentes del diario
+Proceso de ajuste
+Índices conservados
+Naturaleza monetaria
+Antigüedad y coeficientes
+Exposición monetaria
+Redondeos comparativos
+
+Comparativo patrimonial: Pendiente. Comparativo del período: Pendiente. Ensayo de primera aplicación: sin antecedentes comparativos incorporados; no se presume dispensa normativa.
+
+15 registros
+CONCEPTO	ACTUAL ARS	COMPARATIVO ARS	NOTAS
+Activo corriente · Caja y bancos	$ 1.700,00	Pendiente	Nota 2
+Activo corriente · Cuentas por cobrar y derechos a facturar	$ 210,00	Pendiente	Nota 2
+Activo corriente · Otros créditos	$ 126,00	Pendiente	Nota 2
+Activo corriente · Bienes de cambio	$ 409,09	Pendiente	Nota 2
+Activo no corriente · Bienes de uso	$ 2.925,00	Pendiente	Nota 2
+Pasivo corriente · Deudas comerciales	$ 326,00	Pendiente	Nota 2
+Pasivo corriente · Deudas fiscales	$ 210,00	Pendiente	Nota 2
+Total activo corriente	$ 2.445,09	Pendiente	
+Total activo no corriente	$ 2.925,00	Pendiente	
+Total activo	$ 5.370,09	Pendiente	
+Total pasivo corriente	$ 536,00	Pendiente	
+Total pasivo no corriente	$ 0,00	Pendiente	
+Total pasivo	$ 536,00	Pendiente	
+Patrimonio neto (ver evolución)	$ 4.834,09	Pendiente	Nota 3
+Diferencia de conciliación	$ 0,00	Pendiente	
+Conservar moneda de cierre revisada
+RECUPERADO
+Moneda de cierre INT-MC-00000001
+
+Administrador · Moneda de cierre QA 2026 · Antecedente INT-EC-00000001
+
+Resultado global
+$ 197,72
+RECPAM monetario mensual
+-$ 681,82
+Diferencia financiera a revisar
+-$ 0,01
+
+SICA QA - ESTADOS CONTABLES · 01/01/2026 a 11/10/2026
+
+Papel de trabajo en moneda de cierre · Moneda de cierre QA 2026
+
+Base y observaciones de preparación (7)
+Activo
+$ 5.370,09
+Pasivo
+$ 536,00
+Patrimonio neto
+$ 4.834,09
+Resultado del período
+$ 197,72
+Variación de efectivo
+$ 200,00
+Diferencias de conciliación
+$ 0,00
+Situación, evolución patrimonial y efectivo
+Situación patrimonial
+Resultados
+Evolución patrimonio
+Flujos de efectivo
+Flujos - detalle
+Patrimonio - detalle
+Notas
+Distribución de cuentas
+Fuentes del diario
+Proceso de ajuste
+Índices conservados
+Naturaleza monetaria
+Antigüedad y coeficientes
+Exposición monetaria
+Redondeos comparativos
+
+Comparativo patrimonial: Pendiente. Comparativo del período: Pendiente. Ensayo de primera aplicación: sin antecedentes comparativos incorporados; no se presume dispensa normativa.
+
+15 registros
+CONCEPTO	ACTUAL ARS	COMPARATIVO ARS	NOTAS
+Activo corriente · Caja y bancos	$ 1.700,00	Pendiente	Nota 2
+Activo corriente · Cuentas por cobrar y derechos a facturar	$ 210,00	Pendiente	Nota 2
+Activo corriente · Otros créditos	$ 126,00	Pendiente	Nota 2
+Activo corriente · Bienes de cambio	$ 409,09	Pendiente	Nota 2
+Activo no corriente · Bienes de uso	$ 2.925,00	Pendiente	Nota 2
+Pasivo corriente · Deudas comerciales	$ 326,00	Pendiente	Nota 2
+Pasivo corriente · Deudas fiscales	$ 210,00	Pendiente	Nota 2
+Total activo corriente	$ 2.445,09	Pendiente	
+Total activo no corriente	$ 2.925,00	Pendiente	
+Total activo	$ 5.370,09	Pendiente	
+Total pasivo corriente	$ 536,00	Pendiente	
+Total pasivo no corriente	$ 0,00	Pendiente	
+Total pasivo	$ 536,00	Pendiente	
+Patrimonio neto (ver evolución)	$ 4.834,09	Pendiente	Nota 3
+Diferencia de conciliación	$ 0,00	Pendiente	
+Descargar moneda de cierre XLSX
+Descargar moneda de cierre PDF
+Resultados
+CONCEPTO	ACTUAL ARS	COMPARATIVO ARS	NOTAS
+Ingresos · Ventas y servicios	$ 1.363,64	Pendiente	Nota 2, Nota 6
+Gastos · Costo de ventas	$ 409,09	Pendiente	Nota 2, Nota 6
+Gastos · Otros gastos	$ 75,00	Pendiente	Nota 2, Nota 6
+Gastos · Resultados financieros y por tenencia (incluido RECPAM)	$ 681,83	Pendiente	Nota 6
+Total ingresos	$ 1.363,64	Pendiente	
+Total gastos	$ 1.165,92	Pendiente	
+Resultado del período	$ 197,72	Pendiente	Nota 2
+Evolución patrimonio
+VARIACIÓN	CAPITAL	AJUSTE CAPITAL	APORTES IRREV.	PRIMAS	RESERVAS	NO ASIGNADOS	DIFERIDOS	TOTAL ARS	COMPARATIVO TOTAL
+Saldo inicial	$ 3.000,00	$ 1.500,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 4.500,00	Pendiente
+Aportes · 2026-01-11 · Aporte sintético de propietarios	$ 200,00	$ 72,73	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 272,73	Pendiente
+Retiros y distribuciones · 2026-01-12 · Distribución sintética	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	-$ 136,36	$ 0,00	-$ 136,36	Pendiente
+Asignaciones y transferencias · 2026-01-13 · Asignación sintética a reserva	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 120,00	-$ 120,00	$ 0,00	$ 0,00	Pendiente
+Resultado del período	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 0,00	$ 197,72	$ 0,00	$ 197,72	Pendiente
+Saldo final	$ 3.200,00	$ 1.572,73	$ 0,00	$ 0,00	$ 120,00	-$ 58,64	$ 0,00	$ 4.834,09	Pendiente
+Flujos de efectivo
+CONCEPTO	ACTUAL ARS	COMPARATIVO ARS	NOTAS
+Efectivo y equivalentes al inicio	$ 1.500,00	Pendiente	Nota 4
+Operativas	$ 818,19	Pendiente	Nota 4
+Inversión	$ 0,00	Pendiente	Nota 4
+Financiación	$ 136,37	Pendiente	Nota 4
+Efectos sobre efectivo	-$ 754,56	Pendiente	Nota 4
+Variación neta	$ 200,00	Pendiente	
+Efectivo y equivalentes al cierre	$ 1.700,00	Pendiente	Nota 4
+Diferencia de conciliación	$ 0,00	Pendiente	
+Proceso de ajuste
+CONTROL	ARS	FUNDAMENTO
+Patrimonio inicial en moneda del inicio	$ 3.000,00	
+Patrimonio inicial en moneda de cierre	$ 4.500,00	
+Variaciones patrimoniales reexpresadas	$ 136,37	
+Patrimonio final en moneda de cierre	$ 4.834,09	
+Resultado global	$ 197,72	
+Resultados por partidas antes de conciliación financiera	$ 879,55	
+Residuo financiero del proceso secuencial	-$ 681,83	
+RECPAM por exposición monetaria mensual	-$ 681,82	
+Diferencia por mediciones, tenencia o redondeos	-$ 0,01	Diferencia de redondeo al centavo entre el cálculo por partidas y la exposición monetaria mensual; revisar antes de cualquier uso real.
+RECPAM del efectivo y equivalentes	-$ 754,55	
+Redondeo de flujos	-$ 0,01	
+Antecedente nominal		INT-EC-00000001 · 2026-01-01 a 2026-10-11
+Modalidad		Primera aplicación o reanudación
+Serie		Ensayo · Serie sintética QA 100 / 110 / 150 · https://www.facpce.org.ar/indices-facpce/ · Consulta 2026-10-11
+Antigüedad y coeficientes
+PARTIDA	ORIGEN	MONEDA DESTINO	COEFICIENTE	ORIGEN ARS	REEXPRESADO ARS	RESPALDO
+Apertura · Apertura · 1.1.2 · Bancos	2025-12	2025-12	1.000000000000	$ 1.000,00	$ 1.000,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Apertura · Apertura · 1.2.1 · Bienes de uso al costo	2025-12	2025-12	1.000000000000	$ 2.000,00	$ 2.000,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Patrimonio inicial · Patrimonio inicial · Capital suscripto	2025-12	2025-12	1.000000000000	$ 3.000,00	$ 3.000,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Cierre · Cierre · 1.1.1 · Caja · Caja y bancos	2026-10	2026-10	1.000000000000	$ 100,00	$ 100,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Cierre · Cierre · 1.1.2 · Bancos · Caja y bancos	2026-10	2026-10	1.000000000000	$ 1.600,00	$ 1.600,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Cierre · Cierre · 1.1.3 · Deudores por ventas · Cuentas por cobrar y derechos a facturar	2026-10	2026-10	1.000000000000	$ 210,00	$ 210,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Cierre · Cierre · 1.1.4 · IVA crédito fiscal · Otros créditos	2026-10	2026-10	1.000000000000	$ 126,00	$ 126,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Cierre · Cierre · 1.1.9 · Mercadería · Bienes de cambio	2026-01	2026-10	1.363636363636	$ 300,00	$ 409,09	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Cierre · Cierre · 1.2.1 · Bienes de uso al costo · Bienes de uso	2025-12	2026-10	1.500000000000	$ 2.000,00	$ 3.000,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Cierre · Cierre · 1.2.2 · Depreciación acumulada · Bienes de uso	2025-12	2026-10	1.500000000000	-$ 50,00	-$ 75,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Cierre · Cierre · 2.1.1 · Proveedores · Deudas comerciales	2026-10	2026-10	1.000000000000	-$ 326,00	-$ 326,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Cierre · Cierre · 2.1.2 · IVA débito fiscal · Deudas fiscales	2026-10	2026-10	1.000000000000	-$ 210,00	-$ 210,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Resultados · 2026-01-05 · Venta sintética con IVA · Ventas	2026-01	2026-10	1.363636363636	-$ 1.000,00	-$ 1.363,64	Transacción · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Resultados · 2026-01-09 · Costo de venta sintético · Costo de ventas	2026-01	2026-10	1.363636363636	$ 300,00	$ 409,09	Consumo de activos · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Resultados · 2026-01-10 · Depreciación sintética · Depreciación de bienes de uso	2025-12	2026-10	1.500000000000	$ 50,00	$ 75,00	Consumo de activos · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Variación patrimonial · 2026-01-11 · Aporte sintético de propietarios · Capital y saldos iniciales	2026-01	2026-10	1.363636363636	$ 200,00	$ 272,73	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Variación patrimonial · 2026-01-12 · Distribución sintética · Resultados no asignados	2026-01	2026-10	1.363636363636	-$ 100,00	-$ 136,36	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Variación patrimonial · 2026-01-13 · Asignación sintética a reserva · Resultados no asignados	2025-12	2026-10	1.500000000000	-$ 80,00	-$ 120,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Variación patrimonial · 2026-01-13 · Asignación sintética a reserva · Reserva legal	2025-12	2026-10	1.500000000000	$ 80,00	$ 120,00	Partida revisada · Origen mensual respaldado por el caso sintético; no es la fecha de consumo del activo.
+Exposición monetaria
+MES	NETO MONETARIO ARS	COEFICIENTE	EN CIERRE ARS	RECPAM ARS
+2025-12	$ 1.000,00	1.500000000000	$ 1.500,00	-$ 500,00
+2026-01	$ 500,00	1.363636363636	$ 681,82	-$ 181,82
+Notas
+NOTA	TÍTULO	CONTENIDO
+Nota 1	Entidad, actividad y marco de preparación	Información sintética del ensayo en moneda de cierre. Entidad, actividad y marco de preparación. No son estados profesionales emitidos.
+Nota 2	Bases de medición, rubros y políticas contables	Información sintética del ensayo en moneda de cierre. Bases de medición, rubros y políticas contables. No son estados profesionales emitidos.
+Nota 3	Patrimonio y decisiones de propietarios	Información sintética del ensayo en moneda de cierre. Patrimonio y decisiones de propietarios. No son estados profesionales emitidos.
+Nota 4	Efectivo, equivalentes y operaciones sin efectivo	Información sintética del ensayo en moneda de cierre. Efectivo, equivalentes y operaciones sin efectivo. No son estados profesionales emitidos.
+Nota 5	Contingencias y hechos posteriores	Información sintética del ensayo en moneda de cierre. Contingencias y hechos posteriores. No son estados profesionales emitidos.
+Nota 6	Unidad de medida y ajuste por inflación	Índices exclusivamente sintéticos: diciembre 100, enero 110, cierre 150. Depreciación según origen de diciembre y mercadería/costo en enero; reservas en moneda del cierre anterior. Capital nominal separado de ajuste. Conciliación financiera incluye redondeo de un centavo. Sin cálculo impositivo ni emisión profesional.
+
+
+EXPORTACIONES: controles XLSX y PDF ejecutados y habilitados al finalizar. Posteriormente se observó pérdida de conexión: el servidor había terminado. Se reinició sobre la misma base y se recuperó nuevamente INT-MC-00000001, sin alertas visibles tras recargar. El evento de descarga no se acredita como prueba de bytes. La API de captura no pudo producir imagen.
+
+CAPTURA FINAL: recuperada con getAXStateAndScreenshot después de reconectar; imagen real output/reexpression-2026-10-11.jpg.

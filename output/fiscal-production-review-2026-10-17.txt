@@ -1,0 +1,148 @@
+Browser tab: 1, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.49:3054/clientes/ventas".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.49:3054/clientes/ventas
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.49:3054/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.49:3054/
+				7 button (expanded) Description: Clientes, Secondary Actions: Collapse
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (collapsed) Description: Finanzas, Secondary Actions: Expand
+				10 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				11 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				12 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				13 button (collapsed) Description: Producción, Secondary Actions: Expand
+				14 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				15 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				16 button (collapsed) Description: Administración, Secondary Actions: Expand
+				17 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				18 link Description: Configuración, Value: 127.0.0.49:3054/configuracion
+				19 link Description: Acerca de, Value: 127.0.0.49:3054/acerca-de
+		20 container
+			21 text SICA Textil · Producción simulada
+			22 container
+				23 text Responsable Inscripto  ·  Tucumán
+			24 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+				25 menu
+					26 (selected) Todas las unidades
+					27 Casa Central
+			28 link Description: Acerca de y fuentes, Value: 127.0.0.49:3054/acerca-de
+			29 text AD
+			30 button Cerrar sesión
+			31 text Base compartida · Versión 4 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			32 text SICA / GESTIÓN INTEGRAL
+			33 heading Facturas de venta, Value: 1
+				34 text Facturas de venta
+			35 text Operaciones de gestión interna vinculadas a cuentas corrientes, tesorería y contabilidad.
+			36 link Description: Factura, Value: 127.0.0.49:3054/clientes/ventas/factura
+			37 text Los comprobantes A, B y C quedan pendientes de autorización. No se asigna un CAE ni una numeración fiscal hasta conectar ARCA.
+			38 text field (settable) Buscar registros
+			39 text 1  registros
+			40 button XLSX
+			41 button PDF
+			42 table
+				43 row
+					44 cell
+						45 text REFERENCIA INTERNA
+					46 cell
+						47 text FECHA
+					48 cell
+						49 text REGISTRO CONTABLE
+					50 cell
+						51 text CLIENTE
+					52 cell
+						53 text TOTAL ARS
+					54 cell
+						55 text ESTADO
+					56 cell
+						57 text ACCIONES
+				58 row
+					59 cell
+						60 text INT-FC-A-00001-00000001
+					61 cell
+						62 text 17/10/2026
+					63 cell
+						64 text 17/10/2026
+					65 cell
+						66 text Cliente monotributista de ensayo
+					67 cell
+						68 text $ 242,00
+					69 cell
+						70 text CAE de homologación · prueba
+					71 cell
+						72 button Ver
+						73 button ARCA
+			74 container ARCA · Producción simulada
+				75 container
+					76 heading ARCA · Producción simulada, Value: 2
+						77 text ARCA · Producción simulada
+					78 button Cerrar
+				79 container
+					80 text INT-FC-A-00001-00000001  · Total  $ 242,00
+				81 container
+					82 text Ambiente de la solicitud
+					83 pop up button (collapsed, settable) Description: Ambiente de la solicitud, Value: Producción · ambiente configurado, Secondary Actions: Expand
+						84 menu
+							85 (selected) Producción · ambiente configurado
+							86 Homologación · antecedente conservado
+				87 text Simulación de producción con datos de ensayo. No contacta ARCA ni autoriza un comprobante real.
+				88 container
+					89 text Condición de venta para el comprobante
+					90 text field (settable) Description: Condición de venta para el comprobante, Value: Cuenta corriente de ensayo
+				94 container Solicitud fiscal preparada
+					95 definition list
+						96 container Ambiente
+							97 text Ambiente
+						98 text Producción simulada
+						99 container Emisor
+							100 text Emisor
+						101 text SICA Textil · Producción simulada · CUIT 30712345671
+						102 container Receptor
+							103 text Receptor
+						104 text Cliente monotributista de ensayo · CUIT 20123456786
+						105 container Comprobante
+							106 text Comprobante
+						107 text Factura A · Punto 1
+						108 container Concepto
+							109 text Concepto
+						110 text Productos
+						111 container IVA del receptor
+							112 text IVA del receptor
+						113 text Responsable Monotributo
+						114 container Condición de venta
+							115 text Condición de venta
+						116 text Cuenta corriente de ensayo
+						117 container Ingresos Brutos del emisor
+							118 text Ingresos Brutos del emisor
+						119 text Inscripción sintética · sin valor registral
+						120 container Inicio de actividades
+							121 text Inicio de actividades
+						122 text 2020-01-01
+						123 container Neto gravado
+							124 text Neto gravado
+						125 text $ 200,00
+						126 container Exento
+							127 text Exento
+						128 text $ 0,00
+						129 container No gravado
+							130 text No gravado
+						131 text $ 0,00
+						132 container IVA
+							133 text IVA
+						134 text $ 42,00
+						135 container Tributos
+							136 text Tributos
+						137 text $ 0,00
+						138 container Total
+							139 text Total
+						140 text $ 242,00
+					141 text IVA por alícuota
+					142 container
+						143 text 21  % · Base  $ 200,00  · IVA  $ 42,00
+					144 text El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618.
+					145 text Se reserva el siguiente número fiscal antes del envío. La referencia interna y sus asientos se conservan.
+				91 button Cerrar
+				92 button Revisar solicitud
+				93 button Solicitar CAE simulado
+
+The focused UI element is 1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.49:3054/clientes/ventas

@@ -1,0 +1,39 @@
+{
+  "target": "1f01e040-c2a1-415e-bc43-18a25a405953",
+  "financial": {
+    "documents": [],
+    "entries": [],
+    "stockMoves": [
+      {
+        "id": "d05f964e-0fad-4e29-8b6a-3e060648c606",
+        "date": "2026-10-13",
+        "productId": "e6afc0bc-4e26-4495-9064-5eef3e1db3a6",
+        "depositId": "principal",
+        "quantity": 40,
+        "reason": "Stock inicial de ejemplo (sin valuación contable)",
+        "documentId": "",
+        "branchId": "central"
+      },
+      {
+        "id": "2a8dc146-81c6-40b1-8829-3fbfac310ff8",
+        "date": "2026-10-13",
+        "productId": "f2cca1d5-7219-4351-9e5b-aca3c6354d3e",
+        "depositId": "principal",
+        "quantity": 20,
+        "reason": "Stock inicial de ejemplo (sin valuación contable)",
+        "documentId": "",
+        "branchId": "central"
+      }
+    ],
+    "treasuryMoves": []
+  },
+  "users": [
+    {
+      "id": "admin",
+      "name": "Administrador",
+      "username": "admin",
+      "role": "Administrador General",
+      "active": true
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "synthetic": true,
+  "revision": 4,
+  "number": "INT-VC-00000002",
+  "date": "2026-10-03",
+  "responsible": "Administrador",
+  "inventoryARS": 740,
+  "costOfSalesARS": 60,
+  "balances": [
+    {
+      "sku": "REM-M-NEG",
+      "deposit": "Depósito principal",
+      "quantity": 45,
+      "valueARS": 540
+    },
+    {
+      "sku": "PANT-42-AZ",
+      "deposit": "Depósito principal",
+      "quantity": 20,
+      "valueARS": 200
+    }
+  ],
+  "entries": [
+    {
+      "date": "2026-10-03",
+      "branchId": "central",
+      "lines": [
+        {
+          "account": "Existencias de mercadería",
+          "debitARS": 140,
+          "creditARS": 0
+        },
+        {
+          "account": "Compras y gastos",
+          "debitARS": 0,
+          "creditARS": 200
+        },
+        {
+          "account": "Costo de mercadería vendida",
+          "debitARS": 60,
+          "creditARS": 0
+        }
+      ]
+    }
+  ]
+}

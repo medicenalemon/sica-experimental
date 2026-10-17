@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-08",
+  "module": "Valuación de inventario mediante promedio ponderado",
+  "tests": {
+    "passed": 160,
+    "failed": 0,
+    "suites": [
+      {
+        "name": "Dominio",
+        "tests": 97,
+        "log": "/tmp/sica-cost-domain.log"
+      },
+      {
+        "name": "Archivos",
+        "tests": 13,
+        "log": "/tmp/sica-cost-files.log"
+      },
+      {
+        "name": "HTTP y persistencia",
+        "tests": 28,
+        "log": "/tmp/sica-cost-http.log"
+      },
+      {
+        "name": "Integración fiscal sintética",
+        "tests": 22,
+        "log": "/tmp/sica-cost-fiscal.log"
+      }
+    ]
+  },
+  "checks": {
+    "lint": "passed",
+    "sharedBuild": "passed",
+    "serverBuild": "passed",
+    "gitDiffCheck": "passed"
+  },
+  "uiVerification": {
+    "environment": "Datos sintéticos locales",
+    "origin": "http://127.0.0.1:3006/contabilidad/inventario",
+    "revision": 4,
+    "cutDate": "2026-10-03",
+    "inventoryARS": 740,
+    "costOfSalesARS": 60,
+    "openingAndClosingPosted": true,
+    "preservedAfterServerRestart": true
+  },
+  "exampleArtifact": "output/inventory-cost-example.json",
+  "rules": "docs/inventario-valorizado.md",
+  "limits": [
+    "Correcciones del costo por notas de compra pendientes",
+    "Producción valorizada únicamente por materiales consumidos",
+    "Valor recuperable y ajuste por inflación pendientes",
+    "Integración fiscal productiva pendiente"
+  ],
+  "goalComplete": false
+}

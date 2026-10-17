@@ -1,0 +1,366 @@
+{
+  "kind": "Papel de conciliación SICA · no es una declaración ni un archivo de importación ARCA",
+  "number": "INT-IV-00000002",
+  "responsible": "Administrador",
+  "createdAt": "2026-10-17T04:36:13.644Z",
+  "preview": {
+    "input": {
+      "kind": "Anual",
+      "sourceId": "a8a767b5-7f6b-4191-9b4f-93d2364d06f4",
+      "asOf": "2025-12-31",
+      "accountIds": [
+        "1.1.4"
+      ],
+      "manual": [
+        {
+          "entryId": "9172ae6c-a329-4cf1-9a29-8963f19796d2",
+          "reference": "RESPALDO-UI-ENERO",
+          "reason": "Ajuste manual sintético revisado: la constancia vincula el asiento existente, sin generar un nuevo registro contable."
+        },
+        {
+          "entryId": "ae172539-39a5-4f08-a719-8798ecf4eddd",
+          "reference": "RESPALDO-UI-ANUAL",
+          "reason": "Ajuste manual sintético revisado: la constancia vincula el asiento existente, sin generar un nuevo registro contable."
+        }
+      ],
+      "reference": "IVA-MAYOR-UI-02",
+      "reason": "Se vinculan dos ajustes manuales sintéticos existentes y se conserva la conciliación anterior con su diferencia pendiente.",
+      "previousId": "93a3e360-cbc9-4c63-8df0-74b39dcec42e",
+      "confirmed": true
+    },
+    "from": "2025-01-01",
+    "to": "2025-12-31",
+    "sourceNumber": "INT-IA-00000001",
+    "sourceReview": "{\"input\":{\"from\":\"2025-01-01\",\"to\":\"2025-12-31\",\"previousId\":\"\",\"reference\":\"IVA-ANUAL-ENSAYO-01\",\"reason\":\"Conciliación anual sintética del IVA común y de créditos computados declarados por mes.\",\"taxable\":800000,\"exempt\":200000,\"untaxed\":0,\"basisReference\":\"BASES-ANUALES-2025\",\"nominalConfirmed\":true,\"completeConfirmed\":true,\"months\":[{\"period\":\"2025-01\",\"preparationId\":\"45d91ed5-465f-4f4b-b250-1e6d078affc7\",\"applied\":1050,\"reference\":\"COMPUTO-DECLARADO-2025-01\",\"reason\":\"\",\"noCommonConfirmed\":false},{\"period\":\"2025-02\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-02\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-03\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-03\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-04\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-04\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-05\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-05\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-06\",\"preparationId\":\"91428b71-83b4-44ea-8ee8-30cf5d8ee7a8\",\"applied\":1575,\"reference\":\"COMPUTO-DECLARADO-2025-06\",\"reason\":\"\",\"noCommonConfirmed\":false},{\"period\":\"2025-07\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-07\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-08\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-08\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-09\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-09\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-10\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-10\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-11\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-11\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-12\",\"preparationId\":\"3be0a4bb-d836-4815-8088-62cd76d3ce2b\",\"applied\":1680,\"reference\":\"COMPUTO-DECLARADO-2025-12\",\"reason\":\"\",\"noCommonConfirmed\":false}],\"returns\":[{\"documentId\":\"4bcfd78b-9f91-4e79-b5a4-780976a03b37\",\"commonReturned\":210,\"commonRestored\":100,\"reference\":\"DEVOLUCION-ENERO-2025\",\"reason\":\"IVA común de compra del mismo ejercicio y crédito histórico restituido en junio.\"}]},\"source\":{\"company\":{\"name\":\"SICA Textil · Ajuste anual IVA\",\"cuit\":\"30712345671\",\"iva\":\"Responsable Inscripto\"},\"exercises\":[{\"start\":\"2025-01-01\",\"end\":\"2025-12-31\"}],\"names\":[{\"id\":\"18b5891d-5929-4fe6-87eb-199423d9edca\",\"name\":\"Textiles Ñandú SA\"},{\"id\":\"supplier-c\",\"name\":\"Proveedor C de ensayo\"}],\"documentIds\":[\"83952688-02c1-41da-9066-be91c2daf5a2\",\"cb2bd153-fbbf-4700-91ca-6db438f5bfe5\",\"4bcfd78b-9f91-4e79-b5a4-780976a03b37\",\"15c949f2-5bef-4364-8db2-2cbc0b01eeb5\"],\"originalIds\":[\"57e31912-10b0-4d98-bdf3-f93f3a081c50\",\"9299c8a9-e195-43ed-b91b-ded78ddf2aa2\",\"4c18b9ef-1f9b-4680-a491-d4c8710a78f1\",\"10ac83a4-d7b6-40d2-97f7-b6cbd46803e8\"],\"purchaseIds\":[\"45d91ed5-465f-4f4b-b250-1e6d078affc7\",\"91428b71-83b4-44ea-8ee8-30cf5d8ee7a8\",\"3be0a4bb-d836-4815-8088-62cd76d3ce2b\"]},\"period\":\"2025-12\",\"months\":[{\"period\":\"2025-01\",\"preparationId\":\"45d91ed5-465f-4f4b-b250-1e6d078affc7\",\"number\":\"INT-IC-00000001\",\"mode\":\"Asignación directa y global\",\"documents\":1,\"common\":2100,\"prepared\":1050,\"applied\":1050,\"difference\":0,\"internalX\":0},{\"period\":\"2025-02\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-03\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-04\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-05\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-06\",\"preparationId\":\"91428b71-83b4-44ea-8ee8-30cf5d8ee7a8\",\"number\":\"INT-IC-00000002\",\"mode\":\"Asignación directa y global\",\"documents\":2,\"common\":2100,\"prepared\":1575,\"applied\":1575,\"difference\":0,\"internalX\":0},{\"period\":\"2025-07\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-08\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-09\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-10\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-11\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-12\",\"preparationId\":\"3be0a4bb-d836-4815-8088-62cd76d3ce2b\",\"number\":\"INT-IC-00000003\",\"mode\":\"Asignación directa y global\",\"documents\":1,\"common\":2100,\"prepared\":1680,\"applied\":1680,\"difference\":0,\"internalX\":0}],\"returns\":[{\"documentId\":\"4bcfd78b-9f91-4e79-b5a4-780976a03b37\",\"number\":\"INT-NC-A-00001-00000001\",\"originId\":\"83952688-02c1-41da-9066-be91c2daf5a2\",\"originNumber\":\"INT-FC-A-00001-00000001\",\"originDate\":\"2025-01-15\",\"currentExercise\":true,\"vat\":210,\"restored\":100,\"commonReturned\":210,\"commonRestored\":100}],\"totals\":{\"commonGross\":6300,\"commonReturned\":210,\"commonNet\":6090,\"prepared\":4305,\"appliedGross\":4305,\"commonRestored\":100,\"appliedNet\":4205,\"basisTotal\":1000000,\"annualCredit\":4872,\"adjustment\":667,\"inFavorOfCompany\":667,\"inFavorOfArca\":0,\"previousAdjustment\":0,\"changeFromPrevious\":667},\"warnings\":[\"Preparación nominal de compras ordinarias en ARS. Las bases, destinos, importes computados y restituciones son datos declarados sujetos a revisión profesional.\",\"Una preparación mensual no acredita una declaración presentada. Se compara el cómputo prorrateado declarado por el responsable, con referencia por mes.\",\"Las devoluciones de IVA común del mismo ejercicio reducen el conjunto anual y su restitución histórica reduce el crédito computado comparado. No se aplica el coeficiente anual a devoluciones de ejercicios anteriores.\",\"El ajuste se revisa en el período de cierre. No se modifica el crédito directo ni se reescriben TXT, se registran asientos o se presenta una declaración.\",\"Una nueva versión conserva el ajuste total para revisar; no es un importe incremental ni una rectificativa presentada.\"],\"status\":\"Preparación de ajuste anual · sin presentación ARCA\"}",
+    "source": {
+      "company": {
+        "name": "SICA Textil · Ajuste anual IVA",
+        "cuit": "30712345671",
+        "iva": "Responsable Inscripto"
+      },
+      "exercises": [
+        {
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        }
+      ],
+      "suppliers": [
+        {
+          "id": "18b5891d-5929-4fe6-87eb-199423d9edca",
+          "name": "Textiles Ñandú SA"
+        },
+        {
+          "id": "supplier-c",
+          "name": "Proveedor C de ensayo"
+        }
+      ],
+      "branches": [
+        {
+          "id": "central",
+          "name": "Casa Central"
+        },
+        {
+          "id": "iva-other-branch",
+          "name": "Sucursal de ensayo IVA"
+        }
+      ],
+      "accounts": [
+        {
+          "id": "1.1.4",
+          "code": "1.1.4",
+          "name": "IVA crédito fiscal",
+          "group": "Activo",
+          "postable": true
+        }
+      ],
+      "documentIds": [
+        "83952688-02c1-41da-9066-be91c2daf5a2",
+        "cb2bd153-fbbf-4700-91ca-6db438f5bfe5",
+        "4bcfd78b-9f91-4e79-b5a4-780976a03b37",
+        "15c949f2-5bef-4364-8db2-2cbc0b01eeb5"
+      ],
+      "originalIds": [
+        "57e31912-10b0-4d98-bdf3-f93f3a081c50",
+        "9299c8a9-e195-43ed-b91b-ded78ddf2aa2",
+        "4c18b9ef-1f9b-4680-a491-d4c8710a78f1",
+        "10ac83a4-d7b6-40d2-97f7-b6cbd46803e8"
+      ],
+      "purchaseIds": [
+        "45d91ed5-465f-4f4b-b250-1e6d078affc7",
+        "91428b71-83b4-44ea-8ee8-30cf5d8ee7a8",
+        "3be0a4bb-d836-4815-8088-62cd76d3ce2b"
+      ],
+      "annualIds": [
+        "a8a767b5-7f6b-4191-9b4f-93d2364d06f4"
+      ],
+      "entryIds": [
+        "271885f6-61ed-4733-8d89-b12068d565db",
+        "68529d08-b554-40ca-b0c6-f2a27b848e67",
+        "6475a05c-95bf-4c52-8b7d-ef961c2b40db",
+        "f77d6262-b806-4373-b63d-97118bba79ce",
+        "9172ae6c-a329-4cf1-9a29-8963f19796d2",
+        "ae172539-39a5-4f08-a719-8798ecf4eddd"
+      ],
+      "reversalIds": []
+    },
+    "months": [
+      {
+        "period": "2025-01",
+        "id": "45d91ed5-465f-4f4b-b250-1e6d078affc7",
+        "number": "INT-IC-00000001",
+        "prepared": 2050,
+        "declaredDifference": 0,
+        "target": 2050
+      },
+      {
+        "period": "2025-06",
+        "id": "91428b71-83b4-44ea-8ee8-30cf5d8ee7a8",
+        "number": "INT-IC-00000002",
+        "prepared": 2175,
+        "declaredDifference": 0,
+        "target": 2175
+      },
+      {
+        "period": "2025-12",
+        "id": "3be0a4bb-d836-4815-8088-62cd76d3ce2b",
+        "number": "INT-IC-00000003",
+        "prepared": 1680,
+        "declaredDifference": 0,
+        "target": 1680
+      }
+    ],
+    "documents": [
+      {
+        "id": "83952688-02c1-41da-9066-be91c2daf5a2",
+        "number": "INT-FC-A-00001-00000001",
+        "date": "2025-01-15",
+        "branchId": "central",
+        "branchName": "Casa Central",
+        "entry": {
+          "id": "271885f6-61ed-4733-8d89-b12068d565db",
+          "date": "2025-01-15",
+          "concept": "INT-FC-A-00001-00000001",
+          "branchId": "central",
+          "documentId": "83952688-02c1-41da-9066-be91c2daf5a2",
+          "lines": [
+            {
+              "accountId": "5.1",
+              "debit": 20000,
+              "credit": 0
+            },
+            {
+              "accountId": "1.1.4",
+              "debit": 4200,
+              "credit": 0
+            },
+            {
+              "accountId": "2.1.1",
+              "debit": 0,
+              "credit": 24200
+            }
+          ]
+        },
+        "debit": 4200,
+        "credit": 0,
+        "net": 4200,
+        "fiscalVat": 4200
+      },
+      {
+        "id": "cb2bd153-fbbf-4700-91ca-6db438f5bfe5",
+        "number": "INT-FC-A-00001-00000002",
+        "date": "2025-06-15",
+        "branchId": "central",
+        "branchName": "Casa Central",
+        "entry": {
+          "id": "68529d08-b554-40ca-b0c6-f2a27b848e67",
+          "date": "2025-06-15",
+          "concept": "INT-FC-A-00001-00000002",
+          "branchId": "central",
+          "documentId": "cb2bd153-fbbf-4700-91ca-6db438f5bfe5",
+          "lines": [
+            {
+              "accountId": "5.1",
+              "debit": 20000,
+              "credit": 0
+            },
+            {
+              "accountId": "1.1.4",
+              "debit": 4200,
+              "credit": 0
+            },
+            {
+              "accountId": "2.1.1",
+              "debit": 0,
+              "credit": 24200
+            }
+          ]
+        },
+        "debit": 4200,
+        "credit": 0,
+        "net": 4200,
+        "fiscalVat": 4200
+      },
+      {
+        "id": "4bcfd78b-9f91-4e79-b5a4-780976a03b37",
+        "number": "INT-NC-A-00001-00000001",
+        "date": "2025-06-20",
+        "branchId": "central",
+        "branchName": "Casa Central",
+        "entry": {
+          "id": "6475a05c-95bf-4c52-8b7d-ef961c2b40db",
+          "date": "2025-06-20",
+          "concept": "INT-NC-A-00001-00000001",
+          "branchId": "central",
+          "documentId": "4bcfd78b-9f91-4e79-b5a4-780976a03b37",
+          "lines": [
+            {
+              "accountId": "5.1",
+              "debit": 0,
+              "credit": 1000
+            },
+            {
+              "accountId": "1.1.4",
+              "debit": 0,
+              "credit": 210
+            },
+            {
+              "accountId": "2.1.1",
+              "debit": 1210,
+              "credit": 0
+            }
+          ]
+        },
+        "debit": 0,
+        "credit": 210,
+        "net": -210,
+        "fiscalVat": -210
+      },
+      {
+        "id": "15c949f2-5bef-4364-8db2-2cbc0b01eeb5",
+        "number": "INT-FC-A-00001-00000003",
+        "date": "2025-12-15",
+        "branchId": "central",
+        "branchName": "Casa Central",
+        "entry": {
+          "id": "f77d6262-b806-4373-b63d-97118bba79ce",
+          "date": "2025-12-15",
+          "concept": "INT-FC-A-00001-00000003",
+          "branchId": "central",
+          "documentId": "15c949f2-5bef-4364-8db2-2cbc0b01eeb5",
+          "lines": [
+            {
+              "accountId": "5.1",
+              "debit": 10000,
+              "credit": 0
+            },
+            {
+              "accountId": "1.1.4",
+              "debit": 2100,
+              "credit": 0
+            },
+            {
+              "accountId": "2.1.1",
+              "debit": 0,
+              "credit": 12100
+            }
+          ]
+        },
+        "debit": 2100,
+        "credit": 0,
+        "net": 2100,
+        "fiscalVat": 2100
+      }
+    ],
+    "adjustments": [
+      {
+        "entry": {
+          "id": "9172ae6c-a329-4cf1-9a29-8963f19796d2",
+          "date": "2025-01-31",
+          "concept": "Ajuste de IVA de enero · ensayo contable",
+          "branchId": "central",
+          "documentId": "",
+          "lines": [
+            {
+              "accountId": "5.1",
+              "debit": 2150,
+              "credit": 0
+            },
+            {
+              "accountId": "1.1.4",
+              "debit": 0,
+              "credit": 2150
+            }
+          ],
+          "manual": true
+        },
+        "branchName": "Casa Central",
+        "kind": "Manual",
+        "originId": "9172ae6c-a329-4cf1-9a29-8963f19796d2",
+        "reference": "RESPALDO-UI-ENERO",
+        "reason": "Ajuste manual sintético revisado: la constancia vincula el asiento existente, sin generar un nuevo registro contable.",
+        "debit": 0,
+        "credit": 2150,
+        "net": -2150
+      },
+      {
+        "entry": {
+          "id": "ae172539-39a5-4f08-a719-8798ecf4eddd",
+          "date": "2025-12-31",
+          "concept": "Diferencia anual de IVA · ensayo contable",
+          "branchId": "central",
+          "documentId": "",
+          "lines": [
+            {
+              "accountId": "5.1",
+              "debit": 1568,
+              "credit": 0
+            },
+            {
+              "accountId": "1.1.4",
+              "debit": 0,
+              "credit": 1568
+            }
+          ],
+          "manual": true
+        },
+        "branchName": "Casa Central",
+        "kind": "Manual",
+        "originId": "ae172539-39a5-4f08-a719-8798ecf4eddd",
+        "reference": "RESPALDO-UI-ANUAL",
+        "reason": "Ajuste manual sintético revisado: la constancia vincula el asiento existente, sin generar un nuevo registro contable.",
+        "debit": 0,
+        "credit": 1568,
+        "net": -1568
+      }
+    ],
+    "branches": [
+      {
+        "id": "central",
+        "name": "Casa Central",
+        "original": 10290,
+        "adjustments": -3718,
+        "net": 6572
+      }
+    ],
+    "totals": {
+      "original": 10290,
+      "adjustments": -3718,
+      "book": 6572,
+      "monthlyPrepared": 5905,
+      "declaredDifference": 0,
+      "annualAdjustment": 667,
+      "fiscalTarget": 6572,
+      "difference": 0
+    },
+    "unselectedManualIds": [],
+    "warnings": [
+      "Conciliación de movimientos de IVA de compras seleccionados; no representa el saldo total del mayor, el saldo técnico ni la declaración presentada.",
+      "Las cuentas se seleccionan expresamente. Revisá cuentas históricas, destinos no computables, percepciones y cualquier movimiento que no sea IVA crédito fiscal.",
+      "Sólo se vinculan ajustes identificados como manuales. Sus reversiones hasta el corte se incluyen automáticamente. Otros asientos automáticos y reclasificaciones requieren análisis separado.",
+      "Una igualdad aritmética no acredita validez fiscal ni correcta imputación de inventarios, bienes de uso, gastos o impuestos. Los submayores y las bases fiscales requieren su propia revisión.",
+      "Esta constancia no registra asientos, no reescribe comprobantes ni cambia preparaciones o archivos fiscales.",
+      "La conciliación anual suma el ajuste total conservado, no la diferencia entre sus versiones. También incorpora las diferencias entre prorrateo preparado y cómputo mensual declarado."
+    ],
+    "status": "Sin diferencia aritmética"
+  }
+}

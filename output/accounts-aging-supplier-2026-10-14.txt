@@ -1,0 +1,202 @@
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas" [expanded]:
+      - generic: Finanzas
+    - link "Cajas y movimientos":
+      - /url: /finanzas/cajas
+    - link "Cajas y cuentas bancarias":
+      - /url: /finanzas/cuentas-tesoreria
+    - link "Bancos y conciliación":
+      - /url: /finanzas/bancos
+    - link "Extractos bancarios":
+      - /url: /finanzas/bancos/extractos
+    - link "Cartera de cheques":
+      - /url: /finanzas/cheques
+    - link "IVA ventas y compras":
+      - /url: /finanzas/impuestos
+    - link "Cuentas por cobrar / pagar":
+      - /url: /finanzas/cuentas
+    - link "Tarjetas de crédito":
+      - /url: /finanzas/tarjetas
+    - link "Liquidaciones de tarjetas":
+      - /url: /finanzas/liquidaciones-tarjetas
+    - link "Retenciones y percepciones":
+      - /url: /finanzas/retenciones
+    - link "Formas de pago y cobro":
+      - /url: /finanzas/formas-pago
+    - link "Entidades bancarias":
+      - /url: /finanzas/entidades
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Vencimientos de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 1 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Cuentas por cobrar y pagar" [level=1]
+  - paragraph: Vencimientos y antigüedad conciliados con la cuenta corriente a una fecha de corte.
+  - generic: Fecha de corte
+  - textbox "Fecha de corte" [active]: 2026-10-20
+  - generic: Tipo de cuenta
+  - combobox "Tipo de cuenta":
+    - option "Clientes · a cobrar"
+    - option "Proveedores · a pagar" [selected]
+    - option "Ambos tipos"
+  - generic: Contraparte
+  - combobox "Contraparte":
+    - option "Todas" [selected]
+    - option "PRO-00001 · Proveedor textil de prueba"
+  - generic: Se usan las aplicaciones registradas hasta el corte. Los anticipos y créditos sin aplicación se muestran separados; no se compensan automáticamente con los vencimientos. Cada sucursal conserva su saldo. «Vence hoy» se incluye en a vencer; los documentos sin fecha quedan separados. La antigüedad orienta la gestión de cobros y pagos, sin determinar incobrabilidad ni modificar deuda o impuestos.
+  - generic: Pendiente de aplicación
+  - strong: $ 810,50
+  - generic: Vencido bruto
+  - strong: $ 804,50
+  - generic: Saldos a favor no aplicados
+  - strong: $ 0,00
+  - generic: Saldo neto al corte
+  - strong: $ 810,50
+  - generic: Pendientes menos saldos a favor.
+  - generic: Diferencia de conciliación
+  - strong: $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Tipo Código Contraparte Sucursal A vencer / vence hoy 1–30 días 31–60 días 61–90 días Más de 90 días Sin vencimiento informado A favor sin aplicar Saldo neto Cuenta":
+        - columnheader "Tipo"
+        - columnheader "Código"
+        - columnheader "Contraparte"
+        - columnheader "Sucursal"
+        - columnheader "A vencer / vence hoy"
+        - columnheader "1–30 días"
+        - columnheader "31–60 días"
+        - columnheader "61–90 días"
+        - columnheader "Más de 90 días"
+        - columnheader "Sin vencimiento informado"
+        - columnheader "A favor sin aplicar"
+        - columnheader "Saldo neto"
+        - columnheader "Cuenta"
+    - rowgroup:
+      - row "A pagar PRO-00001 Proveedor textil de prueba Casa Central $ 6,00 $ 4,50 $ 800,00 $ 0,00 $ 0,00 $ 0,00 $ 0,00 $ 810,50 Ver movimientos":
+        - cell "A pagar"
+        - cell "PRO-00001"
+        - cell "Proveedor textil de prueba"
+        - cell "Casa Central"
+        - cell "$ 6,00"
+        - cell "$ 4,50"
+        - cell "$ 800,00"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 810,50"
+        - cell "Ver movimientos":
+          - link "Ver movimientos":
+            - /url: /proveedores/cuenta-corriente?party=58bf9b7b-62a2-4286-9bd9-4c027f773dd4
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 3 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Contraparte Sucursal Comprobante Emisión Vencimiento Días de atraso Antigüedad Efecto original Aplicado al corte Pendiente A favor sin aplicar Aplicaciones conservadas":
+        - columnheader "Contraparte"
+        - columnheader "Sucursal"
+        - columnheader "Comprobante"
+        - columnheader "Emisión"
+        - columnheader "Vencimiento"
+        - columnheader "Días de atraso"
+        - columnheader "Antigüedad"
+        - columnheader "Efecto original"
+        - columnheader "Aplicado al corte"
+        - columnheader "Pendiente"
+        - columnheader "A favor sin aplicar"
+        - columnheader "Aplicaciones conservadas"
+    - rowgroup:
+      - row "Proveedor textil de prueba Casa Central INT-SI-X-00001-00000008 01/01/2026 01/09/2026 49 31–60 días $ 800,00 $ 0,00 $ 800,00 $ 0,00":
+        - cell "Proveedor textil de prueba"
+        - cell "Casa Central"
+        - cell "INT-SI-X-00001-00000008"
+        - cell "01/01/2026"
+        - cell "01/09/2026"
+        - cell "49"
+        - cell "31–60 días"
+        - cell "$ 800,00"
+        - cell "$ 0,00"
+        - cell "$ 800,00"
+        - cell "$ 0,00"
+        - cell
+      - row "Proveedor textil de prueba Casa Central INT-COM-INT-RC-X-00001-00000001 01/10/2026 01/10/2026 19 1–30 días $ 4,50 $ 0,00 $ 4,50 $ 0,00":
+        - cell "Proveedor textil de prueba"
+        - cell "Casa Central"
+        - cell "INT-COM-INT-RC-X-00001-00000001"
+        - cell "01/10/2026"
+        - cell "01/10/2026"
+        - cell "19"
+        - cell "1–30 días"
+        - cell "$ 4,50"
+        - cell "$ 0,00"
+        - cell "$ 4,50"
+        - cell "$ 0,00"
+        - cell
+      - row "Proveedor textil de prueba Casa Central INT-COM-INT-RC-X-00001-00000002 20/10/2026 20/10/2026 0 A vencer / vence hoy $ 6,00 $ 0,00 $ 6,00 $ 0,00":
+        - cell "Proveedor textil de prueba"
+        - cell "Casa Central"
+        - cell "INT-COM-INT-RC-X-00001-00000002"
+        - cell "20/10/2026"
+        - cell "20/10/2026"
+        - cell "0"
+        - cell "A vencer / vence hoy"
+        - cell "$ 6,00"
+        - cell "$ 0,00"
+        - cell "$ 6,00"
+        - cell "$ 0,00"
+        - cell

@@ -1,0 +1,396 @@
+{
+  "date": "2026-10-09",
+  "synthetic": true,
+  "tests": {
+    "domain": 160,
+    "files": 13,
+    "http": 32,
+    "fiscal": 22,
+    "total": 227
+  },
+  "browser": {
+    "close": "Registro confirmado en interfaz: versión 2, INT-CC-00000001, bloqueo 09/10/2026 y tres observaciones reconocidas",
+    "period": "Rango 04/10–09/10 confirmado con saldos iniciales y movimientos de existencias y costo de ventas",
+    "settings": "Fecha bloqueada 09/10/2026 con atributo readOnly confirmado",
+    "screenshot": "La captura del navegador no estuvo disponible; no se adjunta una imagen simulada"
+  },
+  "checks": [
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados",
+      "close": {
+        "number": "INT-CC-00000001",
+        "date": "2026-10-09",
+        "responsible": "Administrador",
+        "reference": "Cierre contable sintético QA 09/10",
+        "reason": "Revisión sintética del balance y de la valuación al 09/10. Se identificaron recepciones sin factura y entregas pendientes para el control del cierre.",
+        "totals": {
+          "openingDebit": 0,
+          "openingCredit": 0,
+          "debit": 128620,
+          "credit": 128620,
+          "closingDebit": 106620,
+          "closingCredit": 106620
+        },
+        "warnings": [
+          {
+            "id": "inventory-policy",
+            "message": "La valuación incorpora costos históricos nominales. Revisá costos adicionales, conversión, valor recuperable y ajuste por inflación antes de preparar estados contables.",
+            "reference": "INT-VC-00000003"
+          },
+          {
+            "id": "unbilled:2a66ce3f-593f-4615-9cc2-ef22ef55286d",
+            "message": "La recepción conserva deuda estimada sin factura. Revisá su fundamento y su conciliación posterior.",
+            "reference": "INT-RM-A-00001-00000003"
+          },
+          {
+            "id": "delivery:bf40feb6-e975-4aff-94ee-9ddbe0e4c21d",
+            "message": "Entrega sin factura: revisá la transferencia de control y el reconocimiento del ingreso. El costo del remito no registra automáticamente un ingreso devengado.",
+            "reference": "INT-RM-A-00001-00000002"
+          }
+        ],
+        "sources": {
+          "entries": [
+            {
+              "id": "e90cccc6-7593-4838-a429-024baa2ecb11",
+              "date": "2026-10-01",
+              "concept": "INT-VC-00000001 · Apertura sintética revisada · CPP",
+              "branchId": "central",
+              "documentId": "1ee31185-32b5-44ba-8add-1cd19f0ad378",
+              "lines": [
+                {
+                  "accountId": "inventory-inventory",
+                  "debit": 60000,
+                  "credit": 0
+                },
+                {
+                  "accountId": "3.1",
+                  "debit": 0,
+                  "credit": 60000
+                }
+              ]
+            },
+            {
+              "id": "ed147013-20dc-480c-b3e9-a2faa2bf8b62",
+              "date": "2026-10-03",
+              "concept": "INT-VC-00000002 · Recepción estimada y venta sintéticas · CPP",
+              "branchId": "central",
+              "documentId": "5aff599e-1749-4bbb-9d13-44e1c77bf18f",
+              "lines": [
+                {
+                  "accountId": "inventory-inventory",
+                  "debit": 14000,
+                  "credit": 0
+                },
+                {
+                  "accountId": "inventory-unbilled",
+                  "debit": 0,
+                  "credit": 20000
+                },
+                {
+                  "accountId": "inventory-cogs",
+                  "debit": 6000,
+                  "credit": 0
+                }
+              ]
+            },
+            {
+              "id": "c3c2828b-8e06-40e2-8457-b17ca94ae354",
+              "date": "2026-10-04",
+              "concept": "INT-FC-A-00001-00000001",
+              "branchId": "central",
+              "documentId": "4237358a-5cd5-43ff-811f-026a6b76013e",
+              "lines": [
+                {
+                  "accountId": "5.1",
+                  "debit": 22000,
+                  "credit": 0
+                },
+                {
+                  "accountId": "1.1.4",
+                  "debit": 4620,
+                  "credit": 0
+                },
+                {
+                  "accountId": "2.1.1",
+                  "debit": 0,
+                  "credit": 26620
+                }
+              ]
+            },
+            {
+              "id": "38adaa33-0182-4697-b305-9c1cfd6d5cea",
+              "date": "2026-10-09",
+              "concept": "INT-VC-00000003 · Inventario exacto para cierre sintético · CPP",
+              "branchId": "central",
+              "documentId": "c08fb09a-c151-40df-96c0-f36bd25351f9",
+              "lines": [
+                {
+                  "accountId": "inventory-inventory",
+                  "debit": 21800,
+                  "credit": 0
+                },
+                {
+                  "accountId": "5.1",
+                  "debit": 0,
+                  "credit": 22000
+                },
+                {
+                  "accountId": "inventory-cogs",
+                  "debit": 200,
+                  "credit": 0
+                }
+              ]
+            }
+          ],
+          "documents": [
+            {
+              "id": "9b339c99-aa12-45e7-a567-409e9662e712",
+              "number": "INT-RM-A-00001-00000001",
+              "date": "2026-10-02",
+              "kind": "remito",
+              "side": "proveedor",
+              "branchId": "central",
+              "net": 999990,
+              "vat": 209998,
+              "total": 1209988,
+              "perceptions": 0,
+              "sourceId": "",
+              "lines": [
+                {
+                  "productId": "aa670e45-5e23-4e26-8d55-cff8d9a71bca",
+                  "description": "",
+                  "quantity": 10,
+                  "unit": "Unidad",
+                  "price": 99999,
+                  "tax": "21",
+                  "discount": 0
+                }
+              ],
+              "payments": [],
+              "allocations": []
+            },
+            {
+              "id": "bf40feb6-e975-4aff-94ee-9ddbe0e4c21d",
+              "number": "INT-RM-A-00001-00000002",
+              "date": "2026-10-03",
+              "kind": "remito",
+              "side": "cliente",
+              "branchId": "central",
+              "net": 50000,
+              "vat": 10500,
+              "total": 60500,
+              "perceptions": 0,
+              "sourceId": "",
+              "lines": [
+                {
+                  "productId": "aa670e45-5e23-4e26-8d55-cff8d9a71bca",
+                  "description": "",
+                  "quantity": 5,
+                  "unit": "Unidad",
+                  "price": 10000,
+                  "tax": "21",
+                  "discount": 0
+                }
+              ],
+              "payments": [],
+              "allocations": []
+            },
+            {
+              "id": "4237358a-5cd5-43ff-811f-026a6b76013e",
+              "number": "INT-FC-A-00001-00000001",
+              "date": "2026-10-02",
+              "kind": "factura",
+              "side": "proveedor",
+              "branchId": "central",
+              "net": 22000,
+              "vat": 4620,
+              "total": 26620,
+              "perceptions": 0,
+              "sourceId": "9b339c99-aa12-45e7-a567-409e9662e712",
+              "lines": [
+                {
+                  "productId": "aa670e45-5e23-4e26-8d55-cff8d9a71bca",
+                  "description": "",
+                  "quantity": 10,
+                  "unit": "Unidad",
+                  "price": 2200,
+                  "tax": "21",
+                  "discount": 0
+                }
+              ],
+              "payments": [],
+              "allocations": []
+            },
+            {
+              "id": "2a66ce3f-593f-4615-9cc2-ef22ef55286d",
+              "number": "INT-RM-A-00001-00000003",
+              "date": "2026-10-08",
+              "kind": "remito",
+              "side": "proveedor",
+              "branchId": "central",
+              "net": 999990,
+              "vat": 209998,
+              "total": 1209988,
+              "perceptions": 0,
+              "sourceId": "",
+              "lines": [
+                {
+                  "productId": "aa670e45-5e23-4e26-8d55-cff8d9a71bca",
+                  "description": "",
+                  "quantity": 10,
+                  "unit": "Unidad",
+                  "price": 99999,
+                  "tax": "21",
+                  "discount": 0
+                }
+              ],
+              "payments": [],
+              "allocations": []
+            }
+          ],
+          "stock": [
+            {
+              "id": "e7a2cd67-3094-45a7-b758-a6ab4ac52b4c",
+              "date": "2026-10-01",
+              "productId": "aa670e45-5e23-4e26-8d55-cff8d9a71bca",
+              "depositId": "principal",
+              "quantity": 40,
+              "reason": "Stock inicial de ejemplo (sin valuación contable)",
+              "documentId": "",
+              "branchId": "central"
+            },
+            {
+              "id": "e107d651-6bd0-40c8-bd21-c89ee0a22a23",
+              "date": "2026-10-01",
+              "productId": "a29b9ee0-62cb-4158-8850-e55dfcbf2665",
+              "depositId": "principal",
+              "quantity": 20,
+              "reason": "Stock inicial de ejemplo (sin valuación contable)",
+              "documentId": "",
+              "branchId": "central"
+            },
+            {
+              "id": "3f8126ff-343f-4229-a44f-4c51b66cb060",
+              "date": "2026-10-02",
+              "productId": "aa670e45-5e23-4e26-8d55-cff8d9a71bca",
+              "depositId": "principal",
+              "quantity": 10,
+              "reason": "INT-RM-A-00001-00000001",
+              "documentId": "9b339c99-aa12-45e7-a567-409e9662e712",
+              "branchId": "central"
+            },
+            {
+              "id": "f5bde016-4bd3-4875-b2a1-f1899f32ec18",
+              "date": "2026-10-03",
+              "productId": "aa670e45-5e23-4e26-8d55-cff8d9a71bca",
+              "depositId": "principal",
+              "quantity": -5,
+              "reason": "INT-RM-A-00001-00000002",
+              "documentId": "bf40feb6-e975-4aff-94ee-9ddbe0e4c21d",
+              "branchId": "central"
+            },
+            {
+              "id": "49a73240-6b22-4861-8def-77ffc598f21d",
+              "date": "2026-10-08",
+              "productId": "aa670e45-5e23-4e26-8d55-cff8d9a71bca",
+              "depositId": "principal",
+              "quantity": 10,
+              "reason": "INT-RM-A-00001-00000003",
+              "documentId": "2a66ce3f-593f-4615-9cc2-ef22ef55286d",
+              "branchId": "central"
+            }
+          ],
+          "treasury": []
+        }
+      },
+      "period": {
+        "from": "2026-10-04",
+        "to": "2026-10-09",
+        "totals": {
+          "openingDebit": 80000,
+          "openingCredit": 80000,
+          "debit": 48620,
+          "credit": 48620,
+          "closingDebit": 106620,
+          "closingCredit": 106620
+        },
+        "inventory": {
+          "accountId": "inventory-inventory",
+          "code": "1.1.9",
+          "name": "Existencias de mercadería",
+          "group": "Activo",
+          "opening": 74000,
+          "debit": 21800,
+          "credit": 0,
+          "closing": 95800
+        },
+        "cogs": {
+          "accountId": "inventory-cogs",
+          "code": "5.4",
+          "name": "Costo de mercadería vendida",
+          "group": "Gastos",
+          "opening": 6000,
+          "debit": 200,
+          "credit": 0,
+          "closing": 6200
+        },
+        "unbilled": {
+          "accountId": "inventory-unbilled",
+          "code": "2.1.6",
+          "name": "Mercadería recibida sin facturar",
+          "group": "Pasivo",
+          "opening": -20000,
+          "debit": 0,
+          "credit": 0,
+          "closing": -20000
+        }
+      }
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC verificada",
+      "state": "Validación completa y recorrido JSON verificados"
+    }
+  ]
+}

@@ -1,0 +1,2088 @@
+Comparación conservada:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Preparación de estados":
+      - /url: /contabilidad/estados
+    - link "Moneda de cierre y RECPAM":
+      - /url: /contabilidad/moneda-cierre
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - VALOR RECUPERABLE DEL INVENTARIO
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Valuación de inventario y costo de ventas" [level=1]
+  - paragraph: Apertura y cierres revisables con costo promedio ponderado por SKU y depósito.
+  - button "Preparar cierre valorizado"
+  - heading "Conciliar moneda de cierre por artículo y depósito" [level=2]
+  - generic: Enlazá INT-AI con el inventario al corte. Conservá cantidades y distribuí cada antigüedad entre artículos y depósitos. La conciliación incorpora la base del CPP posterior sin repetir el asiento del ajuste.
+  - generic: Ajuste anual para conciliar inventario
+  - combobox "Ajuste anual para conciliar inventario":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 11/10/2026 · Ensayo · Conciliado"
+  - button "Preparar conciliación de inventario" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Ajuste Referencia En cierre ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Ajuste"
+        - columnheader "Referencia"
+        - columnheader "En cierre ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CI-00000001 11/10/2026 INT-AI-00000001 Conciliación de inventario QA $ 1.500,00 Administrador Ver conciliación de inventario":
+        - cell "INT-CI-00000001"
+        - cell "11/10/2026"
+        - cell "INT-AI-00000001"
+        - cell "Conciliación de inventario QA"
+        - cell "$ 1.500,00"
+        - cell "Administrador"
+        - cell "Ver conciliación de inventario":
+          - button "Ver conciliación de inventario"
+  - heading "Valor recuperable del inventario" [level=2]
+  - generic: Compará con el valor neto de realización en la moneda del corte. Revisá la forma de venta y el conjunto completo antes de compensar partidas. Las reversiones necesitan nuevas estimaciones y se limitan al costo sin pérdida.
+  - button "Preparar comparación de inventario"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Pérdida ARS Reversión ARS Neto ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Pérdida ARS"
+        - columnheader "Reversión ARS"
+        - columnheader "Neto ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VI-00000001 13/10/2026 Pérdida de inventario QA 2026 $ 800,00 $ 0,00 $ 1.200,00 Administrador Ver valor recuperable":
+        - cell "INT-VI-00000001"
+        - cell "13/10/2026"
+        - cell "Pérdida de inventario QA 2026"
+        - cell "$ 800,00"
+        - cell "$ 0,00"
+        - cell "$ 1.200,00"
+        - cell "Administrador"
+        - cell "Ver valor recuperable":
+          - button "Ver valor recuperable"
+  - dialog "Valor recuperable INT-VI-00000001":
+    - heading "Valor recuperable INT-VI-00000001" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: Caída documentada de precios de las remeras en el ensayo. · Administrador
+    - paragraph: Pérdida de inventario QA 2026 · 13/10/2026 · Inventario completo · Valuación fuente INT-VC-00000003
+    - generic: Pérdida reconocida
+    - strong: $ 800,00
+    - generic: Reversión limitada
+    - strong: $ 0,00
+    - generic: Inventario neto
+    - strong: $ 1.200,00
+    - generic: Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.
+    - generic: La reversión no supera el costo que habría quedado sin desvalorización.
+    - generic: Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.
+    - generic: La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "Grupo Forma de realización Costo sin pérdida ARS Neto anterior ARS VNR ARS Pérdida ARS Reversión ARS Neto posterior ARS":
+          - columnheader "Grupo"
+          - columnheader "Forma de realización"
+          - columnheader "Costo sin pérdida ARS"
+          - columnheader "Neto anterior ARS"
+          - columnheader "VNR ARS"
+          - columnheader "Pérdida ARS"
+          - columnheader "Reversión ARS"
+          - columnheader "Neto posterior ARS"
+      - rowgroup:
+        - row "REM-M-NEG Partida individual $ 2.000,00 $ 2.000,00 $ 1.200,00 $ 800,00 $ 0,00 $ 1.200,00":
+          - cell "REM-M-NEG"
+          - cell "Partida individual"
+          - cell "$ 2.000,00"
+          - cell "$ 2.000,00"
+          - cell "$ 1.200,00"
+          - cell "$ 800,00"
+          - cell "$ 0,00"
+          - cell "$ 1.200,00"
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "SKU Depósito Cantidad Costo bruto ARS Pérdida anterior ARS Pérdida acumulada ARS Neto posterior ARS":
+          - columnheader "SKU"
+          - columnheader "Depósito"
+          - columnheader "Cantidad"
+          - columnheader "Costo bruto ARS"
+          - columnheader "Pérdida anterior ARS"
+          - columnheader "Pérdida acumulada ARS"
+          - columnheader "Neto posterior ARS"
+      - rowgroup:
+        - row "REM-M-NEG Depósito principal 12 $ 2.000,00 $ 0,00 $ 800,00 $ 1.200,00":
+          - cell "REM-M-NEG"
+          - cell "Depósito principal"
+          - cell "12"
+          - cell "$ 2.000,00"
+          - cell "$ 0,00"
+          - cell "$ 800,00"
+          - cell "$ 1.200,00"
+    - button "XLSX de valor recuperable de inventario"
+    - button "PDF de valor recuperable de inventario"
+  - generic: El primer corte incorpora saldos y valores de apertura revisados. Los siguientes calculan las salidas por promedio ponderado y reclasifican compras recibidas desde su cuenta de gasto original. Cada recepción necesita factura vinculada o una estimación total documentada de sus artículos físicos. La estimación reconoce deuda por mercadería sin facturar; la factura posterior la cancela y concilia diferencias de costo. Las notas de compra corrigen el costo desde la recepción o mediante una asignación revisada sobre la apertura, y registran la diferencia en el nuevo corte; no cambian cantidades. Los movimientos de stock hasta el último corte quedan conservados.
+  - generic: Corte de la valuación
+  - strong: 13/10/2026
+  - generic: Valor de existencias al corte
+  - strong: $ 2.000,00
+  - generic: Costo de ventas neto del cierre
+  - strong: $ 500,00
+  - generic: Mercadería sin facturar al corte
+  - strong: $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 3 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Tipo Movimientos Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Tipo"
+        - columnheader "Movimientos"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VC-00000001 30/09/2026 Inventario previo al ajuste Apertura 1 Administrador Ver valuación":
+        - cell "INT-VC-00000001"
+        - cell "30/09/2026"
+        - cell "Inventario previo al ajuste"
+        - cell "Apertura"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000002 11/10/2026 Corte anterior al ajuste de inventario Cierre 0 Administrador Ver valuación":
+        - cell "INT-VC-00000002"
+        - cell "11/10/2026"
+        - cell "Corte anterior al ajuste de inventario"
+        - cell "Cierre"
+        - cell "0"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000003 13/10/2026 CPP conciliado previo al recuperable QA Cierre 2 Administrador Ver valuación":
+        - cell "INT-VC-00000003"
+        - cell "13/10/2026"
+        - cell "CPP conciliado previo al recuperable QA"
+        - cell "Cierre"
+        - cell "2"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+  - paragraph:
+    - strong: "Base de moneda de cierre:"
+    - text: INT-CI-00000001, corte 11/10/2026. Revisá que las estimaciones de esta operación estén en la misma base monetaria.
+  - heading "Existencias valorizadas · INT-VC-00000003" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "SKU Artículo Depósito Cantidad Unidad Costo medio ARS / unidad Costo bruto ARS Pérdida acumulada ARS Valor neto ARS":
+        - columnheader "SKU"
+        - columnheader "Artículo"
+        - columnheader "Depósito"
+        - columnheader "Cantidad"
+        - columnheader "Unidad"
+        - columnheader "Costo medio ARS / unidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida acumulada ARS"
+        - columnheader "Valor neto ARS"
+    - rowgroup:
+      - row "REM-M-NEG Remera de algodón · M · Negro Depósito principal 12 Unidad $ 166,67 $ 2.000,00 $ 800,00 $ 1.200,00":
+        - cell "REM-M-NEG"
+        - cell "Remera de algodón · M · Negro"
+        - cell "Depósito principal"
+        - cell "12"
+        - cell "Unidad"
+        - cell "$ 166,67"
+        - cell "$ 2.000,00"
+        - cell "$ 800,00"
+        - cell "$ 1.200,00"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha del movimiento SKU Depósito Tratamiento Cantidad Costo bruto ARS Pérdida consumida ARS Pérdida restituida ARS Costo neto ARS Costo acreditado ARS Acreditado menos CPP ARS Referencia histórica":
+        - columnheader "Fecha del movimiento"
+        - columnheader "SKU"
+        - columnheader "Depósito"
+        - columnheader "Tratamiento"
+        - columnheader "Cantidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida consumida ARS"
+        - columnheader "Pérdida restituida ARS"
+        - columnheader "Costo neto ARS"
+        - columnheader "Costo acreditado ARS"
+        - columnheader "Acreditado menos CPP ARS"
+        - columnheader "Referencia histórica"
+    - rowgroup:
+      - row "12/10/2026 REM-M-NEG Depósito principal Compra 5 $ 1.000,00 $ 0,00 $ 0,00 $ 1.000,00 — — —":
+        - cell "12/10/2026"
+        - cell "REM-M-NEG"
+        - cell "Depósito principal"
+        - cell "Compra"
+        - cell "5"
+        - cell "$ 1.000,00"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 1.000,00"
+        - cell "—"
+        - cell "—"
+        - cell "—"
+      - row "13/10/2026 REM-M-NEG Depósito principal Venta -3 $ 500,00 $ 0,00 $ 0,00 $ 500,00 — — —":
+        - cell "13/10/2026"
+        - cell "REM-M-NEG"
+        - cell "Depósito principal"
+        - cell "Venta"
+        - cell "-3"
+        - cell "$ 500,00"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 500,00"
+        - cell "—"
+        - cell "—"
+        - cell "—"
+  - generic: Asientos en la fecha de corte, por sucursal. Los traslados conservan costo y la fabricación incorpora el costo valorizado de sus materiales. Las correcciones de precio de compras alcanzan también ventas y materiales ya consumidos. Un costo de ventas neto negativo en un corte revierte costos anteriores. Las devoluciones físicas se vinculan al remito y a su nota. Las de clientes reponen el costo de la entrega original; las de proveedores descargan CPP y muestran la diferencia con el importe acreditado. Esa diferencia se registra en Diferencias de inventario; revisá esta política y el asiento para tu empresa. La conciliación INT-CI incorpora el ajuste anual al CPP posterior. Revisá la moneda de nuevas adquisiciones y costos recuperados; INT-VI compara el valor neto de realización y conserva pérdidas y reversiones. Las salidas posteriores consumen la pérdida proporcional en el CPP; siguen pendientes costos completos de conversión y la continuidad anual de la cuenta regularizadora. El costo medio mostrado se redondea a centavos; las salidas se calculan sobre el valor total conservado.
+
+CPP neto revisado:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Preparación de estados":
+      - /url: /contabilidad/estados
+    - link "Moneda de cierre y RECPAM":
+      - /url: /contabilidad/moneda-cierre
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - VALOR RECUPERABLE DEL INVENTARIO
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Valuación de inventario y costo de ventas" [level=1]
+  - paragraph: Apertura y cierres revisables con costo promedio ponderado por SKU y depósito.
+  - button "Preparar cierre valorizado"
+  - heading "Conciliar moneda de cierre por artículo y depósito" [level=2]
+  - generic: Enlazá INT-AI con el inventario al corte. Conservá cantidades y distribuí cada antigüedad entre artículos y depósitos. La conciliación incorpora la base del CPP posterior sin repetir el asiento del ajuste.
+  - generic: Ajuste anual para conciliar inventario
+  - combobox "Ajuste anual para conciliar inventario":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 11/10/2026 · Ensayo · Conciliado"
+  - button "Preparar conciliación de inventario" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Ajuste Referencia En cierre ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Ajuste"
+        - columnheader "Referencia"
+        - columnheader "En cierre ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CI-00000001 11/10/2026 INT-AI-00000001 Conciliación de inventario QA $ 1.500,00 Administrador Ver conciliación de inventario":
+        - cell "INT-CI-00000001"
+        - cell "11/10/2026"
+        - cell "INT-AI-00000001"
+        - cell "Conciliación de inventario QA"
+        - cell "$ 1.500,00"
+        - cell "Administrador"
+        - cell "Ver conciliación de inventario":
+          - button "Ver conciliación de inventario"
+  - heading "Valor recuperable del inventario" [level=2]
+  - generic: Compará con el valor neto de realización en la moneda del corte. Revisá la forma de venta y el conjunto completo antes de compensar partidas. Las reversiones necesitan nuevas estimaciones y se limitan al costo sin pérdida.
+  - button "Preparar comparación de inventario"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Pérdida ARS Reversión ARS Neto ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Pérdida ARS"
+        - columnheader "Reversión ARS"
+        - columnheader "Neto ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VI-00000001 13/10/2026 Pérdida de inventario QA 2026 $ 800,00 $ 0,00 $ 1.200,00 Administrador Ver valor recuperable":
+        - cell "INT-VI-00000001"
+        - cell "13/10/2026"
+        - cell "Pérdida de inventario QA 2026"
+        - cell "$ 800,00"
+        - cell "$ 0,00"
+        - cell "$ 1.200,00"
+        - cell "Administrador"
+        - cell "Ver valor recuperable":
+          - button "Ver valor recuperable"
+  - generic: El primer corte incorpora saldos y valores de apertura revisados. Los siguientes calculan las salidas por promedio ponderado y reclasifican compras recibidas desde su cuenta de gasto original. Cada recepción necesita factura vinculada o una estimación total documentada de sus artículos físicos. La estimación reconoce deuda por mercadería sin facturar; la factura posterior la cancela y concilia diferencias de costo. Las notas de compra corrigen el costo desde la recepción o mediante una asignación revisada sobre la apertura, y registran la diferencia en el nuevo corte; no cambian cantidades. Los movimientos de stock hasta el último corte quedan conservados.
+  - generic: Corte de la valuación
+  - strong: 13/10/2026
+  - generic: Valor de existencias al corte
+  - strong: $ 2.000,00
+  - generic: Costo de ventas neto del cierre
+  - strong: $ 500,00
+  - generic: Mercadería sin facturar al corte
+  - strong: $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 3 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Tipo Movimientos Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Tipo"
+        - columnheader "Movimientos"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VC-00000001 30/09/2026 Inventario previo al ajuste Apertura 1 Administrador Ver valuación":
+        - cell "INT-VC-00000001"
+        - cell "30/09/2026"
+        - cell "Inventario previo al ajuste"
+        - cell "Apertura"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000002 11/10/2026 Corte anterior al ajuste de inventario Cierre 0 Administrador Ver valuación":
+        - cell "INT-VC-00000002"
+        - cell "11/10/2026"
+        - cell "Corte anterior al ajuste de inventario"
+        - cell "Cierre"
+        - cell "0"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000003 13/10/2026 CPP conciliado previo al recuperable QA Cierre 2 Administrador Ver valuación":
+        - cell "INT-VC-00000003"
+        - cell "13/10/2026"
+        - cell "CPP conciliado previo al recuperable QA"
+        - cell "Cierre"
+        - cell "2"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+  - paragraph:
+    - strong: "Base de moneda de cierre:"
+    - text: INT-CI-00000001, corte 11/10/2026. Revisá que las estimaciones de esta operación estén en la misma base monetaria.
+  - heading "Existencias valorizadas · INT-VC-00000003" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "SKU Artículo Depósito Cantidad Unidad Costo medio ARS / unidad Costo bruto ARS Pérdida acumulada ARS Valor neto ARS":
+        - columnheader "SKU"
+        - columnheader "Artículo"
+        - columnheader "Depósito"
+        - columnheader "Cantidad"
+        - columnheader "Unidad"
+        - columnheader "Costo medio ARS / unidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida acumulada ARS"
+        - columnheader "Valor neto ARS"
+    - rowgroup:
+      - row "REM-M-NEG Remera de algodón · M · Negro Depósito principal 12 Unidad $ 166,67 $ 2.000,00 $ 800,00 $ 1.200,00":
+        - cell "REM-M-NEG"
+        - cell "Remera de algodón · M · Negro"
+        - cell "Depósito principal"
+        - cell "12"
+        - cell "Unidad"
+        - cell "$ 166,67"
+        - cell "$ 2.000,00"
+        - cell "$ 800,00"
+        - cell "$ 1.200,00"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha del movimiento SKU Depósito Tratamiento Cantidad Costo bruto ARS Pérdida consumida ARS Pérdida restituida ARS Costo neto ARS Costo acreditado ARS Acreditado menos CPP ARS Referencia histórica":
+        - columnheader "Fecha del movimiento"
+        - columnheader "SKU"
+        - columnheader "Depósito"
+        - columnheader "Tratamiento"
+        - columnheader "Cantidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida consumida ARS"
+        - columnheader "Pérdida restituida ARS"
+        - columnheader "Costo neto ARS"
+        - columnheader "Costo acreditado ARS"
+        - columnheader "Acreditado menos CPP ARS"
+        - columnheader "Referencia histórica"
+    - rowgroup:
+      - row "12/10/2026 REM-M-NEG Depósito principal Compra 5 $ 1.000,00 $ 0,00 $ 0,00 $ 1.000,00 — — —":
+        - cell "12/10/2026"
+        - cell "REM-M-NEG"
+        - cell "Depósito principal"
+        - cell "Compra"
+        - cell "5"
+        - cell "$ 1.000,00"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 1.000,00"
+        - cell "—"
+        - cell "—"
+        - cell "—"
+      - row "13/10/2026 REM-M-NEG Depósito principal Venta -3 $ 500,00 $ 0,00 $ 0,00 $ 500,00 — — —":
+        - cell "13/10/2026"
+        - cell "REM-M-NEG"
+        - cell "Depósito principal"
+        - cell "Venta"
+        - cell "-3"
+        - cell "$ 500,00"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 500,00"
+        - cell "—"
+        - cell "—"
+        - cell "—"
+  - generic: Asientos en la fecha de corte, por sucursal. Los traslados conservan costo y la fabricación incorpora el costo valorizado de sus materiales. Las correcciones de precio de compras alcanzan también ventas y materiales ya consumidos. Un costo de ventas neto negativo en un corte revierte costos anteriores. Las devoluciones físicas se vinculan al remito y a su nota. Las de clientes reponen el costo de la entrega original; las de proveedores descargan CPP y muestran la diferencia con el importe acreditado. Esa diferencia se registra en Diferencias de inventario; revisá esta política y el asiento para tu empresa. La conciliación INT-CI incorpora el ajuste anual al CPP posterior. Revisá la moneda de nuevas adquisiciones y costos recuperados; INT-VI compara el valor neto de realización y conserva pérdidas y reversiones. Las salidas posteriores consumen la pérdida proporcional en el CPP; siguen pendientes costos completos de conversión y la continuidad anual de la cuenta regularizadora. El costo medio mostrado se redondea a centavos; las salidas se calculan sobre el valor total conservado.
+  - dialog "Revisar antes de contabilizar":
+    - heading "Revisar antes de contabilizar" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph:
+      - strong: "Base de moneda de cierre:"
+      - text: INT-CI-00000001, corte 11/10/2026. Revisá que las estimaciones de esta operación estén en la misma base monetaria.
+    - paragraph: CPP posterior a pérdida QA 2026 · Corte 14/10/2026 · 1 movimientos conservados.
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "SKU Depósito Cantidad Valor ARS":
+          - columnheader "SKU"
+          - columnheader "Depósito"
+          - columnheader "Cantidad"
+          - columnheader "Valor ARS"
+      - rowgroup:
+        - row "REM-M-NEG Depósito principal 9 $ 1.500,00":
+          - cell "REM-M-NEG"
+          - cell "Depósito principal"
+          - cell "9"
+          - cell "$ 1.500,00"
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "Fecha SKU Tratamiento Cantidad Costo bruto ARS Pérdida consumida ARS Pérdida restituida ARS Costo neto ARS Costo acreditado ARS Acreditado menos CPP ARS Referencia histórica Contrapartida":
+          - columnheader "Fecha"
+          - columnheader "SKU"
+          - columnheader "Tratamiento"
+          - columnheader "Cantidad"
+          - columnheader "Costo bruto ARS"
+          - columnheader "Pérdida consumida ARS"
+          - columnheader "Pérdida restituida ARS"
+          - columnheader "Costo neto ARS"
+          - columnheader "Costo acreditado ARS"
+          - columnheader "Acreditado menos CPP ARS"
+          - columnheader "Referencia histórica"
+          - columnheader "Contrapartida"
+      - rowgroup:
+        - row "14/10/2026 REM-M-NEG Venta -3 $ 500,00 $ 200,00 $ 0,00 $ 300,00 — — — Costo de mercadería vendida":
+          - cell "14/10/2026"
+          - cell "REM-M-NEG"
+          - cell "Venta"
+          - cell "-3"
+          - cell "$ 500,00"
+          - cell "$ 200,00"
+          - cell "$ 0,00"
+          - cell "$ 300,00"
+          - cell "—"
+          - cell "—"
+          - cell "—"
+          - cell "Costo de mercadería vendida"
+    - generic: 3 registros
+    - table:
+      - rowgroup:
+        - row "Sucursal Cuenta Debe Haber":
+          - columnheader "Sucursal"
+          - columnheader "Cuenta"
+          - columnheader "Debe"
+          - columnheader "Haber"
+      - rowgroup:
+        - row "Casa Central Existencias de mercadería $ 0,00 $ 500,00":
+          - cell "Casa Central"
+          - cell "Existencias de mercadería"
+          - cell "$ 0,00"
+          - cell "$ 500,00"
+        - row "Casa Central Desvalorización acumulada de inventario $ 200,00 $ 0,00":
+          - cell "Casa Central"
+          - cell "Desvalorización acumulada de inventario"
+          - cell "$ 200,00"
+          - cell "$ 0,00"
+        - row "Casa Central Costo de mercadería vendida $ 300,00 $ 0,00":
+          - cell "Casa Central"
+          - cell "Costo de mercadería vendida"
+          - cell "$ 300,00"
+          - cell "$ 0,00"
+    - paragraph: Contabilizar agrega los asientos al diario y conserva los movimientos hasta este corte. No cierra el período contable general.
+    - button "Contabilizar valuación"
+
+CPP neto conservado:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Preparación de estados":
+      - /url: /contabilidad/estados
+    - link "Moneda de cierre y RECPAM":
+      - /url: /contabilidad/moneda-cierre
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - VALOR RECUPERABLE DEL INVENTARIO
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 3 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Valuación de inventario y costo de ventas" [level=1]
+  - paragraph: Apertura y cierres revisables con costo promedio ponderado por SKU y depósito.
+  - button "Preparar cierre valorizado"
+  - heading "Conciliar moneda de cierre por artículo y depósito" [level=2]
+  - generic: Enlazá INT-AI con el inventario al corte. Conservá cantidades y distribuí cada antigüedad entre artículos y depósitos. La conciliación incorpora la base del CPP posterior sin repetir el asiento del ajuste.
+  - generic: Ajuste anual para conciliar inventario
+  - combobox "Ajuste anual para conciliar inventario":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 11/10/2026 · Ensayo · Conciliado"
+  - button "Preparar conciliación de inventario" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Ajuste Referencia En cierre ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Ajuste"
+        - columnheader "Referencia"
+        - columnheader "En cierre ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CI-00000001 11/10/2026 INT-AI-00000001 Conciliación de inventario QA $ 1.500,00 Administrador Ver conciliación de inventario":
+        - cell "INT-CI-00000001"
+        - cell "11/10/2026"
+        - cell "INT-AI-00000001"
+        - cell "Conciliación de inventario QA"
+        - cell "$ 1.500,00"
+        - cell "Administrador"
+        - cell "Ver conciliación de inventario":
+          - button "Ver conciliación de inventario"
+  - heading "Valor recuperable del inventario" [level=2]
+  - generic: Compará con el valor neto de realización en la moneda del corte. Revisá la forma de venta y el conjunto completo antes de compensar partidas. Las reversiones necesitan nuevas estimaciones y se limitan al costo sin pérdida.
+  - button "Preparar comparación de inventario"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Pérdida ARS Reversión ARS Neto ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Pérdida ARS"
+        - columnheader "Reversión ARS"
+        - columnheader "Neto ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VI-00000001 13/10/2026 Pérdida de inventario QA 2026 $ 800,00 $ 0,00 $ 1.200,00 Administrador Ver valor recuperable":
+        - cell "INT-VI-00000001"
+        - cell "13/10/2026"
+        - cell "Pérdida de inventario QA 2026"
+        - cell "$ 800,00"
+        - cell "$ 0,00"
+        - cell "$ 1.200,00"
+        - cell "Administrador"
+        - cell "Ver valor recuperable":
+          - button "Ver valor recuperable"
+  - generic: El primer corte incorpora saldos y valores de apertura revisados. Los siguientes calculan las salidas por promedio ponderado y reclasifican compras recibidas desde su cuenta de gasto original. Cada recepción necesita factura vinculada o una estimación total documentada de sus artículos físicos. La estimación reconoce deuda por mercadería sin facturar; la factura posterior la cancela y concilia diferencias de costo. Las notas de compra corrigen el costo desde la recepción o mediante una asignación revisada sobre la apertura, y registran la diferencia en el nuevo corte; no cambian cantidades. Los movimientos de stock hasta el último corte quedan conservados.
+  - generic: Corte de la valuación
+  - strong: 14/10/2026
+  - generic: Valor de existencias al corte
+  - strong: $ 1.500,00
+  - generic: Costo de ventas neto del cierre
+  - strong: $ 300,00
+  - generic: Mercadería sin facturar al corte
+  - strong: $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 4 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Tipo Movimientos Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Tipo"
+        - columnheader "Movimientos"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VC-00000001 30/09/2026 Inventario previo al ajuste Apertura 1 Administrador Ver valuación":
+        - cell "INT-VC-00000001"
+        - cell "30/09/2026"
+        - cell "Inventario previo al ajuste"
+        - cell "Apertura"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000002 11/10/2026 Corte anterior al ajuste de inventario Cierre 0 Administrador Ver valuación":
+        - cell "INT-VC-00000002"
+        - cell "11/10/2026"
+        - cell "Corte anterior al ajuste de inventario"
+        - cell "Cierre"
+        - cell "0"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000003 13/10/2026 CPP conciliado previo al recuperable QA Cierre 2 Administrador Ver valuación":
+        - cell "INT-VC-00000003"
+        - cell "13/10/2026"
+        - cell "CPP conciliado previo al recuperable QA"
+        - cell "Cierre"
+        - cell "2"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000004 14/10/2026 CPP posterior a pérdida QA 2026 Cierre 1 Administrador Ver valuación":
+        - cell "INT-VC-00000004"
+        - cell "14/10/2026"
+        - cell "CPP posterior a pérdida QA 2026"
+        - cell "Cierre"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+  - paragraph:
+    - strong: "Base de moneda de cierre:"
+    - text: INT-CI-00000001, corte 11/10/2026. Revisá que las estimaciones de esta operación estén en la misma base monetaria.
+  - heading "Existencias valorizadas · INT-VC-00000004" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "SKU Artículo Depósito Cantidad Unidad Costo medio ARS / unidad Costo bruto ARS Pérdida acumulada ARS Valor neto ARS":
+        - columnheader "SKU"
+        - columnheader "Artículo"
+        - columnheader "Depósito"
+        - columnheader "Cantidad"
+        - columnheader "Unidad"
+        - columnheader "Costo medio ARS / unidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida acumulada ARS"
+        - columnheader "Valor neto ARS"
+    - rowgroup:
+      - row "REM-M-NEG Remera de algodón · M · Negro Depósito principal 9 Unidad $ 166,67 $ 1.500,00 $ 600,00 $ 900,00":
+        - cell "REM-M-NEG"
+        - cell "Remera de algodón · M · Negro"
+        - cell "Depósito principal"
+        - cell "9"
+        - cell "Unidad"
+        - cell "$ 166,67"
+        - cell "$ 1.500,00"
+        - cell "$ 600,00"
+        - cell "$ 900,00"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha del movimiento SKU Depósito Tratamiento Cantidad Costo bruto ARS Pérdida consumida ARS Pérdida restituida ARS Costo neto ARS Costo acreditado ARS Acreditado menos CPP ARS Referencia histórica":
+        - columnheader "Fecha del movimiento"
+        - columnheader "SKU"
+        - columnheader "Depósito"
+        - columnheader "Tratamiento"
+        - columnheader "Cantidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida consumida ARS"
+        - columnheader "Pérdida restituida ARS"
+        - columnheader "Costo neto ARS"
+        - columnheader "Costo acreditado ARS"
+        - columnheader "Acreditado menos CPP ARS"
+        - columnheader "Referencia histórica"
+    - rowgroup:
+      - row "14/10/2026 REM-M-NEG Depósito principal Venta -3 $ 500,00 $ 200,00 $ 0,00 $ 300,00 — — —":
+        - cell "14/10/2026"
+        - cell "REM-M-NEG"
+        - cell "Depósito principal"
+        - cell "Venta"
+        - cell "-3"
+        - cell "$ 500,00"
+        - cell "$ 200,00"
+        - cell "$ 0,00"
+        - cell "$ 300,00"
+        - cell "—"
+        - cell "—"
+        - cell "—"
+  - generic: Asientos en la fecha de corte, por sucursal. Los traslados conservan costo y la fabricación incorpora el costo valorizado de sus materiales. Las correcciones de precio de compras alcanzan también ventas y materiales ya consumidos. Un costo de ventas neto negativo en un corte revierte costos anteriores. Las devoluciones físicas se vinculan al remito y a su nota. Las de clientes reponen el costo de la entrega original; las de proveedores descargan CPP y muestran la diferencia con el importe acreditado. Esa diferencia se registra en Diferencias de inventario; revisá esta política y el asiento para tu empresa. La conciliación INT-CI incorpora el ajuste anual al CPP posterior. Revisá la moneda de nuevas adquisiciones y costos recuperados; INT-VI compara el valor neto de realización y conserva pérdidas y reversiones. Las salidas posteriores consumen la pérdida proporcional en el CPP; siguen pendientes costos completos de conversión y la continuidad anual de la cuenta regularizadora. El costo medio mostrado se redondea a centavos; las salidas se calculan sobre el valor total conservado.
+
+Rechazo sin nueva estimación:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Preparación de estados":
+      - /url: /contabilidad/estados
+    - link "Moneda de cierre y RECPAM":
+      - /url: /contabilidad/moneda-cierre
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - VALOR RECUPERABLE DEL INVENTARIO
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 3 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Valuación de inventario y costo de ventas" [level=1]
+  - paragraph: Apertura y cierres revisables con costo promedio ponderado por SKU y depósito.
+  - button "Preparar cierre valorizado"
+  - heading "Conciliar moneda de cierre por artículo y depósito" [level=2]
+  - generic: Enlazá INT-AI con el inventario al corte. Conservá cantidades y distribuí cada antigüedad entre artículos y depósitos. La conciliación incorpora la base del CPP posterior sin repetir el asiento del ajuste.
+  - generic: Ajuste anual para conciliar inventario
+  - combobox "Ajuste anual para conciliar inventario":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 11/10/2026 · Ensayo · Conciliado"
+  - button "Preparar conciliación de inventario" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Ajuste Referencia En cierre ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Ajuste"
+        - columnheader "Referencia"
+        - columnheader "En cierre ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CI-00000001 11/10/2026 INT-AI-00000001 Conciliación de inventario QA $ 1.500,00 Administrador Ver conciliación de inventario":
+        - cell "INT-CI-00000001"
+        - cell "11/10/2026"
+        - cell "INT-AI-00000001"
+        - cell "Conciliación de inventario QA"
+        - cell "$ 1.500,00"
+        - cell "Administrador"
+        - cell "Ver conciliación de inventario":
+          - button "Ver conciliación de inventario"
+  - heading "Valor recuperable del inventario" [level=2]
+  - generic: Compará con el valor neto de realización en la moneda del corte. Revisá la forma de venta y el conjunto completo antes de compensar partidas. Las reversiones necesitan nuevas estimaciones y se limitan al costo sin pérdida.
+  - generic: Corte valorizado para comparar
+  - combobox "Corte valorizado para comparar":
+    - option "INT-VC-00000001 · 30/09/2026"
+    - option "INT-VC-00000002 · 11/10/2026"
+    - option "INT-VC-00000003 · 13/10/2026"
+    - option "INT-VC-00000004 · 14/10/2026" [selected]
+  - generic: Referencia de valor recuperable
+  - textbox "Referencia de valor recuperable": Reversión de inventario QA 2026
+  - generic: Alcance de la comparación
+  - combobox "Alcance de la comparación":
+    - option "Inventario completo" [selected]
+    - option "Selección parcial"
+  - generic: Cuenta de desvalorización acumulada
+  - combobox "Cuenta de desvalorización acumulada" [disabled]:
+    - option "1.1.1 · Caja"
+    - option "1.1.2 · Bancos"
+    - option "1.1.3 · Deudores por ventas"
+    - option "1.1.4 · IVA crédito fiscal"
+    - option "1.1.5 · Valores a depositar"
+    - option "1.1.6 · Retenciones sufridas"
+    - option "1.1.7 · Percepciones sufridas"
+    - option "1.1.8 · Cupones de tarjetas a cobrar"
+    - option "1.1.9 · Existencias de mercadería"
+    - option "1.1.10 · Traslados de mercadería a conciliar"
+    - option "1.1.11 · Producción en proceso"
+    - option "1.1.12 · Desvalorización acumulada de inventario" [selected]
+  - generic: Cuenta de pérdida de inventario
+  - combobox "Cuenta de pérdida de inventario":
+    - option "5.1 · Compras y gastos"
+    - option "5.2 · Comisiones de vendedores"
+    - option "5.3 · Cargos de tarjetas"
+    - option "5.4 · Costo de mercadería vendida"
+    - option "5.5 · Diferencias de inventario"
+    - option "5.90 · RECPAM monetario negativo"
+    - option "5.91 · Otros resultados del ajuste y redondeos negativos"
+    - option "5.12 · Pérdidas por desvalorización de inventario" [selected]
+  - generic: Cuenta de reversión de inventario
+  - combobox "Cuenta de reversión de inventario":
+    - option "4.1 · Ventas"
+    - option "4.90 · RECPAM monetario positivo"
+    - option "4.91 · Otros resultados del ajuste y redondeos positivos"
+    - option "4.12 · Reversiones de desvalorización de inventario" [selected]
+  - generic: Fundamento del valor recuperable
+  - textbox "Fundamento del valor recuperable": La nueva cotización recupera el valor de las unidades restantes.
+  - generic: Fundamento del alcance
+  - textbox "Fundamento del alcance": Las nueve unidades restantes del mismo artículo y depósito.
+  - generic: Nuevas estimaciones para revertir pérdidas
+  - textbox "Nuevas estimaciones para revertir pérdidas"
+  - group "Grupo de realización 1":
+    - generic: Grupo de realización 1
+    - generic: Nombre del grupo 1
+    - textbox "Nombre del grupo 1": REM-M-NEG
+    - generic: Forma de realización del grupo 1
+    - combobox "Forma de realización del grupo 1":
+      - option "Partida individual" [selected]
+      - option "Conjunto comercial"
+      - option "Línea relacionada"
+      - option "Producción"
+    - checkbox "REM-M-NEG · Depósito principal · 9 Unidad · Costo $ 1.500,00" [checked]
+    - text: REM-M-NEG · Depósito principal · 9 Unidad · Costo $ 1.500,00
+    - generic: Fundamento de realización del grupo 1
+    - textbox "Fundamento de realización del grupo 1": Venta individual en el comercio local.
+    - generic: Venta estimada total del grupo 1 ARS
+    - spinbutton "Venta estimada total del grupo 1 ARS": "2000"
+    - generic: Costos directos de venta del grupo 1 ARS
+    - spinbutton "Costos directos de venta del grupo 1 ARS": "0"
+    - generic: Fecha de evidencia del grupo 1
+    - textbox "Fecha de evidencia del grupo 1": 2026-10-14
+    - generic: Respaldo de precios y costos del grupo 1
+    - textbox "Respaldo de precios y costos del grupo 1": Nueva cotización sintética de $2000, sin gastos directos adicionales.
+    - button "Quitar grupo 1"
+  - button "Agregar conjunto de realización"
+  - checkbox "Confirmo que costos, precios y gastos están expresados en la misma moneda del corte." [checked]
+  - text: Confirmo que costos, precios y gastos están expresados en la misma moneda del corte.
+  - checkbox "Confirmo el alcance y los miembros completos de cada conjunto de realización." [checked]
+  - text: Confirmo el alcance y los miembros completos de cada conjunto de realización.
+  - button "Descartar comparación"
+  - button "Revisar valor recuperable de inventario" [active]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Pérdida ARS Reversión ARS Neto ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Pérdida ARS"
+        - columnheader "Reversión ARS"
+        - columnheader "Neto ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VI-00000001 13/10/2026 Pérdida de inventario QA 2026 $ 800,00 $ 0,00 $ 1.200,00 Administrador Ver valor recuperable":
+        - cell "INT-VI-00000001"
+        - cell "13/10/2026"
+        - cell "Pérdida de inventario QA 2026"
+        - cell "$ 800,00"
+        - cell "$ 0,00"
+        - cell "$ 1.200,00"
+        - cell "Administrador"
+        - cell "Ver valor recuperable":
+          - button "Ver valor recuperable"
+  - generic: El primer corte incorpora saldos y valores de apertura revisados. Los siguientes calculan las salidas por promedio ponderado y reclasifican compras recibidas desde su cuenta de gasto original. Cada recepción necesita factura vinculada o una estimación total documentada de sus artículos físicos. La estimación reconoce deuda por mercadería sin facturar; la factura posterior la cancela y concilia diferencias de costo. Las notas de compra corrigen el costo desde la recepción o mediante una asignación revisada sobre la apertura, y registran la diferencia en el nuevo corte; no cambian cantidades. Los movimientos de stock hasta el último corte quedan conservados.
+  - generic: Corte de la valuación
+  - strong: 14/10/2026
+  - generic: Valor de existencias al corte
+  - strong: $ 1.500,00
+  - generic: Costo de ventas neto del cierre
+  - strong: $ 300,00
+  - generic: Mercadería sin facturar al corte
+  - strong: $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 4 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Tipo Movimientos Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Tipo"
+        - columnheader "Movimientos"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VC-00000001 30/09/2026 Inventario previo al ajuste Apertura 1 Administrador Ver valuación":
+        - cell "INT-VC-00000001"
+        - cell "30/09/2026"
+        - cell "Inventario previo al ajuste"
+        - cell "Apertura"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000002 11/10/2026 Corte anterior al ajuste de inventario Cierre 0 Administrador Ver valuación":
+        - cell "INT-VC-00000002"
+        - cell "11/10/2026"
+        - cell "Corte anterior al ajuste de inventario"
+        - cell "Cierre"
+        - cell "0"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000003 13/10/2026 CPP conciliado previo al recuperable QA Cierre 2 Administrador Ver valuación":
+        - cell "INT-VC-00000003"
+        - cell "13/10/2026"
+        - cell "CPP conciliado previo al recuperable QA"
+        - cell "Cierre"
+        - cell "2"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000004 14/10/2026 CPP posterior a pérdida QA 2026 Cierre 1 Administrador Ver valuación":
+        - cell "INT-VC-00000004"
+        - cell "14/10/2026"
+        - cell "CPP posterior a pérdida QA 2026"
+        - cell "Cierre"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+  - paragraph:
+    - strong: "Base de moneda de cierre:"
+    - text: INT-CI-00000001, corte 11/10/2026. Revisá que las estimaciones de esta operación estén en la misma base monetaria.
+  - heading "Existencias valorizadas · INT-VC-00000004" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "SKU Artículo Depósito Cantidad Unidad Costo medio ARS / unidad Costo bruto ARS Pérdida acumulada ARS Valor neto ARS":
+        - columnheader "SKU"
+        - columnheader "Artículo"
+        - columnheader "Depósito"
+        - columnheader "Cantidad"
+        - columnheader "Unidad"
+        - columnheader "Costo medio ARS / unidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida acumulada ARS"
+        - columnheader "Valor neto ARS"
+    - rowgroup:
+      - row "REM-M-NEG Remera de algodón · M · Negro Depósito principal 9 Unidad $ 166,67 $ 1.500,00 $ 600,00 $ 900,00":
+        - cell "REM-M-NEG"
+        - cell "Remera de algodón · M · Negro"
+        - cell "Depósito principal"
+        - cell "9"
+        - cell "Unidad"
+        - cell "$ 166,67"
+        - cell "$ 1.500,00"
+        - cell "$ 600,00"
+        - cell "$ 900,00"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha del movimiento SKU Depósito Tratamiento Cantidad Costo bruto ARS Pérdida consumida ARS Pérdida restituida ARS Costo neto ARS Costo acreditado ARS Acreditado menos CPP ARS Referencia histórica":
+        - columnheader "Fecha del movimiento"
+        - columnheader "SKU"
+        - columnheader "Depósito"
+        - columnheader "Tratamiento"
+        - columnheader "Cantidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida consumida ARS"
+        - columnheader "Pérdida restituida ARS"
+        - columnheader "Costo neto ARS"
+        - columnheader "Costo acreditado ARS"
+        - columnheader "Acreditado menos CPP ARS"
+        - columnheader "Referencia histórica"
+    - rowgroup:
+      - row "14/10/2026 REM-M-NEG Depósito principal Venta -3 $ 500,00 $ 200,00 $ 0,00 $ 300,00 — — —":
+        - cell "14/10/2026"
+        - cell "REM-M-NEG"
+        - cell "Depósito principal"
+        - cell "Venta"
+        - cell "-3"
+        - cell "$ 500,00"
+        - cell "$ 200,00"
+        - cell "$ 0,00"
+        - cell "$ 300,00"
+        - cell "—"
+        - cell "—"
+        - cell "—"
+  - generic: Asientos en la fecha de corte, por sucursal. Los traslados conservan costo y la fabricación incorpora el costo valorizado de sus materiales. Las correcciones de precio de compras alcanzan también ventas y materiales ya consumidos. Un costo de ventas neto negativo en un corte revierte costos anteriores. Las devoluciones físicas se vinculan al remito y a su nota. Las de clientes reponen el costo de la entrega original; las de proveedores descargan CPP y muestran la diferencia con el importe acreditado. Esa diferencia se registra en Diferencias de inventario; revisá esta política y el asiento para tu empresa. La conciliación INT-CI incorpora el ajuste anual al CPP posterior. Revisá la moneda de nuevas adquisiciones y costos recuperados; INT-VI compara el valor neto de realización y conserva pérdidas y reversiones. Las salidas posteriores consumen la pérdida proporcional en el CPP; siguen pendientes costos completos de conversión y la continuidad anual de la cuenta regularizadora. El costo medio mostrado se redondea a centavos; las salidas se calculan sobre el valor total conservado.
+
+Reversión recuperada desde el servidor:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Preparación de estados":
+      - /url: /contabilidad/estados
+    - link "Moneda de cierre y RECPAM":
+      - /url: /contabilidad/moneda-cierre
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - VALOR RECUPERABLE DEL INVENTARIO
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 4 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Valuación de inventario y costo de ventas" [level=1]
+  - paragraph: Apertura y cierres revisables con costo promedio ponderado por SKU y depósito.
+  - button "Preparar cierre valorizado"
+  - heading "Conciliar moneda de cierre por artículo y depósito" [level=2]
+  - generic: Enlazá INT-AI con el inventario al corte. Conservá cantidades y distribuí cada antigüedad entre artículos y depósitos. La conciliación incorpora la base del CPP posterior sin repetir el asiento del ajuste.
+  - generic: Ajuste anual para conciliar inventario
+  - combobox "Ajuste anual para conciliar inventario":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 11/10/2026 · Ensayo · Conciliado"
+  - button "Preparar conciliación de inventario" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Ajuste Referencia En cierre ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Ajuste"
+        - columnheader "Referencia"
+        - columnheader "En cierre ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CI-00000001 11/10/2026 INT-AI-00000001 Conciliación de inventario QA $ 1.500,00 Administrador Ver conciliación de inventario":
+        - cell "INT-CI-00000001"
+        - cell "11/10/2026"
+        - cell "INT-AI-00000001"
+        - cell "Conciliación de inventario QA"
+        - cell "$ 1.500,00"
+        - cell "Administrador"
+        - cell "Ver conciliación de inventario":
+          - button "Ver conciliación de inventario"
+  - heading "Valor recuperable del inventario" [level=2]
+  - generic: Compará con el valor neto de realización en la moneda del corte. Revisá la forma de venta y el conjunto completo antes de compensar partidas. Las reversiones necesitan nuevas estimaciones y se limitan al costo sin pérdida.
+  - button "Preparar comparación de inventario"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Pérdida ARS Reversión ARS Neto ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Pérdida ARS"
+        - columnheader "Reversión ARS"
+        - columnheader "Neto ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VI-00000001 13/10/2026 Pérdida de inventario QA 2026 $ 800,00 $ 0,00 $ 1.200,00 Administrador Ver valor recuperable":
+        - cell "INT-VI-00000001"
+        - cell "13/10/2026"
+        - cell "Pérdida de inventario QA 2026"
+        - cell "$ 800,00"
+        - cell "$ 0,00"
+        - cell "$ 1.200,00"
+        - cell "Administrador"
+        - cell "Ver valor recuperable":
+          - button "Ver valor recuperable"
+      - row "INT-VI-00000002 14/10/2026 Reversión de inventario QA 2026 $ 0,00 $ 600,00 $ 1.500,00 Administrador Ver valor recuperable":
+        - cell "INT-VI-00000002"
+        - cell "14/10/2026"
+        - cell "Reversión de inventario QA 2026"
+        - cell "$ 0,00"
+        - cell "$ 600,00"
+        - cell "$ 1.500,00"
+        - cell "Administrador"
+        - cell "Ver valor recuperable":
+          - button "Ver valor recuperable"
+  - dialog "Valor recuperable INT-VI-00000002":
+    - heading "Valor recuperable INT-VI-00000002" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: La nueva cotización recupera el valor de las unidades restantes. · Administrador
+    - paragraph: Reversión de inventario QA 2026 · 14/10/2026 · Inventario completo · Valuación fuente INT-VC-00000004
+    - generic: Pérdida reconocida
+    - strong: $ 0,00
+    - generic: Reversión limitada
+    - strong: $ 600,00
+    - generic: Inventario neto
+    - strong: $ 1.500,00
+    - generic: Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.
+    - generic: La reversión no supera el costo que habría quedado sin desvalorización.
+    - generic: Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.
+    - generic: La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "Grupo Forma de realización Costo sin pérdida ARS Neto anterior ARS VNR ARS Pérdida ARS Reversión ARS Neto posterior ARS":
+          - columnheader "Grupo"
+          - columnheader "Forma de realización"
+          - columnheader "Costo sin pérdida ARS"
+          - columnheader "Neto anterior ARS"
+          - columnheader "VNR ARS"
+          - columnheader "Pérdida ARS"
+          - columnheader "Reversión ARS"
+          - columnheader "Neto posterior ARS"
+      - rowgroup:
+        - row "REM-M-NEG Partida individual $ 1.500,00 $ 900,00 $ 2.000,00 $ 0,00 $ 600,00 $ 1.500,00":
+          - cell "REM-M-NEG"
+          - cell "Partida individual"
+          - cell "$ 1.500,00"
+          - cell "$ 900,00"
+          - cell "$ 2.000,00"
+          - cell "$ 0,00"
+          - cell "$ 600,00"
+          - cell "$ 1.500,00"
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "SKU Depósito Cantidad Costo bruto ARS Pérdida anterior ARS Pérdida acumulada ARS Neto posterior ARS":
+          - columnheader "SKU"
+          - columnheader "Depósito"
+          - columnheader "Cantidad"
+          - columnheader "Costo bruto ARS"
+          - columnheader "Pérdida anterior ARS"
+          - columnheader "Pérdida acumulada ARS"
+          - columnheader "Neto posterior ARS"
+      - rowgroup:
+        - row "REM-M-NEG Depósito principal 9 $ 1.500,00 $ 600,00 $ 0,00 $ 1.500,00":
+          - cell "REM-M-NEG"
+          - cell "Depósito principal"
+          - cell "9"
+          - cell "$ 1.500,00"
+          - cell "$ 600,00"
+          - cell "$ 0,00"
+          - cell "$ 1.500,00"
+    - button "XLSX de valor recuperable de inventario"
+    - button "PDF de valor recuperable de inventario"
+  - generic: El primer corte incorpora saldos y valores de apertura revisados. Los siguientes calculan las salidas por promedio ponderado y reclasifican compras recibidas desde su cuenta de gasto original. Cada recepción necesita factura vinculada o una estimación total documentada de sus artículos físicos. La estimación reconoce deuda por mercadería sin facturar; la factura posterior la cancela y concilia diferencias de costo. Las notas de compra corrigen el costo desde la recepción o mediante una asignación revisada sobre la apertura, y registran la diferencia en el nuevo corte; no cambian cantidades. Los movimientos de stock hasta el último corte quedan conservados.
+  - generic: Corte de la valuación
+  - strong: 14/10/2026
+  - generic: Costo bruto de existencias al corte
+  - strong: $ 1.500,00
+  - generic: Valor neto de existencias al corte
+  - strong: $ 1.500,00
+  - generic: Costo de ventas neto del cierre
+  - strong: $ 300,00
+  - generic: Mercadería sin facturar al corte
+  - strong: $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 4 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Tipo Movimientos Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Tipo"
+        - columnheader "Movimientos"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VC-00000001 30/09/2026 Inventario previo al ajuste Apertura 1 Administrador Ver valuación":
+        - cell "INT-VC-00000001"
+        - cell "30/09/2026"
+        - cell "Inventario previo al ajuste"
+        - cell "Apertura"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000002 11/10/2026 Corte anterior al ajuste de inventario Cierre 0 Administrador Ver valuación":
+        - cell "INT-VC-00000002"
+        - cell "11/10/2026"
+        - cell "Corte anterior al ajuste de inventario"
+        - cell "Cierre"
+        - cell "0"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000003 13/10/2026 CPP conciliado previo al recuperable QA Cierre 2 Administrador Ver valuación":
+        - cell "INT-VC-00000003"
+        - cell "13/10/2026"
+        - cell "CPP conciliado previo al recuperable QA"
+        - cell "Cierre"
+        - cell "2"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000004 14/10/2026 CPP posterior a pérdida QA 2026 Cierre 1 Administrador Ver valuación":
+        - cell "INT-VC-00000004"
+        - cell "14/10/2026"
+        - cell "CPP posterior a pérdida QA 2026"
+        - cell "Cierre"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+  - paragraph:
+    - strong: "Base de moneda de cierre:"
+    - text: INT-CI-00000001, corte 11/10/2026. Revisá que las estimaciones de esta operación estén en la misma base monetaria.
+  - heading "Existencias valorizadas · INT-VC-00000004" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "SKU Artículo Depósito Cantidad Unidad Costo medio ARS / unidad Costo bruto ARS Pérdida acumulada ARS Valor neto ARS":
+        - columnheader "SKU"
+        - columnheader "Artículo"
+        - columnheader "Depósito"
+        - columnheader "Cantidad"
+        - columnheader "Unidad"
+        - columnheader "Costo medio ARS / unidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida acumulada ARS"
+        - columnheader "Valor neto ARS"
+    - rowgroup:
+      - row "REM-M-NEG Remera de algodón · M · Negro Depósito principal 9 Unidad $ 166,67 $ 1.500,00 $ 0,00 $ 1.500,00":
+        - cell "REM-M-NEG"
+        - cell "Remera de algodón · M · Negro"
+        - cell "Depósito principal"
+        - cell "9"
+        - cell "Unidad"
+        - cell "$ 166,67"
+        - cell "$ 1.500,00"
+        - cell "$ 0,00"
+        - cell "$ 1.500,00"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha del movimiento SKU Depósito Tratamiento Cantidad Costo bruto ARS Pérdida consumida ARS Pérdida restituida ARS Costo neto ARS Costo acreditado ARS Acreditado menos costo neto ARS Referencia histórica":
+        - columnheader "Fecha del movimiento"
+        - columnheader "SKU"
+        - columnheader "Depósito"
+        - columnheader "Tratamiento"
+        - columnheader "Cantidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida consumida ARS"
+        - columnheader "Pérdida restituida ARS"
+        - columnheader "Costo neto ARS"
+        - columnheader "Costo acreditado ARS"
+        - columnheader "Acreditado menos costo neto ARS"
+        - columnheader "Referencia histórica"
+    - rowgroup:
+      - row "14/10/2026 REM-M-NEG Depósito principal Venta -3 $ 500,00 $ 200,00 $ 0,00 $ 300,00 — — —":
+        - cell "14/10/2026"
+        - cell "REM-M-NEG"
+        - cell "Depósito principal"
+        - cell "Venta"
+        - cell "-3"
+        - cell "$ 500,00"
+        - cell "$ 200,00"
+        - cell "$ 0,00"
+        - cell "$ 300,00"
+        - cell "—"
+        - cell "—"
+        - cell "—"
+  - generic: Asientos en la fecha de corte, por sucursal. Los traslados conservan costo y la fabricación incorpora el costo valorizado de sus materiales. Las correcciones de precio de compras alcanzan también ventas y materiales ya consumidos. Un costo de ventas neto negativo en un corte revierte costos anteriores. Las devoluciones físicas se vinculan al remito y a su nota. Las de clientes reponen el costo de la entrega original; las de proveedores descargan CPP y muestran la diferencia con el importe acreditado. Esa diferencia se registra en Diferencias de inventario; revisá esta política y el asiento para tu empresa. La conciliación INT-CI incorpora el ajuste anual al CPP posterior. Revisá la moneda de nuevas adquisiciones y costos recuperados; INT-VI compara el valor neto de realización y conserva pérdidas y reversiones. Las salidas posteriores consumen la pérdida proporcional en el CPP; siguen pendientes costos completos de conversión y la continuidad anual de la cuenta regularizadora. El costo medio mostrado se redondea a centavos; las salidas se calculan sobre el valor total conservado.
+
+Recuperación final de versión 5:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Preparación de estados":
+      - /url: /contabilidad/estados
+    - link "Moneda de cierre y RECPAM":
+      - /url: /contabilidad/moneda-cierre
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - VALOR RECUPERABLE DEL INVENTARIO
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 5 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Valuación de inventario y costo de ventas" [level=1]
+  - paragraph: Apertura y cierres revisables con costo promedio ponderado por SKU y depósito.
+  - button "Preparar cierre valorizado"
+  - heading "Conciliar moneda de cierre por artículo y depósito" [level=2]
+  - generic: Enlazá INT-AI con el inventario al corte. Conservá cantidades y distribuí cada antigüedad entre artículos y depósitos. La conciliación incorpora la base del CPP posterior sin repetir el asiento del ajuste.
+  - generic: Ajuste anual para conciliar inventario
+  - combobox "Ajuste anual para conciliar inventario":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 11/10/2026 · Ensayo · Conciliado"
+  - button "Preparar conciliación de inventario" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Ajuste Referencia En cierre ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Ajuste"
+        - columnheader "Referencia"
+        - columnheader "En cierre ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CI-00000001 11/10/2026 INT-AI-00000001 Conciliación de inventario QA $ 1.500,00 Administrador Ver conciliación de inventario":
+        - cell "INT-CI-00000001"
+        - cell "11/10/2026"
+        - cell "INT-AI-00000001"
+        - cell "Conciliación de inventario QA"
+        - cell "$ 1.500,00"
+        - cell "Administrador"
+        - cell "Ver conciliación de inventario":
+          - button "Ver conciliación de inventario"
+  - heading "Valor recuperable del inventario" [level=2]
+  - generic: Compará con el valor neto de realización en la moneda del corte. Revisá la forma de venta y el conjunto completo antes de compensar partidas. Las reversiones necesitan nuevas estimaciones y se limitan al costo sin pérdida.
+  - button "Preparar comparación de inventario"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 3 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Pérdida ARS Reversión ARS Neto ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Pérdida ARS"
+        - columnheader "Reversión ARS"
+        - columnheader "Neto ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VI-00000001 13/10/2026 Pérdida de inventario QA 2026 $ 800,00 $ 0,00 $ 1.200,00 Administrador Ver valor recuperable":
+        - cell "INT-VI-00000001"
+        - cell "13/10/2026"
+        - cell "Pérdida de inventario QA 2026"
+        - cell "$ 800,00"
+        - cell "$ 0,00"
+        - cell "$ 1.200,00"
+        - cell "Administrador"
+        - cell "Ver valor recuperable":
+          - button "Ver valor recuperable"
+      - row "INT-VI-00000002 14/10/2026 Reversión de inventario QA 2026 $ 0,00 $ 600,00 $ 1.500,00 Administrador Ver valor recuperable":
+        - cell "INT-VI-00000002"
+        - cell "14/10/2026"
+        - cell "Reversión de inventario QA 2026"
+        - cell "$ 0,00"
+        - cell "$ 600,00"
+        - cell "$ 1.500,00"
+        - cell "Administrador"
+        - cell "Ver valor recuperable":
+          - button "Ver valor recuperable"
+      - row "INT-VI-00000003 14/10/2026 Revisión completa de inventario QA 2026 $ 0,00 $ 0,00 $ 1.500,00 Administrador Ver valor recuperable":
+        - cell "INT-VI-00000003"
+        - cell "14/10/2026"
+        - cell "Revisión completa de inventario QA 2026"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 1.500,00"
+        - cell "Administrador"
+        - cell "Ver valor recuperable":
+          - button "Ver valor recuperable"
+  - dialog "Valor recuperable INT-VI-00000002":
+    - heading "Valor recuperable INT-VI-00000002" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: La nueva cotización recupera el valor de las unidades restantes. · Administrador
+    - paragraph: Reversión de inventario QA 2026 · 14/10/2026 · Inventario completo · Valuación fuente INT-VC-00000004
+    - generic: Pérdida reconocida
+    - strong: $ 0,00
+    - generic: Reversión limitada
+    - strong: $ 600,00
+    - generic: Inventario neto
+    - strong: $ 1.500,00
+    - generic: Comparación con VNR según la forma de realización; no se compensa una partida con activos ajenos al conjunto revisado.
+    - generic: La reversión no supera el costo que habría quedado sin desvalorización.
+    - generic: Los costos y precios requieren moneda homogénea y respaldo; el catálogo no determina el VNR.
+    - generic: La desvalorización se conserva en una cuenta regularizadora; las salidas posteriores deben consumir la parte correspondiente.
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "Grupo Forma de realización Costo sin pérdida ARS Neto anterior ARS VNR ARS Pérdida ARS Reversión ARS Neto posterior ARS":
+          - columnheader "Grupo"
+          - columnheader "Forma de realización"
+          - columnheader "Costo sin pérdida ARS"
+          - columnheader "Neto anterior ARS"
+          - columnheader "VNR ARS"
+          - columnheader "Pérdida ARS"
+          - columnheader "Reversión ARS"
+          - columnheader "Neto posterior ARS"
+      - rowgroup:
+        - row "REM-M-NEG Partida individual $ 1.500,00 $ 900,00 $ 2.000,00 $ 0,00 $ 600,00 $ 1.500,00":
+          - cell "REM-M-NEG"
+          - cell "Partida individual"
+          - cell "$ 1.500,00"
+          - cell "$ 900,00"
+          - cell "$ 2.000,00"
+          - cell "$ 0,00"
+          - cell "$ 600,00"
+          - cell "$ 1.500,00"
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "SKU Depósito Cantidad Costo bruto ARS Pérdida anterior ARS Pérdida acumulada ARS Neto posterior ARS":
+          - columnheader "SKU"
+          - columnheader "Depósito"
+          - columnheader "Cantidad"
+          - columnheader "Costo bruto ARS"
+          - columnheader "Pérdida anterior ARS"
+          - columnheader "Pérdida acumulada ARS"
+          - columnheader "Neto posterior ARS"
+      - rowgroup:
+        - row "REM-M-NEG Depósito principal 9 $ 1.500,00 $ 600,00 $ 0,00 $ 1.500,00":
+          - cell "REM-M-NEG"
+          - cell "Depósito principal"
+          - cell "9"
+          - cell "$ 1.500,00"
+          - cell "$ 600,00"
+          - cell "$ 0,00"
+          - cell "$ 1.500,00"
+    - button "XLSX de valor recuperable de inventario"
+    - button "PDF de valor recuperable de inventario"
+  - generic: El primer corte incorpora saldos y valores de apertura revisados. Los siguientes calculan las salidas por promedio ponderado y reclasifican compras recibidas desde su cuenta de gasto original. Cada recepción necesita factura vinculada o una estimación total documentada de sus artículos físicos. La estimación reconoce deuda por mercadería sin facturar; la factura posterior la cancela y concilia diferencias de costo. Las notas de compra corrigen el costo desde la recepción o mediante una asignación revisada sobre la apertura, y registran la diferencia en el nuevo corte; no cambian cantidades. Los movimientos de stock hasta el último corte quedan conservados.
+  - generic: Corte de la valuación
+  - strong: 14/10/2026
+  - generic: Costo bruto de existencias al corte
+  - strong: $ 1.500,00
+  - generic: Valor neto de existencias al corte
+  - strong: $ 1.500,00
+  - generic: Costo de ventas neto del cierre
+  - strong: $ 300,00
+  - generic: Mercadería sin facturar al corte
+  - strong: $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 4 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Referencia Tipo Movimientos Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Referencia"
+        - columnheader "Tipo"
+        - columnheader "Movimientos"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-VC-00000001 30/09/2026 Inventario previo al ajuste Apertura 1 Administrador Ver valuación":
+        - cell "INT-VC-00000001"
+        - cell "30/09/2026"
+        - cell "Inventario previo al ajuste"
+        - cell "Apertura"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000002 11/10/2026 Corte anterior al ajuste de inventario Cierre 0 Administrador Ver valuación":
+        - cell "INT-VC-00000002"
+        - cell "11/10/2026"
+        - cell "Corte anterior al ajuste de inventario"
+        - cell "Cierre"
+        - cell "0"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000003 13/10/2026 CPP conciliado previo al recuperable QA Cierre 2 Administrador Ver valuación":
+        - cell "INT-VC-00000003"
+        - cell "13/10/2026"
+        - cell "CPP conciliado previo al recuperable QA"
+        - cell "Cierre"
+        - cell "2"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+      - row "INT-VC-00000004 14/10/2026 CPP posterior a pérdida QA 2026 Cierre 1 Administrador Ver valuación":
+        - cell "INT-VC-00000004"
+        - cell "14/10/2026"
+        - cell "CPP posterior a pérdida QA 2026"
+        - cell "Cierre"
+        - cell "1"
+        - cell "Administrador"
+        - cell "Ver valuación":
+          - button "Ver valuación"
+  - paragraph:
+    - strong: "Base de moneda de cierre:"
+    - text: INT-CI-00000001, corte 11/10/2026. Revisá que las estimaciones de esta operación estén en la misma base monetaria.
+  - heading "Existencias valorizadas · INT-VC-00000004" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "SKU Artículo Depósito Cantidad Unidad Costo medio ARS / unidad Costo bruto ARS Pérdida acumulada ARS Valor neto ARS":
+        - columnheader "SKU"
+        - columnheader "Artículo"
+        - columnheader "Depósito"
+        - columnheader "Cantidad"
+        - columnheader "Unidad"
+        - columnheader "Costo medio ARS / unidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida acumulada ARS"
+        - columnheader "Valor neto ARS"
+    - rowgroup:
+      - row "REM-M-NEG Remera de algodón · M · Negro Depósito principal 9 Unidad $ 166,67 $ 1.500,00 $ 0,00 $ 1.500,00":
+        - cell "REM-M-NEG"
+        - cell "Remera de algodón · M · Negro"
+        - cell "Depósito principal"
+        - cell "9"
+        - cell "Unidad"
+        - cell "$ 166,67"
+        - cell "$ 1.500,00"
+        - cell "$ 0,00"
+        - cell "$ 1.500,00"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha del movimiento SKU Depósito Tratamiento Cantidad Costo bruto ARS Pérdida consumida ARS Pérdida restituida ARS Costo neto ARS Costo acreditado ARS Acreditado menos costo neto ARS Referencia histórica":
+        - columnheader "Fecha del movimiento"
+        - columnheader "SKU"
+        - columnheader "Depósito"
+        - columnheader "Tratamiento"
+        - columnheader "Cantidad"
+        - columnheader "Costo bruto ARS"
+        - columnheader "Pérdida consumida ARS"
+        - columnheader "Pérdida restituida ARS"
+        - columnheader "Costo neto ARS"
+        - columnheader "Costo acreditado ARS"
+        - columnheader "Acreditado menos costo neto ARS"
+        - columnheader "Referencia histórica"
+    - rowgroup:
+      - row "14/10/2026 REM-M-NEG Depósito principal Venta -3 $ 500,00 $ 200,00 $ 0,00 $ 300,00 — — —":
+        - cell "14/10/2026"
+        - cell "REM-M-NEG"
+        - cell "Depósito principal"
+        - cell "Venta"
+        - cell "-3"
+        - cell "$ 500,00"
+        - cell "$ 200,00"
+        - cell "$ 0,00"
+        - cell "$ 300,00"
+        - cell "—"
+        - cell "—"
+        - cell "—"
+  - generic: Asientos en la fecha de corte, por sucursal. Los traslados conservan costo y la fabricación incorpora el costo valorizado de sus materiales. Las correcciones de precio de compras alcanzan también ventas y materiales ya consumidos. Un costo de ventas neto negativo en un corte revierte costos anteriores. Las devoluciones físicas se vinculan al remito y a su nota. Las de clientes reponen el costo de la entrega original; las de proveedores descargan CPP y muestran la diferencia con el importe acreditado. Esa diferencia se registra en Diferencias de inventario; revisá esta política y el asiento para tu empresa. La conciliación INT-CI incorpora el ajuste anual al CPP posterior. Revisá la moneda de nuevas adquisiciones y costos recuperados; INT-VI compara el valor neto de realización y conserva pérdidas y reversiones. Las salidas posteriores consumen la pérdida proporcional en el CPP; siguen pendientes costos completos de conversión y la continuidad anual de la cuenta regularizadora. El costo medio mostrado se redondea a centavos; las salidas se calculan sobre el valor total conservado.

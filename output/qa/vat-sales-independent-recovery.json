@@ -1,0 +1,17 @@
+{
+  "sourceDatabase": "var/qa-vat-sales.sqlite",
+  "sourceRevision": 15,
+  "recoveredRevision": 16,
+  "sourceSha256": "5ca4c05cc103710d1b24c60e4694c3a072d21e58ffc0687c4ef9beedce703e9f",
+  "seal": "Archivo SHA-256 con sello HMAC",
+  "temporaryCopyValidated": true,
+  "temporaryCopyRemovedAfterCheck": true,
+  "statePreserved": true,
+  "credentialsPreserved": true,
+  "fiscalAuthorizationsPreserved": 4,
+  "preparationsPreserved": 2,
+  "filesPreserved": true,
+  "recoveredSessions": 0,
+  "audit": "HMAC validada",
+  "fiscalSources": "Coinciden con las autorizaciones originales"
+}

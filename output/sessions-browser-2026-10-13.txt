@@ -1,0 +1,427 @@
+Revisión con horas de 24 horas:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración" [expanded]:
+      - generic: Administración
+    - link "Usuarios y perfiles":
+      - /url: /administracion/usuarios
+    - link "Sesiones y terminales":
+      - /url: /administracion/sesiones
+    - link "Sucursales y unidades":
+      - /url: /administracion/sucursales
+    - link "Listas de precios":
+      - /url: /administracion/listas-precios
+    - link "Precios por artículo":
+      - /url: /administracion/precios
+    - link "Parámetros":
+      - /url: /administracion/parametros
+    - link "Auditoría":
+      - /url: /administracion/auditoria
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Sesiones de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 1 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Sesiones y terminales" [level=1]
+  - paragraph: Consultá los accesos vigentes y cerrá sesiones de otros equipos con un motivo registrado.
+  - button "Actualizar sesiones"
+  - generic: Sesiones vigentes
+  - strong: "2"
+  - generic: Usuarios con sesiones
+  - strong: "1"
+  - generic: El nombre de terminal es el indicado al ingresar. Varias sesiones pueden pertenecer al mismo equipo; esta lista no acredita cantidad de máquinas ni activación de licencias. Las sesiones duran ocho horas, o treinta días si se eligió mantener sesión, y no renuevan su vencimiento al consultar datos.
+  - heading "Accesos activos" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - table:
+    - rowgroup:
+      - row "Terminal Nombre Usuario Perfil Inicio Última consulta Vencimiento Estado Acción":
+        - columnheader "Terminal"
+        - columnheader "Nombre"
+        - columnheader "Usuario"
+        - columnheader "Perfil"
+        - columnheader "Inicio"
+        - columnheader "Última consulta"
+        - columnheader "Vencimiento"
+        - columnheader "Estado"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "Administración de ensayo Administrador admin Administrador General 13/10/2026, 16:47:08 13/10/2026, 16:49:23 14/10/2026, 00:47:08 Sesión actual Cerrar sesión de Administración de ensayo · admin":
+        - cell "Administración de ensayo"
+        - cell "Administrador"
+        - cell "admin"
+        - cell "Administrador General"
+        - cell "13/10/2026, 16:47:08"
+        - cell "13/10/2026, 16:49:23"
+        - cell "14/10/2026, 00:47:08"
+        - cell "Sesión actual"
+        - cell "Cerrar sesión de Administración de ensayo · admin":
+          - button "Cerrar sesión de Administración de ensayo · admin" [disabled]: Sesión actual
+      - row "Caja de ensayo Administrador admin Administrador General 13/10/2026, 16:45:50 13/10/2026, 16:45:50 14/10/2026, 00:45:50 Otra sesión Cerrar sesión de Caja de ensayo · admin":
+        - cell "Caja de ensayo"
+        - cell "Administrador"
+        - cell "admin"
+        - cell "Administrador General"
+        - cell "13/10/2026, 16:45:50"
+        - cell "13/10/2026, 16:45:50"
+        - cell "14/10/2026, 00:45:50"
+        - cell "Otra sesión"
+        - cell "Cerrar sesión de Caja de ensayo · admin":
+          - button "Cerrar sesión de Caja de ensayo · admin": Cerrar sesión
+  - dialog "Cerrar sesión de otra terminal":
+    - heading "Cerrar sesión de otra terminal" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: Caja de ensayo · Administrador (admin)
+    - paragraph: La próxima consulta u operación de esa sesión requerirá ingresar nuevamente. Su usuario conservará el acceso y los comprobantes registrados.
+    - generic: Motivo *
+    - textbox "Motivo *"
+    - button "Cancelar"
+    - button "Cerrar esta sesión" [disabled]
+
+Después del cierre administrado:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración" [expanded]:
+      - generic: Administración
+    - link "Usuarios y perfiles":
+      - /url: /administracion/usuarios
+    - link "Sesiones y terminales":
+      - /url: /administracion/sesiones
+    - link "Sucursales y unidades":
+      - /url: /administracion/sucursales
+    - link "Listas de precios":
+      - /url: /administracion/listas-precios
+    - link "Precios por artículo":
+      - /url: /administracion/precios
+    - link "Parámetros":
+      - /url: /administracion/parametros
+    - link "Auditoría":
+      - /url: /administracion/auditoria
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Sesiones de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Sesiones y terminales" [level=1]
+  - paragraph: Consultá los accesos vigentes y cerrá sesiones de otros equipos con un motivo registrado.
+  - button "Actualizar sesiones"
+  - generic: Sesiones vigentes
+  - strong: "1"
+  - generic: Usuarios con sesiones
+  - strong: "1"
+  - generic: El nombre de terminal es el indicado al ingresar. Varias sesiones pueden pertenecer al mismo equipo; esta lista no acredita cantidad de máquinas ni activación de licencias. Las sesiones duran ocho horas, o treinta días si se eligió mantener sesión, y no renuevan su vencimiento al consultar datos.
+  - heading "Accesos activos" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - table:
+    - rowgroup:
+      - row "Terminal Nombre Usuario Perfil Inicio Última consulta Vencimiento Estado Acción":
+        - columnheader "Terminal"
+        - columnheader "Nombre"
+        - columnheader "Usuario"
+        - columnheader "Perfil"
+        - columnheader "Inicio"
+        - columnheader "Última consulta"
+        - columnheader "Vencimiento"
+        - columnheader "Estado"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "Administración de ensayo Administrador admin Administrador General 13/10/2026, 16:47:08 13/10/2026, 16:50:31 14/10/2026, 00:47:08 Sesión actual Cerrar sesión de Administración de ensayo · admin":
+        - cell "Administración de ensayo"
+        - cell "Administrador"
+        - cell "admin"
+        - cell "Administrador General"
+        - cell "13/10/2026, 16:47:08"
+        - cell "13/10/2026, 16:50:31"
+        - cell "14/10/2026, 00:47:08"
+        - cell "Sesión actual"
+        - cell "Cerrar sesión de Administración de ensayo · admin":
+          - button "Cerrar sesión de Administración de ensayo · admin" [disabled]: Sesión actual
+
+Constancia en auditoría:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración" [expanded]:
+      - generic: Administración
+    - link "Usuarios y perfiles":
+      - /url: /administracion/usuarios
+    - link "Sesiones y terminales":
+      - /url: /administracion/sesiones
+    - link "Sucursales y unidades":
+      - /url: /administracion/sucursales
+    - link "Listas de precios":
+      - /url: /administracion/listas-precios
+    - link "Precios por artículo":
+      - /url: /administracion/precios
+    - link "Parámetros":
+      - /url: /administracion/parametros
+    - link "Auditoría":
+      - /url: /administracion/auditoria
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Sesiones de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Auditoría" [level=1]
+  - paragraph: Acciones registradas con responsable, fecha y referencia. Los comprobantes guardados conservan sus datos originales.
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha y hora Usuario Acción Detalle":
+        - columnheader "Fecha y hora"
+        - columnheader "Usuario"
+        - columnheader "Acción"
+        - columnheader "Detalle"
+    - rowgroup:
+      - 'row "13/10/2026, 16:50:42 Administrador Cerrar sesión de otra terminal Administrador · Caja de ensayo: La caja de ensayo dejó de utilizarse. Cierre administrado de una sesión sintética."':
+        - cell "13/10/2026, 16:50:42"
+        - cell "Administrador"
+        - cell "Cerrar sesión de otra terminal"
+        - 'cell "Administrador · Caja de ensayo: La caja de ensayo dejó de utilizarse. Cierre administrado de una sesión sintética."'
+      - row "13/10/2026, 16:45:49 Administrador Restaurar copia de seguridad Se preservaron los usuarios del servidor y una copia de recuperación.":
+        - cell "13/10/2026, 16:45:49"
+        - cell "Administrador"
+        - cell "Restaurar copia de seguridad"
+        - cell "Se preservaron los usuarios del servidor y una copia de recuperación."
+  - generic: El registro del servidor agrega eventos en cada transacción y verifica una cadena HMAC al iniciar. La protección de la base y de su clave requiere permisos del sistema y respaldos independientes.
+
+Compilación final recuperada:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración" [expanded]:
+      - generic: Administración
+    - link "Usuarios y perfiles":
+      - /url: /administracion/usuarios
+    - link "Sesiones y terminales":
+      - /url: /administracion/sesiones
+    - link "Sucursales y unidades":
+      - /url: /administracion/sucursales
+    - link "Listas de precios":
+      - /url: /administracion/listas-precios
+    - link "Precios por artículo":
+      - /url: /administracion/precios
+    - link "Parámetros":
+      - /url: /administracion/parametros
+    - link "Auditoría":
+      - /url: /administracion/auditoria
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Sesiones de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Sesiones y terminales" [level=1]
+  - paragraph: Consultá los accesos vigentes y cerrá sesiones de otros equipos con un motivo registrado.
+  - button "Actualizar sesiones"
+  - generic: Sesiones vigentes
+  - strong: "1"
+  - generic: Usuarios con sesiones
+  - strong: "1"
+  - generic: El nombre de terminal es el indicado al ingresar. Varias sesiones pueden pertenecer al mismo equipo; esta lista no acredita cantidad de máquinas ni activación de licencias. Las sesiones duran ocho horas, o treinta días si se eligió mantener sesión, y no renuevan su vencimiento al consultar datos.
+  - heading "Accesos activos" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - table:
+    - rowgroup:
+      - row "Terminal Nombre Usuario Perfil Inicio Última consulta Vencimiento Estado Acción":
+        - columnheader "Terminal"
+        - columnheader "Nombre"
+        - columnheader "Usuario"
+        - columnheader "Perfil"
+        - columnheader "Inicio"
+        - columnheader "Última consulta"
+        - columnheader "Vencimiento"
+        - columnheader "Estado"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "Administración de ensayo Administrador admin Administrador General 13/10/2026, 16:47:08 13/10/2026, 16:57:19 14/10/2026, 00:47:08 Sesión actual Cerrar sesión de Administración de ensayo · admin":
+        - cell "Administración de ensayo"
+        - cell "Administrador"
+        - cell "admin"
+        - cell "Administrador General"
+        - cell "13/10/2026, 16:47:08"
+        - cell "13/10/2026, 16:57:19"
+        - cell "14/10/2026, 00:47:08"
+        - cell "Sesión actual"
+        - cell "Cerrar sesión de Administración de ensayo · admin":
+          - button "Cerrar sesión de Administración de ensayo · admin" [disabled]: Sesión actual

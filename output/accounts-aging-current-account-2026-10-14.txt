@@ -1,0 +1,191 @@
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes" [expanded]:
+      - generic: Clientes
+    - link "Directorio":
+      - /url: /clientes
+    - link "Alta de clientes":
+      - /url: /clientes/alta
+    - link "Ventas y facturas":
+      - /url: /clientes/ventas
+    - link "Cobros":
+      - /url: /clientes/cobros
+    - link "Notas de crédito / débito":
+      - /url: /clientes/notas
+    - link "Pedidos de venta":
+      - /url: /clientes/pedidos
+    - link "Remitos de venta":
+      - /url: /clientes/remitos
+    - link "Cuenta corriente":
+      - /url: /clientes/cuenta-corriente
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Vencimientos de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 1 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Cuenta corriente de clientes" [level=1]
+  - paragraph: Cargos, cancelaciones parciales, anticipos y saldos. Los filtros de fecha conservan el saldo acumulado anterior.
+  - generic: Contraparte
+  - combobox "Contraparte":
+    - option "Todas"
+    - option "Cliente mayorista de prueba" [selected]
+  - generic: Desde
+  - textbox "Desde"
+  - generic: Hasta
+  - textbox "Hasta": 2026-10-14
+  - generic: Saldo total de la selección
+  - strong: $ 2.650,00
+  - generic: "Positivo: pendiente. Negativo: anticipo o saldo a favor."
+  - generic: Movimientos en el período
+  - strong: "8"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 8 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha Comprobante Contraparte Neto IVA Cargo Cancelación Saldo acumulado Aplicación Observaciones":
+        - columnheader "Fecha"
+        - columnheader "Comprobante"
+        - columnheader "Contraparte"
+        - columnheader "Neto"
+        - columnheader "IVA"
+        - columnheader "Cargo"
+        - columnheader "Cancelación"
+        - columnheader "Saldo acumulado"
+        - columnheader "Aplicación"
+        - columnheader "Observaciones"
+    - rowgroup:
+      - row "01/01/2026 INT-SI-X-00001-00000001 Cliente mayorista de prueba $ 100,00 $ 0,00 $ 100,00 — $ 100,00 Saldo sintético para probar vencimientos":
+        - cell "01/01/2026"
+        - cell "INT-SI-X-00001-00000001"
+        - cell "Cliente mayorista de prueba"
+        - cell "$ 100,00"
+        - cell "$ 0,00"
+        - cell "$ 100,00"
+        - cell "—"
+        - cell "$ 100,00"
+        - cell
+        - cell "Saldo sintético para probar vencimientos"
+      - row "01/01/2026 INT-SI-X-00001-00000002 Cliente mayorista de prueba $ 200,00 $ 0,00 $ 200,00 — $ 300,00 Saldo sintético para probar vencimientos":
+        - cell "01/01/2026"
+        - cell "INT-SI-X-00001-00000002"
+        - cell "Cliente mayorista de prueba"
+        - cell "$ 200,00"
+        - cell "$ 0,00"
+        - cell "$ 200,00"
+        - cell "—"
+        - cell "$ 300,00"
+        - cell
+        - cell "Saldo sintético para probar vencimientos"
+      - row "01/01/2026 INT-SI-X-00001-00000003 Cliente mayorista de prueba $ 300,00 $ 0,00 $ 300,00 — $ 600,00 Saldo sintético para probar vencimientos":
+        - cell "01/01/2026"
+        - cell "INT-SI-X-00001-00000003"
+        - cell "Cliente mayorista de prueba"
+        - cell "$ 300,00"
+        - cell "$ 0,00"
+        - cell "$ 300,00"
+        - cell "—"
+        - cell "$ 600,00"
+        - cell
+        - cell "Saldo sintético para probar vencimientos"
+      - row "01/01/2026 INT-SI-X-00001-00000004 Cliente mayorista de prueba $ 400,00 $ 0,00 $ 400,00 — $ 1.000,00 Saldo sintético para probar vencimientos":
+        - cell "01/01/2026"
+        - cell "INT-SI-X-00001-00000004"
+        - cell "Cliente mayorista de prueba"
+        - cell "$ 400,00"
+        - cell "$ 0,00"
+        - cell "$ 400,00"
+        - cell "—"
+        - cell "$ 1.000,00"
+        - cell
+        - cell "Saldo sintético para probar vencimientos"
+      - row "01/01/2026 INT-SI-X-00001-00000005 Cliente mayorista de prueba $ 500,00 $ 0,00 $ 500,00 — $ 1.500,00 Saldo sintético para probar vencimientos":
+        - cell "01/01/2026"
+        - cell "INT-SI-X-00001-00000005"
+        - cell "Cliente mayorista de prueba"
+        - cell "$ 500,00"
+        - cell "$ 0,00"
+        - cell "$ 500,00"
+        - cell "—"
+        - cell "$ 1.500,00"
+        - cell
+        - cell "Saldo sintético para probar vencimientos"
+      - row "01/01/2026 INT-SI-X-00001-00000006 Cliente mayorista de prueba $ 600,00 $ 0,00 $ 600,00 — $ 2.100,00 Saldo sintético para probar vencimientos":
+        - cell "01/01/2026"
+        - cell "INT-SI-X-00001-00000006"
+        - cell "Cliente mayorista de prueba"
+        - cell "$ 600,00"
+        - cell "$ 0,00"
+        - cell "$ 600,00"
+        - cell "—"
+        - cell "$ 2.100,00"
+        - cell
+        - cell "Saldo sintético para probar vencimientos"
+      - row "01/01/2026 INT-SI-X-00001-00000007 Cliente mayorista de prueba $ 700,00 $ 0,00 $ 700,00 — $ 2.800,00 Saldo sintético para probar vencimientos":
+        - cell "01/01/2026"
+        - cell "INT-SI-X-00001-00000007"
+        - cell "Cliente mayorista de prueba"
+        - cell "$ 700,00"
+        - cell "$ 0,00"
+        - cell "$ 700,00"
+        - cell "—"
+        - cell "$ 2.800,00"
+        - cell
+        - cell "Saldo sintético para probar vencimientos"
+      - 'row "01/10/2026 INT-RC-X-00001-00000001 Cliente mayorista de prueba $ 150,00 $ 0,00 — $ 150,00 $ 2.650,00 INT-SI-X-00001-00000003: $ 100,00 Saldo sintético para probar vencimientos"':
+        - cell "01/10/2026"
+        - cell "INT-RC-X-00001-00000001"
+        - cell "Cliente mayorista de prueba"
+        - cell "$ 150,00"
+        - cell "$ 0,00"
+        - cell "—"
+        - cell "$ 150,00"
+        - cell "$ 2.650,00"
+        - 'cell "INT-SI-X-00001-00000003: $ 100,00"'
+        - cell "Saldo sintético para probar vencimientos"

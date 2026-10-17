@@ -1,0 +1,207 @@
+- complementary:
+  - link "SICA Contabilidad y administración":
+    - /url: /
+    - heading "SICA" [level=1]
+    - generic: Contabilidad y administración
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - BIENES DE USO
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 3 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Bienes de uso y depreciaciones" [level=1]
+  - paragraph: Costo documentado, puesta en marcha y cargos revisados con historial.
+  - button "Preparar cuentas"
+  - button "Capitalizar compra" [disabled]
+  - button "Preparar depreciación"
+  - text: Registrá el artículo como
+  - link "Bien de uso":
+    - /url: /productos/articulos
+  - text: y su
+  - link "factura de compra":
+    - /url: /proveedores/compras
+  - text: . Revisá recepción, destino a uso propio, beneficios esperados y costo antes de capitalizarlo. La reclasificación conserva el IVA y la deuda original. Un remito de bienes de uso conserva su recepción y no suma mercadería al stock de reventa.
+  - generic: Fecha de consulta
+  - textbox "Fecha de consulta": 2026-10-10
+  - generic: Costo nominal registrado
+  - strong: $ 1.000,00
+  - generic: Depreciación contabilizada
+  - strong: $ 300,00
+  - generic: Cargo pendiente al corte
+  - strong: $ 0,00
+  - heading "Registro de bienes de uso" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Identificación Clase Costo ARS Depreciación registrada ARS Cargo pendiente ARS Valor neto registrado ARS Estado Detalle":
+        - columnheader "Constancia"
+        - columnheader "Identificación"
+        - columnheader "Clase"
+        - columnheader "Costo ARS"
+        - columnheader "Depreciación registrada ARS"
+        - columnheader "Cargo pendiente ARS"
+        - columnheader "Valor neto registrado ARS"
+        - columnheader "Estado"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-BU-00000001 Equipo textil QA Maquinarias $ 1.000,00 $ 300,00 $ 0,00 $ 700,00 En uso Ver alta":
+        - cell "INT-BU-00000001"
+        - cell "Equipo textil QA"
+        - cell "Maquinarias"
+        - cell "$ 1.000,00"
+        - cell "$ 300,00"
+        - cell "$ 0,00"
+        - cell "$ 700,00"
+        - cell "En uso"
+        - cell "Ver alta":
+          - button "Ver alta"
+  - heading "Depreciaciones conservadas" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte global Referencia Cargo global ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte global"
+        - columnheader "Referencia"
+        - columnheader "Cargo global ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-DP-00000001 10/10/2026 Depreciación sintética QA 2026 $ 300,00 Administrador Ver depreciación":
+        - cell "INT-DP-00000001"
+        - cell "10/10/2026"
+        - cell "Depreciación sintética QA 2026"
+        - cell "$ 300,00"
+        - cell "Administrador"
+        - cell "Ver depreciación":
+          - button "Ver depreciación"
+  - heading "Puestas en marcha conservadas" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - generic: El modelo inicial usa costo nominal y depreciación lineal diaria, con vida útil y residual fundamentados; no presume tasas fiscales. Los cortes incluyen todas las sucursales y contabilizan sólo el cargo nuevo. Las notas, bajas, cambios de estimaciones, deterioro, revaluación, costos de fabricación e inflación requieren ampliar sus circuitos antes de emitir estados contables.
+  - dialog "Constancia INT-DP-00000001":
+    - heading "Constancia INT-DP-00000001" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: 10/10/2026 · Depreciación sintética QA 2026 · Administrador
+    - paragraph: "Corte al 10 de octubre: diez días de uso de una vida útil sintética de treinta; costo 1000 ARS, residual 100 ARS. Modelo lineal diario para ensayo, sin tasa fiscal presumida."
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "Bien Identificación Depreciación anterior ARS Acumulada al corte ARS Cargo nuevo ARS Neto al corte ARS":
+          - columnheader "Bien"
+          - columnheader "Identificación"
+          - columnheader "Depreciación anterior ARS"
+          - columnheader "Acumulada al corte ARS"
+          - columnheader "Cargo nuevo ARS"
+          - columnheader "Neto al corte ARS"
+      - rowgroup:
+        - row "INT-BU-00000001 Equipo textil QA $ 0,00 $ 300,00 $ 300,00 $ 700,00":
+          - cell "INT-BU-00000001"
+          - cell "Equipo textil QA"
+          - cell "$ 0,00"
+          - cell "$ 300,00"
+          - cell "$ 300,00"
+          - cell "$ 700,00"
+    - generic: 2 registros
+    - table:
+      - rowgroup:
+        - row "Sucursal Cuenta Debe ARS Haber ARS":
+          - columnheader "Sucursal"
+          - columnheader "Cuenta"
+          - columnheader "Debe ARS"
+          - columnheader "Haber ARS"
+      - rowgroup:
+        - row "Casa Central Depreciación de bienes de uso $ 300,00 $ 0,00":
+          - cell "Casa Central"
+          - cell "Depreciación de bienes de uso"
+          - cell "$ 300,00"
+          - cell "$ 0,00"
+        - row "Casa Central Depreciación acumulada de bienes de uso $ 0,00 $ 300,00":
+          - cell "Casa Central"
+          - cell "Depreciación acumulada de bienes de uso"
+          - cell "$ 0,00"
+          - cell "$ 300,00"

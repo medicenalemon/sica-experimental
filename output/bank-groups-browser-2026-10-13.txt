@@ -1,0 +1,639 @@
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas" [expanded]:
+      - generic: Finanzas
+    - link "Cajas y movimientos":
+      - /url: /finanzas/cajas
+    - link "Cajas y cuentas bancarias":
+      - /url: /finanzas/cuentas-tesoreria
+    - link "Bancos y conciliación":
+      - /url: /finanzas/bancos
+    - link "Extractos bancarios":
+      - /url: /finanzas/bancos/extractos
+    - link "Cartera de cheques":
+      - /url: /finanzas/cheques
+    - link "IVA ventas y compras":
+      - /url: /finanzas/impuestos
+    - link "Cuentas por cobrar / pagar":
+      - /url: /finanzas/cuentas
+    - link "Tarjetas de crédito":
+      - /url: /finanzas/tarjetas
+    - link "Liquidaciones de tarjetas":
+      - /url: /finanzas/liquidaciones-tarjetas
+    - link "Retenciones y percepciones":
+      - /url: /finanzas/retenciones
+    - link "Formas de pago y cobro":
+      - /url: /finanzas/formas-pago
+    - link "Entidades bancarias":
+      - /url: /finanzas/entidades
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Conciliación agrupada de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 3 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Extractos y conciliación bancaria" [level=1]
+  - paragraph: Revisá saldos, vinculá movimientos y conservá la evidencia de cada conciliación.
+  - link "Movimientos bancarios":
+    - /url: /finanzas/bancos
+  - button "Cargar extracto"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Referencia Cuenta Período Saldo inicial Saldo final Filas vinculadas Estado Acción":
+        - columnheader "Referencia"
+        - columnheader "Cuenta"
+        - columnheader "Período"
+        - columnheader "Saldo inicial"
+        - columnheader "Saldo final"
+        - columnheader "Filas vinculadas"
+        - columnheader "Estado"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "Dos acreditaciones de un anticipo Banco de prueba 13/10/2026 — 13/10/2026 $ 0,00 $ 5.900,00 2/3 Activo Revisar":
+        - cell "Dos acreditaciones de un anticipo"
+        - cell "Banco de prueba"
+        - cell "13/10/2026 — 13/10/2026"
+        - cell "$ 0,00"
+        - cell "$ 5.900,00"
+        - cell "2/3"
+        - cell "Activo"
+        - cell "Revisar":
+          - button "Revisar"
+  - heading "Dos acreditaciones de un anticipo · Banco de prueba" [level=2]
+  - button "Cerrar revisión"
+  - paragraph: 13/10/2026 — 13/10/2026 · Cargado por Administrador · Activo
+  - generic: Saldo final del extracto
+  - strong: $ 5.900,00
+  - generic: Saldo SICA al fin del período
+  - strong: $ 6.000,00
+  - generic: Diferencia sin ajustar
+  - strong: "-$ 100,00"
+  - button "Vincular filas seleccionadas" [disabled]
+  - generic: 0 filas · $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 3 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Agrupar Fecha bancaria Referencia Descripción Importe Movimientos SICA Filas del grupo Responsable del último vínculo Acción":
+        - columnheader "Agrupar"
+        - columnheader "Fecha bancaria"
+        - columnheader "Referencia"
+        - columnheader "Descripción"
+        - columnheader "Importe"
+        - columnheader "Movimientos SICA"
+        - columnheader "Filas del grupo"
+        - columnheader "Responsable del último vínculo"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "13/10/2026 ACRED-1 Primera acreditación del anticipo $ 2.000,00 INT-RC-X-00001-00000001 ACRED-1, ACRED-2 Administrador Desvincular fila ACRED-1":
+        - cell
+        - cell "13/10/2026"
+        - cell "ACRED-1"
+        - cell "Primera acreditación del anticipo"
+        - cell "$ 2.000,00"
+        - cell "INT-RC-X-00001-00000001"
+        - cell "ACRED-1, ACRED-2"
+        - cell "Administrador"
+        - cell "Desvincular fila ACRED-1":
+          - button "Desvincular fila ACRED-1": Desvincular
+      - row "13/10/2026 ACRED-2 Segunda acreditación del anticipo $ 4.000,00 INT-RC-X-00001-00000001 ACRED-1, ACRED-2 Administrador Desvincular fila ACRED-2":
+        - cell
+        - cell "13/10/2026"
+        - cell "ACRED-2"
+        - cell "Segunda acreditación del anticipo"
+        - cell "$ 4.000,00"
+        - cell "INT-RC-X-00001-00000001"
+        - cell "ACRED-1, ACRED-2"
+        - cell "Administrador"
+        - cell "Desvincular fila ACRED-2":
+          - button "Desvincular fila ACRED-2": Desvincular
+      - row "Seleccionar fila CARGO-1 13/10/2026 CARGO-1 Cargo bancario pendiente de registrar -$ 100,00 Pendiente — — Vincular fila CARGO-1":
+        - cell "Seleccionar fila CARGO-1":
+          - checkbox "Seleccionar fila CARGO-1"
+        - cell "13/10/2026"
+        - cell "CARGO-1"
+        - cell "Cargo bancario pendiente de registrar"
+        - cell "-$ 100,00"
+        - cell "Pendiente"
+        - cell "—"
+        - cell "—"
+        - cell "Vincular fila CARGO-1":
+          - button "Vincular fila CARGO-1": Vincular
+  - generic: Neto pendiente en extracto
+  - strong: "-$ 100,00"
+  - generic: Neto pendiente en SICA hasta el cierre
+  - strong: $ 0,00
+  - generic: Diferencia por explicar
+  - strong: $ 0,00
+  - generic: Extracto − pendientes del extracto + pendientes SICA − saldo SICA
+  - generic: Los netos pueden ser cero aunque existan filas pendientes. Revisá cada movimiento y los saldos de apertura. Un vínculo requiere la misma cuenta, signo e importe exacto. Cargar o vincular el extracto no crea cobros, pagos, gastos ni asientos.
+  - button "Anular extracto sin vínculos" [disabled]
+  - heading "Historial de revisión" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha Acción Referencia Movimientos Responsable Motivo":
+        - columnheader "Fecha"
+        - columnheader "Acción"
+        - columnheader "Referencia"
+        - columnheader "Movimientos"
+        - columnheader "Responsable"
+        - columnheader "Motivo"
+    - rowgroup:
+      - row "13/10/2026, 04:26:04 Vincular ACRED-1, ACRED-2 1 Administrador El anticipo de $6.000 se acreditó en dos partes; ambas referencias bancarias fueron revisadas.":
+        - cell "13/10/2026, 04:26:04"
+        - cell "Vincular"
+        - cell "ACRED-1, ACRED-2"
+        - cell "1"
+        - cell "Administrador"
+        - cell "El anticipo de $6.000 se acreditó en dos partes; ambas referencias bancarias fueron revisadas."
+  - generic: "El formato XLSX usa Fecha (AAAA-MM-DD), Referencia única de operación, Descripcion e Importe ARS con signo: positivo ingreso, negativo egreso. Adaptá el archivo exportado por tu banco a esas columnas. No hay conexión automática con bancos ni conversión de moneda."
+  - dialog "Desvincular fila bancaria":
+    - heading "Desvincular fila bancaria" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: ACRED-2 · 13/10/2026 · Segunda acreditación del anticipo · $ 4.000,00
+    - generic: "Se deshará el grupo completo: ACRED-1, ACRED-2. Todos sus movimientos volverán a pendientes."
+    - generic: Motivo *
+    - textbox "Motivo *"
+    - button "Confirmar desvinculación"
+
+Recuperación después de recargar:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas" [expanded]:
+      - generic: Finanzas
+    - link "Cajas y movimientos":
+      - /url: /finanzas/cajas
+    - link "Cajas y cuentas bancarias":
+      - /url: /finanzas/cuentas-tesoreria
+    - link "Bancos y conciliación":
+      - /url: /finanzas/bancos
+    - link "Extractos bancarios":
+      - /url: /finanzas/bancos/extractos
+    - link "Cartera de cheques":
+      - /url: /finanzas/cheques
+    - link "IVA ventas y compras":
+      - /url: /finanzas/impuestos
+    - link "Cuentas por cobrar / pagar":
+      - /url: /finanzas/cuentas
+    - link "Tarjetas de crédito":
+      - /url: /finanzas/tarjetas
+    - link "Liquidaciones de tarjetas":
+      - /url: /finanzas/liquidaciones-tarjetas
+    - link "Retenciones y percepciones":
+      - /url: /finanzas/retenciones
+    - link "Formas de pago y cobro":
+      - /url: /finanzas/formas-pago
+    - link "Entidades bancarias":
+      - /url: /finanzas/entidades
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Conciliación agrupada de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 3 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Extractos y conciliación bancaria" [level=1]
+  - paragraph: Revisá saldos, vinculá movimientos y conservá la evidencia de cada conciliación.
+  - link "Movimientos bancarios":
+    - /url: /finanzas/bancos
+  - button "Cargar extracto"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Referencia Cuenta Período Saldo inicial Saldo final Filas vinculadas Estado Acción":
+        - columnheader "Referencia"
+        - columnheader "Cuenta"
+        - columnheader "Período"
+        - columnheader "Saldo inicial"
+        - columnheader "Saldo final"
+        - columnheader "Filas vinculadas"
+        - columnheader "Estado"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "Dos acreditaciones de un anticipo Banco de prueba 13/10/2026 — 13/10/2026 $ 0,00 $ 5.900,00 2/3 Activo Revisar":
+        - cell "Dos acreditaciones de un anticipo"
+        - cell "Banco de prueba"
+        - cell "13/10/2026 — 13/10/2026"
+        - cell "$ 0,00"
+        - cell "$ 5.900,00"
+        - cell "2/3"
+        - cell "Activo"
+        - cell "Revisar":
+          - button "Revisar" [active]
+  - heading "Dos acreditaciones de un anticipo · Banco de prueba" [level=2]
+  - button "Cerrar revisión"
+  - paragraph: 13/10/2026 — 13/10/2026 · Cargado por Administrador · Activo
+  - generic: Saldo final del extracto
+  - strong: $ 5.900,00
+  - generic: Saldo SICA al fin del período
+  - strong: $ 6.000,00
+  - generic: Diferencia sin ajustar
+  - strong: "-$ 100,00"
+  - button "Vincular filas seleccionadas" [disabled]
+  - generic: 0 filas · $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 3 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Agrupar Fecha bancaria Referencia Descripción Importe Movimientos SICA Filas del grupo Responsable del último vínculo Acción":
+        - columnheader "Agrupar"
+        - columnheader "Fecha bancaria"
+        - columnheader "Referencia"
+        - columnheader "Descripción"
+        - columnheader "Importe"
+        - columnheader "Movimientos SICA"
+        - columnheader "Filas del grupo"
+        - columnheader "Responsable del último vínculo"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "13/10/2026 ACRED-1 Primera acreditación del anticipo $ 2.000,00 INT-RC-X-00001-00000001 ACRED-1, ACRED-2 Administrador Desvincular fila ACRED-1":
+        - cell
+        - cell "13/10/2026"
+        - cell "ACRED-1"
+        - cell "Primera acreditación del anticipo"
+        - cell "$ 2.000,00"
+        - cell "INT-RC-X-00001-00000001"
+        - cell "ACRED-1, ACRED-2"
+        - cell "Administrador"
+        - cell "Desvincular fila ACRED-1":
+          - button "Desvincular fila ACRED-1": Desvincular
+      - row "13/10/2026 ACRED-2 Segunda acreditación del anticipo $ 4.000,00 INT-RC-X-00001-00000001 ACRED-1, ACRED-2 Administrador Desvincular fila ACRED-2":
+        - cell
+        - cell "13/10/2026"
+        - cell "ACRED-2"
+        - cell "Segunda acreditación del anticipo"
+        - cell "$ 4.000,00"
+        - cell "INT-RC-X-00001-00000001"
+        - cell "ACRED-1, ACRED-2"
+        - cell "Administrador"
+        - cell "Desvincular fila ACRED-2":
+          - button "Desvincular fila ACRED-2": Desvincular
+      - row "Seleccionar fila CARGO-1 13/10/2026 CARGO-1 Cargo bancario pendiente de registrar -$ 100,00 Pendiente — — Vincular fila CARGO-1":
+        - cell "Seleccionar fila CARGO-1":
+          - checkbox "Seleccionar fila CARGO-1"
+        - cell "13/10/2026"
+        - cell "CARGO-1"
+        - cell "Cargo bancario pendiente de registrar"
+        - cell "-$ 100,00"
+        - cell "Pendiente"
+        - cell "—"
+        - cell "—"
+        - cell "Vincular fila CARGO-1":
+          - button "Vincular fila CARGO-1": Vincular
+  - generic: Neto pendiente en extracto
+  - strong: "-$ 100,00"
+  - generic: Neto pendiente en SICA hasta el cierre
+  - strong: $ 0,00
+  - generic: Diferencia por explicar
+  - strong: $ 0,00
+  - generic: Extracto − pendientes del extracto + pendientes SICA − saldo SICA
+  - generic: Los netos pueden ser cero aunque existan filas pendientes. Revisá cada movimiento y los saldos de apertura. Un vínculo requiere la misma cuenta, signo e importe exacto. Cargar o vincular el extracto no crea cobros, pagos, gastos ni asientos.
+  - button "Anular extracto sin vínculos" [disabled]
+  - heading "Historial de revisión" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha Acción Referencia Movimientos Responsable Motivo":
+        - columnheader "Fecha"
+        - columnheader "Acción"
+        - columnheader "Referencia"
+        - columnheader "Movimientos"
+        - columnheader "Responsable"
+        - columnheader "Motivo"
+    - rowgroup:
+      - row "13/10/2026, 04:26:04 Vincular ACRED-1, ACRED-2 1 Administrador El anticipo de $6.000 se acreditó en dos partes; ambas referencias bancarias fueron revisadas.":
+        - cell "13/10/2026, 04:26:04"
+        - cell "Vincular"
+        - cell "ACRED-1, ACRED-2"
+        - cell "1"
+        - cell "Administrador"
+        - cell "El anticipo de $6.000 se acreditó en dos partes; ambas referencias bancarias fueron revisadas."
+  - generic: "El formato XLSX usa Fecha (AAAA-MM-DD), Referencia única de operación, Descripcion e Importe ARS con signo: positivo ingreso, negativo egreso. Adaptá el archivo exportado por tu banco a esas columnas. No hay conexión automática con bancos ni conversión de moneda."
+
+Compilación final:
+- complementary:
+  - link "SICA — Ir al inicio":
+    - /url: /
+    - img "SICA — Soluciones Integrales Contables Administrativas"
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas" [expanded]:
+      - generic: Finanzas
+    - link "Cajas y movimientos":
+      - /url: /finanzas/cajas
+    - link "Cajas y cuentas bancarias":
+      - /url: /finanzas/cuentas-tesoreria
+    - link "Bancos y conciliación":
+      - /url: /finanzas/bancos
+    - link "Extractos bancarios":
+      - /url: /finanzas/bancos/extractos
+    - link "Cartera de cheques":
+      - /url: /finanzas/cheques
+    - link "IVA ventas y compras":
+      - /url: /finanzas/impuestos
+    - link "Cuentas por cobrar / pagar":
+      - /url: /finanzas/cuentas
+    - link "Tarjetas de crédito":
+      - /url: /finanzas/tarjetas
+    - link "Liquidaciones de tarjetas":
+      - /url: /finanzas/liquidaciones-tarjetas
+    - link "Retenciones y percepciones":
+      - /url: /finanzas/retenciones
+    - link "Formas de pago y cobro":
+      - /url: /finanzas/formas-pago
+    - link "Entidades bancarias":
+      - /url: /finanzas/entidades
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad":
+      - generic: Contabilidad
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA Textil · Conciliación agrupada de ensayo
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 3 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Extractos y conciliación bancaria" [level=1]
+  - paragraph: Revisá saldos, vinculá movimientos y conservá la evidencia de cada conciliación.
+  - link "Movimientos bancarios":
+    - /url: /finanzas/bancos
+  - button "Cargar extracto"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Referencia Cuenta Período Saldo inicial Saldo final Filas vinculadas Estado Acción":
+        - columnheader "Referencia"
+        - columnheader "Cuenta"
+        - columnheader "Período"
+        - columnheader "Saldo inicial"
+        - columnheader "Saldo final"
+        - columnheader "Filas vinculadas"
+        - columnheader "Estado"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "Dos acreditaciones de un anticipo Banco de prueba 13/10/2026 — 13/10/2026 $ 0,00 $ 5.900,00 2/3 Activo Revisar":
+        - cell "Dos acreditaciones de un anticipo"
+        - cell "Banco de prueba"
+        - cell "13/10/2026 — 13/10/2026"
+        - cell "$ 0,00"
+        - cell "$ 5.900,00"
+        - cell "2/3"
+        - cell "Activo"
+        - cell "Revisar":
+          - button "Revisar" [active]
+  - heading "Dos acreditaciones de un anticipo · Banco de prueba" [level=2]
+  - button "Cerrar revisión"
+  - paragraph: 13/10/2026 — 13/10/2026 · Cargado por Administrador · Activo
+  - generic: Saldo final del extracto
+  - strong: $ 5.900,00
+  - generic: Saldo SICA al fin del período
+  - strong: $ 6.000,00
+  - generic: Diferencia sin ajustar
+  - strong: "-$ 100,00"
+  - button "Vincular filas seleccionadas" [disabled]
+  - generic: 0 filas · $ 0,00
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 3 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Agrupar Fecha bancaria Referencia Descripción Importe Movimientos SICA Filas del grupo Responsable del último vínculo Acción":
+        - columnheader "Agrupar"
+        - columnheader "Fecha bancaria"
+        - columnheader "Referencia"
+        - columnheader "Descripción"
+        - columnheader "Importe"
+        - columnheader "Movimientos SICA"
+        - columnheader "Filas del grupo"
+        - columnheader "Responsable del último vínculo"
+        - columnheader "Acción"
+    - rowgroup:
+      - row "13/10/2026 ACRED-1 Primera acreditación del anticipo $ 2.000,00 INT-RC-X-00001-00000001 ACRED-1, ACRED-2 Administrador Desvincular fila ACRED-1":
+        - cell
+        - cell "13/10/2026"
+        - cell "ACRED-1"
+        - cell "Primera acreditación del anticipo"
+        - cell "$ 2.000,00"
+        - cell "INT-RC-X-00001-00000001"
+        - cell "ACRED-1, ACRED-2"
+        - cell "Administrador"
+        - cell "Desvincular fila ACRED-1":
+          - button "Desvincular fila ACRED-1": Desvincular
+      - row "13/10/2026 ACRED-2 Segunda acreditación del anticipo $ 4.000,00 INT-RC-X-00001-00000001 ACRED-1, ACRED-2 Administrador Desvincular fila ACRED-2":
+        - cell
+        - cell "13/10/2026"
+        - cell "ACRED-2"
+        - cell "Segunda acreditación del anticipo"
+        - cell "$ 4.000,00"
+        - cell "INT-RC-X-00001-00000001"
+        - cell "ACRED-1, ACRED-2"
+        - cell "Administrador"
+        - cell "Desvincular fila ACRED-2":
+          - button "Desvincular fila ACRED-2": Desvincular
+      - row "Seleccionar fila CARGO-1 13/10/2026 CARGO-1 Cargo bancario pendiente de registrar -$ 100,00 Pendiente — — Vincular fila CARGO-1":
+        - cell "Seleccionar fila CARGO-1":
+          - checkbox "Seleccionar fila CARGO-1"
+        - cell "13/10/2026"
+        - cell "CARGO-1"
+        - cell "Cargo bancario pendiente de registrar"
+        - cell "-$ 100,00"
+        - cell "Pendiente"
+        - cell "—"
+        - cell "—"
+        - cell "Vincular fila CARGO-1":
+          - button "Vincular fila CARGO-1": Vincular
+  - generic: Neto pendiente en extracto
+  - strong: "-$ 100,00"
+  - generic: Neto pendiente en SICA hasta el cierre
+  - strong: $ 0,00
+  - generic: Diferencia por explicar
+  - strong: $ 0,00
+  - generic: Extracto − pendientes del extracto + pendientes SICA − saldo SICA
+  - generic: Los netos pueden ser cero aunque existan filas pendientes. Revisá cada movimiento y los saldos de apertura. Un vínculo requiere la misma cuenta, signo e importe exacto. Cargar o vincular el extracto no crea cobros, pagos, gastos ni asientos.
+  - button "Anular extracto sin vínculos" [disabled]
+  - heading "Historial de revisión" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Fecha Acción Referencia Movimientos Responsable Motivo":
+        - columnheader "Fecha"
+        - columnheader "Acción"
+        - columnheader "Referencia"
+        - columnheader "Movimientos"
+        - columnheader "Responsable"
+        - columnheader "Motivo"
+    - rowgroup:
+      - row "13/10/2026, 04:26:04 Vincular ACRED-1, ACRED-2 1 Administrador El anticipo de $6.000 se acreditó en dos partes; ambas referencias bancarias fueron revisadas.":
+        - cell "13/10/2026, 04:26:04"
+        - cell "Vincular"
+        - cell "ACRED-1, ACRED-2"
+        - cell "1"
+        - cell "Administrador"
+        - cell "El anticipo de $6.000 se acreditó en dos partes; ambas referencias bancarias fueron revisadas."
+  - generic: "El formato XLSX usa Fecha (AAAA-MM-DD), Referencia única de operación, Descripcion e Importe ARS con signo: positivo ingreso, negativo egreso. Adaptá el archivo exportado por tu banco a esas columnas. No hay conexión automática con bancos ni conversión de moneda."

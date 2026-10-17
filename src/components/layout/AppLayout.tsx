@@ -1,13 +1,11 @@
-import { Outlet } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Outlet, useNavigate, useLocation, Link } from 'react-router-dom'
+import { LogOut, HelpCircle, Building2 } from 'lucide-react'
+import { useStore } from '@/state/context'
 import Sidebar from './Sidebar'
-
 export default function AppLayout() {
-  return (
-    <div className="app-layout">
-      <Sidebar />
-      <main className="main-content">
-        <Outlet />
-      </main>
-    </div>
-  )
+ const {pathname}=useLocation()
+ useEffect(()=>{window.scrollTo({top:0,behavior:'instant'})},[pathname])
+ const {data,session,branch,setBranch,logout,notice,error,mode,busy,revision,companies,companyId}=useStore(),navigate=useNavigate()
+ return <div className="app-layout"><Sidebar/><main className="main-content" aria-busy={busy}><header className="app-topbar"><div className="company-name"><Building2 size={18}/><div><strong>{data.settings.name}</strong><small>{data.settings.iva} · {data.settings.province}{mode==='server'&&companies.length>1?` · Empresa: ${companyId}`:''}</small></div></div><div className="topbar-controls">{mode==='server'&&companies.length>1&&<button className="button secondary small" disabled={busy} onClick={async()=>{if(await logout())navigate('/login')}}>Cambiar empresa</button>}<label className="branch-picker"><span>Sucursal</span><select aria-label="Seleccionar sucursal" value={branch} onChange={e=>setBranch(e.target.value)}><option value="all">Todas las unidades</option>{data.masters.branches.filter(b=>b.active).map(b=><option key={b.id} value={b.id}>{b.name}</option>)}</select></label><Link className="icon-button" title="Acerca de y fuentes" aria-label="Acerca de y fuentes" to="/acerca-de"><HelpCircle size={19}/></Link><div className="user-summary"><span className="avatar">{session?.name.slice(0,2).toUpperCase()}</span><div><strong>{session?.name}</strong><small>{session?.role}</small></div></div><button className="icon-button" title="Cerrar sesión" aria-label="Cerrar sesión" onClick={async()=>{if(await logout())navigate('/login')}}><LogOut size={18}/></button></div></header><div className="environment-banner"><span className="status-dot"/>{mode==='server'?`Base compartida · Versión ${revision} · ${busy?'Guardando operación…':'Datos en el servidor'}`:'Entorno local · Datos guardados en este navegador'} · Consultá el estado fiscal de cada comprobante</div>{error&&<div className="hint error-banner" role="alert">{error}</div>}<Outlet/>{notice&&<div className={`toast ${notice.startsWith('Error:')?'error':''}`} role="status" aria-live="polite">{notice}</div>}</main></div>
 }

@@ -1,0 +1,55 @@
+[
+  {
+    "environment": "homologacion",
+    "operation": "last",
+    "point": 1,
+    "type": 1,
+    "simulated": true
+  },
+  {
+    "environment": "homologacion",
+    "operation": "authorize",
+    "type": 1,
+    "number": 42,
+    "documentId": "4082565e-fb39-4f8d-a4a8-78805c9c92d8",
+    "simulated": true
+  },
+  {
+    "environment": "produccion",
+    "operation": "last",
+    "point": 1,
+    "type": 1,
+    "simulated": true
+  },
+  {
+    "environment": "produccion",
+    "operation": "authorize",
+    "type": 1,
+    "number": 142,
+    "documentId": "4082565e-fb39-4f8d-a4a8-78805c9c92d8",
+    "simulated": true
+  },
+  {
+    "environment": "produccion",
+    "operation": "consult",
+    "type": 1,
+    "number": 142,
+    "documentId": "4082565e-fb39-4f8d-a4a8-78805c9c92d8",
+    "simulated": true
+  },
+  {
+    "environment": "produccion",
+    "operation": "last",
+    "point": 1,
+    "type": 3,
+    "simulated": true
+  },
+  {
+    "environment": "produccion",
+    "operation": "authorize",
+    "type": 3,
+    "number": 1,
+    "documentId": "d407020e-0b34-4f0f-a811-b83cb28379d7",
+    "simulated": true
+  }
+]

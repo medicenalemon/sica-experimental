@@ -1,0 +1,354 @@
+{
+  "id": "85d7b66f-0f22-40eb-8d66-21f161b9e175",
+  "number": "INT-IA-00000001",
+  "responsible": "Administrador",
+  "createdAt": "2026-10-17T04:21:38.932Z",
+  "review": "{\"input\":{\"from\":\"2025-01-01\",\"to\":\"2025-12-31\",\"previousId\":\"\",\"reference\":\"IVA-ANUAL-UI-01\",\"reason\":\"Conciliación anual sintética de bases fiscales, cómputos declarados y devoluciones revisadas.\",\"taxable\":800000,\"exempt\":200000,\"untaxed\":0,\"basisReference\":\"BASES-ANUALES-2025-UI\",\"nominalConfirmed\":true,\"completeConfirmed\":true,\"months\":[{\"period\":\"2025-01\",\"preparationId\":\"88e66d6c-fbe2-49c3-bac0-71894fcdd687\",\"applied\":1050,\"reference\":\"COMPUTO-DECLARADO-2025-01\",\"reason\":\"\",\"noCommonConfirmed\":false},{\"period\":\"2025-02\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-02\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-03\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-03\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-04\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-04\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-05\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-05\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-06\",\"preparationId\":\"71e81381-3fe7-43a7-a8ef-f3b4232e397b\",\"applied\":1575,\"reference\":\"COMPUTO-DECLARADO-2025-06\",\"reason\":\"\",\"noCommonConfirmed\":false},{\"period\":\"2025-07\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-07\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-08\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-08\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-09\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-09\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-10\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-10\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-11\",\"preparationId\":\"\",\"applied\":0,\"reference\":\"COMPUTO-DECLARADO-2025-11\",\"reason\":\"\",\"noCommonConfirmed\":true},{\"period\":\"2025-12\",\"preparationId\":\"c7d681af-1e3a-4212-a3e4-9ae1c4991c77\",\"applied\":1680,\"reference\":\"COMPUTO-DECLARADO-2025-12\",\"reason\":\"\",\"noCommonConfirmed\":false}],\"returns\":[{\"documentId\":\"3f005021-4bec-49a6-b51d-430cbcd6cca6\",\"commonReturned\":210,\"commonRestored\":100,\"reference\":\"DEVOLUCION-ENERO-2025\",\"reason\":\"IVA común devuelto del mismo ejercicio; crédito histórico restituido en junio.\"}]},\"source\":{\"company\":{\"name\":\"SICA Textil · Ajuste anual IVA\",\"cuit\":\"30712345671\",\"iva\":\"Responsable Inscripto\"},\"exercises\":[{\"start\":\"2025-01-01\",\"end\":\"2025-12-31\"}],\"names\":[{\"id\":\"57a6b978-3e48-469b-b29b-dd6b0e169f50\",\"name\":\"Textiles Ñandú SA\"},{\"id\":\"supplier-c\",\"name\":\"Proveedor C de ensayo\"}],\"documentIds\":[\"a1476d00-3134-4881-8a7a-52ed430a169d\",\"d8f1af7b-9c47-4836-b662-85ecedec8387\",\"3f005021-4bec-49a6-b51d-430cbcd6cca6\",\"7c4e3263-0f7b-4d6b-bac1-689498725b62\"],\"originalIds\":[\"f704e8f9-5fc5-45fb-83e4-ba3e70f9eaa9\",\"5cabdcda-8f06-4fef-93e8-f0ec8702e2ec\",\"ee4b2d88-730a-4621-bfdb-bb8eb339960d\",\"a17a6edf-857f-4813-8f02-bf7e8a881ece\"],\"purchaseIds\":[\"88e66d6c-fbe2-49c3-bac0-71894fcdd687\",\"71e81381-3fe7-43a7-a8ef-f3b4232e397b\",\"c7d681af-1e3a-4212-a3e4-9ae1c4991c77\"]},\"period\":\"2025-12\",\"months\":[{\"period\":\"2025-01\",\"preparationId\":\"88e66d6c-fbe2-49c3-bac0-71894fcdd687\",\"number\":\"INT-IC-00000001\",\"mode\":\"Asignación directa y global\",\"documents\":1,\"common\":2100,\"prepared\":1050,\"applied\":1050,\"difference\":0,\"internalX\":0},{\"period\":\"2025-02\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-03\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-04\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-05\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-06\",\"preparationId\":\"71e81381-3fe7-43a7-a8ef-f3b4232e397b\",\"number\":\"INT-IC-00000002\",\"mode\":\"Asignación directa y global\",\"documents\":2,\"common\":2100,\"prepared\":1575,\"applied\":1575,\"difference\":0,\"internalX\":0},{\"period\":\"2025-07\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-08\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-09\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-10\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-11\",\"preparationId\":\"\",\"number\":\"Sin compras ordinarias · confirmado\",\"mode\":\"Sin compras ordinarias\",\"documents\":0,\"common\":0,\"prepared\":0,\"applied\":0,\"difference\":0,\"internalX\":0},{\"period\":\"2025-12\",\"preparationId\":\"c7d681af-1e3a-4212-a3e4-9ae1c4991c77\",\"number\":\"INT-IC-00000003\",\"mode\":\"Asignación directa y global\",\"documents\":1,\"common\":2100,\"prepared\":1680,\"applied\":1680,\"difference\":0,\"internalX\":0}],\"returns\":[{\"documentId\":\"3f005021-4bec-49a6-b51d-430cbcd6cca6\",\"number\":\"INT-NC-A-00001-00000001\",\"originId\":\"a1476d00-3134-4881-8a7a-52ed430a169d\",\"originNumber\":\"INT-FC-A-00001-00000001\",\"originDate\":\"2025-01-15\",\"currentExercise\":true,\"vat\":210,\"restored\":100,\"commonReturned\":210,\"commonRestored\":100}],\"totals\":{\"commonGross\":6300,\"commonReturned\":210,\"commonNet\":6090,\"prepared\":4305,\"appliedGross\":4305,\"commonRestored\":100,\"appliedNet\":4205,\"basisTotal\":1000000,\"annualCredit\":4872,\"adjustment\":667,\"inFavorOfCompany\":667,\"inFavorOfArca\":0,\"previousAdjustment\":0,\"changeFromPrevious\":667},\"warnings\":[\"Preparación nominal de compras ordinarias en ARS. Las bases, destinos, importes computados y restituciones son datos declarados sujetos a revisión profesional.\",\"Una preparación mensual no acredita una declaración presentada. Se compara el cómputo prorrateado declarado por el responsable, con referencia por mes.\",\"Las devoluciones de IVA común del mismo ejercicio reducen el conjunto anual y su restitución histórica reduce el crédito computado comparado. No se aplica el coeficiente anual a devoluciones de ejercicios anteriores.\",\"El ajuste se revisa en el período de cierre. No se modifica el crédito directo ni se reescriben TXT, se registran asientos o se presenta una declaración.\",\"Una nueva versión conserva el ajuste total para revisar; no es un importe incremental ni una rectificativa presentada.\"],\"status\":\"Preparación de ajuste anual · sin presentación ARCA\"}",
+  "preview": {
+    "input": {
+      "from": "2025-01-01",
+      "to": "2025-12-31",
+      "previousId": "",
+      "reference": "IVA-ANUAL-UI-01",
+      "reason": "Conciliación anual sintética de bases fiscales, cómputos declarados y devoluciones revisadas.",
+      "taxable": 800000,
+      "exempt": 200000,
+      "untaxed": 0,
+      "basisReference": "BASES-ANUALES-2025-UI",
+      "nominalConfirmed": true,
+      "completeConfirmed": true,
+      "months": [
+        {
+          "period": "2025-01",
+          "preparationId": "88e66d6c-fbe2-49c3-bac0-71894fcdd687",
+          "applied": 1050,
+          "reference": "COMPUTO-DECLARADO-2025-01",
+          "reason": "",
+          "noCommonConfirmed": false
+        },
+        {
+          "period": "2025-02",
+          "preparationId": "",
+          "applied": 0,
+          "reference": "COMPUTO-DECLARADO-2025-02",
+          "reason": "",
+          "noCommonConfirmed": true
+        },
+        {
+          "period": "2025-03",
+          "preparationId": "",
+          "applied": 0,
+          "reference": "COMPUTO-DECLARADO-2025-03",
+          "reason": "",
+          "noCommonConfirmed": true
+        },
+        {
+          "period": "2025-04",
+          "preparationId": "",
+          "applied": 0,
+          "reference": "COMPUTO-DECLARADO-2025-04",
+          "reason": "",
+          "noCommonConfirmed": true
+        },
+        {
+          "period": "2025-05",
+          "preparationId": "",
+          "applied": 0,
+          "reference": "COMPUTO-DECLARADO-2025-05",
+          "reason": "",
+          "noCommonConfirmed": true
+        },
+        {
+          "period": "2025-06",
+          "preparationId": "71e81381-3fe7-43a7-a8ef-f3b4232e397b",
+          "applied": 1575,
+          "reference": "COMPUTO-DECLARADO-2025-06",
+          "reason": "",
+          "noCommonConfirmed": false
+        },
+        {
+          "period": "2025-07",
+          "preparationId": "",
+          "applied": 0,
+          "reference": "COMPUTO-DECLARADO-2025-07",
+          "reason": "",
+          "noCommonConfirmed": true
+        },
+        {
+          "period": "2025-08",
+          "preparationId": "",
+          "applied": 0,
+          "reference": "COMPUTO-DECLARADO-2025-08",
+          "reason": "",
+          "noCommonConfirmed": true
+        },
+        {
+          "period": "2025-09",
+          "preparationId": "",
+          "applied": 0,
+          "reference": "COMPUTO-DECLARADO-2025-09",
+          "reason": "",
+          "noCommonConfirmed": true
+        },
+        {
+          "period": "2025-10",
+          "preparationId": "",
+          "applied": 0,
+          "reference": "COMPUTO-DECLARADO-2025-10",
+          "reason": "",
+          "noCommonConfirmed": true
+        },
+        {
+          "period": "2025-11",
+          "preparationId": "",
+          "applied": 0,
+          "reference": "COMPUTO-DECLARADO-2025-11",
+          "reason": "",
+          "noCommonConfirmed": true
+        },
+        {
+          "period": "2025-12",
+          "preparationId": "c7d681af-1e3a-4212-a3e4-9ae1c4991c77",
+          "applied": 1680,
+          "reference": "COMPUTO-DECLARADO-2025-12",
+          "reason": "",
+          "noCommonConfirmed": false
+        }
+      ],
+      "returns": [
+        {
+          "documentId": "3f005021-4bec-49a6-b51d-430cbcd6cca6",
+          "commonReturned": 210,
+          "commonRestored": 100,
+          "reference": "DEVOLUCION-ENERO-2025",
+          "reason": "IVA común devuelto del mismo ejercicio; crédito histórico restituido en junio."
+        }
+      ]
+    },
+    "source": {
+      "company": {
+        "name": "SICA Textil · Ajuste anual IVA",
+        "cuit": "30712345671",
+        "iva": "Responsable Inscripto"
+      },
+      "exercises": [
+        {
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        }
+      ],
+      "names": [
+        {
+          "id": "57a6b978-3e48-469b-b29b-dd6b0e169f50",
+          "name": "Textiles Ñandú SA"
+        },
+        {
+          "id": "supplier-c",
+          "name": "Proveedor C de ensayo"
+        }
+      ],
+      "documentIds": [
+        "a1476d00-3134-4881-8a7a-52ed430a169d",
+        "d8f1af7b-9c47-4836-b662-85ecedec8387",
+        "3f005021-4bec-49a6-b51d-430cbcd6cca6",
+        "7c4e3263-0f7b-4d6b-bac1-689498725b62"
+      ],
+      "originalIds": [
+        "f704e8f9-5fc5-45fb-83e4-ba3e70f9eaa9",
+        "5cabdcda-8f06-4fef-93e8-f0ec8702e2ec",
+        "ee4b2d88-730a-4621-bfdb-bb8eb339960d",
+        "a17a6edf-857f-4813-8f02-bf7e8a881ece"
+      ],
+      "purchaseIds": [
+        "88e66d6c-fbe2-49c3-bac0-71894fcdd687",
+        "71e81381-3fe7-43a7-a8ef-f3b4232e397b",
+        "c7d681af-1e3a-4212-a3e4-9ae1c4991c77"
+      ]
+    },
+    "period": "2025-12",
+    "months": [
+      {
+        "period": "2025-01",
+        "preparationId": "88e66d6c-fbe2-49c3-bac0-71894fcdd687",
+        "number": "INT-IC-00000001",
+        "mode": "Asignación directa y global",
+        "documents": 1,
+        "common": 2100,
+        "prepared": 1050,
+        "applied": 1050,
+        "difference": 0,
+        "internalX": 0
+      },
+      {
+        "period": "2025-02",
+        "preparationId": "",
+        "number": "Sin compras ordinarias · confirmado",
+        "mode": "Sin compras ordinarias",
+        "documents": 0,
+        "common": 0,
+        "prepared": 0,
+        "applied": 0,
+        "difference": 0,
+        "internalX": 0
+      },
+      {
+        "period": "2025-03",
+        "preparationId": "",
+        "number": "Sin compras ordinarias · confirmado",
+        "mode": "Sin compras ordinarias",
+        "documents": 0,
+        "common": 0,
+        "prepared": 0,
+        "applied": 0,
+        "difference": 0,
+        "internalX": 0
+      },
+      {
+        "period": "2025-04",
+        "preparationId": "",
+        "number": "Sin compras ordinarias · confirmado",
+        "mode": "Sin compras ordinarias",
+        "documents": 0,
+        "common": 0,
+        "prepared": 0,
+        "applied": 0,
+        "difference": 0,
+        "internalX": 0
+      },
+      {
+        "period": "2025-05",
+        "preparationId": "",
+        "number": "Sin compras ordinarias · confirmado",
+        "mode": "Sin compras ordinarias",
+        "documents": 0,
+        "common": 0,
+        "prepared": 0,
+        "applied": 0,
+        "difference": 0,
+        "internalX": 0
+      },
+      {
+        "period": "2025-06",
+        "preparationId": "71e81381-3fe7-43a7-a8ef-f3b4232e397b",
+        "number": "INT-IC-00000002",
+        "mode": "Asignación directa y global",
+        "documents": 2,
+        "common": 2100,
+        "prepared": 1575,
+        "applied": 1575,
+        "difference": 0,
+        "internalX": 0
+      },
+      {
+        "period": "2025-07",
+        "preparationId": "",
+        "number": "Sin compras ordinarias · confirmado",
+        "mode": "Sin compras ordinarias",
+        "documents": 0,
+        "common": 0,
+        "prepared": 0,
+        "applied": 0,
+        "difference": 0,
+        "internalX": 0
+      },
+      {
+        "period": "2025-08",
+        "preparationId": "",
+        "number": "Sin compras ordinarias · confirmado",
+        "mode": "Sin compras ordinarias",
+        "documents": 0,
+        "common": 0,
+        "prepared": 0,
+        "applied": 0,
+        "difference": 0,
+        "internalX": 0
+      },
+      {
+        "period": "2025-09",
+        "preparationId": "",
+        "number": "Sin compras ordinarias · confirmado",
+        "mode": "Sin compras ordinarias",
+        "documents": 0,
+        "common": 0,
+        "prepared": 0,
+        "applied": 0,
+        "difference": 0,
+        "internalX": 0
+      },
+      {
+        "period": "2025-10",
+        "preparationId": "",
+        "number": "Sin compras ordinarias · confirmado",
+        "mode": "Sin compras ordinarias",
+        "documents": 0,
+        "common": 0,
+        "prepared": 0,
+        "applied": 0,
+        "difference": 0,
+        "internalX": 0
+      },
+      {
+        "period": "2025-11",
+        "preparationId": "",
+        "number": "Sin compras ordinarias · confirmado",
+        "mode": "Sin compras ordinarias",
+        "documents": 0,
+        "common": 0,
+        "prepared": 0,
+        "applied": 0,
+        "difference": 0,
+        "internalX": 0
+      },
+      {
+        "period": "2025-12",
+        "preparationId": "c7d681af-1e3a-4212-a3e4-9ae1c4991c77",
+        "number": "INT-IC-00000003",
+        "mode": "Asignación directa y global",
+        "documents": 1,
+        "common": 2100,
+        "prepared": 1680,
+        "applied": 1680,
+        "difference": 0,
+        "internalX": 0
+      }
+    ],
+    "returns": [
+      {
+        "documentId": "3f005021-4bec-49a6-b51d-430cbcd6cca6",
+        "number": "INT-NC-A-00001-00000001",
+        "originId": "a1476d00-3134-4881-8a7a-52ed430a169d",
+        "originNumber": "INT-FC-A-00001-00000001",
+        "originDate": "2025-01-15",
+        "currentExercise": true,
+        "vat": 210,
+        "restored": 100,
+        "commonReturned": 210,
+        "commonRestored": 100
+      }
+    ],
+    "totals": {
+      "commonGross": 6300,
+      "commonReturned": 210,
+      "commonNet": 6090,
+      "prepared": 4305,
+      "appliedGross": 4305,
+      "commonRestored": 100,
+      "appliedNet": 4205,
+      "basisTotal": 1000000,
+      "annualCredit": 4872,
+      "adjustment": 667,
+      "inFavorOfCompany": 667,
+      "inFavorOfArca": 0,
+      "previousAdjustment": 0,
+      "changeFromPrevious": 667
+    },
+    "warnings": [
+      "Preparación nominal de compras ordinarias en ARS. Las bases, destinos, importes computados y restituciones son datos declarados sujetos a revisión profesional.",
+      "Una preparación mensual no acredita una declaración presentada. Se compara el cómputo prorrateado declarado por el responsable, con referencia por mes.",
+      "Las devoluciones de IVA común del mismo ejercicio reducen el conjunto anual y su restitución histórica reduce el crédito computado comparado. No se aplica el coeficiente anual a devoluciones de ejercicios anteriores.",
+      "El ajuste se revisa en el período de cierre. No se modifica el crédito directo ni se reescriben TXT, se registran asientos o se presenta una declaración.",
+      "Una nueva versión conserva el ajuste total para revisar; no es un importe incremental ni una rectificativa presentada."
+    ],
+    "status": "Preparación de ajuste anual · sin presentación ARCA"
+  }
+}

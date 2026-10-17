@@ -1,0 +1,888 @@
+- complementary:
+  - link "SICA Contabilidad y administración":
+    - /url: /
+    - heading "SICA" [level=1]
+    - generic: Contabilidad y administración
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Preparación de estados":
+      - /url: /contabilidad/estados
+    - link "Moneda de cierre y RECPAM":
+      - /url: /contabilidad/moneda-cierre
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - CONCILIACIÓN POR BIEN
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 2 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Bienes de uso y depreciaciones" [level=1]
+  - paragraph: Costo documentado, puesta en marcha y cargos revisados con historial.
+  - button "Preparar cuentas"
+  - button "Capitalizar compra" [disabled]
+  - button "Preparar depreciación"
+  - text: Registrá el artículo como
+  - link "Bien de uso":
+    - /url: /productos/articulos
+  - text: y su
+  - link "factura de compra":
+    - /url: /proveedores/compras
+  - text: . Revisá recepción, destino a uso propio, beneficios esperados y costo antes de capitalizarlo. La reclasificación conserva el IVA y la deuda original. Un remito de bienes de uso conserva su recepción y no suma mercadería al stock de reventa.
+  - generic: Fecha de consulta
+  - textbox "Fecha de consulta": 2026-10-11
+  - generic: Costo de bienes vigentes
+  - strong: $ 1.500,00
+  - generic: Depreciación de bienes vigentes
+  - strong: $ 540,00
+  - generic: Deterioro de bienes vigentes
+  - strong: $ 0,00
+  - generic: Cargo pendiente al corte
+  - strong: $ 0,00
+  - heading "Registro de bienes de uso" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Identificación Clase Costo registrado ARS Depreciación registrada ARS Cargo pendiente ARS Deterioro registrado ARS Valor neto registrado ARS Estado Detalle":
+        - columnheader "Constancia"
+        - columnheader "Identificación"
+        - columnheader "Clase"
+        - columnheader "Costo registrado ARS"
+        - columnheader "Depreciación registrada ARS"
+        - columnheader "Cargo pendiente ARS"
+        - columnheader "Deterioro registrado ARS"
+        - columnheader "Valor neto registrado ARS"
+        - columnheader "Estado"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-BU-00000001 Máquina textil QA Maquinarias $ 1.500,00 $ 540,00 $ 0,00 $ 0,00 $ 960,00 En uso Ver alta Reestimar vida y residual Dar de baja":
+        - cell "INT-BU-00000001"
+        - cell "Máquina textil QA"
+        - cell "Maquinarias"
+        - cell "$ 1.500,00"
+        - cell "$ 540,00"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 960,00"
+        - cell "En uso"
+        - cell "Ver alta Reestimar vida y residual Dar de baja":
+          - button "Ver alta"
+          - button "Reestimar vida y residual"
+          - button "Dar de baja"
+  - heading "Depreciaciones conservadas" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte global Referencia Cargo global ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte global"
+        - columnheader "Referencia"
+        - columnheader "Cargo global ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-DP-00000001 11/10/2026 Cargo original antes del ajuste $ 360,00 Administrador Ver depreciación":
+        - cell "INT-DP-00000001"
+        - cell "11/10/2026"
+        - cell "Cargo original antes del ajuste"
+        - cell "$ 360,00"
+        - cell "Administrador"
+        - cell "Ver depreciación":
+          - button "Ver depreciación"
+  - heading "Puestas en marcha conservadas" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - heading "Conciliar moneda de cierre por bien de uso" [level=2]
+  - generic: Enlazá el ajuste INT-AI con todos los bienes vigentes y los saldos ajenos al registro. El reparto conserva las antigüedades y centavos de las fuentes. La conciliación incorpora la base para las operaciones posteriores y conserva los cortes históricos.
+  - generic: Ajuste contabilizado para conciliar bienes
+  - combobox "Ajuste contabilizado para conciliar bienes":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 11/10/2026 · Ensayo · Conciliado"
+  - button "Preparar conciliación por bien" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Ajuste Referencia Neto conciliado Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Ajuste"
+        - columnheader "Referencia"
+        - columnheader "Neto conciliado"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CB-00000001 11/10/2026 INT-AI-00000001 Conciliación por bien QA 2026 $ 960,00 Administrador Ver conciliación por bien":
+        - cell "INT-CB-00000001"
+        - cell "11/10/2026"
+        - cell "INT-AI-00000001"
+        - cell "Conciliación por bien QA 2026"
+        - cell "$ 960,00"
+        - cell "Administrador"
+        - cell "Ver conciliación por bien":
+          - button "Ver conciliación por bien"
+  - dialog "Conciliación por bien INT-CB-00000001":
+    - heading "Conciliación por bien INT-CB-00000001" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: Administrador · Conciliación por bien QA 2026
+    - paragraph: INT-AI-00000001 · 11/10/2026 · Índices Ensayo
+    - generic: Costo conciliado
+    - strong: $ 1.500,00
+    - generic: Depreciación acumulada conciliada
+    - strong: $ 540,00
+    - generic: Deterioro conciliado
+    - strong: $ 0,00
+    - generic: Valor neto conciliado
+    - strong: $ 960,00
+    - generic: "Antigüedades e índices sintéticos: conciliación exclusivamente de prueba."
+    - generic: La conciliación enlaza importes ya contabilizados; no agrega otro asiento ni cambia las fuentes anteriores.
+    - generic: Los orígenes de residual y depreciación sin deterioro requieren respaldo y moneda homogénea. No son una nueva estimación real del bien.
+    - generic: Las operaciones posteriores usan la base conciliada; los cortes anteriores conservan su revisión.
+    - generic: 1 registros
+    - table:
+      - rowgroup:
+        - row "Bien Identificación Costo anterior Costo en cierre Deprec. anterior Deprec. en cierre Deterioro Neto Residual Deprec. sin deterioro Redondeos":
+          - columnheader "Bien"
+          - columnheader "Identificación"
+          - columnheader "Costo anterior"
+          - columnheader "Costo en cierre"
+          - columnheader "Deprec. anterior"
+          - columnheader "Deprec. en cierre"
+          - columnheader "Deterioro"
+          - columnheader "Neto"
+          - columnheader "Residual"
+          - columnheader "Deprec. sin deterioro"
+          - columnheader "Redondeos"
+      - rowgroup:
+        - row "INT-BU-00000001 Máquina textil QA $ 1.000,00 $ 1.500,00 $ 360,00 $ 540,00 $ 0,00 $ 960,00 $ 150,00 $ 540,00 $ 0,00":
+          - cell "INT-BU-00000001"
+          - cell "Máquina textil QA"
+          - cell "$ 1.000,00"
+          - cell "$ 1.500,00"
+          - cell "$ 360,00"
+          - cell "$ 540,00"
+          - cell "$ 0,00"
+          - cell "$ 960,00"
+          - cell "$ 150,00"
+          - cell "$ 540,00"
+          - cell "$ 0,00"
+    - generic: 2 registros
+    - table:
+      - rowgroup:
+        - row "Cuenta Sucursal Anterior Debe − Haber Ajuste Posterior Debe − Haber Ajeno anterior Ajeno posterior":
+          - columnheader "Cuenta"
+          - columnheader "Sucursal"
+          - columnheader "Anterior Debe − Haber"
+          - columnheader "Ajuste"
+          - columnheader "Posterior Debe − Haber"
+          - columnheader "Ajeno anterior"
+          - columnheader "Ajeno posterior"
+      - rowgroup:
+        - row "1.2.1 central $ 1.000,00 $ 500,00 $ 1.500,00 $ 0,00 $ 0,00":
+          - cell "1.2.1"
+          - cell "central"
+          - cell "$ 1.000,00"
+          - cell "$ 500,00"
+          - cell "$ 1.500,00"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+        - row "1.2.2 central -$ 360,00 -$ 180,00 -$ 540,00 $ 0,00 $ 0,00":
+          - cell "1.2.2"
+          - cell "central"
+          - cell "-$ 360,00"
+          - cell "-$ 180,00"
+          - cell "-$ 540,00"
+          - cell "$ 0,00"
+          - cell "$ 0,00"
+    - button "XLSX de conciliación por bien"
+    - button "PDF de conciliación por bien"
+  - heading "Evaluaciones de valor recuperable" [level=2]
+  - button "Preparar cuentas de deterioro"
+  - button "Evaluar valor recuperable"
+  - paragraph: "Revisá indicios, nivel de comparación y evidencia de VNR o valor de uso. El costo registrado es nominal: la comparación requiere una base monetaria homogénea y todavía no automatiza el ajuste por inflación."
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - heading "Cambios de estimaciones conservados" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - heading "Bajas conservadas" [level=2]
+  - button "Preparar cuentas de bajas"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - generic: El modelo inicial usa costo nominal y depreciación lineal diaria, con vida útil y residual fundamentados; no presume tasas fiscales. Los cortes incluyen todas las sucursales y contabilizan sólo el cargo nuevo. Los cambios fundamentados de vida útil y residual conservan los cargos anteriores y se aplican hacia adelante. Las bajas totales conservan sus antecedentes y separan su resultado. Las comparaciones de recuperable documentan pérdidas y reversiones, con tope y ajuste de los cargos posteriores. La conciliación de moneda de cierre enlaza el ajuste contabilizado con cada bien y su base futura. Las notas, bajas parciales o diferidas, revaluación y costos de fabricación requieren ampliar sus circuitos antes de emitir estados contables.
+
+--- CARGO POSTERIOR RECUPERADO ---
+- complementary:
+  - link "SICA Contabilidad y administración":
+    - /url: /
+    - heading "SICA" [level=1]
+    - generic: Contabilidad y administración
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Preparación de estados":
+      - /url: /contabilidad/estados
+    - link "Moneda de cierre y RECPAM":
+      - /url: /contabilidad/moneda-cierre
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - CONCILIACIÓN POR BIEN
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 4 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Bienes de uso y depreciaciones" [level=1]
+  - paragraph: Costo documentado, puesta en marcha y cargos revisados con historial.
+  - button "Preparar cuentas"
+  - button "Capitalizar compra" [disabled]
+  - button "Preparar depreciación"
+  - text: Registrá el artículo como
+  - link "Bien de uso":
+    - /url: /productos/articulos
+  - text: y su
+  - link "factura de compra":
+    - /url: /proveedores/compras
+  - text: . Revisá recepción, destino a uso propio, beneficios esperados y costo antes de capitalizarlo. La reclasificación conserva el IVA y la deuda original. Un remito de bienes de uso conserva su recepción y no suma mercadería al stock de reventa.
+  - generic: Fecha de consulta
+  - textbox "Fecha de consulta": 2026-10-19
+  - generic: Costo de bienes vigentes
+  - strong: $ 1.500,00
+  - generic: Depreciación de bienes vigentes
+  - strong: $ 900,00
+  - generic: Deterioro de bienes vigentes
+  - strong: $ 0,00
+  - generic: Cargo pendiente al corte
+  - strong: $ 0,00
+  - heading "Registro de bienes de uso" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Identificación Clase Costo registrado ARS Depreciación registrada ARS Cargo pendiente ARS Deterioro registrado ARS Valor neto registrado ARS Estado Detalle":
+        - columnheader "Constancia"
+        - columnheader "Identificación"
+        - columnheader "Clase"
+        - columnheader "Costo registrado ARS"
+        - columnheader "Depreciación registrada ARS"
+        - columnheader "Cargo pendiente ARS"
+        - columnheader "Deterioro registrado ARS"
+        - columnheader "Valor neto registrado ARS"
+        - columnheader "Estado"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-BU-00000001 Máquina textil QA Maquinarias $ 1.500,00 $ 900,00 $ 0,00 $ 0,00 $ 600,00 En uso Ver alta Reestimar vida y residual Dar de baja":
+        - cell "INT-BU-00000001"
+        - cell "Máquina textil QA"
+        - cell "Maquinarias"
+        - cell "$ 1.500,00"
+        - cell "$ 900,00"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 600,00"
+        - cell "En uso"
+        - cell "Ver alta Reestimar vida y residual Dar de baja":
+          - button "Ver alta"
+          - button "Reestimar vida y residual"
+          - button "Dar de baja"
+  - heading "Depreciaciones conservadas" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte global Referencia Cargo global ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte global"
+        - columnheader "Referencia"
+        - columnheader "Cargo global ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-DP-00000001 11/10/2026 Cargo original antes del ajuste $ 360,00 Administrador Ver depreciación":
+        - cell "INT-DP-00000001"
+        - cell "11/10/2026"
+        - cell "Cargo original antes del ajuste"
+        - cell "$ 360,00"
+        - cell "Administrador"
+        - cell "Ver depreciación":
+          - button "Ver depreciación"
+      - row "INT-DP-00000002 19/10/2026 Depreciación conciliada QA 2026 $ 360,00 Administrador Ver depreciación":
+        - cell "INT-DP-00000002"
+        - cell "19/10/2026"
+        - cell "Depreciación conciliada QA 2026"
+        - cell "$ 360,00"
+        - cell "Administrador"
+        - cell "Ver depreciación":
+          - button "Ver depreciación"
+  - heading "Puestas en marcha conservadas" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - heading "Conciliar moneda de cierre por bien de uso" [level=2]
+  - generic: Enlazá el ajuste INT-AI con todos los bienes vigentes y los saldos ajenos al registro. El reparto conserva las antigüedades y centavos de las fuentes. La conciliación incorpora la base para las operaciones posteriores y conserva los cortes históricos.
+  - generic: Ajuste contabilizado para conciliar bienes
+  - combobox "Ajuste contabilizado para conciliar bienes":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 11/10/2026 · Ensayo · Conciliado"
+  - button "Preparar conciliación por bien" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Ajuste Referencia Neto conciliado Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Ajuste"
+        - columnheader "Referencia"
+        - columnheader "Neto conciliado"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CB-00000001 11/10/2026 INT-AI-00000001 Conciliación por bien QA 2026 $ 960,00 Administrador Ver conciliación por bien":
+        - cell "INT-CB-00000001"
+        - cell "11/10/2026"
+        - cell "INT-AI-00000001"
+        - cell "Conciliación por bien QA 2026"
+        - cell "$ 960,00"
+        - cell "Administrador"
+        - cell "Ver conciliación por bien":
+          - button "Ver conciliación por bien"
+  - generic "Última conciliación · INT-CB-00000001"
+  - heading "Evaluaciones de valor recuperable" [level=2]
+  - button "Preparar cuentas de deterioro"
+  - button "Evaluar valor recuperable"
+  - paragraph: "Revisá indicios, nivel de comparación y evidencia de VNR o valor de uso. El costo registrado es nominal: la comparación requiere una base monetaria homogénea y todavía no automatiza el ajuste por inflación."
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - heading "Cambios de estimaciones conservados" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - heading "Bajas conservadas" [level=2]
+  - button "Preparar cuentas de bajas"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - generic: El modelo inicial usa costo nominal y depreciación lineal diaria, con vida útil y residual fundamentados; no presume tasas fiscales. Los cortes incluyen todas las sucursales y contabilizan sólo el cargo nuevo. Los cambios fundamentados de vida útil y residual conservan los cargos anteriores y se aplican hacia adelante. Las bajas totales conservan sus antecedentes y separan su resultado. Las comparaciones de recuperable documentan pérdidas y reversiones, con tope y ajuste de los cargos posteriores. La conciliación de moneda de cierre enlaza el ajuste contabilizado con cada bien y su base futura. Las notas, bajas parciales o diferidas, revaluación y costos de fabricación requieren ampliar sus circuitos antes de emitir estados contables.
+
+--- BAJA TOTAL RECUPERADA ---
+- complementary:
+  - link "SICA Contabilidad y administración":
+    - /url: /
+    - heading "SICA" [level=1]
+    - generic: Contabilidad y administración
+  - navigation "Navegación principal":
+    - link "Inicio":
+      - /url: /
+      - generic: Inicio
+    - button "Clientes":
+      - generic: Clientes
+    - button "Proveedores":
+      - generic: Proveedores
+    - button "Finanzas":
+      - generic: Finanzas
+    - button "Productos y servicios":
+      - generic: Productos y servicios
+    - button "Stock y logística":
+      - generic: Stock y logística
+    - button "Contabilidad" [expanded]:
+      - generic: Contabilidad
+    - link "Plan de cuentas":
+      - /url: /contabilidad/plan
+    - link "Configuración de cuentas":
+      - /url: /contabilidad/configuracion
+    - link "Libro diario":
+      - /url: /contabilidad/diario
+    - link "Libro mayor":
+      - /url: /contabilidad/mayor
+    - link "Sumas y saldos":
+      - /url: /contabilidad/balance
+    - link "Preparación de estados":
+      - /url: /contabilidad/estados
+    - link "Moneda de cierre y RECPAM":
+      - /url: /contabilidad/moneda-cierre
+    - link "Bienes de uso y depreciaciones":
+      - /url: /contabilidad/bienes-de-uso
+    - link "Valuación de inventario":
+      - /url: /contabilidad/inventario
+    - link "Servicios devengados":
+      - /url: /contabilidad/servicios-devengados
+    - link "Ingresos devengados":
+      - /url: /contabilidad/ingresos-devengados
+    - link "Cierres de períodos":
+      - /url: /contabilidad/cierres
+    - link "Cierre de resultados":
+      - /url: /contabilidad/cierre-resultados
+    - link "Apertura de ejercicio":
+      - /url: /contabilidad/apertura-ejercicio
+    - button "Producción":
+      - generic: Producción
+    - button "Importaciones":
+      - generic: Importaciones
+    - button "Reportes":
+      - generic: Reportes
+    - button "Administración":
+      - generic: Administración
+    - button "Herramientas":
+      - generic: Herramientas
+    - link "Configuración":
+      - /url: /configuracion
+      - generic: Configuración
+    - link "Acerca de":
+      - /url: /acerca-de
+      - generic: Acerca de
+  - generic: Versión experimental
+  - button "Colapsar menú":
+- main:
+  - strong: SICA QA - CONCILIACIÓN POR BIEN
+  - generic: Responsable Inscripto · Tucumán
+  - generic: Sucursal
+  - combobox "Seleccionar sucursal":
+    - option "Todas las unidades" [selected]
+    - option "Casa Central"
+  - link "Acerca de y fuentes":
+    - /url: /acerca-de
+  - generic: AD
+  - strong: Administrador
+  - generic: Administrador General
+  - button "Cerrar sesión":
+  - generic: Base compartida · Versión 5 · Datos en el servidor · Comprobantes sin autorización ARCA
+  - paragraph: SICA / Gestión integral
+  - heading "Bienes de uso y depreciaciones" [level=1]
+  - paragraph: Costo documentado, puesta en marcha y cargos revisados con historial.
+  - button "Preparar cuentas"
+  - button "Capitalizar compra" [disabled]
+  - button "Preparar depreciación"
+  - text: Registrá el artículo como
+  - link "Bien de uso":
+    - /url: /productos/articulos
+  - text: y su
+  - link "factura de compra":
+    - /url: /proveedores/compras
+  - text: . Revisá recepción, destino a uso propio, beneficios esperados y costo antes de capitalizarlo. La reclasificación conserva el IVA y la deuda original. Un remito de bienes de uso conserva su recepción y no suma mercadería al stock de reventa.
+  - generic: Fecha de consulta
+  - textbox "Fecha de consulta": 2026-10-11
+  - generic: Costo de bienes vigentes
+  - strong: $ 1.500,00
+  - generic: Depreciación de bienes vigentes
+  - strong: $ 540,00
+  - generic: Deterioro de bienes vigentes
+  - strong: $ 0,00
+  - generic: Cargo pendiente al corte
+  - strong: $ 0,00
+  - heading "Registro de bienes de uso" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Identificación Clase Costo registrado ARS Depreciación registrada ARS Cargo pendiente ARS Deterioro registrado ARS Valor neto registrado ARS Estado Detalle":
+        - columnheader "Constancia"
+        - columnheader "Identificación"
+        - columnheader "Clase"
+        - columnheader "Costo registrado ARS"
+        - columnheader "Depreciación registrada ARS"
+        - columnheader "Cargo pendiente ARS"
+        - columnheader "Deterioro registrado ARS"
+        - columnheader "Valor neto registrado ARS"
+        - columnheader "Estado"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-BU-00000001 Máquina textil QA Maquinarias $ 1.500,00 $ 540,00 $ 0,00 $ 0,00 $ 960,00 En uso Ver alta":
+        - cell "INT-BU-00000001"
+        - cell "Máquina textil QA"
+        - cell "Maquinarias"
+        - cell "$ 1.500,00"
+        - cell "$ 540,00"
+        - cell "$ 0,00"
+        - cell "$ 0,00"
+        - cell "$ 960,00"
+        - cell "En uso"
+        - cell "Ver alta":
+          - button "Ver alta"
+  - heading "Depreciaciones conservadas" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 2 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte global Referencia Cargo global ARS Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte global"
+        - columnheader "Referencia"
+        - columnheader "Cargo global ARS"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-DP-00000001 11/10/2026 Cargo original antes del ajuste $ 360,00 Administrador Ver depreciación":
+        - cell "INT-DP-00000001"
+        - cell "11/10/2026"
+        - cell "Cargo original antes del ajuste"
+        - cell "$ 360,00"
+        - cell "Administrador"
+        - cell "Ver depreciación":
+          - button "Ver depreciación"
+      - row "INT-DP-00000002 19/10/2026 Depreciación conciliada QA 2026 $ 360,00 Administrador Ver depreciación":
+        - cell "INT-DP-00000002"
+        - cell "19/10/2026"
+        - cell "Depreciación conciliada QA 2026"
+        - cell "$ 360,00"
+        - cell "Administrador"
+        - cell "Ver depreciación":
+          - button "Ver depreciación"
+  - heading "Puestas en marcha conservadas" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - heading "Conciliar moneda de cierre por bien de uso" [level=2]
+  - generic: Enlazá el ajuste INT-AI con todos los bienes vigentes y los saldos ajenos al registro. El reparto conserva las antigüedades y centavos de las fuentes. La conciliación incorpora la base para las operaciones posteriores y conserva los cortes históricos.
+  - generic: Ajuste contabilizado para conciliar bienes
+  - combobox "Ajuste contabilizado para conciliar bienes":
+    - option "Seleccionar ajuste…" [selected]
+    - option "INT-AI-00000001 · 11/10/2026 · Ensayo · Conciliado"
+  - button "Preparar conciliación por bien" [disabled]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Corte Ajuste Referencia Neto conciliado Responsable Detalle":
+        - columnheader "Constancia"
+        - columnheader "Corte"
+        - columnheader "Ajuste"
+        - columnheader "Referencia"
+        - columnheader "Neto conciliado"
+        - columnheader "Responsable"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-CB-00000001 11/10/2026 INT-AI-00000001 Conciliación por bien QA 2026 $ 960,00 Administrador Ver conciliación por bien":
+        - cell "INT-CB-00000001"
+        - cell "11/10/2026"
+        - cell "INT-AI-00000001"
+        - cell "Conciliación por bien QA 2026"
+        - cell "$ 960,00"
+        - cell "Administrador"
+        - cell "Ver conciliación por bien":
+          - button "Ver conciliación por bien"
+  - generic "Última conciliación · INT-CB-00000001"
+  - heading "Evaluaciones de valor recuperable" [level=2]
+  - button "Preparar cuentas de deterioro"
+  - button "Evaluar valor recuperable"
+  - paragraph: Revisá indicios, nivel de comparación y evidencia de VNR o valor de uso. La comparación usa el costo y las conciliaciones de moneda de cierre conservadas por bien. Revisá que el recuperable y las estimaciones estén en la misma base monetaria; cualquier actualización posterior requiere su propia evidencia.
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - heading "Cambios de estimaciones conservados" [level=2]
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 0 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - heading "Todavía no hay registros." [level=3]
+  - paragraph: Los datos que registres aquí aparecerán en los módulos relacionados.
+  - heading "Bajas conservadas" [level=2]
+  - button "Preparar cuentas de bajas"
+  - textbox "Buscar registros":
+    - /placeholder: Buscar en los registros…
+  - generic: 1 registros
+  - button "XLSX":
+    - text: XLSX
+  - button "PDF":
+    - text: PDF
+  - table:
+    - rowgroup:
+      - row "Constancia Fecha Bien Causa Neto retirado ARS Venta neta ARS Resultado ARS Detalle":
+        - columnheader "Constancia"
+        - columnheader "Fecha"
+        - columnheader "Bien"
+        - columnheader "Causa"
+        - columnheader "Neto retirado ARS"
+        - columnheader "Venta neta ARS"
+        - columnheader "Resultado ARS"
+        - columnheader "Detalle"
+    - rowgroup:
+      - row "INT-BA-00000001 19/10/2026 INT-BU-00000001 Pérdida $ 600,00 $ 0,00 -$ 600,00 Ver baja":
+        - cell "INT-BA-00000001"
+        - cell "19/10/2026"
+        - cell "INT-BU-00000001"
+        - cell "Pérdida"
+        - cell "$ 600,00"
+        - cell "$ 0,00"
+        - cell "-$ 600,00"
+        - cell "Ver baja":
+          - button "Ver baja"
+  - dialog "Constancia INT-BA-00000001":
+    - heading "Constancia INT-BA-00000001" [level=2]
+    - button "Cerrar" [active]:
+    - paragraph: Baja total conciliada QA 2026 · Administrador
+    - paragraph: Pérdida sintética del control; retira costo reexpresado y toda su depreciación al corte.
+    - paragraph:
+      - strong: "Base de moneda de cierre:"
+      - text: INT-CB-00000001, corte 11/10/2026. Revisá que las estimaciones de esta operación estén en la misma base monetaria.
+    - paragraph: INT-BU-00000001 · Pérdida · 19/10/2026
+    - paragraph: "Costo registrado: $ 1.500,00 · Depreciación acumulada: $ 900,00 · Valor neto a retirar: $ 600,00"
+    - paragraph:
+      - strong: "Resultado de la baja: -$ 600,00"
+      - text: · Pérdida
+    - paragraph: El costo y los cargos anteriores quedan como antecedentes. Los asientos retiran el costo y su depreciación acumulada; la venta se reclasifica en otros ingresos. La factura, el IVA, el crédito del cliente y los cobros se conservan. Las indemnizaciones requieren su reconocimiento separado.
+    - generic: 3 registros
+    - table:
+      - rowgroup:
+        - row "Sucursal Cuenta Debe ARS Haber ARS":
+          - columnheader "Sucursal"
+          - columnheader "Cuenta"
+          - columnheader "Debe ARS"
+          - columnheader "Haber ARS"
+      - rowgroup:
+        - row "Casa Central Depreciación acumulada de bienes de uso $ 900,00 $ 0,00":
+          - cell "Casa Central"
+          - cell "Depreciación acumulada de bienes de uso"
+          - cell "$ 900,00"
+          - cell "$ 0,00"
+        - row "Casa Central Valor neto de bajas de bienes de uso $ 600,00 $ 0,00":
+          - cell "Casa Central"
+          - cell "Valor neto de bajas de bienes de uso"
+          - cell "$ 600,00"
+          - cell "$ 0,00"
+        - row "Casa Central Bienes de uso al costo $ 0,00 $ 1.500,00":
+          - cell "Casa Central"
+          - cell "Bienes de uso al costo"
+          - cell "$ 0,00"
+          - cell "$ 1.500,00"
+  - generic: El modelo inicial usa costo nominal y depreciación lineal diaria, con vida útil y residual fundamentados; no presume tasas fiscales. Los cortes incluyen todas las sucursales y contabilizan sólo el cargo nuevo. Los cambios fundamentados de vida útil y residual conservan los cargos anteriores y se aplican hacia adelante. Las bajas totales conservan sus antecedentes y separan su resultado. Las comparaciones de recuperable documentan pérdidas y reversiones, con tope y ajuste de los cargos posteriores. La conciliación de moneda de cierre enlaza el ajuste contabilizado con cada bien y su base futura. Las notas, bajas parciales o diferidas, revaluación y costos de fabricación requieren ampliar sus circuitos antes de emitir estados contables.

@@ -1,0 +1,1992 @@
+{
+  "version": 1,
+  "reexpressions": [],
+  "financialStatements": [],
+  "assetImpairments": [],
+  "assetDisposals": [],
+  "assetReestimates": [],
+  "fixedAssets": [],
+  "assetCommissions": [],
+  "depreciationBatches": [],
+  "journalReversals": [],
+  "revenueAccruals": [],
+  "revenueSettlements": [],
+  "exerciseOpenings": [],
+  "yearEndCloses": [],
+  "serviceCancellations": [],
+  "serviceAccruals": [],
+  "serviceReestimates": [],
+  "serviceSettlements": [],
+  "accountingCloses": [],
+  "cardSettlements": [],
+  "productionPlans": [],
+  "bankStatements": [],
+  "settings": {
+    "legalForm": "Sociedad comercial · forma por definir",
+    "name": "SICA Textil · IVA compras",
+    "cuit": "30712345671",
+    "iva": "Responsable Inscripto",
+    "province": "Tucumán",
+    "address": "",
+    "industry": "Comercio textil",
+    "defaultVat": "21",
+    "skuMode": "Madre-Hijo-Nieto",
+    "exerciseStart": "2026-01-01",
+    "exerciseEnd": "2026-12-31",
+    "closedUntil": "",
+    "onboarding": true,
+    "accountingStandard": "RT 54 / NUA · revisar adopción jurisdiccional",
+    "accountMap": {
+      "customers": "1.1.3",
+      "suppliers": "2.1.1",
+      "sales": "4.1",
+      "purchases": "5.1",
+      "vatDebit": "2.1.2",
+      "vatCredit": "1.1.4",
+      "cash": "1.1.1",
+      "bank": "1.1.2",
+      "cheques": "1.1.5",
+      "ownCheques": "2.1.5",
+      "cardReceivables": "1.1.8",
+      "cardFees": "5.3",
+      "withholdingCredit": "1.1.6",
+      "withholdingDebt": "2.1.3",
+      "perceptionsCredit": "1.1.7",
+      "perceptionsDebt": "2.1.4",
+      "equity": "3.1",
+      "commissions": "5.2"
+    }
+  },
+  "parties": [
+    {
+      "id": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "side": "proveedor",
+      "code": "PRO-00001",
+      "name": "Textiles Ñandú SA",
+      "cuit": "20123456786",
+      "iva": "Responsable Inscripto",
+      "address": "San Miguel de Tucumán",
+      "province": "Tucumán",
+      "phone": "",
+      "email": "",
+      "paymentTerms": "Cuenta corriente 30 días",
+      "priceList": "general",
+      "discount": 0,
+      "seller": "",
+      "commission": 0,
+      "paymentMethod": "Transferencia",
+      "transport": "Retira en sucursal",
+      "category": "Ropa y Accesorios",
+      "isSeller": true
+    },
+    {
+      "id": "9fc83fda-4c41-4661-a6be-d34de0411acb",
+      "side": "cliente",
+      "code": "CLI-00001",
+      "name": "Cliente mayorista de prueba",
+      "cuit": "20123456786",
+      "iva": "Responsable Inscripto",
+      "address": "San Miguel de Tucumán",
+      "province": "Tucumán",
+      "phone": "",
+      "email": "",
+      "paymentTerms": "Cuenta corriente 30 días",
+      "priceList": "general",
+      "discount": 0,
+      "seller": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "commission": 3,
+      "paymentMethod": "Transferencia",
+      "transport": "Retira en sucursal",
+      "category": "",
+      "isSeller": true
+    },
+    {
+      "id": "supplier-c",
+      "side": "proveedor",
+      "code": "PRO-C",
+      "name": "Proveedor C de ensayo",
+      "cuit": "30712345671",
+      "iva": "Responsable Monotributo",
+      "address": "San Miguel de Tucumán",
+      "province": "Tucumán",
+      "phone": "",
+      "email": "",
+      "paymentTerms": "Cuenta corriente 30 días",
+      "priceList": "general",
+      "discount": 0,
+      "seller": "",
+      "commission": 0,
+      "paymentMethod": "Transferencia",
+      "transport": "Retira en sucursal",
+      "category": "Ropa y Accesorios",
+      "isSeller": true
+    }
+  ],
+  "products": [
+    {
+      "id": "2bc88bf2-aae9-4c0e-a4a8-0f552f42bd93",
+      "sku": "REM",
+      "name": "Remera de algodón",
+      "kind": "Producto",
+      "category": "Ropa y Accesorios",
+      "subcategory": "Indumentaria",
+      "tax": "21",
+      "barcode": "",
+      "minimum": 5,
+      "supplier": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "negative": false,
+      "brand": "SICA Demo",
+      "model": "Clásica",
+      "parent": "",
+      "variants": "Talle, Color",
+      "unit": "Unidad",
+      "price": 1500000,
+      "cost": 800000
+    },
+    {
+      "id": "5390963a-85f7-4563-81cd-1aebb081c5bd",
+      "sku": "REM-M",
+      "name": "Remera de algodón · Talle M",
+      "kind": "Producto",
+      "category": "Ropa y Accesorios",
+      "subcategory": "Indumentaria",
+      "tax": "21",
+      "barcode": "",
+      "minimum": 5,
+      "supplier": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "negative": false,
+      "brand": "SICA Demo",
+      "model": "Clásica",
+      "parent": "2bc88bf2-aae9-4c0e-a4a8-0f552f42bd93",
+      "variants": "Talle, Color",
+      "unit": "Unidad",
+      "price": 1500000,
+      "cost": 800000
+    },
+    {
+      "id": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a",
+      "sku": "REM-M-NEG",
+      "name": "Remera de algodón · M · Negro",
+      "kind": "Producto",
+      "category": "Ropa y Accesorios",
+      "subcategory": "Indumentaria",
+      "tax": "21",
+      "barcode": "",
+      "minimum": 5,
+      "supplier": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "negative": false,
+      "brand": "SICA Demo",
+      "model": "Clásica",
+      "parent": "5390963a-85f7-4563-81cd-1aebb081c5bd",
+      "variants": "Talle, Color",
+      "unit": "Unidad",
+      "price": 1500000,
+      "cost": 800000
+    },
+    {
+      "id": "06df88e5-9779-4ae7-99f5-3f463b3ea648",
+      "sku": "PANT-42-AZ",
+      "name": "Pantalón · 42 · Azul",
+      "kind": "Producto",
+      "category": "Ropa y Accesorios",
+      "subcategory": "Indumentaria",
+      "tax": "21",
+      "barcode": "",
+      "minimum": 5,
+      "supplier": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "negative": false,
+      "brand": "SICA Demo",
+      "model": "Clásica",
+      "parent": "",
+      "variants": "Talle, Color",
+      "unit": "Unidad",
+      "price": 3000000,
+      "cost": 1800000
+    },
+    {
+      "id": "iva-product-0",
+      "sku": "IVA-0",
+      "name": "Artículo de ensayo IVA 10.5",
+      "kind": "Producto",
+      "category": "Ropa y Accesorios",
+      "subcategory": "Indumentaria",
+      "tax": "21",
+      "barcode": "",
+      "minimum": 5,
+      "supplier": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "negative": false,
+      "brand": "SICA Demo",
+      "model": "Clásica",
+      "parent": "",
+      "variants": "",
+      "unit": "Unidad",
+      "price": 1500000,
+      "cost": 800000
+    },
+    {
+      "id": "iva-product-1",
+      "sku": "IVA-1",
+      "name": "Artículo de ensayo IVA Exento",
+      "kind": "Producto",
+      "category": "Ropa y Accesorios",
+      "subcategory": "Indumentaria",
+      "tax": "21",
+      "barcode": "",
+      "minimum": 5,
+      "supplier": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "negative": false,
+      "brand": "SICA Demo",
+      "model": "Clásica",
+      "parent": "",
+      "variants": "",
+      "unit": "Unidad",
+      "price": 1500000,
+      "cost": 800000
+    },
+    {
+      "id": "iva-product-2",
+      "sku": "IVA-2",
+      "name": "Artículo de ensayo IVA No gravado",
+      "kind": "Producto",
+      "category": "Ropa y Accesorios",
+      "subcategory": "Indumentaria",
+      "tax": "21",
+      "barcode": "",
+      "minimum": 5,
+      "supplier": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "negative": false,
+      "brand": "SICA Demo",
+      "model": "Clásica",
+      "parent": "",
+      "variants": "",
+      "unit": "Unidad",
+      "price": 1500000,
+      "cost": 800000
+    },
+    {
+      "id": "iva-product-3",
+      "sku": "IVA-3",
+      "name": "Artículo de ensayo IVA 27",
+      "kind": "Producto",
+      "category": "Ropa y Accesorios",
+      "subcategory": "Indumentaria",
+      "tax": "21",
+      "barcode": "",
+      "minimum": 5,
+      "supplier": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "negative": false,
+      "brand": "SICA Demo",
+      "model": "Clásica",
+      "parent": "",
+      "variants": "",
+      "unit": "Unidad",
+      "price": 1500000,
+      "cost": 800000
+    },
+    {
+      "id": "iva-product-4",
+      "sku": "IVA-4",
+      "name": "Artículo de ensayo IVA 0",
+      "kind": "Producto",
+      "category": "Ropa y Accesorios",
+      "subcategory": "Indumentaria",
+      "tax": "21",
+      "barcode": "",
+      "minimum": 5,
+      "supplier": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "negative": false,
+      "brand": "SICA Demo",
+      "model": "Clásica",
+      "parent": "",
+      "variants": "",
+      "unit": "Unidad",
+      "price": 1500000,
+      "cost": 800000
+    }
+  ],
+  "documents": [
+    {
+      "kind": "factura",
+      "side": "proveedor",
+      "letter": "A",
+      "date": "2026-10-15",
+      "due": "2026-10-30",
+      "branchId": "central",
+      "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "lines": [
+        {
+          "productId": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a",
+          "description": "Remera de algodón · M · Negro",
+          "quantity": 1,
+          "unit": "Unidad",
+          "price": 10000,
+          "tax": "21",
+          "discount": 0
+        },
+        {
+          "productId": "iva-product-0",
+          "description": "Artículo de ensayo IVA 10.5",
+          "quantity": 1,
+          "unit": "Unidad",
+          "price": 20000,
+          "tax": "10.5",
+          "discount": 0
+        },
+        {
+          "productId": "iva-product-1",
+          "description": "Artículo de ensayo IVA Exento",
+          "quantity": 1,
+          "unit": "Unidad",
+          "price": 5000,
+          "tax": "Exento",
+          "discount": 0
+        },
+        {
+          "productId": "iva-product-2",
+          "description": "Artículo de ensayo IVA No gravado",
+          "quantity": 1,
+          "unit": "Unidad",
+          "price": 2000,
+          "tax": "No gravado",
+          "discount": 0
+        }
+      ],
+      "payments": [],
+      "perceptions": 300,
+      "sourceId": "",
+      "allocations": [],
+      "observations": "Datos sintéticos para preparar IVA compras.",
+      "responsible": "Administrador",
+      "costCenter": "",
+      "depositId": "principal",
+      "official": false,
+      "valued": true,
+      "seller": "",
+      "priceList": "general",
+      "net": 37000,
+      "vat": 4200,
+      "total": 41500,
+      "id": "e79b1853-671d-4af0-a630-1e7e0e2b767e",
+      "number": "INT-FC-A-00001-00000001",
+      "fiscalStatus": "pendiente"
+    },
+    {
+      "kind": "credito",
+      "side": "proveedor",
+      "letter": "A",
+      "date": "2026-10-16",
+      "due": "2026-10-30",
+      "branchId": "central",
+      "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "lines": [
+        {
+          "productId": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a",
+          "description": "Remera de algodón · M · Negro",
+          "quantity": 1,
+          "unit": "Unidad",
+          "price": 1000,
+          "tax": "21",
+          "discount": 0
+        }
+      ],
+      "payments": [],
+      "perceptions": 0,
+      "sourceId": "e79b1853-671d-4af0-a630-1e7e0e2b767e",
+      "allocations": [
+        {
+          "documentId": "e79b1853-671d-4af0-a630-1e7e0e2b767e",
+          "amount": 1210
+        }
+      ],
+      "observations": "Datos sintéticos para preparar IVA compras.",
+      "responsible": "Administrador",
+      "costCenter": "",
+      "depositId": "principal",
+      "official": false,
+      "valued": true,
+      "seller": "",
+      "priceList": "general",
+      "net": 1000,
+      "vat": 210,
+      "total": 1210,
+      "id": "73be782f-d14c-40ef-9b50-7703886149ac",
+      "number": "INT-NC-A-00001-00000001",
+      "fiscalStatus": "pendiente"
+    },
+    {
+      "kind": "debito",
+      "side": "proveedor",
+      "letter": "A",
+      "date": "2026-10-16",
+      "due": "2026-10-30",
+      "branchId": "central",
+      "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "lines": [
+        {
+          "productId": "iva-product-3",
+          "description": "Artículo de ensayo IVA 27",
+          "quantity": 1,
+          "unit": "Unidad",
+          "price": 1000,
+          "tax": "27",
+          "discount": 0
+        }
+      ],
+      "payments": [],
+      "perceptions": 0,
+      "sourceId": "e79b1853-671d-4af0-a630-1e7e0e2b767e",
+      "allocations": [],
+      "observations": "Datos sintéticos para preparar IVA compras.",
+      "responsible": "Administrador",
+      "costCenter": "",
+      "depositId": "principal",
+      "official": false,
+      "valued": true,
+      "seller": "",
+      "priceList": "general",
+      "net": 1000,
+      "vat": 270,
+      "total": 1270,
+      "id": "9f74afd2-350b-4fb7-bedf-e18a2555a86e",
+      "number": "INT-ND-A-00001-00000001",
+      "fiscalStatus": "pendiente"
+    },
+    {
+      "kind": "factura",
+      "side": "proveedor",
+      "letter": "B",
+      "date": "2026-10-17",
+      "due": "2026-10-30",
+      "branchId": "iva-other-branch",
+      "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "lines": [
+        {
+          "productId": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a",
+          "description": "Remera de algodón · M · Negro",
+          "quantity": 1,
+          "unit": "Unidad",
+          "price": 2420,
+          "tax": "21",
+          "discount": 0
+        },
+        {
+          "productId": "iva-product-1",
+          "description": "Artículo de ensayo IVA Exento",
+          "quantity": 1,
+          "unit": "Unidad",
+          "price": 600,
+          "tax": "Exento",
+          "discount": 0
+        }
+      ],
+      "payments": [],
+      "perceptions": 40,
+      "sourceId": "",
+      "allocations": [],
+      "observations": "Datos sintéticos para preparar IVA compras.",
+      "responsible": "Administrador",
+      "costCenter": "",
+      "depositId": "principal",
+      "official": false,
+      "valued": true,
+      "seller": "",
+      "priceList": "general",
+      "net": 2600,
+      "vat": 420,
+      "total": 3060,
+      "id": "d644bfaa-f915-4615-adc8-f50b472cbd9e",
+      "number": "INT-FC-B-00002-00000001",
+      "fiscalStatus": "pendiente"
+    },
+    {
+      "kind": "factura",
+      "side": "proveedor",
+      "letter": "C",
+      "date": "2026-10-17",
+      "due": "2026-10-30",
+      "branchId": "central",
+      "partyId": "supplier-c",
+      "lines": [
+        {
+          "productId": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a",
+          "description": "Remera de algodón · M · Negro",
+          "quantity": 1,
+          "unit": "Unidad",
+          "price": 3000,
+          "tax": "21",
+          "discount": 0
+        }
+      ],
+      "payments": [],
+      "perceptions": 0,
+      "sourceId": "",
+      "allocations": [],
+      "observations": "Datos sintéticos para preparar IVA compras.",
+      "responsible": "Administrador",
+      "costCenter": "",
+      "depositId": "principal",
+      "official": false,
+      "valued": true,
+      "seller": "",
+      "priceList": "general",
+      "net": 3000,
+      "vat": 0,
+      "total": 3000,
+      "id": "de96f546-a0f7-4505-ac49-968a121575d5",
+      "number": "INT-FC-C-00001-00000001",
+      "fiscalStatus": "pendiente"
+    },
+    {
+      "kind": "factura",
+      "side": "proveedor",
+      "letter": "X",
+      "date": "2026-10-17",
+      "due": "2026-10-30",
+      "branchId": "central",
+      "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+      "lines": [
+        {
+          "productId": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a",
+          "description": "Remera de algodón · M · Negro",
+          "quantity": 1,
+          "unit": "Unidad",
+          "price": 700,
+          "tax": "21",
+          "discount": 0
+        }
+      ],
+      "payments": [],
+      "perceptions": 0,
+      "sourceId": "",
+      "allocations": [],
+      "observations": "Datos sintéticos para preparar IVA compras.",
+      "responsible": "Administrador",
+      "costCenter": "",
+      "depositId": "principal",
+      "official": false,
+      "valued": true,
+      "seller": "",
+      "priceList": "general",
+      "net": 700,
+      "vat": 0,
+      "total": 700,
+      "id": "dea54d54-98f2-4ad3-8460-396024ca253e",
+      "number": "INT-FC-X-00001-00000001",
+      "fiscalStatus": "interno"
+    }
+  ],
+  "cheques": [],
+  "stockMoves": [
+    {
+      "id": "83a533eb-e384-468e-9000-c048d395d263",
+      "date": "2026-10-17",
+      "productId": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a",
+      "depositId": "principal",
+      "quantity": 40,
+      "reason": "Stock inicial de ejemplo (sin valuación contable)",
+      "documentId": "",
+      "branchId": "central"
+    },
+    {
+      "id": "c0770a2b-718e-4a23-b882-1635f099913b",
+      "date": "2026-10-17",
+      "productId": "06df88e5-9779-4ae7-99f5-3f463b3ea648",
+      "depositId": "principal",
+      "quantity": 20,
+      "reason": "Stock inicial de ejemplo (sin valuación contable)",
+      "documentId": "",
+      "branchId": "central"
+    }
+  ],
+  "stockTransfers": [],
+  "stockReturns": [],
+  "treasuryMoves": [],
+  "entries": [
+    {
+      "id": "ecda19d6-6deb-4927-bbaa-76e549600de1",
+      "date": "2026-10-15",
+      "concept": "INT-FC-A-00001-00000001",
+      "branchId": "central",
+      "documentId": "e79b1853-671d-4af0-a630-1e7e0e2b767e",
+      "lines": [
+        {
+          "accountId": "5.1",
+          "debit": 37000,
+          "credit": 0
+        },
+        {
+          "accountId": "1.1.4",
+          "debit": 4200,
+          "credit": 0
+        },
+        {
+          "accountId": "1.1.7",
+          "debit": 300,
+          "credit": 0
+        },
+        {
+          "accountId": "2.1.1",
+          "debit": 0,
+          "credit": 41500
+        }
+      ]
+    },
+    {
+      "id": "aef9bddc-5b24-404a-93b5-8e5d7bc73444",
+      "date": "2026-10-16",
+      "concept": "INT-NC-A-00001-00000001",
+      "branchId": "central",
+      "documentId": "73be782f-d14c-40ef-9b50-7703886149ac",
+      "lines": [
+        {
+          "accountId": "5.1",
+          "debit": 0,
+          "credit": 1000
+        },
+        {
+          "accountId": "1.1.4",
+          "debit": 0,
+          "credit": 210
+        },
+        {
+          "accountId": "2.1.1",
+          "debit": 1210,
+          "credit": 0
+        }
+      ]
+    },
+    {
+      "id": "54c72a04-5165-4dea-b48c-dc501b26cf18",
+      "date": "2026-10-16",
+      "concept": "INT-ND-A-00001-00000001",
+      "branchId": "central",
+      "documentId": "9f74afd2-350b-4fb7-bedf-e18a2555a86e",
+      "lines": [
+        {
+          "accountId": "5.1",
+          "debit": 1000,
+          "credit": 0
+        },
+        {
+          "accountId": "1.1.4",
+          "debit": 270,
+          "credit": 0
+        },
+        {
+          "accountId": "2.1.1",
+          "debit": 0,
+          "credit": 1270
+        }
+      ]
+    },
+    {
+      "id": "60a138a3-b95f-4087-9a08-cf0964ed0d57",
+      "date": "2026-10-17",
+      "concept": "INT-FC-B-00002-00000001",
+      "branchId": "iva-other-branch",
+      "documentId": "d644bfaa-f915-4615-adc8-f50b472cbd9e",
+      "lines": [
+        {
+          "accountId": "5.1",
+          "debit": 3020,
+          "credit": 0
+        },
+        {
+          "accountId": "1.1.7",
+          "debit": 40,
+          "credit": 0
+        },
+        {
+          "accountId": "2.1.1",
+          "debit": 0,
+          "credit": 3060
+        }
+      ]
+    },
+    {
+      "id": "228020b9-8e91-4b75-94cf-0c317bf8158e",
+      "date": "2026-10-17",
+      "concept": "INT-FC-C-00001-00000001",
+      "branchId": "central",
+      "documentId": "de96f546-a0f7-4505-ac49-968a121575d5",
+      "lines": [
+        {
+          "accountId": "5.1",
+          "debit": 3000,
+          "credit": 0
+        },
+        {
+          "accountId": "2.1.1",
+          "debit": 0,
+          "credit": 3000
+        }
+      ]
+    },
+    {
+      "id": "bfd211aa-556d-4a37-bd40-94d52be2e426",
+      "date": "2026-10-17",
+      "concept": "INT-FC-X-00001-00000001",
+      "branchId": "central",
+      "documentId": "dea54d54-98f2-4ad3-8460-396024ca253e",
+      "lines": [
+        {
+          "accountId": "5.1",
+          "debit": 700,
+          "credit": 0
+        },
+        {
+          "accountId": "2.1.1",
+          "debit": 0,
+          "credit": 700
+        }
+      ]
+    }
+  ],
+  "audit": [],
+  "imports": [],
+  "masters": {
+    "branches": [
+      {
+        "id": "central",
+        "name": "Casa Central",
+        "unit": "Principal",
+        "point": "00001",
+        "address": "",
+        "active": true
+      },
+      {
+        "id": "iva-other-branch",
+        "name": "Sucursal de ensayo IVA",
+        "point": 2,
+        "active": true
+      }
+    ],
+    "deposits": [
+      {
+        "id": "principal",
+        "name": "Depósito principal",
+        "branchId": "central",
+        "address": ""
+      }
+    ],
+    "treasury": [
+      {
+        "id": "caja-principal",
+        "name": "Caja principal",
+        "type": "Caja",
+        "branchId": "central",
+        "bank": "",
+        "cbu": "",
+        "accountId": "1.1.1"
+      },
+      {
+        "id": "banco-demo",
+        "name": "Banco de prueba",
+        "type": "Banco",
+        "branchId": "central",
+        "bank": "nacion",
+        "cbu": "",
+        "accountId": "1.1.2"
+      }
+    ],
+    "accounts": [
+      {
+        "id": "1.1.1",
+        "code": "1.1.1",
+        "name": "Caja",
+        "group": "Activo",
+        "postable": true
+      },
+      {
+        "id": "1.1.2",
+        "code": "1.1.2",
+        "name": "Bancos",
+        "group": "Activo",
+        "postable": true
+      },
+      {
+        "id": "1.1.3",
+        "code": "1.1.3",
+        "name": "Deudores por ventas",
+        "group": "Activo",
+        "postable": true
+      },
+      {
+        "id": "1.1.4",
+        "code": "1.1.4",
+        "name": "IVA crédito fiscal",
+        "group": "Activo",
+        "postable": true
+      },
+      {
+        "id": "1.1.5",
+        "code": "1.1.5",
+        "name": "Valores a depositar",
+        "group": "Activo",
+        "postable": true
+      },
+      {
+        "id": "1.1.6",
+        "code": "1.1.6",
+        "name": "Retenciones sufridas",
+        "group": "Activo",
+        "postable": true
+      },
+      {
+        "id": "1.1.7",
+        "code": "1.1.7",
+        "name": "Percepciones sufridas",
+        "group": "Activo",
+        "postable": true
+      },
+      {
+        "id": "1.1.8",
+        "code": "1.1.8",
+        "name": "Cupones de tarjetas a cobrar",
+        "group": "Activo",
+        "postable": true
+      },
+      {
+        "id": "2.1.1",
+        "code": "2.1.1",
+        "name": "Proveedores",
+        "group": "Pasivo",
+        "postable": true
+      },
+      {
+        "id": "2.1.2",
+        "code": "2.1.2",
+        "name": "IVA débito fiscal",
+        "group": "Pasivo",
+        "postable": true
+      },
+      {
+        "id": "2.1.3",
+        "code": "2.1.3",
+        "name": "Retenciones a depositar",
+        "group": "Pasivo",
+        "postable": true
+      },
+      {
+        "id": "2.1.4",
+        "code": "2.1.4",
+        "name": "Percepciones a depositar",
+        "group": "Pasivo",
+        "postable": true
+      },
+      {
+        "id": "2.1.5",
+        "code": "2.1.5",
+        "name": "Cheques propios emitidos",
+        "group": "Pasivo",
+        "postable": true
+      },
+      {
+        "id": "3.1",
+        "code": "3.1",
+        "name": "Capital y saldos iniciales",
+        "group": "Patrimonio neto",
+        "postable": true
+      },
+      {
+        "id": "4.1",
+        "code": "4.1",
+        "name": "Ventas",
+        "group": "Ingresos",
+        "postable": true
+      },
+      {
+        "id": "5.1",
+        "code": "5.1",
+        "name": "Compras y gastos",
+        "group": "Gastos",
+        "postable": true
+      },
+      {
+        "id": "5.2",
+        "code": "5.2",
+        "name": "Comisiones de vendedores",
+        "group": "Gastos",
+        "postable": true
+      },
+      {
+        "id": "5.3",
+        "code": "5.3",
+        "name": "Cargos de tarjetas",
+        "group": "Gastos",
+        "postable": true
+      }
+    ],
+    "users": [
+      {
+        "id": "admin",
+        "name": "Administrador",
+        "username": "admin",
+        "role": "Administrador General",
+        "active": true,
+        "permissions": "",
+        "salt": "74c3471361476d76554ce55551146b102c13b14161f6447b",
+        "passwordIterations": 600000,
+        "passwordHash": "f63eaa6a9165964ee5c1b05ad25501848c6b8db554878810996969adf50a69dc"
+      }
+    ],
+    "priceLists": [
+      {
+        "id": "general",
+        "name": "Lista general",
+        "branchId": "central",
+        "adjustment": 0
+      }
+    ],
+    "prices": [],
+    "categories": [
+      {
+        "id": "rubro-0",
+        "name": "Alimentos y Bebidas",
+        "parent": ""
+      },
+      {
+        "id": "rubro-1",
+        "name": "Electrónica y Tecnología",
+        "parent": ""
+      },
+      {
+        "id": "rubro-2",
+        "name": "Ropa y Accesorios",
+        "parent": ""
+      },
+      {
+        "id": "rubro-3",
+        "name": "Muebles y Decoración",
+        "parent": ""
+      },
+      {
+        "id": "rubro-4",
+        "name": "Ferretería y Construcción",
+        "parent": ""
+      },
+      {
+        "id": "rubro-5",
+        "name": "Vehículos y Repuestos",
+        "parent": ""
+      },
+      {
+        "id": "rubro-6",
+        "name": "Higiene y Cuidado Personal",
+        "parent": ""
+      },
+      {
+        "id": "rubro-7",
+        "name": "Juguetería y Juegos",
+        "parent": ""
+      },
+      {
+        "id": "rubro-8",
+        "name": "Papelería",
+        "parent": ""
+      },
+      {
+        "id": "rubro-9",
+        "name": "Agrícolas y Ganaderos",
+        "parent": ""
+      },
+      {
+        "id": "rubro-10",
+        "name": "Químicos y Farmacéuticos",
+        "parent": ""
+      },
+      {
+        "id": "rubro-11",
+        "name": "Deportivos y Entretenimiento",
+        "parent": ""
+      },
+      {
+        "id": "rubro-12",
+        "name": "Consultoría",
+        "parent": ""
+      },
+      {
+        "id": "rubro-13",
+        "name": "Marketing y Publicidad",
+        "parent": ""
+      },
+      {
+        "id": "rubro-14",
+        "name": "Financieros",
+        "parent": ""
+      },
+      {
+        "id": "rubro-15",
+        "name": "Salud y Bienestar",
+        "parent": ""
+      },
+      {
+        "id": "rubro-16",
+        "name": "Educativos",
+        "parent": ""
+      },
+      {
+        "id": "rubro-17",
+        "name": "Transporte y Logística",
+        "parent": ""
+      },
+      {
+        "id": "rubro-18",
+        "name": "Tecnología",
+        "parent": ""
+      },
+      {
+        "id": "rubro-19",
+        "name": "Legales y Jurídicos",
+        "parent": ""
+      },
+      {
+        "id": "rubro-20",
+        "name": "Mantenimiento y Reparación",
+        "parent": ""
+      },
+      {
+        "id": "rubro-21",
+        "name": "Entretenimiento y Ocio",
+        "parent": ""
+      },
+      {
+        "id": "rubro-22",
+        "name": "Inmobiliarios",
+        "parent": ""
+      },
+      {
+        "id": "rubro-23",
+        "name": "Turismo y Hospitalidad",
+        "parent": ""
+      },
+      {
+        "id": "rubro-24",
+        "name": "Seguridad",
+        "parent": ""
+      },
+      {
+        "id": "rubro-25",
+        "name": "Recursos Humanos",
+        "parent": ""
+      },
+      {
+        "id": "rubro-26",
+        "name": "Belleza y Estética",
+        "parent": ""
+      },
+      {
+        "id": "rubro-27",
+        "name": "Diseño y Arquitectura",
+        "parent": ""
+      }
+    ],
+    "costCenters": [
+      {
+        "id": "costo-0",
+        "name": "Gastos estructurales"
+      },
+      {
+        "id": "costo-1",
+        "name": "Gastos de producción"
+      },
+      {
+        "id": "costo-2",
+        "name": "Materias primas"
+      },
+      {
+        "id": "costo-3",
+        "name": "Producto terminado"
+      },
+      {
+        "id": "costo-4",
+        "name": "Servicios industriales"
+      },
+      {
+        "id": "costo-5",
+        "name": "Gastos administrativos"
+      },
+      {
+        "id": "costo-6",
+        "name": "Sueldos de producción"
+      },
+      {
+        "id": "costo-7",
+        "name": "Sueldos de administración"
+      }
+    ],
+    "paymentMethods": [
+      {
+        "id": "medio-0",
+        "name": "Efectivo"
+      },
+      {
+        "id": "medio-1",
+        "name": "Transferencia"
+      },
+      {
+        "id": "medio-2",
+        "name": "Mercado Pago"
+      },
+      {
+        "id": "medio-3",
+        "name": "Cheque"
+      },
+      {
+        "id": "medio-4",
+        "name": "Tarjeta de crédito"
+      },
+      {
+        "id": "medio-5",
+        "name": "Tarjeta de débito"
+      }
+    ],
+    "banks": [
+      {
+        "id": "bcra-00340",
+        "name": "BACS BANCO DE CREDITO Y SECURITIZAC",
+        "code": "00340",
+        "bcraName": "BACS BANCO DE CREDITO Y SECURITIZAC",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00017",
+        "name": "BANCO BBVA ARGENTINA S.A.",
+        "code": "00017",
+        "bcraName": "BANCO BBVA ARGENTINA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00426",
+        "name": "BANCO BICA S.A.",
+        "code": "00426",
+        "bcraName": "BANCO BICA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00331",
+        "name": "BANCO CETELEM ARGENTINA S.A.",
+        "code": "00331",
+        "bcraName": "BANCO CETELEM ARGENTINA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00319",
+        "name": "BANCO CMF S.A.",
+        "code": "00319",
+        "bcraName": "BANCO CMF S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00431",
+        "name": "BANCO COINAG S.A.",
+        "code": "00431",
+        "bcraName": "BANCO COINAG S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00389",
+        "name": "BANCO COLUMBIA S.A.",
+        "code": "00389",
+        "bcraName": "BANCO COLUMBIA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00299",
+        "name": "BANCO COMAFI SOCIEDAD ANONIMA",
+        "code": "00299",
+        "bcraName": "BANCO COMAFI SOCIEDAD ANONIMA",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00191",
+        "name": "BANCO CREDICOOP COOPERATIVO LIMITAD",
+        "code": "00191",
+        "bcraName": "BANCO CREDICOOP COOPERATIVO LIMITAD",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00432",
+        "name": "BANCO DE COMERCIO S.A.",
+        "code": "00432",
+        "bcraName": "BANCO DE COMERCIO S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00094",
+        "name": "BANCO DE CORRIENTES S.A.",
+        "code": "00094",
+        "bcraName": "BANCO DE CORRIENTES S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00315",
+        "name": "BANCO DE FORMOSA S.A.",
+        "code": "00315",
+        "bcraName": "BANCO DE FORMOSA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "galicia",
+        "name": "BANCO DE GALICIA Y BUENOS AIRES S.A",
+        "code": "00007",
+        "bcraName": "BANCO DE GALICIA Y BUENOS AIRES S.A",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00300",
+        "name": "BANCO DE INVERSION Y COMERCIO EXTER",
+        "code": "00300",
+        "bcraName": "BANCO DE INVERSION Y COMERCIO EXTER",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00029",
+        "name": "BANCO DE LA CIUDAD DE BUENOS AIRES",
+        "code": "00029",
+        "bcraName": "BANCO DE LA CIUDAD DE BUENOS AIRES",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "nacion",
+        "name": "BANCO DE LA NACION ARGENTINA",
+        "code": "00011",
+        "bcraName": "BANCO DE LA NACION ARGENTINA",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00093",
+        "name": "BANCO DE LA PAMPA SA",
+        "code": "00093",
+        "bcraName": "BANCO DE LA PAMPA SA",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00014",
+        "name": "BANCO DE LA PROVINCIA DE BUENOS AIR",
+        "code": "00014",
+        "bcraName": "BANCO DE LA PROVINCIA DE BUENOS AIR",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00020",
+        "name": "BANCO DE LA PROVINCIA DE CORDOBA S.",
+        "code": "00020",
+        "bcraName": "BANCO DE LA PROVINCIA DE CORDOBA S.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00269",
+        "name": "BANCO DE LA REPUBLICA ORIENTAL DEL ",
+        "code": "00269",
+        "bcraName": "BANCO DE LA REPUBLICA ORIENTAL DEL ",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00045",
+        "name": "BANCO DE SAN JUAN S.A.",
+        "code": "00045",
+        "bcraName": "BANCO DE SAN JUAN S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00086",
+        "name": "BANCO DE SANTA CRUZ S.A.",
+        "code": "00086",
+        "bcraName": "BANCO DE SANTA CRUZ S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00321",
+        "name": "BANCO DE SANTIAGO DEL ESTERO S.A.",
+        "code": "00321",
+        "bcraName": "BANCO DE SANTIAGO DEL ESTERO S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00332",
+        "name": "BANCO DE SERVICIOS FINANCIEROS CARR",
+        "code": "00332",
+        "bcraName": "BANCO DE SERVICIOS FINANCIEROS CARR",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00338",
+        "name": "BANCO DE SERVICIOS Y TRANSACCIONES ",
+        "code": "00338",
+        "bcraName": "BANCO DE SERVICIOS Y TRANSACCIONES ",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00198",
+        "name": "BANCO DE VALORES S.A.",
+        "code": "00198",
+        "bcraName": "BANCO DE VALORES S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00083",
+        "name": "BANCO DEL CHUBUT S.A.",
+        "code": "00083",
+        "bcraName": "BANCO DEL CHUBUT S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00310",
+        "name": "BANCO DEL SOL S.A.",
+        "code": "00310",
+        "bcraName": "BANCO DEL SOL S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00448",
+        "name": "BANCO DINO S.A.",
+        "code": "00448",
+        "bcraName": "BANCO DINO S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00044",
+        "name": "BANCO HIPOTECARIO S.A.",
+        "code": "00044",
+        "bcraName": "BANCO HIPOTECARIO S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00322",
+        "name": "BANCO INDUSTRIAL S.A.",
+        "code": "00322",
+        "bcraName": "BANCO INDUSTRIAL S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00305",
+        "name": "BANCO JULIO SOCIEDAD ANONIMA",
+        "code": "00305",
+        "bcraName": "BANCO JULIO SOCIEDAD ANONIMA",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "macro",
+        "name": "BANCO MACRO S.A.",
+        "code": "00285",
+        "bcraName": "BANCO MACRO S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00254",
+        "name": "BANCO MARIVA S.A.",
+        "code": "00254",
+        "bcraName": "BANCO MARIVA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00341",
+        "name": "BANCO MASVENTAS S.A.",
+        "code": "00341",
+        "bcraName": "BANCO MASVENTAS S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00281",
+        "name": "BANCO MERIDIAN S.A.",
+        "code": "00281",
+        "bcraName": "BANCO MERIDIAN S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00065",
+        "name": "BANCO MUNICIPAL DE ROSARIO",
+        "code": "00065",
+        "bcraName": "BANCO MUNICIPAL DE ROSARIO",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00034",
+        "name": "BANCO PATAGONIA S.A.",
+        "code": "00034",
+        "bcraName": "BANCO PATAGONIA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00301",
+        "name": "BANCO PIANO S.A.",
+        "code": "00301",
+        "bcraName": "BANCO PIANO S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00268",
+        "name": "BANCO PROVINCIA DE TIERRA DEL FUEGO",
+        "code": "00268",
+        "bcraName": "BANCO PROVINCIA DE TIERRA DEL FUEGO",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00097",
+        "name": "BANCO PROVINCIA DEL NEUQUÉN SOCIEDA",
+        "code": "00097",
+        "bcraName": "BANCO PROVINCIA DEL NEUQUÉN SOCIEDA",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00309",
+        "name": "BANCO RIOJA SOCIEDAD ANONIMA UNIPER",
+        "code": "00309",
+        "bcraName": "BANCO RIOJA SOCIEDAD ANONIMA UNIPER",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00247",
+        "name": "BANCO ROELA S.A.",
+        "code": "00247",
+        "bcraName": "BANCO ROELA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00277",
+        "name": "BANCO SAENZ S.A.",
+        "code": "00277",
+        "bcraName": "BANCO SAENZ S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00072",
+        "name": "BANCO SANTANDER ARGENTINA S.A.",
+        "code": "00072",
+        "bcraName": "BANCO SANTANDER ARGENTINA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00435",
+        "name": "BANCO SUCREDITO REGIONAL S.A.U.",
+        "code": "00435",
+        "bcraName": "BANCO SUCREDITO REGIONAL S.A.U.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00027",
+        "name": "BANCO SUPERVIELLE S.A.",
+        "code": "00027",
+        "bcraName": "BANCO SUPERVIELLE S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00312",
+        "name": "BANCO VOII S.A.",
+        "code": "00312",
+        "bcraName": "BANCO VOII S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00131",
+        "name": "BANK OF CHINA LIMITED SUCURSAL BUEN",
+        "code": "00131",
+        "bcraName": "BANK OF CHINA LIMITED SUCURSAL BUEN",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00147",
+        "name": "BIBANK S.A.",
+        "code": "00147",
+        "bcraName": "BIBANK S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00266",
+        "name": "BNP PARIBAS",
+        "code": "00266",
+        "bcraName": "BNP PARIBAS",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00143",
+        "name": "BRUBANK S.A.U.",
+        "code": "00143",
+        "bcraName": "BRUBANK S.A.U.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00016",
+        "name": "CITIBANK N.A.",
+        "code": "00016",
+        "bcraName": "CITIBANK N.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-44077",
+        "name": "COMPAÑIA FINANCIERA ARGENTINA S.A.",
+        "code": "44077",
+        "bcraName": "COMPAÑIA FINANCIERA ARGENTINA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-65203",
+        "name": "CRÉDITO REGIONAL COMPAÑÍA FINANCIER",
+        "code": "65203",
+        "bcraName": "CRÉDITO REGIONAL COMPAÑÍA FINANCIER",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-44092",
+        "name": "FCA COMPAÑIA FINANCIERA S.A.",
+        "code": "44092",
+        "bcraName": "FCA COMPAÑIA FINANCIERA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-44093",
+        "name": "GPAT COMPAÑIA FINANCIERA S.A.U.",
+        "code": "44093",
+        "bcraName": "GPAT COMPAÑIA FINANCIERA S.A.U.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00015",
+        "name": "INDUSTRIAL AND COMMERCIAL BANK OF C",
+        "code": "00015",
+        "bcraName": "INDUSTRIAL AND COMMERCIAL BANK OF C",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-44096",
+        "name": "JOHN DEERE CREDIT COMPAÑÍA FINANCIE",
+        "code": "44096",
+        "bcraName": "JOHN DEERE CREDIT COMPAÑÍA FINANCIE",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00165",
+        "name": "JPMORGAN CHASE BANK, NATIONAL ASSOC",
+        "code": "00165",
+        "bcraName": "JPMORGAN CHASE BANK, NATIONAL ASSOC",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-44094",
+        "name": "MERCEDES-BENZ COMPAÑÍA FINANCIERA A",
+        "code": "44094",
+        "bcraName": "MERCEDES-BENZ COMPAÑÍA FINANCIERA A",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-45056",
+        "name": "MONTEMAR COMPAÑIA FINANCIERA S.A.",
+        "code": "45056",
+        "bcraName": "MONTEMAR COMPAÑIA FINANCIERA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-45030",
+        "name": "NARANJA DIGITAL COMPAÑÍA FINANCIERA",
+        "code": "45030",
+        "bcraName": "NARANJA DIGITAL COMPAÑÍA FINANCIERA",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00386",
+        "name": "NUEVO BANCO DE ENTRE RÍOS S.A.",
+        "code": "00386",
+        "bcraName": "NUEVO BANCO DE ENTRE RÍOS S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00330",
+        "name": "NUEVO BANCO DE SANTA FE SOCIEDAD AN",
+        "code": "00330",
+        "bcraName": "NUEVO BANCO DE SANTA FE SOCIEDAD AN",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00311",
+        "name": "NUEVO BANCO DEL CHACO S. A.",
+        "code": "00311",
+        "bcraName": "NUEVO BANCO DEL CHACO S. A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-44098",
+        "name": "PSA FINANCE ARGENTINA COMPAÑÍA FINA",
+        "code": "44098",
+        "bcraName": "PSA FINANCE ARGENTINA COMPAÑÍA FINA",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00339",
+        "name": "RCI BANQUE S.A.",
+        "code": "00339",
+        "bcraName": "RCI BANQUE S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-45072",
+        "name": "REBA COMPAÑIA FINANCIERA S.A.",
+        "code": "45072",
+        "bcraName": "REBA COMPAÑIA FINANCIERA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-44095",
+        "name": "ROMBO COMPAÑÍA FINANCIERA S.A.",
+        "code": "44095",
+        "bcraName": "ROMBO COMPAÑÍA FINANCIERA S.A.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-44099",
+        "name": "TOYOTA COMPAÑÍA FINANCIERA DE ARGEN",
+        "code": "44099",
+        "bcraName": "TOYOTA COMPAÑÍA FINANCIERA DE ARGEN",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-00384",
+        "name": "UALA BANK S.A.U.",
+        "code": "00384",
+        "bcraName": "UALA BANK S.A.U.",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      },
+      {
+        "id": "bcra-44088",
+        "name": "VOLKSWAGEN FINANCIAL SERVICES COMPA",
+        "code": "44088",
+        "bcraName": "VOLKSWAGEN FINANCIAL SERVICES COMPA",
+        "bcraConsulted": "2026-10-08",
+        "bcraPublished": "julio de 2026"
+      }
+    ],
+    "cards": [
+      {
+        "id": "visa",
+        "name": "Visa",
+        "settlementDays": 30,
+        "commission": 0
+      },
+      {
+        "id": "mastercard",
+        "name": "Mastercard",
+        "settlementDays": 30,
+        "commission": 0
+      }
+    ],
+    "taxRules": [],
+    "variants": [
+      {
+        "id": "39146e01-e9dc-4324-a0cb-9d740e4e8bb7",
+        "name": "Talle M",
+        "attribute": "Talle",
+        "value": "M",
+        "productId": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a"
+      },
+      {
+        "id": "94d39a1f-9291-4988-a0f6-a730770e1da1",
+        "name": "Negro",
+        "attribute": "Color",
+        "value": "Negro",
+        "productId": "553d14f6-eaa5-4348-8ff1-9393f7a85f6a"
+      }
+    ],
+    "combos": [],
+    "ecommerce": [],
+    "production": [],
+    "tasks": [],
+    "machinery": [],
+    "routes": [],
+    "workCenters": [],
+    "materials": [],
+    "notes": [
+      {
+        "id": "c5cbbfbe-d97d-416a-8d50-9ba1776baa9d",
+        "name": "Datos de ejemplo",
+        "text": "Los CUIT son datos sintéticos para probar el dígito verificador. No se consultó el padrón ni se verificó la existencia de los contribuyentes. Reemplazar antes de cualquier uso real."
+      }
+    ],
+    "agenda": [],
+    "commissions": [],
+    "cashClosures": []
+  },
+  "supplierOriginals": [
+    {
+      "id": "4c6b096c-56e1-46f3-89dc-8177959f188b",
+      "number": "INT-CO-00000001",
+      "sequence": 1,
+      "responsible": "Administrador",
+      "createdAt": "2026-10-17T03:44:45.026Z",
+      "review": "{\"input\":{\"documentId\":\"e79b1853-671d-4af0-a630-1e7e0e2b767e\",\"documentKind\":\"factura\",\"date\":\"2026-10-17\",\"previousId\":\"\",\"issuerCuit\":\"20123456786\",\"receiverCuit\":\"30712345671\",\"point\":4,\"number\":1,\"authorization\":\"Sin consignar\",\"code\":\"\",\"expires\":\"\",\"reference\":\"IVA-ORIG-1\",\"reason\":\"Original sintético sin constatación; prueba del diseño de archivos.\"},\"type\":1,\"key\":\"[\\\"20123456786\\\",1,4,1]\",\"source\":{\"id\":\"e79b1853-671d-4af0-a630-1e7e0e2b767e\",\"number\":\"INT-FC-A-00001-00000001\",\"date\":\"2026-10-15\",\"kind\":\"factura\",\"letter\":\"A\",\"partyId\":\"a56c935b-8082-4d8b-bcac-b1008c79da3c\",\"branchId\":\"central\",\"sourceId\":\"\",\"net\":37000,\"vat\":4200,\"perceptions\":300,\"total\":41500},\"status\":\"Datos declarados · sin constatación ARCA\"}",
+      "preview": {
+        "input": {
+          "documentId": "e79b1853-671d-4af0-a630-1e7e0e2b767e",
+          "documentKind": "factura",
+          "date": "2026-10-17",
+          "previousId": "",
+          "issuerCuit": "20123456786",
+          "receiverCuit": "30712345671",
+          "point": 4,
+          "number": 1,
+          "authorization": "Sin consignar",
+          "code": "",
+          "expires": "",
+          "reference": "IVA-ORIG-1",
+          "reason": "Original sintético sin constatación; prueba del diseño de archivos."
+        },
+        "type": 1,
+        "key": "[\"20123456786\",1,4,1]",
+        "source": {
+          "id": "e79b1853-671d-4af0-a630-1e7e0e2b767e",
+          "number": "INT-FC-A-00001-00000001",
+          "date": "2026-10-15",
+          "kind": "factura",
+          "letter": "A",
+          "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+          "branchId": "central",
+          "sourceId": "",
+          "net": 37000,
+          "vat": 4200,
+          "perceptions": 300,
+          "total": 41500
+        },
+        "status": "Datos declarados · sin constatación ARCA"
+      }
+    },
+    {
+      "id": "43c81cac-f7b0-4f06-b454-6a601b0fc806",
+      "number": "INT-CO-00000002",
+      "sequence": 2,
+      "responsible": "Administrador",
+      "createdAt": "2026-10-17T03:44:45.027Z",
+      "review": "{\"input\":{\"documentId\":\"73be782f-d14c-40ef-9b50-7703886149ac\",\"documentKind\":\"credito\",\"date\":\"2026-10-17\",\"previousId\":\"\",\"issuerCuit\":\"20123456786\",\"receiverCuit\":\"30712345671\",\"point\":4,\"number\":2,\"authorization\":\"Sin consignar\",\"code\":\"\",\"expires\":\"\",\"reference\":\"IVA-ORIG-2\",\"reason\":\"Original sintético sin constatación; prueba del diseño de archivos.\"},\"type\":3,\"key\":\"[\\\"20123456786\\\",3,4,2]\",\"source\":{\"id\":\"73be782f-d14c-40ef-9b50-7703886149ac\",\"number\":\"INT-NC-A-00001-00000001\",\"date\":\"2026-10-16\",\"kind\":\"credito\",\"letter\":\"A\",\"partyId\":\"a56c935b-8082-4d8b-bcac-b1008c79da3c\",\"branchId\":\"central\",\"sourceId\":\"e79b1853-671d-4af0-a630-1e7e0e2b767e\",\"net\":1000,\"vat\":210,\"perceptions\":0,\"total\":1210},\"status\":\"Datos declarados · sin constatación ARCA\"}",
+      "preview": {
+        "input": {
+          "documentId": "73be782f-d14c-40ef-9b50-7703886149ac",
+          "documentKind": "credito",
+          "date": "2026-10-17",
+          "previousId": "",
+          "issuerCuit": "20123456786",
+          "receiverCuit": "30712345671",
+          "point": 4,
+          "number": 2,
+          "authorization": "Sin consignar",
+          "code": "",
+          "expires": "",
+          "reference": "IVA-ORIG-2",
+          "reason": "Original sintético sin constatación; prueba del diseño de archivos."
+        },
+        "type": 3,
+        "key": "[\"20123456786\",3,4,2]",
+        "source": {
+          "id": "73be782f-d14c-40ef-9b50-7703886149ac",
+          "number": "INT-NC-A-00001-00000001",
+          "date": "2026-10-16",
+          "kind": "credito",
+          "letter": "A",
+          "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+          "branchId": "central",
+          "sourceId": "e79b1853-671d-4af0-a630-1e7e0e2b767e",
+          "net": 1000,
+          "vat": 210,
+          "perceptions": 0,
+          "total": 1210
+        },
+        "status": "Datos declarados · sin constatación ARCA"
+      }
+    },
+    {
+      "id": "c7733117-846c-4e56-b529-7a1c9faf14c2",
+      "number": "INT-CO-00000003",
+      "sequence": 3,
+      "responsible": "Administrador",
+      "createdAt": "2026-10-17T03:44:45.027Z",
+      "review": "{\"input\":{\"documentId\":\"9f74afd2-350b-4fb7-bedf-e18a2555a86e\",\"documentKind\":\"debito\",\"date\":\"2026-10-17\",\"previousId\":\"\",\"issuerCuit\":\"20123456786\",\"receiverCuit\":\"30712345671\",\"point\":4,\"number\":3,\"authorization\":\"Sin consignar\",\"code\":\"\",\"expires\":\"\",\"reference\":\"IVA-ORIG-3\",\"reason\":\"Original sintético sin constatación; prueba del diseño de archivos.\"},\"type\":2,\"key\":\"[\\\"20123456786\\\",2,4,3]\",\"source\":{\"id\":\"9f74afd2-350b-4fb7-bedf-e18a2555a86e\",\"number\":\"INT-ND-A-00001-00000001\",\"date\":\"2026-10-16\",\"kind\":\"debito\",\"letter\":\"A\",\"partyId\":\"a56c935b-8082-4d8b-bcac-b1008c79da3c\",\"branchId\":\"central\",\"sourceId\":\"e79b1853-671d-4af0-a630-1e7e0e2b767e\",\"net\":1000,\"vat\":270,\"perceptions\":0,\"total\":1270},\"status\":\"Datos declarados · sin constatación ARCA\"}",
+      "preview": {
+        "input": {
+          "documentId": "9f74afd2-350b-4fb7-bedf-e18a2555a86e",
+          "documentKind": "debito",
+          "date": "2026-10-17",
+          "previousId": "",
+          "issuerCuit": "20123456786",
+          "receiverCuit": "30712345671",
+          "point": 4,
+          "number": 3,
+          "authorization": "Sin consignar",
+          "code": "",
+          "expires": "",
+          "reference": "IVA-ORIG-3",
+          "reason": "Original sintético sin constatación; prueba del diseño de archivos."
+        },
+        "type": 2,
+        "key": "[\"20123456786\",2,4,3]",
+        "source": {
+          "id": "9f74afd2-350b-4fb7-bedf-e18a2555a86e",
+          "number": "INT-ND-A-00001-00000001",
+          "date": "2026-10-16",
+          "kind": "debito",
+          "letter": "A",
+          "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+          "branchId": "central",
+          "sourceId": "e79b1853-671d-4af0-a630-1e7e0e2b767e",
+          "net": 1000,
+          "vat": 270,
+          "perceptions": 0,
+          "total": 1270
+        },
+        "status": "Datos declarados · sin constatación ARCA"
+      }
+    },
+    {
+      "id": "c120edb8-9566-4b97-a9d1-a6888f1303d5",
+      "number": "INT-CO-00000004",
+      "sequence": 4,
+      "responsible": "Administrador",
+      "createdAt": "2026-10-17T03:44:45.027Z",
+      "review": "{\"input\":{\"documentId\":\"d644bfaa-f915-4615-adc8-f50b472cbd9e\",\"documentKind\":\"factura\",\"date\":\"2026-10-17\",\"previousId\":\"\",\"issuerCuit\":\"20123456786\",\"receiverCuit\":\"30712345671\",\"point\":4,\"number\":4,\"authorization\":\"Sin consignar\",\"code\":\"\",\"expires\":\"\",\"reference\":\"IVA-ORIG-4\",\"reason\":\"Original sintético sin constatación; prueba del diseño de archivos.\"},\"type\":6,\"key\":\"[\\\"20123456786\\\",6,4,4]\",\"source\":{\"id\":\"d644bfaa-f915-4615-adc8-f50b472cbd9e\",\"number\":\"INT-FC-B-00002-00000001\",\"date\":\"2026-10-17\",\"kind\":\"factura\",\"letter\":\"B\",\"partyId\":\"a56c935b-8082-4d8b-bcac-b1008c79da3c\",\"branchId\":\"iva-other-branch\",\"sourceId\":\"\",\"net\":2600,\"vat\":420,\"perceptions\":40,\"total\":3060},\"status\":\"Datos declarados · sin constatación ARCA\"}",
+      "preview": {
+        "input": {
+          "documentId": "d644bfaa-f915-4615-adc8-f50b472cbd9e",
+          "documentKind": "factura",
+          "date": "2026-10-17",
+          "previousId": "",
+          "issuerCuit": "20123456786",
+          "receiverCuit": "30712345671",
+          "point": 4,
+          "number": 4,
+          "authorization": "Sin consignar",
+          "code": "",
+          "expires": "",
+          "reference": "IVA-ORIG-4",
+          "reason": "Original sintético sin constatación; prueba del diseño de archivos."
+        },
+        "type": 6,
+        "key": "[\"20123456786\",6,4,4]",
+        "source": {
+          "id": "d644bfaa-f915-4615-adc8-f50b472cbd9e",
+          "number": "INT-FC-B-00002-00000001",
+          "date": "2026-10-17",
+          "kind": "factura",
+          "letter": "B",
+          "partyId": "a56c935b-8082-4d8b-bcac-b1008c79da3c",
+          "branchId": "iva-other-branch",
+          "sourceId": "",
+          "net": 2600,
+          "vat": 420,
+          "perceptions": 40,
+          "total": 3060
+        },
+        "status": "Datos declarados · sin constatación ARCA"
+      }
+    },
+    {
+      "id": "3cf9767b-d3d7-4f05-a762-94358e5d67aa",
+      "number": "INT-CO-00000005",
+      "sequence": 5,
+      "responsible": "Administrador",
+      "createdAt": "2026-10-17T03:44:45.028Z",
+      "review": "{\"input\":{\"documentId\":\"de96f546-a0f7-4505-ac49-968a121575d5\",\"documentKind\":\"factura\",\"date\":\"2026-10-17\",\"previousId\":\"\",\"issuerCuit\":\"30712345671\",\"receiverCuit\":\"30712345671\",\"point\":4,\"number\":5,\"authorization\":\"Sin consignar\",\"code\":\"\",\"expires\":\"\",\"reference\":\"IVA-ORIG-5\",\"reason\":\"Original sintético sin constatación; prueba del diseño de archivos.\"},\"type\":11,\"key\":\"[\\\"30712345671\\\",11,4,5]\",\"source\":{\"id\":\"de96f546-a0f7-4505-ac49-968a121575d5\",\"number\":\"INT-FC-C-00001-00000001\",\"date\":\"2026-10-17\",\"kind\":\"factura\",\"letter\":\"C\",\"partyId\":\"supplier-c\",\"branchId\":\"central\",\"sourceId\":\"\",\"net\":3000,\"vat\":0,\"perceptions\":0,\"total\":3000},\"status\":\"Datos declarados · sin constatación ARCA\"}",
+      "preview": {
+        "input": {
+          "documentId": "de96f546-a0f7-4505-ac49-968a121575d5",
+          "documentKind": "factura",
+          "date": "2026-10-17",
+          "previousId": "",
+          "issuerCuit": "30712345671",
+          "receiverCuit": "30712345671",
+          "point": 4,
+          "number": 5,
+          "authorization": "Sin consignar",
+          "code": "",
+          "expires": "",
+          "reference": "IVA-ORIG-5",
+          "reason": "Original sintético sin constatación; prueba del diseño de archivos."
+        },
+        "type": 11,
+        "key": "[\"30712345671\",11,4,5]",
+        "source": {
+          "id": "de96f546-a0f7-4505-ac49-968a121575d5",
+          "number": "INT-FC-C-00001-00000001",
+          "date": "2026-10-17",
+          "kind": "factura",
+          "letter": "C",
+          "partyId": "supplier-c",
+          "branchId": "central",
+          "sourceId": "",
+          "net": 3000,
+          "vat": 0,
+          "perceptions": 0,
+          "total": 3000
+        },
+        "status": "Datos declarados · sin constatación ARCA"
+      }
+    }
+  ]
+}

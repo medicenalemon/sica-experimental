@@ -1,0 +1,121 @@
+import {assertProductionAnnualSource,assertProductionInflationReady} from './production-inflation'
+import {inventoryPositions} from './inventory-recoverability'
+import type {State,Session,EntryLine,Entry} from './types'
+import {uid} from './constants'
+import {requireAdmin} from './permissions'
+import {assertDate} from './engine'
+import {exerciseRanges} from './exercise-calendar'
+import {trialBalance,accountingSum,validJournal} from './trial-balance'
+import type {TrialBalance} from './trial-balance'
+import {statementOutdated} from './financial-statements'
+import {reexpressionReview,reexpressCents} from './reexpression'
+
+export interface ReexpressionPostingInput {
+ reexpressionId:string;reference:string;reason:string;
+ components:{componentId:string;accountId:string}[];
+ monetaryGainAccountId:string;monetaryLossAccountId:string;otherGainAccountId:string;otherLossAccountId:string;
+ allocations:{targetId:string;parts:{branchId:string;amount:number;reason:string}[]}[];
+ confirmed:boolean;syntheticConfirmed:boolean;review?:string;
+}
+export interface PostingTarget {id:string;type:'Medición'|'Patrimonio';accountId:string;componentId:string;label:string;nominal:number;adjusted:number;delta:number}
+export interface ReexpressionPostingPreview {
+ productionClosingRequired?:true;productionInflationRequired?:true;inventoryClosingRequired?:true;reexpressionId:string;reexpressionNumber:string;sourceReview:string;sourceEntryIds:string[];from:string;date:string;
+ reference:string;reason:string;provider:'FACPCE'|'Ensayo';components:ReexpressionPostingInput['components'];
+ targets:PostingTarget[];allocations:ReexpressionPostingInput['allocations'];before:TrialBalance;after:TrialBalance;
+ branches:{id:string;lines:EntryLine[];monetaryResult:number;monetaryRounding:number;otherResult:number;financialResult:number;exposure:{month:string;amount:number;adjusted:number;result:number}[]}[];
+ result:number;monetaryResult:number;otherResult:number;debit:number;credit:number;warnings:string[];
+}
+export interface ReexpressionPosting extends ReexpressionPostingInput {ledgerVersion?:2|3|4|5;id:string;number:string;responsible:string;createdAt:string;previousClosedUntil:string;entryIds:string[];preview:ReexpressionPostingPreview}
+const sum=(v:number[])=>v.reduce(accountingSum,0)
+const text=(s:string,label:string,max=2000)=>{if(typeof s!=='string'||!s.trim()||s.trim().length>max)throw new Error(`${label}: completá hasta ${max} caracteres.`);return s.trim()}
+function financial(b:TrialBalance){return {...b,entryIds:[],rows:b.rows.filter(r=>r.opening||r.debit||r.credit||r.closing).map(({name,code,...r})=>{void name;void code;return r}).sort((a,b)=>a.accountId.localeCompare(b.accountId))}}
+export const reexpressionPostingReview=(p:ReexpressionPostingPreview)=>{const {productionClosingRequired,productionInflationRequired,inventoryClosingRequired,...rest}=p;return JSON.stringify({...productionClosingRequired?{productionClosingRequired}:{},...productionInflationRequired?{productionInflationRequired}:{},...inventoryClosingRequired?{inventoryClosingRequired}: {},...rest,before:financial(p.before),after:financial(p.after)})}
+export function reexpressionPostingTargets(state:State,id:string):PostingTarget[]{
+ const r=state.reexpressions?.find(r=>r.id===id),n=r&&state.financialStatements?.find(n=>n.id===r.statementId);if(!r||!n)throw new Error('Seleccioná una preparación en moneda de cierre conservada.')
+ const b=trialBalance({...state,entries:n.preview.source.entries},n.from,n.to),p=r.preview.statement,targets:PostingTarget[]=[]
+ for(const policy of r.policies.filter(v=>v.nature!=='Monetaria')){
+  const a=b.rows.find(a=>a.accountId===policy.accountId)!;
+  const adjusted=sum(p.position.rows.flatMap(row=>row.accounts.filter(v=>v.id===a.accountId).map(v=>(row.section.startsWith('Activo')?1:-1)*v.amount)))
+  targets.push({id:JSON.stringify(['measurement',a.accountId]),type:'Medición',accountId:a.accountId,componentId:'',label:`${a.code} · ${a.name}`,nominal:a.closing,adjusted,delta:adjusted-a.closing})
+ }
+ for(const c of p.equity.components){
+  const ids=n.allocations.filter(a=>a.items[0].rubricId===c.id).map(a=>a.accountId),nominal=-sum(b.rows.filter(a=>ids.includes(a.accountId)).map(a=>a.closing))||0,adjusted=p.equity.rows.at(-1)!.values[c.id]-(c.id==='eq-unassigned'?p.results.profit:0)
+  targets.push({id:JSON.stringify(['equity',c.id]),type:'Patrimonio',accountId:'',componentId:c.id,label:c.name,nominal,adjusted,delta:nominal-adjusted})
+ }
+ return targets
+}
+const defaultComponents=[['eq-capital','Capital suscripto'],['eq-capital-adjustment','Ajuste del capital'],['eq-irrevocable','Aportes irrevocables'],['eq-premium','Primas de emisión'],['eq-reserves','Ganancias reservadas'],['eq-unassigned','Resultados no asignados'],['eq-deferred','Resultados diferidos']] as const
+const defaults=[...defaultComponents.map(([,name],i)=>({id:`3.90.${i+1}`,name,group:'Patrimonio neto'})),{id:'4.90',name:'RECPAM monetario positivo',group:'Ingresos'},{id:'5.90',name:'RECPAM monetario negativo',group:'Gastos'},{id:'4.91',name:'Otros resultados del ajuste y redondeos positivos',group:'Ingresos'},{id:'5.91',name:'Otros resultados del ajuste y redondeos negativos',group:'Gastos'}]
+export function prepareReexpressionPostingAccounts(state:State,actor:Session){requireAdmin(actor.role);for(const a of defaults){const old=state.masters.accounts.find(v=>v.id===a.id);if(old&&(old.group!==a.group||!old.postable))throw new Error(`La cuenta ${a.id} existe con una configuración incompatible; revisá el plan.`)}for(const a of defaults)if(!state.masters.accounts.some(v=>v.id===a.id))state.masters.accounts.push({...a,code:a.id,postable:true})}
+export function reexpressionPostingDefaults(state:State,id:string):ReexpressionPostingInput {
+ const r=state.reexpressions?.find(r=>r.id===id),n=r&&state.financialStatements?.find(n=>n.id===r.statementId);if(!r||!n)throw new Error('Falta el antecedente conservado.')
+ return {reexpressionId:id,reference:'',reason:'',components:defaultComponents.map(([componentId],i)=>{const original=n.allocations.filter(a=>a.items[0].rubricId===componentId);return {componentId,accountId:original.length===1?original[0].accountId:`3.90.${i+1}`}}),monetaryGainAccountId:'4.90',monetaryLossAccountId:'5.90',otherGainAccountId:'4.91',otherLossAccountId:'5.91',allocations:reexpressionPostingTargets(state,id).map(t=>({targetId:t.id,parts:[]})),confirmed:false,syntheticConfirmed:false}
+}
+export function previewReexpressionPosting(state:State,input:ReexpressionPostingInput,historical=false):ReexpressionPostingPreview {
+ if(!historical){assertProductionInflationReady(state,state.settings.exerciseEnd);assertProductionAnnualSource(state,input.reexpressionId)}
+ if(!historical){const mc=state.reexpressions?.find(r=>r.id===input.reexpressionId);if(mc&&state.stockMoves.some(m=>m.date<=mc.preview.statement.to)&&!state.inventoryCostBatches?.some(b=>b.date===mc.preview.statement.to))throw new Error('Contabilizá la valuación de inventario exacta en el corte anual antes del ajuste.')}
+ if(!historical&&(state.inventoryRecoveries?.length||state.inventoryCostBatches?.some(b=>b.reserve))){const source=state.reexpressions?.find(r=>r.id===input.reexpressionId);if(source&&inventoryPositions(state,source.preview.statement.to).balances.some(b=>b.allowance)&&(!source.policies.some(p=>p.accountId===(state.inventoryRecoveries?.[0]?.allowanceAccountId||state.inventoryCostBatches?.findLast(b=>b.reserve)?.reserve?.allowanceAccountId)&&p.nature!=='Monetaria')||!source.policies.some(p=>p.accountId===inventoryPositions(state,source.preview.statement.to).batch.accounts.inventory&&p.nature!=='Monetaria')))throw new Error('La cuenta regularizadora de inventario y las existencias requieren clasificación no monetaria y sus orígenes revisados antes del ajuste anual.')}
+ const r=state.reexpressions?.find(r=>r.id===input.reexpressionId),n=r&&state.financialStatements?.find(n=>n.id===r.statementId);if(!r||!n)throw new Error('Falta la preparación conservada en moneda de cierre.')
+ const from=n.from,date=n.to,reference=text(input.reference,'Referencia de contabilización',200),reason=text(input.reason,'Fundamento de contabilización')
+ if(r.review!==reexpressionReview(r.preview))throw new Error('La preparación en moneda de cierre no conserva su revisión.')
+ if(!historical){
+  if(from!==state.settings.exerciseStart||date!==state.settings.exerciseEnd)throw new Error('La contabilización requiere una preparación anual completa del ejercicio activo.')
+  if(state.reexpressionPostings?.some(p=>p.preview.from===from&&p.preview.date===date))throw new Error('El ajuste anual ya está contabilizado; no se aplica una segunda vez.')
+  if(state.yearEndCloses?.some(c=>c.exerciseStart===from))throw new Error('Contabilizá el ajuste antes de cerrar las cuentas de resultados.')
+  assertDate(state,date);if(statementOutdated(state,n))throw new Error('El antecedente tiene información posterior; prepará una versión vigente antes de contabilizar.')
+ }
+ if(input.confirmed!==true)throw new Error('Confirmá cuentas, reparto por sucursal y asientos del ajuste.')
+ if(r.indices.provider==='Ensayo'&&input.syntheticConfirmed!==true)throw new Error('Los índices de ensayo sólo admiten una contabilización de prueba expresamente reconocida.')
+ const targets=reexpressionPostingTargets(state,r.id),before=trialBalance(state,from,date),componentIds=defaultComponents.map(([id])=>id)
+ if(before.rows.some(a=>(a.group==='Ingresos'||a.group==='Gastos')&&a.opening))throw new Error('Las cuentas de resultados conservan saldos de apertura; conciliá el cierre anterior antes de ajustar.')
+ if(!Array.isArray(input.components)||input.components.length!==componentIds.length||new Set(input.components.map(c=>c.componentId)).size!==componentIds.length||new Set(input.components.map(c=>c.accountId)).size!==componentIds.length)throw new Error('Seleccioná una cuenta distinta para cada componente patrimonial.')
+ const components=input.components.map(c=>{if(!componentIds.includes(c.componentId as typeof componentIds[number])||!state.masters.accounts.some(a=>a.id===c.accountId&&a.group==='Patrimonio neto'&&(historical||a.postable)))throw new Error('Cada componente requiere una cuenta imputable de Patrimonio neto.');const original=n.allocations.find(a=>a.accountId===c.accountId);if(original&&original.items[0].rubricId!==c.componentId)throw new Error('Una cuenta patrimonial no puede cambiar de componente durante el ajuste.');return {...c}}).sort((a,b)=>a.componentId.localeCompare(b.componentId))
+ const effectAccounts=[input.monetaryGainAccountId,input.monetaryLossAccountId,input.otherGainAccountId,input.otherLossAccountId]
+ if(new Set(effectAccounts).size!==4||effectAccounts.some((id,i)=>!state.masters.accounts.some(a=>a.id===id&&a.group===(i%2?'Gastos':'Ingresos')&&(historical||a.postable))||before.rows.some(a=>a.accountId===id&&(a.opening||a.debit||a.credit))))throw new Error('Separá RECPAM y otros resultados en cuatro cuentas de ingresos/gastos sin movimientos del ejercicio.')
+ if(!Array.isArray(input.allocations)||input.allocations.length!==targets.length||new Set(input.allocations.map(a=>a.targetId)).size!==targets.length)throw new Error('Repartí todos los ajustes de medición y patrimonio una sola vez.')
+ const branches=n.preview.source.entries.map(e=>e.branchId).filter((id,i,a)=>a.indexOf(id)===i).sort(),details=new Map(branches.map(id=>[id,[] as {accountId:string;amount:number}[]]))
+ const add=(id:string,accountId:string,amount:number)=>{if(amount)details.get(id)!.push({accountId,amount})}
+ const allocations=input.allocations.map(a=>{const target=targets.find(t=>t.id===a.targetId);if(!target||!Array.isArray(a.parts)||a.parts.length>branches.length||new Set(a.parts.map(p=>p.branchId)).size!==a.parts.length||sum(a.parts.map(p=>p.amount))!==target.delta||a.parts.some(p=>!Number.isSafeInteger(p.amount)||!p.amount||!branches.includes(p.branchId)))throw new Error('El reparto por sucursal debe conservar el ajuste exacto, sin duplicados ni importes vacíos.');if(target.componentId==='eq-capital'&&a.parts.length)throw new Error('El capital nominal conserva su saldo y reparto; el aumento por reexpresión va a Ajuste del capital.');const accountId=target.accountId||components.find(c=>c.componentId===target.componentId)!.accountId;if(!historical&&!state.masters.accounts.some(v=>v.id===accountId&&v.postable))throw new Error('Las cuentas ajustadas deben admitir imputaciones.');const parts=a.parts.map(p=>{if(!historical&&!state.masters.branches.some(b=>b.id===p.branchId&&b.active))throw new Error('El reparto requiere sucursales activas.');const part={...p,reason:text(p.reason,'Fundamento del reparto')};add(part.branchId,accountId,part.amount);return part}).sort((a,b)=>a.branchId.localeCompare(b.branchId));return {targetId:a.targetId,parts}}).sort((a,b)=>a.targetId.localeCompare(b.targetId))
+ for(const c of r.preview.calculations.filter(c=>c.type==='Resultados')){const entryId=c.targetId.slice('result:'.length).slice(0,c.targetId.slice('result:'.length).lastIndexOf(':')),entry=n.preview.source.entries.find(e=>e.id===entryId);if(!entry)throw new Error('Falta la sucursal de un resultado reexpresado.');add(entry.branchId,c.accountId,c.adjustment)}
+ const index=(month:string)=>{const value=r.indices.values.find(v=>v.month===month)?.value;if(!value)throw new Error('Falta el índice de la exposición monetaria.');return value},apply=(amount:number,month:string)=>reexpressCents(amount,index(r.preview.closingMonth),index(month)),monetary=new Set(r.policies.filter(v=>v.nature==='Monetaria').map(v=>v.accountId))
+ const exposureByBranch=branches.map(id=>{const b=trialBalance({...state,entries:n.preview.source.entries},from,date,id),opening=sum(b.rows.filter(a=>monetary.has(a.accountId)).map(a=>a.opening)),movements=new Map<string,number>();for(const e of n.preview.source.entries.filter(e=>e.branchId===id&&e.date>=from))for(const l of e.lines.filter(l=>monetary.has(l.accountId)))movements.set(e.date.slice(0,7),accountingSum(movements.get(e.date.slice(0,7))||0,l.debit-l.credit));const exposure=[{month:r.preview.openingMonth,amount:opening},...[...movements].sort(([a],[b])=>a.localeCompare(b)).map(([month,amount])=>({month,amount}))].map(v=>({...v,adjusted:apply(v.amount,v.month),result:v.amount-apply(v.amount,v.month)}));return {id,exposure,result:sum(exposure.map(v=>v.result))}})
+ const rounding=r.preview.monetaryResult-sum(exposureByBranch.map(b=>b.result)),roundingBranch=exposureByBranch.find(b=>b.exposure.some(v=>v.amount))?.id||branches[0]
+ const branchResults=exposureByBranch.map(b=>{const financialResult=sum(details.get(b.id)!.map(v=>v.amount)),monetaryRounding=b.id===roundingBranch?rounding:0,monetaryResult=accountingSum(b.result,monetaryRounding),otherResult=financialResult-monetaryResult;add(b.id,monetaryResult>=0?input.monetaryGainAccountId:input.monetaryLossAccountId,-monetaryResult);add(b.id,otherResult>=0?input.otherGainAccountId:input.otherLossAccountId,-otherResult);const net=new Map<string,number>();for(const line of details.get(b.id)!)net.set(line.accountId,accountingSum(net.get(line.accountId)||0,line.amount));const lines=[...net].filter(([,n])=>n).sort(([a],[b])=>a.localeCompare(b)).map(([accountId,n])=>({accountId,debit:Math.max(0,n),credit:Math.max(0,-n)}));return {id:b.id,lines,monetaryResult,monetaryRounding,otherResult,financialResult,exposure:b.exposure}})
+ if(sum(branchResults.map(b=>b.financialResult))!==r.preview.financialResidual||sum(branchResults.map(b=>b.otherResult))!==r.preview.otherResidual)throw new Error('El reparto no concilia con el residuo financiero del proceso secuencial.')
+ const simulated:Entry[]=branchResults.filter(b=>b.lines.length).map(b=>({id:`@moneda-cierre:${r.id}:${b.id}`,date,concept:'Vista previa de ajuste anual',branchId:b.id,documentId:'preview-reexpression',lines:b.lines}))
+ for(const e of simulated){if(state.entries.some(v=>v.id===e.id))throw new Error('La identidad de un asiento de vista previa coincide con el diario.');if(!historical&&!state.masters.branches.some(b=>b.id===e.branchId&&b.active))throw new Error('Las sucursales de resultados deben estar activas.');validJournal(state,e);if(!historical&&e.lines.some(l=>!state.masters.accounts.some(a=>a.id===l.accountId&&a.postable)))throw new Error('Las cuentas de resultados ajustadas deben admitir imputaciones.')}
+ const after=trialBalance({...state,entries:[...state.entries,...simulated]},from,date)
+ const profit=-sum(after.rows.filter(a=>a.group==='Ingresos'||a.group==='Gastos').map(a=>a.closing-a.opening));if(profit!==r.preview.globalResult)throw new Error('El resultado contabilizado no coincide con el resultado global revisado.')
+ for(const target of targets){const ids=target.accountId?[target.accountId]:[...new Set([...n.allocations.filter(a=>a.items[0].rubricId===target.componentId).map(a=>a.accountId),components.find(c=>c.componentId===target.componentId)!.accountId])],value=sum(after.rows.filter(a=>ids.includes(a.accountId)).map(a=>a.closing))*(target.accountId?1:-1);if(value!==target.adjusted)throw new Error('El saldo posterior no coincide con la medición o componente patrimonial revisados.')}
+ const debit=sum(simulated.flatMap(e=>e.lines.map(l=>l.debit))),credit=sum(simulated.flatMap(e=>e.lines.map(l=>l.credit)))
+ return {...(!historical&&assertProductionAnnualSource(state,r.id).length?{productionClosingRequired:true as const,productionInflationRequired:true as const}:{}),...(!historical&&state.inventoryCostBatches?.some(b=>b.date===date&&b.balances.some(v=>v.quantity>0))?{inventoryClosingRequired:true as const}:{}),reexpressionId:r.id,reexpressionNumber:r.number,sourceReview:r.review!,sourceEntryIds:[...n.preview.source.journalPrefixIds],from,date,reference,reason,provider:r.indices.provider,components,targets,allocations,before,after,branches:branchResults,result:profit,monetaryResult:r.preview.monetaryResult,otherResult:r.preview.otherResidual,debit,credit,warnings:[...(r.indices.provider==='Ensayo'?['Contabilización de prueba con índices sintéticos. No usar en una entidad real.']:[]),'El ajuste anual incorpora las diferencias al diario y conserva sus fuentes. No modifica operaciones ni submayores de inventario y bienes de uso; sus importes de origen requieren conciliación con la capa de reexpresión.','Después de contabilizar no se admiten nuevos movimientos del ejercicio ajustado; completá el cierre de resultados y la apertura siguiente.','No calcula ajuste por inflación impositivo, impuesto diferido ni emisión profesional de estados.',...(rounding?[`El reparto de RECPAM incluye ${rounding} centavos de redondeo agregado en la sucursal ${roundingBranch}.`]:[])]}
+}
+export function postReexpression(state:State,input:ReexpressionPostingInput,actor:Session){
+ requireAdmin(actor.role);const p=previewReexpressionPosting(state,input);if(input.review!==reexpressionPostingReview(p))throw new Error('La revisión de contabilización cambió; preparala nuevamente.');if(state.reexpressionPostings?.some(r=>r.reference===p.reference))throw new Error('La referencia de contabilización ya existe.')
+ const id=uid(),number=`INT-AI-${String((state.reexpressionPostings?.length||0)+1).padStart(8,'0')}`,entries=p.branches.filter(b=>b.lines.length).map(b=>({id:uid(),date:p.date,concept:number,branchId:b.id,documentId:id,reexpressionPostingId:id,lines:structuredClone(b.lines)}));p.after=trialBalance({...state,entries:[...state.entries,...entries]},p.from,p.date)
+ const record:ReexpressionPosting={...input,ledgerVersion:5,reference:p.reference,reason:p.reason,components:p.components,allocations:p.allocations,id,number,responsible:actor.name,createdAt:new Date().toISOString(),previousClosedUntil:state.settings.closedUntil,entryIds:entries.map(e=>e.id),preview:p}
+ state.entries=[...state.entries,...entries];state.reexpressionPostings=[...(state.reexpressionPostings||[]),record];return record
+}
+export function validateReexpressionPostings(state:State){
+ const records=state.reexpressionPostings??[];if(!Array.isArray(records)||state.reexpressionPostings===null)throw new Error('Las contabilizaciones de moneda de cierre deben ser una lista.')
+ const ids=new Set<string>(),refs=new Set<string>(),periods=new Set<string>()
+ for(const [i,r]of records.entries()){
+  if(typeof r.id!=='string'||!r.id||ids.has(r.id)||r.number!==`INT-AI-${String(i+1).padStart(8,'0')}`||refs.has(r.reference)||typeof r.responsible!=='string'||!r.responsible.trim()||typeof r.createdAt!=='string'||Number.isNaN(Date.parse(r.createdAt))||!Array.isArray(r.entryIds)||!r.preview)throw new Error('Constancia de contabilización del ajuste inválida.')
+  if(!exerciseRanges(state).some(p=>p.start===r.preview.from&&p.end===r.preview.date))throw new Error('El ejercicio contabilizado debe conservar su inicio y fin originales.')
+  const key=JSON.stringify([r.preview.from,r.preview.date]);if(periods.has(key))throw new Error('El ejercicio tiene ajustes duplicados.')
+  const n=state.financialStatements?.find(n=>n.id===state.reexpressions?.find(p=>p.id===r.reexpressionId)?.statementId);if(!n||JSON.stringify(state.entries.slice(0,n.preview.source.journalPrefixIds.length).map(e=>e.id))!==JSON.stringify(n.preview.source.journalPrefixIds))throw new Error('No se conservó el diario anterior a la contabilización.')
+  const view={...state,entries:state.entries.slice(0,n.preview.source.journalPrefixIds.length),reexpressionPostings:records.slice(0,i),settings:{...state.settings,exerciseStart:r.preview.from,exerciseEnd:r.preview.date,closedUntil:r.previousClosedUntil}},p=previewReexpressionPosting(view,r,true)
+  if((r.ledgerVersion===3||r.ledgerVersion===4||r.ledgerVersion===5)&&state.inventoryCostBatches?.some(b=>b.date===p.date&&b.balances.some(v=>v.quantity>0)))p.inventoryClosingRequired=true
+  if((r.ledgerVersion===4||r.ledgerVersion===5)&&assertProductionAnnualSource(view,r.reexpressionId).length)p.productionInflationRequired=true
+  if(r.ledgerVersion===5&&assertProductionAnnualSource(view,r.reexpressionId).length)p.productionClosingRequired=true
+  if(r.review!==reexpressionPostingReview(p)||r.review!==reexpressionPostingReview(r.preview))throw new Error('Cambió la revisión, cuenta, reparto, saldo o fuente del ajuste contabilizado.')
+  const entries=state.entries.filter(e=>e.reexpressionPostingId===r.id),expected=p.branches.filter(b=>b.lines.length)
+  if(entries.length!==expected.length||JSON.stringify(entries.map(e=>e.id))!==JSON.stringify(r.entryIds)||JSON.stringify(state.entries.slice(n.preview.source.journalPrefixIds.length,n.preview.source.journalPrefixIds.length+entries.length).map(e=>e.id))!==JSON.stringify(r.entryIds))throw new Error('No se conservaron los asientos de ajuste en su posición original.')
+  for(const [index,b]of expected.entries()){const e=entries[index];if(e.date!==p.date||e.branchId!==b.id||e.documentId!==r.id||e.concept!==r.number||JSON.stringify(e.lines)!==JSON.stringify(b.lines)||e.manual||e.yearEndCloseId||e.fixedAssetRecordId||e.inventoryBatchId||e.serviceRecordId||e.revenueRecordId||e.reversalRecordId)throw new Error('El asiento no coincide con la contabilización revisada.')}
+  const after=trialBalance({...view,entries:[...view.entries,...entries]},p.from,p.date),expectedIds=r.ledgerVersion&&r.ledgerVersion>=2?after.entryIds:p.after.entryIds
+  if(r.ledgerVersion!==undefined&&r.ledgerVersion!==2&&r.ledgerVersion!==3&&r.ledgerVersion!==4&&r.ledgerVersion!==5||JSON.stringify(r.preview.after.entryIds)!==JSON.stringify(expectedIds))throw new Error('No se conservaron las identidades del balance posterior al ajuste.')
+  if(state.entries.slice(n.preview.source.journalPrefixIds.length+entries.length).some(e=>e.date>=p.from&&e.date<=p.date&&!e.yearEndCloseId&&!(e.productionRecoveryId&&state.productionRecoveries?.some(v=>v.id===e.productionRecoveryId&&v.closing?.postingId===r.id&&v.date===p.date))&&!(e.inventoryRecoveryId&&state.inventoryRecoveries?.some(v=>v.id===e.inventoryRecoveryId&&v.closing?.postingId===r.id&&v.date===p.date))))throw new Error('Hay movimientos posteriores sobre un ejercicio con ajuste anual contabilizado.')
+  ids.add(r.id);refs.add(r.reference);periods.add(key)
+ }
+ if(state.entries.some(e=>e.reexpressionPostingId&&!ids.has(e.reexpressionPostingId)))throw new Error('Falta la constancia de un asiento de ajuste por inflación.')
+}
