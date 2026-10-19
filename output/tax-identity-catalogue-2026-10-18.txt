@@ -1,0 +1,86 @@
+Browser tab: 2, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.55:3060/clientes".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.55:3060/clientes
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.55:3060/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.55:3060/
+				7 button (expanded) Description: Clientes, Secondary Actions: Collapse
+				77 link Description: Directorio, Value: 127.0.0.55:3060/clientes
+				78 link Description: Alta de clientes, Value: 127.0.0.55:3060/clientes/alta
+				79 link Description: Ventas y facturas, Value: 127.0.0.55:3060/clientes/ventas
+				80 link Description: Cobros, Value: 127.0.0.55:3060/clientes/cobros
+				81 link Description: Notas de crédito / débito, Value: 127.0.0.55:3060/clientes/notas
+				82 link Description: Pedidos de venta, Value: 127.0.0.55:3060/clientes/pedidos
+				83 link Description: Remitos de venta, Value: 127.0.0.55:3060/clientes/remitos
+				84 link Description: Cuenta corriente, Value: 127.0.0.55:3060/clientes/cuenta-corriente
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (collapsed) Description: Finanzas, Secondary Actions: Expand
+				23 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				24 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				25 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				26 button (collapsed) Description: Producción, Secondary Actions: Expand
+				27 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				28 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				29 button (collapsed) Description: Administración, Secondary Actions: Expand
+				30 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				31 link Description: Configuración, Value: 127.0.0.55:3060/configuracion
+				32 link Description: Acerca de, Value: 127.0.0.55:3060/acerca-de
+			33 text Versión experimental
+			34 button Colapsar menú
+		35 container
+			36 text SICA Textil · identidad impositiva de ensayo
+			37 container
+				38 text Responsable Inscripto  ·  Tucumán
+			39 container
+				40 text Sucursal
+				41 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					42 menu
+						43 (selected) Todas las unidades
+						44 Casa Central
+			45 link Description: Acerca de y fuentes, Value: 127.0.0.55:3060/acerca-de
+			46 text AD
+			47 text Administrador
+			48 text Administrador General
+			49 button Cerrar sesión
+			50 text Base compartida · Versión 4 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			85 text SICA / GESTIÓN INTEGRAL
+			86 heading Clientes, Value: 1
+				87 text Clientes
+			88 text Consultá los datos fiscales, las condiciones comerciales y el saldo de cada cuenta.
+			89 link Description: Nuevo cliente, Value: 127.0.0.55:3060/clientes/alta
+			90 text field (settable) Buscar registros
+			91 text 1  registros
+			92 button XLSX
+			93 button PDF
+			94 table
+				95 row
+					96 cell
+						97 text CÓDIGO
+					98 cell
+						99 text RAZÓN SOCIAL
+					100 cell
+						101 text CUIT
+					102 cell
+						103 text CONDICIÓN IVA
+					104 cell
+						105 text SALDO
+					106 cell
+						107 text ACCIONES
+				108 row
+					109 cell
+						110 text CLI-00001
+					111 cell
+						112 text Cliente posterior de ensayo
+					113 cell
+						114 text 20345678922
+					115 cell
+						116 text Responsable Inscripto
+					117 cell
+						118 text $ 20,00
+					119 cell
+						120 link Description: Editar, Value: 127.0.0.55:3060/clientes/alta?id=a85f5ef5-c9a1-4f02-b982-115965849ced
+						121 link Description: Cuenta, Value: 127.0.0.55:3060/clientes/cuenta-corriente?party=a85f5ef5-c9a1-4f02-b982-115965849ced
+			122 text Operación guardada en el servidor.
+
+The focused UI element is 1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.55:3060/clientes

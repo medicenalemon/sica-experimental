@@ -1,0 +1,135 @@
+Browser tab: 1, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.54:3059/finanzas/conciliacion-certificados".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.54:3059/finanzas/conciliacion-certificados
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.54:3059/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.54:3059/
+				7 button (collapsed) Description: Clientes, Secondary Actions: Expand
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (expanded) Description: Finanzas, Secondary Actions: Collapse
+				10 link Description: Cajas y movimientos, Value: 127.0.0.54:3059/finanzas/cajas
+				11 link Description: Cajas y cuentas bancarias, Value: 127.0.0.54:3059/finanzas/cuentas-tesoreria
+				12 link Description: Bancos y conciliación, Value: 127.0.0.54:3059/finanzas/bancos
+				13 link Description: Extractos bancarios, Value: 127.0.0.54:3059/finanzas/bancos/extractos
+				14 link Description: Cartera de cheques, Value: 127.0.0.54:3059/finanzas/cheques
+				15 link Description: IVA ventas y compras, Value: 127.0.0.54:3059/finanzas/impuestos
+				16 link Description: Cuentas por cobrar / pagar, Value: 127.0.0.54:3059/finanzas/cuentas
+				17 link Description: Tarjetas de crédito, Value: 127.0.0.54:3059/finanzas/tarjetas
+				18 link Description: Liquidaciones de tarjetas, Value: 127.0.0.54:3059/finanzas/liquidaciones-tarjetas
+				19 link Description: Retenciones y percepciones, Value: 127.0.0.54:3059/finanzas/retenciones
+				20 link Description: Comparación de certificados, Value: 127.0.0.54:3059/finanzas/conciliacion-certificados
+				21 link Description: Formas de pago y cobro, Value: 127.0.0.54:3059/finanzas/formas-pago
+				22 link Description: Entidades bancarias, Value: 127.0.0.54:3059/finanzas/entidades
+				23 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				24 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				25 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				26 button (collapsed) Description: Producción, Secondary Actions: Expand
+				27 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				28 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				29 button (collapsed) Description: Administración, Secondary Actions: Expand
+				30 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				31 link Description: Configuración, Value: 127.0.0.54:3059/configuracion
+				32 link Description: Acerca de, Value: 127.0.0.54:3059/acerca-de
+			33 text Versión experimental
+			34 button Colapsar menú
+		35 container
+			36 text SICA Textil · comparación de certificados de ensayo
+			37 container
+				38 text Responsable Inscripto  ·  Tucumán
+			39 container
+				40 text Sucursal
+				41 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					42 menu
+						43 (selected) Todas las unidades
+						44 Casa Central
+						45 Sucursal norte de ensayo
+			46 link Description: Acerca de y fuentes, Value: 127.0.0.54:3059/acerca-de
+			47 text AD
+			48 button Cerrar sesión
+			49 text Base compartida · Versión 1 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			50 text SICA / GESTIÓN INTEGRAL
+			51 heading Comparación de certificados impositivos, Value: 1
+				52 text Comparación de certificados impositivos
+			53 text Datos transcritos del respaldo, movimientos vinculados y diferencias conservadas con sus antecedentes.
+			54 button Nueva comparación
+			55 text Conservá el certificado o consulta original en su ubicación habitual e indicá su referencia. SICA guarda los datos declarados y, opcionalmente, la huella calculada del archivo; su contenido no se guarda. La comparación no emite certificados ni determina el cómputo fiscal.
+			56 text field (settable) Buscar registros
+			57 text 0  registros
+			58 button XLSX
+			59 button PDF
+			60 heading Todavía no hay registros., Value: 3
+				61 text Todavía no hay registros.
+			62 text Los datos que registres aquí aparecerán en los módulos relacionados.
+			63 container Revisar respaldo y movimientos impositivos
+				64 container
+					65 heading Revisar respaldo y movimientos impositivos, Value: 2
+						66 text Revisar respaldo y movimientos impositivos
+					67 button Cerrar
+				68 container
+					69 text SICA Textil · comparación de certificados de ensayo  · CUIT  30712345671
+				70 container
+					71 text Rango operativo:  01/01/2026  a  18/10/2026 . Revisión:  18/10/2026 . Todas las sucursales de los movimientos vinculados.
+				72 container
+					73 heading Retención sufrida · Ingresos Brutos, Value: 2
+						74 text Retención sufrida · Ingresos Brutos
+					75 container
+						76 text Certificado recibido  ·  CERT-SHARED
+					77 text  ·  18/10/2026  ·  Tucumán Agente según respaldo:  Cliente mayorista de prueba  ·  20123456786 . Sujeto según respaldo:  SICA Textil · comparación de certificados de ensayo  ·  30712345671 . Régimen transcripto:  Régimen de retención de ensayo . Estado:  Informado como vigente . Importe transcripto:  $ 2,50 . Localización o referencia:  Documento sintético de ensayo conservado externamente; sin validez fiscal. Archivo indicado:  certificate-evidence-ui.txt . SHA-256 declarada: 
+					78 text 5ddd05b6fb564024da09ad78b5e19006065e7e8c6639b7828d2d7e7ae4b9fefe
+					79 text . El contenido no está guardado en SICA.
+				80 text Importe registrado vinculado
+				81 text $ 1,00
+				82 text Importe externo considerado
+				83 text $ 2,50
+				84 text CERT-SHARED
+				85 text Diferencia de importes
+				86 text -$ 1,50
+				87 text Con diferencia de importe
+				88 text La comparación conserva datos transcritos y decisiones del operador. No acredita autenticidad, vigencia legal, cómputo fiscal ni presentación. No registró un asiento ni modificó el certificado.
+				89 text 1  registros
+				90 button XLSX
+				91 button PDF
+				92 table
+					93 row
+						94 cell
+							95 text FECHA
+						96 cell
+							97 text ORIGEN Y SUCURSAL
+						98 cell
+							99 text CONTRAPARTE DEL CATÁLOGO CONSERVADO
+						100 cell
+							101 text REFERENCIA REGISTRADA
+						102 cell
+							103 text JURISDICCIÓN
+						104 cell
+							105 text IMPORTE
+						106 cell
+							107 text IDENTIFICACIÓN
+						108 cell
+							109 text FUNDAMENTO DEL VÍNCULO
+					110 row
+						111 cell
+							112 text 05/09/2026
+						113 cell
+							114 text INT-RC-X-00001-00000001 · Casa Central
+						115 cell
+							116 text Cliente mayorista de prueba · 20123456786
+						117 cell
+							118 text CERT-SHARED
+						119 cell
+							120 text Tucumán
+						121 cell
+							122 text $ 1,00
+						123 cell
+							124 text Sin diferencias en los campos contrastados
+						125 cell
+							126 text Sin diferencias de identidad indicadas
+				127 container
+					128 text 1  movimiento(s) del rango comparten la referencia externa y no están vinculados. Revisá el alcance del certificado.
+				129 button (collapsed) Fundamento, fuentes y alcance conservados, Secondary Actions: Expand
+					130 text Fundamento, fuentes y alcance conservados
+				131 button Modificar comparación
+				132 button Conservar comparación revisada
+
+The focused UI element is 1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.54:3059/finanzas/conciliacion-certificados

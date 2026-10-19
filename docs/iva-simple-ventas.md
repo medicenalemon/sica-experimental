@@ -43,6 +43,10 @@ Pasaron 555 pruebas de dominio, 80 HTTP, 31 fiscales y 36 de exportaciones/QR. L
 - [Especificaciones y validaciones de registración, revisión 30/07/2025](https://www.arca.gob.ar/iva/documentos/Libro-IVA-Digital-Especificaciones.pdf).
 - [RG 1415, texto vigente y numeración](https://biblioteca.arca.gob.ar/search/query/norma.aspx?p=t%3ARAG%7Cn%3A1415%7Co%3A3%7Ca%3A2003%7Cf%3A07%2F01%2F2003).
 
+## Conciliación contable
+
+La [revisión INT-IDV](conciliacion-iva-ventas.md) compara estos comprobantes con el diario y el complemento interno de ingresos del mes, sin modificar los TXT. Conserva diferencias, fuentes y versiones. La referencia de trabajo no constituye un ajuste fiscal admitido ni determina la declaración.
+
 ## Pendientes
 
 Conciliación con precargas de Portal IVA, validación real de los TXT, comprobantes históricos emitidos por otro sistema, otras identificaciones y clases, anulados, agrupaciones, regímenes especiales, moneda extranjera, clasificación de otros tributos, ajustes de débito y su relación con ingresos devengados antes de la factura, imputaciones fiscales distintas de emisión, determinación y constancia de presentación. No se deduce ausencia de movimiento de la inexistencia de ventas en SICA. El objetivo integral del PPTX continúa activo.

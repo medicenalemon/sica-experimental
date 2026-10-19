@@ -1,0 +1,448 @@
+Browser tab: 1, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.51:3056/contabilidad/conciliacion-iva-ventas".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.51:3056/contabilidad/conciliacion-iva-ventas
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.51:3056/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.51:3056/
+				7 button (collapsed) Description: Clientes, Secondary Actions: Expand
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (collapsed) Description: Finanzas, Secondary Actions: Expand
+				10 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				11 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				12 button (expanded) Description: Contabilidad, Secondary Actions: Collapse
+				13 container
+					14 link Description: Plan de cuentas, Value: 127.0.0.51:3056/contabilidad/plan
+					15 link Description: Configuración de cuentas, Value: 127.0.0.51:3056/contabilidad/configuracion
+					16 link Description: Libro diario, Value: 127.0.0.51:3056/contabilidad/diario
+					17 link Description: Libro mayor, Value: 127.0.0.51:3056/contabilidad/mayor
+					18 link Description: Conciliación de IVA compras, Value: 127.0.0.51:3056/contabilidad/conciliacion-iva
+					19 link Description: Conciliación de IVA ventas, Value: 127.0.0.51:3056/contabilidad/conciliacion-iva-ventas
+					20 link Description: Sumas y saldos, Value: 127.0.0.51:3056/contabilidad/balance
+					21 link Description: Preparación de estados, Value: 127.0.0.51:3056/contabilidad/estados
+					22 link Description: Moneda de cierre y RECPAM, Value: 127.0.0.51:3056/contabilidad/moneda-cierre
+					23 link Description: Bienes de uso y depreciaciones, Value: 127.0.0.51:3056/contabilidad/bienes-de-uso
+					24 link Description: Valuación de inventario, Value: 127.0.0.51:3056/contabilidad/inventario
+					25 link Description: Servicios devengados, Value: 127.0.0.51:3056/contabilidad/servicios-devengados
+					26 link Description: Ingresos devengados, Value: 127.0.0.51:3056/contabilidad/ingresos-devengados
+					27 link Description: Cierres de períodos, Value: 127.0.0.51:3056/contabilidad/cierres
+					28 link Description: Cierre de resultados, Value: 127.0.0.51:3056/contabilidad/cierre-resultados
+					29 link Description: Apertura de ejercicio, Value: 127.0.0.51:3056/contabilidad/apertura-ejercicio
+				30 button (collapsed) Description: Producción, Secondary Actions: Expand
+				31 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				32 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				33 button (collapsed) Description: Administración, Secondary Actions: Expand
+				34 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				35 link Description: Configuración, Value: 127.0.0.51:3056/configuracion
+				36 link Description: Acerca de, Value: 127.0.0.51:3056/acerca-de
+			37 text Versión experimental
+			38 button Colapsar menú
+		39 container
+			40 text SICA Textil · IVA ventas de ensayo
+			41 container
+				42 text Responsable Inscripto  ·  Tucumán
+			43 container
+				44 text Sucursal
+				45 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					46 menu
+						47 (selected) Todas las unidades
+						48 Casa Central
+						49 Sucursal de ensayo
+			50 link Description: Acerca de y fuentes, Value: 127.0.0.51:3056/acerca-de
+			51 text AD
+			52 button Cerrar sesión
+			53 text Base compartida · Versión 19 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			54 text SICA / GESTIÓN INTEGRAL
+			55 heading Conciliación contable de IVA ventas, Value: 1
+				56 text Conciliación contable de IVA ventas
+			57 text Comprobantes preparados, ingresos devengados y movimientos del diario, sin registrar nuevos asientos.
+			58 heading Fuente fiscal y alcance de la revisión, Value: 2
+				59 text Fuente fiscal y alcance de la revisión
+			60 text Elegí una preparación INT-IVT vigente y cuentas del Pasivo que representen IVA débito, incluidas las históricas. Se conservan movimientos reales y el complemento interno de ingresos del mismo mes. Los orígenes anteriores se muestran sin sumarlos otra vez. No determina el saldo del mayor ni el impuesto final.
+			61 container
+				62 text Preparación de ventas para conciliar
+				63 pop up button (collapsed, settable) Description: Preparación de ventas para conciliar, Value: Seleccionar mes y ambiente…, Secondary Actions: Expand
+					64 menu
+						65 (selected) Seleccionar mes y ambiente…
+						66 2026-09 · produccion · INT-IVT-00000001
+			67 container
+				68 text Corte contable de IVA ventas
+				69 date field (settable) Description: Corte contable de IVA ventas, Value: 2026-10-17
+					70 container
+						71 stepper
+						72 stepper
+						73 stepper
+					74 pop up button Mostrar selector de fecha Mostrar selector de fecha
+			75 button (disabled) Preparar conciliación de IVA ventas
+			76 heading Historial de conciliaciones de IVA ventas, Value: 2
+				77 text Historial de conciliaciones de IVA ventas
+			78 text field (settable) Buscar registros
+			79 text 2  registros
+			80 button XLSX
+			81 button PDF
+			82 table
+				83 row
+					84 cell
+						85 text CONSTANCIA
+					86 cell
+						87 text MES
+					88 cell
+						89 text FUENTE FISCAL
+					90 cell
+						91 text REFERENCIA
+					92 cell
+						93 text DIFERENCIA FRENTE AL TRABAJO
+					94 cell
+						95 text ESTADO
+					96 cell
+						97 text RESPONSABLE
+					98 cell
+						99 text DETALLE
+				100 row
+					101 cell
+						102 text INT-IDV-00000002
+					103 cell
+						104 text 2026-09
+					105 cell
+						106 text INT-IVT-00000001
+					107 cell
+						108 text IVA-VENTAS-DIARIO-UI-2
+					109 cell
+						110 text $ 0,00
+					111 cell
+						112 text Sin diferencia aritmética
+					113 cell
+						114 text Administrador
+					115 cell
+						116 button Ver conciliación de ventas
+				117 row
+					118 cell
+						119 text INT-IDV-00000001
+					120 cell
+						121 text 2026-09
+					122 cell
+						123 text INT-IVT-00000001
+					124 cell
+						125 text IVA-VENTAS-DIARIO-UI-1
+					126 cell
+						127 text -$ 2,00
+					128 cell
+						129 text Con diferencia pendiente
+					130 cell
+						131 text Administrador
+					132 cell
+						133 button Ver conciliación de ventas
+			134 container IVA ventas contable · INT-IDV-00000002
+				135 container
+					136 heading IVA ventas contable · INT-IDV-00000002, Value: 2
+						137 text IVA ventas contable · INT-IDV-00000002
+					138 button Cerrar
+				139 container
+					140 text IVA-VENTAS-DIARIO-UI-2  ·  Administrador
+				141 container
+					142 text SICA Textil · IVA ventas de ensayo  · CUIT  30712345671
+				143 container
+					144 text 01/09/2026  a  30/09/2026  · Corte contable  17/10/2026  · Todas las sucursales · Fuente  INT-IVT-00000001  · ENSAYO
+				145 text IVA de comprobantes preparados
+				146 text $ 87,15
+				147 text Complemento de ingresos del mes
+				148 text -$ 10,50
+				149 text Referencia de trabajo con ingresos
+				150 text $ 76,65
+				151 text Movimiento contable vinculado
+				152 text $ 76,65
+				153 text Diferencia frente a comprobantes
+				154 text -$ 10,50
+				155 text Diferencia frente al trabajo
+				156 text $ 0,00
+				157 text Sin diferencia aritmética
+				158 container
+					159 text Cuentas elegidas:  2.1.2 · IVA débito fiscal . Signo: Haber menos Debe.
+				160 container
+					161 text Ventas y notas:  $ 85,15 ; ingresos devengados y conciliaciones del mes:  -$ 10,50 ; manuales y reversiones vinculados:  $ 2,00 .
+				162 text La referencia de trabajo conserva el complemento interno de ingresos. No es un ajuste presentado ni admitido por ARCA y no cambia los TXT de ventas. Una diferencia cero no acredita correcta imputación fiscal.
+				163 text 5  registros
+				164 button XLSX
+				165 button PDF
+				166 table
+					167 row
+						168 cell
+							169 text INTERNO
+						170 cell
+							171 text COMPROBANTE FISCAL CONSERVADO
+						172 cell
+							173 text EMISIÓN
+						174 cell
+							175 text FECHA CONTABLE
+						176 cell
+							177 text SUCURSAL
+						178 cell
+							179 text DEBE ELEGIDO
+						180 cell
+							181 text HABER ELEGIDO
+						182 cell
+							183 text MOVIMIENTO ELEGIDO
+						184 cell
+							185 text IVA DE COMPROBANTE
+					186 row
+						187 cell
+							188 text INT-FC-A-00001-00000001
+						189 cell
+							190 text Factura A 00001-00000142
+						191 cell
+							192 text 05/09/2026
+						193 cell
+							194 text 05/09/2026
+						195 cell
+							196 text Casa Central
+						197 cell
+							198 text $ 0,00
+						199 cell
+							200 text $ 40,00
+						201 cell
+							202 text $ 40,00
+						203 cell
+							204 text $ 42,00
+					205 row
+						206 cell
+							207 text INT-FC-B-00002-00000001
+						208 cell
+							209 text Factura B 00002-00000001
+						210 cell
+							211 text 05/09/2026
+						212 cell
+							213 text 05/09/2026
+						214 cell
+							215 text Sucursal de ensayo
+						216 cell
+							217 text $ 0,00
+						218 cell
+							219 text $ 21,00
+						220 cell
+							221 text $ 21,00
+						222 cell
+							223 text $ 21,00
+					224 row
+						225 cell
+							226 text INT-ND-A-00001-00000001
+						227 cell
+							228 text Nota de débito A 00001-00000001
+						229 cell
+							230 text 05/09/2026
+						231 cell
+							232 text 05/09/2026
+						233 cell
+							234 text Casa Central
+						235 cell
+							236 text $ 0,00
+						237 cell
+							238 text $ 1,05
+						239 cell
+							240 text $ 1,05
+						241 cell
+							242 text $ 1,05
+					243 row
+						244 cell
+							245 text INT-FC-A-00001-00000002
+						246 cell
+							247 text Factura A 00001-00000143
+						248 cell
+							249 text 05/09/2026
+						250 cell
+							251 text 05/09/2026
+						252 cell
+							253 text Casa Central
+						254 cell
+							255 text $ 0,00
+						256 cell
+							257 text $ 25,20
+						258 cell
+							259 text $ 25,20
+						260 cell
+							261 text $ 25,20
+					262 row
+						263 cell
+							264 text INT-NC-A-00001-00000001
+						265 cell
+							266 text Nota de crédito A 00001-00000001
+						267 cell
+							268 text 05/09/2026
+						269 cell
+							270 text 05/09/2026
+						271 cell
+							272 text Casa Central
+						273 cell
+							274 text $ 2,10
+						275 cell
+							276 text $ 0,00
+						277 cell
+							278 text -$ 2,10
+						279 cell
+							280 text -$ 2,10
+				281 text 2  registros
+				282 button XLSX
+				283 button PDF
+				284 table
+					285 row
+						286 cell
+							287 text CONSTANCIA
+						288 cell
+							289 text FECHA CONTABLE
+						290 cell
+							291 text ORIGEN
+						292 cell
+							293 text REMITO / FACTURA
+						294 cell
+							295 text SUCURSAL
+						296 cell
+							297 text MOVIMIENTO ELEGIDO
+						298 cell
+							299 text COMPLEMENTO DE TRABAJO
+						300 cell
+							301 text FUNDAMENTO FISCAL CONSERVADO
+					302 row
+						303 cell
+							304 text INT-CI-00000001
+						305 cell
+							306 text 06/09/2026
+						307 cell
+							308 text Descuento de importes ya reconocidos
+						309 cell
+							310 text INT-FC-A-00001-00000002
+						311 cell
+							312 text Casa Central
+						313 cell
+							314 text -$ 21,00
+						315 cell
+							316 text -$ 21,00
+						317 cell
+							318 text IVA sintético 21% revisado al aceptar la entrega, sin anticipos. Requiere validación fiscal real.
+					319 row
+						320 cell
+							321 text INT-DI-00000002
+						322 cell
+							323 text 10/09/2026
+						324 cell
+							325 text Ingreso e IVA sin factura
+						326 cell
+							327 text INT-RM-X-00001-00000002
+						328 cell
+							329 text Casa Central
+						330 cell
+							331 text $ 10,50
+						332 cell
+							333 text $ 10,50
+						334 cell
+							335 text IVA sintético 21% revisado al aceptar la entrega, sin anticipos. Requiere validación fiscal real.
+				336 text 1  registros
+				337 button XLSX
+				338 button PDF
+				339 table
+					340 row
+						341 cell
+							342 text DEVENGAMIENTO
+						343 cell
+							344 text FECHA
+						345 cell
+							346 text REMITO
+						347 cell
+							348 text IVA DEL DEVENGAMIENTO
+						349 cell
+							350 text MOVIMIENTO ORIGINAL ELEGIDO
+						351 cell
+							352 text TRATAMIENTO EN ESTE PAPEL
+					353 row
+						354 cell
+							355 text INT-DI-00000001
+						356 cell
+							357 text 20/08/2026
+						358 cell
+							359 text INT-RM-X-00001-00000001
+						360 cell
+							361 text $ 21,00
+						362 cell
+							363 text $ 21,00
+						364 cell
+							365 text Origen previo · no se suma
+				366 text 0  registros
+				367 button XLSX
+				368 button PDF
+				369 heading Todavía no hay registros., Value: 3
+					370 text Todavía no hay registros.
+				371 text Los datos que registres aquí aparecerán en los módulos relacionados.
+				372 text 1  registros
+				373 button XLSX
+				374 button PDF
+				375 table
+					376 row
+						377 cell
+							378 text ORIGEN
+						379 cell
+							380 text FECHA
+						381 cell
+							382 text ASIENTO
+						383 cell
+							384 text SUCURSAL
+						385 cell
+							386 text MOVIMIENTO ELEGIDO
+						387 cell
+							388 text RESPALDO
+						389 cell
+							390 text FUNDAMENTO
+					391 row
+						392 cell
+							393 text Manual
+						394 cell
+							395 text 20/09/2026
+						396 cell
+							397 text Corrección sintética de IVA ventas
+						398 cell
+							399 text Casa Central
+						400 cell
+							401 text $ 2,00
+						402 cell
+							403 text RESPALDO-UI-IVA-200
+						404 cell
+							405 text Reclasificación de ensayo ya contabilizada: 200 centavos desde otro pasivo hacia IVA débito, conservando el asiento original.
+				406 text 2  registros
+				407 button XLSX
+				408 button PDF
+				409 table
+					410 row
+						411 cell
+							412 text SUCURSAL
+						413 cell
+							414 text VENTAS
+						415 cell
+							416 text INGRESOS / CONCILIACIONES
+						417 cell
+							418 text AJUSTES
+						419 cell
+							420 text NETO VINCULADO
+					421 row
+						422 cell
+							423 text Casa Central
+						424 cell
+							425 text $ 64,15
+						426 cell
+							427 text -$ 10,50
+						428 cell
+							429 text $ 2,00
+						430 cell
+							431 text $ 55,65
+					432 row
+						433 cell
+							434 text Sucursal de ensayo
+						435 cell
+							436 text $ 21,00
+						437 cell
+							438 text $ 0,00
+						439 cell
+							440 text $ 0,00
+						441 cell
+							442 text $ 21,00
+				443 button (collapsed) Fuentes completas y alcance de IVA ventas, Secondary Actions: Expand
+					444 text Fuentes completas y alcance de IVA ventas
+				445 button Descargar conciliación de IVA ventas JSON
+
+The focused UI element is 138 button Cerrar

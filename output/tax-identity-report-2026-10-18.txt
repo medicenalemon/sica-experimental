@@ -1,0 +1,208 @@
+Browser tab: 2, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.55:3060/reportes/retenciones-percepciones".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.55:3060/reportes/retenciones-percepciones
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.55:3060/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.55:3060/
+				7 button (collapsed) Description: Clientes, Secondary Actions: Expand
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (collapsed) Description: Finanzas, Secondary Actions: Expand
+				10 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				11 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				12 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				13 button (collapsed) Description: Producción, Secondary Actions: Expand
+				14 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				15 button (expanded) Description: Reportes, Secondary Actions: Collapse
+				16 link Description: Centro de reportes, Value: 127.0.0.55:3060/reportes
+				17 link Description: Ventas, Value: 127.0.0.55:3060/reportes/ventas
+				18 link Description: Compras y gastos, Value: 127.0.0.55:3060/reportes/compras
+				19 link Description: Financieros, Value: 127.0.0.55:3060/reportes/financieros
+				20 link Description: IVA ventas y compras, Value: 127.0.0.55:3060/reportes/impositivos
+				21 link Description: Retenciones y percepciones, Value: 127.0.0.55:3060/reportes/retenciones-percepciones
+				22 link Description: Inventario, Value: 127.0.0.55:3060/reportes/inventario
+				23 link Description: Cuentas corrientes, Value: 127.0.0.55:3060/reportes/cuentas-corrientes
+				24 button (collapsed) Description: Administración, Secondary Actions: Expand
+				25 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				26 link Description: Configuración, Value: 127.0.0.55:3060/configuracion
+				27 link Description: Acerca de, Value: 127.0.0.55:3060/acerca-de
+			28 text Versión experimental
+			29 button Colapsar menú
+		30 container
+			31 text SICA Textil · identidad impositiva de ensayo
+			32 container
+				33 text Responsable Inscripto  ·  Tucumán
+			34 container
+				35 text Sucursal
+				36 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					37 menu
+						38 (selected) Todas las unidades
+						39 Casa Central
+			40 link Description: Acerca de y fuentes, Value: 127.0.0.55:3060/acerca-de
+			41 text AD
+			42 text Administrador
+			43 text Administrador General
+			44 button Cerrar sesión
+			45 text Base compartida · Versión 4 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			46 text SICA / GESTIÓN INTEGRAL
+			47 heading Retenciones y percepciones registradas, Value: 1
+				48 text Retenciones y percepciones registradas
+			49 text Detalle de cobros, pagos, facturas, notas y liquidaciones de tarjetas según los filtros y la sucursal seleccionados.
+			50 container
+				51 text Desde
+				52 date field (settable) Description: Desde, Value: 2026-01-01
+					53 container
+						54 stepper
+						55 stepper
+						56 stepper
+					57 pop up button Mostrar selector de fecha Mostrar selector de fecha
+			58 container
+				59 text Hasta
+				60 date field (settable) Description: Hasta, Value: 2026-12-31
+					61 container
+						62 stepper
+						63 stepper
+						64 stepper
+					65 pop up button Mostrar selector de fecha Mostrar selector de fecha
+			66 container
+				67 text Impuesto
+				68 pop up button (collapsed, settable) Description: Impuesto, Value: Todos, Secondary Actions: Expand
+					69 menu
+						70 (selected) Todos
+						71 Ganancias
+						72 Ingresos Brutos
+						73 IVA
+						74 Seguridad Social
+			75 container
+				76 text Jurisdicción
+				77 pop up button (collapsed, settable) Description: Jurisdicción, Value: Todas, incluidas las no identificadas, Secondary Actions: Expand
+					78 menu
+						79 (selected) Todas, incluidas las no identificadas
+						80 Buenos Aires
+						81 CABA
+						82 Catamarca
+						83 Chaco
+						84 Chubut
+						85 Córdoba
+						86 Corrientes
+						87 Entre Ríos
+						88 Formosa
+						89 Jujuy
+						90 La Pampa
+						91 La Rioja
+						92 Mendoza
+						93 Misiones
+						94 Neuquén
+						95 Río Negro
+						96 Salta
+						97 San Juan
+						98 San Luis
+						99 Santa Cruz
+						100 Santa Fe
+						101 Santiago del Estero
+						102 Tierra del Fuego
+						103 Tucumán
+			104 container
+				105 text Incluir percepciones de comprobantes internos X
+				106 checkbox (settable, integer) Description: Incluir percepciones de comprobantes internos X, Value: 0
+			107 text Estos son importes registrados, sin validación del certificado ni conciliación con ARCA o DGR. Las notas de crédito restan percepciones; las retenciones de cobros, pagos y liquidaciones mantienen su sentido propio. No se determina crédito computable ni deuda fiscal. Las nuevas operaciones conservan nombres y CUIT al registrar; cada fila indica su procedencia. Los históricos sin esos datos muestran el catálogo actual. En tarjetas, el agente se transcribe del respaldo o queda pendiente con un motivo; no se deduce de la marca. Retenciones sufridas $ 6,00 Retenciones practicadas $ 0,00 Percepciones sufridas $ 0,50 Percepciones practicadas $ 1,00 1  registro(s) necesitan revisar su identificación.  0  movimiento(s) comparten referencia de retención en esta selección: podría tratarse de un certificado distribuido; no se presume duplicación.  0 percepción(es) de internos X excluida(s).
+			108 text field (settable) Buscar registros
+			109 text 5  registros
+			110 button XLSX
+			111 button PDF
+			112 table
+				113 row
+					114 cell
+						115 text FECHA
+					116 cell
+						117 text CONCEPTO
+					118 cell
+						119 text ORIGEN Y REFERENCIA
+					120 cell
+						121 text JURISDICCIÓN
+					122 cell
+						123 text IMPORTE
+					124 cell
+						125 text IDENTIFICACIÓN
+				126 row
+					127 cell
+						128 text 18/10/2026
+					129 cell
+						130 text Percepción sufrida · Ingresos Brutos
+					131 cell
+						132 text Factura / nota · INT-FC-A-00001-00000002
+Casa Central · Proveedor textil de prueba · 30765432109
+REG-LEGACY-UI
+Catálogo actual · identidad histórica no conservada
+					133 cell
+						134 text Tucumán
+					135 cell
+						136 text $ 0,50
+					137 cell
+						138 text Referencia informada · sin constatación externa
+				139 row
+					140 cell
+						141 text 18/10/2026
+					142 cell
+						143 text Retención sufrida · IVA
+					144 cell
+						145 text Cobro · INT-RC-X-00001-00000001
+Casa Central · Cliente mayorista de prueba · 20123456786
+CERT-ORIGIN-UI
+Catálogo al registrar · Empresa SICA Textil · identidad impositiva de ensayo · 30712345671
+					146 cell
+						147 text Sin jurisdicción declarada
+					148 cell
+						149 text $ 2,00
+					150 cell
+						151 text Referencia informada · sin constatación externa
+				152 row
+					153 cell
+						154 text 18/10/2026
+					155 cell
+						156 text Percepción practicada · Ingresos Brutos
+					157 cell
+						158 text Factura / nota · INT-FC-A-00001-00000001
+Casa Central · Cliente mayorista de prueba · 20123456786
+REG-IDENTITY-UI
+Catálogo al registrar · Empresa SICA Textil · identidad impositiva de ensayo · 30712345671
+					159 cell
+						160 text Tucumán
+					161 cell
+						162 text $ 1,00
+					163 cell
+						164 text Referencia informada · sin constatación externa
+				165 row
+					166 cell
+						167 text 18/10/2026
+					168 cell
+						169 text Retención sufrida · Ingresos Brutos
+					170 cell
+						171 text Liquidación de tarjeta · LIQ-IDENTITY-UI
+Casa Central · Agente textil de ensayo · 20123456786
+CERT-KNOWN-UI
+Agente declarado en liquidación · Empresa SICA Textil · identidad impositiva de ensayo · 30712345671
+					172 cell
+						173 text Tucumán
+					174 cell
+						175 text $ 2,50
+					176 cell
+						177 text Referencia informada · sin constatación externa
+				178 row
+					179 cell
+						180 text 18/10/2026
+					181 cell
+						182 text Retención sufrida · Ingresos Brutos
+					183 cell
+						184 text Liquidación de tarjeta · LIQ-IDENTITY-UI
+Casa Central · Agente sin identificar
+CERT-PENDING-UI
+Agente sin identificar · Empresa SICA Textil · identidad impositiva de ensayo · 30712345671
+					185 cell
+						186 text Tucumán
+					187 cell
+						188 text $ 1,50
+					189 cell
+						190 text Referencia informada · sin constatación externa · Identidad de contraparte incompleta al registrar · Agente no identificado: El respaldo sintético no identifica al agente de esta deducción; se conserva pendiente de revisión.
+
+The focused UI element is 1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.55:3060/reportes/retenciones-percepciones

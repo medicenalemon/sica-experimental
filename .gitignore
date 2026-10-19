@@ -29,3 +29,5 @@ var/
 .env.*
 !.env.example
 server/companies.local.json
+deploy/certificates/*
+!deploy/certificates/.gitkeep

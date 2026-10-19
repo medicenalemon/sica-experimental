@@ -1,0 +1,142 @@
+Browser tab: 1, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.1:39781/clientes/cobros".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.1:39781/clientes/cobros
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.1:39781/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.1:39781/
+				7 button (expanded) Description: Clientes, Secondary Actions: Collapse
+				102 link Description: Directorio, Value: 127.0.0.1:39781/clientes
+				103 link Description: Alta de clientes, Value: 127.0.0.1:39781/clientes/alta
+				104 link Description: Ventas y facturas, Value: 127.0.0.1:39781/clientes/ventas
+				105 link Description: Cobros, Value: 127.0.0.1:39781/clientes/cobros
+				106 link Description: Notas de crédito / débito, Value: 127.0.0.1:39781/clientes/notas
+				107 link Description: Pedidos de venta, Value: 127.0.0.1:39781/clientes/pedidos
+				108 link Description: Remitos de venta, Value: 127.0.0.1:39781/clientes/remitos
+				109 link Description: Cuenta corriente, Value: 127.0.0.1:39781/clientes/cuenta-corriente
+				17 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				18 button (collapsed) Description: Finanzas, Secondary Actions: Expand
+				19 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				20 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				21 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				22 button (collapsed) Description: Producción, Secondary Actions: Expand
+				23 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				24 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				25 button (collapsed) Description: Administración, Secondary Actions: Expand
+				26 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				27 link Description: Configuración, Value: 127.0.0.1:39781/configuracion
+				28 link Description: Acerca de, Value: 127.0.0.1:39781/acerca-de
+			29 text Versión experimental
+			30 button Colapsar menú
+		31 container
+			32 text SICA Textil - ensayo de constancias
+			33 container
+				34 text Responsable Inscripto  ·  Tucumán
+			35 container
+				36 text Sucursal
+				37 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					38 menu
+						39 (selected) Todas las unidades
+						40 Casa Central Textil
+			41 link Description: Acerca de y fuentes, Value: 127.0.0.1:39781/acerca-de
+			42 text AD
+			43 text Administrador
+			44 text Administrador General
+			45 button Cerrar sesión
+			46 text Base compartida · Versión 2 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			47 text SICA / GESTIÓN INTEGRAL
+			48 heading Recibos de cobro, Value: 1
+				49 text Recibos de cobro
+			50 text Operaciones de gestión interna vinculadas a cuentas corrientes, tesorería y contabilidad.
+			51 link Description: Recibo de cobro, Value: 127.0.0.1:39781/clientes/cobros/nuevo
+			52 text field (settable) Buscar registros
+			53 text 2  registros
+			54 button XLSX
+			55 button PDF
+			56 table
+				57 row
+					58 cell
+						59 text REFERENCIA INTERNA
+					60 cell
+						61 text FECHA
+					62 cell
+						63 text REGISTRO CONTABLE
+					64 cell
+						65 text CLIENTE
+					66 cell
+						67 text TOTAL ARS
+					68 cell
+						69 text ESTADO
+					70 cell
+						71 text ACCIONES
+				72 row
+					73 cell
+						74 text INT-RC-X-00001-00000001
+					75 cell
+						76 text 18/10/2026
+					77 cell
+						78 text 18/10/2026
+					79 cell
+						80 text Comercio Núñez y Peña SRL
+					81 cell
+						82 text $ 90,00
+					83 cell
+						84 text Interno
+					85 cell
+						86 button Ver
+				87 row
+					88 cell
+						89 text INT-RC-X-00001-00000002
+					90 cell
+						91 text 19/10/2026
+					92 cell
+						93 text 19/10/2026
+					94 cell
+						95 text Comercio Núñez y Peña SRL
+					96 cell
+						97 text $ 10,25
+					98 cell
+						99 text Interno
+					100 cell
+						101 button Ver
+			110 container INT-RC-X-00001-00000002
+				111 container
+					112 heading INT-RC-X-00001-00000002, Value: 2
+						113 text INT-RC-X-00001-00000002
+					114 button Cerrar
+				115 container
+					116 text Comercio Núñez y Peña SRL  ·  19/10/2026
+				117 text Documento interno
+				118 container
+					119 text Efectivo $ 10,25 SQL-UI-ENSAYO-20261019
+				120 container
+					121 heading Aplicaciones al registrar, Value: 2
+						122 text Aplicaciones al registrar
+					123 text 1  registros
+					124 table
+						125 row
+							126 cell
+								127 text CARGO ORIGINAL
+							128 cell
+								129 text FECHA DEL CARGO
+							130 cell
+								131 text IMPORTE APLICADO
+						132 row
+							133 cell
+								134 text INT-FC-A-00001-00000001
+							135 cell
+								136 text 18/10/2026
+							137 cell
+								138 text $ 5,25
+					139 text Importe sin aplicación al registrar: 
+					140 text $ 5,00
+					141 text . Esta distribución es la original. Consultá las aplicaciones, liberaciones y reversiones posteriores desde Cuentas por cobrar / pagar.
+				142 text Neto  $ 10,25 IVA  $ 0,00
+				143 container
+					144 text Total  $ 10,25
+				145 text Cobro ficticio para verificar persistencia SQL. Sin movimiento de fondos reales.
+				146 container
+					147 text Datos conservados al registrar . La constancia incluye medios y aplicaciones originales; no acredita ejecución del pago ni autorización fiscal.
+				148 button Descargar constancia interna PDF
+
+The focused UI element is 114 button Cerrar

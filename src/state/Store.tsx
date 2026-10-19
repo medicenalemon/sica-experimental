@@ -1,3 +1,5 @@
+import {assertReceiptSnapshotContinuity} from '@/domain/receipt-print'
+import {previewTaxCertificate as localTaxCertificatePreview} from '@/domain/tax-certificates'
 import {buildFiscalRequest} from '@/domain/fiscal'
 import type {FiscalOptions,FiscalRequest} from '@/domain/fiscal'
 import { useRef, useState, useEffect, useCallback } from 'react'
@@ -15,7 +17,7 @@ import { Context } from './context'
 const STORAGE='sica.data.v1',SESSION='sica.session.v1'
 const COMPANY='sica.company.v1'
 function savedCompany(){try{return sessionStorage.getItem(COMPANY)||''}catch{return ''}}
-const mode=import.meta.env.VITE_SICA_MODE==='server'?'server':'local'
+const mode=import.meta.env.VITE_SICA_MODE==='local'?'local':'server'
 interface Snapshot {company:CompanyChoice;state:State;revision:number;session:Session;csrf:string;signedOut?:boolean}
 class NetworkError extends Error {status:number;constructor(status:number,message:string){super(message);this.status=status}}
 function readState():{data:State;error:string} {
@@ -95,12 +97,14 @@ export function StoreProvider({children}:{children:ReactNode}) {
   if(pending.current){notify('Hay una operación en curso.');return false}pending.current=true;setBusy(true)
   try{if(session?.role!=='Administrador General')throw new Error('La restauración requiere Administrador General.');validateState(value)
    if(mode==='server'){accept(await api<Snapshot>('restore',{revision:revisionRef.current,requestId:uid(),command:{state:value}},true));notify('Copia restaurada en el servidor; usuarios y recuperación preservados.');return true}
+   assertReceiptSnapshotContinuity(dataRef.current,value)
    const previous=localStorage.getItem(STORAGE);if(previous)localStorage.setItem('sica.restore.previous',previous);const next=structuredClone(value);next.audit.push({id:uid(),at:new Date().toISOString(),user:session.name,action:'Restaurar copia de seguridad',detail:'Se preservó la base anterior como recuperación local.'});commit(next);setError('');notify('Copia restaurada.');return true
   }catch(e){if(e instanceof NetworkError&&[401,409].includes(e.status))await reload();notify(`Error: ${e instanceof Error?e.message:'No se pudo restaurar.'}`);return false}finally{pending.current=false;setBusy(false)}
  }
  async function logout(){if(pending.current){notify('Esperá a que termine la operación antes de cerrar sesión.');return false}if(mode==='server'){try{await api('logout',{})}catch(e){if(!(e instanceof NetworkError&&e.status===401)){notify('No se pudo cerrar la sesión del servidor. Reintentá al recuperar conexión.');return false}}epoch.current++;setRemote(null);remoteRef.current=null;csrfRef.current='';revisionRef.current=0;setRevision(0);dataRef.current=initialState();setData(dataRef.current)}else{localStorage.removeItem(SESSION);sessionStorage.removeItem(SESSION);localStorage.removeItem('sica_isAuthenticated');setSession(null)}return true}
  // api reads the current company and CSRF refs; keep this reader stable across polling snapshots.
  const fiscalConnection=useCallback(async():Promise<import('@/domain/fiscal').FiscalConnection>=>mode==='server'?api<import('@/domain/fiscal').FiscalConnection>('fiscal/status'):{configured:false,environment:'homologacion',productionEnabled:false},[])
+ async function previewTaxCertificate(input:import('@/domain/tax-certificates').TaxCertificateInput){return mode==='server'?api<import('@/domain/tax-certificates').TaxCertificatePreview>('tax-certificates/preview',input):localTaxCertificatePreview(dataRef.current,input)}
  async function previewVatSales(input:import('@/domain/vat-sales').VatSalesInput){if(mode!=='server')throw new Error('La preparación de ventas requiere las fuentes fiscales conservadas en el servidor.');return api<import('@/domain/vat-sales').VatSalesPreview>('fiscal/vat-sales-preview',input)}
  async function previewFiscal(id:string,options:FiscalOptions,environment?:import('@/domain/fiscal').FiscalEnvironment){return mode==='server'?api<FiscalRequest>('fiscal/preview',{documentId:id,options,environment}):buildFiscalRequest(dataRef.current,id,options)}
  async function operateFiscal(id:string,options:FiscalOptions,action:'autorizar'|'consultar',reviewRevision?:number,environment?:import('@/domain/fiscal').FiscalEnvironment){
@@ -113,5 +117,5 @@ export function StoreProvider({children}:{children:ReactNode}) {
  async function recoveries(){return api<{id:number;revision:number;created:string;name:string;documents:number}[]>('recovery')}
  async function recoveryCopy(id:number){return api<State>(`recovery/${id}`)}
  function localCopy(){const raw=localStorage.getItem(STORAGE);if(!raw)throw new Error('No hay una base local para migrar.');const value=JSON.parse(raw);validateState(value);return value}
- return <Context.Provider value={{companies,companyId,selectCompany,data,session,branch,setBranch,error,notice,notify,transact,login,activeSessions,logout,restore,mode,ready,busy,revision,reload,exportBackup,localCopy,recoveries,recoveryCopy,previewVatSales,previewFiscal,operateFiscal,fiscalConnection}}>{children}</Context.Provider>
+ return <Context.Provider value={{companies,companyId,selectCompany,data,session,branch,setBranch,error,notice,notify,transact,login,activeSessions,logout,restore,mode,ready,busy,revision,reload,exportBackup,localCopy,recoveries,recoveryCopy,previewTaxCertificate,previewVatSales,previewFiscal,operateFiscal,fiscalConnection}}>{children}</Context.Provider>
 }

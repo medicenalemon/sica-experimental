@@ -1,0 +1,314 @@
+Browser tab: 2, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.52:3057/finanzas/retenciones".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.52:3057/finanzas/retenciones
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.52:3057/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.52:3057/
+				7 button (collapsed) Description: Clientes, Secondary Actions: Expand
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (expanded) Description: Finanzas, Secondary Actions: Collapse
+				128 link Description: Cajas y movimientos, Value: 127.0.0.52:3057/finanzas/cajas
+				129 link Description: Cajas y cuentas bancarias, Value: 127.0.0.52:3057/finanzas/cuentas-tesoreria
+				130 link Description: Bancos y conciliación, Value: 127.0.0.52:3057/finanzas/bancos
+				131 link Description: Extractos bancarios, Value: 127.0.0.52:3057/finanzas/bancos/extractos
+				132 link Description: Cartera de cheques, Value: 127.0.0.52:3057/finanzas/cheques
+				133 link Description: IVA ventas y compras, Value: 127.0.0.52:3057/finanzas/impuestos
+				134 link Description: Cuentas por cobrar / pagar, Value: 127.0.0.52:3057/finanzas/cuentas
+				135 link Description: Tarjetas de crédito, Value: 127.0.0.52:3057/finanzas/tarjetas
+				136 link Description: Liquidaciones de tarjetas, Value: 127.0.0.52:3057/finanzas/liquidaciones-tarjetas
+				137 link Description: Retenciones y percepciones, Value: 127.0.0.52:3057/finanzas/retenciones
+				138 link Description: Formas de pago y cobro, Value: 127.0.0.52:3057/finanzas/formas-pago
+				139 link Description: Entidades bancarias, Value: 127.0.0.52:3057/finanzas/entidades
+				23 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				24 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				25 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				26 button (collapsed) Description: Producción, Secondary Actions: Expand
+				27 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				28 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				29 button (collapsed) Description: Administración, Secondary Actions: Expand
+				30 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				31 link Description: Configuración, Value: 127.0.0.52:3057/configuracion
+				32 link Description: Acerca de, Value: 127.0.0.52:3057/acerca-de
+			33 text Versión experimental
+			34 button Colapsar menú
+		35 container
+			36 text SICA Textil · regímenes de ensayo
+			37 container
+				38 text Responsable Inscripto  ·  Tucumán
+			39 container
+				40 text Sucursal
+				41 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					42 menu
+						43 (selected) Todas las unidades
+						44 Casa Central
+			45 link Description: Acerca de y fuentes, Value: 127.0.0.52:3057/acerca-de
+			46 text AD
+			47 button Cerrar sesión
+			48 text Base compartida · Versión 6 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			49 text SICA / GESTIÓN INTEGRAL
+			50 heading Retenciones y percepciones, Value: 1
+				51 text Retenciones y percepciones
+			52 text Definí regímenes por jurisdicción. Los importes se registran con certificados y requieren revisión profesional.
+			53 button Nuevo registro
+			54 text Vigencia consultada al  2026-10-17 . Las fechas inicial y final son inclusivas. El estado sólo compara las fechas declaradas: no acredita habilitación como agente, padrón, exclusión ni vigencia legal de la norma. Los importes se registran manualmente con su certificado; este catálogo no calcula retenciones o percepciones.
+			55 text field (settable) Buscar registros
+			56 text 3  registros
+			57 button XLSX
+			58 button PDF
+			59 table
+				60 row
+					61 cell
+						62 text NOMBRE
+					63 cell
+						64 text TIPO
+					65 cell
+						66 text ALÍCUOTA (%)
+					67 cell
+						68 text IMPUESTO
+					69 cell
+						70 text JURISDICCIÓN
+					71 cell
+						72 text VIGENCIA DECLARADA
+					73 cell
+						74 text ESTADO SEGÚN FECHAS
+					75 cell
+						76 text ACCIONES
+				77 row
+					78 cell
+						79 text Régimen vigente de ensayo
+					80 cell
+						81 text Retención
+					82 cell
+						83 text 2.75
+					84 cell
+						85 text Ingresos Brutos
+					86 cell
+						87 text Tucumán
+					88 cell
+						89 text 2026-01-01 a 2026-12-31
+					90 cell
+						91 text Vigente según fechas
+					92 cell
+						93 button Editar
+				94 row
+					95 cell
+						96 text Régimen vencido de ensayo
+					97 cell
+						98 text Retención
+					99 cell
+						100 text 2.5
+					101 cell
+						102 text Ingresos Brutos
+					103 cell
+						104 text Tucumán
+					105 cell
+						106 text 2025-01-01 a 2025-12-31
+					107 cell
+						108 text Vencido según fechas
+					109 cell
+						110 button Editar
+				111 row
+					112 cell
+						113 text Régimen próximo de ensayo
+					114 cell
+						115 text Retención
+					116 cell
+						117 text 2.5
+					118 cell
+						119 text Ingresos Brutos
+					120 cell
+						121 text Tucumán
+					122 cell
+						123 text 2027-01-01 a sin fin declarado
+					124 cell
+						125 text Próximo según fechas
+					126 cell
+						127 button Editar
+			140 container Editar registro
+				141 container
+					142 heading Editar registro, Value: 2
+						143 text Editar registro
+					144 button Cerrar
+				145 container
+					146 text Nombre *
+					147 text field (settable) Description: Nombre *, Value: Régimen vigente de ensayo
+					148 text Tipo *
+					149 pop up button (collapsed, settable) Description: Tipo *, Value: Retención, Secondary Actions: Expand
+						150 menu
+							151 Seleccionar…
+							152 (selected) Retención
+							153 Percepción
+					154 text Impuesto *
+					155 pop up button (collapsed, settable) Description: Impuesto *, Value: Ingresos Brutos, Secondary Actions: Expand
+						156 menu
+							157 Seleccionar…
+							158 (selected) Ingresos Brutos
+							159 Ganancias
+							160 IVA
+							161 Seguridad Social
+					162 text Jurisdicción
+					163 pop up button (collapsed, settable) Description: Jurisdicción, Value: Tucumán, Secondary Actions: Expand
+						164 menu
+							165 Seleccionar…
+							166 Buenos Aires
+							167 CABA
+							168 Catamarca
+							169 Chaco
+							170 Chubut
+							171 Córdoba
+							172 Corrientes
+							173 Entre Ríos
+							174 Formosa
+							175 Jujuy
+							176 La Pampa
+							177 La Rioja
+							178 Mendoza
+							179 Misiones
+							180 Neuquén
+							181 Río Negro
+							182 Salta
+							183 San Juan
+							184 San Luis
+							185 Santa Cruz
+							186 Santa Fe
+							187 Santiago del Estero
+							188 Tierra del Fuego
+							189 (selected) Tucumán
+					190 text Alícuota (%)
+					191 stepper (settable, float) Description: Alícuota (%), Value: 2.75, Details: 2,75
+					192 text Vigente desde *
+					193 date field (settable) Description: Vigente desde *, Value: 2026-01-01
+						194 container
+							195 stepper
+							196 stepper
+							197 stepper
+						198 pop up button Mostrar selector de fecha Mostrar selector de fecha
+					199 text Vigente hasta
+					200 date field (settable) Description: Vigente hasta, Value: 2026-12-31
+						201 container
+							202 stepper
+							203 stepper
+							204 stepper
+						205 pop up button Mostrar selector de fecha Mostrar selector de fecha
+					206 text Norma aplicable *
+					207 text field (settable) Description: Norma aplicable *, Value: Referencia de ensayo revisada desde la interfaz; sin aplicación fiscal real
+					208 button Cancelar
+					209 button Guardar
+
+The focused UI element is 144 button Cerrar
+
+Tabla de la compilación final:
+Browser tab: 2, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.52:3057/finanzas/retenciones".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.52:3057/finanzas/retenciones
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.52:3057/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.52:3057/
+				7 button (collapsed) Description: Clientes, Secondary Actions: Expand
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (expanded) Description: Finanzas, Secondary Actions: Collapse
+				10 link Description: Cajas y movimientos, Value: 127.0.0.52:3057/finanzas/cajas
+				11 link Description: Cajas y cuentas bancarias, Value: 127.0.0.52:3057/finanzas/cuentas-tesoreria
+				12 link Description: Bancos y conciliación, Value: 127.0.0.52:3057/finanzas/bancos
+				13 link Description: Extractos bancarios, Value: 127.0.0.52:3057/finanzas/bancos/extractos
+				14 link Description: Cartera de cheques, Value: 127.0.0.52:3057/finanzas/cheques
+				15 link Description: IVA ventas y compras, Value: 127.0.0.52:3057/finanzas/impuestos
+				16 link Description: Cuentas por cobrar / pagar, Value: 127.0.0.52:3057/finanzas/cuentas
+				17 link Description: Tarjetas de crédito, Value: 127.0.0.52:3057/finanzas/tarjetas
+				18 link Description: Liquidaciones de tarjetas, Value: 127.0.0.52:3057/finanzas/liquidaciones-tarjetas
+				19 link Description: Retenciones y percepciones, Value: 127.0.0.52:3057/finanzas/retenciones
+				20 link Description: Formas de pago y cobro, Value: 127.0.0.52:3057/finanzas/formas-pago
+				21 link Description: Entidades bancarias, Value: 127.0.0.52:3057/finanzas/entidades
+				22 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				23 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				24 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				25 button (collapsed) Description: Producción, Secondary Actions: Expand
+				26 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				27 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				28 button (collapsed) Description: Administración, Secondary Actions: Expand
+				29 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				30 link Description: Configuración, Value: 127.0.0.52:3057/configuracion
+				31 link Description: Acerca de, Value: 127.0.0.52:3057/acerca-de
+			32 text Versión experimental
+			33 button Colapsar menú
+		34 container
+			35 text SICA Textil · regímenes de ensayo
+			36 container
+				37 text Responsable Inscripto  ·  Tucumán
+			38 container
+				39 text Sucursal
+				40 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					41 menu
+						42 (selected) Todas las unidades
+						43 Casa Central
+			44 link Description: Acerca de y fuentes, Value: 127.0.0.52:3057/acerca-de
+			45 text AD
+			46 button Cerrar sesión
+			47 text Base compartida · Versión 6 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			48 text SICA / GESTIÓN INTEGRAL
+			49 heading Retenciones y percepciones, Value: 1
+				50 text Retenciones y percepciones
+			51 text Definí regímenes por jurisdicción. Los importes se registran con certificados y requieren revisión profesional.
+			52 button Nuevo registro
+			53 text Vigencia consultada al  2026-10-17 . Las fechas inicial y final son inclusivas. El estado sólo compara las fechas declaradas: no acredita habilitación como agente, padrón, exclusión ni vigencia legal de la norma. Los importes se registran manualmente con su certificado; este catálogo no calcula retenciones o percepciones.
+			54 text field (settable) Buscar registros
+			55 text 3  registros
+			56 button XLSX
+			57 button PDF
+			58 table
+				59 row
+					60 cell
+						61 text NOMBRE
+					62 cell
+						63 text RÉGIMEN Y JURISDICCIÓN
+					64 cell
+						65 text ALÍCUOTA (%)
+					66 cell
+						67 text VIGENCIA
+					68 cell
+						69 text ESTADO
+					70 cell
+						71 text ACCIONES
+				72 row
+					73 cell
+						74 text Régimen vigente de ensayo
+					75 cell
+						76 text Retención · Ingresos Brutos · Tucumán
+					77 cell
+						78 text 2.75
+					79 cell
+						80 text 2026-01-01 a 2026-12-31
+					81 cell
+						82 text Vigente según fechas
+					83 cell
+						84 button Editar
+				85 row
+					86 cell
+						87 text Régimen vencido de ensayo
+					88 cell
+						89 text Retención · Ingresos Brutos · Tucumán
+					90 cell
+						91 text 2.5
+					92 cell
+						93 text 2025-01-01 a 2025-12-31
+					94 cell
+						95 text Vencido según fechas
+					96 cell
+						97 button Editar
+				98 row
+					99 cell
+						100 text Régimen próximo de ensayo
+					101 cell
+						102 text Retención · Ingresos Brutos · Tucumán
+					103 cell
+						104 text 2.5
+					105 cell
+						106 text 2027-01-01 a sin fin declarado
+					107 cell
+						108 text Próximo según fechas
+					109 cell
+						110 button Editar
+
+The focused UI element is 1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.52:3057/finanzas/retenciones

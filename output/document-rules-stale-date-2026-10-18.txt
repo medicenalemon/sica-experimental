@@ -1,0 +1,159 @@
+Browser tab: 3, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.56:3061/clientes/cobros/nuevo".
+0 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.56:3061/clientes/cobros/nuevo
+	1 container root
+		2 container
+			3 link Description: SICA — Ir al inicio, Value: 127.0.0.56:3061/
+			4 container Navegación principal
+				5 link Description: Inicio, Value: 127.0.0.56:3061/
+				6 button (expanded) Description: Clientes, Secondary Actions: Collapse
+				109 link Description: Directorio, Value: 127.0.0.56:3061/clientes
+				110 link Description: Alta de clientes, Value: 127.0.0.56:3061/clientes/alta
+				111 link Description: Ventas y facturas, Value: 127.0.0.56:3061/clientes/ventas
+				112 link Description: Cobros, Value: 127.0.0.56:3061/clientes/cobros
+				113 link Description: Notas de crédito / débito, Value: 127.0.0.56:3061/clientes/notas
+				114 link Description: Pedidos de venta, Value: 127.0.0.56:3061/clientes/pedidos
+				115 link Description: Remitos de venta, Value: 127.0.0.56:3061/clientes/remitos
+				116 link Description: Cuenta corriente, Value: 127.0.0.56:3061/clientes/cuenta-corriente
+				7 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				8 button (collapsed) Description: Finanzas, Secondary Actions: Expand
+				9 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				10 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				11 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				12 button (collapsed) Description: Producción, Secondary Actions: Expand
+				13 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				14 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				15 button (collapsed) Description: Administración, Secondary Actions: Expand
+				16 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				17 link Description: Configuración, Value: 127.0.0.56:3061/configuracion
+				18 link Description: Acerca de, Value: 127.0.0.56:3061/acerca-de
+			19 text Versión experimental
+			20 button Colapsar menú
+		21 container
+			22 text SICA Textil · comprobantes consistentes de ensayo
+			23 container
+				24 text Responsable Inscripto  ·  Tucumán
+			25 container
+				26 text Sucursal
+				27 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					28 menu
+						29 (selected) Todas las unidades
+						30 Casa Central
+			31 link Description: Acerca de y fuentes, Value: 127.0.0.56:3061/acerca-de
+			32 text AD
+			33 text Administrador
+			34 text Administrador General
+			35 button Cerrar sesión
+			36 text Base compartida · Versión 1 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			46 text SICA / GESTIÓN INTEGRAL
+			47 heading Recibo de cobro de cliente, Value: 1
+				48 text Recibo de cobro de cliente
+			49 text Al guardar, SICA registra todos los movimientos relacionados en una sola operación.
+			50 link Description: Volver, Value: 127.0.0.56:3061/clientes/cobros
+			51 container
+				52 heading Datos generales, Value: 2
+					53 text Datos generales
+				54 text Fecha *
+				55 date field (settable) Description: Fecha *, Value: 2026-10-17
+					56 container
+						163 stepper
+						164 stepper
+						165 stepper
+					60 pop up button Mostrar selector de fecha Mostrar selector de fecha
+				61 text Sucursal *
+				62 pop up button (collapsed, settable) Description: Sucursal *, Value: Casa Central, Secondary Actions: Expand
+					63 menu
+						64 (selected) Casa Central
+				65 text Cliente *
+				66 pop up button (collapsed, settable) Description: Cliente *, Value: CLI-00001 · Cliente mayorista de prueba, Secondary Actions: Expand
+					67 menu
+						68 Seleccionar…
+						69 (selected) CLI-00001 · Cliente mayorista de prueba
+				117 text CUIT
+				118 text field Description: CUIT, Value: 20123456786
+				119 text Condición IVA
+				120 text field Description: Condición IVA, Value: Responsable Inscripto
+				121 text Domicilio
+				122 text field Description: Domicilio, Value: San Miguel de Tucumán
+				70 text Tipo de recibo *
+				71 pop up button (collapsed, settable) Description: Tipo de recibo *, Value: X, Secondary Actions: Expand
+					72 menu
+						73 A
+						74 B
+						75 C
+						76 (selected) X
+			77 container
+				78 heading Formas de pago y retenciones, Value: 2
+					79 text Formas de pago y retenciones
+				123 text Medio
+				124 pop up button (collapsed, settable) Description: Medio, Value: Efectivo, Secondary Actions: Expand
+					125 menu
+						126 (selected) Efectivo
+						127 Transferencia
+						128 Mercado Pago
+						129 Cheque
+						130 Tarjeta de crédito
+						131 Tarjeta de débito
+						132 Retención
+				133 text Importe ARS *
+				134 stepper (settable, integer) Description: Importe ARS *, Value: 50, Details: 50,00
+				135 text Caja / cuenta *
+				136 pop up button (collapsed, settable) Description: Caja / cuenta *, Value: Caja principal, Secondary Actions: Expand
+					137 menu
+						138 Seleccionar…
+						139 (selected) Caja principal
+						140 Banco de prueba
+				141 text Referencia
+				142 text field (settable) Description: Referencia, Value: RC-COMMERCIAL-UI
+				143 button Quitar medio de pago
+				80 button Agregar medio
+				81 button Registrar cheque
+				82 text El total cancelado suma el dinero, los cheques y las retenciones. Las retenciones generan un crédito o deuda impositiva y no ingresan a caja. Se conservan los nombres y CUIT de empresa y contraparte del catálogo al guardar; revisá esos datos antes de registrar. Los cobros con tarjeta quedan como cupones pendientes hasta registrar su liquidación bancaria.
+			83 container
+				84 heading Aplicación a comprobantes, Value: 2
+					85 text Aplicación a comprobantes
+				86 table
+					87 row
+						88 cell
+							89 text COMPROBANTE
+						90 cell
+							91 text FECHA DEL CARGO
+						92 cell
+							93 text SALDO
+						94 cell
+							95 text APLICAR ARS
+					144 row
+						145 cell
+							146 text INT-FC-A-00001-00000001
+							166 text Cargo posterior: conservá el anticipo sin aplicar y vinculalo desde Cuentas por cobrar / pagar después de esa fecha.
+						147 cell
+							148 text 18/10/2026
+						149 cell
+							150 text $ 121,00
+						151 cell
+							152 stepper (disabled, settable, integer) Description: Aplicar INT-FC-A-00001-00000001, Value: 30, Details: 30,00
+							167 button Quitar aplicación futura
+					153 row
+						154 cell
+							155 text INT-FC-A-00001-00000002
+							156 text Cargo posterior: conservá el anticipo sin aplicar y vinculalo desde Cuentas por cobrar / pagar después de esa fecha.
+						157 cell
+							158 text 20/10/2026
+						159 cell
+							160 text $ 60,50
+						161 cell
+							162 stepper (disabled, settable, integer) Description: Aplicar INT-FC-A-00001-00000002, Value: 0
+				168 text Hay cargos posteriores a la fecha del cobro o pago. Quitá esas aplicaciones para conservar el importe como anticipo. El importe sin aplicación queda como anticipo en la cuenta corriente.
+			97 container
+				98 heading Información adicional, Value: 2
+					99 text Información adicional
+				100 text Responsable
+				101 text field Description: Responsable, Value: Administrador
+				102 text Observaciones
+				103 text entry area (settable) Observaciones
+			104 text Neto  $ 0,00 IVA  $ 0,00 Percepciones  $ 0,00
+			105 container
+				106 text Total  $ 50,00
+			107 link Description: Volver, Value: 127.0.0.56:3061/clientes/cobros
+			108 button (disabled) Guardar operación
+
+The focused UI element is 60 pop up button Mostrar selector de fecha Mostrar selector de fecha

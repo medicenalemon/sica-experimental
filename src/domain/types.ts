@@ -16,8 +16,13 @@ export interface Product extends Master {
   parent: string; variants: string; unit: string; price: number; cost: number
 }
 export interface Line { productId: string; description: string; quantity: number; unit: string; price: number; tax: string; discount: number }
-export interface Payment { method: string; amount: number; treasuryId: string; reference: string; chequeId?: string; cardId?: string; cardDue?: string; tax?: string; jurisdiction?: string }
+export interface TaxPerson {name:string;cuit:string}
+export interface TaxIdentity {version:1;origin:'Catálogo al registrar'|'Agente declarado en liquidación'|'Agente sin identificar';company:TaxPerson;counterparty:TaxPerson;unknownReason:string}
+export interface Payment { method: string; amount: number; treasuryId: string; reference: string; chequeId?: string; cardId?: string; cardDue?: string; tax?: string; jurisdiction?: string;agent?:TaxPerson;agentUnknownReason?:string;taxIdentity?:TaxIdentity }
 export interface Document {inventoryCostDate?:string;inventoryAfterBatchId?:string;
+  receiptSnapshot?:import('./receipt-print').ReceiptSnapshot;
+  taxIdentity?:TaxIdentity;
+  perceptionEvidence?:{tax:'Ingresos Brutos';jurisdiction:string;reference:string};
   id: string; number: string; kind: Kind; side: Side; letter: Letter; date: string; due: string;
   branchId: string; partyId: string; lines: Line[]; payments: Payment[]; net: number; vat: number;
   perceptions: number; total: number; sourceId: string; allocations: { documentId: string; amount: number }[];
@@ -132,6 +137,8 @@ export interface Settings {accountingCloseId?:string;
   onboarding: boolean; accountMap: Record<string, string>; accountingStandard: string;
 }
 export interface State {
+  taxCertificates?:import('./tax-certificates').TaxCertificateRecord[];
+  taxMovementSources?:import('./tax-movements').TaxMovementRow[];taxMovementSourceError?:string;
   version: 1; settings: Settings; parties: Party[]; products: Product[]; documents: Document[];
   cheques: Cheque[]; stockMoves: StockMove[]; treasuryMoves: TreasuryMove[]; entries: Entry[];
   vatSalesLedger?:import('./vat-sales-ledger').VatSalesLedgerRecord[];vatSales?:import('./vat-sales').VatSalesRecord[];vatLedger?:import('./vat-ledger').VatLedgerRecord[];vatAnnual?:import('./vat-annual').VatAnnualRecord[];vatPurchases?:import('./vat-purchases').VatPurchasesRecord[];supplierOriginals?:import('./supplier-originals').SupplierOriginal[];accountApplications?:import('./account-applications').AccountApplication[];cardDisputes?:import('./card-disputes').CardDisputeRecord[];cardSources?:import('./card-disputes').CardSource[];productionReservations?:import('./production-reservations').ProductionReservation[];productionRecoveries?:import('./production-recoverability').ProductionRecovery[];productionInflations?:import('./production-inflation').ProductionInflation[];productionCorrections?:import('./production-cost-corrections').ProductionCorrection[];productionCosts?:import('./production-costs').ProductionCostRecord[];inventoryRecoveries?:import('./inventory-recoverability').InventoryRecovery[];inventoryInflations?:import('./inventory-inflation').InventoryInflation[];assetInflations?:import('./asset-inflation').AssetInflation[];reexpressionPostings?:import('./reexpression-posting').ReexpressionPosting[];reexpressions?:import('./reexpression').ReexpressionRecord[];financialStatements?:import('./financial-statements').StatementRecord[];assetImpairments?:AssetImpairment[];assetDisposals?:AssetDisposal[];assetReestimates?:AssetReestimate[];fixedAssets?:FixedAsset[];assetCommissions?:AssetCommission[];depreciationBatches?:DepreciationBatch[];journalReversals?:JournalReversal[];revenueAccruals?:RevenueAccrual[];revenueSettlements?:RevenueSettlement[];exerciseOpenings?:ExerciseOpening[];yearEndCloses?:YearEndClose[];serviceCancellations?:ServiceCancellation[];serviceAccruals?:ServiceAccrual[];serviceReestimates?:ServiceReestimate[];serviceSettlements?:ServiceSettlement[];accountingCloses?:AccountingClose[];cardSettlements?: CardSettlement[]; stockTransfers?:StockTransfer[]; stockReturns?:StockReturn[]; productionPlans?:ProductionPlan[]; bankStatements?:BankStatement[]; cashClosings?:CashClosing[]; inventoryCostBatches?:InventoryCostBatch[]; masters: Record<string, Master[]>; audit: Audit[]; imports: ImportRun[];

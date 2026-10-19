@@ -1,0 +1,19 @@
+# Allowlist: no credentials, SQLite files, audit keys, backups or Git history.
+**
+!Dockerfile
+!package.json
+!package-lock.json
+!index.html
+!tsconfig*.json
+!vite.config.ts
+!src/
+!src/**
+!public/
+!public/**
+!server/
+!server/*.mjs
+!scripts/
+!scripts/build-server.mjs
+!scripts/postgres-data.mjs
+!scripts/supabase-prepare.mjs
+!scripts/healthcheck.mjs

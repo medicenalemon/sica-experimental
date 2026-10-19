@@ -1,0 +1,136 @@
+Browser tab: 1, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.51:3056/contabilidad/conciliacion-iva-ventas".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.51:3056/contabilidad/conciliacion-iva-ventas
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.51:3056/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.51:3056/
+				7 button (collapsed) Description: Clientes, Secondary Actions: Expand
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (collapsed) Description: Finanzas, Secondary Actions: Expand
+				10 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				11 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				12 button (expanded) Description: Contabilidad, Secondary Actions: Collapse
+				13 container
+					14 link Description: Plan de cuentas, Value: 127.0.0.51:3056/contabilidad/plan
+					15 link Description: Configuración de cuentas, Value: 127.0.0.51:3056/contabilidad/configuracion
+					16 link Description: Libro diario, Value: 127.0.0.51:3056/contabilidad/diario
+					17 link Description: Libro mayor, Value: 127.0.0.51:3056/contabilidad/mayor
+					18 link Description: Conciliación de IVA compras, Value: 127.0.0.51:3056/contabilidad/conciliacion-iva
+					19 link Description: Conciliación de IVA ventas, Value: 127.0.0.51:3056/contabilidad/conciliacion-iva-ventas
+					20 link Description: Sumas y saldos, Value: 127.0.0.51:3056/contabilidad/balance
+					21 link Description: Preparación de estados, Value: 127.0.0.51:3056/contabilidad/estados
+					22 link Description: Moneda de cierre y RECPAM, Value: 127.0.0.51:3056/contabilidad/moneda-cierre
+					23 link Description: Bienes de uso y depreciaciones, Value: 127.0.0.51:3056/contabilidad/bienes-de-uso
+					24 link Description: Valuación de inventario, Value: 127.0.0.51:3056/contabilidad/inventario
+					25 link Description: Servicios devengados, Value: 127.0.0.51:3056/contabilidad/servicios-devengados
+					26 link Description: Ingresos devengados, Value: 127.0.0.51:3056/contabilidad/ingresos-devengados
+					27 link Description: Cierres de períodos, Value: 127.0.0.51:3056/contabilidad/cierres
+					28 link Description: Cierre de resultados, Value: 127.0.0.51:3056/contabilidad/cierre-resultados
+					29 link Description: Apertura de ejercicio, Value: 127.0.0.51:3056/contabilidad/apertura-ejercicio
+				30 button (collapsed) Description: Producción, Secondary Actions: Expand
+				31 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				32 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				33 button (collapsed) Description: Administración, Secondary Actions: Expand
+				34 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				35 link Description: Configuración, Value: 127.0.0.51:3056/configuracion
+				36 link Description: Acerca de, Value: 127.0.0.51:3056/acerca-de
+			37 text Versión experimental
+			38 button Colapsar menú
+		39 container
+			40 text SICA Textil · IVA ventas de ensayo
+			41 container
+				42 text Responsable Inscripto  ·  Tucumán
+			43 container
+				44 text Sucursal
+				45 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					46 menu
+						47 (selected) Todas las unidades
+						48 Casa Central
+						49 Sucursal de ensayo
+			50 link Description: Acerca de y fuentes, Value: 127.0.0.51:3056/acerca-de
+			51 text AD
+			52 button Cerrar sesión
+			53 text Base compartida · Versión 19 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			54 text SICA / GESTIÓN INTEGRAL
+			55 heading Conciliación contable de IVA ventas, Value: 1
+				56 text Conciliación contable de IVA ventas
+			57 text Comprobantes preparados, ingresos devengados y movimientos del diario, sin registrar nuevos asientos.
+			58 heading Fuente fiscal y alcance de la revisión, Value: 2
+				59 text Fuente fiscal y alcance de la revisión
+			60 text Elegí una preparación INT-IVT vigente y cuentas del Pasivo que representen IVA débito, incluidas las históricas. Se conservan movimientos reales y el complemento interno de ingresos del mismo mes. Los orígenes anteriores se muestran sin sumarlos otra vez. No determina el saldo del mayor ni el impuesto final.
+			61 container
+				62 text Preparación de ventas para conciliar
+				63 pop up button (collapsed, settable) Description: Preparación de ventas para conciliar, Value: Seleccionar mes y ambiente…, Secondary Actions: Expand
+					64 menu
+						65 (selected) Seleccionar mes y ambiente…
+						66 2026-09 · produccion · INT-IVT-00000001
+			67 container
+				68 text Corte contable de IVA ventas
+				69 date field (settable) Description: Corte contable de IVA ventas, Value: 2026-10-17
+					70 container
+						71 stepper
+						72 stepper
+						73 stepper
+					74 pop up button Mostrar selector de fecha Mostrar selector de fecha
+			75 button (disabled) Preparar conciliación de IVA ventas
+			76 heading Historial de conciliaciones de IVA ventas, Value: 2
+				77 text Historial de conciliaciones de IVA ventas
+			78 text field (settable) Buscar registros
+			79 text 2  registros
+			80 button XLSX
+			81 button PDF
+			82 table
+				83 row
+					84 cell
+						85 text CONSTANCIA
+					86 cell
+						87 text MES
+					88 cell
+						89 text FUENTE FISCAL
+					90 cell
+						91 text REFERENCIA
+					92 cell
+						93 text DIFERENCIA FRENTE AL TRABAJO
+					94 cell
+						95 text ESTADO
+					96 cell
+						97 text RESPONSABLE
+					98 cell
+						99 text DETALLE
+				100 row
+					101 cell
+						102 text INT-IDV-00000002
+					103 cell
+						104 text 2026-09
+					105 cell
+						106 text INT-IVT-00000001
+					107 cell
+						108 text IVA-VENTAS-DIARIO-UI-2
+					109 cell
+						110 text $ 0,00
+					111 cell
+						112 text Sin diferencia aritmética
+					113 cell
+						114 text Administrador
+					115 cell
+						116 button Ver conciliación de ventas
+				117 row
+					118 cell
+						119 text INT-IDV-00000001
+					120 cell
+						121 text 2026-09
+					122 cell
+						123 text INT-IVT-00000001
+					124 cell
+						125 text IVA-VENTAS-DIARIO-UI-1
+					126 cell
+						127 text -$ 2,00
+					128 cell
+						129 text Con diferencia pendiente
+					130 cell
+						131 text Administrador
+					132 cell
+						133 button Ver conciliación de ventas
+
+The focused UI element is 1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.51:3056/contabilidad/conciliacion-iva-ventas

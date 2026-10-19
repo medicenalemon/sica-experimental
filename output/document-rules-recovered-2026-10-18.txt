@@ -1,0 +1,125 @@
+Browser tab: 4, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.56:3061/clientes/cobros".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.56:3061/clientes/cobros
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.56:3061/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.56:3061/
+				7 button (expanded) Description: Clientes, Secondary Actions: Collapse
+				8 link Description: Directorio, Value: 127.0.0.56:3061/clientes
+				9 link Description: Alta de clientes, Value: 127.0.0.56:3061/clientes/alta
+				10 link Description: Ventas y facturas, Value: 127.0.0.56:3061/clientes/ventas
+				11 link Description: Cobros, Value: 127.0.0.56:3061/clientes/cobros
+				12 link Description: Notas de crédito / débito, Value: 127.0.0.56:3061/clientes/notas
+				13 link Description: Pedidos de venta, Value: 127.0.0.56:3061/clientes/pedidos
+				14 link Description: Remitos de venta, Value: 127.0.0.56:3061/clientes/remitos
+				15 link Description: Cuenta corriente, Value: 127.0.0.56:3061/clientes/cuenta-corriente
+				16 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				17 button (collapsed) Description: Finanzas, Secondary Actions: Expand
+				18 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				19 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				20 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				21 button (collapsed) Description: Producción, Secondary Actions: Expand
+				22 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				23 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				24 button (collapsed) Description: Administración, Secondary Actions: Expand
+				25 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				26 link Description: Configuración, Value: 127.0.0.56:3061/configuracion
+				27 link Description: Acerca de, Value: 127.0.0.56:3061/acerca-de
+			28 text Versión experimental
+			29 button Colapsar menú
+		30 container
+			31 text SICA Textil · comprobantes consistentes de ensayo
+			32 container
+				33 text Responsable Inscripto  ·  Tucumán
+			34 container
+				35 text Sucursal
+				36 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					37 menu
+						38 (selected) Todas las unidades
+						39 Casa Central
+			40 link Description: Acerca de y fuentes, Value: 127.0.0.56:3061/acerca-de
+			41 text AD
+			42 text Administrador
+			43 text Administrador General
+			44 button Cerrar sesión
+			45 text Base compartida · Versión 2 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			46 text SICA / GESTIÓN INTEGRAL
+			47 heading Recibos de cobro, Value: 1
+				48 text Recibos de cobro
+			49 text Operaciones de gestión interna vinculadas a cuentas corrientes, tesorería y contabilidad.
+			50 link Description: Recibo de cobro, Value: 127.0.0.56:3061/clientes/cobros/nuevo
+			51 text field (settable) Buscar registros
+			52 text 1  registros
+			53 button XLSX
+			54 button PDF
+			55 table
+				56 row
+					57 cell
+						58 text REFERENCIA INTERNA
+					59 cell
+						60 text FECHA
+					61 cell
+						62 text REGISTRO CONTABLE
+					63 cell
+						64 text CLIENTE
+					65 cell
+						66 text TOTAL ARS
+					67 cell
+						68 text ESTADO
+					69 cell
+						70 text ACCIONES
+				71 row
+					72 cell
+						73 text INT-RC-X-00001-00000001
+					74 cell
+						75 text 18/10/2026
+					76 cell
+						77 text 18/10/2026
+					78 cell
+						79 text Cliente mayorista de prueba
+					80 cell
+						81 text $ 50,00
+					82 cell
+						83 text Interno
+					84 cell
+						85 button Ver
+			86 container INT-RC-X-00001-00000001
+				87 container
+					88 heading INT-RC-X-00001-00000001, Value: 2
+						89 text INT-RC-X-00001-00000001
+					90 button Cerrar
+				91 container
+					92 text Cliente mayorista de prueba  ·  18/10/2026
+				93 text Documento interno
+				94 container
+					95 text Efectivo $ 50,00 RC-COMMERCIAL-UI
+				96 container
+					97 heading Aplicaciones al registrar, Value: 2
+						98 text Aplicaciones al registrar
+					99 text 1  registros
+					100 table
+						101 row
+							102 cell
+								103 text CARGO ORIGINAL
+							104 cell
+								105 text FECHA DEL CARGO
+							106 cell
+								107 text IMPORTE APLICADO
+						108 row
+							109 cell
+								110 text INT-FC-A-00001-00000001
+							111 cell
+								112 text 18/10/2026
+							113 cell
+								114 text $ 30,00
+					115 text Importe sin aplicación al registrar: 
+					116 text $ 20,00
+					117 text . Esta distribución es la original. Consultá las aplicaciones, liberaciones y reversiones posteriores desde Cuentas por cobrar / pagar.
+				118 text Neto  $ 50,00 IVA  $ 0,00
+				119 container
+					120 text Total  $ 50,00
+				121 text Cobro sintético de $50: aplicación $30 al cargo del 18/10 y $20 como anticipo, sin aplicar al cargo futuro.
+				122 button Descargar PDF interno
+
+The focused UI element is 90 button Cerrar

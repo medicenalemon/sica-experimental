@@ -1,0 +1,8 @@
+DOCUMENTO SINTÉTICO DE ENSAYO — SIN VALIDEZ FISCAL
+Referencia: CERT-SHARED
+Agente: Cliente mayorista de prueba | CUIT de ensayo: 20123456786
+Sujeto: SICA Textil | CUIT de ensayo: 30712345671
+Concepto: Retención sufrida de Ingresos Brutos, Tucumán
+Importe transcripto de ensayo: ARS 2,50
+Movimientos de ensayo: ARS 1,00 + ARS 1,50
+Este archivo prueba el cálculo y conservación de una huella; no es un certificado oficial.

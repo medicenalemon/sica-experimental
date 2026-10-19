@@ -1,0 +1,54 @@
+name: sica-experimental
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    init: true
+    environment:
+      SICA_HOST: 0.0.0.0
+      SICA_PORT: "3001"
+      SICA_SECURE_COOKIE: "true"
+      SICA_ORIGINS: https://${SICA_DOMAIN:?Configurá SICA_DOMAIN con el dominio público sin https}
+      SICA_DATABASE_DRIVER: postgres
+      SICA_DATABASE_URL: ${SICA_DATABASE_URL:?Configurá la URL Session pooler de Supabase}
+      SICA_DATABASE_POOL_SIZE: ${SICA_DATABASE_POOL_SIZE:-4}
+      SICA_DATABASE_SSL_CA: ${SICA_DATABASE_SSL_CA:-}
+      SICA_DATABASE_SSL_CA_FILE: ${SICA_DATABASE_SSL_CA_FILE:-}
+      SICA_COMPANY_ID: ${SICA_COMPANY_ID:-sica}
+      SICA_ADMIN_PASSWORD: ${SICA_ADMIN_PASSWORD:?Elegí la contraseña inicial del administrador}
+      SICA_AUDIT_KEY_FILE: /app/var/postgres/${SICA_COMPANY_ID:-sica}.audit-key
+      SICA_ARCA_MODE: disabled
+    volumes:
+      - sica-data:/app/var
+      # Certificado raíz opcional: copiarlo a deploy/certificates/ (sin claves).
+      - ./certificates:/app/certificates:ro
+    read_only: true
+    tmpfs:
+      - /tmp:mode=1777
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    stop_grace_period: 60s
+  proxy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      SICA_DOMAIN: ${SICA_DOMAIN:?Configurá SICA_DOMAIN}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      app:
+        condition: service_healthy
+volumes:
+  sica-data:
+  caddy-data:
+  caddy-config:

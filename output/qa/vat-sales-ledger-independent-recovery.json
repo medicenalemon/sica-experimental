@@ -1,0 +1,18 @@
+{
+  "sourceDatabase": "var/qa-vat-sales-ledger.sqlite",
+  "sourceRevision": 19,
+  "recoveredRevision": 20,
+  "sourceSha256": "41b8ca69050e5302eb96a8a5ed4f42f73434760bd38d738b3b9ba355dc6a9323",
+  "seal": "Archivo SHA-256 con sello HMAC",
+  "temporaryCopyValidated": true,
+  "statePreserved": true,
+  "credentialsPreserved": true,
+  "filesPreserved": true,
+  "fiscalAuthorizationsPreserved": 5,
+  "ledgerReviewsPreserved": 2,
+  "salesPreparationsPreserved": 1,
+  "revokedSessions": 2,
+  "recoveredSessions": 0,
+  "audit": "HMAC validada",
+  "temporaryCopyRemovedAfterCheck": true
+}

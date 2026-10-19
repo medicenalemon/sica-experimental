@@ -1,3 +1,4 @@
+import {receiptPrintFixture} from './receipt-print-fixture.mjs'
 import {productionCurrentClosingFixture} from './production-current-closing-fixture.mjs'
 import {productionConversionFixture,reviewedProductionConversion} from './production-conversion-fixture.mjs'
 import {inventoryCurrentVnrFixture,reviewedCurrentVnr} from './inventory-current-vnr-fixture.mjs'
@@ -135,4 +136,31 @@ test('monotributo A representation includes the mandatory credit legend using th
 })
 test('production PDF paginates long authorization observations and retains their final restriction text',async()=>{
  const {request,record}=printFixture('A');request.environment='produccion';request.snapshot.issuer.iibbRegistration='Inscripción sintética';request.snapshot.issuer.activityStart='2020-01-01';request.snapshot.receiver.address='Domicilio sintético';request.snapshot.saleTerms='Cuenta corriente';const result={...record,environment:'produccion',simulated:true,messages:['Observación de prueba '.repeat(1200)+'FIN-DE-LA-OBSERVACION']},{doc}=await buildFiscalPdf(request,result),text=pdfText(doc);assert.ok(doc.getNumberOfPages()>1);assert.ok(text.includes('FIN-DE-LA-OBSERVACION'));assert.ok(text.includes(record.cae));assert.ok(text.includes('SIN VALIDEZ FISCAL'))
+})
+
+const receiptPrint=await import(pathToFileURL(join(dir,'receipt-print.mjs')).href),receiptPdf=await import(pathToFileURL(join(dir,'receipt-pdf.mjs')).href),receiptEngine=await import(pathToFileURL(join(dir,'engine.mjs')).href)
+const receiptFonts={regular:new Uint8Array(readFileSync('public/fonts/DejaVuSans.ttf')),bold:new Uint8Array(readFileSync('public/fonts/DejaVuSans-Bold.ttf'))}
+function receiptFileFixture(){return receiptPrintFixture({initialState,loadTextileDemo,...receiptEngine})}
+test('receipt PDF preserves original mixed collection and supplier payment methods, Unicode labels and exact applications',async()=>{
+ const f=receiptFileFixture()
+ for(const [document,expected]of [[f.receipt,['RECIBO DE COBRO','Comercio Núñez y Peña SRL','José Colombres 456','CH-TERC-Ñ-001','Titular Núñez de ensayo','CUPÓN-Ñ-003','CERT-IIBB-004','Ingresos Brutos','Tucumán','90,00 ARS','70,00 ARS','20,00 ARS']],[f.payment,['ORDEN DE PAGO','Proveedor Textil Ñandú SA','CH-PROP-002','Propio','CERT-GAN-002','Ganancias','70,00 ARS','60,00 ARS','10,00 ARS']]]){
+  const model=receiptPrint.receiptPrintModel(f.state,document.id),doc=await receiptPdf.buildReceiptPdf(model,receiptFonts),text=pdfText(doc)
+  for(const value of [...expected,document.number,'CONSTANCIA INTERNA','SIN VALIDEZ FISCAL','Datos conservados al registrar','APLICACIONES ORIGINALES','Operador de ensayo'])assert.ok(text.includes(value),value)
+  assert.equal((text.match(/CONSTANCIA INTERNA - SIN VALIDEZ FISCAL/g)||[]).length,doc.getNumberOfPages()*2);assert.ok(!text.includes('afip.gob.ar/fe/qr'));assert.ok(!text.includes('CAE:'))
+ }
+})
+test('receipt PDF remains text-identical after catalogue changes and states current catalogue provenance for legacy records',async()=>{
+ const f=receiptFileFixture(),before=receiptPrint.receiptPrintModel(f.state,f.receipt.id),doc=await receiptPdf.buildReceiptPdf(before,receiptFonts),text=pdfText(doc)
+ f.customer.name='Nombre posterior de catálogo';f.state.settings.name='Empresa posterior de catálogo';f.state.masters.cards.find(c=>c.id==='visa').name='Marca posterior'
+ const after=receiptPrint.receiptPrintModel(f.state,f.receipt.id);assert.deepEqual(after,before);assert.equal(pdfText(await receiptPdf.buildReceiptPdf(after,receiptFonts)),text)
+ delete f.receipt.receiptSnapshot;const legacy=receiptPrint.receiptPrintModel(f.state,f.receipt.id),legacyText=pdfText(await receiptPdf.buildReceiptPdf(legacy,receiptFonts));assert.ok(legacyText.includes('Nombre posterior de catálogo'));assert.ok(legacyText.includes('histórico sin datos de impresión conservados'));assert.match(legacyText,/catálogo\s+actual/i);assert.equal(f.receipt.receiptSnapshot,undefined)
+})
+test('receipt PDF paginates all long references and observations within page bounds without clipping or dropping final content',async()=>{
+ const f=receiptFileFixture(),d=f.post({...f.receiptInput,payments:Array.from({length:22},(_,i)=>({method:'Efectivo',amount:100,treasuryId:'caja-principal',reference:`MEDIO-${String(i+1).padStart(2,'0')}-`+'referencia-'.repeat(16)})),allocations:[{documentId:f.invoice.id,amount:1500}],observations:'Detalle sintético Ñandú, José y Peña para comprobar la continuidad de las observaciones. '.repeat(85)+'FIN-OBSERVACIONES-COMPLETAS'}),doc=await receiptPdf.buildReceiptPdf(receiptPrint.receiptPrintModel(f.state,d.id),receiptFonts),text=pdfText(doc)
+ assert.ok(doc.getNumberOfPages()>3);assert.ok(text.includes('MEDIO-22-'));assert.ok(text.includes('FIN-OBSERVACIONES-COMPLETAS'));assert.ok(text.includes('22,00 ARS'));assert.ok(text.includes('15,00 ARS'));assert.ok(text.includes('7,00 ARS'))
+ const bounds=spawnSync('pdftotext',['-bbox-layout','-','-'],{input:Buffer.from(doc.output('arraybuffer')),maxBuffer:10*1024*1024,timeout:30000});assert.ifError(bounds.error);assert.equal(bounds.status,0)
+ const xml=bounds.stdout.toString();const words=[...xml.matchAll(/<word xMin="([\d.]+)" yMin="([\d.]+)" xMax="([\d.]+)" yMax="([\d.]+)"/g)];assert.ok(words.length>100);for(const m of words){assert.ok(Number(m[1])>=35,'left margin');assert.ok(Number(m[3])<=560,'right margin');assert.ok(Number(m[2])>=10,'top margin');assert.ok(Number(m[4])<=822,'bottom margin')}
+})
+test('receipt PDF rejects unsupported glyphs explicitly while retaining the complete original text in its model',async()=>{
+ const f=receiptFileFixture(),model=receiptPrint.receiptPrintModel(f.state,f.receipt.id);model.document.observations='Texto original con símbolo 🧵 conservado';const before=structuredClone(model);await assert.rejects(()=>receiptPdf.buildReceiptPdf(model,receiptFonts),/no representa el carácter/);assert.deepEqual(model,before)
 })

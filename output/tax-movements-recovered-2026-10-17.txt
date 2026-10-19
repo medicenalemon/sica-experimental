@@ -1,0 +1,292 @@
+Browser tab: 3, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.53:3058/reportes/retenciones-percepciones".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.53:3058/reportes/retenciones-percepciones
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.53:3058/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.53:3058/
+				7 button (collapsed) Description: Clientes, Secondary Actions: Expand
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (collapsed) Description: Finanzas, Secondary Actions: Expand
+				10 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				11 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				12 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				13 button (collapsed) Description: Producción, Secondary Actions: Expand
+				14 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				15 button (expanded) Description: Reportes, Secondary Actions: Collapse
+				16 link Description: Centro de reportes, Value: 127.0.0.53:3058/reportes
+				17 link Description: Ventas, Value: 127.0.0.53:3058/reportes/ventas
+				18 link Description: Compras y gastos, Value: 127.0.0.53:3058/reportes/compras
+				19 link Description: Financieros, Value: 127.0.0.53:3058/reportes/financieros
+				20 link Description: IVA ventas y compras, Value: 127.0.0.53:3058/reportes/impositivos
+				21 link Description: Retenciones y percepciones, Value: 127.0.0.53:3058/reportes/retenciones-percepciones
+				22 link Description: Inventario, Value: 127.0.0.53:3058/reportes/inventario
+				23 link Description: Cuentas corrientes, Value: 127.0.0.53:3058/reportes/cuentas-corrientes
+				24 button (collapsed) Description: Administración, Secondary Actions: Expand
+				25 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				26 link Description: Configuración, Value: 127.0.0.53:3058/configuracion
+				27 link Description: Acerca de, Value: 127.0.0.53:3058/acerca-de
+			28 text Versión experimental
+			29 button Colapsar menú
+		30 container
+			31 text SICA Textil · retenciones y percepciones de ensayo
+			32 container
+				33 text Responsable Inscripto  ·  Tucumán
+			34 container
+				35 text Sucursal
+				36 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					37 menu
+						38 (selected) Todas las unidades
+						39 Casa Central
+						40 Sucursal norte de ensayo
+			41 link Description: Acerca de y fuentes, Value: 127.0.0.53:3058/acerca-de
+			42 text AD
+			43 button Cerrar sesión
+			44 text Base compartida · Versión 2 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			45 text SICA / GESTIÓN INTEGRAL
+			46 heading Retenciones y percepciones registradas, Value: 1
+				47 text Retenciones y percepciones registradas
+			48 text Detalle de cobros, pagos, facturas, notas y liquidaciones de tarjetas según los filtros y la sucursal seleccionados.
+			49 container
+				50 text Desde
+				51 date field (settable) Description: Desde, Value: 2026-01-01
+					52 container
+						53 stepper
+						54 stepper
+						55 stepper
+					56 pop up button Mostrar selector de fecha Mostrar selector de fecha
+			57 container
+				58 text Hasta
+				59 date field (settable) Description: Hasta, Value: 2026-12-31
+					60 container
+						61 stepper
+						62 stepper
+						63 stepper
+					64 pop up button Mostrar selector de fecha Mostrar selector de fecha
+			65 container
+				66 text Impuesto
+				67 pop up button (collapsed, settable) Description: Impuesto, Value: Todos, Secondary Actions: Expand
+					68 menu
+						69 (selected) Todos
+						70 Ganancias
+						71 Ingresos Brutos
+						72 IVA
+						73 Seguridad Social
+			74 container
+				75 text Jurisdicción
+				76 pop up button (collapsed, settable) Description: Jurisdicción, Value: Todas, incluidas las no identificadas, Secondary Actions: Expand
+					77 menu
+						78 (selected) Todas, incluidas las no identificadas
+						79 Buenos Aires
+						80 CABA
+						81 Catamarca
+						82 Chaco
+						83 Chubut
+						84 Córdoba
+						85 Corrientes
+						86 Entre Ríos
+						87 Formosa
+						88 Jujuy
+						89 La Pampa
+						90 La Rioja
+						91 Mendoza
+						92 Misiones
+						93 Neuquén
+						94 Río Negro
+						95 Salta
+						96 San Juan
+						97 San Luis
+						98 Santa Cruz
+						99 Santa Fe
+						100 Santiago del Estero
+						101 Tierra del Fuego
+						102 Tucumán
+			103 container
+				104 text Incluir percepciones de comprobantes internos X
+				105 checkbox (settable, integer) Description: Incluir percepciones de comprobantes internos X, Value: 0
+			106 text Estos son importes registrados, sin validación del certificado ni conciliación con ARCA o DGR. Las notas de crédito restan percepciones; las retenciones de cobros, pagos y liquidaciones mantienen su sentido propio. No se determina crédito computable ni deuda fiscal. Los CUIT y nombres mostrados corresponden al catálogo actual; las tarjetas no presumen CUIT del agente. Retenciones sufridas $ 5,50 Retenciones practicadas $ 0,50 Percepciones sufridas $ 9,50 Percepciones practicadas $ 4,00 1  registro(s) necesitan revisar su identificación.  2  movimiento(s) comparten referencia de retención en esta selección: podría tratarse de un certificado distribuido; no se presume duplicación.  1 percepción(es) de internos X excluida(s).
+			107 text field (settable) Buscar registros
+			108 text 11  registros
+			109 button XLSX
+			110 button PDF
+			111 table
+				112 row
+					113 cell
+						114 text FECHA
+					115 cell
+						116 text CONCEPTO
+					117 cell
+						118 text ORIGEN Y REFERENCIA
+					119 cell
+						120 text JURISDICCIÓN
+					121 cell
+						122 text IMPORTE
+					123 cell
+						124 text IDENTIFICACIÓN
+				125 row
+					126 cell
+						127 text 05/09/2026
+					128 cell
+						129 text Retención practicada · Ganancias
+					130 cell
+						131 text Pago · INT-OP-X-00001-00000001
+Casa Central · Proveedor textil de prueba · 30712345671
+CERT-PAY
+					132 cell
+						133 text Sin jurisdicción declarada
+					134 cell
+						135 text $ 0,50
+					136 cell
+						137 text Referencia informada · sin constatación externa
+				138 row
+					139 cell
+						140 text 05/09/2026
+					141 cell
+						142 text Retención sufrida · Ingresos Brutos
+					143 cell
+						144 text Cobro · INT-RC-X-00001-00000001
+Casa Central · Cliente mayorista de prueba · 20123456786
+CERT-SHARED
+					145 cell
+						146 text Tucumán
+					147 cell
+						148 text $ 1,00
+					149 cell
+						150 text Referencia informada · sin constatación externa · Referencia compartida en 2 movimientos
+				151 row
+					152 cell
+						153 text 05/09/2026
+					154 cell
+						155 text Retención sufrida · Ingresos Brutos
+					156 cell
+						157 text Cobro · INT-RC-X-00001-00000001
+Casa Central · Cliente mayorista de prueba · 20123456786
+CERT-SHARED
+					158 cell
+						159 text Tucumán
+					160 cell
+						161 text $ 1,50
+					162 cell
+						163 text Referencia informada · sin constatación externa · Referencia compartida en 2 movimientos
+				164 row
+					165 cell
+						166 text 05/09/2026
+					167 cell
+						168 text Percepción sufrida · Ingresos Brutos
+					169 cell
+						170 text Factura / nota · INT-FC-A-00001-00000003
+Casa Central · Proveedor textil de prueba · 30712345671
+Sin referencia estructurada
+					171 cell
+						172 text Sin jurisdicción declarada
+					173 cell
+						174 text $ 4,00
+					175 cell
+						176 text Sin referencia estructurada · revisar origen
+				177 row
+					178 cell
+						179 text 05/09/2026
+					180 cell
+						181 text Percepción sufrida · Ingresos Brutos
+					182 cell
+						183 text Factura / nota · INT-FC-A-00001-00000002
+Casa Central · Proveedor textil de prueba · 30712345671
+REG-PURCHASE-TEST
+					184 cell
+						185 text Córdoba
+					186 cell
+						187 text $ 5,00
+					188 cell
+						189 text Referencia informada · sin constatación externa
+				190 row
+					191 cell
+						192 text 05/09/2026
+					193 cell
+						194 text Percepción practicada · Ingresos Brutos
+					195 cell
+						196 text Factura / nota · INT-FC-A-00001-00000004
+Casa Central · Cliente mayorista de prueba · 20123456786
+REG-COMMAND-TEST
+					197 cell
+						198 text Tucumán
+					199 cell
+						200 text $ 2,00
+					201 cell
+						202 text Referencia informada · sin constatación externa
+				203 row
+					204 cell
+						205 text 05/09/2026
+					206 cell
+						207 text Percepción sufrida · Ingresos Brutos
+					208 cell
+						209 text Factura / nota · INT-FC-A-00002-00000001
+Sucursal norte de ensayo · Proveedor textil de prueba · 30712345671
+REG-NORTH
+					210 cell
+						211 text Salta
+					212 cell
+						213 text $ 2,50
+					214 cell
+						215 text Referencia informada · sin constatación externa
+				216 row
+					217 cell
+						218 text 05/09/2026
+					219 cell
+						220 text Percepción practicada · Ingresos Brutos
+					221 cell
+						222 text Factura / nota · INT-FC-A-00001-00000001
+Casa Central · Cliente mayorista de prueba · 20123456786
+REG-SALES-TEST
+					223 cell
+						224 text Tucumán
+					225 cell
+						226 text $ 3,00
+					227 cell
+						228 text Referencia informada · sin constatación externa
+				229 row
+					230 cell
+						231 text 05/09/2026
+					232 cell
+						233 text Percepción practicada · Ingresos Brutos
+					234 cell
+						235 text Factura / nota · INT-NC-A-00001-00000001
+Casa Central · Cliente mayorista de prueba · 20123456786
+REG-SALES-TEST
+					236 cell
+						237 text Tucumán
+					238 cell
+						239 text -$ 1,00
+					240 cell
+						241 text Referencia informada · sin constatación externa
+				242 row
+					243 cell
+						244 text 05/09/2026
+					245 cell
+						246 text Percepción sufrida · Ingresos Brutos
+					247 cell
+						248 text Factura / nota · INT-NC-A-00001-00000002
+Casa Central · Proveedor textil de prueba · 30712345671
+REG-PURCHASE-TEST
+					249 cell
+						250 text Córdoba
+					251 cell
+						252 text -$ 2,00
+					253 cell
+						254 text Referencia informada · sin constatación externa
+				255 row
+					256 cell
+						257 text 05/09/2026
+					258 cell
+						259 text Retención sufrida · IVA
+					260 cell
+						261 text Liquidación de tarjeta · SETTLEMENT-TAX-TEST
+Casa Central · Visa
+CERT-CARD
+					262 cell
+						263 text Sin jurisdicción declarada
+					264 cell
+						265 text $ 3,00
+					266 cell
+						267 text Referencia informada · sin constatación externa
+
+The focused UI element is 1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.53:3058/reportes/retenciones-percepciones

@@ -1,3 +1,5 @@
+import {captureReceiptSnapshot} from './receipt-print'
+import {assertDocumentInput,normalizeDocumentPayments,assertDocumentSource,assertAllocationTarget} from './document-rules'
 import {applicationAmount,assertApplicationAllocationDate} from './account-applications'
 import {cardPendingDisputed} from './card-disputes'
 import {convertedSupplierServiceNote} from './production-costs'
@@ -10,6 +12,8 @@ import { validateProductionMaster } from './production-model'
 import { validateBankEdit } from './bank-catalog'
 import {assertTreasuryWithdrawal,assertTreasuryCredit,treasuryBalance} from './treasury-model'
 import { registrationDate } from './fiscal-registration'
+import {validateTaxRule} from './tax-rules'
+import {validatePerceptionEvidence,withholdingEvidenceIssue,documentTaxIdentity,cardTaxIdentity} from './tax-evidence'
 import {assertStockOutflow} from './stock-transfers'
 
 export function validCuit(value: string): boolean {
@@ -117,6 +121,7 @@ export function saveProduct(state: State, p: Product) {
 }
 export function saveMaster(state: State, key: string, item: Master, role: Role) {
   if (['users','branches','accounts','priceLists','prices','taxRules'].includes(key)) requireAdmin(role)
+  if(key==='taxRules')validateTaxRule(item)
   if (!String(item.name || item.code || '').trim()) throw new Error('Ingresá un nombre o código.')
   const list = state.masters[key] ?? []
   for (const field of ['quantity','price','rate','hours','capacity','cost','actualCost','settlementDays','commission']) {
@@ -167,6 +172,8 @@ export function adjustStock(state: State, role: Role, productId: string, deposit
 }
 export function createDocument(state: State, input: Omit<Document,'id'|'number'|'net'|'vat'|'total'|'fiscalStatus'> & {
  total?: number }, role: Role): Document {
+  input={...input,accountOnly:false,payments:normalizeDocumentPayments(input.payments,input.kind)}
+  assertDocumentInput(input)
  if(convertedSupplierServiceNote(state,input))throw new Error('La nota de un servicio incorporado a producción requiere una corrección vinculada de conversión; esa ampliación está pendiente.');
   const invoice = ['factura','credito','debito'].includes(input.kind)
   const receipt = ['cobro','pago'].includes(input.kind)
@@ -183,6 +190,7 @@ export function createDocument(state: State, input: Omit<Document,'id'|'number'|
     if (input.letter !== expected) throw new Error(`La combinación fiscal requiere clase ${expected}. Elegí X para una operación exclusivamente interna.`)
   }
   const source = input.sourceId ? state.documents.find(d => d.id === input.sourceId) : undefined
+  assertDocumentSource(state,input)
   if (input.sourceId && (!source || source.partyId !== party.id || source.branchId !== branch.id || source.side !== input.side)) throw new Error('El documento asociado debe pertenecer a la misma contraparte y sucursal.')
   if (['credito','debito'].includes(input.kind) && input.letter !== 'X' && (!source || source.kind !== 'factura' || source.letter !== input.letter)) throw new Error('La nota debe asociarse a una factura de la misma clase.')
   if (input.kind === 'factura' && source) {
@@ -203,6 +211,7 @@ export function createDocument(state: State, input: Omit<Document,'id'|'number'|
   if (!['A','B','C','X'].includes(input.letter)) throw new Error('Clase de comprobante inválida.')
   if (input.lines.some(l => !taxRates.includes(l.tax))) throw new Error('Alícuota inválida en el detalle.')
   positive(input.perceptions, 'Percepciones', true)
+  validatePerceptionEvidence(input)
   let t = totals(input.lines, input.letter, input.perceptions)
   if (receipt) {
     if (!input.payments.length) throw new Error('Agregá una forma de pago o cobro.')
@@ -210,7 +219,7 @@ export function createDocument(state: State, input: Omit<Document,'id'|'number'|
       if(!paymentMethods.includes(p.method))throw new Error('Forma de pago no reconocida.')
       positive(p.amount,'Importe')
       if (!Number.isSafeInteger(p.amount)) throw new Error('Importe inválido.')
-      if (p.method === 'Retención') { if (!p.reference || !p.tax || (p.tax === 'Ingresos Brutos' && !p.jurisdiction)) throw new Error('Las retenciones necesitan certificado, impuesto y jurisdicción para IIBB.'); }
+      if (p.method === 'Retención') {const issue=withholdingEvidenceIssue(p);if(issue)throw new Error(`Retención: ${issue}. Las retenciones necesitan certificado, impuesto y jurisdicción para IIBB.`)}
       else if (p.method === 'Cheque') {
         const cheque = state.cheques.find(c => c.id === p.chequeId)
         if (!cheque || cheque.amount !== p.amount || cheque.branchId !== input.branchId || cheque.status !== 'En cartera' || (input.kind === 'cobro' && (cheque.type !== 'Terceros' || cheque.receiptId || cheque.partyId !== party.id)) || (input.kind === 'pago' && cheque.type === 'Terceros' && !cheque.receiptId)) throw new Error('El cheque seleccionado no está disponible o tiene otro importe o cliente.')
@@ -230,12 +239,13 @@ export function createDocument(state: State, input: Omit<Document,'id'|'number'|
     if (already + t.total > source.total) throw new Error('Las notas de crédito superan el total de la factura asociada.')
   }
   const allocations = [...input.allocations]
-  if (input.kind === 'credito' && source && !allocations.length) allocations.push({ documentId: source.id, amount: Math.min(t.total, outstanding(state, source)) })
+  if (input.kind === 'credito' && source && !allocations.length) {const amount=Math.min(t.total,outstanding(state,source));if(amount>0)allocations.push({documentId:source.id,amount})}
   let allocated = 0
   if (new Set(allocations.map(a=>a.documentId)).size !== allocations.length) throw new Error('La aplicación contiene comprobantes repetidos.')
   for (const a of allocations) {
     const d = state.documents.find(d => d.id === a.documentId && d.partyId === party.id && d.branchId === branch.id && ['factura','debito','saldo'].includes(d.kind))
-    positive(a.amount,'Aplicación',true)
+    assertAllocationTarget(input,d)
+    if(!Number.isSafeInteger(a.amount)||a.amount<=0)throw new Error('La aplicación debe expresarse en centavos enteros positivos.')
     if(a.amount>0)assertApplicationAllocationDate(state,a.documentId,input.date)
     if (!d || a.amount > outstanding(state,d)) throw new Error('La aplicación supera el saldo disponible del comprobante.')
     allocated += a.amount
@@ -244,13 +254,17 @@ export function createDocument(state: State, input: Omit<Document,'id'|'number'|
   const id = uid()
   const prefixes: Record<Kind,string> = { factura:'FC', credito:'NC', debito:'ND', cobro:'RC', pago:'OP', pedido:'NP', remito:'RM', 'orden-compra':'OC', saldo:'SI' }
   const seq = state.documents.filter(d => d.kind === input.kind && d.branchId === input.branchId && d.letter === input.letter).length + 1
-  const documentPayments=input.payments.map(p=>{
+  const documentPayments=input.payments.map(original=>{
+    const p={...original};delete p.taxIdentity;delete p.agent;delete p.agentUnknownReason
     if(input.kind!=='cobro'||!isCardPayment(p.method))return {...p}
     const due=new Date(`${input.date}T12:00:00Z`);due.setUTCDate(due.getUTCDate()+Number(state.masters.cards.find(c=>c.id===p.cardId)?.settlementDays||0))
     return {...p,cardDue:due.toISOString().slice(0,10)}
   })
   const doc: Document = { ...input, payments:documentPayments, ...t, id, allocations, number: `INT-${prefixes[input.kind]}-${input.letter}-${String(branch.point).padStart(5,'0')}-${String(seq).padStart(8,'0')}`, fiscalStatus: input.letter === 'X' || !invoice ? 'interno' : 'pendiente' }
-  delete doc.inventoryCostDate;delete doc.inventoryAfterBatchId;Object.assign(doc,inventoryDocumentTiming(state,doc))
+  delete doc.taxIdentity;delete doc.receiptSnapshot
+  if(receipt&&documentPayments.some(p=>p.method==='Retención')||invoice&&!doc.accountOnly&&doc.perceptions>0)doc.taxIdentity=documentTaxIdentity(state,party.id)
+  if(receipt)doc.receiptSnapshot=captureReceiptSnapshot(state,doc)
+  if(doc.perceptionEvidence===undefined)delete doc.perceptionEvidence;delete doc.inventoryCostDate;delete doc.inventoryAfterBatchId;Object.assign(doc,inventoryDocumentTiming(state,doc))
   if (input.kind === 'remito') {
     const deposit = state.masters.deposits.find(d => d.id === input.depositId && d.branchId === branch.id)
     if (!deposit) throw new Error('Seleccioná un depósito de la sucursal.')
@@ -296,7 +310,7 @@ export function createDocument(state: State, input: Omit<Document,'id'|'number'|
     if (!seller) throw new Error('El vendedor asignado debe ser un proveedor.')
     const amount = Math.round(t.total * party.commission / 100)
     if (amount > 0) {
-      const commissionDoc = { ...doc, id:uid(), number:`INT-COM-${doc.number}`, kind:'debito' as const, side:'proveedor' as const, letter:'X' as const, partyId:seller.id, total:amount, net:amount, vat:0, perceptions:0, lines:[], payments:[], allocations:[], sourceId:'', fiscalStatus:'interno' as const, observations:`Comisión ${party.commission}% sobre ${doc.number}` }
+      const commissionDoc = { ...doc, taxIdentity:undefined,receiptSnapshot:undefined, id:uid(), number:`INT-COM-${doc.number}`, kind:'debito' as const, side:'proveedor' as const, letter:'X' as const, partyId:seller.id, total:amount, net:amount, vat:0, perceptions:0, lines:[], payments:[], allocations:[], sourceId:'', fiscalStatus:'interno' as const, observations:`Comisión ${party.commission}% sobre ${doc.number}` }
       state.documents.push(commissionDoc)
       state.masters.commissions.push({ id:uid(), name:commissionDoc.number, sellerId:seller.id, clientId:party.id, receiptId:id, amount, branchId:branch.id })
       entry(state,input.date,commissionDoc.observations,branch.id,commissionDoc.id,[{accountId:m.commissions,debit:amount,credit:0},{accountId:m.suppliers,debit:0,credit:amount}])
@@ -334,7 +348,7 @@ export function chequeStatus(state: State, id: string, status: Cheque['status'],
   if(c.type==='Propio') {
     ensureOwnChequeAccount(state)
     if(status==='Rechazado') {
-      state.documents.push({...receipt,id:uid(),number:`INT-ND-X-CH-${c.number}`,date:today(),kind:'debito',letter:'X',accountOnly:true,lines:[],payments:[],allocations:[],net:c.amount,vat:0,perceptions:0,total:c.amount,sourceId:'',fiscalStatus:'interno',observations:`Cheque propio rechazado ${c.id}`})
+      state.documents.push({...receipt,taxIdentity:undefined,receiptSnapshot:undefined,id:uid(),number:`INT-ND-X-CH-${c.number}`,date:today(),due:today(),kind:'debito',letter:'X',accountOnly:true,lines:[],payments:[],allocations:[],net:c.amount,vat:0,perceptions:0,total:c.amount,sourceId:'',fiscalStatus:'interno',observations:`Cheque propio rechazado ${c.id}`})
       entry(state,today(),`Rechazo cheque propio ${c.number}`,c.branchId,c.id,[{accountId:m.ownCheques,debit:c.amount,credit:0},{accountId:m.suppliers,debit:0,credit:c.amount}])
     } else if(status==='Cobrado') {
       if(!treasury || treasury.type!=='Banco')throw new Error('Seleccioná la cuenta bancaria de débito del cheque propio.')
@@ -347,8 +361,8 @@ export function chequeStatus(state: State, id: string, status: Cheque['status'],
   if(c.status==='Entregado' && (!deliveredPayment || deliveredPayment.kind!=='pago'))throw new Error('No se encontró el pago que documenta la entrega del cheque.')
   if (status === 'Rechazado') {
     if (state.documents.some(d=>d.observations===`Cheque rechazado ${c.id}`)) throw new Error('El rechazo ya fue contabilizado.')
-    state.documents.push({ ...receipt,id:uid(),number:`INT-ND-X-CH-${c.number}`,date:today(),kind:'debito',letter:'X',accountOnly:true,lines:[],payments:[],allocations:[],net:c.amount,vat:0,perceptions:0,total:c.amount,sourceId:'',fiscalStatus:'interno',observations:`Cheque rechazado ${c.id}` })
-    if(deliveredPayment)state.documents.push({...deliveredPayment,id:uid(),number:`INT-ND-X-CH-PROV-${c.number}`,date:today(),kind:'debito',letter:'X',accountOnly:true,lines:[],payments:[],allocations:[],net:c.amount,vat:0,perceptions:0,total:c.amount,sourceId:'',fiscalStatus:'interno',observations:`Cheque endosado rechazado ${c.id}`})
+    state.documents.push({ ...receipt,taxIdentity:undefined,receiptSnapshot:undefined,id:uid(),number:`INT-ND-X-CH-${c.number}`,date:today(),due:today(),kind:'debito',letter:'X',accountOnly:true,lines:[],payments:[],allocations:[],net:c.amount,vat:0,perceptions:0,total:c.amount,sourceId:'',fiscalStatus:'interno',observations:`Cheque rechazado ${c.id}` })
+    if(deliveredPayment)state.documents.push({...deliveredPayment,taxIdentity:undefined,receiptSnapshot:undefined,id:uid(),number:`INT-ND-X-CH-PROV-${c.number}`,date:today(),due:today(),kind:'debito',letter:'X',accountOnly:true,lines:[],payments:[],allocations:[],net:c.amount,vat:0,perceptions:0,total:c.amount,sourceId:'',fiscalStatus:'interno',observations:`Cheque endosado rechazado ${c.id}`})
     entry(state,today(),`Rechazo cheque ${c.number}`,c.branchId,c.id,[{accountId:m.customers,debit:c.amount,credit:0},{accountId:deliveredPayment?m.suppliers:m.cheques,debit:0,credit:c.amount}])
   }
   if (status === 'Cobrado' && !deliveredPayment) {
@@ -406,12 +420,13 @@ export function settleCards(state: State, input: Omit<CardSettlement,'id'|'gross
   }
   if(!Number.isSafeInteger(input.fee)||input.fee<0)throw new Error('Los cargos deben ser un importe no negativo.')
   const validTaxes=['Ingresos Brutos','Ganancias','IVA','Seguridad Social']
-  for(const w of input.withholdings)if(w.method!=='Retención' || !Number.isSafeInteger(w.amount) || w.amount<=0 || !w.reference.trim() || !validTaxes.includes(w.tax||'') || (w.tax==='Ingresos Brutos'&&!w.jurisdiction))throw new Error('Cada retención requiere importe positivo, impuesto, certificado y jurisdicción para IIBB.')
+  for(const w of input.withholdings)if(w.method!=='Retención' || !Number.isSafeInteger(w.amount) || w.amount<=0 || !!withholdingEvidenceIssue(w) || !validTaxes.includes(w.tax||''))throw new Error('Cada retención requiere importe positivo, impuesto, certificado y jurisdicción para IIBB.')
   const withheld=input.withholdings.reduce((n,w)=>n+w.amount,0),net=gross-input.fee-withheld
   if(!Number.isSafeInteger(gross) || net<0)throw new Error('Las deducciones superan el bruto de los cupones seleccionados.')
+  const withholdings=input.withholdings.map(w=>{const taxIdentity=cardTaxIdentity(state,w),payment={...w,taxIdentity};delete payment.agent;delete payment.agentUnknownReason;return payment})
   ensureCardAccounts(state)
   const m=state.settings.accountMap,id=uid()
-  const settlement:CardSettlement={...input,id,gross,net,reference:input.reference.trim()}
+  const settlement:CardSettlement={...input,withholdings,id,gross,net,reference:input.reference.trim()}
   entry(state,input.date,`Liquidación tarjeta ${settlement.reference}`,input.branchId,id,[{accountId:String(bank.accountId),debit:net,credit:0},{accountId:m.cardFees,debit:input.fee,credit:0},{accountId:m.withholdingCredit,debit:withheld,credit:0},{accountId:m.cardReceivables,debit:0,credit:gross}])
   if(net)state.treasuryMoves.push({id:uid(),date:input.date,treasuryId:bank.id,amount:net,reason:`Liquidación tarjeta ${settlement.reference}`,documentId:id,branchId:input.branchId,reconciled:false})
   ;(state.cardSettlements ||= []).push(settlement)

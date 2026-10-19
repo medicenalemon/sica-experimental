@@ -1,3 +1,6 @@
+import {validateReceiptSnapshot} from './receipt-print'
+import {validateCommercialDocuments} from './document-rules'
+import {validateTaxCertificates} from './tax-certificates'
 import {validateVatSalesLedger} from './vat-sales-ledger'
 import {validateVatSales} from './vat-sales'
 import {validateVatLedger} from './vat-ledger'
@@ -37,6 +40,8 @@ import { validateBankStatements } from './bank-reconciliation'
 import { validateBanks } from './bank-catalog'
 import {validateCashClosings} from './cash-closings'
 import { validateRegistration } from './fiscal-registration'
+import {validateTaxRules} from './tax-rules'
+import {validatePerceptionEvidence,validateDocumentTaxIdentity,validateTaxIdentity} from './tax-evidence'
 import {validateInventoryCosts} from './inventory-costing'
 export function validateState(value:unknown): asserts value is State {
  if(!value||typeof value!=='object')throw new Error('La copia no contiene una base SICA.')
@@ -48,11 +53,15 @@ export function validateState(value:unknown): asserts value is State {
  }
  for(const key of Object.keys(initialState().masters))if(!Array.isArray(s.masters[key]))throw new Error(`Falta el catálogo ${key}.`)
  validateBanks(s.masters.banks)
+ validateTaxRules(s.masters.taxRules)
  validateRegistration(s.settings,s.masters.branches)
+ for(const document of s.documents)validatePerceptionEvidence(document)
  if(!s.masters.users.some(u=>u.active&&u.role==='Administrador General'))throw new Error('La copia necesita un Administrador General activo.')
  const branches=new Set(s.masters.branches.map(b=>b.id)),parties=new Set(s.parties.map(p=>p.id)),products=new Set(s.products.map(p=>p.id)),accounts=new Set(s.masters.accounts.map(a=>a.id))
  for(const p of s.products)if(!['Producto','Servicio','Bien de uso'].includes(p.kind))throw new Error('La copia contiene un tipo de artículo inválido.')
  for(const d of s.documents) {if(!branches.has(d.branchId)||!parties.has(d.partyId)||![d.net,d.vat,d.total,d.perceptions].every(Number.isSafeInteger)||!Array.isArray(d.lines)||!Array.isArray(d.payments)||!Array.isArray(d.allocations))throw new Error('La copia contiene un comprobante inválido.');if(d.lines.some(l=>!products.has(l.productId)||!Number.isFinite(l.quantity)||!Number.isSafeInteger(l.price)))throw new Error('Detalle de comprobante inválido.')}
+ validateCommercialDocuments(s)
+ for(const d of s.documents){validateDocumentTaxIdentity(d);validateReceiptSnapshot(s,d)}
  for(const e of s.entries)if(!Array.isArray(e.lines)||e.lines.some(l=>!accounts.has(l.accountId)||!Number.isSafeInteger(l.debit)||!Number.isSafeInteger(l.credit)||l.debit<0||l.credit<0)||e.lines.reduce((n,l)=>n+l.debit-l.credit,0)!==0)throw new Error('La copia contiene un asiento inválido o desbalanceado.')
  if(s.cardSettlements !== undefined) {
   if(!Array.isArray(s.cardSettlements) || new Set(s.cardSettlements.map(c=>c.id)).size!==s.cardSettlements.length)throw new Error('Liquidaciones de tarjetas inválidas.')
@@ -67,6 +76,7 @@ export function validateState(value:unknown): asserts value is State {
     totals.set(key,amount)
    }
    if(c.items.reduce((n,i)=>n+i.amount,0)!==c.gross||c.withholdings.some(w=>!Number.isSafeInteger(w.amount)||w.amount<=0||!w.tax||!w.reference)||c.gross-c.fee-c.withholdings.reduce((n,w)=>n+w.amount,0)!==c.net)throw new Error('Los importes de la liquidación no concilian.')
+   for(const w of c.withholdings){if(w.agent!==undefined||w.agentUnknownReason!==undefined)throw new Error('La liquidación debe conservar la identidad normalizada, no campos de carga.');if(w.taxIdentity!==undefined){validateTaxIdentity(w.taxIdentity);if(w.method!=='Retención'||w.taxIdentity.origin==='Catálogo al registrar')throw new Error('La identidad de retención no corresponde a la liquidación.')}}
   }
  }
  for(const m of s.stockMoves)if(!s.products.some(p=>p.id===m.productId&&p.kind==='Producto')||!Number.isFinite(m.quantity))throw new Error('La copia contiene un movimiento de stock inválido.')
@@ -74,6 +84,7 @@ export function validateState(value:unknown): asserts value is State {
  validateSupplierOriginals(s)
  validateVatPurchases(s)
  validateVatSales(s)
+ validateTaxCertificates(s)
  validateVatSalesLedger(s)
  validateVatAnnual(s)
  validateVatLedger(s)

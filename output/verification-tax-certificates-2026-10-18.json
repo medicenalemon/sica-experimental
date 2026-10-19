@@ -1,0 +1,763 @@
+{
+  "date": "2026-10-18",
+  "tests": [
+    {
+      "path": "output/qa/tax-certificates-domain-final.log",
+      "passed": 587
+    },
+    {
+      "path": "output/qa/tax-certificates-http-final.log",
+      "passed": 84
+    },
+    {
+      "path": "output/qa/tax-certificates-fiscal-final.log",
+      "passed": 32
+    },
+    {
+      "path": "output/qa/tax-certificates-files-final.log",
+      "passed": 36
+    }
+  ],
+  "browser": {
+    "database": "var/qa-tax-certificates.sqlite",
+    "revision": 3,
+    "synthetic": true,
+    "comparisons": 2,
+    "firstUnchanged": true,
+    "totals": [
+      {
+        "registered": 100,
+        "external": 250,
+        "difference": -150
+      },
+      {
+        "registered": 250,
+        "external": 250,
+        "difference": 0
+      }
+    ],
+    "linked": [
+      1,
+      2
+    ],
+    "sharedUnselected": [
+      1,
+      0
+    ],
+    "fileName": "certificate-evidence-ui.txt",
+    "sha256": "5ddd05b6fb564024da09ad78b5e19006065e7e8c6639b7828d2d7e7ae4b9fefe",
+    "evidencePath": "output/qa/certificate-evidence-ui.txt",
+    "fileContentStored": false,
+    "documents": 12,
+    "journals": 13,
+    "stockMoves": 2,
+    "cardSettlements": 1,
+    "financialStatePreserved": true,
+    "externalRequests": 0
+  },
+  "recovery": {
+    "sourceRevision": 3,
+    "recoveredRevision": 4,
+    "sourceSha256": "695601feb6d23ad81bd36d2de604157c2e925be94f1ea3664120a4f328bf5657",
+    "seal": "Archivo SHA-256 con sello HMAC",
+    "stateAndCredentialsPreserved": true,
+    "comparisonsPreserved": 2,
+    "jsonFilesByteIdentical": true,
+    "taxRowsPreserved": 11,
+    "revokedSessions": 1,
+    "recoveredSessions": 0,
+    "audit": "HMAC validada",
+    "temporaryCopyRemovedAfterCheck": true
+  },
+  "checks": [
+    {
+      "database": "var/qa-tax-certificates.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 11,
+      "taxComparisons": 2
+    },
+    {
+      "database": "var/qa-tax-movements.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 12,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-tax-rules.sqlite",
+      "companyId": "sica",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-vat-sales-ledger.sqlite",
+      "companyId": "sica",
+      "revision": 19,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-vat-sales.sqlite",
+      "companyId": "sica",
+      "revision": 15,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-fiscal-production.sqlite",
+      "companyId": "sica",
+      "revision": 11,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-vat-ledger.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-vat-annual.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-vat-proration.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 2,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-vat-purchases.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 2,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-legal-form.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-supplier-originals.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-original-applications.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-account-applications.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-accounts-aging.sqlite",
+      "companyId": "sica",
+      "revision": 1,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-card-disputes.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 1,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-multi-textil.sqlite",
+      "companyId": "textil",
+      "revision": 1,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-multi-servicios.sqlite",
+      "companyId": "servicios",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-production-shifts.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-material-reservations.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-material-reservations-finished.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-sessions.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-bank-csv.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-bank-groups.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-production-current-closing.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-production-current-closing-finished.sqlite",
+      "companyId": "sica",
+      "revision": 10,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-production-recoverability.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-production-recoverability-finished.sqlite",
+      "companyId": "sica",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-production-inflation.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-production-inflation-finished.sqlite",
+      "companyId": "sica",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-production-vnr-bridge.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-production-finished-correction.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-production-correction.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-production-conversion.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-inventory-current-vnr.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-inventory-reserve-currency.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-inventory-recoverability.sqlite",
+      "companyId": "sica",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-inventory-inflation.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-asset-inflation.sqlite",
+      "companyId": "sica",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-inflation-posting.sqlite",
+      "companyId": "sica",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-reexpression.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-statements.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-asset-impairment.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-asset-disposal.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-asset-reestimate.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-fixed-assets.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-service-cancellation.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-journal-reversal.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-revenue-accrual.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-exercise-opening.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-year-end.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-service-reestimates.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-service-accruals.sqlite",
+      "companyId": "sica",
+      "revision": 4,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-accounting-close.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-unbilled-receipts.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-unbilled-opening.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-inventory-cost.sqlite",
+      "companyId": "sica",
+      "revision": 6,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-opening-note.sqlite",
+      "companyId": "sica",
+      "revision": 2,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-stock-returns.sqlite",
+      "companyId": "sica",
+      "revision": 5,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    },
+    {
+      "database": "var/qa-production-routes.sqlite",
+      "companyId": "sica",
+      "revision": 3,
+      "integrity": "ok",
+      "audit": "HMAC validada",
+      "state": "Validación completa después de JSON",
+      "fiscalSources": "Verificadas",
+      "taxRows": 0,
+      "taxComparisons": 0
+    }
+  ],
+  "exports": [
+    {
+      "path": "output/tax-certificates-2026-10-18/SICA_COMPARACION_CERTIFICADO_2026-10-18_INT-CCF-00000001.json",
+      "sha256": "858dfc8ee9305960bba84be256bb6e64630ef9ac238912b8b0bcb9434d4b6844",
+      "bytes": 6647
+    },
+    {
+      "path": "output/tax-certificates-2026-10-18/SICA_COMPARACION_CERTIFICADO_2026-10-18_INT-CCF-00000002.json",
+      "sha256": "c489a31a20d9ad07eab9dcb071ade6b6daaacd820be44ff149c5f2996a356703",
+      "bytes": 7409
+    }
+  ],
+  "transcripts": [
+    "output/tax-certificates-pending-2026-10-18.txt",
+    "output/tax-certificates-first-2026-10-18.txt",
+    "output/tax-certificates-history-2026-10-18.txt",
+    "output/tax-certificates-recovered-2026-10-18.txt"
+  ],
+  "screenshots": [
+    "output/tax-certificates-first-2026-10-18.png",
+    "output/tax-certificates-recovered-2026-10-18.png"
+  ],
+  "limits": [
+    "Datos externos transcritos por el operador; sin constatación, emisión, presentación ni determinación del cómputo fiscal.",
+    "La huella es declarada y el contenido del archivo debe conservarse fuera de SICA.",
+    "Importes ordinarios en ARS; las identidades históricas faltantes permanecen pendientes.",
+    "Se verificaron los bytes JSON; no el evento de descarga ni las exportaciones XLSX/PDF de la tabla en el navegador.",
+    "El objetivo integral del PPTX permanece abierto."
+  ]
+}

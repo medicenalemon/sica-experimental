@@ -1,0 +1,8 @@
+{
+  "originalDirectoriesIntact": true,
+  "replacementSucceeded": false,
+  "ownershipChanged": false,
+  "temporaryCopiesRemoved": true,
+  "documentation": "CONCILIACION-IVA-VENTAS.md",
+  "proofScripts": "output/qa/verify-vat-sales-ledger-*.mjs"
+}

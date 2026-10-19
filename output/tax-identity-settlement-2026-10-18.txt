@@ -1,0 +1,211 @@
+Browser tab: 2, Title: "SICA — Soluciones Integrales Contables Administrativas", URL: "http://127.0.0.55:3060/finanzas/liquidaciones-tarjetas".
+1 AXWebArea SICA — Soluciones Integrales Contables Administrativas, URL: 127.0.0.55:3060/finanzas/liquidaciones-tarjetas
+	2 container root
+		3 container
+			4 link Description: SICA — Ir al inicio, Value: 127.0.0.55:3060/
+			5 container Navegación principal
+				6 link Description: Inicio, Value: 127.0.0.55:3060/
+				7 button (collapsed) Description: Clientes, Secondary Actions: Expand
+				8 button (collapsed) Description: Proveedores, Secondary Actions: Expand
+				9 button (expanded) Description: Finanzas, Secondary Actions: Collapse
+				10 link Description: Cajas y movimientos, Value: 127.0.0.55:3060/finanzas/cajas
+				11 link Description: Cajas y cuentas bancarias, Value: 127.0.0.55:3060/finanzas/cuentas-tesoreria
+				12 link Description: Bancos y conciliación, Value: 127.0.0.55:3060/finanzas/bancos
+				13 link Description: Extractos bancarios, Value: 127.0.0.55:3060/finanzas/bancos/extractos
+				14 link Description: Cartera de cheques, Value: 127.0.0.55:3060/finanzas/cheques
+				15 link Description: IVA ventas y compras, Value: 127.0.0.55:3060/finanzas/impuestos
+				16 link Description: Cuentas por cobrar / pagar, Value: 127.0.0.55:3060/finanzas/cuentas
+				17 link Description: Tarjetas de crédito, Value: 127.0.0.55:3060/finanzas/tarjetas
+				18 link Description: Liquidaciones de tarjetas, Value: 127.0.0.55:3060/finanzas/liquidaciones-tarjetas
+				19 link Description: Retenciones y percepciones, Value: 127.0.0.55:3060/finanzas/retenciones
+				20 link Description: Comparación de certificados, Value: 127.0.0.55:3060/finanzas/conciliacion-certificados
+				21 link Description: Formas de pago y cobro, Value: 127.0.0.55:3060/finanzas/formas-pago
+				22 link Description: Entidades bancarias, Value: 127.0.0.55:3060/finanzas/entidades
+				23 button (collapsed) Description: Productos y servicios, Secondary Actions: Expand
+				24 button (collapsed) Description: Stock y logística, Secondary Actions: Expand
+				25 button (collapsed) Description: Contabilidad, Secondary Actions: Expand
+				26 button (collapsed) Description: Producción, Secondary Actions: Expand
+				27 button (collapsed) Description: Importaciones, Secondary Actions: Expand
+				28 button (collapsed) Description: Reportes, Secondary Actions: Expand
+				29 button (collapsed) Description: Administración, Secondary Actions: Expand
+				30 button (collapsed) Description: Herramientas, Secondary Actions: Expand
+				31 link Description: Configuración, Value: 127.0.0.55:3060/configuracion
+				32 link Description: Acerca de, Value: 127.0.0.55:3060/acerca-de
+			33 text Versión experimental
+			34 button Colapsar menú
+		35 container
+			36 text SICA Textil · identidad impositiva de ensayo
+			37 container
+				38 text Responsable Inscripto  ·  Tucumán
+			39 container
+				40 text Sucursal
+				41 pop up button (collapsed, settable) Description: Seleccionar sucursal, Value: Todas las unidades, Secondary Actions: Expand
+					42 menu
+						43 (selected) Todas las unidades
+						44 Casa Central
+			45 link Description: Acerca de y fuentes, Value: 127.0.0.55:3060/acerca-de
+			46 text AD
+			47 text Administrador
+			48 text Administrador General
+			49 button Cerrar sesión
+			50 text Base compartida · Versión 2 · Datos en el servidor  · Consultá el estado fiscal de cada comprobante
+			51 text SICA / GESTIÓN INTEGRAL
+			52 heading Liquidaciones de tarjetas, Value: 1
+				53 text Liquidaciones de tarjetas
+			54 text Cupones pendientes, acreditaciones netas, cargos y retenciones de cada liquidación.
+			55 link Description: Configurar tarjetas, Value: 127.0.0.55:3060/finanzas/tarjetas
+			56 button (disabled) Registrar liquidación
+			57 text Cupones pendientes 0 Bruto por liquidar $ 0,00 Neto acreditado $ 95,00 Registrar una liquidación no transfiere dinero. Copiá los importes del resumen y los certificados del agente. Los cargos se registran como gasto bruto; el crédito fiscal de la factura del servicio necesita su comprobante y una imputación contable revisada, sin duplicar el gasto.
+			58 text field (settable) Buscar registros
+			59 text 0  registros
+			60 button XLSX
+			61 button PDF
+			131 heading Todavía no hay registros., Value: 3
+				132 text Todavía no hay registros.
+			133 text Los datos que registres aquí aparecerán en los módulos relacionados.
+			101 heading Historial de liquidaciones, Value: 2
+				102 text Historial de liquidaciones
+			103 text field (settable) Buscar registros
+			104 text 1  registros
+			105 button XLSX
+			106 button PDF
+			134 table
+				135 row
+					136 cell
+						137 text FECHA
+					138 cell
+						139 text LIQUIDACIÓN
+					140 cell
+						141 text TARJETA
+					142 cell
+						143 text BANCO
+					144 cell
+						145 text BRUTO
+					146 cell
+						147 text CARGOS
+					148 cell
+						149 text RETENCIONES
+					150 cell
+						151 text NETO
+					152 cell
+						153 text DETALLE
+				154 row
+					155 cell
+						156 text 18/10/2026
+					157 cell
+						158 text LIQ-IDENTITY-UI
+					159 cell
+						160 text Visa
+					161 cell
+						162 text Banco de prueba
+					163 cell
+						164 text $ 100,00
+					165 cell
+						166 text $ 1,00
+					167 cell
+						168 text $ 4,00
+					169 cell
+						170 text $ 95,00
+					171 cell
+						172 button Ver
+			110 heading Contracargos y reclamos a procesadoras, Value: 2
+				111 text Contracargos y reclamos a procesadoras
+			112 button Registrar contracargo
+			113 text Reclamos pendientes de resolución
+			114 text $ 0,00
+			115 text Registrá la notificación de la procesadora y el origen afectado. Un reclamo como activo requiere un crédito cierto documentado. Un reclamo contingente reconoce la reducción del origen como pérdida y mantiene un control separado; su cierre no duplica el gasto. Los cupones apartados se excluyen de futuras liquidaciones. Las constancias conservan los recibos y liquidaciones originales.
+			116 button Preparar cuentas de reclamos, pérdidas y recuperos
+			117 text field (settable) Buscar registros
+			118 text 0  registros
+			119 button XLSX
+			120 button PDF
+			121 heading Todavía no hay registros., Value: 3
+				122 text Todavía no hay registros.
+			123 text Los datos que registres aquí aparecerán en los módulos relacionados.
+			124 text field (settable) Buscar registros
+			125 text 0  registros
+			126 button XLSX
+			127 button PDF
+			128 heading Todavía no hay registros., Value: 3
+				129 text Todavía no hay registros.
+			130 text Los datos que registres aquí aparecerán en los módulos relacionados.
+			173 container Liquidación LIQ-IDENTITY-UI
+				174 container
+					175 heading Liquidación LIQ-IDENTITY-UI, Value: 2
+						176 text Liquidación LIQ-IDENTITY-UI
+					177 button Cerrar
+				178 text Bruto
+				179 text $ 100,00
+				180 text Neto
+				181 text $ 95,00
+				182 text field (settable) Buscar registros
+				183 text 1  registros
+				184 button XLSX
+				185 button PDF
+				186 table
+					187 row
+						188 cell
+							189 text RECIBO
+						190 cell
+							191 text CUPÓN
+						192 cell
+							193 text LIQUIDADO
+					194 row
+						195 cell
+							196 text INT-RC-X-00001-00000002
+						197 cell
+							198 text COUPON-IDENTITY-UI
+						199 cell
+							200 text $ 100,00
+				201 text field (settable) Buscar registros
+				202 text 2  registros
+				203 button XLSX
+				204 button PDF
+				205 table
+					206 row
+						207 cell
+							208 text AGENTE SEGÚN RESPALDO
+						209 cell
+							210 text CUIT DEL AGENTE
+						211 cell
+							212 text PROCEDENCIA DE IDENTIDAD
+						213 cell
+							214 text IMPUESTO
+						215 cell
+							216 text JURISDICCIÓN
+						217 cell
+							218 text CERTIFICADO
+						219 cell
+							220 text IMPORTE
+					221 row
+						222 cell
+							223 text Agente textil de ensayo
+						224 cell
+							225 text 20123456786
+						226 cell
+							227 text Agente declarado en liquidación
+						228 cell
+							229 text Ingresos Brutos
+						230 cell
+							231 text Tucumán
+						232 cell
+							233 text CERT-KNOWN-UI
+						234 cell
+							235 text $ 2,50
+					236 row
+						237 cell
+							238 text Agente sin identificar
+						239 cell
+							240 text CUIT pendiente
+						241 cell
+							242 text Agente sin identificar · El respaldo sintético no identifica al agente de esta deducción; se conserva pendiente de revisión.
+						243 cell
+							244 text Ingresos Brutos
+						245 cell
+							246 text Tucumán
+						247 cell
+							248 text CERT-PENDING-UI
+						249 cell
+							250 text $ 1,50
+
+The focused UI element is 177 button Cerrar

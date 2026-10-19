@@ -1,0 +1,175 @@
+{
+  "id": "bf00c82b-8ce9-47a2-84d5-9aa3f6b4c0fb",
+  "rootId": "bf00c82b-8ce9-47a2-84d5-9aa3f6b4c0fb",
+  "number": "INT-CCF-00000001",
+  "responsible": "Administrador",
+  "createdAt": "2026-10-18T20:06:18.664Z",
+  "review": "{\"version\":1,\"input\":{\"from\":\"2026-01-01\",\"to\":\"2026-10-18\",\"reviewedOn\":\"2026-10-18\",\"previousId\":\"\",\"reference\":\"CERT-COMP-UI-1\",\"reason\":\"Primera revisión de ensayo: se vincula uno de los dos movimientos con la referencia del respaldo para conservar la diferencia pendiente.\",\"evidence\":{\"origin\":\"Certificado recibido\",\"number\":\"CERT-SHARED\",\"date\":\"2026-10-18\",\"regime\":\"Régimen de retención de ensayo\",\"type\":\"Retención\",\"effect\":\"Sufrida\",\"tax\":\"Ingresos Brutos\",\"jurisdiction\":\"Tucumán\",\"agentCuit\":\"20123456786\",\"agentName\":\"Cliente mayorista de prueba\",\"subjectCuit\":\"30712345671\",\"subjectName\":\"SICA Textil · comparación de certificados de ensayo\",\"amount\":250,\"state\":\"Informado como vigente\",\"sourceReference\":\"Documento sintético de ensayo conservado externamente; sin validez fiscal.\",\"fileName\":\"certificate-evidence-ui.txt\",\"sha256\":\"5ddd05b6fb564024da09ad78b5e19006065e7e8c6639b7828d2d7e7ae4b9fefe\"},\"links\":[{\"rowId\":\"document:333c5cef-18b3-4397-a4a2-02051cc59f2f:withholding:1\",\"reason\":\"\"}],\"confirmed\":true},\"source\":{\"company\":{\"name\":\"SICA Textil · comparación de certificados de ensayo\",\"cuit\":\"30712345671\",\"legalForm\":\"Sociedad comercial · forma por definir\",\"province\":\"Tucumán\",\"iva\":\"Responsable Inscripto\"},\"exercises\":[{\"start\":\"2026-01-01\",\"end\":\"2026-12-31\"}],\"documentIds\":[\"d40a273b-1c90-4aea-adf3-b7e7a76d3998\",\"333c5cef-18b3-4397-a4a2-02051cc59f2f\",\"f03558ed-ac2b-4f24-89f5-34da36d3a0e3\",\"4a0aef8e-9f02-4987-8bc6-facdcca3487a\",\"7c8175a4-7b87-412a-b12d-30064cfb81b1\",\"8774d805-d209-4329-ac12-70b676fe5a63\",\"60fb6536-fd4d-4cba-83ed-d4b89f04c22f\",\"c28e2529-b81b-4d25-bf42-4fd1fa9a22a9\",\"c189c733-0484-42d2-afc1-27a361acabee\",\"b50db39b-b6fd-4c1d-9f81-4feaf0856db5\",\"826711b2-afc4-405a-840d-fc4bc716003f\",\"dd0092ef-8274-46b9-a313-f54c409be41c\"],\"settlementIds\":[\"a3805990-9699-4f5c-8177-1eaf387261ee\"],\"parties\":[{\"id\":\"6b07a1dc-633c-4a54-9cd4-0d1f08eb88ff\",\"name\":\"Cliente mayorista de prueba\",\"cuit\":\"20123456786\"}],\"branches\":[{\"id\":\"central\",\"name\":\"Casa Central\"}],\"cards\":[],\"relevantRows\":[{\"date\":\"2026-09-05\",\"branchId\":\"central\",\"branchName\":\"Casa Central\",\"sourceNumber\":\"INT-RC-X-00001-00000001\",\"partyKey\":\"party:6b07a1dc-633c-4a54-9cd4-0d1f08eb88ff\",\"partyName\":\"Cliente mayorista de prueba\",\"partyCuit\":\"20123456786\",\"id\":\"document:333c5cef-18b3-4397-a4a2-02051cc59f2f:withholding:1\",\"source\":\"Cobro\",\"type\":\"Retención\",\"effect\":\"Sufrida\",\"tax\":\"Ingresos Brutos\",\"jurisdiction\":\"Tucumán\",\"reference\":\"CERT-SHARED\",\"amount\":100,\"internal\":false,\"status\":\"Referencia informada · sin constatación externa\"},{\"date\":\"2026-09-05\",\"branchId\":\"central\",\"branchName\":\"Casa Central\",\"sourceNumber\":\"INT-RC-X-00001-00000001\",\"partyKey\":\"party:6b07a1dc-633c-4a54-9cd4-0d1f08eb88ff\",\"partyName\":\"Cliente mayorista de prueba\",\"partyCuit\":\"20123456786\",\"id\":\"document:333c5cef-18b3-4397-a4a2-02051cc59f2f:withholding:2\",\"source\":\"Cobro\",\"type\":\"Retención\",\"effect\":\"Sufrida\",\"tax\":\"Ingresos Brutos\",\"jurisdiction\":\"Tucumán\",\"reference\":\"CERT-SHARED\",\"amount\":150,\"internal\":false,\"status\":\"Referencia informada · sin constatación externa\"}]},\"linked\":[{\"row\":{\"date\":\"2026-09-05\",\"branchId\":\"central\",\"branchName\":\"Casa Central\",\"sourceNumber\":\"INT-RC-X-00001-00000001\",\"partyKey\":\"party:6b07a1dc-633c-4a54-9cd4-0d1f08eb88ff\",\"partyName\":\"Cliente mayorista de prueba\",\"partyCuit\":\"20123456786\",\"id\":\"document:333c5cef-18b3-4397-a4a2-02051cc59f2f:withholding:1\",\"source\":\"Cobro\",\"type\":\"Retención\",\"effect\":\"Sufrida\",\"tax\":\"Ingresos Brutos\",\"jurisdiction\":\"Tucumán\",\"reference\":\"CERT-SHARED\",\"amount\":100,\"internal\":false,\"status\":\"Referencia informada · sin constatación externa\"},\"reason\":\"\",\"issues\":[]}],\"unselectedReferenceIds\":[\"document:333c5cef-18b3-4397-a4a2-02051cc59f2f:withholding:2\"],\"releasedRowIds\":[],\"totals\":{\"registered\":100,\"external\":250,\"difference\":-150},\"status\":\"Con diferencia de importe\",\"warnings\":[\"En percepciones, la referencia registrada puede indicar un régimen: no se contrasta automáticamente como número de certificado.\",\"Comparación manual con datos declarados del respaldo; no constata autenticidad, vigencia legal, cómputo fiscal ni presentación.\",\"El rango selecciona fechas operativas y no asigna por sí mismo el período fiscal de cómputo.\",\"No modifica documentos, certificados ni asientos; una igualdad aritmética no resuelve identificaciones pendientes.\",\"Los nombres y CUIT de catálogo se conservan como contexto de esta revisión; los datos del agente y sujeto se transcriben del respaldo.\",\"La huella del archivo es declarada por el operador. El contenido del archivo no se guarda: debe conservarse el original.\",\"1 movimiento(s) del rango comparten la referencia externa y no están vinculados; revisá si forman parte del mismo certificado.\"]}",
+  "preview": {
+    "version": 1,
+    "input": {
+      "from": "2026-01-01",
+      "to": "2026-10-18",
+      "reviewedOn": "2026-10-18",
+      "previousId": "",
+      "reference": "CERT-COMP-UI-1",
+      "reason": "Primera revisión de ensayo: se vincula uno de los dos movimientos con la referencia del respaldo para conservar la diferencia pendiente.",
+      "evidence": {
+        "origin": "Certificado recibido",
+        "number": "CERT-SHARED",
+        "date": "2026-10-18",
+        "regime": "Régimen de retención de ensayo",
+        "type": "Retención",
+        "effect": "Sufrida",
+        "tax": "Ingresos Brutos",
+        "jurisdiction": "Tucumán",
+        "agentCuit": "20123456786",
+        "agentName": "Cliente mayorista de prueba",
+        "subjectCuit": "30712345671",
+        "subjectName": "SICA Textil · comparación de certificados de ensayo",
+        "amount": 250,
+        "state": "Informado como vigente",
+        "sourceReference": "Documento sintético de ensayo conservado externamente; sin validez fiscal.",
+        "fileName": "certificate-evidence-ui.txt",
+        "sha256": "5ddd05b6fb564024da09ad78b5e19006065e7e8c6639b7828d2d7e7ae4b9fefe"
+      },
+      "links": [
+        {
+          "rowId": "document:333c5cef-18b3-4397-a4a2-02051cc59f2f:withholding:1",
+          "reason": ""
+        }
+      ],
+      "confirmed": true
+    },
+    "source": {
+      "company": {
+        "name": "SICA Textil · comparación de certificados de ensayo",
+        "cuit": "30712345671",
+        "legalForm": "Sociedad comercial · forma por definir",
+        "province": "Tucumán",
+        "iva": "Responsable Inscripto"
+      },
+      "exercises": [
+        {
+          "start": "2026-01-01",
+          "end": "2026-12-31"
+        }
+      ],
+      "documentIds": [
+        "d40a273b-1c90-4aea-adf3-b7e7a76d3998",
+        "333c5cef-18b3-4397-a4a2-02051cc59f2f",
+        "f03558ed-ac2b-4f24-89f5-34da36d3a0e3",
+        "4a0aef8e-9f02-4987-8bc6-facdcca3487a",
+        "7c8175a4-7b87-412a-b12d-30064cfb81b1",
+        "8774d805-d209-4329-ac12-70b676fe5a63",
+        "60fb6536-fd4d-4cba-83ed-d4b89f04c22f",
+        "c28e2529-b81b-4d25-bf42-4fd1fa9a22a9",
+        "c189c733-0484-42d2-afc1-27a361acabee",
+        "b50db39b-b6fd-4c1d-9f81-4feaf0856db5",
+        "826711b2-afc4-405a-840d-fc4bc716003f",
+        "dd0092ef-8274-46b9-a313-f54c409be41c"
+      ],
+      "settlementIds": [
+        "a3805990-9699-4f5c-8177-1eaf387261ee"
+      ],
+      "parties": [
+        {
+          "id": "6b07a1dc-633c-4a54-9cd4-0d1f08eb88ff",
+          "name": "Cliente mayorista de prueba",
+          "cuit": "20123456786"
+        }
+      ],
+      "branches": [
+        {
+          "id": "central",
+          "name": "Casa Central"
+        }
+      ],
+      "cards": [],
+      "relevantRows": [
+        {
+          "date": "2026-09-05",
+          "branchId": "central",
+          "branchName": "Casa Central",
+          "sourceNumber": "INT-RC-X-00001-00000001",
+          "partyKey": "party:6b07a1dc-633c-4a54-9cd4-0d1f08eb88ff",
+          "partyName": "Cliente mayorista de prueba",
+          "partyCuit": "20123456786",
+          "id": "document:333c5cef-18b3-4397-a4a2-02051cc59f2f:withholding:1",
+          "source": "Cobro",
+          "type": "Retención",
+          "effect": "Sufrida",
+          "tax": "Ingresos Brutos",
+          "jurisdiction": "Tucumán",
+          "reference": "CERT-SHARED",
+          "amount": 100,
+          "internal": false,
+          "status": "Referencia informada · sin constatación externa"
+        },
+        {
+          "date": "2026-09-05",
+          "branchId": "central",
+          "branchName": "Casa Central",
+          "sourceNumber": "INT-RC-X-00001-00000001",
+          "partyKey": "party:6b07a1dc-633c-4a54-9cd4-0d1f08eb88ff",
+          "partyName": "Cliente mayorista de prueba",
+          "partyCuit": "20123456786",
+          "id": "document:333c5cef-18b3-4397-a4a2-02051cc59f2f:withholding:2",
+          "source": "Cobro",
+          "type": "Retención",
+          "effect": "Sufrida",
+          "tax": "Ingresos Brutos",
+          "jurisdiction": "Tucumán",
+          "reference": "CERT-SHARED",
+          "amount": 150,
+          "internal": false,
+          "status": "Referencia informada · sin constatación externa"
+        }
+      ]
+    },
+    "linked": [
+      {
+        "row": {
+          "date": "2026-09-05",
+          "branchId": "central",
+          "branchName": "Casa Central",
+          "sourceNumber": "INT-RC-X-00001-00000001",
+          "partyKey": "party:6b07a1dc-633c-4a54-9cd4-0d1f08eb88ff",
+          "partyName": "Cliente mayorista de prueba",
+          "partyCuit": "20123456786",
+          "id": "document:333c5cef-18b3-4397-a4a2-02051cc59f2f:withholding:1",
+          "source": "Cobro",
+          "type": "Retención",
+          "effect": "Sufrida",
+          "tax": "Ingresos Brutos",
+          "jurisdiction": "Tucumán",
+          "reference": "CERT-SHARED",
+          "amount": 100,
+          "internal": false,
+          "status": "Referencia informada · sin constatación externa"
+        },
+        "reason": "",
+        "issues": []
+      }
+    ],
+    "unselectedReferenceIds": [
+      "document:333c5cef-18b3-4397-a4a2-02051cc59f2f:withholding:2"
+    ],
+    "releasedRowIds": [],
+    "totals": {
+      "registered": 100,
+      "external": 250,
+      "difference": -150
+    },
+    "status": "Con diferencia de importe",
+    "warnings": [
+      "En percepciones, la referencia registrada puede indicar un régimen: no se contrasta automáticamente como número de certificado.",
+      "Comparación manual con datos declarados del respaldo; no constata autenticidad, vigencia legal, cómputo fiscal ni presentación.",
+      "El rango selecciona fechas operativas y no asigna por sí mismo el período fiscal de cómputo.",
+      "No modifica documentos, certificados ni asientos; una igualdad aritmética no resuelve identificaciones pendientes.",
+      "Los nombres y CUIT de catálogo se conservan como contexto de esta revisión; los datos del agente y sujeto se transcriben del respaldo.",
+      "La huella del archivo es declarada por el operador. El contenido del archivo no se guarda: debe conservarse el original.",
+      "1 movimiento(s) del rango comparten la referencia externa y no están vinculados; revisá si forman parte del mismo certificado."
+    ]
+  }
+}

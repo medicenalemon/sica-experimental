@@ -1,0 +1,20 @@
+{
+  "temporary": true,
+  "defaultServerMode": true,
+  "revision": 2,
+  "receipt": "INT-RC-X-00001-00000002",
+  "total": 1025,
+  "applied": 525,
+  "unapplied": 500,
+  "journal": {
+    "debit": 1025,
+    "credit": 1025
+  },
+  "treasury": 1025,
+  "persistedAfterBrowserReload": true,
+  "arcaRequests": 0,
+  "transcript": "output/qa/relational/receipt-ui.txt",
+  "screenshot": "El navegador integrado no pudo capturar una imagen.",
+  "temporaryDatabaseRemoved": true,
+  "nativePdfDownload": "El evento de descarga del navegador integrado no se pudo confirmar; los PDF/XLSX se verificaron en 40 pruebas de archivos."
+}

@@ -1,0 +1,16 @@
+{
+  "links": [
+    {
+      "rowId": "document:333c5cef-18b3-4397-a4a2-02051cc59f2f:withholding:1",
+      "reason": ""
+    },
+    {
+      "rowId": "document:333c5cef-18b3-4397-a4a2-02051cc59f2f:withholding:2",
+      "reason": ""
+    }
+  ],
+  "agentCuit": "20123456786",
+  "agentName": "Cliente mayorista de prueba",
+  "number": "CERT-SHARED",
+  "externalAmount": 250
+}

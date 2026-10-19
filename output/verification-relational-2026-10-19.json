@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-19",
+  "completedAt": "2026-10-19T22:17:20.558Z",
+  "status": "Pruebas automatizadas locales y núcleo relacional implementados",
+  "automated": {
+    "total": 807,
+    "passed": 807,
+    "failed": 0,
+    "skipped": 0,
+    "todo": 0,
+    "suites": [
+      {
+        "name": "domain",
+        "passed": 607,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/domain.log"
+      },
+      {
+        "name": "files",
+        "passed": 40,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/files.log"
+      },
+      {
+        "name": "fiscal",
+        "passed": 32,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/fiscal.log"
+      },
+      {
+        "name": "http",
+        "passed": 87,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/http.log"
+      },
+      {
+        "name": "recovery",
+        "passed": 11,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/recovery.log"
+      },
+      {
+        "name": "database",
+        "passed": 30,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/database-rerun.log"
+      }
+    ],
+    "report": "output/qa/relational/tests.json",
+    "initialRun": "output/qa/relational/tests-initial.json",
+    "note": "La prueba de manipulación de una copia se corrigió y se repitió la suite SQL completa: 30/30. Las otras cinco suites se conservaron de su ejecución aprobada."
+  },
+  "database": {
+    "engine": "SQLite",
+    "relationalTables": 14,
+    "schemaVersion": 1,
+    "wal": true,
+    "synchronous": "FULL",
+    "foreignKeys": true,
+    "integerCents": true,
+    "defaultFrontendMode": "server",
+    "historicalDatabases": 63,
+    "sourceFilesUnmodified": true,
+    "migrationAndIndependentRecovery": "63/63 aprobadas sobre copias",
+    "historyReport": "output/qa/relational/history.json",
+    "jsonCompatibilitySnapshotRetained": true
+  },
+  "fixes": [
+    "Las notas internas de rechazos de cheques propios, de terceros y endosados ahora tienen un vencimiento compatible con su fecha.",
+    "La reconstrucción relacional conserva orden de filas y propiedades para mantener válidas las revisiones históricas."
+  ],
+  "ui": {
+    "temporary": true,
+    "defaultServerMode": true,
+    "revision": 2,
+    "receipt": "INT-RC-X-00001-00000002",
+    "total": 1025,
+    "applied": 525,
+    "unapplied": 500,
+    "journal": {
+      "debit": 1025,
+      "credit": 1025
+    },
+    "treasury": 1025,
+    "persistedAfterBrowserReload": true,
+    "arcaRequests": 0,
+    "transcript": "output/qa/relational/receipt-ui.txt",
+    "screenshot": "El navegador integrado no pudo capturar una imagen.",
+    "temporaryDatabaseRemoved": true,
+    "nativePdfDownload": "El evento de descarga del navegador integrado no se pudo confirmar; los PDF/XLSX se verificaron en 40 pruebas de archivos."
+  },
+  "checks": {
+    "build": "aprobado; advertencia de tamaño de bundles",
+    "lint": "aprobado sin avisos",
+    "diffWhitespace": "aprobado"
+  },
+  "arca": {
+    "realConnections": 0,
+    "simulatedFiscalTests": 32,
+    "externalFetchAndHttpBlockedDuringTests": true
+  },
+  "limits": [
+    "No se contactó ARCA real, ni homologación ni producción.",
+    "Se conserva JSON para compatibilidad y módulos especializados; no se afirma normalización completa ni capacidad productiva medida.",
+    "PostgreSQL no implementado: candidato para varios servidores o mayor concurrencia.",
+    "La captura de pantalla y el evento de descarga nativa no fueron confirmables con el navegador integrado; se conservó transcripción y los archivos se verificaron por separado.",
+    "Las ampliaciones funcionales de la matriz y el despliegue real corresponden a otros objetivos."
+  ],
+  "sources": [
+    {
+      "path": "server/relational-store.mjs",
+      "sha256": "87ef9b8608aa388459bfa6c505171cc3d52bb0fea839e64fc78872118ed166bf"
+    },
+    {
+      "path": "server/repository.mjs",
+      "sha256": "e64dad9e9f687905bfa6b45e989b761866325486014f662b912f9904de4f2815"
+    },
+    {
+      "path": "server/recovery.mjs",
+      "sha256": "425c34875c71d29b3b89e87b4a7b5dd45b344ce4714dfed7c455a092a75c7799"
+    },
+    {
+      "path": "src/domain/engine.ts",
+      "sha256": "ab5156fd3ebc5714717e8cb96edeacea8b30ed05922b44725aeed4a987e00137"
+    },
+    {
+      "path": "src/state/Store.tsx",
+      "sha256": "c38f4cea547a18033e7f6e505d9fedc6a4edd95d04f4a8c0225758aa04a51d2c"
+    },
+    {
+      "path": "scripts/test-all.mjs",
+      "sha256": "2ddb5a61b43f5db2219a3053fb470536463a016588ebe19435689852926ae3c0"
+    },
+    {
+      "path": "scripts/test-database.mjs",
+      "sha256": "1704b0a7fe2613e702850447a8e5de9342b96c1da75a7c1bac025b9c8f0cce39"
+    },
+    {
+      "path": "scripts/test-offline-guard.mjs",
+      "sha256": "d8bf923437b6fb479c0537da58c2973a8b5644cdd294ba6a7b6d968b1ac16bea"
+    },
+    {
+      "path": "scripts/database-test-worker.mjs",
+      "sha256": "0558ea146c7ee12577ba7e9007d1fb490fc8b3936bc4ba6e969f5c33caa25676"
+    },
+    {
+      "path": "scripts/verify-relational-history.mjs",
+      "sha256": "f571bd80e0c6127d419b2e01ac09ed78c4baf06a6d4d4c5e771723b74e62a15d"
+    },
+    {
+      "path": "package.json",
+      "sha256": "bba948674148565505942f2dd7cfd640616ab3ade9a9ebcb05f80c41efa19411"
+    }
+  ]
+}

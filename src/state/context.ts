@@ -13,6 +13,7 @@ export interface StoreValue {
   activeSessions:()=>Promise<ActiveSession[]>;
   logout: ()=>Promise<boolean>;
   restore: (next: unknown)=>Promise<boolean>;
+  previewTaxCertificate:(input:import('@/domain/tax-certificates').TaxCertificateInput)=>Promise<import('@/domain/tax-certificates').TaxCertificatePreview>;
   previewVatSales:(input:import('@/domain/vat-sales').VatSalesInput)=>Promise<import('@/domain/vat-sales').VatSalesPreview>;
   previewFiscal:(id:string,options:FiscalOptions,environment?:FiscalEnvironment)=>Promise<FiscalRequest>; operateFiscal:(id:string,options:FiscalOptions,action:'autorizar'|'consultar',reviewRevision?:number,environment?:FiscalEnvironment)=>Promise<boolean>; fiscalConnection:()=>Promise<FiscalConnection>;
   mode:'local'|'server'; ready:boolean; busy:boolean; revision:number; reload:()=>Promise<void>; exportBackup:()=>Promise<State>; recoveries:()=>Promise<{id:number;revision:number;created:string;name:string;documents:number}[]>; recoveryCopy:(id:number)=>Promise<State>; localCopy:()=>unknown;

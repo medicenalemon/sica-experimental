@@ -1,0 +1,109 @@
+{
+  "startedAt": "2026-10-19T22:32:55.827Z",
+  "finishedAt": "2026-10-19T22:40:45.023Z",
+  "node": "v24.19.0",
+  "arca": "Simulada; fetch y http/https restringidos a loopback",
+  "ok": true,
+  "total": 907,
+  "passed": 907,
+  "results": [
+    {
+      "name": "build-server",
+      "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/build-server.log",
+      "exitCode": 0,
+      "signal": null,
+      "ok": true
+    },
+    {
+      "name": "domain",
+      "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/domain.log",
+      "exitCode": 0,
+      "signal": null,
+      "tests": 607,
+      "passed": 607,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "ok": true
+    },
+    {
+      "name": "files",
+      "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/files.log",
+      "exitCode": 0,
+      "signal": null,
+      "tests": 40,
+      "passed": 40,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "ok": true
+    },
+    {
+      "name": "fiscal",
+      "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/fiscal.log",
+      "exitCode": 0,
+      "signal": null,
+      "tests": 32,
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "ok": true
+    },
+    {
+      "name": "http",
+      "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/http.log",
+      "exitCode": 0,
+      "signal": null,
+      "tests": 87,
+      "passed": 87,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "ok": true
+    },
+    {
+      "name": "recovery",
+      "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/recovery.log",
+      "exitCode": 0,
+      "signal": null,
+      "tests": 11,
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "ok": true
+    },
+    {
+      "name": "database",
+      "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/database.log",
+      "exitCode": 0,
+      "signal": null,
+      "tests": 30,
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "ok": true
+    },
+    {
+      "name": "postgres",
+      "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/postgres.log",
+      "exitCode": 0,
+      "signal": null,
+      "tests": 100,
+      "passed": 100,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "ok": true
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import {DatabaseSync} from 'node:sqlite'
+import {assertRelationalStore} from './relational-store.mjs'
 import {createHmac,randomUUID} from 'node:crypto'
 import {constants} from 'node:fs'
 import {copyFile,writeFile,stat,mkdtemp,mkdir,rm,chmod,unlink} from 'node:fs/promises'
@@ -26,7 +27,7 @@ function inspectDatabase(filename,key,manifest,expectedCompanyId){
   const companies=rows.map(row=>{
    const revision=Number(row.revision)
    if(typeof row.id!=='string'||!row.id||!Number.isSafeInteger(revision)||revision<0)throw new Error('Empresa o versión inválida en la copia.')
-   const state=json(row.state,'Estado de empresa');validateState(state)
+   const state=json(row.state,'Estado de empresa');validateState(state);assertRelationalStore(db,row.id,state)
    for(const u of state.masters.users)if(!/^[a-f0-9]{64}$/i.test(String(u.passwordHash))||typeof u.salt!=='string'||!u.salt||!Number.isSafeInteger(Number(u.passwordIterations||150000))||Number(u.passwordIterations||150000)<150000||Number(u.passwordIterations||150000)>1000000)throw new Error('La copia contiene credenciales de usuario incompatibles con el servidor.')
    let previous='',events=0
    for(const audit of db.prepare('SELECT record,previous_hash,hash FROM audit WHERE company_id=? ORDER BY id').all(row.id)){

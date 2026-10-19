@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-19",
+  "completedAt": "2026-10-19T22:41:36.132Z",
+  "status": "Implementación PostgreSQL y validación integral completadas",
+  "runtime": {
+    "node": "v24.19.0",
+    "postgresql": "18.6",
+    "driver": "pg",
+    "driverVersion": "8.23.1",
+    "defaultBackend": "postgres"
+  },
+  "database": {
+    "schema": "sica",
+    "migrationVersion": 1,
+    "relationalTables": 14,
+    "queries": "Parametrizadas y asíncronas",
+    "transactions": "Un cliente por transacción; bloqueo por empresa y fila; lecturas REPEATABLE READ",
+    "fiscalConcurrency": "Advisory lock de sesión por empresa, ambiente y documento",
+    "money": "bigint en centavos, rango seguro JS",
+    "jsonCompatibility": "json conserva orden histórico; snapshot y metadatos especializados mantenidos",
+    "backups": "Respaldo lógico consistente por empresa, HMAC y clave externa",
+    "sqliteMigration": "Fuente en sólo lectura; conserva código, credenciales, operaciones, solicitudes y tickets; revoca sesiones"
+  },
+  "tests": {
+    "total": 907,
+    "passed": 907,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "todo": 0,
+    "postgres": 100,
+    "report": "output/qa/relational/tests.json",
+    "suites": [
+      {
+        "name": "domain",
+        "passed": 607,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/domain.log"
+      },
+      {
+        "name": "files",
+        "passed": 40,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/files.log"
+      },
+      {
+        "name": "fiscal",
+        "passed": 32,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/fiscal.log"
+      },
+      {
+        "name": "http",
+        "passed": 87,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/http.log"
+      },
+      {
+        "name": "recovery",
+        "passed": 11,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/recovery.log"
+      },
+      {
+        "name": "database",
+        "passed": 30,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/database.log"
+      },
+      {
+        "name": "postgres",
+        "passed": 100,
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/postgres.log"
+      }
+    ]
+  },
+  "historicalMigration": {
+    "files": 63,
+    "companies": 63,
+    "independentlyRecovered": 63,
+    "sourceFilesUnmodified": true,
+    "report": "output/qa/postgres/history.json"
+  },
+  "checks": {
+    "build": "aprobado; advertencia de tamaño de bundles",
+    "lint": "aprobado sin avisos",
+    "composeConfiguration": "docker compose config --quiet aprobado",
+    "diffWhitespace": "git diff --check aprobado",
+    "temporaryPostgresCluster": "Creado con SCRAM, socket privado, fsync y synchronous_commit activos; detenido y eliminado después de las pruebas"
+  },
+  "arca": {
+    "realConnections": 0,
+    "tests": "Simuladas; fetch y HTTP/HTTPS externos bloqueados"
+  },
+  "deployment": {
+    "persistentInstanceStarted": false,
+    "configuration": ".env.example y compose.yaml listos; elegir credenciales y URL de la instalación definitiva",
+    "guide": "docs/postgresql.md"
+  },
+  "limits": [
+    "Se mantiene el contrato de estado completo por empresa; no se afirma normalización de todos los módulos ni escrituras incrementales.",
+    "El respaldo lógico es por empresa, no un pg_dump ni PITR del cluster.",
+    "No se probó carga productiva, alta disponibilidad ni despliegue externo.",
+    "No se contactó ARCA real."
+  ],
+  "sources": [
+    {
+      "path": "server/postgres-repository.mjs",
+      "sha256": "08ab1060b0d2ae21163a9af7126c56d64a3438738ace5cda59f2198792a038b3"
+    },
+    {
+      "path": "server/postgres-schema.mjs",
+      "sha256": "c540cd554b93a7ef0ccbb62351356e6fe36d7423758083edca829a07463de871"
+    },
+    {
+      "path": "server/postgres-backup.mjs",
+      "sha256": "59831161403c02f01d25193ef6aa0a158614b93ceee4094b584204f09807bde2"
+    },
+    {
+      "path": "server/sqlite-to-postgres.mjs",
+      "sha256": "d57e3751ef5f8174b44c94aae0d97439558fc7925273de1d015f7acab867d965"
+    },
+    {
+      "path": "server/storage.mjs",
+      "sha256": "a76a2fd979acb11b11f5593f5e362179acb504b12af235e42d51a7e460271842"
+    },
+    {
+      "path": "server/companies.mjs",
+      "sha256": "c6540d4042abdba7a76c0e7d4bbd6563b6c2ea06d325c9b4458951052a2512ba"
+    },
+    {
+      "path": "server/http.mjs",
+      "sha256": "e434a6d019f1f294a6592bb826fe0921a39052566b08fc1a70e40c4a22b3b9d8"
+    },
+    {
+      "path": "server/fiscal-service.mjs",
+      "sha256": "08a7532c61eebb4009ad9c7b4fd96eb39d0fb4a630deb794479b9cdad22cc025"
+    },
+    {
+      "path": "server/fiscal-repository.mjs",
+      "sha256": "09389cb0831082c741180b51a856c59a1cab51b4ae247a6183310726698827b6"
+    },
+    {
+      "path": "server/fiscal-integrity.mjs",
+      "sha256": "e3355fc472f67118c2f61cbcba77db6f9aad05be1aa1b94d2a53d69effdcd11d"
+    },
+    {
+      "path": "server/public-state.mjs",
+      "sha256": "c5b914fbb03218b9e542830050b40799036d61441014aca30cc01b1f2be412db"
+    },
+    {
+      "path": "server/resolve-store.mjs",
+      "sha256": "6d00e6fc392dd30305a5d857b79bccb9d99771258c1b713146210925f295514c"
+    },
+    {
+      "path": "server/start.mjs",
+      "sha256": "53e95f57db12d2042caeb996e7961bb51dda458d7672f88ee643eb02889aa78f"
+    },
+    {
+      "path": "scripts/postgres-data.mjs",
+      "sha256": "3b3f3fba748c30da090feca07b82427fa19269d09a08586338e69d1bfb58920c"
+    },
+    {
+      "path": "scripts/postgres-test-cluster.mjs",
+      "sha256": "e9070244d0b72bd6d7aa6967164f260caaa802eefb0ef02f5dd1532ac8a36426"
+    },
+    {
+      "path": "scripts/test-postgres.mjs",
+      "sha256": "bccb151f91c5feaee47270dec96b31101ee68b7e288fc36021105e47643c49d2"
+    },
+    {
+      "path": "scripts/test-all.mjs",
+      "sha256": "25ed196562c50de18ae96d4cb1aaff7dbd0b389d2a82839d1abd04783516f680"
+    },
+    {
+      "path": "package.json",
+      "sha256": "533ef813ace4c5e630a7e51862a3eda023a76f7bb900d7d1ade05eae8e4d4ff1"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "c4ba3cb9f05d3b861327ea649025869f12de9ab27e53ba182f94780a4b4f81ba"
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "98aaff6eecfbb83bcd50942d0531c115594d94943fc1c10d44cf905355ec6510"
+    },
+    {
+      "path": "src/pages/gestion/SettingsPage.tsx",
+      "sha256": "080221ea1a273bf2a3c8e0b1cca9db0bcf4020cc83474f74f178326eb9548fb2"
+    }
+  ]
+}

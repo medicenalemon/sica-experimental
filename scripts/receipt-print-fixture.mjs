@@ -1,0 +1,18 @@
+export function receiptPrintFixture({initialState,loadTextileDemo,createDocument,saveCheque},date='2026-10-18',withReceipt=true){
+ const state=initialState();loadTextileDemo(state)
+ Object.assign(state.settings,{name:'SICA Textil - ensayo de constancias',cuit:'30712345671',legalForm:'SRL',address:'Av. de ensayo 123',province:'Tucumán',exerciseStart:'2026-01-01',exerciseEnd:'2026-12-31'})
+ state.stockMoves.forEach(m=>m.date='2026-01-01')
+ Object.assign(state.masters.branches[0],{name:'Casa Central Textil',address:'Sucursal de ensayo - San Miguel de Tucumán'})
+ const customer=state.parties.find(p=>p.side==='cliente'),supplier=state.parties.find(p=>p.side==='proveedor'),product=state.products.find(p=>p.kind==='Producto')
+ Object.assign(customer,{name:'Comercio Núñez y Peña SRL',address:'José Colombres 456',seller:'',commission:0});Object.assign(supplier,{name:'Proveedor Textil Ñandú SA',cuit:'30765432109',address:'Calle de prueba 789'})
+ const base={kind:'factura',side:'cliente',letter:'A',date,due:date,branchId:'central',partyId:customer.id,lines:[{productId:product.id,description:product.name,quantity:1,unit:product.unit,price:10000,tax:'21',discount:0}],payments:[],allocations:[],perceptions:0,sourceId:'',observations:'Operación sintética de ensayo. Sin validez fiscal.',responsible:'Operador de ensayo',costCenter:'',depositId:'principal',official:false,valued:true,seller:'',priceList:'general'}
+ const post=patch=>createDocument(state,{...structuredClone(base),...patch},'Administrador General')
+ const invoice=post({}),purchase=post({side:'proveedor',partyId:supplier.id})
+ const third={id:'cheque-third-print',number:'CH-TERC-Ñ-001',amount:3000,issued:date,due:'2026-10-30',bank:'nacion',holder:'Titular Núñez de ensayo',type:'Terceros',partyId:customer.id,branchId:'central',receiptId:'',status:'En cartera'}
+ const own={id:'cheque-own-print',number:'CH-PROP-002',amount:2000,issued:date,due:'2026-10-30',bank:'nacion',holder:'Empresa de ensayo',type:'Propio',partyId:'',branchId:'central',receiptId:'',status:'En cartera'}
+ saveCheque(state,third,'Administrador General');saveCheque(state,own,'Administrador General')
+ const receiptInput={...structuredClone(base),kind:'cobro',letter:'X',lines:[],payments:[{method:'Efectivo',amount:2000,treasuryId:'caja-principal',reference:'EFECTIVO-001'},{method:'Transferencia',amount:1000,treasuryId:'banco-demo',reference:'TRANSF-REC-002'},{method:'Cheque',amount:3000,treasuryId:'',reference:'ENTREGA-CHEQUE',chequeId:third.id},{method:'Tarjeta de crédito',amount:2000,treasuryId:'',reference:'CUPÓN-Ñ-003',cardId:'visa'},{method:'Retención',amount:1000,treasuryId:'',reference:'CERT-IIBB-004',tax:'Ingresos Brutos',jurisdiction:'Tucumán'}],allocations:[{documentId:invoice.id,amount:7000}],observations:'Cobro de ensayo: medios $90, aplicación original $70 y anticipo $20. No acredita cobro del cheque ni acreditación de tarjeta.'}
+ const paymentInput={...structuredClone(base),kind:'pago',side:'proveedor',partyId:supplier.id,letter:'X',lines:[],payments:[{method:'Transferencia',amount:4000,treasuryId:'banco-demo',reference:'TRANSF-PAGO-001'},{method:'Cheque',amount:2000,treasuryId:'',reference:'EMISIÓN-CHEQUE',chequeId:own.id},{method:'Retención',amount:1000,treasuryId:'',reference:'CERT-GAN-002',tax:'Ganancias',jurisdiction:''}],allocations:[{documentId:purchase.id,amount:6000}],observations:'Orden de pago de ensayo: importe registrado $70, aplicación original $60 y crédito sin aplicar $10. No acredita ejecución de una transferencia.'}
+ const receipt=withReceipt?post(receiptInput):undefined,payment=withReceipt?post(paymentInput):undefined
+ return {state,base,customer,supplier,invoice,purchase,receiptInput,paymentInput,receipt,payment,third,own,post}
+}

@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:18
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: sica
+      POSTGRES_USER: sica
+      POSTGRES_PASSWORD: ${SICA_POSTGRES_PASSWORD:?Elegí SICA_POSTGRES_PASSWORD en .env}
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - sica-postgres:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sica -d sica"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+volumes:
+  sica-postgres:

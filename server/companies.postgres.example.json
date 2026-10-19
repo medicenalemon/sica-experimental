@@ -1,0 +1,4 @@
+[
+  {"id":"textil","label":"SICA Textil · Tucumán","driver":"postgres","databaseUrlEnv":"SICA_DATABASE_URL","auditKeyFile":"var/postgres/textil.audit-key","adminPasswordEnv":"SICA_TEXTIL_ADMIN_PASSWORD","arca":{"mode":"disabled"}},
+  {"id":"servicios","label":"SICA Servicios","driver":"postgres","databaseUrlEnv":"SICA_DATABASE_URL","auditKeyFile":"var/postgres/servicios.audit-key","adminPasswordEnv":"SICA_SERVICIOS_ADMIN_PASSWORD","arca":{"mode":"disabled"}}
+]

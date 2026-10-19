@@ -1,0 +1,76 @@
+{
+  "synthetic": true,
+  "kind": "Preparación local sin envío ni CAE",
+  "request": {
+    "issuer": "30712345671",
+    "point": 1,
+    "type": 1,
+    "letter": "A",
+    "documentId": "77ada09b-34e4-4bf9-903e-9a567a8585ea",
+    "detail": {
+      "Concepto": 1,
+      "DocTipo": 80,
+      "DocNro": "20123456786",
+      "CbteFch": "20260905",
+      "ImpTotal": 12300,
+      "ImpTotConc": 0,
+      "ImpNeto": 10000,
+      "ImpOpEx": 0,
+      "ImpTrib": 200,
+      "ImpIVA": 2100,
+      "MonId": "PES",
+      "MonCotiz": 1,
+      "CondicionIVAReceptorId": 1
+    },
+    "iva": [
+      {
+        "Id": 5,
+        "BaseImp": 10000,
+        "Importe": 2100
+      }
+    ],
+    "tributes": [
+      {
+        "Id": 2,
+        "Desc": "Percepción IIBB Tucumán · REG-COMMAND-TEST",
+        "BaseImp": 10000,
+        "Alic": 2,
+        "Importe": 200
+      }
+    ],
+    "associated": [],
+    "snapshot": {
+      "perceptionEvidence": {
+        "tax": "Ingresos Brutos",
+        "jurisdiction": "Tucumán",
+        "reference": "REG-COMMAND-TEST"
+      },
+      "issuer": {
+        "name": "SICA Textil · retenciones y percepciones de ensayo",
+        "cuit": "30712345671",
+        "iibbRegistration": "",
+        "activityStart": "",
+        "address": "",
+        "iva": "Responsable Inscripto"
+      },
+      "receiver": {
+        "name": "Cliente mayorista de prueba",
+        "cuit": "20123456786",
+        "address": "San Miguel de Tucumán",
+        "iva": "Responsable Inscripto"
+      },
+      "lines": [
+        {
+          "productId": "4809eb2c-95f2-4593-b113-ea3b4698db25",
+          "description": "Remera de algodón",
+          "quantity": 1,
+          "unit": "Unidad",
+          "price": 10000,
+          "tax": "21",
+          "discount": 0
+        }
+      ],
+      "branchName": "Casa Central"
+    }
+  }
+}

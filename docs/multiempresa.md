@@ -15,6 +15,8 @@ Si una empresa previamente seleccionada ya no está habilitada, se solicita ingr
 
 ## Configuración del servidor
 
+El backend predeterminado es [PostgreSQL](postgresql.md). Para varias empresas PostgreSQL, copiar `server/companies.postgres.example.json`, referenciar las URL mediante `databaseUrlEnv` y elegir un `auditKeyFile` exclusivo por empresa. Pueden compartir una misma base; `company_id`, bloqueos, sesiones, fiscal y respaldos conservan la separación. Las instrucciones siguientes de archivos exclusivos corresponden al backend SQLite explícito (`SICA_DATABASE_DRIVER=sqlite`).
+
 Se mantiene el modo de una sola empresa con `SICA_DATABASE`, `SICA_COMPANY_ID`, `SICA_ADMIN_PASSWORD` y las variables ARCA existentes. Para habilitar varias:
 
 1. Copiar `server/companies.example.json` a `server/companies.local.json`, excluido del control de versiones.
@@ -31,7 +33,7 @@ La configuración rechaza códigos duplicados, rutas coincidentes —incluidos a
 
 Las rutas de una empresa tienen forma `/api/company/{codigo}/...`; los recursos anteriores `/api/...` corresponden a la empresa predeterminada. Las respuestas de sesión, estado y comandos incluyen la identidad de empresa, que la interfaz comprueba antes de aceptarlas. Una cookie de otra empresa no autoriza consultas ni cambios, aunque ambas tengan un usuario con el mismo nombre. Los comandos siguen requiriendo permisos, CSRF, versión e idempotencia.
 
-Las copias JSON incorporan el código de empresa en el nombre del archivo, por ejemplo `SICA-textil-copia-2026-10-13.json`. Las copias JSON y las recuperaciones están limitadas a la empresa autenticada y mantienen el permiso de Administrador General. La restauración conserva los usuarios de esa empresa. La tarea diaria genera una copia SQLite y su clave HMAC por cada archivo, espera todos los resultados y comunica un fallo si alguna copia no se completa. El apagado espera las operaciones y colas fiscales de cada empresa. No hay consolidación contable entre empresas.
+Las copias JSON incorporan el código de empresa en el nombre del archivo, por ejemplo `SICA-textil-copia-2026-10-13.json`. Las copias JSON y las recuperaciones están limitadas a la empresa autenticada y mantienen el permiso de Administrador General. La restauración conserva los usuarios de esa empresa. La tarea diaria genera respaldos por empresa: lógicos con HMAC y clave en PostgreSQL, o archivos SQLite con clave y sello en el backend anterior. Espera todos los resultados y comunica un fallo si alguna copia no se completa. El apagado espera las operaciones y colas fiscales de cada empresa. No hay consolidación contable entre empresas.
 
 ## Evidencia
 
