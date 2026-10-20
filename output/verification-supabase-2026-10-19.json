@@ -1,0 +1,191 @@
+{
+  "date": "2026-10-19",
+  "completedAt": "2026-10-19T23:26:16.443Z",
+  "status": "Código preparado y validado localmente; despliegue remoto pendiente",
+  "runtime": {
+    "node": "v24.19.0",
+    "postgresql": "18.6",
+    "driver": "pg"
+  },
+  "architecture": "Navegador -> HTTPS Caddy -> SICA Node 24 -> PostgreSQL Supabase (directo o Session pooler)",
+  "tests": {
+    "startedAt": "2026-10-19T23:18:05.951Z",
+    "finishedAt": "2026-10-19T23:25:49.963Z",
+    "node": "v24.19.0",
+    "arca": "Simulada; fetch y http/https restringidos a loopback",
+    "ok": true,
+    "total": 918,
+    "passed": 918,
+    "results": [
+      {
+        "name": "build-server",
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/build-server.log",
+        "exitCode": 0,
+        "signal": null,
+        "ok": true
+      },
+      {
+        "name": "domain",
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/domain.log",
+        "exitCode": 0,
+        "signal": null,
+        "tests": 607,
+        "passed": 607,
+        "failed": 0,
+        "skipped": 0,
+        "cancelled": 0,
+        "todo": 0,
+        "ok": true
+      },
+      {
+        "name": "files",
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/files.log",
+        "exitCode": 0,
+        "signal": null,
+        "tests": 40,
+        "passed": 40,
+        "failed": 0,
+        "skipped": 0,
+        "cancelled": 0,
+        "todo": 0,
+        "ok": true
+      },
+      {
+        "name": "fiscal",
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/fiscal.log",
+        "exitCode": 0,
+        "signal": null,
+        "tests": 32,
+        "passed": 32,
+        "failed": 0,
+        "skipped": 0,
+        "cancelled": 0,
+        "todo": 0,
+        "ok": true
+      },
+      {
+        "name": "http",
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/http.log",
+        "exitCode": 0,
+        "signal": null,
+        "tests": 87,
+        "passed": 87,
+        "failed": 0,
+        "skipped": 0,
+        "cancelled": 0,
+        "todo": 0,
+        "ok": true
+      },
+      {
+        "name": "recovery",
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/recovery.log",
+        "exitCode": 0,
+        "signal": null,
+        "tests": 11,
+        "passed": 11,
+        "failed": 0,
+        "skipped": 0,
+        "cancelled": 0,
+        "todo": 0,
+        "ok": true
+      },
+      {
+        "name": "database",
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/database.log",
+        "exitCode": 0,
+        "signal": null,
+        "tests": 30,
+        "passed": 30,
+        "failed": 0,
+        "skipped": 0,
+        "cancelled": 0,
+        "todo": 0,
+        "ok": true
+      },
+      {
+        "name": "postgres",
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/postgres.log",
+        "exitCode": 0,
+        "signal": null,
+        "tests": 100,
+        "passed": 100,
+        "failed": 0,
+        "skipped": 0,
+        "cancelled": 0,
+        "todo": 0,
+        "ok": true
+      },
+      {
+        "name": "cloud",
+        "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/cloud.log",
+        "exitCode": 0,
+        "signal": null,
+        "tests": 11,
+        "passed": 11,
+        "failed": 0,
+        "skipped": 0,
+        "cancelled": 0,
+        "todo": 0,
+        "ok": true
+      }
+    ],
+    "historicalDatabases": 63
+  },
+  "checks": {
+    "frontendBuild": true,
+    "lint": true,
+    "composeConfiguration": true,
+    "diffWhitespace": true,
+    "tlsVerifiedWithRealPostgreSQL": true,
+    "untrustedCertificatesRejected": true,
+    "transactionPoolerRejected": true,
+    "privateSchemaPermissions": true,
+    "serverEntrypointAndSecureCookie": true,
+    "manualBackupVerifiedOffline": true
+  },
+  "deployment": {
+    "supabaseProjectRequested": "nuevo",
+    "supabaseProjectCreated": false,
+    "supabaseConnected": false,
+    "remoteDatabaseContacted": false,
+    "publicUrlCreated": false,
+    "dockerImageBuilt": false,
+    "dockerComposeStarted": false,
+    "dockerBlocker": "El daemon rechazó el acceso del usuario; sudo requiere autenticación interactiva.",
+    "supabaseBlocker": "El plugin Supabase todavía no está instalado/conectado.",
+    "requiredNextSteps": [
+      "Instalar y conectar Supabase en Codex.",
+      "Crear el proyecto en la organización y región de la cuenta.",
+      "Configurar secretos PostgreSQL y alojamiento Docker con dominio.",
+      "Compilar la imagen, preparar/migrar la empresa y verificar HTTPS remoto."
+    ]
+  },
+  "dataSafety": {
+    "historicalSourcesUnmodified": true,
+    "auditKeys": "Persisten en volumen privado; conservar copia externa.",
+    "realArcaConnections": false,
+    "composeArcaMode": "disabled"
+  },
+  "guide": "docs/supabase.md",
+  "sourceHashes": {
+    "Dockerfile": "aaf5ddb0402bc4e58dc6654671164f3b0c6d25f4a5307c65e256cf166402a7e4",
+    ".dockerignore": "b9b551f3add7191863e75a4a4b6c3f4280f001ee0e2448ba493723e10d20f60b",
+    "deploy/compose.yaml": "4ff93dcd8f79e433aa6f1413cccb42f29078bb47163829ae538712496b0c7e2b",
+    "deploy/Caddyfile": "ea982efcfc85a46311854a703297a82979d23763415ec25201e087d806f57cd5",
+    "server/config.mjs": "ddd2319e1ea1b7ec164bbb60e15fb95c1096be34acf787e5d57f1fd3ee2d8b57",
+    "server/start.mjs": "ce8028e9a2ea558f42b6bcdf77fb23e38b38fcdb1e05ed3cdf544c3a842ea1cc",
+    "server/postgres-connection.mjs": "d9a6bdfb38e9f2567ee3f268affff2370809b34f0818a9e8906ed6db7eb33d52",
+    "server/postgres-security.mjs": "9cf4a1adb22766843831d55df9e4c0fa57a060e4ce6f2e2132131bc080a95d3b",
+    "server/postgres-schema.mjs": "f70b1ebbf60d4ca580405221259637f786091efc9ce9eeb555bd473ada8dc5d7",
+    "server/postgres-repository.mjs": "95dad66770a48d9751c95618dae458a47c2295f132c0270e8868d9b257e64569",
+    "scripts/healthcheck.mjs": "01817207967b412161448214e66f62e089bd0a8a5d0087a2c1d5bcc799c834bc",
+    "scripts/supabase-prepare.mjs": "071c33d80e458481088ecefd97f49ff1dc3b6b54ee4203e4749ba6a29d1a5a68",
+    "scripts/test-cloud.mjs": "c3e4a909ec9a0695dd65ee8aa5503e9f9a7b8baf60531ba0bda5f80b84b9f4e2",
+    "scripts/postgres-test-cluster.mjs": "a6b16ad4321eaaaebf417135bcbb6d25c57ce26f080e889307a232f05417e6fa",
+    "scripts/postgres-data.mjs": "8c87e8f7455fccaf5c6146826014ee1da86c6b4f33ccc206fe385e4725bf1437",
+    "scripts/test-all.mjs": "ec00568e6cfb59480805e743fc92829d209375962ca7bad9973d9847d5c1d1ed",
+    "package.json": "3f683b34caa050ad29c2b3a45dfdd88a78e4043d1b962fa795c14a0c585ea342",
+    ".env.example": "40797c4e0968c24a876078d508341c9f5179c14ad03add5dc2ae4fef5ad0beae",
+    "docs/supabase.md": "cd2564b1f91d279ed416cb62ec0e01a831bf064bd94da75e3b11a05c91a3266f"
+  }
+}

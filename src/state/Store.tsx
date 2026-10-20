@@ -16,6 +16,14 @@ import { Context } from './context'
 
 const STORAGE='sica.data.v1',SESSION='sica.session.v1'
 const COMPANY='sica.company.v1'
+const remoteBase=String(import.meta.env.VITE_SICA_API_URL||'').replace(/\/$/,'')
+const edgeRegion=String(import.meta.env.VITE_SICA_EDGE_REGION||'')
+if(edgeRegion&&!/^[a-z]{2}-[a-z]+-\d$/.test(edgeRegion))throw new Error('VITE_SICA_EDGE_REGION no es una región válida.')
+if(remoteBase){const url=new URL(remoteBase);if(url.username||url.password||url.search||url.hash||!(url.protocol==='https:'||url.protocol==='http:'&&['localhost','127.0.0.1'].includes(url.hostname)))throw new Error('VITE_SICA_API_URL requiere una URL HTTPS válida.')}
+const tokenKey=(company:string)=>`sica.remote-token.v1:${remoteBase}:${company}`
+function remoteToken(company:string){if(!remoteBase)return '';try{return sessionStorage.getItem(tokenKey(company))||localStorage.getItem(tokenKey(company))||''}catch{return ''}}
+function clearRemoteToken(company:string){if(!remoteBase)return;try{sessionStorage.removeItem(tokenKey(company));localStorage.removeItem(tokenKey(company))}catch{/* Token remains absent in memory. */}}
+function saveRemoteToken(company:string,token:string,remember:boolean){clearRemoteToken(company);(remember?localStorage:sessionStorage).setItem(tokenKey(company),token)}
 function savedCompany(){try{return sessionStorage.getItem(COMPANY)||''}catch{return ''}}
 const mode=import.meta.env.VITE_SICA_MODE==='local'?'local':'server'
 interface Snapshot {company:CompanyChoice;state:State;revision:number;session:Session;csrf:string;signedOut?:boolean}
@@ -36,10 +44,10 @@ export function StoreProvider({children}:{children:ReactNode}) {
  const session=mode==='server'?remoteSession:currentUser&&storedSession?{userId:currentUser.id,name:String(currentUser.name),role:currentUser.role as Session['role'],permissions:String(currentUser.permissions||'').split(',').map(p=>p.trim()).filter(Boolean)}:null
  function accept(snapshot:Snapshot) {if(snapshot.company.id!==companyRef.current)throw new NetworkError(409,'La respuesta pertenece a otra empresa. Volvé a ingresar.');if(snapshot.revision<revisionRef.current)return;dataRef.current=snapshot.state;revisionRef.current=snapshot.revision;setData(snapshot.state);setRevision(snapshot.revision);csrfRef.current=snapshot.csrf;remoteRef.current=snapshot.signedOut?null:snapshot.session;setRemote(remoteRef.current);setError('')}
  async function api<T>(path:string,input?:unknown,retry=false,companyOverride?:string):Promise<T> {
-  const serialized=input===undefined?undefined:JSON.stringify(input),target=companyOverride??companyRef.current,base=target?`/api/company/${encodeURIComponent(target)}`:'/api',csrf=csrfRef.current
+  const serialized=input===undefined?undefined:JSON.stringify(input),target=companyOverride??companyRef.current,base=target?`/api/company/${encodeURIComponent(target)}`:'/api',csrf=csrfRef.current,token=remoteToken(target)
   for(let attempt=0;attempt<(retry?2:1);attempt++) {
    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000)
-   try{const response=await fetch(`${base}/${path}`,{method:input===undefined?'GET':'POST',credentials:'same-origin',cache:'no-store',signal:controller.signal,headers:{'Content-Type':'application/json','X-SICA-Client':'web',...(csrf?{'X-SICA-CSRF':csrf}:{})},body:serialized});const value=await response.json();if(!response.ok)throw new NetworkError(response.status,String(value.error||'No se pudo completar la operación.'));return value as T}
+   try{const response=await fetch(`${remoteBase}${base}/${path}${remoteBase&&edgeRegion?'?forceFunctionRegion='+encodeURIComponent(edgeRegion):''}`,{method:input===undefined?'GET':'POST',credentials:remoteBase?'omit':'same-origin',cache:'no-store',signal:controller.signal,headers:{'Content-Type':'application/json','X-SICA-Client':'web',...(csrf?{'X-SICA-CSRF':csrf}:{}),...(token?{Authorization:`Bearer ${token}`}:{})},body:serialized});const value=await response.json();if(!response.ok){if(response.status===401)clearRemoteToken(target);throw new NetworkError(response.status,String(value.error||'No se pudo completar la operación.'))}if(remoteBase&&path==='login'&&typeof value.token==='string'){saveRemoteToken(target,value.token,Boolean((input as {remember?:boolean})?.remember));delete value.token}if(path==='logout'||value.signedOut)clearRemoteToken(target);return value as T}
    catch(e){if(e instanceof NetworkError||attempt===(retry?1:0))throw e}
    finally{clearTimeout(timer)}
   }
@@ -114,8 +122,9 @@ export function StoreProvider({children}:{children:ReactNode}) {
  }
  async function activeSessions(){if(mode!=='server')throw new Error('La gestión de sesiones requiere el modo compartido.');return api<import('./context').ActiveSession[]>('sessions')}
  async function exportBackup(){return mode==='server'?api<State>('backup'):structuredClone(dataRef.current)}
+ async function cloudBackup(){await api('server-backup',{});notify('Respaldo completo guardado en Supabase.')}
  async function recoveries(){return api<{id:number;revision:number;created:string;name:string;documents:number}[]>('recovery')}
  async function recoveryCopy(id:number){return api<State>(`recovery/${id}`)}
  function localCopy(){const raw=localStorage.getItem(STORAGE);if(!raw)throw new Error('No hay una base local para migrar.');const value=JSON.parse(raw);validateState(value);return value}
- return <Context.Provider value={{companies,companyId,selectCompany,data,session,branch,setBranch,error,notice,notify,transact,login,activeSessions,logout,restore,mode,ready,busy,revision,reload,exportBackup,localCopy,recoveries,recoveryCopy,previewTaxCertificate,previewVatSales,previewFiscal,operateFiscal,fiscalConnection}}>{children}</Context.Provider>
+ return <Context.Provider value={{companies,companyId,selectCompany,data,session,branch,setBranch,error,notice,notify,transact,login,activeSessions,logout,restore,mode,ready,busy,revision,reload,exportBackup,cloudBackup:mode==='server'&&remoteBase?cloudBackup:null,localCopy,recoveries,recoveryCopy,previewTaxCertificate,previewVatSales,previewFiscal,operateFiscal,fiscalConnection}}>{children}</Context.Provider>
 }

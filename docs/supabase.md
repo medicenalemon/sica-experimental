@@ -1,10 +1,12 @@
 # Supabase y acceso compartido con Docker
 
+**Despliegue actual:** el backend se adaptó y desplegó en [Supabase Edge Functions](supabase-edge.md), junto con PostgreSQL y Storage privado. Esa guía describe la instalación activa, acceso local y respaldos. El resto de este documento conserva la alternativa con servidor Node y Docker.
+
 SICA puede usar PostgreSQL alojado en un proyecto nuevo de Supabase. Los usuarios acceden a una misma URL HTTPS de SICA; el navegador habla con el servidor Node y éste conecta a PostgreSQL. Las cuentas, permisos, sesiones, auditoría y transacciones siguen siendo los de SICA. No se necesitan claves `anon` ni `service_role` en el frontend.
 
-El despliegue preparado contiene el servidor Node 24 y los archivos web en una imagen, un proxy Caddy con HTTPS automático y un volumen privado para las claves y respaldos. Supabase aloja la base. El servidor Node necesita una máquina o proveedor con Docker, un dominio y DNS apuntando a esa máquina. Esta aplicación persistente no se despliega como una Supabase Edge Function.
+La alternativa Docker contiene el servidor Node 24 y los archivos web en una imagen, un proxy Caddy con [HTTPS automático](https://caddyserver.com/docs/automatic-https) y un volumen privado para las claves y respaldos. Supabase aloja la base. Esta alternativa necesita una máquina o proveedor con Docker, un dominio y DNS apuntando a esa máquina. La adaptación Edge utiliza el mismo dominio y rutas mediante un adaptador Fetch y Storage para archivos persistentes.
 
-**Estado:** archivos y herramientas preparados; crear el proyecto de la cuenta y publicar la URL requiere acceso a Supabase y a la máquina Docker. La verificación local no acredita un despliegue remoto. ARCA permanece deshabilitado en este Compose.
+**Estado de Docker:** archivos y herramientas preparados; la imagen no está publicada en una máquina remota. El backend Edge y la base sí tienen un despliegue remoto propio. ARCA permanece deshabilitado en ambas configuraciones.
 
 ## 1. Proyecto nuevo en Supabase
 
@@ -80,7 +82,7 @@ docker compose --env-file .env -f deploy/compose.yaml cp app:/app/var/postgres/b
 
 Guardar esas copias y sus archivos `.audit-key` en almacenamiento privado independiente de la máquina. Se verifican sin conexión mediante `npm run postgres:data -- verify --source ARCHIVO.sica-pg.json --company sica`. Para recuperar se necesitan el respaldo y su clave original. Un respaldo PostgreSQL de Supabase por sí solo **no incluye la clave externa de SICA**. La carpeta descargada contiene datos privados: no subirla al repositorio ni a un almacenamiento público.
 
-Para actualizar la aplicación, volver a construir y ejecutar `up -d` conservando el volumen. `docker compose down` conserva los volúmenes; **no ejecutar `down -v`**, que los elimina. Si se pierde la clave de una empresa existente, el arranque falla y requiere recuperar la original. No generar una sustituta.
+Para actualizar la aplicación, volver a construir y ejecutar `up -d` conservando el volumen. `docker compose down` conserva los volúmenes; **no ejecutar `down -v`**, que los elimina. Ver [persistencia de volúmenes Docker](https://docs.docker.com/engine/storage/volumes/). Si se pierde la clave de una empresa existente, el arranque falla y requiere recuperar la original. No generar una sustituta.
 
 ## Verificación reproducible
 

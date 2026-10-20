@@ -29,6 +29,10 @@
     "test:recovery": "node scripts/build-server.mjs && node scripts/test-recovery.mjs",
     "start": "node --env-file-if-exists=.env server/start.mjs",
     "supabase:prepare": "node --env-file-if-exists=.env scripts/supabase-prepare.mjs",
+    "supabase:bootstrap": "node scripts/supabase-bootstrap.mjs",
+    "build:edge": "node scripts/build-server.mjs && node scripts/build-edge.mjs",
+    "test:edge": "node scripts/build-server.mjs && node --import ./scripts/test-offline-guard.mjs --test scripts/test-edge.mjs",
+    "supabase:verify": "node scripts/build-server.mjs && node --env-file=.env scripts/supabase-live.mjs",
     "test:cloud": "node scripts/build-server.mjs && node --import ./scripts/test-offline-guard.mjs --test scripts/test-cloud.mjs"
   },
   "dependencies": {
@@ -50,6 +54,7 @@
     "@vitejs/plugin-react": "^6.0.4",
     "jsqr": "^1.4.0",
     "oxlint": "^1.75.0",
+    "rolldown": "1.2.4",
     "typescript": "~6.0.2",
     "vite": "^8.2.0"
   },

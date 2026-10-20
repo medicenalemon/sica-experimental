@@ -1,11 +1,11 @@
 {
-  "startedAt": "2026-10-19T22:32:55.827Z",
-  "finishedAt": "2026-10-19T22:40:45.023Z",
+  "startedAt": "2026-10-19T23:18:05.951Z",
+  "finishedAt": "2026-10-19T23:25:49.963Z",
   "node": "v24.19.0",
   "arca": "Simulada; fetch y http/https restringidos a loopback",
   "ok": true,
-  "total": 907,
-  "passed": 907,
+  "total": 918,
+  "passed": 918,
   "results": [
     {
       "name": "build-server",
@@ -99,6 +99,19 @@
       "signal": null,
       "tests": 100,
       "passed": 100,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "ok": true
+    },
+    {
+      "name": "cloud",
+      "log": "/home/mauricioalemon/Documentos/proyectoslct/sica-experimental/output/qa/relational/cloud.log",
+      "exitCode": 0,
+      "signal": null,
+      "tests": 11,
+      "passed": 11,
       "failed": 0,
       "skipped": 0,
       "cancelled": 0,

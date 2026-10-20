@@ -1,3 +1,4 @@
+import {Buffer} from 'node:buffer'
 import {SaxesParser} from 'saxes'
 export const WSAA_NAMESPACE='http://wsaa.view.sua.dvadac.desein.afip.gov'
 export const WSFE_NAMESPACE='http://ar.gov.afip.dif.FEV1/'

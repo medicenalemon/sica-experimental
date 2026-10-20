@@ -14,7 +14,8 @@ import { validateState } from '../.server/domain/validation.js'
 import { canAccess } from '../.server/domain/permissions.js'
 import { derivePassword } from '../.server/domain/auth.js'
 
-export class ApiError extends Error {constructor(status,message){super(message);this.status=status}}
+import {ApiError} from './api-error.mjs'
+export {ApiError} from './api-error.mjs'
 const digest=value=>createHash('sha256').update(value).digest('hex')
 const constantEqual=(a,b)=>typeof a==='string'&&typeof b==='string'&&a.length===b.length&&timingSafeEqual(Buffer.from(a),Buffer.from(b))
 export class Repository {

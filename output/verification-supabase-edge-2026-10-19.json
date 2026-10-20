@@ -1,0 +1,77 @@
+{
+  "verifiedAt": "2026-10-20T00:04:18.551Z",
+  "localDate": "2026-10-19",
+  "project": {
+    "name": "SICA Experimental",
+    "ref": "dudraffygijvufwhqvza",
+    "region": "us-west-2"
+  },
+  "backend": {
+    "function": "sica-api",
+    "version": 6,
+    "status": "ACTIVE",
+    "url": "https://dudraffygijvufwhqvza.supabase.co/functions/v1/sica-api",
+    "bundleSha256": "b6fa59c9fd1da75614c4fc6206cd1bb3728f3b4d6c86d08de38c69bf65e642d9"
+  },
+  "database": {
+    "schema": "sica",
+    "tables": 23,
+    "relationalTables": 14,
+    "views": 3,
+    "companies": 1,
+    "apiRoleSchemaAccess": false,
+    "apiRoleTableAccess": false,
+    "tlsVerified": true
+  },
+  "storage": {
+    "bucket": "sica-private",
+    "public": false,
+    "auditKeyPersistent": true,
+    "backupHmacVerified": true,
+    "dailyBackupVerified": true
+  },
+  "localTests": {
+    "http": 87,
+    "cloud": 12,
+    "edge": 7,
+    "total": 106,
+    "failed": 0
+  },
+  "remoteChecks": [
+    "Configuración inicial privada",
+    "PostgreSQL remoto saludable",
+    "Acceso anónimo bloqueado",
+    "Origen externo bloqueado",
+    "Inicio de sesión real",
+    "Sesión y lectura persistente",
+    "CSRF obligatorio",
+    "Escritura, idempotencia y revisión",
+    "Respaldo completo en Storage privado",
+    "Cierre y revocación de sesión"
+  ],
+  "browserChecks": [
+    "Browser login via remote CORS",
+    "Private full backup through Settings",
+    "Session survives reload",
+    "Logout returns to login"
+  ],
+  "browserErrors": [],
+  "build": "passed",
+  "lint": "passed",
+  "securityAdvisorIssues": 0,
+  "performanceAdvisor": {
+    "level": "INFO",
+    "unindexedForeignKeys": 10,
+    "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0001_unindexed_foreign_keys"
+  },
+  "credentials": {
+    "path": "var/supabase-admin.local.json",
+    "mode": "600",
+    "gitIgnored": true
+  },
+  "arca": "disabled",
+  "frontend": {
+    "local": "http://127.0.0.1:5174",
+    "publicHosting": "not deployed"
+  }
+}

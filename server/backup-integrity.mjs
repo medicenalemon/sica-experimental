@@ -1,7 +1,7 @@
+import {Buffer} from 'node:buffer'
 import {createHash,createHmac,timingSafeEqual} from 'node:crypto'
 import {createReadStream} from 'node:fs'
 import {readFile,writeFile,stat,open} from 'node:fs/promises'
-import {DatabaseSync} from 'node:sqlite'
 import {canonical} from './fiscal-store.mjs'
 
 export function sameDigest(a,b){return typeof a==='string'&&typeof b==='string'&&/^[a-f0-9]{64}$/.test(a)&&/^[a-f0-9]{64}$/.test(b)&&timingSafeEqual(Buffer.from(a,'hex'),Buffer.from(b,'hex'))}
@@ -9,6 +9,7 @@ export async function fileDigest(filename){const hash=createHash('sha256');for a
 export async function syncFile(filename){const file=await open(filename,'r');try{await file.sync()}finally{await file.close()}}
 export async function readAuditKey(filename){if((await stat(filename)).size!==32)throw new Error('La clave de auditoría debe contener exactamente 32 bytes.');return readFile(filename)}
 export async function sealBackup(filename,key,{replace=false}={}){
+ const {DatabaseSync}=await import('node:sqlite')
  const db=new DatabaseSync(filename,{readOnly:true})
  let companies;try{companies=db.prepare('SELECT id,revision FROM companies ORDER BY id').all().map(c=>({id:c.id,revision:Number(c.revision)}))}finally{db.close()}
  const payload={format:'sica-sqlite-backup',version:1,createdAt:new Date().toISOString(),size:(await stat(filename)).size,sha256:await fileDigest(filename),companies}

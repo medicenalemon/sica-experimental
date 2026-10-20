@@ -1,11 +1,12 @@
+import {Buffer} from 'node:buffer'
 import pg from 'pg'
 import {AsyncLocalStorage} from 'node:async_hooks'
 import {randomBytes,createHash,createHmac,timingSafeEqual} from 'node:crypto'
 import {mkdir,readFile,writeFile,stat} from 'node:fs/promises'
 import {dirname,resolve} from 'node:path'
-import {ApiError} from './repository.mjs'
+import {ApiError} from './api-error.mjs'
 import {projectState} from './public-state.mjs'
-import {migratePostgres,pgEntities,pgChildren} from './postgres-schema.mjs'
+import {migratePostgres,assertPostgresSchema,pgEntities,pgChildren} from './postgres-schema.mjs'
 import {assertFiscalRows} from './fiscal-integrity.mjs'
 import {fiscalRecord} from './fiscal-store.mjs'
 import {initialState} from '../.server/domain/seed.js'
@@ -20,14 +21,15 @@ import {postgresConnectionConfig,initializePostgresSession} from './postgres-con
 const digest=value=>createHash('sha256').update(value).digest('hex')
 const equal=(a,b)=>typeof a==='string'&&typeof b==='string'&&Buffer.byteLength(a)===Buffer.byteLength(b)&&timingSafeEqual(Buffer.from(a),Buffer.from(b))
 export class PostgresRepository {
- static async open({databaseUrl,companyId='sica',adminPassword,auditKeyFile,initialize=true,importKey,poolSize,backupDirectory,sslCa,sslCaFile}){
+ static async open({databaseUrl,companyId='sica',adminPassword,auditKeyFile,initialize=true,importKey,poolSize,backupDirectory,sslCa,sslCaFile,auditKeyProvider,migrate=true}){
   const connectionConfig=postgresConnectionConfig({databaseUrl,poolSize,sslCa,sslCaFile})
   if(!/^[a-z0-9][a-z0-9_-]{0,63}$/.test(companyId))throw new Error('Código de empresa PostgreSQL inválido.')
   const repository=new PostgresRepository({databaseUrl:connectionConfig.connectionString,companyId,auditKeyFile,connectionConfig,backupDirectory})
   try{
-   await repository.connection(client=>migratePostgres(client))
+   await repository.connection(client=>migrate?migratePostgres(client):assertPostgresSchema(client))
    const existing=(await repository.query('SELECT id FROM companies WHERE id=$1',[companyId])).rowCount>0
-   repository.key=await repository.loadKey(existing,importKey)
+   repository.key=auditKeyProvider?Buffer.from(await auditKeyProvider({existing,companyId})):await repository.loadKey(existing,importKey)
+   if(repository.key.length!==32)throw new Error('La clave de auditoría debe contener 32 bytes.')
    if(initialize){
     await repository.transaction(async()=>{
      if((await repository.query('SELECT id FROM companies WHERE id=$1',[companyId])).rowCount)return

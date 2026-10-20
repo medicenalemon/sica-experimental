@@ -1,0 +1,19 @@
+{
+  "verifiedAt": "2026-10-20T00:00:55.300Z",
+  "project": "dudraffygijvufwhqvza",
+  "api": "https://dudraffygijvufwhqvza.supabase.co/functions/v1/sica-api",
+  "checks": [
+    "Configuración inicial privada",
+    "PostgreSQL remoto saludable",
+    "Acceso anónimo bloqueado",
+    "Origen externo bloqueado",
+    "Inicio de sesión real",
+    "Sesión y lectura persistente",
+    "CSRF obligatorio",
+    "Escritura, idempotencia y revisión",
+    "Respaldo completo en Storage privado",
+    "Cierre y revocación de sesión"
+  ],
+  "revision": 3,
+  "credentialsFile": "var/supabase-admin.local.json"
+}

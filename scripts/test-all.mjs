@@ -22,8 +22,9 @@ if(await run('build-server','scripts/build-server.mjs',false)){
  for(const [name,script] of [['domain','scripts/test-domain.mjs'],['files','scripts/test-files.mjs'],['fiscal','scripts/test-fiscal.mjs'],['http','scripts/test-server.mjs'],['recovery','scripts/test-recovery.mjs'],['database','scripts/test-database.mjs']])await run(name,script)
  await run('postgres','scripts/postgres-test-cluster.mjs',true,false)
  await run('cloud','scripts/test-cloud.mjs')
+ await run('edge','scripts/test-edge.mjs')
 }
-const report={startedAt,finishedAt:new Date().toISOString(),node:process.version,arca:'Simulada; fetch y http/https restringidos a loopback',ok:results.length===9&&results.every(r=>r.ok),total:results.reduce((n,r)=>n+(r.tests||0),0),passed:results.reduce((n,r)=>n+(r.passed||0),0),results}
+const report={startedAt,finishedAt:new Date().toISOString(),node:process.version,arca:'Simulada; fetch y http/https restringidos a loopback',ok:results.length===10&&results.every(r=>r.ok),total:results.reduce((n,r)=>n+(r.tests||0),0),passed:results.reduce((n,r)=>n+(r.passed||0),0),results}
 await writeFile(resolve(directory,'tests.json'),JSON.stringify(report,null,2)+'\n',{mode:0o600})
 console.log(JSON.stringify({ok:report.ok,tests:report.total,passed:report.passed,report:resolve(directory,'tests.json')}))
 if(!report.ok)process.exitCode=1

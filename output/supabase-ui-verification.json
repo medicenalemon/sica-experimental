@@ -1,0 +1,60 @@
+{
+  "verifiedAt": "2026-10-20T00:03:26.762Z",
+  "checks": [
+    "Browser login via remote CORS",
+    "Private full backup through Settings",
+    "Session survives reload",
+    "Logout returns to login"
+  ],
+  "pageErrors": [],
+  "apiResponses": [
+    {
+      "path": "/functions/v1/sica-api/api/companies",
+      "status": 200
+    },
+    {
+      "path": "/functions/v1/sica-api/api/companies",
+      "status": 200
+    },
+    {
+      "path": "/functions/v1/sica-api/api/company/sica/session",
+      "status": 401
+    },
+    {
+      "path": "/functions/v1/sica-api/api/company/sica/login",
+      "status": 200
+    },
+    {
+      "path": "/functions/v1/sica-api/api/companies",
+      "status": 200
+    },
+    {
+      "path": "/functions/v1/sica-api/api/companies",
+      "status": 200
+    },
+    {
+      "path": "/functions/v1/sica-api/api/company/sica/session",
+      "status": 200
+    },
+    {
+      "path": "/functions/v1/sica-api/api/company/sica/server-backup",
+      "status": 200
+    },
+    {
+      "path": "/functions/v1/sica-api/api/companies",
+      "status": 200
+    },
+    {
+      "path": "/functions/v1/sica-api/api/companies",
+      "status": 200
+    },
+    {
+      "path": "/functions/v1/sica-api/api/company/sica/session",
+      "status": 200
+    },
+    {
+      "path": "/functions/v1/sica-api/api/company/sica/logout",
+      "status": 200
+    }
+  ]
+}

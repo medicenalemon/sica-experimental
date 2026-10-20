@@ -1,3 +1,4 @@
+import {Buffer} from 'node:buffer'
 import {createHash,randomBytes,createCipheriv,createDecipheriv} from 'node:crypto'
 export const canonical=value=>JSON.stringify(normalize(value))
 function normalize(value){if(Array.isArray(value))return value.map(normalize);if(value&&typeof value==='object')return Object.fromEntries(Object.keys(value).sort().filter(k=>value[k]!==undefined).map(k=>[k,normalize(value[k])]));return value}

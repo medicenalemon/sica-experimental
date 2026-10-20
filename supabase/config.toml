@@ -1,0 +1,7 @@
+project_id = "sica-experimental"
+
+[functions.sica-api]
+# SICA validates its own opaque sessions, CSRF and permissions in every route.
+# Setup additionally requires a Supabase server secret key.
+verify_jwt = false
+entrypoint = "./functions/sica-api/deploy-entry.ts"

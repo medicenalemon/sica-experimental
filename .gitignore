@@ -31,3 +31,5 @@ var/
 server/companies.local.json
 deploy/certificates/*
 !deploy/certificates/.gitkeep
+supabase/functions/sica-api/backend.mjs
+supabase/functions/sica-api/deploy-entry.ts

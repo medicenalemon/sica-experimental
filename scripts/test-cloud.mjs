@@ -10,6 +10,7 @@ import pg from 'pg'
 import {serverConfig} from '../server/config.mjs'
 import {postgresConnectionConfig,initializePostgresSession} from '../server/postgres-connection.mjs'
 import {hardenPostgresSchema} from '../server/postgres-security.mjs'
+import {postgresBootstrapSql} from '../server/postgres-schema.mjs'
 import {PostgresRepository} from '../server/postgres-repository.mjs'
 import {startTestPostgres} from './postgres-test-cluster.mjs'
 const exec=promisify(execFile),remote='postgresql://postgres.project:example@aws-0-region.pooler.supabase.com:5432/postgres'
@@ -44,6 +45,18 @@ test('Real PostgreSQL TLS, private schema, session reset and durable audit key w
  const cluster=await startTestPostgres({tls:true}),directory=await mkdtemp(join(tmpdir(),'sica-cloud-tests-'))
  try{
   const ca=await readFile(cluster.caFile,'utf8'),options={databaseUrl:cluster.tlsDatabaseUrl,sslCa:ca,companyId:'cloud',auditKeyFile:join(directory,'cloud.audit-key'),adminPassword:'Cloud-Test-Only-2026',poolSize:1}
+  await t.test('Exported bootstrap creates the runtime-compatible schema and refuses to replace an existing installation',async()=>{
+   assert.equal(await readFile(resolve('deploy/supabase/bootstrap.sql'),'utf8'),postgresBootstrapSql())
+   const pool=new pg.Pool(postgresConnectionConfig({databaseUrl:cluster.tlsDatabaseUrl,sslCa:ca})),client=await pool.connect()
+   try{
+    await client.query('BEGIN');await client.query(postgresBootstrapSql());await client.query('COMMIT')
+    assert.equal((await client.query('SELECT count(*)::int AS count FROM sica.companies')).rows[0].count,0)
+    await client.query('BEGIN')
+    await assert.rejects(client.query(postgresBootstrapSql()),error=>error.code==='42P06')
+    await client.query('ROLLBACK')
+    assert.equal((await client.query('SELECT version FROM sica.sica_migrations')).rows[0].version,1)
+   }finally{client.release();await pool.end()}
+  })
   await t.test('A verified TLS connection authenticates, commits and persists across server restarts',async()=>{
    const repo=await PostgresRepository.open(options)
    try{

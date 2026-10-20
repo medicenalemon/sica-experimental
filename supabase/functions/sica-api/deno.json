@@ -1,0 +1,4 @@
+{
+ "imports": {"pg":"npm:pg@8.23.1","saxes":"npm:saxes@6.0.0"},
+ "nodeModulesDir": "auto"
+}
